@@ -1,9 +1,28 @@
 import { motion } from 'framer-motion';
 import SmartImage from '../common/SmartImage';
 
+// Import brand logos
+import iitLogo from '@/assets/brand/iit-hyderabad-logo.png';
+import inspaceLogo from '@/assets/brand/inspace-logo.png';
+import isroLogo from '@/assets/brand/isro-logo.jpg';
+import amiLogo from '@/assets/brand/ami-logo.png';
+
+// Map for resolving logo paths to imports
+const logoImports = {
+  '/src/assets/brand/iit-hyderabad-logo.png': iitLogo,
+  '/src/assets/brand/inspace-logo.png': inspaceLogo,
+  '/src/assets/brand/isro-logo.png': isroLogo,
+  '/src/assets/brand/isro-logo.jpg': isroLogo,
+  '/src/assets/brand/ami-logo.png': amiLogo,
+};
+
 const LogoStripSection = ({ heading, header, intro, logos, scrollable, style }) => {
   const title = header || heading;
   const isGreyscale = style === 'greyscale';
+  
+  const resolveLogoSrc = (src) => {
+    return logoImports[src] || src;
+  };
 
   return (
     <section className="section-spacing bg-surface">
@@ -33,7 +52,8 @@ const LogoStripSection = ({ heading, header, intro, logos, scrollable, style }) 
         
         <div className={`flex flex-wrap items-center justify-center gap-8 md:gap-12 ${scrollable ? 'overflow-x-auto pb-4' : ''}`}>
           {logos?.map((logo, index) => {
-            const imageSrc = logo.image?.src || logo.src;
+            const rawSrc = logo.image?.src || logo.src;
+            const imageSrc = resolveLogoSrc(rawSrc);
             const imageAlt = logo.image?.alt || logo.alt || logo.name || `Partner ${index + 1}`;
             
             return (
