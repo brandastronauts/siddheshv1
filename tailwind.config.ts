@@ -14,7 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['"IBM Plex Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
       },
       colors: {
         border: "hsl(var(--border))",

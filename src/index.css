@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+/* IBM Plex fonts loaded via index.html */
 
 @tailwind base;
 @tailwind components;
@@ -116,26 +116,28 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-    font-feature-settings: 'cv11', 'ss01';
+    @apply bg-background text-foreground antialiased font-sans;
+    font-feature-settings: 'kern';
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
+  h1, h2 {
+    @apply font-serif font-semibold tracking-tight text-deep-ink;
     letter-spacing: -0.02em;
   }
 
-  h1 {
-    @apply text-deep-ink;
-    letter-spacing: -0.03em;
+  h3, h4, h5, h6 {
+    @apply font-sans font-semibold tracking-tight;
+    letter-spacing: -0.01em;
   }
 
-  h2 {
-    @apply text-deep-ink;
-    letter-spacing: -0.025em;
+  a {
+    @apply text-link-blue hover:text-secondary-blue transition-colors duration-200;
+  }
+
+  ::selection {
+    background: hsl(195 100% 46% / 0.2);
   }
 
   a {
