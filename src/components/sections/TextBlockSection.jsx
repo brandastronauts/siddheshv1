@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, FileWarning } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const TextBlockSection = ({ heading, header, sectionName, intro, content, body, cta, alignment = 'center' }) => {
   const title = header || heading;
@@ -12,47 +13,58 @@ const TextBlockSection = ({ heading, header, sectionName, intro, content, body, 
   };
 
   return (
-    <section className="section-spacing bg-background">
+    <section className="section-spacing bg-background relative">
       <div className="container-grid">
-        <div className={`max-w-3xl ${alignmentClasses[alignment]}`}>
-          {sectionName && (
-            <p className="text-sm font-medium text-accent-cyan uppercase tracking-wider mb-2">
-              {sectionName}
-            </p>
-          )}
+        <motion.div 
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className={`max-w-3xl ${alignmentClasses[alignment]}`}
+        >
+          <div className="card-elegant p-8 md:p-12">
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-navy/10 to-accent-cyan/10 flex items-center justify-center">
+                <FileWarning className="w-7 h-7 text-primary-navy" />
+              </div>
+            </div>
 
-          {intro && (
-            <p className="text-muted-foreground italic mb-4">
-              {intro}
-            </p>
-          )}
-          
-          {title && (
-            <h2 className="text-3xl md:text-4xl font-bold text-deep-ink mb-6">
-              {title}
-            </h2>
-          )}
-          
-          {text && (
-            <div className="prose prose-lg max-w-none">
-              <p className="text-lg text-muted-foreground leading-relaxed">
+            {sectionName && (
+              <p className="text-sm font-semibold text-accent-cyan uppercase tracking-wider mb-3 text-center">
+                {sectionName}
+              </p>
+            )}
+
+            {intro && (
+              <p className="text-muted-foreground italic mb-4 text-center text-sm">
+                {intro}
+              </p>
+            )}
+            
+            {title && (
+              <h2 className="text-2xl md:text-3xl font-bold text-deep-ink mb-4 text-center">
+                {title}
+              </h2>
+            )}
+            
+            {text && (
+              <p className="text-muted-foreground leading-relaxed text-center">
                 {text}
               </p>
-            </div>
-          )}
+            )}
 
-          {cta && (
-            <div className="mt-8">
-              <Link
-                to={cta.href || '#'}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary-navy text-white font-medium rounded-lg hover:bg-secondary-blue transition-all duration-200 hover:shadow-lg"
-              >
-                {cta.label}
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-            </div>
-          )}
-        </div>
+            {cta && (
+              <div className="mt-8 text-center">
+                <Link
+                  to={cta.href || '#'}
+                  className="btn-secondary group inline-flex"
+                >
+                  {cta.label}
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </div>
+            )}
+          </div>
+        </motion.div>
       </div>
     </section>
   );

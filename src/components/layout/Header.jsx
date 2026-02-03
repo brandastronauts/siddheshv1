@@ -11,13 +11,13 @@ const Header = () => {
   const { nav, brand } = siteContent;
 
   return (
-    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="container-grid">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img src={logo} alt={brand.siteName} className="h-10 w-auto" />
-            <span className="hidden md:block text-base font-semibold text-deep-ink group-hover:text-primary-navy transition-colors leading-tight max-w-[200px]">
+            <img src={logo} alt={brand.siteName} className="h-9 w-auto" />
+            <span className="hidden md:block text-sm font-semibold text-deep-ink group-hover:text-primary-navy transition-colors leading-tight max-w-[180px]">
               {brand.siteName}
             </span>
           </Link>
@@ -30,7 +30,7 @@ const Header = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                     isActive
                       ? 'text-primary-navy bg-primary-navy/5'
                       : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
@@ -45,7 +45,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-surface transition-colors"
+            className="lg:hidden p-2 rounded-xl hover:bg-surface transition-colors"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? (
@@ -65,7 +65,7 @@ const Header = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden border-t border-border bg-background"
+            className="lg:hidden border-t border-border/50 bg-background/95 backdrop-blur-xl"
           >
             <nav className="container-grid py-4">
               <div className="flex flex-col gap-1">
@@ -76,7 +76,7 @@ const Header = () => {
                       key={item.path}
                       to={item.path}
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`px-4 py-3 text-base font-medium rounded-lg transition-all duration-200 ${
+                      className={`px-4 py-3 text-base font-medium rounded-xl transition-all duration-200 ${
                         isActive
                           ? 'text-primary-navy bg-primary-navy/5'
                           : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
