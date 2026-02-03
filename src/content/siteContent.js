@@ -705,7 +705,7 @@ const siteContent = {
         {
           id: "meth-pillars",
           type: "grid3",
-          header: "The Four Pillars of Micro-Research - What makes a study "Micro"?",
+          header: "The Four Pillars of Micro-Research - What makes a study 'Micro'?",
           intro:
             "Micro-Research is designed for consistency, ecological validity, and publication intent. The methodology is optimized so protocols remain executable for years.",
           items: [
