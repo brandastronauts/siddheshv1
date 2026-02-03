@@ -1134,11 +1134,11 @@ const siteContent = {
           primaryCta: { label: "Submit Research Proposal", href: "#collab-form" },
           secondaryCta: { label: "View Data Access Protocols >", href: "/publications-open-science" },
           image: {
-            src: "",
+            src: "/src/assets/collaborate-hero.jpg",
             alt: "Network node collaboration visual",
             variant: "hero",
             privacyBlur: false,
-            caption: "Use an abstract network node graphic or map. Demo image is fine."
+            caption: ""
           }
         },
 
