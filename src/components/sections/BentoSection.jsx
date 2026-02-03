@@ -51,14 +51,14 @@ const BentoSection = ({ heading, header, intro, items }) => {
               >
                 {/* Image */}
                 {item.image && (
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-48 overflow-hidden group/image">
                     <SmartImage
                       src={item.image.src}
                       alt={item.image.alt}
                       variant={item.image.variant || 'card'}
                       privacyBlur={item.image.privacyBlur}
                       aspect="16:9"
-                      className="w-full h-full"
+                      className="w-full h-full grayscale group-hover/image:grayscale-0 transition-all duration-500"
                     />
                     {/* Gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-deep-ink/20 to-transparent pointer-events-none" />
