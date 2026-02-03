@@ -508,7 +508,7 @@ const siteContent = {
         {
           id: "inst-philosophy",
           type: "grid3",
-          header: "The Micro-Research Framework - How We Actually Do This",
+          header: "The Micro-Research Framework\nHow We Actually Do This",
           items: [
             {
               title: "Observation Without Interference",
