@@ -94,6 +94,22 @@ const SplitSection = ({ header, left, right }) => {
                   />
                 </div>
               )}
+              
+              {right.type === 'map' && right.embedUrl && (
+                <div className="rounded-xl overflow-hidden border border-border/50 aspect-video">
+                  <iframe
+                    src={right.embedUrl}
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title={right.title || "Location map"}
+                    className="w-full h-full"
+                  />
+                </div>
+              )}
             </motion.div>
           )}
         </div>
