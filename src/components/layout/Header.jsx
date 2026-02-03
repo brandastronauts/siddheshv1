@@ -17,7 +17,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex flex-col items-start group">
             <img src={logo} alt={brand.siteName} className="h-12 md:h-14 w-auto" />
-            <span className="hidden md:block text-[10px] font-medium text-muted-foreground group-hover:text-primary-navy transition-colors leading-tight mt-0.5">
+            <span className="hidden md:block text-[10px] font-medium text-deep-ink/70 group-hover:text-primary-navy transition-colors leading-tight mt-0.5">
               {brand.headerTagline}
             </span>
           </Link>
