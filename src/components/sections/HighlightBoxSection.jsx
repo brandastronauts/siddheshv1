@@ -35,7 +35,7 @@ const HighlightBoxSection = ({ heading, title, text, body, bullets, cta }) => {
               )}
               
               {displayText && (
-                <p className="text-lg text-white/85 mb-6 max-w-2xl mx-auto leading-relaxed text-center">
+                <p className="text-lg text-white/85 mb-6 max-w-2xl mx-auto leading-relaxed text-center whitespace-pre-line">
                   {displayText}
                 </p>
               )}
