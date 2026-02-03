@@ -376,14 +376,76 @@ const siteContent = {
 
         {
           id: "home-visual-evidence",
-          type: "textBlock",
+          type: "galleryGrid",
           sectionName: "Visual Evidence",
           intro:
             "As a Micro Research Institute dealing with minors (Ages 0-18), we adhere to strict ethical guidelines regarding visual data. We prioritize subject privacy over public display.",
           header: "Why You Don't See Stock Photos Here",
           body:
             "We do not use staged photography. All imagery released by the Institute must undergo a three-stage ethical clearance process to ensure it documents the process, not just the child. A curated, anonymized archive of our Labs and Methodologies is currently being digitized.",
-          cta: { label: "Request Media Kit (Press Only)", href: "/newsroom" }
+          cta: { label: "Request Media Kit (Press Only)", href: "/contact" },
+          items: [
+            {
+              tag: "Space Lab",
+              title: "Avionics Bench",
+              image: {
+                src: "/src/assets/placeholders/visual-evidence/avionics-rig-1.jpg",
+                alt: "Avionics test rig and measurement tools",
+                privacyBlur: false
+              },
+              caption: "Instrumentation-ready bench setup used for pre-integration validation."
+            },
+            {
+              tag: "Space Lab",
+              title: "Lunar Terrain Simulator",
+              image: {
+                src: "/src/assets/placeholders/visual-evidence/lunar-sim-1.jpg",
+                alt: "High-contrast lunar terrain simulation environment",
+                privacyBlur: false
+              },
+              caption: "Controlled environment used for stress-testing collaboration and procedural rigor."
+            },
+            {
+              tag: "Drone Research Centre",
+              title: "Prototype Frame",
+              image: {
+                src: "/src/assets/placeholders/visual-evidence/drone-frame-1.jpg",
+                alt: "Drone prototype frame on workbench",
+                privacyBlur: false
+              },
+              caption: "Iterative design artifacts logged across longitudinal prototyping cycles."
+            },
+            {
+              tag: "Research Protocols",
+              title: "Measurement & Calibration",
+              image: {
+                src: "/src/assets/placeholders/visual-evidence/lab-bench-1.jpg",
+                alt: "Calibration tools and precision instruments",
+                privacyBlur: false
+              },
+              caption: "Precision tooling used to preserve repeatability and minimize observer interference."
+            },
+            {
+              tag: "Data Wing",
+              title: "Secure Data Processing",
+              image: {
+                src: "/src/assets/placeholders/visual-evidence/data-wing-1.jpg",
+                alt: "Secure data center infrastructure",
+                privacyBlur: false
+              },
+              caption: "Air-gapped processing environment supporting anonymization and integrity checks."
+            },
+            {
+              tag: "Terra Utopia",
+              title: "Environmental Instrumentation",
+              image: {
+                src: "/src/assets/placeholders/visual-evidence/field-soil-1.jpg",
+                alt: "Soil sensors and environmental measurement instruments",
+                privacyBlur: false
+              },
+              caption: "Longitudinal biosystem measurements captured as part of annual cycles."
+            }
+          ]
         }
       ]
     },

@@ -19,6 +19,7 @@ import FormSection from './sections/FormSection';
 import FeaturedStoriesSection from './sections/FeaturedStoriesSection';
 import PricingSection from './sections/PricingSection';
 import SplitSection from './sections/SplitSection';
+import GalleryGridSection from './sections/GalleryGridSection';
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -54,6 +55,7 @@ const SectionRenderer = ({ sections }) => {
       featuredStories: FeaturedStoriesSection,
       pricing: PricingSection,
       split: SplitSection,
+      galleryGrid: GalleryGridSection,
     };
 
     const Component = components[type];
