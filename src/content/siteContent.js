@@ -636,27 +636,172 @@ const siteContent = {
 
     "/methodology": {
       title: "Methodology",
-      meta: {
-        description: "Our research methodology and approach",
+      metaDescription:
+        "The Micro-Research Framework: high-frequency observation embedded in learning environments, designed for ecological validity and publication-ready datasets.",
+      seo: {
+        title: "The Micro-Research Framework | Methodology | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/methodology",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "article",
+          url: "https://blueblocks.in/methodology",
+          title: "The Micro-Research Framework",
+          description:
+            "A practitioner-executable research system: bounded questions, observable behavior, minimal footprint, publication-ready protocols.",
+          image: {
+            url: "https://blueblocks.in/og/methodology.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Micro-research framework"
+          }
+        }
       },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Methodology",
+          url: "https://blueblocks.in/methodology",
+          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" },
+          about: { "@type": "Thing", name: "Micro-Research Framework" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Methodology", item: "https://blueblocks.in/methodology" }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "ScholarlyArticle",
+          headline: "The Micro-Research Framework",
+          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          isPartOf: { "@type": "WebSite", name: "Blue Blocks Micro Research Institute" },
+          about: ["longitudinal observation", "ecological validity", "education research"],
+          url: "https://blueblocks.in/methodology"
+        }
+      ],
       sections: [
         {
+          id: "meth-hero",
           type: "hero",
-          heading: "Our Methodology",
-          subheading: "Rigorous, reproducible research methods that advance the field of AI ethics.",
+          variant: "stark",
+          headline: "The Micro-Research Framework.",
+          subheadline:
+            "We built Blue Blocks to generate research, not accommodate it. Since 2009, we've run high-frequency observation directly inside learning environments—recording what actually happens rather than staging what we hope to measure. This isn't retrofitted academic study. It's methodology embedded in practice from day one.",
+          primaryCta: { label: "Download Framework Paper (PDF)", href: "#" },
+          image: {
+            src: "",
+            alt: "Precision methodology environment",
+            variant: "hero",
+            privacyBlur: true,
+            caption:
+              "Use a precision, high-trust placeholder image. No playful visuals."
+          }
         },
+
         {
-          type: "timeline",
-          heading: "Research Process",
+          id: "meth-pillars",
+          type: "grid3",
+          header: "The Four Pillars of Micro-Research - What makes a study "Micro"?",
+          intro:
+            "Micro-Research is designed for consistency, ecological validity, and publication intent. The methodology is optimized so protocols remain executable for years.",
           items: [
-            { year: "Phase 1", title: "Problem Identification", description: "We identify critical challenges in AI ethics through stakeholder engagement." },
-            { year: "Phase 2", title: "Literature Review", description: "Comprehensive analysis of existing research and frameworks." },
-            { year: "Phase 3", title: "Empirical Research", description: "Conducting experiments and gathering data through rigorous methods." },
-            { year: "Phase 4", title: "Peer Review", description: "All findings undergo external review before publication." },
-            { year: "Phase 5", title: "Open Publication", description: "Research is published openly with full data and code." },
+            {
+              title: "Single Bounded Question",
+              icon: "target",
+              body:
+                "We ask one thing at a time. Not \"How does age, gender, and material type affect work duration?\" but \"How long do 4-year-olds work with the pink tower?\" Compound questions get split. One question, one protocol, one dataset."
+            },
+            {
+              title: "Observable Behavior",
+              icon: "eye",
+              body:
+                "\"Child concentrated deeply\" is inference. \"Child repeated stacking sequence 7 times without interruption\" is observation. We capture actions, gestures, exact words spoken. Analysis comes later. The observation record stays behavioral."
+            },
+            {
+              title: "Minimal Footprint",
+              icon: "feather",
+              body:
+                "Our Fellows observe while teaching. They're not clipboard-wielding strangers disrupting routines. A protocol that takes 12 minutes won't get done. We've learned—through failure—that consistency beats comprehensiveness. Five-minute protocols run for years. Twenty-minute protocols die in six weeks."
+            },
+            {
+              title: "Publication-Ready",
+              icon: "file",
+              body:
+                "If a protocol won't eventually get a DOI and land in Zenodo, we don't run it. This forces clarity. \"Interesting to track\" becomes \"worth publishing\" or gets dropped. The discipline of publication-intent changes what we're willing to measure."
+            }
           ],
+          columns: 4
         },
-      ],
+
+        {
+          id: "meth-compound",
+          type: "comparisonTable",
+          heading: "The Compound Effect - Why Twenty Small Studies Beat One Large Study?",
+          intro:
+            "Running one micro-study tells you almost nothing. Running two hundred over fifteen years builds a dataset that shows developmental patterns nobody else can see.",
+          headers: ["Dimension", "Traditional Academic Study", "Blue Blocks Micro-Research"],
+          rows: [
+            ["Frequency", "1 Study every 3 Years", "20+ Studies Annually"],
+            ["Observer", "External Researcher (High Interference)", "Teaching Fellow (Embedded)"],
+            ["Duration", "2-3 Years Funding Cycle", "Continuous (Long term)"],
+            ["Cumulative Output (10 Yrs)", "~5 Major Papers", "~200+ Micro-Studies"]
+          ]
+        },
+
+        {
+          id: "meth-cycle",
+          type: "timeline",
+          heading: "The 4-Week Cycle - Protocol to Publication in Four Weeks",
+          items: [
+            {
+              year: "Week 1",
+              title: "Protocol Design",
+              description:
+                "We draft the single question, sketch the recording sheet, and test it with three observations. If recording takes more than 5 minutes, we simplify. Most protocols fail this test twice before passing."
+            },
+            {
+              year: "Week 2",
+              title: "Data Capture",
+              description:
+                "Fellows collect data during the work cycle. Recording happens in the moment, not from memory later. Each Fellow handles one protocol at a time."
+            },
+            {
+              year: "Week 3",
+              title: "Synthesis",
+              description:
+                "We strip identifying details (names become codes, \"Tellapur campus\" becomes \"Site A\"). Then we look for patterns. Sometimes we find what we expected. Sometimes we don't. Everything gets recorded, even the failures."
+            },
+            {
+              year: "Week 4",
+              title: "Publication",
+              description:
+                "Internal review catches errors. Then: DOI registration, dataset upload to Zenodo, and internal documentation update. The study enters our longitudinal archive."
+            }
+          ]
+        },
+
+        {
+          id: "meth-examples",
+          type: "accordion",
+          header: "Examples of Protocols We Have Run",
+          items: [
+            {
+              q: "Example A: The 3-Day Material Choice Study",
+              a:
+                "Question: What material do children choose first when entering the prepared environment?\n\nProtocol: Record child's age (years + months), first material touched, time of entry.\n\nTime Cost: 10 seconds per child."
+            },
+            {
+              q: "Example B: The 2-Week Help Study",
+              a:
+                "Question: When do children help each other without adult prompting?\n\nProtocol: Record helper age, recipient age, type of help (material retrieval, demonstration, cleanup), whether adult was nearby.\n\nTime Cost: 2 minutes per incident."
+            }
+          ]
+        }
+      ]
     },
 
     "/publications-open-science": {

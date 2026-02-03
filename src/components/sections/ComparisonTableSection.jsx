@@ -1,13 +1,31 @@
 import { Check, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 
-const ComparisonTableSection = ({ heading, headers, rows }) => {
+const ComparisonTableSection = ({ heading, headers, rows, intro }) => {
   return (
     <section className="section-spacing bg-surface">
       <div className="container-grid">
         {heading && (
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-deep-ink mb-12">
+          <motion.h2 
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl font-bold text-center text-deep-ink mb-6"
+          >
             {heading}
-          </h2>
+          </motion.h2>
+        )}
+
+        {intro && (
+          <motion.p 
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12"
+          >
+            {intro}
+          </motion.p>
         )}
         
         <div className="max-w-4xl mx-auto overflow-x-auto">
