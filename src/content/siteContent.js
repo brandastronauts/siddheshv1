@@ -4,6 +4,7 @@
 const siteContent = {
   brand: {
     siteName: "Blue Blocks Micro Research Institute",
+    headerTagline: "Micro Research Institute",
     ethicsTagline: "Compiling the world's first 15-year, high-frequency longitudinal dataset on human innovation capacity from birth to age 18.",
     contact: {
       research: "research@blueblocks.in",
