@@ -1,10 +1,76 @@
 import { useState } from 'react';
 
-// Placeholder gradients for different variants
+// Import fallback images
+import heroDefault from '@/assets/placeholders/hero-default.jpg';
+import cardDefault from '@/assets/placeholders/card-default.jpg';
+import advisorPlaceholder from '@/assets/placeholders/avatars/advisor-placeholder.jpg';
+
+// Import lab images
+import spaceLabImg from '@/assets/placeholders/labs/space-lab.jpg';
+import droneCentreImg from '@/assets/placeholders/labs/drone-centre.jpg';
+import terraUtopiaImg from '@/assets/placeholders/labs/terra-utopia.jpg';
+import dataWingImg from '@/assets/placeholders/labs/data-wing.jpg';
+import avionicsImg from '@/assets/placeholders/labs/avionics.jpg';
+import protocolNotesImg from '@/assets/placeholders/labs/protocol-notes.jpg';
+
+// Import avatar images
+import pavanImg from '@/assets/placeholders/avatars/pavan.jpg';
+import muniraImg from '@/assets/placeholders/avatars/munira.jpg';
+import directorPlaceholderImg from '@/assets/placeholders/avatars/director-placeholder.jpg';
+
+// Import visual evidence images
+import avionicsRig1 from '@/assets/placeholders/visual-evidence/avionics-rig-1.jpg';
+import dataWing1 from '@/assets/placeholders/visual-evidence/data-wing-1.jpg';
+import droneFrame1 from '@/assets/placeholders/visual-evidence/drone-frame-1.jpg';
+import fieldSoil1 from '@/assets/placeholders/visual-evidence/field-soil-1.jpg';
+import labBench1 from '@/assets/placeholders/visual-evidence/lab-bench-1.jpg';
+import lunarSim1 from '@/assets/placeholders/visual-evidence/lunar-sim-1.jpg';
+
+// Image path resolver map
+const imageMap = {
+  // Labs
+  '/src/assets/placeholders/labs/space-lab.jpg': spaceLabImg,
+  '/src/assets/placeholders/labs/drone-centre.jpg': droneCentreImg,
+  '/src/assets/placeholders/labs/terra-utopia.jpg': terraUtopiaImg,
+  '/src/assets/placeholders/labs/data-wing.jpg': dataWingImg,
+  '/src/assets/placeholders/labs/avionics.jpg': avionicsImg,
+  '/src/assets/placeholders/labs/protocol-notes.jpg': protocolNotesImg,
+  
+  // Avatars
+  '/src/assets/placeholders/avatars/pavan.jpg': pavanImg,
+  '/src/assets/placeholders/avatars/munira.jpg': muniraImg,
+  '/src/assets/placeholders/avatars/director-placeholder.jpg': directorPlaceholderImg,
+  '/src/assets/placeholders/avatars/advisor-placeholder.jpg': advisorPlaceholder,
+  
+  // Visual evidence
+  '/src/assets/placeholders/visual-evidence/avionics-rig-1.jpg': avionicsRig1,
+  '/src/assets/placeholders/visual-evidence/data-wing-1.jpg': dataWing1,
+  '/src/assets/placeholders/visual-evidence/drone-frame-1.jpg': droneFrame1,
+  '/src/assets/placeholders/visual-evidence/field-soil-1.jpg': fieldSoil1,
+  '/src/assets/placeholders/visual-evidence/lab-bench-1.jpg': labBench1,
+  '/src/assets/placeholders/visual-evidence/lunar-sim-1.jpg': lunarSim1,
+  
+  // Defaults
+  '/src/assets/placeholders/hero-default.jpg': heroDefault,
+  '/src/assets/placeholders/card-default.jpg': cardDefault,
+};
+
+// Placeholder gradients for different variants (used only when no fallback image)
 const placeholders = {
   hero: 'linear-gradient(135deg, hsl(240 93% 25% / 0.1) 0%, hsl(195 100% 46% / 0.15) 100%)',
   card: 'linear-gradient(135deg, hsl(220 20% 97%) 0%, hsl(220 13% 91%) 100%)',
   grid: 'linear-gradient(135deg, hsl(195 100% 46% / 0.1) 0%, hsl(209 93% 34% / 0.1) 100%)',
+  avatar: 'linear-gradient(135deg, hsl(240 93% 25% / 0.2) 0%, hsl(220 20% 40%) 100%)',
+  logo: 'linear-gradient(135deg, hsl(220 20% 97%) 0%, hsl(220 13% 91%) 100%)',
+};
+
+// Fallback images by variant
+const fallbackImages = {
+  hero: heroDefault,
+  card: cardDefault,
+  grid: cardDefault,
+  avatar: advisorPlaceholder,
+  logo: null, // Logos should always be provided
 };
 
 const aspectRatios = {
@@ -12,6 +78,17 @@ const aspectRatios = {
   '1:1': 'aspect-square',
   '4:3': 'aspect-[4/3]',
   '3:2': 'aspect-[3/2]',
+};
+
+// Resolve image path to actual import
+const resolveImageSrc = (src) => {
+  if (!src || src.trim() === '') return null;
+  // Check if it's a path that needs resolution
+  if (imageMap[src]) {
+    return imageMap[src];
+  }
+  // Return as-is (might be an already-imported asset or external URL)
+  return src;
 };
 
 const SmartImage = ({
@@ -27,18 +104,28 @@ const SmartImage = ({
   const [hasError, setHasError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const showPlaceholder = !src || hasError;
+  // Resolve the source path
+  const resolvedSrc = resolveImageSrc(src);
+  
+  // Determine effective source: use provided src, or fall back to variant-based default
+  const fallbackSrc = fallbackImages[variant] || fallbackImages.card;
+  const effectiveSrc = resolvedSrc || fallbackSrc;
+  
+  const showPlaceholder = !effectiveSrc || hasError;
   const aspectClass = aspectRatios[aspect] || aspectRatios['16:9'];
+
+  // For avatars, use square aspect ratio by default
+  const effectiveAspectClass = variant === 'avatar' ? aspectRatios['1:1'] : aspectClass;
 
   return (
     <figure className={`relative overflow-hidden ${className}`}>
       <div
-        className={`relative ${aspectClass} rounded-lg overflow-hidden bg-surface`}
-        style={showPlaceholder ? { background: placeholders[variant] } : undefined}
+        className={`relative ${effectiveAspectClass} rounded-lg overflow-hidden bg-surface`}
+        style={showPlaceholder ? { background: placeholders[variant] || placeholders.card } : undefined}
       >
         {!showPlaceholder && (
           <img
-            src={src}
+            src={effectiveSrc}
             alt={alt}
             onLoad={() => setIsLoaded(true)}
             onError={() => setHasError(true)}

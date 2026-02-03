@@ -603,28 +603,28 @@ const siteContent = {
               headline: "Space Lab",
               body:
                 "A controlled environment for observing high-stakes collaboration. Features lunar terrain simulation and avionics stress-testing to validate student payloads to ISRO standards.",
-              image: { src: "", alt: "Space lab facility", variant: "card", privacyBlur: true }
+              image: { src: "/src/assets/placeholders/labs/space-lab.jpg", alt: "Space lab facility", variant: "card", privacyBlur: true }
             },
             {
               tag: "Prototyping Wing",
               headline: "Drone Research Centre",
               body:
                 "Dedicated to the longitudinal study of 'Iterative Failure.' Tracks the engineering lifecycle from initial aerodynamic testing to Patent-Ready flight stability.",
-              image: { src: "", alt: "Drone research environment", variant: "card", privacyBlur: true }
+              image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Drone research environment", variant: "card", privacyBlur: true }
             },
             {
               tag: "Biosystem Wing",
               headline: "Terra Utopia",
               body:
                 "Measuring systems thinking in real-time. Students manage complex ecological variables, generating longitudinal data on soil moisture and resource allocation.",
-              image: { src: "", alt: "Environmental research facility", variant: "card", privacyBlur: true }
+              image: { src: "/src/assets/placeholders/labs/terra-utopia.jpg", alt: "Environmental research facility", variant: "card", privacyBlur: true }
             },
             {
               tag: "Synthesis Hub",
               headline: "Data Wing",
               body:
                 "The central processing unit where Embedded Fellows synthesize behavioral observations into longitudinal records. This facility ensures all data meets IRB and Ethical Privacy standards.",
-              image: { src: "", alt: "Data wing facility", variant: "card", privacyBlur: true }
+              image: { src: "/src/assets/placeholders/labs/data-wing.jpg", alt: "Data wing facility", variant: "card", privacyBlur: true }
             }
           ]
         },
@@ -956,7 +956,7 @@ const siteContent = {
               body:
                 "Defining the protocol for 25 embedded fellows to document behavioral data without disrupting the \"Children's House\" environment.",
               cta: { label: "Read Abstract", href: "#" },
-              image: { src: "", alt: "Methodology manuscript", variant: "card", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Methodology manuscript", variant: "card", privacyBlur: false }
             },
             {
               tag: "Data Cleaning",
@@ -965,7 +965,7 @@ const siteContent = {
               body:
                 "A technical review of the thermal and vibrational data collected during the PSLV-C62 launch integration.",
               cta: { label: "Notify Me", href: "#doi-alerts" },
-              image: { src: "", alt: "Aerospace manuscript", variant: "card", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/labs/avionics.jpg", alt: "Aerospace manuscript", variant: "card", privacyBlur: false }
             },
             {
               tag: "Early Draft",
@@ -974,7 +974,7 @@ const siteContent = {
               body:
                 "Synthesizing 5 years of data from the Drone Research Centre to map the cognitive leap from \"play\" to \"invention.\"",
               cta: { label: "Request Access", href: "/collaborate" },
-              image: { src: "", alt: "Innovation manuscript", variant: "card", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Innovation manuscript", variant: "card", privacyBlur: false }
             },
             {
               tag: "Drafting",
@@ -983,7 +983,7 @@ const siteContent = {
               body:
                 "Mapping standardized test scores against open-ended engineering project completion rates across the 6-12 continuum.",
               cta: { label: "Notify Me", href: "#doi-alerts" },
-              image: { src: "", alt: "Education manuscript", variant: "card", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/labs/data-wing.jpg", alt: "Education manuscript", variant: "card", privacyBlur: false }
             }
           ]
         },
@@ -1001,7 +1001,7 @@ const siteContent = {
               body:
                 "Modular sensor housing for low Earth orbit thermal data collection. Inventors: Cohort SBB-1 (Ages 12-16).",
               footer: "Mission Complete",
-              image: { src: "", alt: "CubeSat payload", variant: "card", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/labs/avionics.jpg", alt: "CubeSat payload", variant: "card", privacyBlur: false }
             },
             {
               size: "md",
@@ -1010,7 +1010,7 @@ const siteContent = {
               body:
                 "Dual-rotor autonomous drone for bio-hazard control. Inventors: Drone Research Centre (Ages 9-11).",
               footer: "Examination Stage",
-              image: { src: "", alt: "Sanitization drone", variant: "card", privacyBlur: true }
+              image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Sanitization drone", variant: "card", privacyBlur: true }
             },
             {
               size: "sm",
@@ -1019,7 +1019,7 @@ const siteContent = {
               body:
                 "Passive sensor network for semi-arid zones. Inventors: Terra Utopia Team.",
               footer: "Preparation",
-              image: { src: "", alt: "Moisture array sensors", variant: "card", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/labs/terra-utopia.jpg", alt: "Moisture array sensors", variant: "card", privacyBlur: false }
             }
           ]
         },
@@ -1258,21 +1258,21 @@ const siteContent = {
               tag: "Principal Investigator & Founder",
               body:
                 "Credentials: AMI Diploma (0-18)\n\nOversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes.",
-              image: { src: "", alt: "Professional headshot placeholder", variant: "avatar", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/avatars/pavan.jpg", alt: "Pavan Goyal", variant: "avatar", privacyBlur: false }
             },
             {
               headline: "Munira Hussain",
               tag: "Director of Pedagogy",
               body:
                 "Credentials: AMI Diploma / M.Ed\n\nEnsures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the 'Children's House.'",
-              image: { src: "", alt: "Professional headshot placeholder", variant: "avatar", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar", privacyBlur: false }
             },
             {
               headline: "[Name Pending]",
               tag: "Non-Executive Director",
               body:
                 "Credentials: [Relevant Industry Credential]\n\nAdvises on long-term institutional strategy and external partnerships.",
-              image: { src: "", alt: "Professional headshot placeholder", variant: "avatar", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/avatars/director-placeholder.jpg", alt: "Non-Executive Director", variant: "avatar", privacyBlur: false }
             }
           ]
         },
@@ -1290,21 +1290,21 @@ const siteContent = {
               tag: "Technical Validation Advisor",
               body:
                 "Affiliation: IIT Hyderabad (Dept of Design)\n\nFocus: Reviews TRL claims and engineering prototypes for the Space & Drone Labs.",
-              image: { src: "", alt: "Professional headshot placeholder", variant: "avatar", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Technical Validation Advisor", variant: "avatar", privacyBlur: false }
             },
             {
               headline: "[Name Pending]",
               tag: "Independent Ethics Auditor",
               body:
                 "Affiliation: [External Institution / Parent Body]\n\nFocus: Ensures compliance with child safety protocols and consent architecture.",
-              image: { src: "", alt: "Professional headshot placeholder", variant: "avatar", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Independent Ethics Auditor", variant: "avatar", privacyBlur: false }
             },
             {
               headline: "Ad-Hoc Committee",
               tag: "Peer Review Panel",
               body:
                 "Status: Convened per Publication\n\nFocus: A rotating panel of external PhDs convened solely to validate foundational methodology papers prior to DOI registration.",
-              image: { src: "", alt: "Professional headshot placeholder", variant: "avatar", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Peer Review Panel", variant: "avatar", privacyBlur: false }
             }
           ]
         },
@@ -1752,7 +1752,7 @@ const siteContent = {
           header: "Global Highlights",
           layout: "asymmetric",
           main: {
-            image: { src: "", alt: "CubeSat or rocket launch", variant: "card", privacyBlur: false },
+            image: { src: "/src/assets/placeholders/labs/avionics.jpg", alt: "CubeSat or rocket launch", variant: "card", privacyBlur: false },
             tag: "Mission Milestone",
             headline: "Blue Blocks Payload Authorized for ISRO Mission",
             excerpt:
@@ -1765,14 +1765,16 @@ const siteContent = {
               headline: "Micro Research Framework Published (Open Access)",
               excerpt:
                 "We have formally published the architectural blueprint for embedded longitudinal observation. This framework allows other institutions to replicate this without external funding. We spent three years figuring out what doesn't work before we got here.",
-              cta: { label: "View Press Release", href: "/methodology" }
+              cta: { label: "View Press Release", href: "/methodology" },
+              image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Methodology framework", variant: "card", privacyBlur: false }
             },
             {
               tag: "International",
               headline: "Nobel Peace Center Features Student Innovation",
               excerpt:
                 "Blue Blocks student projects have been selected for exhibition as exemplars of \"Youth-Led Innovation,\" validating our 0-18 Sovereignty Model on a global stage.",
-              cta: { label: "Read Coverage", href: "#" }
+              cta: { label: "Read Coverage", href: "#" },
+              image: { src: "/src/assets/placeholders/card-default.jpg", alt: "International recognition", variant: "card", privacyBlur: false }
             }
           ]
         },
@@ -1790,7 +1792,7 @@ const siteContent = {
               body:
                 "The Department of Design at IIT Hyderabad joins the Research Council to provide technical validation for student prototyping.",
               cta: { label: "Read Update", href: "#" },
-              image: { src: "", alt: "Institutional partnership visual", variant: "card", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/labs/data-wing.jpg", alt: "Institutional partnership visual", variant: "card", privacyBlur: false }
             },
             {
               tag: "Student IP",
@@ -1799,7 +1801,7 @@ const siteContent = {
               body:
                 "The Drone Research Centre has filed its fifth utility patent, marking a significant milestone in our study of \"Innovation Agency\" in the 9-11 age group.",
               cta: { label: "Read Update", href: "#" },
-              image: { src: "", alt: "Drone research visual", variant: "card", privacyBlur: true }
+              image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Drone research visual", variant: "card", privacyBlur: true }
             },
             {
               tag: "Fellowship",
@@ -1808,7 +1810,7 @@ const siteContent = {
               body:
                 "We are now accepting proposals for the Winter Residency. PhD candidates focusing on longitudinal behavioral observation are encouraged to apply.",
               cta: { label: "Apply via Collaborate", href: "/collaborate" },
-              image: { src: "", alt: "Fellowship visual", variant: "card", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/labs/space-lab.jpg", alt: "Fellowship visual", variant: "card", privacyBlur: false }
             }
           ]
         },
