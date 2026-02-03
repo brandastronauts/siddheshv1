@@ -54,7 +54,7 @@ const HeroSection = ({
     const href = ctaData.href || ctaData.path;
     
     if (isPrimary) {
-      const className = "btn-primary group";
+      const className = "btn-primary group text-white";
       const content = (
         <>
           {ctaData.label}
@@ -79,8 +79,10 @@ const HeroSection = ({
       return <Link to={href} className={className}>{content}</Link>;
     }
 
-    // Secondary button
-    const className = "btn-secondary group";
+    // Secondary button - use hero-specific styling when image is present
+    const className = hasImage 
+      ? "inline-flex items-center justify-center gap-2 px-6 py-3 font-medium rounded-xl border-2 border-white/40 text-white bg-white/10 backdrop-blur-sm transition-all duration-200 hover:bg-white/20 hover:border-white/60 group"
+      : "btn-secondary group";
     const content = (
       <>
         {ctaData.label}
@@ -124,11 +126,18 @@ const HeroSection = ({
             alt={heroImage?.alt || ''}
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
-          {/* Dark gradient overlay for text readability */}
+          {/* Dark gradient overlay for text readability - layered approach */}
           <div 
             className="absolute inset-0" 
             style={{ 
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.25) 100%)' 
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.35) 100%)' 
+            }} 
+          />
+          {/* Radial vignette overlay */}
+          <div 
+            className="absolute inset-0" 
+            style={{ 
+              background: 'radial-gradient(circle at 20% 20%, rgba(0,0,0,0.55), rgba(0,0,0,0.85))' 
             }} 
           />
           {/* Subtle grain texture */}
@@ -158,9 +167,10 @@ const HeroSection = ({
             transition={{ duration: 0.6, delay: 0.1 }}
             className={`font-bold mb-6 text-balance leading-[1.1] ${
               hasImage 
-                ? 'text-[34px] md:text-[52px] text-white drop-shadow-lg' 
+                ? 'text-[34px] md:text-[52px] text-white' 
                 : 'text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-deep-ink'
             }`}
+            style={hasImage ? { textShadow: '0 2px 14px rgba(0,0,0,0.55)' } : {}}
           >
             {title}
           </motion.h1>
@@ -172,9 +182,10 @@ const HeroSection = ({
               transition={{ duration: 0.6, delay: 0.2 }}
               className={`mb-8 max-w-3xl mx-auto leading-relaxed ${
                 hasImage 
-                  ? 'text-base md:text-lg text-white/90 drop-shadow-md' 
+                  ? 'text-base md:text-lg text-white/85' 
                   : 'text-lg md:text-xl text-muted-foreground'
               }`}
+              style={hasImage ? { textShadow: '0 2px 14px rgba(0,0,0,0.55)' } : {}}
             >
               {subtitle}
             </motion.p>
