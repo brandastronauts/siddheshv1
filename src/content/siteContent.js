@@ -806,52 +806,325 @@ const siteContent = {
 
     "/publications-open-science": {
       title: "Publications & Open Science",
-      meta: {
-        description: "Our published research and open science initiatives",
+      metaDescription:
+        "The Research Docket: manuscripts in progress, intellectual property registry, longitudinal data dictionaries, and data access protocols for the Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "Publications & Open Science | The Research Docket | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/publications-open-science",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "website",
+          url: "https://blueblocks.in/publications-open-science",
+          title: "The Research Docket",
+          description:
+            "Everything we publish gets a DOI and lands in Zenodo. Track manuscripts, datasets, patents, and access protocols.",
+          image: {
+            url: "https://blueblocks.in/og/docket.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Research docket DOI archive"
+          }
+        }
       },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Publications & Open Science",
+          url: "https://blueblocks.in/publications-open-science",
+          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Publications & Open Science", item: "https://blueblocks.in/publications-open-science" }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "The Research Docket",
+          hasPart: [
+            { "@type": "CreativeWork", name: "Methodology Track Manuscripts" },
+            { "@type": "CreativeWork", name: "Aerospace Track Manuscripts" },
+            { "@type": "CreativeWork", name: "Innovation Track Manuscripts" }
+          ]
+        }
+      ],
       sections: [
         {
+          id: "docket-hero",
           type: "hero",
-          heading: "Publications & Open Science",
-          subheading: "All our research is freely available to advance the field.",
+          variant: "clean",
+          headline: "The Research Docket",
+          subheadline:
+            "Everything we publish gets a DOI and lands in Zenodo. This page tracks what's currently in progress—manuscripts under review, datasets being cleaned, patents in examination, and intellectual property filings currently processing through the Blue Blocks Micro Research Institute.",
+          primaryCta: { label: "Subscribe for DOI Alerts", href: "#doi-alerts" },
+          secondaryCta: { label: "View Citation Guidelines >", href: "#citation-guidelines" },
+          image: {
+            src: "",
+            alt: "DOI docket hero visual",
+            variant: "hero",
+            privacyBlur: false,
+            caption: ""
+          }
         },
+
         {
-          type: "libraryCards",
-          heading: "Recent Publications",
+          id: "citation-guidelines",
+          type: "highlightBox",
+          title: "Citation Standard",
+          body:
+            "All Blue Blocks publications must cite our foundational methodology paper (DOI: 10.5281/zenodo.XXXXX) and dataset specification (DOI: 10.5281/zenodo.YYYYY). This ensures methodological consistency across our 15-year research program.",
+          cta: { label: "View Methodology", href: "/methodology" }
+        },
+
+        {
+          id: "manuscript-docket",
+          type: "cards",
+          header: "What We Are Writing (2026 Cycle)",
+          intro:
+            "Current status of longitudinal studies undergoing internal review.",
+          variant: "blogGrid",
+          cards: [
+            {
+              tag: "Final Editorial Phase",
+              headline: "Standardization of Micro-Observations in Non-Clinical Settings (0-18)",
+              meta: "Domain: Methodology | Est: Q1 2026",
+              body:
+                "Defining the protocol for 25 embedded fellows to document behavioral data without disrupting the \"Children's House\" environment.",
+              cta: { label: "Read Abstract", href: "#" },
+              image: { src: "", alt: "Methodology manuscript", variant: "card", privacyBlur: false }
+            },
+            {
+              tag: "Data Cleaning",
+              headline: "Vibration Analysis & Structural Integrity of SBB-1 Payload (Post-Flight)",
+              meta: "Domain: Aerospace | Est: Q2 2026",
+              body:
+                "A technical review of the thermal and vibrational data collected during the PSLV-C62 launch integration.",
+              cta: { label: "Notify Me", href: "#doi-alerts" },
+              image: { src: "", alt: "Aerospace manuscript", variant: "card", privacyBlur: false }
+            },
+            {
+              tag: "Early Draft",
+              headline: "The \"Sovereign IP\" Effect: Longitudinal Impact of Patent Ownership",
+              meta: "Domain: Innovation | Est: 2027",
+              body:
+                "Synthesizing 5 years of data from the Drone Research Centre to map the cognitive leap from \"play\" to \"invention.\"",
+              cta: { label: "Request Access", href: "/collaborate" },
+              image: { src: "", alt: "Innovation manuscript", variant: "card", privacyBlur: false }
+            },
+            {
+              tag: "Drafting",
+              headline: "Academic Performance vs. Project Completion: 15-Year Montessori Cohort Analysis",
+              meta: "Domain: Education Research | Est: Q4 2026",
+              body:
+                "Mapping standardized test scores against open-ended engineering project completion rates across the 6-12 continuum.",
+              cta: { label: "Notify Me", href: "#doi-alerts" },
+              image: { src: "", alt: "Education manuscript", variant: "card", privacyBlur: false }
+            }
+          ]
+        },
+
+        {
+          id: "ip-registry",
+          type: "bento",
+          header: "Intellectual Property Registry",
+          intro: "Highlighted outcomes currently in examination or filing preparation.",
           items: [
             {
-              title: "Interpretable ML Frameworks for Healthcare",
-              authors: "Chen, Martinez, Williams",
-              year: "2024",
-              journal: "NeurIPS",
-              type: "paper",
+              size: "lg",
+              tag: "Flight Qualified - ISRO PSLV-C62",
+              headline: "Thermal Sensor CubeSat Payload (1U Form Factor)",
+              body:
+                "Modular sensor housing for low Earth orbit thermal data collection. Inventors: Cohort SBB-1 (Ages 12-16).",
+              footer: "Mission Complete",
+              image: { src: "", alt: "CubeSat payload", variant: "card", privacyBlur: false }
             },
             {
-              title: "Ethical Guidelines for Generative AI",
-              authors: "Institute Working Group",
-              year: "2024",
-              journal: "Technical Report",
-              type: "report",
+              size: "md",
+              tag: "Patent Pending - #4421",
+              headline: "\"The Guardian\" Sanitization Drone",
+              body:
+                "Dual-rotor autonomous drone for bio-hazard control. Inventors: Drone Research Centre (Ages 9-11).",
+              footer: "Examination Stage",
+              image: { src: "", alt: "Sanitization drone", variant: "card", privacyBlur: true }
             },
             {
-              title: "Bias Detection in Large Language Models",
-              authors: "Thompson, Lee, Kumar",
-              year: "2023",
-              journal: "ICML",
-              type: "paper",
-            },
-          ],
+              size: "sm",
+              tag: "Filing Prep",
+              headline: "Sub-Soil Moisture Array",
+              body:
+                "Passive sensor network for semi-arid zones. Inventors: Terra Utopia Team.",
+              footer: "Preparation",
+              image: { src: "", alt: "Moisture array sensors", variant: "card", privacyBlur: false }
+            }
+          ]
         },
+
         {
-          type: "downloadList",
-          heading: "Resources",
+          id: "data-schemas",
+          type: "accordion",
+          header: "Longitudinal Data Dictionaries",
+          intro:
+            "We are currently k-anonymizing 15 years of student records. The Variable Schemas are available for external review.",
           items: [
-            { title: "Annual Report 2023", format: "PDF", size: "2.4 MB" },
-            { title: "Ethics Framework v2.0", format: "PDF", size: "1.1 MB" },
-            { title: "Research Data Guidelines", format: "PDF", size: "450 KB" },
+            {
+              q: "Schema: The Innovation Index (Variable Set A)",
+              a:
+                "Defines metrics for TRL Achievement and Prototyping Density. Collected by Technical Research Associates in the Innovation Labs."
+            },
+            {
+              q: "Schema: The Bio-Metric Log (Variable Set B)",
+              a:
+                "Anonymized physiological data including Heart Rate Variability (HRV) and Cortisol indicators. Collected by Embedded Fellows during naturalistic work cycles. (Format: CSV)"
+            },
+            {
+              q: "Schema: The Academic Correlation (Variable Set C)",
+              a:
+                "Longitudinal mapping of standardized test scores against open-ended engineering project completion rates. (Format: SQL)"
+            }
           ],
+          footerCta: { label: "Download Schema Definitions (.zip)", href: "#" }
         },
-      ],
+
+        {
+          id: "access-tiers",
+          type: "pricing",
+          header: "Data Access Protocols",
+          columns: [
+            {
+              title: "Open Access",
+              sub: "Public / General",
+              body:
+                "Published papers (PDF), aggregate statistics, patent abstracts, methodology frameworks. All materials licensed CC-BY-4.0.",
+              cta: { label: "Browse Zenodo", href: "#" },
+              badge: "CC-BY-4.0"
+            },
+            {
+              title: "Researcher Access",
+              sub: "PhD students, postdocs, faculty",
+              body:
+                "De-identified individual-level datasets, observation records (anonymized), engineering telemetry logs. Requires IRB approval and signed Data Use Agreement.",
+              cta: { label: "Submit Access Request", href: "/collaborate" },
+              badge: "IRB + DUA"
+            },
+            {
+              title: "Internal Only",
+              sub: "Internal research team",
+              body:
+                "Identifiable data (names, faces), unredacted observation videos, raw consent forms, linking keys between names and anonymous codes.",
+              cta: { label: "Staff Access", href: "#" },
+              badge: "Restricted"
+            }
+          ]
+        },
+
+        {
+          id: "downloadables",
+          type: "cards",
+          header: "Framework Documents (All Open Access)",
+          intro: "",
+          variant: "iconCards",
+          cards: [
+            {
+              tag: "PDF",
+              headline: "Micro Research Methodology Framework",
+              meta: "DOI: 10.5281/zenodo.XXXXX",
+              body:
+                "The complete operational manual including ethics and protocols.",
+              cta: { label: "Download (PDF)", href: "#" }
+            },
+            {
+              tag: "Spec",
+              headline: "Micro Dataset Specification v1.0",
+              meta: "DOI: 10.5281/zenodo.YYYYY",
+              body:
+                "The technical schema for variable definitions and anonymization standards.",
+              cta: { label: "Download Spec", href: "#" }
+            },
+            {
+              tag: "Guide",
+              headline: "Citation Guide",
+              meta: "Standard",
+              body:
+                "Standard format for attributing Micro-Studies in academic work.",
+              cta: { label: "View Guide", href: "#" }
+            }
+          ]
+        },
+
+        {
+          id: "ethics-note",
+          type: "textBlock",
+          variant: "muted",
+          header: "",
+          body:
+            "Ethical Statement: All shared data is anonymized using k-anonymity protocols to protect subject privacy. Names are replaced with alphanumeric codes; ages are converted to ranges; faces are obscured. No re-identification pathway exists in public datasets."
+        },
+
+        {
+          id: "doi-alerts",
+          type: "form",
+          header: "Subscribe for DOI Alerts",
+          intro:
+            "Get notified when a new paper, dataset, or schema is assigned a DOI and released to Zenodo.",
+          submit: {
+            to: "media@blueblocks.in",
+            subject: "DOI Alerts Subscription — Blue Blocks Micro Research Institute",
+            successMessage: "Draft email opened in your mail client."
+          },
+          fields: [
+            { name: "name", label: "Full Name", type: "text", required: true },
+            { name: "email", label: "Email", type: "email", required: true },
+            {
+              name: "interest",
+              label: "Primary Interest",
+              type: "select",
+              required: true,
+              options: [
+                { label: "Methodology", value: "methodology" },
+                { label: "Aerospace / Telemetry", value: "aerospace" },
+                { label: "Innovation / Patents", value: "innovation" },
+                { label: "Education / Montessori", value: "education" },
+                { label: "All", value: "all" }
+              ]
+            },
+            {
+              name: "notes",
+              label: "Optional Note",
+              type: "textarea",
+              required: false,
+              placeholder: "Your lab / department, and what kind of datasets you work with."
+            }
+          ]
+        },
+
+        {
+          id: "docket-faq",
+          type: "accordion",
+          header: "FAQs",
+          items: [
+            {
+              q: "Are your publications peer-reviewed?",
+              a:
+                "All manuscripts get internal review by our research council (3-5 reviewers). Methodological papers also get external pre-publication review by independent PhD-level researchers before we register DOIs and upload to Zenodo."
+            },
+            {
+              q: "Can I access your data?",
+              a:
+                "Yes, three ways. (1) Open access: Published papers and aggregate data are freely available on Zenodo—download anytime, no permission needed. (2) Researcher access: De-identified individual-level datasets require IRB approval from your institution and signed Data Use Agreement—apply through our Collaborate page, 2-4 week review. (3) Visiting fellowship: Come work in our archive with full dataset access (2-8 weeks)."
+            },
+            {
+              q: "Where do you publish?",
+              a:
+                "All publications are archived on Zenodo with DOI registration, ensuring they are citable and permanent."
+            }
+          ]
+        }
+      ]
     },
 
     "/governance": {
