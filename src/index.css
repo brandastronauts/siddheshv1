@@ -1,4 +1,4 @@
-/* IBM Plex fonts loaded via index.html */
+/* Fraunces + Manrope fonts loaded via index.html */
 
 @tailwind base;
 @tailwind components;
@@ -117,18 +117,18 @@
 
   body {
     @apply bg-background text-foreground antialiased font-sans;
-    font-feature-settings: 'kern';
+    font-family: "Manrope", system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2 {
-    @apply font-serif font-semibold tracking-tight text-deep-ink;
+    @apply font-serif font-semibold text-deep-ink;
     letter-spacing: -0.02em;
   }
 
   h3, h4, h5, h6 {
-    @apply font-sans font-semibold tracking-tight;
+    @apply font-sans font-semibold;
     letter-spacing: -0.01em;
   }
 
