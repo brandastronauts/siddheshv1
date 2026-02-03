@@ -349,7 +349,7 @@ const siteContent = {
             {
               q: "What does \"Micro Research\" mean?",
               a:
-                "It is a protocol of small-scale, high-frequency observation studies that run continuously for years. Rather than conducting one large study on "how children learn math," we execute 20+ micro-studies per year—each addressing one specific variable, recordable in under 5 minutes, sustained over time. The power of "Micro" lies in accumulation; over 15 years, 200+ studies, 847 children generating a granular dataset becomes significant."
+                "It is a protocol of small-scale, high-frequency observation studies that run continuously for years. Rather than conducting one large study on 'how children learn math,' we execute 20+ micro-studies per year—each addressing one specific variable, recordable in under 5 minutes, sustained over time. The power of 'Micro' lies in accumulation; over 15 years, 200+ studies, 847 children generating a granular dataset becomes significant."
             },
             {
               q: "Are the student projects simulations or real-world applications?",
