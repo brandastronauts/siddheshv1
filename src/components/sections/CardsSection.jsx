@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import SmartImage from '../common/SmartImage';
 
 const CardsSection = ({ heading, header, items, cards, variant }) => {
   const title = header || heading;
   const cardData = cards || items || [];
   const isPressRoom = variant === 'pressRoom';
+  const hasImages = cardData.some(card => card.image);
 
   const renderAction = (action) => {
     if (!action) return null;
@@ -51,7 +53,13 @@ const CardsSection = ({ heading, header, items, cards, variant }) => {
           </motion.h2>
         )}
         
-        <div className={`grid grid-cols-1 ${isPressRoom ? 'lg:grid-cols-1 max-w-4xl mx-auto gap-6' : 'md:grid-cols-2 lg:grid-cols-3 gap-6'}`}>
+        <div className={`grid grid-cols-1 ${
+          isPressRoom 
+            ? 'lg:grid-cols-1 max-w-4xl mx-auto gap-6' 
+            : hasImages 
+              ? 'md:grid-cols-2 gap-6' 
+              : 'md:grid-cols-2 lg:grid-cols-3 gap-6'
+        }`}>
           {cardData.map((item, index) => (
             <motion.div
               key={index}
@@ -59,31 +67,49 @@ const CardsSection = ({ heading, header, items, cards, variant }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="card-elegant p-6 lg:p-8 group"
+              className="card-elegant overflow-hidden group"
             >
-              {/* Tag for pressRoom variant */}
-              {item.tag && (
-                <span className="badge-accent mb-4 inline-block">
-                  {item.tag}
-                </span>
+              {/* Card image if present */}
+              {item.image && (
+                <div className="relative h-48 overflow-hidden">
+                  <SmartImage
+                    src={item.image.src}
+                    alt={item.image.alt}
+                    variant={item.image.variant || 'card'}
+                    privacyBlur={item.image.privacyBlur}
+                    aspect="16:9"
+                    className="w-full h-full"
+                  />
+                  {/* Gradient overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-deep-ink/20 to-transparent" />
+                </div>
               )}
 
-              <h3 className="text-xl font-semibold text-deep-ink mb-3 group-hover:text-primary-navy transition-colors">
-                {item.headline || item.title}
-              </h3>
-              
-              {item.subtitle && (
-                <p className="text-sm text-accent-cyan font-medium mb-3">
-                  {item.subtitle}
+              <div className="p-6 lg:p-8">
+                {/* Tag for pressRoom variant */}
+                {item.tag && (
+                  <span className="badge-accent mb-4 inline-block">
+                    {item.tag}
+                  </span>
+                )}
+
+                <h3 className="text-xl font-semibold text-deep-ink mb-3 group-hover:text-primary-navy transition-colors">
+                  {item.headline || item.title}
+                </h3>
+                
+                {item.subtitle && (
+                  <p className="text-sm text-accent-cyan font-medium mb-3">
+                    {item.subtitle}
+                  </p>
+                )}
+                
+                <p className="text-muted-foreground text-sm leading-relaxed mb-5">
+                  {item.body || item.description}
                 </p>
-              )}
-              
-              <p className="text-muted-foreground text-sm leading-relaxed mb-5">
-                {item.body || item.description}
-              </p>
 
-              {/* Action button for pressRoom */}
-              {item.action && renderAction(item.action)}
+                {/* Action button for pressRoom */}
+                {item.action && renderAction(item.action)}
+              </div>
             </motion.div>
           ))}
         </div>
