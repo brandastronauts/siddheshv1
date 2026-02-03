@@ -1,4 +1,4 @@
-import { Shield, Eye, Scale, Check, Users, Mail, Newspaper, MessageSquare, Microscope, Building2, GraduationCap, Briefcase } from 'lucide-react';
+import { Shield, Eye, Scale, Check, Users, Mail, Newspaper, MessageSquare, Microscope, Building2, GraduationCap, Briefcase, Database } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const iconMap = {
@@ -7,6 +7,7 @@ const iconMap = {
   scale: Scale,
   check: Check,
   users: Users,
+  user: Users,
   mail: Mail,
   newspaper: Newspaper,
   message: MessageSquare,
@@ -14,6 +15,7 @@ const iconMap = {
   building: Building2,
   graduation: GraduationCap,
   briefcase: Briefcase,
+  database: Database,
 };
 
 const Grid3Section = ({ heading, header, intro, items }) => {

@@ -390,30 +390,248 @@ const siteContent = {
 
     "/the-institute": {
       title: "The Institute",
-      meta: {
-        description: "Learn about our mission, team, and research approach",
+      metaDescription:
+        "The 0–18 Continuum: a longitudinal, embedded micro-research institution tracking human innovation capacity across fifteen years of continuous observation.",
+      seo: {
+        title: "The 0–18 Continuum | The Institute | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/the-institute",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "website",
+          url: "https://blueblocks.in/the-institute",
+          title: "The 0–18 Continuum",
+          description:
+            "A new category of research institution built for questions requiring decades, not semesters — continuous observation from birth to age 18.",
+          image: {
+            url: "https://blueblocks.in/og/the-institute.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Research environment"
+          }
+        }
       },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "The Institute",
+          url: "https://blueblocks.in/the-institute",
+          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" },
+          about: {
+            "@type": "Thing",
+            name: "Longitudinal Micro-Research (0–18)"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "The Institute", item: "https://blueblocks.in/the-institute" }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "Who does the observation?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "25 Embedded Research Fellows—AMI-certified practitioners who hold dual roles as educators and researchers."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "Do you experiment on children?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "No. We observe naturally occurring behavior. We never manipulate environments or interfere with the child's work cycle."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "How do you protect children's privacy?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "Published datasets use codes instead of names (Subject-847-A, not personal identities). Photos are blurred/cropped. No combination of data points allows re-identification."
+              }
+            }
+          ]
+        }
+      ],
       sections: [
         {
+          id: "inst-hero",
           type: "hero",
-          heading: "About the Institute",
-          subheading: "Founded in 2018, we bring together researchers, ethicists, and technologists to ensure AI benefits everyone.",
+          variant: "stark",
+          headline: "The 0-18 Continuum.",
+          subheadline:
+            "We are a new category of research institution—built for questions that require decades, not semesters. By embedding rigorous observation protocols into a living Montessori environment, we have created the world's longest continuous record of human innovation capacity. Most child development studies observe children once or twice. We've been watching the same children for fifteen years. Not surveys. Not lab visits. Daily observation records from their actual teachers, in their actual classrooms, working on actual problems.",
+          primaryCta: { label: "Download Institute Prospectus", href: "#" },
+          image: {
+            src: "",
+            alt: "High trust research institute visual",
+            variant: "hero",
+            privacyBlur: true,
+            caption:
+              "Full-width hero with stark typography. Imagery must imply precision, not play."
+          }
         },
+
         {
+          id: "inst-live-ticker",
+          type: "ticker",
+          text:
+            "PROTOCOL STATUS: Active Observation Cycle (Year 16) /// COHORT: N=847 Subjects (0-18) /// DATA INTEGRITY: Longitudinal Continuity [100%] /// CURRENT PHASE: TRL-9 Outcome Correlation"
+        },
+
+        {
+          id: "inst-mission",
           type: "textBlock",
-          heading: "Our Mission",
-          content: "The Institute for Ethical AI Research is dedicated to advancing the responsible development and deployment of artificial intelligence technologies. We conduct independent research, develop ethical frameworks, and engage with policymakers to shape the future of AI governance.",
+          header: "The Continuity Challenge - The Problem We Are Solving",
+          body:
+            "Scientific inquiry is often constrained by the academic calendar. Grants expire, researchers relocate, and funding cycles shift. This structural fragmentation creates 'snapshots' of development, making it difficult to study the long, unbroken arc of human potential. To understand the genesis of innovation, one must observe the full transition from infancy to adulthood without interruption. You can't understand how capabilities develop by observing children at age 6, then again at age 12. You need continuous records showing what happened in between."
         },
+
         {
-          type: "grid3",
-          heading: "Our Values",
-          items: [
-            { title: "Integrity", description: "We maintain the highest standards of research ethics and transparency.", icon: "check" },
-            { title: "Independence", description: "Our research is free from commercial or political influence.", icon: "shield" },
-            { title: "Collaboration", description: "We believe in open science and cross-disciplinary partnerships.", icon: "users" },
-          ],
+          id: "inst-solution",
+          type: "highlightBox",
+          title: "The Embedded Solution - How We Solved It:",
+          body:
+            "We built an institution where research never ends because the environment never changes. By integrating the 'School' and the 'Lab,' we maintain zero-attrition contact with our subjects. We do not just measure capacity; we document its entire developmental trajectory. Same children, same teachers, fifteen years. When children graduate at 18, we have complete records from their first day to their last. No grant deadlines. No funding cycles. The research continues as long as the school operates."
         },
-      ],
+
+        {
+          id: "inst-philosophy",
+          type: "grid3",
+          header: "The Micro-Research Framework - How We Actually Do This",
+          items: [
+            {
+              title: "Observation Without Interference",
+              icon: "eye",
+              body:
+                "Children's regular teachers record observations during or after class—never during conversations or activities that require teacher attention. Observations take under 5 minutes to record. Teachers write what happened, not what they think it means. Analysis comes later. The child should never notice they're being observed. This ensures high Ecological Validity."
+            },
+            {
+              title: "The Embedded Fellow",
+              icon: "users",
+              body:
+                "Our data collectors are not visitors; they are practitioners. By spending 35,000+ hours with the subjects, our 25 Embedded Fellows render the 'Observer Effect' negligible, capturing behavioral nuances that external researchers miss. They're the children's daily guides. Children don't act differently because observation is invisible. Teachers record behavior patterns they notice across weeks and months, not single moments."
+            },
+            {
+              title: "Open Science Archival",
+              icon: "database",
+              body:
+                "We operate as a pre-print repository for raw educational data. All methodologies, anonymized datasets, and TRL-9 outcome reports are archived via Zenodo, contributing to the global commons of Educational Science."
+            }
+          ]
+        },
+
+        {
+          id: "inst-labs",
+          type: "cards",
+          header: "Centers of Observation",
+          cards: [
+            {
+              tag: "Simulation Wing",
+              headline: "Space Lab",
+              body:
+                "A controlled environment for observing high-stakes collaboration. Features lunar terrain simulation and avionics stress-testing to validate student payloads to ISRO standards.",
+              image: { src: "", alt: "Space lab facility", variant: "card", privacyBlur: true }
+            },
+            {
+              tag: "Prototyping Wing",
+              headline: "Drone Research Centre",
+              body:
+                "Dedicated to the longitudinal study of 'Iterative Failure.' Tracks the engineering lifecycle from initial aerodynamic testing to Patent-Ready flight stability.",
+              image: { src: "", alt: "Drone research environment", variant: "card", privacyBlur: true }
+            },
+            {
+              tag: "Biosystem Wing",
+              headline: "Terra Utopia",
+              body:
+                "Measuring systems thinking in real-time. Students manage complex ecological variables, generating longitudinal data on soil moisture and resource allocation.",
+              image: { src: "", alt: "Environmental research facility", variant: "card", privacyBlur: true }
+            },
+            {
+              tag: "Synthesis Hub",
+              headline: "Data Wing",
+              body:
+                "The central processing unit where Embedded Fellows synthesize behavioral observations into longitudinal records. This facility ensures all data meets IRB and Ethical Privacy standards.",
+              image: { src: "", alt: "Data wing facility", variant: "card", privacyBlur: true }
+            }
+          ]
+        },
+
+        {
+          id: "inst-stats",
+          type: "statsBar",
+          header: "The Blue Blocks Advantage",
+          stats: [
+            { value: "15 Years", label: "Continuous Observation" },
+            { value: "847", label: "Subjects Tracked (0-18)" },
+            { value: "35,000+", label: "Hours of Data Per Child" },
+            { value: "5", label: "Innovation Labs" }
+          ]
+        },
+
+        {
+          id: "inst-inquiries",
+          type: "textBlock",
+          header: "Institutional Access",
+          body:
+            "Access to the Blue Blocks Micro Research Institute is restricted to protect the integrity of the observational environment. We welcome collaboration proposals from Post-Doctoral Researchers, Industrial Partners, and Policy Makers.",
+          cta: { label: "Request IRB Guidelines", href: "/governance" }
+        },
+
+        {
+          id: "inst-faq",
+          type: "accordion",
+          header: "FAQs",
+          items: [
+            {
+              q: "Who does the observation?",
+              a:
+                "25 Embedded Research Fellows—AMI-certified practitioners who hold dual roles as educators and researchers."
+            },
+            {
+              q: "Do you experiment on children?",
+              a:
+                "No. We observe naturally occurring behavior. We never manipulate environments or interfere with the child's work cycle."
+            },
+            {
+              q: "How do you protect children's privacy?",
+              a:
+                "Published datasets use codes instead of names (Subject-847-A, not 'Rahul Kumar'). Specific school location becomes 'urban Montessori school, Hyderabad, India.' Photos: faces blurred or cropped out. No combination of data points allows re-identification."
+            },
+            {
+              q: "Do parents consent?",
+              a:
+                "Yes. All families provide comprehensive consent at enrollment and may withdraw at any time."
+            },
+            {
+              q: "What is 'Micro Research'?",
+              a:
+                "A methodology characterized by high-frequency, low-complexity studies designed for practitioner execution."
+            },
+            {
+              q: "What do you study? (Domains)",
+              a:
+                "We focus on three domains: Innovation (0-18), Montessori (0-18), and Parenting (0-18)."
+            },
+            {
+              q: "How many children have you observed?",
+              a:
+                "847 children since 2009."
+            }
+          ]
+        }
+      ]
     },
 
     "/methodology": {

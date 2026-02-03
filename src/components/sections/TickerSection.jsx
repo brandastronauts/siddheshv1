@@ -1,20 +1,31 @@
 import { motion } from 'framer-motion';
 
-const TickerSection = ({ items }) => {
+const TickerSection = ({ items, text }) => {
+  // Support both items array and single text string
+  const tickerItems = items || (text ? text.split(' /// ') : []);
+
   return (
-    <section className="bg-primary-navy py-4 overflow-hidden">
-      <div className="container-grid">
-        <div className="flex flex-wrap justify-center gap-6 md:gap-12">
-          {items.map((item, index) => (
-            <motion.span
+    <section className="bg-primary-navy py-4 overflow-hidden relative">
+      {/* Animated gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary-navy via-secondary-blue/50 to-primary-navy opacity-50" />
+      
+      <div className="container-grid relative z-10">
+        <div className="flex flex-wrap justify-center gap-4 md:gap-8">
+          {tickerItems.map((item, index) => (
+            <motion.div
               key={index}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: index * 0.1 }}
-              className="text-white/90 text-sm md:text-base font-medium whitespace-nowrap"
+              className="flex items-center gap-4"
             >
-              {item}
-            </motion.span>
+              <span className="text-white/90 text-xs md:text-sm font-medium whitespace-nowrap tracking-wide">
+                {item}
+              </span>
+              {index < tickerItems.length - 1 && (
+                <span className="hidden md:block w-1.5 h-1.5 rounded-full bg-accent-cyan/60" />
+              )}
+            </motion.div>
           ))}
         </div>
       </div>
