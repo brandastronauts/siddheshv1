@@ -1857,38 +1857,209 @@ const siteContent = {
 
     "/contact": {
       title: "Contact",
-      meta: {
-        description: "Get in touch with the Institute",
+      metaDescription:
+        "Contact the Blue Blocks Micro Research Institute for research proposals, data access requests, institutional partnerships, and media inquiries.",
+      seo: {
+        title: "Contact | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/contact",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "website",
+          url: "https://blueblocks.in/contact",
+          title: "Contact the Institute",
+          description:
+            "Research proposals, data access requests, institutional partnerships, and media inquiries.",
+          image: {
+            url: "https://blueblocks.in/og/contact.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Contact and institutional access"
+          }
+        }
       },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          name: "Contact",
+          url: "https://blueblocks.in/contact",
+          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://blueblocks.in/",
+          contactPoint: [
+            {
+              "@type": "ContactPoint",
+              contactType: "research proposals",
+              email: "research@blueblocks.in",
+              availableLanguage: ["English"]
+            },
+            {
+              "@type": "ContactPoint",
+              contactType: "media inquiries",
+              email: "media@blueblocks.in",
+              availableLanguage: ["English"]
+            }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Contact", item: "https://blueblocks.in/contact" }
+          ]
+        }
+      ],
       sections: [
         {
+          id: "contact-hero",
           type: "hero",
-          heading: "Contact Us",
-          subheading: "We welcome inquiries from researchers, media, and the public.",
+          variant: "stark",
+          headline: "Contact the Institute.",
+          subheadline:
+            "Access is structured to protect the integrity of the observational environment. Use the form below for research proposals, dataset access requests, institutional partnerships, and press inquiries.",
+          primaryCta: { label: "Send an Inquiry", href: "#contact-form" },
+          secondaryCta: { label: "View Data Access Protocols", href: "/publications-open-science" },
+          image: {
+            src: "",
+            alt: "High-trust institutional contact visual",
+            variant: "hero",
+            privacyBlur: false,
+            caption: ""
+          }
         },
+
         {
+          id: "contact-channels",
           type: "grid3",
-          heading: "Contact Information",
+          header: "Primary Channels",
+          intro: "Use the correct channel to reduce review time.",
           items: [
-            { title: "Research Inquiries", description: "For questions about our research or collaboration opportunities.", email: "research@blueblocks.in", icon: "mail" },
-            { title: "Media & Press", description: "For media inquiries, interviews, and press materials.", email: "press@blueblocks.in", icon: "newspaper" },
-            { title: "General Inquiries", description: "For all other questions and feedback.", email: "info@blueblocks.in", icon: "message" },
-          ],
+            {
+              title: "Research Proposals",
+              icon: "mail",
+              body:
+                "Visiting fellowships, joint authorship, micro-study collaboration, and methodology transfer requests.",
+              cta: { label: "Email research@blueblocks.in", href: "mailto:research@blueblocks.in" }
+            },
+            {
+              title: "Media & Press",
+              icon: "file",
+              body:
+                "Press verification, citations, interviews, and media kit requests. Student access is regulated.",
+              cta: { label: "Email media@blueblocks.in", href: "mailto:media@blueblocks.in" }
+            },
+            {
+              title: "Institutional Partnerships",
+              icon: "building",
+              body:
+                "MOUs, grant alliances, and long-term collaborations requiring governance and IRB alignment.",
+              cta: { label: "Start via Collaborate", href: "/collaborate" }
+            }
+          ]
         },
+
         {
+          id: "contact-form",
           type: "form",
-          heading: "Send a Message",
-          description: "Fill out the form below and we'll respond within 2 business days.",
+          header: "Inquiry Form",
+          intro:
+            "This form opens a draft email in your mail client. Include your affiliation, timeline, and what you intend to publish or validate.",
+          submit: {
+            to: "research@blueblocks.in",
+            subject: "Inquiry — Blue Blocks Micro Research Institute",
+            successMessage: "Draft email opened in your mail client."
+          },
           fields: [
-            { name: "name", label: "Your Name", type: "text", required: true },
-            { name: "email", label: "Email Address", type: "email", required: true },
-            { name: "subject", label: "Subject", type: "select", required: true, options: ["Research Inquiry", "Media Request", "Partnership", "General Question", "Other"] },
-            { name: "message", label: "Your Message", type: "textarea", required: true },
-          ],
-          submitLabel: "Send Message",
-          recipientEmail: "contact@blueblocks.in",
+            {
+              name: "category",
+              label: "Inquiry Type",
+              type: "select",
+              required: true,
+              options: [
+                { label: "Research Proposal / Micro-Study Collaboration", value: "research-proposal" },
+                { label: "Dataset Access (IRB + DUA)", value: "data-access" },
+                { label: "Visiting Fellowship (2–8 weeks)", value: "fellowship" },
+                { label: "Institutional Partnership / MOU", value: "mou" },
+                { label: "Media / Press", value: "media" },
+                { label: "Other", value: "other" }
+              ]
+            },
+            { name: "name", label: "Full Name", type: "text", required: true },
+            { name: "email", label: "Email", type: "email", required: true },
+            { name: "affiliation", label: "Affiliation / Organization", type: "text", required: true },
+            { name: "country", label: "Country", type: "text", required: false },
+            {
+              name: "timeline",
+              label: "Timeline / Deadline",
+              type: "text",
+              required: false,
+              placeholder: "e.g., Q2 2026, or 'within 4 weeks'"
+            },
+            {
+              name: "message",
+              label: "Message",
+              type: "textarea",
+              required: true,
+              placeholder:
+                "Describe your research question, data needs, intended outputs (paper/policy/brief), and any verification requests."
+            }
+          ]
         },
-      ],
+
+        {
+          id: "contact-location",
+          type: "split",
+          header: "Institutional Address",
+          left: {
+            type: "text",
+            title: "Operational Note",
+            body:
+              "Campus visits are by appointment only and scheduled outside core observational hours to ensure zero interference with the longitudinal study.\n\nFor press visits: contact media@blueblocks.in at least 5 business days in advance.\n\nFor researcher access: review Data Access Protocols before applying.",
+            ctas: [
+              { label: "Data Access Protocols", href: "/publications-open-science" },
+              { label: "Newsroom", href: "/newsroom" }
+            ]
+          },
+          right: {
+            type: "image",
+            image: {
+              src: "",
+              alt: "Map placeholder (replace with real map embed later)",
+              variant: "card",
+              privacyBlur: false,
+              caption: "Replace with map embed when final address is confirmed."
+            }
+          }
+        },
+
+        {
+          id: "contact-faq",
+          type: "accordion",
+          header: "Contact FAQs",
+          items: [
+            {
+              q: "Do you respond to every request?",
+              a:
+                "We respond to requests that include a clear affiliation, research intent, and timeline. Incomplete requests may not be reviewed."
+            },
+            {
+              q: "Can journalists interview students directly?",
+              a:
+                "Direct access to minors is strictly regulated. Interviews require Ethics Committee approval, parent presence, and non-disruptive scheduling."
+            },
+            {
+              q: "Where should dataset access requests go?",
+              a:
+                "Start through Collaborate. Researcher access requires IRB approval and a signed Data Use Agreement."
+            }
+          ]
+        }
+      ]
     },
   },
 };

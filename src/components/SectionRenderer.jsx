@@ -18,6 +18,7 @@ import TextBlockSection from './sections/TextBlockSection';
 import FormSection from './sections/FormSection';
 import FeaturedStoriesSection from './sections/FeaturedStoriesSection';
 import PricingSection from './sections/PricingSection';
+import SplitSection from './sections/SplitSection';
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -52,6 +53,7 @@ const SectionRenderer = ({ sections }) => {
       form: FormSection,
       featuredStories: FeaturedStoriesSection,
       pricing: PricingSection,
+      split: SplitSection,
     };
 
     const Component = components[type];
