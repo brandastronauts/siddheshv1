@@ -12,6 +12,31 @@ import terraUtopiaImg from '@/assets/placeholders/labs/terra-utopia.jpg';
 import dataWingImg from '@/assets/placeholders/labs/data-wing.jpg';
 import avionicsImg from '@/assets/placeholders/labs/avionics.jpg';
 import protocolNotesImg from '@/assets/placeholders/labs/protocol-notes.jpg';
+import satelliteHardwareImg from '@/assets/placeholders/labs/satellite-hardware.jpg';
+import dronePrototypeImg from '@/assets/placeholders/labs/drone-prototype.jpg';
+import lunarSimImg from '@/assets/placeholders/labs/lunar-sim.jpg';
+
+// Import banner images
+import homePrecisionBanner from '@/assets/banners/home-precision.jpg';
+import instituteStarkBanner from '@/assets/banners/institute-stark.jpg';
+import methodologyFrameworkBanner from '@/assets/banners/methodology-framework.jpg';
+import publicationsDoiBanner from '@/assets/banners/publications-doi.jpg';
+import governanceOversightBanner from '@/assets/banners/governance-oversight.jpg';
+import collaborateNetworkBanner from '@/assets/banners/collaborate-network.jpg';
+import newsroomPressBanner from '@/assets/banners/newsroom-press.jpg';
+import contactInstitutionalBanner from '@/assets/banners/contact-institutional.jpg';
+import downloadsArchiveBanner from '@/assets/banners/downloads-archive.jpg';
+import technicalBriefAeroBanner from '@/assets/banners/technical-brief-aero.jpg';
+import presentationConferenceBanner from '@/assets/banners/presentation-conference.jpg';
+import proceedingsAuditoriumBanner from '@/assets/banners/proceedings-auditorium.jpg';
+
+// Import headshot placeholders
+import headshot1 from '@/assets/placeholders/avatars/headshot-1.jpg';
+import headshot2 from '@/assets/placeholders/avatars/headshot-2.jpg';
+import headshot3 from '@/assets/placeholders/avatars/headshot-3.jpg';
+
+// Import logo placeholder
+import logoPlaceholder from '@/assets/placeholders/logos/logo-placeholder.png';
 
 // Import avatar images
 import pavanImg from '@/assets/placeholders/avatars/pavan.jpg';
@@ -35,12 +60,18 @@ const imageMap = {
   '/src/assets/placeholders/labs/data-wing.jpg': dataWingImg,
   '/src/assets/placeholders/labs/avionics.jpg': avionicsImg,
   '/src/assets/placeholders/labs/protocol-notes.jpg': protocolNotesImg,
+  '/src/assets/placeholders/labs/satellite-hardware.jpg': satelliteHardwareImg,
+  '/src/assets/placeholders/labs/drone-prototype.jpg': dronePrototypeImg,
+  '/src/assets/placeholders/labs/lunar-sim.jpg': lunarSimImg,
   
   // Avatars
   '/src/assets/placeholders/avatars/pavan.jpg': pavanImg,
   '/src/assets/placeholders/avatars/munira.jpg': muniraImg,
   '/src/assets/placeholders/avatars/director-placeholder.jpg': directorPlaceholderImg,
   '/src/assets/placeholders/avatars/advisor-placeholder.jpg': advisorPlaceholder,
+  '/src/assets/placeholders/avatars/headshot-1.jpg': headshot1,
+  '/src/assets/placeholders/avatars/headshot-2.jpg': headshot2,
+  '/src/assets/placeholders/avatars/headshot-3.jpg': headshot3,
   
   // Visual evidence
   '/src/assets/placeholders/visual-evidence/avionics-rig-1.jpg': avionicsRig1,
@@ -49,6 +80,23 @@ const imageMap = {
   '/src/assets/placeholders/visual-evidence/field-soil-1.jpg': fieldSoil1,
   '/src/assets/placeholders/visual-evidence/lab-bench-1.jpg': labBench1,
   '/src/assets/placeholders/visual-evidence/lunar-sim-1.jpg': lunarSim1,
+  
+  // Banners
+  '/src/assets/banners/home-precision.jpg': homePrecisionBanner,
+  '/src/assets/banners/institute-stark.jpg': instituteStarkBanner,
+  '/src/assets/banners/methodology-framework.jpg': methodologyFrameworkBanner,
+  '/src/assets/banners/publications-doi.jpg': publicationsDoiBanner,
+  '/src/assets/banners/governance-oversight.jpg': governanceOversightBanner,
+  '/src/assets/banners/collaborate-network.jpg': collaborateNetworkBanner,
+  '/src/assets/banners/newsroom-press.jpg': newsroomPressBanner,
+  '/src/assets/banners/contact-institutional.jpg': contactInstitutionalBanner,
+  '/src/assets/banners/downloads-archive.jpg': downloadsArchiveBanner,
+  '/src/assets/banners/technical-brief-aero.jpg': technicalBriefAeroBanner,
+  '/src/assets/banners/presentation-conference.jpg': presentationConferenceBanner,
+  '/src/assets/banners/proceedings-auditorium.jpg': proceedingsAuditoriumBanner,
+  
+  // Logos
+  '/src/assets/placeholders/logos/logo-placeholder.png': logoPlaceholder,
   
   // Defaults
   '/src/assets/placeholders/hero-default.jpg': heroDefault,

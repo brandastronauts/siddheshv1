@@ -20,6 +20,8 @@ import FeaturedStoriesSection from './sections/FeaturedStoriesSection';
 import PricingSection from './sections/PricingSection';
 import SplitSection from './sections/SplitSection';
 import GalleryGridSection from './sections/GalleryGridSection';
+import DownloadButtonSection from './sections/DownloadButtonSection';
+import SitemapSection from './sections/SitemapSection';
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -56,6 +58,8 @@ const SectionRenderer = ({ sections }) => {
       pricing: PricingSection,
       split: SplitSection,
       galleryGrid: GalleryGridSection,
+      downloadButton: DownloadButtonSection,
+      sitemap: SitemapSection,
     };
 
     const Component = components[type];
