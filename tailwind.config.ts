@@ -14,8 +14,20 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['"IBM Plex Sans"', 'system-ui', '-apple-system', 'sans-serif'],
-        serif: ['"IBM Plex Serif"', 'Georgia', 'serif'],
+        sans: ['"Manrope"', 'system-ui', 'sans-serif'],
+        serif: ['"Fraunces"', 'Georgia', 'serif'],
+      },
+      fontSize: {
+        'display-1': ['4.5rem', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '600' }],
+        'display-2': ['3.5rem', { lineHeight: '1.15', letterSpacing: '-0.02em', fontWeight: '600' }],
+        'h1': ['2.5rem', { lineHeight: '1.2', letterSpacing: '-0.015em', fontWeight: '600' }],
+        'h2': ['2rem', { lineHeight: '1.25', letterSpacing: '-0.01em', fontWeight: '600' }],
+        'h3': ['1.5rem', { lineHeight: '1.3', letterSpacing: '-0.01em', fontWeight: '600' }],
+        'body-lg': ['1.125rem', { lineHeight: '1.7', fontWeight: '400' }],
+        'body': ['1rem', { lineHeight: '1.7', fontWeight: '400' }],
+        'body-sm': ['0.875rem', { lineHeight: '1.6', fontWeight: '400' }],
+        'label': ['0.875rem', { lineHeight: '1.4', fontWeight: '500' }],
+        'caption': ['0.75rem', { lineHeight: '1.5', fontWeight: '400' }],
       },
       colors: {
         border: "hsl(var(--border))",
