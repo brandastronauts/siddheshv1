@@ -13,6 +13,7 @@ import CollaboratePage from "./pages/CollaboratePage";
 import NewsroomPage from "./pages/NewsroomPage";
 import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import LegalPage from "./pages/LegalPage";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,8 @@ const App = () => (
           <Route path="/collaborate" element={<CollaboratePage />} />
           <Route path="/newsroom" element={<NewsroomPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy" element={<LegalPage />} />
+          <Route path="/terms" element={<LegalPage />} />
           {/* Catch-all route for 404 */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
