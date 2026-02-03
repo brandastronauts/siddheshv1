@@ -1,18 +1,13 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight, FileWarning } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const TextBlockSection = ({ heading, header, sectionName, intro, content, body, cta, alignment = 'center', variant }) => {
+const TextBlockSection = ({ heading, header, sectionName, intro, content, body, cta, alignment = 'left', variant }) => {
   const title = header || heading;
   const text = body || content;
   const isMuted = variant === 'muted';
+  const isLegal = variant === 'legal';
   
-  const alignmentClasses = {
-    left: 'text-left',
-    center: 'text-center mx-auto',
-    right: 'text-right ml-auto',
-  };
-
   // Muted variant - simple text without the card
   if (isMuted) {
     return (
@@ -22,7 +17,7 @@ const TextBlockSection = ({ heading, header, sectionName, intro, content, body, 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-sm text-muted-foreground text-center max-w-4xl mx-auto leading-relaxed italic"
+            className="text-sm text-muted-foreground text-center max-w-4xl mx-auto leading-relaxed italic whitespace-pre-line"
           >
             {text}
           </motion.p>
@@ -31,58 +26,51 @@ const TextBlockSection = ({ heading, header, sectionName, intro, content, body, 
     );
   }
 
+  // Default legal-style text block (clean, left-aligned, no card)
   return (
-    <section className="section-spacing bg-background relative">
+    <section className="py-10 md:py-14 bg-background">
       <div className="container-grid">
         <motion.div 
-          initial={{ opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className={`max-w-3xl ${alignmentClasses[alignment]}`}
+          className="max-w-3xl mx-auto"
         >
-          <div className="card-elegant p-8 md:p-12">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-navy/10 to-accent-cyan/10 flex items-center justify-center">
-                <FileWarning className="w-7 h-7 text-primary-navy" />
-              </div>
+          {sectionName && (
+            <p className="text-sm font-semibold text-accent-cyan uppercase tracking-wider mb-3">
+              {sectionName}
+            </p>
+          )}
+
+          {intro && (
+            <p className="text-muted-foreground italic mb-4 text-sm whitespace-pre-line">
+              {intro}
+            </p>
+          )}
+          
+          {title && (
+            <h2 className="text-xl md:text-2xl font-bold text-deep-ink mb-4">
+              {title}
+            </h2>
+          )}
+          
+          {text && (
+            <div className="text-muted-foreground leading-relaxed whitespace-pre-line">
+              {text}
             </div>
+          )}
 
-            {sectionName && (
-              <p className="text-sm font-semibold text-accent-cyan uppercase tracking-wider mb-3 text-center">
-                {sectionName}
-              </p>
-            )}
-
-            {intro && (
-              <p className="text-muted-foreground italic mb-4 text-center text-sm">
-                {intro}
-              </p>
-            )}
-            
-            {title && (
-              <h2 className="text-2xl md:text-3xl font-bold text-deep-ink mb-4 text-center">
-                {title}
-              </h2>
-            )}
-            
-            {text && (
-              <p className="text-muted-foreground leading-relaxed text-center">
-                {text}
-              </p>
-            )}
-
-            {cta && (
-              <div className="mt-8 text-center">
-                <Link
-                  to={cta.href || '#'}
-                  className="btn-secondary group inline-flex"
-                >
-                  {cta.label}
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </div>
-            )}
-          </div>
+          {cta && (
+            <div className="mt-6">
+              <Link
+                to={cta.href || '#'}
+                className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group"
+              >
+                {cta.label}
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+          )}
         </motion.div>
       </div>
     </section>
