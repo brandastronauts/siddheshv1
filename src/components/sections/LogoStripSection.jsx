@@ -65,13 +65,12 @@ const LogoStripSection = ({ heading, header, intro, logos, scrollable, style }) 
                 transition={{ delay: index * 0.1 }}
                 className="flex flex-col items-center text-center group"
               >
-                <div className={`flex items-center justify-center h-16 mb-3 transition-opacity ${isGreyscale ? 'opacity-60 grayscale hover:opacity-100 hover:grayscale-0' : 'opacity-80 hover:opacity-100'}`}>
+                <div className={`flex items-center justify-center h-16 mb-3 transition-all duration-300 ${isGreyscale ? 'opacity-60 grayscale hover:opacity-100 hover:grayscale-0' : 'opacity-80 hover:opacity-100'}`}>
                   {imageSrc ? (
-                    <SmartImage
+                    <img
                       src={imageSrc}
                       alt={imageAlt}
-                      variant="logo"
-                      className="h-full w-auto max-w-[140px] object-contain"
+                      className="h-14 w-auto max-w-[140px] object-contain"
                     />
                   ) : (
                     <div className="h-14 px-6 bg-muted rounded-lg flex items-center justify-center border border-border/50">
