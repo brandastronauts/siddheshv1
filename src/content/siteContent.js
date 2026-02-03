@@ -310,7 +310,7 @@ const siteContent = {
           id: "home-publications",
           type: "libraryCards",
           sectionName: "Research Pipeline",
-          header: "Active Research & Manuscript Pipeline (2026 Cycle) - What We Are Writing",
+          header: "Active Research & Manuscript Pipeline (2026 Cycle)\nWhat We Are Writing",
           intro:
             "The Blue Blocks Micro Research Institute operates on an annual publication cycle. The following longitudinal studies are currently in the data-cleaning or peer-review phase. Pre-prints will be assigned a DOI via Zenodo upon release.",
           cards: [
