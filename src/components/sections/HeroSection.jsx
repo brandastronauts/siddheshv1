@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SmartImage from '../common/SmartImage';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 
 const HeroSection = ({ 
   // New props (Blue Blocks style)
@@ -28,32 +29,57 @@ const HeroSection = ({
     const isExternal = ctaData.external;
     const href = ctaData.href || ctaData.path;
     
-    const className = isPrimary
-      ? "inline-flex items-center justify-center px-8 py-3 bg-primary-navy text-white font-medium rounded-lg hover:bg-secondary-blue transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
-      : "inline-flex items-center justify-center px-8 py-3 border-2 border-primary-navy text-primary-navy font-medium rounded-lg hover:bg-primary-navy hover:text-white transition-all duration-200";
+    if (isPrimary) {
+      const className = "btn-primary group";
+      const content = (
+        <>
+          {ctaData.label}
+          {isExternal ? (
+            <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
+          ) : (
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          )}
+        </>
+      );
+
+      if (isExternal) {
+        return (
+          <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+            {content}
+          </a>
+        );
+      }
+      return <Link to={href} className={className}>{content}</Link>;
+    }
+
+    // Secondary button
+    const className = "btn-secondary group";
+    const content = (
+      <>
+        {ctaData.label}
+        {isExternal && <ExternalLink className="w-4 h-4 opacity-60" />}
+      </>
+    );
 
     if (isExternal) {
       return (
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={className}
-        >
-          {ctaData.label}
+        <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
+          {content}
         </a>
       );
     }
-
-    return (
-      <Link to={href} className={className}>
-        {ctaData.label}
-      </Link>
-    );
+    return <Link to={href} className={className}>{content}</Link>;
   };
 
   return (
-    <section className={`relative section-spacing ${isPrecision ? 'bg-background' : 'bg-gradient-to-b from-surface to-background'}`}>
+    <section className="relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 gradient-hero" />
+      <div className="absolute top-0 right-0 w-1/2 h-full gradient-glow opacity-50" />
+      
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 pattern-grid opacity-30" />
+
       {/* Background image for precision variant */}
       {isPrecision && heroImage && (
         <div className="absolute inset-0 z-0">
@@ -65,27 +91,39 @@ const HeroSection = ({
             aspect="16:9"
             className="w-full h-full"
           />
-          <div className="absolute inset-0 bg-background/90" />
+          <div className="absolute inset-0 bg-background/95" />
         </div>
       )}
 
-      <div className="container-grid relative z-10">
+      <div className="container-grid relative z-10 py-24 md:py-32 lg:py-40">
         <div className="max-w-4xl mx-auto text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+          {/* Optional eyebrow */}
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-deep-ink mb-6 text-balance"
+            transition={{ duration: 0.5 }}
+            className="mb-6"
+          >
+            <span className="badge-accent">
+              Micro Research Institute
+            </span>
+          </motion.div>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-deep-ink mb-8 text-balance leading-[1.1]"
           >
             {title}
           </motion.h1>
           
           {subtitle && (
             <motion.p
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed"
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-lg md:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed"
             >
               {subtitle}
             </motion.p>
@@ -93,9 +131,9 @@ const HeroSection = ({
           
           {(mainCta || altCta) && (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               {renderCta(mainCta, true)}
@@ -106,11 +144,19 @@ const HeroSection = ({
 
         {/* Image caption if present */}
         {heroImage?.caption && (
-          <p className="text-center text-xs text-muted-foreground mt-8 italic">
+          <motion.p 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            className="text-center text-xs text-muted-foreground mt-12 italic"
+          >
             {heroImage.caption}
-          </p>
+          </motion.p>
         )}
       </div>
+
+      {/* Bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const CardsSection = ({ heading, header, items, cards, variant }) => {
   const title = header || heading;
@@ -17,10 +18,10 @@ const CardsSection = ({ heading, header, items, cards, variant }) => {
           href={action.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors"
+          className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group"
         >
           {action.label}
-          <ArrowRight className="w-4 h-4" />
+          <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
         </a>
       );
     }
@@ -28,37 +29,46 @@ const CardsSection = ({ heading, header, items, cards, variant }) => {
     return (
       <Link
         to={action.href || '#'}
-        className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors"
+        className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group"
       >
         {action.label}
-        <ArrowRight className="w-4 h-4" />
+        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
       </Link>
     );
   };
 
   return (
-    <section className="section-spacing bg-surface">
+    <section className="section-spacing bg-background relative">
       <div className="container-grid">
         {title && (
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-deep-ink mb-12">
+          <motion.h2 
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-deep-ink mb-12"
+          >
             {title}
-          </h2>
+          </motion.h2>
         )}
         
-        <div className={`grid grid-cols-1 ${isPressRoom ? 'lg:grid-cols-1 max-w-4xl mx-auto' : 'md:grid-cols-2 lg:grid-cols-3'} gap-6`}>
+        <div className={`grid grid-cols-1 ${isPressRoom ? 'lg:grid-cols-1 max-w-4xl mx-auto gap-6' : 'md:grid-cols-2 lg:grid-cols-3 gap-6'}`}>
           {cardData.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 border border-border/50"
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="card-elegant p-6 lg:p-8 group"
             >
               {/* Tag for pressRoom variant */}
               {item.tag && (
-                <span className="inline-block px-3 py-1 text-xs font-medium text-accent-cyan bg-accent-cyan/10 rounded-full mb-3">
+                <span className="badge-accent mb-4 inline-block">
                   {item.tag}
                 </span>
               )}
 
-              <h3 className="text-lg font-semibold text-deep-ink mb-1">
+              <h3 className="text-xl font-semibold text-deep-ink mb-3 group-hover:text-primary-navy transition-colors">
                 {item.headline || item.title}
               </h3>
               
@@ -68,13 +78,13 @@ const CardsSection = ({ heading, header, items, cards, variant }) => {
                 </p>
               )}
               
-              <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+              <p className="text-muted-foreground text-sm leading-relaxed mb-5">
                 {item.body || item.description}
               </p>
 
               {/* Action button for pressRoom */}
               {item.action && renderAction(item.action)}
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

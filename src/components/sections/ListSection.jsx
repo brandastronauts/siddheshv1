@@ -1,44 +1,71 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Calendar } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const ListSection = ({ heading, header, sectionName, intro, items }) => {
   const title = header || heading;
 
   return (
-    <section className="section-spacing bg-background">
-      <div className="container-grid">
+    <section className="section-spacing bg-surface relative overflow-hidden">
+      <div className="absolute inset-0 pattern-grid opacity-20" />
+      
+      <div className="container-grid relative z-10">
         {sectionName && (
-          <p className="text-sm font-medium text-accent-cyan uppercase tracking-wider text-center mb-2">
+          <motion.p 
+            initial={{ opacity: 0, y: 8 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-sm font-semibold text-accent-cyan uppercase tracking-wider text-center mb-3"
+          >
             {sectionName}
-          </p>
+          </motion.p>
         )}
         
         {title && (
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-deep-ink mb-6">
+          <motion.h2 
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-deep-ink mb-6"
+          >
             {title}
-          </h2>
+          </motion.h2>
         )}
 
         {intro && (
-          <p className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12 leading-relaxed">
+          <motion.p 
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12 leading-relaxed"
+          >
             {intro}
-          </p>
+          </motion.p>
         )}
         
         <div className="max-w-3xl mx-auto space-y-4">
           {items.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-card rounded-lg p-6 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border/50 group"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1 }}
+              className="card-elegant p-6 group"
             >
-              <div className="flex items-start justify-between gap-4">
+              <div className="flex items-start gap-5">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br from-primary-navy/5 to-accent-cyan/10 flex items-center justify-center">
+                  <Calendar className="w-5 h-5 text-primary-navy" />
+                </div>
+                
                 <div className="flex-1">
-                  <div className="flex items-center gap-3 mb-2">
+                  <div className="flex flex-wrap items-center gap-3 mb-2">
                     <h3 className="text-lg font-semibold text-deep-ink group-hover:text-primary-navy transition-colors">
                       {item.title}
                     </h3>
                     {item.meta && (
-                      <span className="text-xs font-medium text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded">
+                      <span className="badge-navy text-xs">
                         {item.meta}
                       </span>
                     )}
@@ -47,7 +74,8 @@ const ListSection = ({ heading, header, sectionName, intro, items }) => {
                     {item.description}
                   </p>
                   {item.statusLine && (
-                    <p className="text-xs font-medium text-primary-navy mt-3">
+                    <p className="text-xs font-semibold text-accent-cyan mt-3 flex items-center gap-2">
+                      <span className="w-2 h-2 rounded-full bg-accent-cyan animate-pulse-soft" />
                       {item.statusLine}
                     </p>
                   )}
@@ -62,7 +90,7 @@ const ListSection = ({ heading, header, sectionName, intro, items }) => {
                   </Link>
                 )}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
