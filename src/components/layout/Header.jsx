@@ -17,7 +17,7 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
             <img src={logo} alt={brand.siteName} className="h-10 w-auto" />
-            <span className="hidden sm:block text-lg font-semibold text-deep-ink group-hover:text-primary-navy transition-colors">
+            <span className="hidden md:block text-base font-semibold text-deep-ink group-hover:text-primary-navy transition-colors leading-tight max-w-[200px]">
               {brand.siteName}
             </span>
           </Link>
@@ -30,7 +30,7 @@ const Header = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                  className={`px-3 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                     isActive
                       ? 'text-primary-navy bg-primary-navy/5'
                       : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'

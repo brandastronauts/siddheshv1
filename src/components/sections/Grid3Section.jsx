@@ -15,19 +15,32 @@ const iconMap = {
   briefcase: Briefcase,
 };
 
-const Grid3Section = ({ heading, items }) => {
+const Grid3Section = ({ heading, header, intro, items }) => {
+  const title = header || heading;
+
   return (
     <section className="section-spacing bg-background">
       <div className="container-grid">
-        {heading && (
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-deep-ink mb-12">
-            {heading}
+        {title && (
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-deep-ink mb-6">
+            {title}
           </h2>
+        )}
+
+        {intro && (
+          <div className="max-w-4xl mx-auto mb-12">
+            {intro.split('\n\n').map((paragraph, idx) => (
+              <p key={idx} className="text-lg text-muted-foreground leading-relaxed mb-4 last:mb-0">
+                {paragraph}
+              </p>
+            ))}
+          </div>
         )}
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {items.map((item, index) => {
             const IconComponent = item.icon ? iconMap[item.icon] : null;
+            const description = item.body || item.description;
             
             return (
               <div
@@ -45,7 +58,7 @@ const Grid3Section = ({ heading, items }) => {
                 </h3>
                 
                 <p className="text-muted-foreground leading-relaxed">
-                  {item.description}
+                  {description}
                 </p>
                 
                 {item.email && (
