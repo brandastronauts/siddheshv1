@@ -1,34 +1,87 @@
-const LogoStripSection = ({ heading, logos }) => {
+import { motion } from 'framer-motion';
+import SmartImage from '../common/SmartImage';
+
+const LogoStripSection = ({ heading, header, intro, logos, scrollable, style }) => {
+  const title = header || heading;
+  const isGreyscale = style === 'greyscale';
+
   return (
-    <section className="section-spacing-sm bg-surface">
+    <section className="section-spacing bg-surface">
       <div className="container-grid">
-        {heading && (
-          <h3 className="text-lg font-medium text-center text-muted-foreground mb-8">
-            {heading}
-          </h3>
+        {title && (
+          <motion.h2 
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-2xl md:text-3xl font-bold text-center text-deep-ink mb-4"
+          >
+            {title}
+          </motion.h2>
+        )}
+
+        {intro && (
+          <motion.p 
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-muted-foreground text-center max-w-2xl mx-auto mb-10"
+          >
+            {intro}
+          </motion.p>
         )}
         
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-          {logos?.map((logo, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center h-12 opacity-60 hover:opacity-100 transition-opacity"
-            >
-              {logo.src ? (
-                <img
-                  src={logo.src}
-                  alt={logo.alt || `Partner ${index + 1}`}
-                  className="h-full w-auto object-contain"
-                />
-              ) : (
-                <div className="h-10 px-6 bg-muted rounded flex items-center justify-center">
-                  <span className="text-sm font-medium text-muted-foreground">
-                    {logo.name || `Partner ${index + 1}`}
-                  </span>
+        <div className={`flex flex-wrap items-center justify-center gap-8 md:gap-12 ${scrollable ? 'overflow-x-auto pb-4' : ''}`}>
+          {logos?.map((logo, index) => {
+            const imageSrc = logo.image?.src || logo.src;
+            const imageAlt = logo.image?.alt || logo.alt || logo.name || `Partner ${index + 1}`;
+            
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className="flex flex-col items-center text-center group"
+              >
+                <div className={`flex items-center justify-center h-16 mb-3 transition-opacity ${isGreyscale ? 'opacity-60 grayscale hover:opacity-100 hover:grayscale-0' : 'opacity-80 hover:opacity-100'}`}>
+                  {imageSrc ? (
+                    <SmartImage
+                      src={imageSrc}
+                      alt={imageAlt}
+                      variant="logo"
+                      className="h-full w-auto max-w-[140px] object-contain"
+                    />
+                  ) : (
+                    <div className="h-14 px-6 bg-muted rounded-lg flex items-center justify-center border border-border/50">
+                      <span className="text-sm font-medium text-muted-foreground">
+                        {logo.name || `Partner ${index + 1}`}
+                      </span>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
-          ))}
+                
+                {logo.name && (
+                  <p className="text-sm font-medium text-deep-ink">
+                    {logo.name}
+                  </p>
+                )}
+                
+                {logo.role && (
+                  <p className="text-xs text-accent-cyan font-medium mt-0.5">
+                    {logo.role}
+                  </p>
+                )}
+                
+                {logo.note && (
+                  <p className="text-xs text-muted-foreground mt-1 max-w-[180px]">
+                    {logo.note}
+                  </p>
+                )}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>

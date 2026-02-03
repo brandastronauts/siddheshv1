@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const HighlightBoxSection = ({ heading, title, text, body, cta }) => {
+const HighlightBoxSection = ({ heading, title, text, body, bullets, cta }) => {
   const displayTitle = title || heading;
   const displayText = body || text;
 
@@ -27,27 +27,40 @@ const HighlightBoxSection = ({ heading, title, text, body, cta }) => {
             {/* Glow effect */}
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent-cyan/20 to-transparent" />
             
-            <div className="relative z-10 p-8 md:p-12 text-center">
+            <div className="relative z-10 p-8 md:p-12">
               {displayTitle && (
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center">
                   {displayTitle}
                 </h2>
               )}
               
               {displayText && (
-                <p className="text-lg text-white/85 mb-6 max-w-2xl mx-auto leading-relaxed">
+                <p className="text-lg text-white/85 mb-6 max-w-2xl mx-auto leading-relaxed text-center">
                   {displayText}
                 </p>
               )}
+
+              {bullets && bullets.length > 0 && (
+                <ul className="space-y-3 max-w-2xl mx-auto mb-6">
+                  {bullets.map((bullet, index) => (
+                    <li key={index} className="flex items-start gap-3 text-white/85">
+                      <Check className="w-5 h-5 text-accent-cyan flex-shrink-0 mt-0.5" />
+                      <span className="text-sm md:text-base leading-relaxed">{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
               
               {cta && (
-                <Link
-                  to={cta.path || cta.href || '#'}
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-navy font-medium rounded-xl hover:bg-white/90 transition-all duration-200 hover:shadow-lg group"
-                >
-                  {cta.label}
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </Link>
+                <div className="text-center">
+                  <Link
+                    to={cta.path || cta.href || '#'}
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-navy font-medium rounded-xl hover:bg-white/90 transition-all duration-200 hover:shadow-lg group"
+                  >
+                    {cta.label}
+                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </div>
               )}
             </div>
           </div>
