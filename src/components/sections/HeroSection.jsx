@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import SmartImage from '../common/SmartImage';
+import HeroBackground from '../common/HeroBackground';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 
 const HeroSection = ({ 
@@ -72,13 +73,12 @@ const HeroSection = ({
   };
 
   return (
-    <section className="relative overflow-hidden">
-      {/* Background elements */}
-      <div className="absolute inset-0 gradient-hero" />
-      <div className="absolute top-0 right-0 w-1/2 h-full gradient-glow opacity-50" />
-      
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 pattern-grid opacity-30" />
+    <section className="relative overflow-hidden min-h-[85vh] flex items-center">
+      {/* Animated background */}
+      <HeroBackground />
+
+      {/* Base gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-surface/50 via-background to-background" />
 
       {/* Background image for precision variant */}
       {isPrecision && heroImage && (
@@ -95,7 +95,7 @@ const HeroSection = ({
         </div>
       )}
 
-      <div className="container-grid relative z-10 py-24 md:py-32 lg:py-40">
+      <div className="container-grid relative z-10 py-20 md:py-28 lg:py-32">
         <div className="max-w-4xl mx-auto text-center">
           {/* Optional eyebrow */}
           <motion.div
@@ -156,7 +156,7 @@ const HeroSection = ({
       </div>
 
       {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
     </section>
   );
 };
