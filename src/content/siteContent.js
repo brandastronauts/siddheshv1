@@ -210,12 +210,11 @@ const siteContent = {
           primaryCta: { label: "Read the Methodology Paper", href: "/methodology" },
           secondaryCta: { label: "Zenodo Community", href: "https://zenodo.org/", external: true },
           image: {
-            src: "",
+            src: "/src/assets/banners/home-precision.jpg",
             alt: "Precision research environment",
             variant: "hero",
-            privacyBlur: true,
-            caption:
-              "Background should imply precision (e.g., black-and-white shot of a student calibrating a sensor)."
+            privacyBlur: false,
+            caption: ""
           }
         },
 
@@ -474,12 +473,11 @@ const siteContent = {
             "We are a new category of research institution—built for questions that require decades, not semesters. By embedding rigorous observation protocols into a living Montessori environment, we have created the world's longest continuous record of human innovation capacity. Most child development studies observe children once or twice. We've been watching the same children for fifteen years. Not surveys. Not lab visits. Daily observation records from their actual teachers, in their actual classrooms, working on actual problems.",
           primaryCta: { label: "Download Institute Prospectus", href: "#" },
           image: {
-            src: "",
+            src: "/src/assets/banners/institute-stark.jpg",
             alt: "High trust research institute visual",
             variant: "hero",
-            privacyBlur: true,
-            caption:
-              "Full-width hero with stark typography. Imagery must imply precision, not play."
+            privacyBlur: false,
+            caption: ""
           }
         },
 
@@ -693,12 +691,11 @@ const siteContent = {
             "We built Blue Blocks to generate research, not accommodate it. Since 2009, we've run high-frequency observation directly inside learning environments—recording what actually happens rather than staging what we hope to measure. This isn't retrofitted academic study. It's methodology embedded in practice from day one.",
           primaryCta: { label: "Download Framework Paper (PDF)", href: "#" },
           image: {
-            src: "",
+            src: "/src/assets/banners/methodology-framework.jpg",
             alt: "Precision methodology environment",
             variant: "hero",
-            privacyBlur: true,
-            caption:
-              "Use a precision, high-trust placeholder image. No playful visuals."
+            privacyBlur: false,
+            caption: ""
           }
         },
 
@@ -864,7 +861,7 @@ const siteContent = {
           primaryCta: { label: "Subscribe for DOI Alerts", href: "#doi-alerts" },
           secondaryCta: { label: "View Citation Guidelines >", href: "#citation-guidelines" },
           image: {
-            src: "",
+            src: "/src/assets/banners/publications-doi.jpg",
             alt: "DOI docket hero visual",
             variant: "hero",
             privacyBlur: false,
@@ -1177,12 +1174,11 @@ const siteContent = {
             "Our research framework is guided by a commitment to Pedagogical Integrity. The Institute's advisory council ensures that all protocols align with both Montessori Principles and Global Privacy Standards (IRB). We prioritize a 'Child-First' methodology, where scientific observation seamlessly integrates with, and respects, the educational environment. Every observation protocol gets reviewed before launch.",
           primaryCta: { label: "View IRB Guidelines", href: "#irb-guidelines" },
           image: {
-            src: "",
+            src: "/src/assets/banners/governance-oversight.jpg",
             alt: "Abstract governance visual",
             variant: "hero",
             privacyBlur: false,
-            caption:
-              "Use abstract architectural lines or a subtle gavel/scale icon. Demo image only."
+            caption: ""
           }
         },
 
@@ -1407,7 +1403,7 @@ const siteContent = {
           primaryCta: { label: "Submit Research Proposal", href: "#collab-form" },
           secondaryCta: { label: "View Data Access Protocols >", href: "/publications-open-science" },
           image: {
-            src: "/src/assets/collaborate-hero.jpg",
+            src: "/src/assets/banners/collaborate-network.jpg",
             alt: "Network node collaboration visual",
             variant: "hero",
             privacyBlur: false,
@@ -1679,11 +1675,11 @@ const siteContent = {
           primaryCta: { label: "Subscribe to Monthly Digest", href: "#digest-form" },
           secondaryCta: { label: "Download Media Kit >", href: "#media-kit" },
           image: {
-            src: "",
-            alt: "Printing press or abstract digital signal",
+            src: "/src/assets/banners/newsroom-press.jpg",
+            alt: "Printing press editorial visual",
             variant: "hero",
             privacyBlur: false,
-            caption: "Use a high-contrast press-style visual. Demo image OK."
+            caption: ""
           }
         },
 
@@ -1925,7 +1921,7 @@ const siteContent = {
           primaryCta: { label: "Send an Inquiry", href: "#contact-form" },
           secondaryCta: { label: "View Data Access Protocols", href: "/publications-open-science" },
           image: {
-            src: "",
+            src: "/src/assets/banners/contact-institutional.jpg",
             alt: "High-trust institutional contact visual",
             variant: "hero",
             privacyBlur: false,

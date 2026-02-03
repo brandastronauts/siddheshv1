@@ -1,33 +1,56 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import SmartImage from '../common/SmartImage';
 import HeroBackground from '../common/HeroBackground';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 
+// Import all hero banner images
+import homePrecision from '@/assets/banners/home-precision.jpg';
+import instituteStark from '@/assets/banners/institute-stark.jpg';
+import methodologyFramework from '@/assets/banners/methodology-framework.jpg';
+import publicationsDoi from '@/assets/banners/publications-doi.jpg';
+import governanceOversight from '@/assets/banners/governance-oversight.jpg';
+import collaborateNetwork from '@/assets/banners/collaborate-network.jpg';
+import newsroomPress from '@/assets/banners/newsroom-press.jpg';
+import contactInstitutional from '@/assets/banners/contact-institutional.jpg';
+
+// Map for resolving banner paths to imports
+const bannerImports = {
+  '/src/assets/banners/home-precision.jpg': homePrecision,
+  '/src/assets/banners/institute-stark.jpg': instituteStark,
+  '/src/assets/banners/methodology-framework.jpg': methodologyFramework,
+  '/src/assets/banners/publications-doi.jpg': publicationsDoi,
+  '/src/assets/banners/governance-oversight.jpg': governanceOversight,
+  '/src/assets/banners/collaborate-network.jpg': collaborateNetwork,
+  '/src/assets/banners/newsroom-press.jpg': newsroomPress,
+  '/src/assets/banners/contact-institutional.jpg': contactInstitutional,
+};
+
 const HeroSection = ({ 
-  // New props (Blue Blocks style)
   headline, 
   subheadline, 
   primaryCta, 
   secondaryCta, 
   variant,
   image: heroImage,
-  // Legacy props
+  badgeIcon,
   heading, 
   subheading, 
   cta 
 }) => {
-  // Normalize props - support both old and new format
   const title = headline || heading;
   const subtitle = subheadline || subheading;
   const mainCta = primaryCta || cta;
   const altCta = secondaryCta;
-  const isPrecision = variant === 'precision';
+  
+  // Resolve banner image source
+  const resolvedImageSrc = heroImage?.src ? (bannerImports[heroImage.src] || heroImage.src) : null;
+  const hasImage = !!resolvedImageSrc;
 
   const renderCta = (ctaData, isPrimary = true) => {
     if (!ctaData) return null;
     
     const isExternal = ctaData.external;
+    const isAnchor = ctaData.href?.startsWith('#');
     const href = ctaData.href || ctaData.path;
     
     if (isPrimary) {
@@ -50,6 +73,9 @@ const HeroSection = ({
           </a>
         );
       }
+      if (isAnchor) {
+        return <a href={href} className={className}>{content}</a>;
+      }
       return <Link to={href} className={className}>{content}</Link>;
     }
 
@@ -69,51 +95,72 @@ const HeroSection = ({
         </a>
       );
     }
+    if (isAnchor) {
+      return <a href={href} className={className}>{content}</a>;
+    }
     return <Link to={href} className={className}>{content}</Link>;
   };
 
   return (
-    <section className="relative overflow-hidden min-h-[85vh] flex items-center">
-      {/* Animated background */}
-      <HeroBackground />
+    <section className="relative overflow-hidden h-[360px] md:h-[520px] flex items-center">
+      {/* Animated background - only show when no image */}
+      {!hasImage && <HeroBackground />}
 
-      {/* Base gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-surface/50 via-background to-background" />
-
-      {/* Background image for hero variants */}
-      {heroImage?.src && (
-        <div className="absolute inset-0 z-0">
-          <SmartImage
-            src={heroImage.src}
-            alt={heroImage.alt}
-            variant={heroImage.variant || 'hero'}
-            privacyBlur={heroImage.privacyBlur}
-            aspect="16:9"
-            className="w-full h-full"
-          />
-          <div className="absolute inset-0 bg-background/80" />
-        </div>
+      {/* Base gradient for non-image heroes */}
+      {!hasImage && (
+        <div className="absolute inset-0 bg-gradient-to-b from-surface/50 via-background to-background" />
       )}
 
-      <div className="container-grid relative z-10 py-20 md:py-28 lg:py-32">
+      {/* Background image with zoom animation */}
+      {hasImage && (
+        <motion.div 
+          className="absolute inset-0 z-0"
+          initial={{ scale: 1 }}
+          animate={{ scale: 1.02 }}
+          transition={{ duration: 20, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
+        >
+          <img
+            src={resolvedImageSrc}
+            alt={heroImage?.alt || ''}
+            className="absolute inset-0 w-full h-full object-cover object-center"
+          />
+          {/* Dark gradient overlay for text readability */}
+          <div 
+            className="absolute inset-0" 
+            style={{ 
+              background: 'linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.25) 100%)' 
+            }} 
+          />
+          {/* Subtle grain texture */}
+          <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNhKSIvPjwvc3ZnPg==')]" />
+        </motion.div>
+      )}
+
+      <div className="container-grid relative z-10 py-12 md:py-16">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Optional eyebrow */}
-          <motion.div
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-6"
-          >
-            <span className="badge-accent">
-              Micro Research Institute
-            </span>
-          </motion.div>
+          {/* Optional eyebrow - hidden when image is present */}
+          {!hasImage && (
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mb-6"
+            >
+              <span className="badge-accent">
+                Micro Research Institute
+              </span>
+            </motion.div>
+          )}
 
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-deep-ink mb-8 text-balance leading-[1.1]"
+            className={`font-bold mb-6 text-balance leading-[1.1] ${
+              hasImage 
+                ? 'text-[34px] md:text-[52px] text-white drop-shadow-lg' 
+                : 'text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-deep-ink'
+            }`}
           >
             {title}
           </motion.h1>
@@ -123,7 +170,11 @@ const HeroSection = ({
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed"
+              className={`mb-8 max-w-3xl mx-auto leading-relaxed ${
+                hasImage 
+                  ? 'text-base md:text-lg text-white/90 drop-shadow-md' 
+                  : 'text-lg md:text-xl text-muted-foreground'
+              }`}
             >
               {subtitle}
             </motion.p>
@@ -141,22 +192,12 @@ const HeroSection = ({
             </motion.div>
           )}
         </div>
-
-        {/* Image caption if present */}
-        {heroImage?.caption && (
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="text-center text-xs text-muted-foreground mt-12 italic"
-          >
-            {heroImage.caption}
-          </motion.p>
-        )}
       </div>
 
-      {/* Bottom fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      {/* Bottom fade - only for non-image heroes */}
+      {!hasImage && (
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      )}
     </section>
   );
 };
