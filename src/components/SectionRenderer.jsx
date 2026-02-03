@@ -16,6 +16,7 @@ import ButtonCardsSection from './sections/ButtonCardsSection';
 import DownloadListSection from './sections/DownloadListSection';
 import TextBlockSection from './sections/TextBlockSection';
 import FormSection from './sections/FormSection';
+import FeaturedStoriesSection from './sections/FeaturedStoriesSection';
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -48,6 +49,7 @@ const SectionRenderer = ({ sections }) => {
       downloadList: DownloadListSection,
       textBlock: TextBlockSection,
       form: FormSection,
+      featuredStories: FeaturedStoriesSection,
     };
 
     const Component = components[type];

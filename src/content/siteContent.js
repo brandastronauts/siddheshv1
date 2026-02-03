@@ -1324,34 +1324,262 @@ const siteContent = {
 
     "/newsroom": {
       title: "Newsroom",
-      meta: {
-        description: "Latest news and announcements",
+      metaDescription:
+        "The Institutional Record: launches, patents, breakthroughs, and methodological lessons — documented with high-trust press resources and protocols.",
+      seo: {
+        title: "Newsroom | The Institutional Record | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/newsroom",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "website",
+          url: "https://blueblocks.in/newsroom",
+          title: "The Institutional Record",
+          description:
+            "This newsroom documents what we've learned, what we've built, and what went wrong—mission milestones, patents, breakthroughs, and dead-ends.",
+          image: {
+            url: "https://blueblocks.in/og/newsroom.jpg",
+            width: 1200,
+            height: 630,
+            alt: "High-contrast newsroom visual"
+          }
+        }
       },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Newsroom",
+          url: "https://blueblocks.in/newsroom",
+          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://blueblocks.in/newsroom" }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Global Highlights",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              item: {
+                "@type": "NewsArticle",
+                headline: "Blue Blocks Payload Authorized for ISRO Mission",
+                about: "Aerospace payload qualification and launch authorization"
+              }
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              item: {
+                "@type": "NewsArticle",
+                headline: "Micro Research Framework Published (Open Access)",
+                about: "Publication event and methodology release"
+              }
+            },
+            {
+              "@type": "ListItem",
+              position: 3,
+              item: {
+                "@type": "NewsArticle",
+                headline: "Nobel Peace Center Features Student Innovation",
+                about: "International recognition of youth-led innovation"
+              }
+            }
+          ]
+        }
+      ],
       sections: [
         {
+          id: "news-hero",
           type: "hero",
-          heading: "Newsroom",
-          subheading: "Stay updated with our latest research, events, and announcements.",
+          variant: "stark",
+          headline: "The Institutional Record.",
+          subheadline:
+            "This newsroom documents what we've learned, what we've built, and what went wrong. Satellite launches, patent filings, scientific breakthroughs, methodological dead-ends—all of it matters.",
+          primaryCta: { label: "Subscribe to Monthly Digest", href: "#digest-form" },
+          secondaryCta: { label: "Download Media Kit >", href: "#media-kit" },
+          image: {
+            src: "",
+            alt: "Printing press or abstract digital signal",
+            variant: "hero",
+            privacyBlur: false,
+            caption: "Use a high-contrast press-style visual. Demo image OK."
+          }
         },
+
         {
+          id: "news-featured",
+          type: "featuredStories",
+          header: "Global Highlights",
+          layout: "asymmetric",
+          main: {
+            image: { src: "", alt: "CubeSat or rocket launch", variant: "card", privacyBlur: false },
+            tag: "Mission Milestone",
+            headline: "Blue Blocks Payload Authorized for ISRO Mission",
+            excerpt:
+              "Twelve teenagers (ages 12-16) designed a thermal sensor payload. IN-SPACe authorized it for PSLV-C62 launch after eighteen months of technical review. The payload will gather temperature data in low Earth orbit if it survives launch vibration.",
+            cta: { label: "Read Full Dispatch", href: "#" }
+          },
+          side: [
+            {
+              tag: "Publication Event",
+              headline: "Micro Research Framework Published (Open Access)",
+              excerpt:
+                "We have formally published the architectural blueprint for embedded longitudinal observation. This framework allows other institutions to replicate this without external funding. We spent three years figuring out what doesn't work before we got here.",
+              cta: { label: "View Press Release", href: "/methodology" }
+            },
+            {
+              tag: "International",
+              headline: "Nobel Peace Center Features Student Innovation",
+              excerpt:
+                "Blue Blocks student projects have been selected for exhibition as exemplars of \"Youth-Led Innovation,\" validating our 0-18 Sovereignty Model on a global stage.",
+              cta: { label: "Read Coverage", href: "#" }
+            }
+          ]
+        },
+
+        {
+          id: "news-feed",
           type: "cards",
-          heading: "Latest News",
-          items: [
-            { title: "NeurIPS 2024 Paper Accepted", subtitle: "October 2024", description: "Our paper on interpretable ML frameworks has been accepted for presentation." },
-            { title: "New Partnership Announced", subtitle: "September 2024", description: "We've partnered with three leading universities to expand our research network." },
-            { title: "Ethics Guidelines Released", subtitle: "August 2024", description: "Version 2.0 of our Generative AI Ethics Guidelines is now available." },
-          ],
+          header: "What Has Happened Recently",
+          variant: "newsGrid",
+          cards: [
+            {
+              tag: "Institutional Alliance",
+              headline: "IIT Hyderabad Design Dept. Formalizes Advisory Role",
+              meta: "October 15, 2025",
+              body:
+                "The Department of Design at IIT Hyderabad joins the Research Council to provide technical validation for student prototyping.",
+              cta: { label: "Read Update", href: "#" },
+              image: { src: "", alt: "Institutional partnership visual", variant: "card", privacyBlur: false }
+            },
+            {
+              tag: "Student IP",
+              headline: "Utility Patent #4421 Filed: The \"Guardian\" Drone",
+              meta: "September 02, 2025",
+              body:
+                "The Drone Research Centre has filed its fifth utility patent, marking a significant milestone in our study of \"Innovation Agency\" in the 9-11 age group.",
+              cta: { label: "Read Update", href: "#" },
+              image: { src: "", alt: "Drone research visual", variant: "card", privacyBlur: true }
+            },
+            {
+              tag: "Fellowship",
+              headline: "Visiting Scholar Applications Open for 2026 Cycle",
+              meta: "August 10, 2025",
+              body:
+                "We are now accepting proposals for the Winter Residency. PhD candidates focusing on longitudinal behavioral observation are encouraged to apply.",
+              cta: { label: "Apply via Collaborate", href: "/collaborate" },
+              image: { src: "", alt: "Fellowship visual", variant: "card", privacyBlur: false }
+            }
+          ]
         },
+
         {
-          type: "list",
-          heading: "Upcoming Events",
+          id: "media-kit",
+          type: "grid3",
+          header: "For the Press",
+          intro: "What journalists need to cover the Institute accurately.",
           items: [
-            { title: "Annual Conference 2024", description: "December 10-12, 2024 - Join us for our flagship event on AI ethics.", link: "#" },
-            { title: "Webinar: Responsible AI in Practice", description: "November 15, 2024 - A practical guide for organizations.", link: "#" },
-            { title: "Workshop: Bias in ML Systems", description: "November 8, 2024 - Hands-on workshop for practitioners.", link: "#" },
-          ],
+            {
+              title: "Logos & Identity",
+              icon: "download",
+              body:
+                "High-resolution vector files of the Institute seal and approved typography.",
+              cta: { label: "Download Asset Pack .zip", href: "#" }
+            },
+            {
+              title: "Principal Investigator",
+              icon: "user",
+              body:
+                "Approved biography and headshots for Pavan Goyal (PI) and Munira Hussain (Director of Pedagogy).",
+              cta: { label: "Download Bio Sheet", href: "#" }
+            },
+            {
+              title: "Attribution Standards",
+              icon: "file",
+              body:
+                "Correct naming conventions for \"Blue Blocks Micro Research Institute\" and DOI referencing styles.",
+              cta: { label: "View Style Guide", href: "/publications-open-science" }
+            }
+          ]
         },
-      ],
+
+        {
+          id: "digest-form",
+          type: "form",
+          header: "Subscribe to the Monthly Digest",
+          intro:
+            "Receive a monthly summary of mission milestones, publications, patents, and institutional updates.",
+          submit: {
+            to: "media@blueblocks.in",
+            subject: "Monthly Digest Subscription — Blue Blocks Micro Research Institute",
+            successMessage: "Draft email opened in your mail client."
+          },
+          fields: [
+            { name: "name", label: "Full Name", type: "text", required: true },
+            { name: "email", label: "Email", type: "email", required: true },
+            {
+              name: "role",
+              label: "I am a…",
+              type: "select",
+              required: true,
+              options: [
+                { label: "Journalist / Media", value: "media" },
+                { label: "Researcher / Academic", value: "researcher" },
+                { label: "Policy / Institution", value: "policy" },
+                { label: "General Subscriber", value: "general" }
+              ]
+            },
+            {
+              name: "notes",
+              label: "Optional Note",
+              type: "textarea",
+              required: false,
+              placeholder: "Publication interests, deadlines, or verification requests."
+            }
+          ]
+        },
+
+        {
+          id: "news-faq",
+          type: "accordion",
+          header: "Media Inquiries & Protocols",
+          items: [
+            {
+              q: "Can I interview student researchers for a story?",
+              a:
+                "Direct access to minors is strictly regulated to protect the educational environment. Interviews are possible but must be: (1) Pre-approved by the Ethics Committee, (2) Conducted in the presence of a parent and a Research Fellow, and (3) Non-disruptive to the work cycle."
+            },
+            {
+              q: "Can we film inside the Innovation Labs?",
+              a:
+                "We prioritize the child's right to privacy and a distraction-free environment. External film crews are generally not permitted during school hours. We provide a repository of high-resolution, anonymized B-roll and stock footage for media use upon request."
+            },
+            {
+              q: "How do we verify the claims made in student patents?",
+              a:
+                "All technical claims regarding student inventions (Satellites, Drones) are validated by our external partners at IIT Hyderabad or IN-SPACe before public release. We can provide technical briefs and TRL (Technology Readiness Level) certification documents for fact-checking."
+            },
+            {
+              q: "Can journalists visit the campus?",
+              a:
+                "Yes, by appointment only. Media visits are scheduled outside of core observational hours to ensure zero interference with the longitudinal study. Please contact media@blueblocks.in at least 5 business days in advance."
+            },
+            {
+              q: "How should I refer to the school vs. the institute?",
+              a:
+                "Please distinguish between the two entities. \"Blue Blocks Montessori School\" is the educational body. \"Blue Blocks Micro Research Institute\" is a research organization. When citing data, please attribute the Institute."
+            }
+          ]
+        }
+      ]
     },
 
     "/contact": {

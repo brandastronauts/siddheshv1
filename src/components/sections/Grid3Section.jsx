@@ -1,4 +1,4 @@
-import { Shield, Eye, Scale, Check, Users, Mail, Newspaper, MessageSquare, Microscope, Building2, GraduationCap, Briefcase, Database, Target, Feather, FileText, Lock, AlertTriangle, Wrench, ArrowRight } from 'lucide-react';
+import { Shield, Eye, Scale, Check, Users, Mail, Newspaper, MessageSquare, Microscope, Building2, GraduationCap, Briefcase, Database, Target, Feather, FileText, Lock, AlertTriangle, Wrench, ArrowRight, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const iconMap = {
@@ -23,6 +23,7 @@ const iconMap = {
   alert: AlertTriangle,
   tool: Wrench,
   arrow: ArrowRight,
+  download: Download,
 };
 
 const Grid3Section = ({ heading, header, intro, items }) => {

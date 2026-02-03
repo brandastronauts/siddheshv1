@@ -8,6 +8,7 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
   const cardData = cards || items || [];
   const isPressRoom = variant === 'pressRoom';
   const isProfiles = variant === 'profiles';
+  const isNewsGrid = variant === 'newsGrid';
   const hasImages = cardData.some(card => card.image);
 
   const renderAction = (action) => {
@@ -116,18 +117,25 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
               )}
 
               <div className="p-6 lg:p-8">
-                {/* Tag for pressRoom variant */}
+                {/* Tag for pressRoom or newsGrid variant */}
                 {item.tag && (
-                  <span className="badge-accent mb-4 inline-block">
+                  <span className={`mb-3 inline-block ${isNewsGrid ? 'text-xs font-semibold text-accent-cyan uppercase tracking-wider' : 'badge-accent'}`}>
                     {item.tag}
                   </span>
                 )}
 
-                <h3 className="text-xl font-semibold text-deep-ink mb-3 group-hover:text-primary-navy transition-colors">
+                <h3 className="text-xl font-semibold text-deep-ink mb-2 group-hover:text-primary-navy transition-colors">
                   {item.headline || item.title}
                 </h3>
                 
-                {item.subtitle && (
+                {/* Meta for newsGrid */}
+                {item.meta && (
+                  <p className="text-xs text-muted-foreground mb-3">
+                    {item.meta}
+                  </p>
+                )}
+                
+                {item.subtitle && !item.meta && (
                   <p className="text-sm text-accent-cyan font-medium mb-3">
                     {item.subtitle}
                   </p>
@@ -137,8 +145,9 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
                   {item.body || item.description}
                 </p>
 
-                {/* Action button for pressRoom */}
+                {/* Action button for pressRoom or cta for newsGrid */}
                 {item.action && renderAction(item.action)}
+                {item.cta && renderAction(item.cta)}
               </div>
             </motion.div>
           ))}
