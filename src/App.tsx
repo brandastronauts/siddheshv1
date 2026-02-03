@@ -14,6 +14,7 @@ import NewsroomPage from "./pages/NewsroomPage";
 import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import LegalPage from "./pages/LegalPage";
+import GenericPage from "./pages/GenericPage";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +35,19 @@ const App = () => (
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/privacy" element={<LegalPage />} />
           <Route path="/terms" element={<LegalPage />} />
+          
+          {/* New pages */}
+          <Route path="/technical-briefs/:slug" element={<GenericPage />} />
+          <Route path="/presentations/:slug" element={<GenericPage />} />
+          <Route path="/proceedings/:slug" element={<GenericPage />} />
+          <Route path="/downloads" element={<GenericPage />} />
+          <Route path="/downloads/:slug" element={<GenericPage />} />
+          <Route path="/staff-access" element={<GenericPage />} />
+          <Route path="/newsroom/dispatch/:slug" element={<GenericPage />} />
+          <Route path="/newsroom/coverage/:slug" element={<GenericPage />} />
+          <Route path="/newsroom/updates/:slug" element={<GenericPage />} />
+          <Route path="/sitemap" element={<GenericPage />} />
+          
           {/* Catch-all route for 404 */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
