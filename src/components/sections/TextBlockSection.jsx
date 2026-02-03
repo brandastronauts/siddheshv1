@@ -2,15 +2,34 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, FileWarning } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const TextBlockSection = ({ heading, header, sectionName, intro, content, body, cta, alignment = 'center' }) => {
+const TextBlockSection = ({ heading, header, sectionName, intro, content, body, cta, alignment = 'center', variant }) => {
   const title = header || heading;
   const text = body || content;
+  const isMuted = variant === 'muted';
   
   const alignmentClasses = {
     left: 'text-left',
     center: 'text-center mx-auto',
     right: 'text-right ml-auto',
   };
+
+  // Muted variant - simple text without the card
+  if (isMuted) {
+    return (
+      <section className="py-8 bg-surface border-y border-border/30">
+        <div className="container-grid">
+          <motion.p 
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="text-sm text-muted-foreground text-center max-w-4xl mx-auto leading-relaxed italic"
+          >
+            {text}
+          </motion.p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="section-spacing bg-background relative">
