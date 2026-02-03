@@ -855,35 +855,219 @@ const siteContent = {
     },
 
     "/governance": {
-      title: "Governance",
-      meta: {
-        description: "Our governance structure and leadership",
+      title: "Governance & Oversight",
+      metaDescription:
+        "Governance & Oversight: IRB-aligned standards, privacy architecture, student IP rights, and research council review protocols for embedded longitudinal observation.",
+      seo: {
+        title: "Governance & Oversight | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/governance",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "website",
+          url: "https://blueblocks.in/governance",
+          title: "Governance & Oversight",
+          description:
+            "Protocols and oversight ensuring pedagogical integrity, privacy, and IRB-aligned research standards.",
+          image: {
+            url: "https://blueblocks.in/og/governance.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Governance and oversight"
+          }
+        }
       },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Governance & Oversight",
+          url: "https://blueblocks.in/governance",
+          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" },
+          about: { "@type": "Thing", name: "Research governance and IRB alignment" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Governance", item: "https://blueblocks.in/governance" }
+          ]
+        }
+      ],
       sections: [
         {
+          id: "gov-hero",
           type: "hero",
-          heading: "Governance",
-          subheading: "Transparent governance ensures our research maintains the highest ethical standards.",
+          variant: "stark",
+          headline: "Governance & Oversight.",
+          subheadline:
+            "Our research framework is guided by a commitment to Pedagogical Integrity. The Institute's advisory council ensures that all protocols align with both Montessori Principles and Global Privacy Standards (IRB). We prioritize a 'Child-First' methodology, where scientific observation seamlessly integrates with, and respects, the educational environment. Every observation protocol gets reviewed before launch.",
+          primaryCta: { label: "View IRB Guidelines", href: "#irb-guidelines" },
+          image: {
+            src: "",
+            alt: "Abstract governance visual",
+            variant: "hero",
+            privacyBlur: false,
+            caption:
+              "Use abstract architectural lines or a subtle gavel/scale icon. Demo image only."
+          }
         },
+
         {
+          id: "gov-board",
           type: "cards",
-          heading: "Leadership",
-          items: [
-            { title: "Dr. Sarah Chen", subtitle: "Executive Director", description: "Former AI ethics lead at major tech company with 15 years research experience." },
-            { title: "Prof. James Williams", subtitle: "Research Director", description: "Distinguished professor of computer science and AI ethics." },
-            { title: "Dr. Maya Patel", subtitle: "Policy Director", description: "Expert in technology policy with experience at international organizations." },
-          ],
+          variant: "profiles",
+          header: "Board of Directors & Leadership - Who Runs This",
+          intro:
+            "Internal leadership responsible for longitudinal integrity, pedagogy alignment, and institutional stewardship.",
+          cards: [
+            {
+              headline: "Pavan Goyal",
+              tag: "Principal Investigator & Founder",
+              body:
+                "Credentials: AMI Diploma (0-18)\n\nOversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes.",
+              image: { src: "", alt: "Professional headshot placeholder", variant: "avatar", privacyBlur: false }
+            },
+            {
+              headline: "Munira Hussain",
+              tag: "Director of Pedagogy",
+              body:
+                "Credentials: AMI Diploma / M.Ed\n\nEnsures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the 'Children's House.'",
+              image: { src: "", alt: "Professional headshot placeholder", variant: "avatar", privacyBlur: false }
+            },
+            {
+              headline: "[Name Pending]",
+              tag: "Non-Executive Director",
+              body:
+                "Credentials: [Relevant Industry Credential]\n\nAdvises on long-term institutional strategy and external partnerships.",
+              image: { src: "", alt: "Professional headshot placeholder", variant: "avatar", privacyBlur: false }
+            }
+          ]
         },
+
         {
-          type: "accordion",
-          heading: "Policies",
-          items: [
-            { question: "Research Ethics Policy", answer: "All research conducted by the Institute adheres to strict ethical guidelines including informed consent, data privacy, and conflict of interest disclosure." },
-            { question: "Open Access Policy", answer: "We are committed to making all our research freely available within 6 months of publication." },
-            { question: "Funding Transparency", answer: "We publicly disclose all funding sources and maintain strict independence from funders in research direction." },
-          ],
+          id: "gov-council",
+          type: "cards",
+          variant: "profiles",
+          header: "Research Council & Advisory Board",
+          intro:
+            "External experts who provide technical validation for student innovation and methodological oversight.",
+          cards: [
+            {
+              headline: "[Prof. Name Pending]",
+              tag: "Technical Validation Advisor",
+              body:
+                "Affiliation: IIT Hyderabad (Dept of Design)\n\nFocus: Reviews TRL claims and engineering prototypes for the Space & Drone Labs.",
+              image: { src: "", alt: "Professional headshot placeholder", variant: "avatar", privacyBlur: false }
+            },
+            {
+              headline: "[Name Pending]",
+              tag: "Independent Ethics Auditor",
+              body:
+                "Affiliation: [External Institution / Parent Body]\n\nFocus: Ensures compliance with child safety protocols and consent architecture.",
+              image: { src: "", alt: "Professional headshot placeholder", variant: "avatar", privacyBlur: false }
+            },
+            {
+              headline: "Ad-Hoc Committee",
+              tag: "Peer Review Panel",
+              body:
+                "Status: Convened per Publication\n\nFocus: A rotating panel of external PhDs convened solely to validate foundational methodology papers prior to DOI registration.",
+              image: { src: "", alt: "Professional headshot placeholder", variant: "avatar", privacyBlur: false }
+            }
+          ]
         },
-      ],
+
+        {
+          id: "gov-standards",
+          type: "accordion",
+          header: "Standards & Protocols",
+          intro:
+            "Operating procedures derived from AMI principles and international research standards.",
+          items: [
+            {
+              q: "Micro-Research Design Standards",
+              a:
+                "Boundedness: Every study must address a single, bounded research question.\nCapture Time: Observations must be recordable in <5 minutes.\nDuration: Data collection cycles must not exceed 3 weeks to prevent observer fatigue.\nInterference: Protocols must result in Zero Interference with the child's natural work cycle. The child should never notice being observed. Observer stays in normal classroom role, records discreetly.\n\nREAD MORE→"
+            },
+            {
+              q: "Privacy & Informed Consent",
+              a:
+                "Enrollment Consent: All families sign comprehensive research waivers upon school entry.\nChild Assent: Students aged 7+ are granted the 'Right to Decline' participation without consequence.\nWithdrawal: Parents maintain the right to withdraw data access at any time.\nData Anonymization: All published records use alphanumeric codes (Subject-847-A, not names). Photos published only with separate photo consent and face obscuration. No re-identification pathway exists in public datasets."
+            },
+            {
+              q: "Privacy & Informed Consent (Withdrawal While Enrolled)",
+              a:
+                "Enrollment Consent: All families sign comprehensive research waivers upon school entry.\nChild Assent: Subjects aged 7+ are granted the 'Right to Decline' participation without consequence.\nWithdrawal: Parents maintain the right to withdraw data access at any time while remaining enrolled in the school."
+            }
+          ]
+        },
+
+        {
+          id: "gov-ip-security",
+          type: "grid3",
+          header: "Student IP Rights & Data Security",
+          intro:
+            "Safety, IP, and data handling are designed to protect students while preserving the integrity of longitudinal records.",
+          items: [
+            {
+              title: "Student IP Rights",
+              icon: "shield",
+              body:
+                "We fundamentally believe that age does not preclude ownership.\n\nSovereignty: Utility patents generated in the Innovation Labs are filed in the name of the student inventors.\nInstitute Role: The Institute acts as the 'Facilitator' and funds the filing process but claims 0% ownership of student-generated IP.\nAttribution: All student contributions to larger papers are cited as 'Co-Authors,' not subjects."
+            },
+            {
+              title: "Data Security & Anonymization",
+              icon: "lock",
+              body:
+                "K-Anonymity: All datasets are scrubbed of PII (Personally Identifiable Information). Names are replaced with alphanumeric codes (e.g., Subject-847-A).\nVisual Privacy: Faces in published documentation are obscured or digitized.\nStorage: Longitudinal records are stored in an air-gapped internal server (The Data Wing), accessible only to the Principal Investigator and Lead Fellows."
+            },
+            {
+              title: "Operational Safety (Labs)",
+              icon: "alert",
+              body:
+                "All high-stakes lab activity follows safety protocols designed for minors. Observation is non-intrusive, documentation is governed by ethics review, and any external access is scheduled to prevent interference with the work cycle."
+            }
+          ]
+        },
+
+        {
+          id: "gov-team-overview",
+          type: "grid3",
+          header: "The Research & Observation Team",
+          intro:
+            "Data collection is conducted by a dual-layer team, ensuring both pedagogical sensitivity and technical accuracy.",
+          items: [
+            {
+              title: "Embedded Research Fellows (AMI)",
+              icon: "user",
+              body:
+                "Who They Are: AMI-Certified Pedagogues.\nObservation Focus: Developmental & Behavioral Data.\nFunction: They're the child's regular teacher, not a stranger with a clipboard. Children behave naturally because observation is invisible. The guide records observations during lunch or after school, never during work cycles.\n\nREAD MORE FOR PROFILES."
+            },
+            {
+              title: "Research Associates (Subject Experts)",
+              icon: "tool",
+              body:
+                "Who They Are: Engineers, Data Scientists, and Domain Specialists.\nObservation Focus: Performance & Competency Data.\nFunction: These experts conduct focused observations within the Innovation Labs. They track 'External Output'—measuring engineering fidelity, failure recovery rates, and technical precision during high-stakes prototyping (e.g., Drone flight tests).\n\nREAD MORE FOR PROFILES."
+            },
+            {
+              title: "Apply as a Visiting Researcher",
+              icon: "arrow",
+              body:
+                "Footer Note: To apply for a Visiting Researcher position, please visit the Collaborate page.",
+              cta: { label: "Go to Collaborate", href: "/collaborate" }
+            }
+          ]
+        },
+
+        {
+          id: "irb-guidelines",
+          type: "textBlock",
+          header: "IRB Guidelines",
+          body:
+            "IRB guidelines are provided to credentialed collaborators to protect the integrity of the observational environment. Submit an inquiry via Collaborate to request access to the latest IRB standards and consent architecture.",
+          cta: { label: "Submit a Collaboration Inquiry", href: "/collaborate" }
+        }
+      ]
     },
 
     "/collaborate": {
