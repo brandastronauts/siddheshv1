@@ -1,9 +1,9 @@
-import { useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import PageShell from '../components/layout/PageShell';
 
 const LegalPage = () => {
-  const { slug } = useParams();
-  const path = `/${slug}`;
+  const location = useLocation();
+  const path = location.pathname;
   
   return <PageShell path={path} />;
 };
