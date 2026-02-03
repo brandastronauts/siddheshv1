@@ -80,8 +80,8 @@ const HeroSection = ({
       {/* Base gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-surface/50 via-background to-background" />
 
-      {/* Background image for precision variant */}
-      {isPrecision && heroImage && (
+      {/* Background image for hero variants */}
+      {heroImage?.src && (
         <div className="absolute inset-0 z-0">
           <SmartImage
             src={heroImage.src}
@@ -91,7 +91,7 @@ const HeroSection = ({
             aspect="16:9"
             className="w-full h-full"
           />
-          <div className="absolute inset-0 bg-background/95" />
+          <div className="absolute inset-0 bg-background/80" />
         </div>
       )}
 
