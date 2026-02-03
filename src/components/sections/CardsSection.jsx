@@ -3,10 +3,11 @@ import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SmartImage from '../common/SmartImage';
 
-const CardsSection = ({ heading, header, items, cards, variant }) => {
+const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
   const title = header || heading;
   const cardData = cards || items || [];
   const isPressRoom = variant === 'pressRoom';
+  const isProfiles = variant === 'profiles';
   const hasImages = cardData.some(card => card.image);
 
   const renderAction = (action) => {
@@ -47,18 +48,32 @@ const CardsSection = ({ heading, header, items, cards, variant }) => {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-deep-ink mb-12"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-deep-ink mb-6"
           >
             {title}
           </motion.h2>
+        )}
+
+        {intro && (
+          <motion.p 
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12"
+          >
+            {intro}
+          </motion.p>
         )}
         
         <div className={`grid grid-cols-1 ${
           isPressRoom 
             ? 'lg:grid-cols-1 max-w-4xl mx-auto gap-6' 
-            : hasImages 
-              ? 'md:grid-cols-2 gap-6' 
-              : 'md:grid-cols-2 lg:grid-cols-3 gap-6'
+            : isProfiles
+              ? 'md:grid-cols-2 lg:grid-cols-3 gap-6'
+              : hasImages 
+                ? 'md:grid-cols-2 gap-6' 
+                : 'md:grid-cols-2 lg:grid-cols-3 gap-6'
         }`}>
           {cardData.map((item, index) => (
             <motion.div
@@ -67,10 +82,25 @@ const CardsSection = ({ heading, header, items, cards, variant }) => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="card-elegant overflow-hidden group"
+              className={`card-elegant overflow-hidden group ${isProfiles ? 'text-center' : ''}`}
             >
-              {/* Card image if present */}
-              {item.image && (
+              {/* Avatar for profiles variant */}
+              {isProfiles && item.image && (
+                <div className="pt-6 flex justify-center">
+                  <div className="w-20 h-20 rounded-full overflow-hidden bg-surface border-2 border-border/50">
+                    <SmartImage
+                      src={item.image.src}
+                      alt={item.image.alt}
+                      variant="avatar"
+                      privacyBlur={item.image.privacyBlur}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+              )}
+
+              {/* Card image for non-profile variants */}
+              {!isProfiles && item.image && (
                 <div className="relative h-48 overflow-hidden">
                   <SmartImage
                     src={item.image.src}

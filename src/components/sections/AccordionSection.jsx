@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 
-const AccordionSection = ({ heading, header, items }) => {
+const AccordionSection = ({ heading, header, intro, items }) => {
   const [openIndex, setOpenIndex] = useState(null);
   const title = header || heading;
 
@@ -20,10 +20,22 @@ const AccordionSection = ({ heading, header, items }) => {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-deep-ink mb-12"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-deep-ink mb-6"
           >
             {title}
           </motion.h2>
+        )}
+
+        {intro && (
+          <motion.p 
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12"
+          >
+            {intro}
+          </motion.p>
         )}
         
         <div className="max-w-3xl mx-auto space-y-3">
