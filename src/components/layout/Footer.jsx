@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Mail, ArrowUpRight } from 'lucide-react';
 import siteContent from '../../content/siteContent';
 import logo from '../../assets/logo.svg';
+import FooterNewsletter from '../FooterNewsletter';
 
 const Footer = () => {
   const { nav, brand } = siteContent;
@@ -79,15 +80,20 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Newsletter Section */}
+        <div className="mt-12 md:mt-16">
+          <FooterNewsletter />
+        </div>
+
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-white/10">
+        <div className="mt-10 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/40">
             <p>© {new Date().getFullYear()} {brand.siteName}. All rights reserved.</p>
             <div className="flex items-center gap-6">
-              <Link to="/governance" className="hover:text-white/80 transition-colors">
+              <Link to="/privacy" className="hover:text-white/80 transition-colors">
                 Privacy Policy
               </Link>
-              <Link to="/governance" className="hover:text-white/80 transition-colors">
+              <Link to="/terms" className="hover:text-white/80 transition-colors">
                 Terms of Use
               </Link>
             </div>
