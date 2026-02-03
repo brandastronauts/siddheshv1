@@ -2026,14 +2026,9 @@ const siteContent = {
             ]
           },
           right: {
-            type: "image",
-            image: {
-              src: "",
-              alt: "Map placeholder (replace with real map embed later)",
-              variant: "card",
-              privacyBlur: false,
-              caption: "Replace with map embed when final address is confirmed."
-            }
+            type: "map",
+            embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3830.9687590791937!2d78.3536551751226!3d17.450666000979226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93b95e80d3f3%3A0x1d18b58cbd3b4930!2sBlue%20Blocks%20Pre%20School!5e1!3m2!1sen!2sus!4v1770146907132!5m2!1sen!2sus",
+            title: "Blue Blocks location map"
           }
         },
 
