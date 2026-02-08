@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Mail, ArrowUpRight } from 'lucide-react';
 import siteContent from '../../content/siteContent';
-import logo from '../../assets/logo.svg';
+import logo from '../../assets/logo.png';
 import FooterNewsletter from '../FooterNewsletter';
 
 const Footer = () => {
