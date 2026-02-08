@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /
+
+Sitemap: https://siddheshv1.lovable.app/sitemap.xml

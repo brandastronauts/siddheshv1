@@ -12,20 +12,35 @@ const sitemapData = {
     { name: "Newsroom", url: "/newsroom", status: "complete" },
     { name: "Contact", url: "/contact", status: "complete" },
   ],
+  publications: [
+    { name: "IN-SPACe Authorization Letter", url: "/publications/in-space-authorization-letter", status: "complete" },
+    { name: "SAPARYA / IMF Case Study", url: "/publications/saparya-imf-case-study", status: "complete" },
+  ],
+  patents: [
+    { name: "Patents Registry", url: "/patents", status: "complete" },
+    { name: "Automated Security UAV", url: "/patents/automated-security-uav", status: "complete" },
+    { name: "Borehole Rescue System", url: "/patents/borehole-rescue-system", status: "complete" },
+    { name: "Contactless Delivery System", url: "/patents/contactless-delivery-system", status: "complete" },
+    { name: "Autonomous Medical Assistance System", url: "/patents/autonomous-medical-assistance-system", status: "complete" },
+    { name: "Autonomous Health Monitoring System", url: "/patents/autonomous-health-monitoring-system", status: "complete" },
+  ],
+  books: [
+    { name: "Books", url: "/books", status: "complete" },
+    { name: "Lining The Nest", url: "/books/lining-the-nest", status: "complete" },
+  ],
+  team: [
+    { name: "Team", url: "/team", status: "complete" },
+    { name: "Pavan Goyal", url: "/team/pavan-goyal", status: "complete" },
+    { name: "Munira Hussain", url: "/team/munira-hussain", status: "complete" },
+    { name: "Adolescent Research Cohort", url: "/team/adolescent-research-cohort", status: "complete" },
+  ],
+  downloads: [
+    { name: "Downloads Hub", url: "/downloads", status: "complete" },
+  ],
   technical: [
     { name: "Mission SBB-1 Technical Brief", url: "/technical-briefs/sbb-1", status: "complete" },
     { name: "Marrakesh Presentation", url: "/presentations/marrakesh-human-capital", status: "complete" },
     { name: "Oslo Proceedings Archive", url: "/proceedings/oslo-2026", status: "complete" },
-  ],
-  downloads: [
-    { name: "Downloads Hub", url: "/downloads", status: "complete" },
-    { name: "Institute Prospectus", url: "/downloads/institute-prospectus", status: "complete" },
-    { name: "Micro Research Framework", url: "/downloads/micro-research-framework", status: "complete" },
-    { name: "Dataset Specification v1.0", url: "/downloads/micro-dataset-specification", status: "complete" },
-    { name: "Citation Guide", url: "/downloads/citation-guide", status: "complete" },
-    { name: "Schema Definitions", url: "/downloads/schema-definitions", status: "complete" },
-    { name: "Brand Asset Pack", url: "/downloads/brand-asset-pack", status: "complete" },
-    { name: "Leadership Bio Sheet", url: "/downloads/leadership-bio-sheet", status: "complete" },
   ],
   newsroom: [
     { name: "Dispatch: Payload Authorized", url: "/newsroom/dispatch/isro-payload-authorization", status: "complete" },
@@ -35,9 +50,9 @@ const sitemapData = {
     { name: "Update: Visiting Scholars 2026", url: "/newsroom/updates/visiting-scholars-2026", status: "complete" },
   ],
   legal: [
-    { name: "Staff Access", url: "/staff-access", status: "complete" },
     { name: "Privacy Policy", url: "/privacy", status: "complete" },
     { name: "Terms of Use", url: "/terms", status: "complete" },
+    { name: "Sitemap", url: "/sitemap", status: "complete" },
   ],
 };
 
@@ -51,7 +66,7 @@ const SitemapSection = () => {
   return (
     <section className="py-16 bg-background">
       <div className="container-grid">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Core Pages</h3>
             <ul className="space-y-2">
@@ -65,9 +80,45 @@ const SitemapSection = () => {
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Technical & Archive</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Publications</h3>
             <ul className="space-y-2">
-              {sitemapData.technical.map((item) => (
+              {sitemapData.publications.map((item) => (
+                <li key={item.url}>
+                  <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Patents</h3>
+            <ul className="space-y-2">
+              {sitemapData.patents.map((item) => (
+                <li key={item.url}>
+                  <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Books</h3>
+            <ul className="space-y-2">
+              {sitemapData.books.map((item) => (
+                <li key={item.url}>
+                  <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Team</h3>
+            <ul className="space-y-2">
+              {sitemapData.team.map((item) => (
                 <li key={item.url}>
                   <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
                     {item.name}
@@ -89,6 +140,18 @@ const SitemapSection = () => {
             </ul>
           </div>
           <div>
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Technical & Archive</h3>
+            <ul className="space-y-2">
+              {sitemapData.technical.map((item) => (
+                <li key={item.url}>
+                  <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
             <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Newsroom Subpages</h3>
             <ul className="space-y-2">
               {sitemapData.newsroom.map((item) => (
@@ -101,7 +164,7 @@ const SitemapSection = () => {
             </ul>
           </div>
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Access & Legal</h3>
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Legal & Access</h3>
             <ul className="space-y-2">
               {sitemapData.legal.map((item) => (
                 <li key={item.url}>

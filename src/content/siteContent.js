@@ -3246,25 +3246,67 @@ const siteContent = {
 
     "/sitemap": {
       title: "Sitemap",
-      metaDescription: "Internal sitemap for navigation and QA.",
+      metaDescription: "A structured index of public pages for navigation and accessibility at Blue Blocks Micro Research Institute.",
       seo: {
         title: "Sitemap | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/sitemap",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        canonical: "https://siddheshv1.lovable.app/sitemap",
+        robots: "noindex, nofollow, noarchive, nosnippet",
+        openGraph: {
+          type: "website",
+          url: "https://siddheshv1.lovable.app/sitemap",
+          title: "Sitemap | Blue Blocks Micro Research Institute",
+          description: "A structured index of public pages for navigation and accessibility.",
+          image: {
+            url: "https://siddheshv1.lovable.app/og/sitemap.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Blue Blocks Micro Research Institute Sitemap"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Sitemap | Blue Blocks Micro Research Institute",
+          description: "A structured index of public pages for navigation and accessibility.",
+          image: "https://siddheshv1.lovable.app/og/sitemap.jpg"
+        }
       },
       schemas: [
         {
           "@context": "https://schema.org",
-          "@type": "WebPage",
+          "@type": "WebSite",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
+          email: "research@blueblocks.in"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
           name: "Sitemap",
-          url: "https://blueblocks.in/sitemap"
+          url: "https://siddheshv1.lovable.app/sitemap",
+          description: "A structured index of public pages for navigation and accessibility.",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" },
+          hasPart: [
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter" },
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study" },
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/patents" },
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/books" },
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/team" },
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/downloads" }
+          ]
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Sitemap", item: "https://blueblocks.in/sitemap" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Sitemap", item: "https://siddheshv1.lovable.app/sitemap" }
           ]
         }
       ],
@@ -3274,7 +3316,7 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "Sitemap",
-          subheadline: "Full navigation list for Institute website pages.",
+          subheadline: "A structured index of public pages for navigation and accessibility.",
           image: { src: "/src/assets/banners/downloads-archive.jpg", alt: "Sitemap banner", variant: "hero" }
         },
         {
@@ -3291,31 +3333,66 @@ const siteContent = {
       metaDescription: "Official IN-SPACe authorization record for the SBB-1 mission activity, preserved as a permanent institutional artifact for governance traceability.",
       seo: {
         title: "IN-SPACe Authorization Letter | Publications | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/publications/in-space-authorization-letter",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        canonical: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter",
+        robots: "noindex, nofollow, noarchive, nosnippet",
+        openGraph: {
+          type: "article",
+          url: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter",
+          title: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
+          description: "Official IN-SPACe authorization record for the SBB-1 mission activity, preserved for governance traceability.",
+          image: {
+            url: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
+            width: 1200,
+            height: 630,
+            alt: "Mission control environment"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "IN-SPACe Authorization Letter | Blue Blocks",
+          description: "Official authorization record for SBB-1 mission, archived with DOI for citation.",
+          image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"
+        }
       },
       schemas: [
         {
           "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "IN-SPACe Authorization Letter",
-          url: "https://blueblocks.in/publications/in-space-authorization-letter"
+          "@type": "WebSite",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
+          email: "research@blueblocks.in"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          name: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
+          headline: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
+          description: "Official IN-SPACe authorization record for the SBB-1 mission activity, preserved as a permanent institutional artifact.",
+          url: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter",
+          author: { "@type": "Organization", name: "IN-SPACe (Department of Space, Government of India)" },
+          publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          identifier: {
+            "@type": "PropertyValue",
+            propertyID: "DOI",
+            value: "10.5281/zenodo.18195108"
+          },
+          datePublished: "2026-01-07"
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Publications", item: "https://blueblocks.in/publications-open-science" },
-            { "@type": "ListItem", position: 3, name: "IN-SPACe Authorization Letter", item: "https://blueblocks.in/publications/in-space-authorization-letter" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://siddheshv1.lovable.app/publications-open-science" },
+            { "@type": "ListItem", position: 3, name: "IN-SPACe Authorization Letter", item: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter" }
           ]
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "CreativeWork",
-          name: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
-          author: { "@type": "Organization", name: "IN-SPACe (Department of Space, Government of India)" },
-          identifier: "10.5281/zenodo.18195108"
         }
       ],
       sections: [
@@ -3437,31 +3514,66 @@ const siteContent = {
       metaDescription: "A documented adolescent engineering mission presented as an institutional case study in Montessori adolescence.",
       seo: {
         title: "SAPARYA Case Study | Publications | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/publications/saparya-imf-case-study",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        canonical: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study",
+        robots: "noindex, nofollow, noarchive, nosnippet",
+        openGraph: {
+          type: "article",
+          url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study",
+          title: "SAPARYA / IMF Conference Case Study",
+          description: "A documented adolescent engineering mission presented as an institutional case study.",
+          image: {
+            url: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80",
+            width: 1200,
+            height: 630,
+            alt: "Conference presentation"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "SAPARYA Case Study | Blue Blocks",
+          description: "Adolescent engineering mission case study, archived with DOI.",
+          image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80"
+        }
       },
       schemas: [
         {
           "@context": "https://schema.org",
-          "@type": "WebPage",
+          "@type": "WebSite",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
+          email: "research@blueblocks.in"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
           name: "SAPARYA / IMF Conference Case Study",
-          url: "https://blueblocks.in/publications/saparya-imf-case-study"
+          headline: "SAPARYA / IMF Conference Case Study: SBB-1 Mission & Valorization",
+          description: "A documented adolescent engineering mission presented as an institutional case study in Montessori adolescence.",
+          url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study",
+          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          identifier: {
+            "@type": "PropertyValue",
+            propertyID: "DOI",
+            value: "10.5281/zenodo.18337934"
+          },
+          datePublished: "2026-01-24"
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Publications", item: "https://blueblocks.in/publications-open-science" },
-            { "@type": "ListItem", position: 3, name: "SAPARYA Case Study", item: "https://blueblocks.in/publications/saparya-imf-case-study" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://siddheshv1.lovable.app/publications-open-science" },
+            { "@type": "ListItem", position: 3, name: "SAPARYA Case Study", item: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study" }
           ]
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          name: "SAPARYA / IMF Conference Case Study",
-          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          identifier: "10.5281/zenodo.18337934"
         }
       ],
       sections: [
@@ -3588,22 +3700,62 @@ const siteContent = {
       metaDescription: "Registry of student-generated inventions produced under high-stakes prototyping environments at Blue Blocks Micro Research Institute.",
       seo: {
         title: "Patent Registry | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/patents",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        canonical: "https://siddheshv1.lovable.app/patents",
+        robots: "noindex, nofollow, noarchive, nosnippet",
+        openGraph: {
+          type: "website",
+          url: "https://siddheshv1.lovable.app/patents",
+          title: "Patent Registry | Blue Blocks Micro Research Institute",
+          description: "Registry of student-generated inventions produced under high-stakes prototyping environments.",
+          image: {
+            url: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1200&q=80",
+            width: 1200,
+            height: 630,
+            alt: "Blueprint engineering"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Patent Registry | Blue Blocks",
+          description: "Student-generated inventions from high-stakes prototyping environments.",
+          image: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1200&q=80"
+        }
       },
       schemas: [
         {
           "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
+          email: "research@blueblocks.in"
+        },
+        {
+          "@context": "https://schema.org",
           "@type": "CollectionPage",
           name: "Patent Registry",
-          url: "https://blueblocks.in/patents"
+          url: "https://siddheshv1.lovable.app/patents",
+          description: "Registry of student-generated inventions produced under high-stakes prototyping environments.",
+          hasPart: [
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/patents/automated-security-uav" },
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/patents/borehole-rescue-system" },
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/patents/contactless-delivery-system" },
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system" },
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system" }
+          ]
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Patents", item: "https://blueblocks.in/patents" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" }
           ]
         }
       ],
@@ -3688,23 +3840,62 @@ const siteContent = {
       metaDescription: "A responsive aerial surveillance system engineered to reduce latency in emergency security operations.",
       seo: {
         title: "Automated Security UAV Patent | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/patents/automated-security-uav",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        canonical: "https://siddheshv1.lovable.app/patents/automated-security-uav",
+        robots: "noindex, nofollow, noarchive, nosnippet",
+        openGraph: {
+          type: "article",
+          url: "https://siddheshv1.lovable.app/patents/automated-security-uav",
+          title: "Automated Security UAV Patent",
+          description: "A responsive aerial surveillance system for rapid safety operations.",
+          image: {
+            url: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
+            width: 1200,
+            height: 630,
+            alt: "Robotics blueprint"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Automated Security UAV | Blue Blocks",
+          description: "Student-generated patent for aerial surveillance system.",
+          image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80"
+        }
       },
       schemas: [
         {
           "@context": "https://schema.org",
-          "@type": "WebPage",
+          "@type": "WebSite",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
+          email: "research@blueblocks.in"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
           name: "System for Automated Security (UAV)",
-          url: "https://blueblocks.in/patents/automated-security-uav"
+          description: "A responsive aerial surveillance system engineered to reduce latency in emergency security operations.",
+          url: "https://siddheshv1.lovable.app/patents/automated-security-uav",
+          creator: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          identifier: {
+            "@type": "PropertyValue",
+            propertyID: "Patent Application Number",
+            value: "202041031343"
+          }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Patents", item: "https://blueblocks.in/patents" },
-            { "@type": "ListItem", position: 3, name: "Automated Security UAV", item: "https://blueblocks.in/patents/automated-security-uav" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
+            { "@type": "ListItem", position: 3, name: "Automated Security UAV", item: "https://siddheshv1.lovable.app/patents/automated-security-uav" }
           ]
         }
       ],
@@ -3798,16 +3989,64 @@ const siteContent = {
       metaDescription: "A rescue apparatus designed for narrow-shaft environments with adaptive positioning and safe extraction mechanisms.",
       seo: {
         title: "Borehole Rescue System Patent | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/patents/borehole-rescue-system",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        canonical: "https://siddheshv1.lovable.app/patents/borehole-rescue-system",
+        robots: "noindex, nofollow, noarchive, nosnippet",
+        openGraph: {
+          type: "article",
+          url: "https://siddheshv1.lovable.app/patents/borehole-rescue-system",
+          title: "Borehole Rescue System Patent",
+          description: "A rescue apparatus for narrow-shaft environments with adaptive positioning.",
+          image: {
+            url: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
+            width: 1200,
+            height: 630,
+            alt: "Robotics engineering"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Borehole Rescue System | Blue Blocks",
+          description: "Student-generated patent for rescue apparatus.",
+          image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80"
+        }
       },
       schemas: [
-        { "@context": "https://schema.org", "@type": "WebPage", name: "Borehole Rescue System (BRS)", url: "https://blueblocks.in/patents/borehole-rescue-system" },
-        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-          { "@type": "ListItem", position: 2, name: "Patents", item: "https://blueblocks.in/patents" },
-          { "@type": "ListItem", position: 3, name: "Borehole Rescue System", item: "https://blueblocks.in/patents/borehole-rescue-system" }
-        ]}
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
+          email: "research@blueblocks.in"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          name: "Borehole Rescue System (BRS)",
+          description: "A rescue apparatus for narrow-shaft environments.",
+          url: "https://siddheshv1.lovable.app/patents/borehole-rescue-system",
+          creator: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          identifier: {
+            "@type": "PropertyValue",
+            propertyID: "Patent Application Number",
+            value: "202041027026"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
+            { "@type": "ListItem", position: 3, name: "Borehole Rescue System", item: "https://siddheshv1.lovable.app/patents/borehole-rescue-system" }
+          ]
+        }
       ],
       sections: [
         {
@@ -3872,16 +4111,59 @@ const siteContent = {
       metaDescription: "An autonomous logistics ecosystem for contactless distribution during high-risk contamination scenarios.",
       seo: {
         title: "Contactless Delivery System Patent | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/patents/contactless-delivery-system",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        canonical: "https://siddheshv1.lovable.app/patents/contactless-delivery-system",
+        robots: "noindex, nofollow, noarchive, nosnippet",
+        openGraph: {
+          type: "article",
+          url: "https://siddheshv1.lovable.app/patents/contactless-delivery-system",
+          title: "Contactless Delivery System Patent",
+          description: "An autonomous logistics ecosystem for contactless distribution.",
+          image: {
+            url: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
+            width: 1200,
+            height: 630,
+            alt: "Robotics"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Contactless Delivery System | Blue Blocks",
+          description: "Student-generated patent for autonomous logistics.",
+          image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80"
+        }
       },
       schemas: [
-        { "@context": "https://schema.org", "@type": "WebPage", name: "Autonomous Contactless Delivery System", url: "https://blueblocks.in/patents/contactless-delivery-system" },
-        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-          { "@type": "ListItem", position: 2, name: "Patents", item: "https://blueblocks.in/patents" },
-          { "@type": "ListItem", position: 3, name: "Contactless Delivery System", item: "https://blueblocks.in/patents/contactless-delivery-system" }
-        ]}
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
+          email: "research@blueblocks.in"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          name: "Autonomous Contactless Delivery System (ACDS)",
+          description: "An autonomous logistics ecosystem for contactless distribution.",
+          url: "https://siddheshv1.lovable.app/patents/contactless-delivery-system",
+          creator: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
+            { "@type": "ListItem", position: 3, name: "Contactless Delivery System", item: "https://siddheshv1.lovable.app/patents/contactless-delivery-system" }
+          ]
+        }
       ],
       sections: [
         {
@@ -3938,16 +4220,64 @@ const siteContent = {
       metaDescription: "A telerobotic medical support platform designed for contactless assistance during crisis conditions.",
       seo: {
         title: "Medical Assistance System Patent | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/patents/autonomous-medical-assistance-system",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        canonical: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system",
+        robots: "noindex, nofollow, noarchive, nosnippet",
+        openGraph: {
+          type: "article",
+          url: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system",
+          title: "Autonomous Medical Assistance System Patent",
+          description: "A telerobotic medical support platform for contactless assistance.",
+          image: {
+            url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+            width: 1200,
+            height: 630,
+            alt: "Medical robotics"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Medical Assistance System | Blue Blocks",
+          description: "Student-generated patent for medical robotics.",
+          image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+        }
       },
       schemas: [
-        { "@context": "https://schema.org", "@type": "WebPage", name: "Autonomous Medical Assistance System", url: "https://blueblocks.in/patents/autonomous-medical-assistance-system" },
-        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-          { "@type": "ListItem", position: 2, name: "Patents", item: "https://blueblocks.in/patents" },
-          { "@type": "ListItem", position: 3, name: "Medical Assistance System", item: "https://blueblocks.in/patents/autonomous-medical-assistance-system" }
-        ]}
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
+          email: "research@blueblocks.in"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          name: "Autonomous Medical Assistance System (AMAS)",
+          description: "A telerobotic medical support platform for contactless assistance.",
+          url: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system",
+          creator: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          identifier: {
+            "@type": "PropertyValue",
+            propertyID: "Patent Application Number",
+            value: "202041027075"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
+            { "@type": "ListItem", position: 3, name: "Medical Assistance System", item: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system" }
+          ]
+        }
       ],
       sections: [
         {
@@ -4004,16 +4334,59 @@ const siteContent = {
       metaDescription: "A remote epidemiological surveillance network designed for non-invasive biometric detection and alerting.",
       seo: {
         title: "Health Monitoring System Patent | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/patents/autonomous-health-monitoring-system",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        canonical: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system",
+        robots: "noindex, nofollow, noarchive, nosnippet",
+        openGraph: {
+          type: "article",
+          url: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system",
+          title: "Autonomous Health Monitoring System Patent",
+          description: "A remote surveillance network for non-invasive biometric detection.",
+          image: {
+            url: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
+            width: 1200,
+            height: 630,
+            alt: "Bio-telemetry"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Health Monitoring System | Blue Blocks",
+          description: "Student-generated patent for bio-telemetry.",
+          image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
+        }
       },
       schemas: [
-        { "@context": "https://schema.org", "@type": "WebPage", name: "Autonomous Health Monitoring System", url: "https://blueblocks.in/patents/autonomous-health-monitoring-system" },
-        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-          { "@type": "ListItem", position: 2, name: "Patents", item: "https://blueblocks.in/patents" },
-          { "@type": "ListItem", position: 3, name: "Health Monitoring System", item: "https://blueblocks.in/patents/autonomous-health-monitoring-system" }
-        ]}
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
+          email: "research@blueblocks.in"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          name: "Autonomous Health Monitoring System (AHMS)",
+          description: "A remote surveillance network for non-invasive biometric detection.",
+          url: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system",
+          creator: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
+            { "@type": "ListItem", position: 3, name: "Health Monitoring System", item: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system" }
+          ]
+        }
       ],
       sections: [
         {
@@ -4072,15 +4445,60 @@ const siteContent = {
       metaDescription: "Selected long-form publications from Blue Blocks Micro Research Institute for families, educators, and institutional partners.",
       seo: {
         title: "Books | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/books",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        canonical: "https://siddheshv1.lovable.app/books",
+        robots: "noindex, nofollow, noarchive, nosnippet",
+        openGraph: {
+          type: "website",
+          url: "https://siddheshv1.lovable.app/books",
+          title: "Books | Blue Blocks Micro Research Institute",
+          description: "Long-form publications for families, educators, and institutional partners.",
+          image: {
+            url: "https://images.unsplash.com/photo-1455885666463-39f77c2476e4?auto=format&fit=crop&w=1200&q=80",
+            width: 1200,
+            height: 630,
+            alt: "Book on desk"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Books | Blue Blocks",
+          description: "Long-form publications for families and educators.",
+          image: "https://images.unsplash.com/photo-1455885666463-39f77c2476e4?auto=format&fit=crop&w=1200&q=80"
+        }
       },
       schemas: [
-        { "@context": "https://schema.org", "@type": "CollectionPage", name: "Books", url: "https://blueblocks.in/books" },
-        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-          { "@type": "ListItem", position: 2, name: "Books", item: "https://blueblocks.in/books" }
-        ]}
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
+          email: "research@blueblocks.in"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Books",
+          url: "https://siddheshv1.lovable.app/books",
+          description: "Selected long-form publications for families, educators, and institutional partners.",
+          hasPart: [
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/books/lining-the-nest" }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Books", item: "https://siddheshv1.lovable.app/books" }
+          ]
+        }
       ],
       sections: [
         {
@@ -4114,16 +4532,66 @@ const siteContent = {
       metaDescription: "A long-form guide for families and educators on building environments that protect curiosity, increase responsibility, and support long-horizon growth.",
       seo: {
         title: "Lining The Nest | Books | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/books/lining-the-nest",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        canonical: "https://siddheshv1.lovable.app/books/lining-the-nest",
+        robots: "noindex, nofollow, noarchive, nosnippet",
+        openGraph: {
+          type: "book",
+          url: "https://siddheshv1.lovable.app/books/lining-the-nest",
+          title: "Lining The Nest",
+          description: "A guide for families and educators on building environments that protect curiosity.",
+          image: {
+            url: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80",
+            width: 1200,
+            height: 630,
+            alt: "Open book pages"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Lining The Nest | Blue Blocks",
+          description: "A guide for families and educators on building learning environments.",
+          image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80"
+        }
       },
       schemas: [
-        { "@context": "https://schema.org", "@type": "Book", name: "Lining The Nest", author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }, url: "https://blueblocks.in/books/lining-the-nest" },
-        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-          { "@type": "ListItem", position: 2, name: "Books", item: "https://blueblocks.in/books" },
-          { "@type": "ListItem", position: 3, name: "Lining The Nest", item: "https://blueblocks.in/books/lining-the-nest" }
-        ]}
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
+          email: "research@blueblocks.in"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          name: "Lining The Nest",
+          description: "A long-form guide for families and educators on building environments that protect curiosity.",
+          url: "https://siddheshv1.lovable.app/books/lining-the-nest",
+          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          offers: {
+            "@type": "Offer",
+            url: "https://amzn.in/d/09xLf6FE",
+            availability: "https://schema.org/InStock",
+            priceCurrency: "INR"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Books", item: "https://siddheshv1.lovable.app/books" },
+            { "@type": "ListItem", position: 3, name: "Lining The Nest", item: "https://siddheshv1.lovable.app/books/lining-the-nest" }
+          ]
+        }
       ],
       sections: [
         {
@@ -4205,15 +4673,57 @@ const siteContent = {
       metaDescription: "Consolidated hub for public reference materials, conference artifacts, and citation-grade documents from Blue Blocks Micro Research Institute.",
       seo: {
         title: "Downloads | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/downloads",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        canonical: "https://siddheshv1.lovable.app/downloads",
+        robots: "noindex, nofollow, noarchive, nosnippet",
+        openGraph: {
+          type: "website",
+          url: "https://siddheshv1.lovable.app/downloads",
+          title: "Downloads | Blue Blocks Micro Research Institute",
+          description: "Public reference materials, conference artifacts, and citation-grade documents.",
+          image: {
+            url: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80",
+            width: 1200,
+            height: 630,
+            alt: "Documents archive"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Downloads | Blue Blocks",
+          description: "Public reference materials and citation-grade documents.",
+          image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80"
+        }
       },
       schemas: [
-        { "@context": "https://schema.org", "@type": "CollectionPage", name: "Downloads", url: "https://blueblocks.in/downloads" },
-        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-          { "@type": "ListItem", position: 2, name: "Downloads", item: "https://blueblocks.in/downloads" }
-        ]}
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
+          email: "research@blueblocks.in"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Downloads",
+          url: "https://siddheshv1.lovable.app/downloads",
+          description: "Public reference materials, conference artifacts, and citation-grade documents."
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Downloads", item: "https://siddheshv1.lovable.app/downloads" }
+          ]
+        }
       ],
       sections: [
         {
@@ -4263,15 +4773,62 @@ const siteContent = {
       metaDescription: "Leadership and research team at Blue Blocks Micro Research Institute.",
       seo: {
         title: "Team | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/team",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        canonical: "https://siddheshv1.lovable.app/team",
+        robots: "noindex, nofollow, noarchive, nosnippet",
+        openGraph: {
+          type: "website",
+          url: "https://siddheshv1.lovable.app/team",
+          title: "Team | Blue Blocks Micro Research Institute",
+          description: "Leadership and research team profiles.",
+          image: {
+            url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+            width: 1200,
+            height: 630,
+            alt: "Lab instruments"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Team | Blue Blocks",
+          description: "Leadership and research team profiles.",
+          image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+        }
       },
       schemas: [
-        { "@context": "https://schema.org", "@type": "CollectionPage", name: "Team", url: "https://blueblocks.in/team" },
-        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-          { "@type": "ListItem", position: 2, name: "Team", item: "https://blueblocks.in/team" }
-        ]}
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
+          email: "research@blueblocks.in"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Team",
+          url: "https://siddheshv1.lovable.app/team",
+          description: "Leadership and research team at Blue Blocks Micro Research Institute.",
+          hasPart: [
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/team/pavan-goyal" },
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/team/munira-hussain" },
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/team/adolescent-research-cohort" }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Team", item: "https://siddheshv1.lovable.app/team" }
+          ]
+        }
       ],
       sections: [
         {
@@ -4320,16 +4877,59 @@ const siteContent = {
       metaDescription: "Principal Investigator & Founder at Blue Blocks Micro Research Institute.",
       seo: {
         title: "Pavan Goyal | Team | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/team/pavan-goyal",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        canonical: "https://siddheshv1.lovable.app/team/pavan-goyal",
+        robots: "noindex, nofollow, noarchive, nosnippet",
+        openGraph: {
+          type: "profile",
+          url: "https://siddheshv1.lovable.app/team/pavan-goyal",
+          title: "Pavan Goyal | Blue Blocks Micro Research Institute",
+          description: "Principal Investigator & Founder",
+          image: {
+            url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+            width: 1200,
+            height: 630,
+            alt: "Lab environment"
+          }
+        },
+        twitter: {
+          card: "summary",
+          title: "Pavan Goyal | Blue Blocks",
+          description: "Principal Investigator & Founder",
+          image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+        }
       },
       schemas: [
-        { "@context": "https://schema.org", "@type": "Person", name: "Pavan Goyal", jobTitle: "Principal Investigator & Founder" },
-        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-          { "@type": "ListItem", position: 2, name: "Team", item: "https://blueblocks.in/team" },
-          { "@type": "ListItem", position: 3, name: "Pavan Goyal", item: "https://blueblocks.in/team/pavan-goyal" }
-        ]}
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
+          email: "research@blueblocks.in"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Pavan Goyal",
+          jobTitle: "Principal Investigator & Founder",
+          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          url: "https://siddheshv1.lovable.app/team/pavan-goyal"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Team", item: "https://siddheshv1.lovable.app/team" },
+            { "@type": "ListItem", position: 3, name: "Pavan Goyal", item: "https://siddheshv1.lovable.app/team/pavan-goyal" }
+          ]
+        }
       ],
       sections: [
         {
@@ -4380,16 +4980,59 @@ const siteContent = {
       metaDescription: "Director of Pedagogy at Blue Blocks Micro Research Institute.",
       seo: {
         title: "Munira Hussain | Team | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/team/munira-hussain",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        canonical: "https://siddheshv1.lovable.app/team/munira-hussain",
+        robots: "noindex, nofollow, noarchive, nosnippet",
+        openGraph: {
+          type: "profile",
+          url: "https://siddheshv1.lovable.app/team/munira-hussain",
+          title: "Munira Hussain | Blue Blocks Micro Research Institute",
+          description: "Director of Pedagogy",
+          image: {
+            url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+            width: 1200,
+            height: 630,
+            alt: "Lab environment"
+          }
+        },
+        twitter: {
+          card: "summary",
+          title: "Munira Hussain | Blue Blocks",
+          description: "Director of Pedagogy",
+          image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+        }
       },
       schemas: [
-        { "@context": "https://schema.org", "@type": "Person", name: "Munira Hussain", jobTitle: "Director of Pedagogy" },
-        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-          { "@type": "ListItem", position: 2, name: "Team", item: "https://blueblocks.in/team" },
-          { "@type": "ListItem", position: 3, name: "Munira Hussain", item: "https://blueblocks.in/team/munira-hussain" }
-        ]}
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
+          email: "research@blueblocks.in"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Munira Hussain",
+          jobTitle: "Director of Pedagogy",
+          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          url: "https://siddheshv1.lovable.app/team/munira-hussain"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Team", item: "https://siddheshv1.lovable.app/team" },
+            { "@type": "ListItem", position: 3, name: "Munira Hussain", item: "https://siddheshv1.lovable.app/team/munira-hussain" }
+          ]
+        }
       ],
       sections: [
         {
@@ -4430,16 +5073,58 @@ const siteContent = {
       metaDescription: "The collective group of adolescent researchers contributing to patents and mission work at Blue Blocks Micro Research Institute.",
       seo: {
         title: "Adolescent Research Cohort | Team | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/team/adolescent-research-cohort",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        canonical: "https://siddheshv1.lovable.app/team/adolescent-research-cohort",
+        robots: "noindex, nofollow, noarchive, nosnippet",
+        openGraph: {
+          type: "website",
+          url: "https://siddheshv1.lovable.app/team/adolescent-research-cohort",
+          title: "Adolescent Research Cohort | Blue Blocks",
+          description: "Student researchers contributing to patents and mission work.",
+          image: {
+            url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+            width: 1200,
+            height: 630,
+            alt: "Lab environment"
+          }
+        },
+        twitter: {
+          card: "summary",
+          title: "Adolescent Research Cohort | Blue Blocks",
+          description: "Student researchers contributing to patents and mission work.",
+          image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
+        }
       },
       schemas: [
-        { "@context": "https://schema.org", "@type": "Organization", name: "Adolescent Research Cohort" },
-        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-          { "@type": "ListItem", position: 2, name: "Team", item: "https://blueblocks.in/team" },
-          { "@type": "ListItem", position: 3, name: "Adolescent Research Cohort", item: "https://blueblocks.in/team/adolescent-research-cohort" }
-        ]}
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
+          email: "research@blueblocks.in"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Adolescent Research Cohort",
+          parentOrganization: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          url: "https://siddheshv1.lovable.app/team/adolescent-research-cohort"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Team", item: "https://siddheshv1.lovable.app/team" },
+            { "@type": "ListItem", position: 3, name: "Adolescent Research Cohort", item: "https://siddheshv1.lovable.app/team/adolescent-research-cohort" }
+          ]
+        }
       ],
       sections: [
         {
