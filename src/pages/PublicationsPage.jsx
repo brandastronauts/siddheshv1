@@ -3,7 +3,7 @@ import SectionRenderer from '../components/SectionRenderer';
 import siteContent from '../content/siteContent';
 
 const PublicationsPage = () => {
-  const page = siteContent.pages['/publications-open-science'];
+  const page = siteContent.pages['/publications'];
 
   return (
     <PageShell>

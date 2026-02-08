@@ -5,7 +5,7 @@ const siteContent = {
   brand: {
     siteName: "Blue Blocks Micro Research Institute",
     headerTagline: "Micro Research Institute",
-    ethicsTagline: "Compiling the world's first 15-year, high-frequency longitudinal dataset on human innovation capacity from birth to age 18.",
+    ethicsTagline: "Compiling the world's first longitudinal dataset on human innovation capacity from birth to age 18. 15 years completed; Year 16 ongoing.",
     contact: {
       research: "research@blueblocks.in",
       press: "press@blueblocks.in",
@@ -16,7 +16,7 @@ const siteContent = {
     { label: "Home", path: "/" },
     { label: "The Institute", path: "/the-institute" },
     { label: "Methodology", path: "/methodology" },
-    { label: "Publications", path: "/publications-open-science" },
+    { label: "Publications", path: "/publications" },
     { label: "Governance", path: "/governance" },
     { label: "Collaborate", path: "/collaborate" },
     { label: "Newsroom", path: "/newsroom" },
@@ -27,20 +27,20 @@ const siteContent = {
     "/": {
       title: "Home",
       metaDescription:
-        "The Blue Blocks Micro Research Institute compiles a 15-year, high-frequency longitudinal dataset on human innovation capacity from birth to age 18.",
+        "The Blue Blocks Micro Research Institute compiles a longitudinal dataset on human innovation capacity from birth to age 18. 15 years completed; Year 16 ongoing.",
       
       seo: {
         title: "The World's First Micro Research Institute | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/",
+        canonical: "https://siddheshv1.lovable.app/",
         robots: "noindex,nofollow,noarchive,nosnippet",
         openGraph: {
           type: "website",
-          url: "https://blueblocks.in/",
+          url: "https://siddheshv1.lovable.app/",
           title: "The World's First Micro Research Institute",
           description:
-            "A 15-year embedded, high-frequency longitudinal dataset on human innovation capacity from birth to age 18.",
+            "A longitudinal dataset on human innovation capacity from birth to age 18. 15 years completed; Year 16 ongoing.",
           image: {
-            url: "https://blueblocks.in/og/home.jpg",
+            url: "https://siddheshv1.lovable.app/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Precision research environment"
@@ -51,7 +51,7 @@ const siteContent = {
           title: "The World's First Micro Research Institute",
           description:
             "High-frequency embedded observation from birth to 18 — ecological truth over lab isolation.",
-          image: "https://blueblocks.in/og/home.jpg"
+          image: "https://siddheshv1.lovable.app/og/home.jpg"
         }
       },
 
@@ -60,8 +60,8 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": ["Organization", "ResearchOrganization", "EducationalOrganization"],
           name: "Blue Blocks Micro Research Institute",
-          url: "https://blueblocks.in/",
-          logo: "https://blueblocks.in/logo.png",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
           email: "research@blueblocks.in",
           sameAs: [
             "https://zenodo.org/"
@@ -71,10 +71,10 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "Blue Blocks Micro Research Institute",
-          url: "https://blueblocks.in/",
+          url: "https://siddheshv1.lovable.app/",
           potentialAction: {
             "@type": "SearchAction",
-            target: "https://blueblocks.in/search?q={search_term_string}",
+            target: "https://siddheshv1.lovable.app/search?q={search_term_string}",
             "query-input": "required name=search_term_string"
           }
         },
@@ -82,8 +82,8 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "WebPage",
           name: "Home",
-          url: "https://blueblocks.in/",
-          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" },
+          url: "https://siddheshv1.lovable.app/",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" },
           about: {
             "@type": "Thing",
             name: "Longitudinal innovation capacity dataset (0–18)"
@@ -93,7 +93,7 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" }
           ]
         },
         {
@@ -102,11 +102,11 @@ const siteContent = {
           mainEntity: [
             {
               "@type": "Question",
-              name: "Is the Blue Blocks Research Institute separate from the school?",
+              name: "Is the Blue Blocks Micro Research Institute separate from the school?",
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
-                  "Yes. It is a distinct internal entity with its own governance and objectives. While the school focuses on the Cambridge/AMI curriculum, the Institute is solely dedicated to longitudinal observation and providing the pedagogical architecture for high-stakes industrial projects."
+                  "Yes. It is a distinct internal entity with its own governance and objectives. While Blue Blocks Montessori School focuses on the Cambridge/AMI curriculum, the Institute is solely dedicated to longitudinal observation and providing the pedagogical architecture for high-stakes industrial projects."
               }
             },
             {
@@ -147,7 +147,7 @@ const siteContent = {
           creator: {
             "@type": "Organization",
             name: "Blue Blocks Micro Research Institute",
-            url: "https://blueblocks.in/"
+            url: "https://siddheshv1.lovable.app/"
           },
           keywords: [
             "longitudinal study",
@@ -157,7 +157,7 @@ const siteContent = {
             "ecological validity",
             "0-18 dataset"
           ],
-          url: "https://blueblocks.in/publications-open-science",
+          url: "https://siddheshv1.lovable.app/publications",
           license: "https://creativecommons.org/licenses/by/4.0/"
         },
         {
@@ -207,7 +207,7 @@ const siteContent = {
           variant: "precision",
           headline: "The World's First Micro Research Institute",
           subheadline:
-            "We are compiling the most granular dataset on human innovation capacity from birth to age 18. Fifteen years of embedded observation across toddlers, elementary students, and adolescents. Not lab experiments. Not surveys. Daily records of what children actually do when given real engineering challenges.",
+            "We are compiling the most granular dataset on human innovation capacity from birth to age 18. 15 years completed; Year 16 ongoing. Embedded observation across toddlers, elementary students, and adolescents. Not lab experiments. Not surveys. Daily records of what children actually do when given real engineering challenges.",
           primaryCta: { label: "Read the Methodology Paper", href: "/methodology" },
           secondaryCta: { label: "Zenodo Community", href: "https://zenodo.org/", external: true },
           image: {
@@ -224,12 +224,12 @@ const siteContent = {
           type: "grid3",
           header: "Why Schools Can't Usually Do Research",
           intro:
-            "Universities have research funding and the PhDs, but lack long-term access to developing children. Schools have children for 15 years, but no research infrastructure. Blue Blocks runs both. By embedding a Micro-research Institute within a Montessori environment, we capture the data universities miss, the granular, day-by-day evolution of innovation capacity.\n\nThis depth requires us to reject the sporadic nature of clinical studies. Instead, we deploy Micro-Research: a continuous protocol of high-frequency, embedded data capture. We consciously sacrifice the sterile control of the laboratory for the 'Ecological Truth' of the living environment, prioritizing authentic behavior over artificial isolation.",
+            "Universities have research funding and the PhDs, but lack long-term access to developing children. Schools have children for 15 years, but no research infrastructure. Blue Blocks Micro Research Institute runs both. By embedding a Micro-research Institute within a Montessori environment, we capture the data universities miss, the granular, day-by-day evolution of innovation capacity.\n\nThis depth requires us to reject the sporadic nature of clinical studies. Instead, we deploy Micro-Research: a continuous protocol of high-frequency, embedded data capture. We consciously sacrifice the sterile control of the laboratory for the 'Ecological Truth' of the living environment, prioritizing authentic behavior over artificial isolation.",
           items: [
             {
-              title: "Longitudinal Continuity (0-18, The 15-Year Dataset)",
+              title: "Longitudinal Continuity (0-18)",
               body:
-                "Most child development studies observe children once or twice. We've tracked the same children continuously through our Embedded Research Fellows from age 3 to 18. This continuity shows us the trajectory of how capabilities develop not just what children can do at one moment, but proving that the engineer of 18 is built by the sensorial explorer of 3."
+                "Most child development studies observe children once or twice. We've tracked the same children continuously through our Embedded Research Fellows from age 3 to 18. 15 years completed; Year 16 ongoing. This continuity shows us the trajectory of how capabilities develop not just what children can do at one moment, but proving that the engineer of 18 is built by the sensorial explorer of 3."
             },
             {
               title: "Ecological Validity - Real Projects, Not Lab Tasks",
@@ -239,7 +239,7 @@ const siteContent = {
             {
               title: "Sovereign Intellectual Property",
               body:
-                "The ultimate metric of educational efficacy is not testing, but creation. Our students transition from passive learners to Sovereign IP holders, with 5 utility patents filed by elementary-aged students. With this we prove that children can contribute to the global innovation economy even before they turn 18 and graduate."
+                "The ultimate metric of educational efficacy is not testing, but creation. Our students transition from passive learners to Sovereign IP holders, with five utility patents filed to date by elementary-aged students. With this we prove that children can contribute to the global innovation economy even before they turn 18 and graduate."
             }
           ]
         },
@@ -254,21 +254,21 @@ const siteContent = {
               tag: "ISRO / IN-SPACe / Pedagogical Review",
               headline: "Mission SBB-1: Flight Qualification & Valorization",
               body:
-                "Blue Blocks Montessori School, in technical collaboration with TakeMe2Space, integrated a 1U payload aboard ISRO PSLV-C62. The Blue Blocks Micro Research Institute served as the pedagogical partner, structuring the mission to test adolescent resilience. While the payload met all flight qualifications (Thermal/Vibration), the launch vehicle's Stage 4 ignition failure at T+847 seconds provided the ultimate lesson. The mission outcome validated the curriculum not through orbital success, but through Valorization: proving to the students that their engineering was \"real enough to fail in real ways.",
+                "Blue Blocks Montessori School, in technical collaboration with TakeMe2Space, integrated a 1U payload aboard ISRO PSLV-C62. The Blue Blocks Micro Research Institute served as the pedagogical partner, structuring the mission to test adolescent resilience. While the payload met all flight qualifications (Thermal/Vibration), the launch vehicle's Stage 4 ignition failure at T+847 seconds provided the ultimate lesson. The mission outcome validated the curriculum not through orbital success, but through Valorization: proving to the students that their engineering was \\\"real enough to fail in real ways.",
               action: { label: "Read Technical Brief", href: "/technical-briefs/sbb-1" }
             },
             {
               tag: "IMF Annual Meetings",
               headline: "Marrakesh: Defining Future Human Capital",
               body:
-                "Blue Blocks' pedagogical framework was presented as a scalable model for \"Innovation Economies.\" The case study highlighted how early-stage exposure to high-stakes engineering creates a resilient R&D pipeline for the nation. Focus: Investigating whether early exposure to high-stakes engineering impacts long-term innovation capacity. Longitudinal Hypothesis: We posit that adolescents exposed to TRL-9 constraints (Technology Readiness Level 9) develop significantly higher 'Problem-Solving Agency' by the time they reach tertiary education. Preliminary Findings: While full data maturation is projected for 2026-2030, early indicators suggest a strong correlation: students who held utility patents between ages 12-16 are already pursuing STEM majors at markedly higher rates than matched control groups.",
+                "Blue Blocks Micro Research Institute's pedagogical framework was presented as a scalable model for \\\"Innovation Economies.\\\" The case study highlighted how early-stage exposure to high-stakes engineering creates a resilient R&D pipeline for the nation. Focus: Investigating whether early exposure to high-stakes engineering impacts long-term innovation capacity. Longitudinal Hypothesis: We posit that adolescents exposed to TRL-9 constraints (Technology Readiness Level 9) develop significantly higher 'Problem-Solving Agency' by the time they reach tertiary education. Preliminary Findings: While full data maturation is projected for 2026-2030, early indicators suggest a strong correlation: students who held utility patents between ages 12-16 are already pursuing STEM majors at markedly higher rates than matched control groups.",
               action: { label: "View Presentation", href: "/presentations/marrakesh-human-capital" }
             },
             {
               tag: "International Diplomacy / MONISC",
               headline: "Oslo Summit: A Global Benchmark",
               body:
-                "On January 28, 2026, at the Nobel Peace Center, Founder Pavan Goyal delivered the \"World Premiere\" of the Blue Blocks Innovation Pedagogy (0–18). Selected by the Monisc Committee (supported by the Norwegian UNESCO Commission) as a \"global benchmark\" for integrating space science, this session formally releases our student-generated datasets to the international network. The Zenodo archive preserves the complete administrative context: the Official Invitation, the Pedagogical Framework presentation, and the open-data release protocols.",
+                "On January 28, 2026, at the Nobel Peace Center, Founder Pavan Goyal delivered the \\\"World Premiere\\\" of the Blue Blocks Innovation Pedagogy (0–18). Selected by the Monisc Committee (supported by the Norwegian UNESCO Commission) as a \\\"global benchmark\\\" for integrating space science, this session formally releases our student-generated datasets to the international network. The Zenodo archive preserves the complete administrative context: the Official Invitation, the Pedagogical Framework presentation, and the open-data release protocols.",
               action: { label: "Access Proceedings Archive", href: "/proceedings/oslo-2026" }
             }
           ]
@@ -318,7 +318,7 @@ const siteContent = {
               status: "[In Draft - Internal Review]",
               title: "Standardization of Micro-Observations in Non-Clinical Settings",
               body:
-                "Defining the protocol for 25 embedded fellows to document behavioral data without disrupting the \"Children's House\" environment."
+                "Defining the protocol for 25 embedded fellows to document behavioral data without disrupting the \\\"Children's House\\\" environment."
             },
             {
               status: "[Forensic Analysis]",
@@ -330,7 +330,7 @@ const siteContent = {
               status: "[Longitudinal Compilation]",
               title: "From 0 to 1: The Genesis of Patentable Thought (Ages 6-12)",
               body:
-                "Synthesizing 5 years of data from the Drone Research Centre to map the cognitive leap from \"play\" to \"invention.\""
+                "Synthesizing 5 years of data from the Drone Research Centre to map the cognitive leap from \\\"play\\\" to \\\"invention.\\\""
             }
           ],
           cta: { label: "Access Restricted - Awaiting Publication", disabled: true }
@@ -342,12 +342,12 @@ const siteContent = {
           header: "Methodological Inquiries",
           items: [
             {
-              q: "Is the Blue Blocks Research Institute separate from the school?",
+              q: "Is the Blue Blocks Micro Research Institute separate from the school?",
               a:
-                "Yes. It is a distinct internal entity with its own governance and objectives. While the school focuses on the Cambridge/AMI curriculum, the Institute is solely dedicated to longitudinal observation and providing the pedagogical architecture for high-stakes industrial projects (SBB-1, Patents)."
+                "Yes. It is a distinct internal entity with its own governance and objectives. While Blue Blocks Montessori School focuses on the Cambridge/AMI curriculum, the Institute is solely dedicated to longitudinal observation and providing the pedagogical architecture for high-stakes industrial projects (SBB-1, Patents)."
             },
             {
-              q: "What does \"Micro Research\" mean?",
+              q: "What does \\\"Micro Research\\\" mean?",
               a:
                 "It is a protocol of small-scale, high-frequency observation studies that run continuously for years. Rather than conducting one large study on 'how children learn math,' we execute 20+ micro-studies per year—each addressing one specific variable, recordable in under 5 minutes, sustained over time. The power of 'Micro' lies in accumulation; over 15 years, 200+ studies, 847 children generating a granular dataset becomes significant."
             },
@@ -364,7 +364,7 @@ const siteContent = {
             {
               q: "How do you ensure data validity in a non-clinical setting?",
               a:
-                "We rely on \"Ecological Consistency\" rather than sterile isolation. Standard clinical studies often suffer from the \"Visitor Effect\"—where research subjects exhibit altered behavior because a stranger is watching. Our data is collected by Embedded Research Fellows (the students' daily guides) who have spent 35,000+ hours with the students. This invisibility allows us to detect subtle, naturalistic developmental patterns that sporadic external observation invariably misses."
+                "We rely on \\\"Ecological Consistency\\\" rather than sterile isolation. Standard clinical studies often suffer from the \\\"Visitor Effect\\\"—where research subjects exhibit altered behavior because a stranger is watching. Our data is collected by Embedded Research Fellows (the students' daily guides) who have spent 35,000+ hours with the students. This invisibility allows us to detect subtle, naturalistic developmental patterns that sporadic external observation invariably misses."
             },
             {
               q: "What is the role of the Innovation Labs?",
@@ -380,10 +380,10 @@ const siteContent = {
           sectionName: "Visual Evidence",
           intro:
             "As a Micro Research Institute dealing with minors (Ages 0-18), we adhere to strict ethical guidelines regarding visual data. We prioritize subject privacy over public display.",
-          header: "Why You Don't See Stock Photos Here",
+          header: "Visual Documentation Standards",
           body:
-            "We do not use staged photography. All imagery released by the Institute must undergo a three-stage ethical clearance process to ensure it documents the process, not just the child. A curated, anonymized archive of our Labs and Methodologies is currently being digitized.",
-          cta: { label: "Request Media Kit (Press Only)", href: "/contact" },
+            "Temporary technical placeholders are used until ethical clearance for institutional imagery is completed. All imagery released by the Institute must undergo a three-stage ethical clearance process to ensure it documents the process, not just the child. A curated, anonymized archive of our Labs and Methodologies is currently being digitized.",
+          cta: { label: "Request Media Kit (Press Only)", href: "/downloads" },
           items: [
             {
               tag: "Space Lab",
@@ -453,19 +453,19 @@ const siteContent = {
     "/the-institute": {
       title: "The Institute",
       metaDescription:
-        "The 0–18 Continuum: a longitudinal, embedded micro-research institution tracking human innovation capacity across fifteen years of continuous observation.",
+        "The 0–18 Continuum: a longitudinal, embedded micro-research institution tracking human innovation capacity. 15 years completed; Year 16 ongoing.",
       seo: {
         title: "The 0–18 Continuum | The Institute | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/the-institute",
+        canonical: "https://siddheshv1.lovable.app/the-institute",
         robots: "noindex,nofollow,noarchive,nosnippet",
         openGraph: {
           type: "website",
-          url: "https://blueblocks.in/the-institute",
+          url: "https://siddheshv1.lovable.app/the-institute",
           title: "The 0–18 Continuum",
           description:
             "A new category of research institution built for questions requiring decades, not semesters — continuous observation from birth to age 18.",
           image: {
-            url: "https://blueblocks.in/og/the-institute.jpg",
+            url: "https://siddheshv1.lovable.app/og/the-institute.jpg",
             width: 1200,
             height: 630,
             alt: "Research environment"
@@ -477,8 +477,8 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "WebPage",
           name: "The Institute",
-          url: "https://blueblocks.in/the-institute",
-          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" },
+          url: "https://siddheshv1.lovable.app/the-institute",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" },
           about: {
             "@type": "Thing",
             name: "Longitudinal Micro-Research (0–18)"
@@ -488,8 +488,8 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "The Institute", item: "https://blueblocks.in/the-institute" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "The Institute", item: "https://siddheshv1.lovable.app/the-institute" }
           ]
         },
         {
@@ -533,7 +533,7 @@ const siteContent = {
           variant: "stark",
           headline: "The 0-18 Continuum.",
           subheadline:
-            "We are a new category of research institution—built for questions that require decades, not semesters. By embedding rigorous observation protocols into a living Montessori environment, we have created the world's longest continuous record of human innovation capacity. Most child development studies observe children once or twice. We've been watching the same children for fifteen years. Not surveys. Not lab visits. Daily observation records from their actual teachers, in their actual classrooms, working on actual problems.",
+            "We are a new category of research institution—built for questions that require decades, not semesters. By embedding rigorous observation protocols into a living Montessori environment, we have created the world's longest continuous record of human innovation capacity. Most child development studies observe children once or twice. We've been watching the same children for fifteen years. 15 years completed; Year 16 ongoing. Not surveys. Not lab visits. Daily observation records from their actual teachers, in their actual classrooms, working on actual problems.",
           primaryCta: { label: "Download Institute Prospectus", href: "/downloads/institute-prospectus" },
           image: {
             src: "/src/assets/banners/institute-stark.jpg",
@@ -564,7 +564,7 @@ const siteContent = {
           type: "highlightBox",
           title: "The Embedded Solution - How We Solved It:",
           body:
-            "We built an institution where research never ends because the environment never changes. By integrating the 'School' and the 'Lab,' we maintain zero-attrition contact with our subjects. We do not just measure capacity; we document its entire developmental trajectory. Same children, same teachers, fifteen years. When children graduate at 18, we have complete records from their first day to their last. No grant deadlines. No funding cycles. The research continues as long as the school operates."
+            "We built an institution where research never ends because the environment never changes. By integrating the 'School' and the 'Lab,' we maintain zero-attrition contact with our subjects. We do not just measure capacity; we document its entire developmental trajectory. Same children, same teachers, fifteen years. 15 years completed; Year 16 ongoing. When children graduate at 18, we have complete records from their first day to their last. No grant deadlines. No funding cycles. The research continues as long as the school operates."
         },
 
         {
@@ -638,7 +638,7 @@ const siteContent = {
           type: "statsBar",
           header: "The Blue Blocks Advantage",
           stats: [
-            { value: "15 Years", label: "Continuous Observation" },
+            { value: "15 Years", label: "Completed Observation" },
             { value: "847", label: "Subjects Tracked (0-18)" },
             { value: "35,000+", label: "Hours of Data Per Child" },
             { value: "5", label: "Innovation Labs" }
@@ -690,10 +690,26 @@ const siteContent = {
                 "We focus on three domains: Innovation (0-18), Montessori (0-18), and Parenting (0-18)."
             },
             {
-              q: "How many children have you observed?",
+              q: "What datasets are you building?",
               a:
-                "847 children since 2009."
+                "We are building: (1) Longitudinal Behavioral Data from 847 subjects, (2) Biometric & Sensory Log, (3) Academic Performance Correlation, (4) Patent & TRL Outcomes."
+            },
+            {
+              q: "Can I visit the Innovation Labs?",
+              a:
+                "Visits are restricted. Contact research@blueblocks.in for visiting scholar applications."
             }
+          ]
+        },
+
+        {
+          id: "inst-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Methodology", description: "Learn about our research protocols.", icon: "methodology", href: "/methodology" },
+            { title: "Publications", description: "Research docket and publications.", icon: "publication", href: "/publications" },
+            { title: "Governance", description: "IRB-aligned standards and oversight.", icon: "governance", href: "/governance" }
           ]
         }
       ]
@@ -702,22 +718,22 @@ const siteContent = {
     "/methodology": {
       title: "Methodology",
       metaDescription:
-        "The Micro-Research Framework: high-frequency observation embedded in learning environments, designed for ecological validity and publication-ready datasets.",
+        "Micro Research Methodology: embedded, high-frequency longitudinal observation protocols for tracking human innovation capacity from 0 to 18.",
       seo: {
-        title: "The Micro-Research Framework | Methodology | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/methodology",
+        title: "Methodology | Micro Research Framework | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/methodology",
         robots: "noindex,nofollow,noarchive,nosnippet",
         openGraph: {
-          type: "article",
-          url: "https://blueblocks.in/methodology",
-          title: "The Micro-Research Framework",
+          type: "website",
+          url: "https://siddheshv1.lovable.app/methodology",
+          title: "Micro Research Methodology",
           description:
-            "A practitioner-executable research system: bounded questions, observable behavior, minimal footprint, publication-ready protocols.",
+            "High-frequency observation protocols designed for practitioner execution — ecological validity over laboratory control.",
           image: {
-            url: "https://blueblocks.in/og/methodology.jpg",
+            url: "https://siddheshv1.lovable.app/og/methodology.jpg",
             width: 1200,
             height: 630,
-            alt: "Micro-research framework"
+            alt: "Methodology framework"
           }
         }
       },
@@ -726,26 +742,41 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "WebPage",
           name: "Methodology",
-          url: "https://blueblocks.in/methodology",
-          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" },
-          about: { "@type": "Thing", name: "Micro-Research Framework" }
+          url: "https://siddheshv1.lovable.app/methodology",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" },
+          about: { "@type": "Thing", name: "Micro Research Methodology" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Methodology", item: "https://blueblocks.in/methodology" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Methodology", item: "https://siddheshv1.lovable.app/methodology" }
           ]
         },
         {
           "@context": "https://schema.org",
-          "@type": "ScholarlyArticle",
-          headline: "The Micro-Research Framework",
-          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          isPartOf: { "@type": "WebSite", name: "Blue Blocks Micro Research Institute" },
-          about: ["longitudinal observation", "ecological validity", "education research"],
-          url: "https://blueblocks.in/methodology"
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "Why not run a proper clinical study with control groups?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "We believe that laboratory isolation distorts natural behavior. A child solving a puzzle in front of a 'researcher' is not the same child building a drone in their own lab space. Ecological truth comes from embedding observation into daily environment. In micro-research, every child is both subject and agent — the environment doesn't adapt to research; research adapts to the environment."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "How do you maintain scientific rigor without a control group?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "By maintaining 15 years of continuous internal comparison: the same children, tracked over time, compared against themselves at earlier developmental stages."
+              }
+            }
+          ]
         }
       ],
       sections: [
@@ -753,13 +784,14 @@ const siteContent = {
           id: "meth-hero",
           type: "hero",
           variant: "stark",
-          headline: "The Micro-Research Framework.",
+          headline: "The Micro Research Framework.",
           subheadline:
-            "We built Blue Blocks to generate research, not accommodate it. Since 2009, we've run high-frequency observation directly inside learning environments—recording what actually happens rather than staging what we hope to measure. This isn't retrofitted academic study. It's methodology embedded in practice from day one.",
-          primaryCta: { label: "Download Framework Paper (PDF)", href: "/downloads/micro-research-framework" },
+            "Micro Research is not a shortcut. It is a protocol—designed for practitioners, not PhDs. The core principle is simple: high-frequency observation accumulated over years produces the same statistical power as large-sample, one-time studies. But with one crucial advantage: you track the same individual across time instead of comparing strangers. We know how Subject-847 was at age 5, at age 12, and at age 17. No cross-sectional study can do that.",
+          primaryCta: { label: "Download Framework Paper", href: "/downloads/micro-research-framework" },
+          secondaryCta: { label: "View Publications", href: "/publications" },
           image: {
             src: "/src/assets/banners/methodology-framework.jpg",
-            alt: "Precision methodology environment",
+            alt: "Methodology framework visual",
             variant: "hero",
             privacyBlur: false,
             caption: ""
@@ -767,169 +799,201 @@ const siteContent = {
         },
 
         {
-          id: "meth-pillars",
+          id: "meth-principles",
           type: "grid3",
-          header: "The Four Pillars of Micro-Research - What makes a study 'Micro'?",
+          header: "The Microprotocol Stack",
           intro:
-            "Micro-Research is designed for consistency, ecological validity, and publication intent. The methodology is optimized so protocols remain executable for years.",
+            "Each observation follows a bounded protocol: single variable, under 5 minutes, executed by the practitioner (not an external observer). Hundreds of these micro-observations, compiled over years, form the dataset. Statistical power comes from longitudinal accumulation, not sample scale.",
           items: [
             {
-              title: "Single Bounded Question",
-              icon: "target",
+              title: "Bounded Observations",
+              icon: "clock",
               body:
-                "We ask one thing at a time. Not \"How does age, gender, and material type affect work duration?\" but \"How long do 4-year-olds work with the pink tower?\" Compound questions get split. One question, one protocol, one dataset."
+                "Each observation unit must be scoped to a single variable and recordable in under 5 minutes. Complexity emerges from volume, not from individual observation depth."
             },
             {
-              title: "Observable Behavior",
-              icon: "eye",
+              title: "Practitioner Execution",
+              icon: "user",
               body:
-                "\"Child concentrated deeply\" is inference. \"Child repeated stacking sequence 7 times without interruption\" is observation. We capture actions, gestures, exact words spoken. Analysis comes later. The observation record stays behavioral."
+                "Observation is executed by embedded guides—not external researchers. This minimizes the 'Visitor Effect' that distorts natural behavior."
             },
             {
-              title: "Minimal Footprint",
-              icon: "feather",
-              body:
-                "Our Fellows observe while teaching. They're not clipboard-wielding strangers disrupting routines. A protocol that takes 12 minutes won't get done. We've learned—through failure—that consistency beats comprehensiveness. Five-minute protocols run for years. Twenty-minute protocols die in six weeks."
-            },
-            {
-              title: "Publication-Ready",
+              title: "Publication Intent",
               icon: "file",
               body:
-                "If a protocol won't eventually get a DOI and land in Zenodo, we don't run it. This forces clarity. \"Interesting to track\" becomes \"worth publishing\" or gets dropped. The discipline of publication-intent changes what we're willing to measure."
+                "Every observation record is generated with the expectation of eventual publication. This shifts the quality of documentation from 'notes' to 'evidence.'"
             }
-          ],
-          columns: 4
-        },
-
-        {
-          id: "meth-compound",
-          type: "comparisonTable",
-          heading: "The Compound Effect - Why Twenty Small Studies Beat One Large Study?",
-          intro:
-            "Running one micro-study tells you almost nothing. Running two hundred over fifteen years builds a dataset that shows developmental patterns nobody else can see.",
-          headers: ["Dimension", "Traditional Academic Study", "Blue Blocks Micro-Research"],
-          rows: [
-            ["Frequency", "1 Study every 3 Years", "20+ Studies Annually"],
-            ["Observer", "External Researcher (High Interference)", "Teaching Fellow (Embedded)"],
-            ["Duration", "2-3 Years Funding Cycle", "Continuous (Long term)"],
-            ["Cumulative Output (10 Yrs)", "~5 Major Papers", "~200+ Micro-Studies"]
           ]
         },
 
         {
-          id: "meth-cycle",
+          id: "meth-timeline",
           type: "timeline",
-          heading: "The 4-Week Cycle - Protocol to Publication in Four Weeks",
+          header: "From Observation to Archival: The Data Lifecycle",
           items: [
             {
-              year: "Week 1",
-              title: "Protocol Design",
-              description:
-                "We draft the single question, sketch the recording sheet, and test it with three observations. If recording takes more than 5 minutes, we simplify. Most protocols fail this test twice before passing."
+              title: "Capture",
+              body: "Embedded Fellow observes naturalistic behavior and logs structured notes."
             },
             {
-              year: "Week 2",
-              title: "Data Capture",
-              description:
-                "Fellows collect data during the work cycle. Recording happens in the moment, not from memory later. Each Fellow handles one protocol at a time."
+              title: "Tag & Store",
+              body: "Data is coded, anonymized, and archived in the Data Wing."
             },
             {
-              year: "Week 3",
-              title: "Synthesis",
-              description:
-                "We strip identifying details (names become codes, \"Tellapur campus\" becomes \"Site A\"). Then we look for patterns. Sometimes we find what we expected. Sometimes we don't. Everything gets recorded, even the failures."
+              title: "Aggregate",
+              body: "Multiple observations are synthesized into pattern summaries."
             },
             {
-              year: "Week 4",
-              title: "Publication",
-              description:
-                "Internal review catches errors. Then: DOI registration, dataset upload to Zenodo, and internal documentation update. The study enters our longitudinal archive."
+              title: "Analyze",
+              body: "Research Council reviews patterns for statistical significance."
+            },
+            {
+              title: "Publish",
+              body: "DOI-assigned publications are archived to Zenodo for open access."
             }
           ]
         },
 
         {
-          id: "meth-examples",
+          id: "meth-ecological",
+          type: "textBlock",
+          header: "Ecological Validity vs. Laboratory Control",
+          body:
+            "We prioritize 'Ecological Truth' over sterile experimentation. By embedding our protocols in the actual learning environment, we capture data that is representative of real behavior — not laboratory simulations. Yes, this introduces variance — but the variance is authentic. A drone built by a 10-year-old in our lab will fail for real reasons — not sanitized ones. We observe what children actually do when solving real problems, not what they do when being studied."
+        },
+
+        {
+          id: "meth-comparison",
+          type: "comparisonTable",
+          header: "Clinical Studies vs. Micro Research",
+          columns: ["Clinical Studies", "Micro Research"],
+          rows: [
+            { label: "Sample Size", values: ["Large (statistical power)", "Longitudinal (temporal power)"] },
+            { label: "Observation Duration", values: ["Single point / short-term", "Years / Continuous"] },
+            { label: "Observer", values: ["External Researcher", "Embedded Practitioner"] },
+            { label: "Setting", values: ["Lab / Controlled", "Naturalistic / Ecological"] },
+            { label: "Behavioral Validity", values: ["Subject to 'Visitor Effect'", "High Ecological Validity"] }
+          ]
+        },
+
+        {
+          id: "meth-faq",
           type: "accordion",
-          header: "Examples of Protocols We Have Run",
+          header: "Methodological FAQs",
           items: [
             {
-              q: "Example A: The 3-Day Material Choice Study",
+              q: "Why not run a proper clinical study with control groups?",
               a:
-                "Question: What material do children choose first when entering the prepared environment?\n\nProtocol: Record child's age (years + months), first material touched, time of entry.\n\nTime Cost: 10 seconds per child."
+                "We believe that laboratory isolation distorts natural behavior. A child solving a puzzle in front of a 'researcher' is not the same child building a drone in their own lab space. Ecological truth comes from embedding observation into daily environment. In micro-research, every child is both subject and agent — the environment doesn't adapt to research; research adapts to the environment."
             },
             {
-              q: "Example B: The 2-Week Help Study",
+              q: "How do you maintain scientific rigor without a control group?",
               a:
-                "Question: When do children help each other without adult prompting?\n\nProtocol: Record helper age, recipient age, type of help (material retrieval, demonstration, cleanup), whether adult was nearby.\n\nTime Cost: 2 minutes per incident."
+                "By maintaining 15 years of continuous internal comparison: the same children, tracked over time, compared against themselves at earlier developmental stages. We don't need to compare Child A to Child B; we compare Child A at age 5 to Child A at age 15. Each child becomes their own control over the longitudinal arc."
+            },
+            {
+              q: "Are your findings reproducible?",
+              a:
+                "The protocols are reproducible. The dataset is unique. Our goal is to make the methodology framework open-source via Zenodo so that other embedded institutions can replicate the approach."
+            },
+            {
+              q: "What software do you use?",
+              a:
+                "Observation logging is internal (custom forms). Data processing is handled in the Data Wing. Analysis uses standard statistical tools. Final publications are prepared in LaTeX / PDF."
             }
+          ]
+        },
+
+        {
+          id: "meth-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "The Institute", description: "Learn about our research infrastructure.", icon: "institute", href: "/the-institute" },
+            { title: "Publications", description: "View research docket.", icon: "publication", href: "/publications" },
+            { title: "Downloads", description: "Framework documents and schemas.", icon: "download", href: "/downloads" }
           ]
         }
       ]
     },
 
-    "/publications-open-science": {
+    "/publications": {
       title: "Publications & Open Science",
       metaDescription:
-        "The Research Docket: manuscripts in progress, intellectual property registry, longitudinal data dictionaries, and data access protocols for the Blue Blocks Micro Research Institute.",
+        "Publications, research docket, and open science archive for the Blue Blocks Micro Research Institute longitudinal dataset.",
       seo: {
-        title: "Publications & Open Science | The Research Docket | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/publications-open-science",
+        title: "Publications & Open Science | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/publications",
         robots: "noindex,nofollow,noarchive,nosnippet",
         openGraph: {
           type: "website",
-          url: "https://blueblocks.in/publications-open-science",
-          title: "The Research Docket",
+          url: "https://siddheshv1.lovable.app/publications",
+          title: "Publications & Open Science",
           description:
-            "Everything we publish gets a DOI and lands in Zenodo. Track manuscripts, datasets, patents, and access protocols.",
+            "Research docket, intellectual property registry, and open access materials for the Blue Blocks longitudinal dataset.",
           image: {
-            url: "https://blueblocks.in/og/docket.jpg",
+            url: "https://siddheshv1.lovable.app/og/publications.jpg",
             width: 1200,
             height: 630,
-            alt: "Research docket DOI archive"
+            alt: "Open science research archive"
           }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Publications & Open Science | Blue Blocks",
+          description: "Research docket and open science archive.",
+          image: "https://siddheshv1.lovable.app/og/publications.jpg"
         }
       },
       schemas: [
         {
           "@context": "https://schema.org",
-          "@type": "WebPage",
+          "@type": "WebSite",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Blue Blocks Micro Research Institute",
+          url: "https://siddheshv1.lovable.app/",
+          logo: "https://siddheshv1.lovable.app/logo.png",
+          email: "research@blueblocks.in"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
           name: "Publications & Open Science",
-          url: "https://blueblocks.in/publications-open-science",
-          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" }
+          url: "https://siddheshv1.lovable.app/publications",
+          description: "Research docket, intellectual property registry, and open access materials.",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" },
+          hasPart: [
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter" },
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study" }
+          ]
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Publications & Open Science", item: "https://blueblocks.in/publications-open-science" }
-          ]
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
-          name: "The Research Docket",
-          hasPart: [
-            { "@type": "CreativeWork", name: "Methodology Track Manuscripts" },
-            { "@type": "CreativeWork", name: "Aerospace Track Manuscripts" },
-            { "@type": "CreativeWork", name: "Innovation Track Manuscripts" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://siddheshv1.lovable.app/publications" }
           ]
         }
       ],
       sections: [
         {
-          id: "docket-hero",
+          id: "pub-hero",
           type: "hero",
-          variant: "clean",
-          headline: "Publications & Open Science",
+          variant: "stark",
+          headline: "Publications & Open Science.",
           subheadline:
-            "Everything we publish is archived for traceability. This docket lists public administrative records, case studies, and publication pipelines. Where applicable, each item carries a DOI and is preserved in Zenodo for citation permanence.",
-          primaryCta: { label: "Browse Zenodo", href: "https://zenodo.org/communities/blueblocks/", external: true },
-          secondaryCta: { label: "View Citation Guidelines", href: "#citation-guidelines" },
+            "This is the institutional research docket. Papers, frameworks, and intellectual property generated through 15 years of embedded longitudinal research. We operate on Open Science principles—methodology papers, anonymized datasets, and outcome reports are archived in Zenodo for public access. Five utility patents filed to date.",
+          primaryCta: { label: "Browse Zenodo Archive", href: "https://zenodo.org/", external: true },
+          secondaryCta: { label: "View Methodology", href: "/methodology" },
           image: {
             src: "/src/assets/banners/publications-doi.jpg",
-            alt: "DOI docket hero visual",
+            alt: "Open science research archive",
             variant: "hero",
             privacyBlur: false,
             caption: ""
@@ -937,72 +1001,52 @@ const siteContent = {
         },
 
         {
-          id: "published-records",
+          id: "pub-live-ticker",
+          type: "ticker",
+          text:
+            "DOCKET STATUS: Active (2026 Cycle) /// MANUSCRIPTS IN REVIEW: 3 /// DOI ASSIGNMENTS: Pending /// OPEN ACCESS: CC-BY-4.0"
+        },
+
+        {
+          id: "publications-list",
           type: "cards",
           header: "Published Records",
-          intro: "Public administrative records and case studies preserved with DOI for citation permanence.",
+          intro: "Formal publications with DOI identifiers, archived for citation and institutional traceability.",
           variant: "blogGrid",
           cards: [
             {
-              tag: "Published Record",
+              tag: "Administrative Record",
               headline: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
-              meta: "DOI: 10.5281/zenodo.18195108",
-              body: "Official authorization archived for governance traceability and open-access citation.",
-              cta: { label: "View Record", href: "/publications/in-space-authorization-letter" },
-              image: { src: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80", alt: "Satellite authorization record", variant: "card", privacyBlur: false }
+              meta: "DOI: 10.5281/zenodo.18195108 • January 2026",
+              body: "Official authorization record for the SBB-1 mission activity, preserved as a permanent institutional artifact for governance traceability.",
+              cta: { label: "View Publication", href: "/publications/in-space-authorization-letter" },
+              image: { src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80", alt: "Mission control", variant: "card" }
             },
             {
-              tag: "Published Case Study",
-              headline: "SAPARYA / IMF Conference Case Study (SBB-1 Mission & Valorization)",
-              meta: "DOI: 10.5281/zenodo.18337934",
-              body: "A documented adolescent engineering mission and the pedagogical outcome of real-world stakes.",
-              cta: { label: "View Case Study", href: "/publications/saparya-imf-case-study" },
-              image: { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80", alt: "Conference case study", variant: "card", privacyBlur: false }
+              tag: "IMF Case Study",
+              headline: "SAPARYA: Building Innovation Capacity (0–18) Through Embedded Research",
+              meta: "IMF 7th National Montessori Conference • November 2024",
+              body: "Case study documenting the pedagogical framework and preliminary findings from the SAPARYA initiative.",
+              cta: { label: "View Publication", href: "/publications/saparya-imf-case-study" },
+              image: { src: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80", alt: "Conference presentation", variant: "card" }
             }
           ]
         },
 
         {
-          id: "citation-guidelines",
-          type: "highlightBox",
-          title: "Citation Standard",
-          body:
-            "All Blue Blocks publications must cite our foundational methodology paper (DOI: 10.5281/zenodo.XXXXX) and dataset specification (DOI: 10.5281/zenodo.YYYYY). This ensures methodological consistency across our 15-year research program.",
-          cta: { label: "View Methodology", href: "/methodology" }
-        },
-
-        {
           id: "manuscript-docket",
           type: "cards",
-          header: "What We Are Writing (2026 Cycle)",
-          intro:
-            "Current status of longitudinal studies undergoing internal review.",
           variant: "blogGrid",
+          header: "Manuscript Docket (In Progress)",
+          intro:
+            "The following manuscripts are in active development. Pre-prints will be assigned a DOI via Zenodo upon release.",
           cards: [
             {
-              tag: "Final Editorial Phase",
-              headline: "Standardization of Micro-Observations in Non-Clinical Settings (0-18)",
-              meta: "Domain: Methodology | Est: Q1 2026",
-              body:
-                "Defining the protocol for 25 embedded fellows to document behavioral data without disrupting the \"Children's House\" environment.",
-              cta: { label: "Read Abstract", href: "/publications-open-science#manuscript-docket" },
-              image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Methodology manuscript", variant: "card", privacyBlur: false }
-            },
-            {
-              tag: "Data Cleaning",
-              headline: "Vibration Analysis & Structural Integrity of SBB-1 Payload (Post-Flight)",
-              meta: "Domain: Aerospace | Est: Q2 2026",
-              body:
-                "A technical review of the thermal and vibrational data collected during the PSLV-C62 launch integration.",
-              cta: { label: "Notify Me", href: "#doi-alerts" },
-              image: { src: "/src/assets/placeholders/labs/avionics.jpg", alt: "Aerospace manuscript", variant: "card", privacyBlur: false }
-            },
-            {
               tag: "Early Draft",
-              headline: "The \"Sovereign IP\" Effect: Longitudinal Impact of Patent Ownership",
+              headline: "The \\\"Sovereign IP\\\" Effect: Longitudinal Impact of Patent Ownership",
               meta: "Domain: Innovation | Est: 2027",
               body:
-                "Synthesizing 5 years of data from the Drone Research Centre to map the cognitive leap from \"play\" to \"invention.\"",
+                "Synthesizing 5 years of data from the Drone Research Centre to map the cognitive leap from \\\"play\\\" to \\\"invention.\\\"",
               cta: { label: "Request Access", href: "/collaborate" },
               image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Innovation manuscript", variant: "card", privacyBlur: false }
             },
@@ -1022,7 +1066,7 @@ const siteContent = {
           id: "ip-registry",
           type: "bento",
           header: "Intellectual Property Registry",
-          intro: "Highlighted outcomes currently in examination or filing preparation.",
+          intro: "Highlighted outcomes currently in examination or filing preparation. Five utility patents filed to date.",
           items: [
             {
               size: "lg",
@@ -1090,7 +1134,7 @@ const siteContent = {
               sub: "Public / General",
               body:
                 "Published papers (PDF), aggregate statistics, patent abstracts, methodology frameworks. All materials licensed CC-BY-4.0.",
-              cta: { label: "Browse Zenodo", href: "/publications-open-science#open-access" },
+              cta: { label: "Browse Zenodo", href: "/publications#open-access" },
               badge: "CC-BY-4.0"
             },
             {
@@ -1221,6 +1265,19 @@ const siteContent = {
                 "All publications are archived on Zenodo with DOI registration, ensuring they are citable and permanent."
             }
           ]
+        },
+
+        {
+          id: "pub-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Methodology", description: "Learn about our research protocols.", icon: "methodology", href: "/methodology" },
+            { title: "Patents", description: "View patent registry.", icon: "patent", href: "/patents" },
+            { title: "Books", description: "Long-form publications.", icon: "book", href: "/books" },
+            { title: "Downloads", description: "Framework documents.", icon: "download", href: "/downloads" },
+            { title: "Governance", description: "IRB-aligned standards.", icon: "governance", href: "/governance" }
+          ]
         }
       ]
     },
@@ -1231,16 +1288,16 @@ const siteContent = {
         "Governance & Oversight: IRB-aligned standards, privacy architecture, student IP rights, and research council review protocols for embedded longitudinal observation.",
       seo: {
         title: "Governance & Oversight | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/governance",
+        canonical: "https://siddheshv1.lovable.app/governance",
         robots: "noindex,nofollow,noarchive,nosnippet",
         openGraph: {
           type: "website",
-          url: "https://blueblocks.in/governance",
+          url: "https://siddheshv1.lovable.app/governance",
           title: "Governance & Oversight",
           description:
             "Protocols and oversight ensuring pedagogical integrity, privacy, and IRB-aligned research standards.",
           image: {
-            url: "https://blueblocks.in/og/governance.jpg",
+            url: "https://siddheshv1.lovable.app/og/governance.jpg",
             width: 1200,
             height: 630,
             alt: "Governance and oversight"
@@ -1252,16 +1309,16 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "WebPage",
           name: "Governance & Oversight",
-          url: "https://blueblocks.in/governance",
-          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" },
+          url: "https://siddheshv1.lovable.app/governance",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" },
           about: { "@type": "Thing", name: "Research governance and IRB alignment" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Governance", item: "https://blueblocks.in/governance" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Governance", item: "https://siddheshv1.lovable.app/governance" }
           ]
         }
       ],
@@ -1272,7 +1329,7 @@ const siteContent = {
           variant: "stark",
           headline: "Governance & Oversight.",
           subheadline:
-            "Our research framework is guided by a commitment to Pedagogical Integrity. The Institute's advisory council ensures that all protocols align with both Montessori Principles and Global Privacy Standards (IRB). We prioritize a 'Child-First' methodology, where scientific observation seamlessly integrates with, and respects, the educational environment. Every observation protocol gets reviewed before launch.",
+            "Our research framework is guided by a commitment to Pedagogical Integrity. The Blue Blocks Micro Research Institute's advisory council ensures that all protocols align with both Montessori Principles and Global Privacy Standards (IRB). We prioritize a 'Child-First' methodology, where scientific observation seamlessly integrates with, and respects, the educational environment. Every observation protocol gets reviewed before launch.",
           primaryCta: { label: "View IRB Guidelines", href: "#irb-guidelines" },
           image: {
             src: "/src/assets/banners/governance-oversight.jpg",
@@ -1296,14 +1353,16 @@ const siteContent = {
               tag: "Principal Investigator & Founder",
               body:
                 "Credentials: AMI Diploma (0-18)\n\nOversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes.",
-              image: { src: "/src/assets/placeholders/avatars/pavan.jpg", alt: "Pavan Goyal", variant: "avatar", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/avatars/pavan.jpg", alt: "Pavan Goyal", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/pavan-goyal" }
             },
             {
               headline: "Munira Hussain",
               tag: "Director of Pedagogy",
               body:
                 "Credentials: AMI Diploma / M.Ed\n\nEnsures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the 'Children's House.'",
-              image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/munira-hussain" }
             },
             {
               headline: "[Name Pending]",
@@ -1360,7 +1419,7 @@ const siteContent = {
             {
               q: "Data Retention & Access",
               a:
-                "Raw data is retained for the duration of the longitudinal study (currently 15+ years). Access tiers: (1) Open Access—published papers, aggregate stats. (2) Researcher Access—de-identified datasets, requires IRB + DUA. (3) Internal Only—identifiable data, staff only."
+                "Raw data is retained for the duration of the longitudinal study (15 years completed; Year 16 ongoing). Access tiers: (1) Open Access—published papers, aggregate stats. (2) Researcher Access—de-identified datasets, requires IRB + DUA. (3) Internal Only—identifiable data, staff only."
             },
             {
               q: "Ethics Review Process",
@@ -1375,7 +1434,7 @@ const siteContent = {
           type: "textBlock",
           header: "Student IP Rights",
           body:
-            "When students invent, they own. Utility patents filed by the Institute list student inventors by name (with parental consent). IP rights remain with student inventors. The Institute facilitates filing and provides pedagogical context, but does not claim ownership of student inventions. All patent decisions go through the Patent Review Board, which includes student representation."
+            "All Intellectual Property created by students remains attributed to the student inventors. Blue Blocks Micro Research Institute facilitates the filing process and provides the pedagogical context but does not claim ownership. Five utility patents filed to date by elementary-aged students. Patents are filed under the inventors' names with institutional support. Licensing inquiries can be directed through the Contact page."
         },
 
         {
@@ -1384,20 +1443,31 @@ const siteContent = {
           header: "Governance FAQs",
           items: [
             {
-              q: "Who reviews observation protocols?",
+              q: "Who is responsible for ethical oversight?",
               a:
-                "The Research Council (internal + external advisors) reviews all new protocols before they are deployed."
+                "The Research Council provides independent oversight. All protocols are reviewed before launch."
             },
             {
               q: "Can parents withdraw consent?",
               a:
-                "Yes. Parents can withdraw their child from observation at any time. Historical data is anonymized or deleted upon request."
+                "Yes, at any time. Withdrawal removes future observations but does not retroactively remove anonymized data already aggregated."
             },
             {
-              q: "How do you handle data breaches?",
+              q: "How do you prevent re-identification?",
               a:
-                "All identifiable data is stored in air-gapped systems with role-based access. In the event of a breach, affected families would be notified within 72 hours."
+                "We use k-anonymity: no combination of published variables (age range, school type, city) produces a group smaller than k=5. Individual re-identification is structurally prevented."
             }
+          ]
+        },
+
+        {
+          id: "gov-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Patents", description: "View patent registry.", icon: "patent", href: "/patents" },
+            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
+            { title: "Collaborate", description: "Submit access requests.", icon: "collaborate", href: "/collaborate" }
           ]
         }
       ]
@@ -1406,22 +1476,22 @@ const siteContent = {
     "/collaborate": {
       title: "Collaborate",
       metaDescription:
-        "Collaborate with the Blue Blocks Micro Research Institute: visiting fellowships, institutional partnerships, methodology transfer, and joint research opportunities.",
+        "Collaboration pathways for researchers, industry partners, and policy makers seeking access to Blue Blocks Micro Research Institute's longitudinal dataset.",
       seo: {
         title: "Collaborate | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/collaborate",
+        canonical: "https://siddheshv1.lovable.app/collaborate",
         robots: "noindex,nofollow,noarchive,nosnippet",
         openGraph: {
           type: "website",
-          url: "https://blueblocks.in/collaborate",
+          url: "https://siddheshv1.lovable.app/collaborate",
           title: "Collaborate with the Institute",
           description:
-            "Visiting fellowships, institutional partnerships, methodology transfer, and joint research opportunities.",
+            "Pathways for researchers, industry partners, and policy makers seeking access to the longitudinal dataset.",
           image: {
-            url: "https://blueblocks.in/og/collaborate.jpg",
+            url: "https://siddheshv1.lovable.app/og/collaborate.jpg",
             width: 1200,
             height: 630,
-            alt: "Collaboration network"
+            alt: "Collaboration pathways"
           }
         }
       },
@@ -1430,28 +1500,29 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "WebPage",
           name: "Collaborate",
-          url: "https://blueblocks.in/collaborate",
-          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" }
+          url: "https://siddheshv1.lovable.app/collaborate",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" },
+          about: { "@type": "Thing", name: "Research collaboration and data access" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Collaborate", item: "https://blueblocks.in/collaborate" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Collaborate", item: "https://siddheshv1.lovable.app/collaborate" }
           ]
         }
       ],
       sections: [
         {
-          id: "col-hero",
+          id: "collab-hero",
           type: "hero",
-          variant: "network",
-          headline: "Collaborate With Us.",
+          variant: "stark",
+          headline: "Collaborate.",
           subheadline:
-            "We are actively building a network of academic partners, policymakers, and research institutions who share our commitment to longitudinal observation. Whether you're a PhD student seeking unique datasets, a university exploring Methodology Transfer, or a government body interested in replicating our model—this is where you start.",
-          primaryCta: { label: "Submit a Proposal", href: "#collab-form" },
-          secondaryCta: { label: "View Access Tiers", href: "/publications-open-science#access-tiers" },
+            "The Blue Blocks Micro Research Institute welcomes proposals from researchers, industry partners, and policy makers. Access to longitudinal datasets requires formal application and IRB alignment. 15 years of data; five utility patents filed to date.",
+          primaryCta: { label: "Submit Proposal", href: "#collaborate-form" },
+          secondaryCta: { label: "View Governance", href: "/governance" },
           image: {
             src: "/src/assets/banners/collaborate-network.jpg",
             alt: "Collaboration network visual",
@@ -1462,180 +1533,135 @@ const siteContent = {
         },
 
         {
-          id: "col-tracks",
+          id: "collab-tracks",
           type: "grid3",
-          header: "Collaboration Tracks - How to Work With Us",
+          header: "Collaboration Tracks",
           intro:
-            "We've structured collaboration into three distinct pathways based on intent and timeline.",
+            "Select the pathway that matches your institutional context. All tracks require formal application.",
           items: [
             {
-              title: "Scholar Track",
-              icon: "graduation",
+              title: "Academic Research",
+              icon: "microscope",
               body:
-                "For PhD candidates, Post-Docs, and Faculty. Apply for visiting fellowships (2-8 weeks on-site) or remote dataset access (requires IRB approval + Data Use Agreement). Timeline: 2-4 weeks for review."
+                "For PhD students, postdocs, and faculty seeking access to de-identified datasets. Requires IRB approval from your institution and a signed Data Use Agreement.",
+              cta: { label: "Apply for Access", href: "#collaborate-form" }
             },
             {
-              title: "Institutional Track",
+              title: "Industry Partnership",
               icon: "building",
               body:
-                "For Universities, Research Organizations, Policy Institutes, and NGOs. Formal MOU process for long-term alliances, joint authorship, or Methodology Transfer. Timeline: 4-8 weeks for review."
+                "For organizations exploring educational methodology or innovation pipeline development. Proposals reviewed by the Research Council.",
+              cta: { label: "Submit Proposal", href: "#collaborate-form" }
             },
             {
-              title: "Media Track",
-              icon: "mic",
+              title: "Visiting Fellowship",
+              icon: "user",
               body:
-                "For Journalists, Publishers, and Documentary Filmmakers. Access to approved B-roll, leadership interviews, and attribution guidelines. Timeline: 1-2 weeks for review."
+                "2-8 week residency in the archive with full dataset access. Applications open for the 2026 Winter Residency.",
+              cta: { label: "Apply for Fellowship", href: "#collaborate-form" }
             }
           ]
         },
 
         {
-          id: "col-affiliations",
+          id: "collab-logos",
           type: "logoStrip",
-          header: "Who We Work With",
-          intro: "Our network of technical validators and academic collaborators.",
+          header: "Institutional Affiliations",
+          intro: "We work with academic partners and regulatory bodies.",
           logos: [
-            {
-              name: "IIT Hyderabad",
-              role: "Academic Partner (Dept. of Design)",
-              note: "Prototyping Validation & Design Thinking Methodology.",
-              image: { src: "/src/assets/brand/iit-hyderabad-logo.png", alt: "IIT Hyderabad logo", variant: "logo" }
-            },
-            {
-              name: "IN-SPACe / ISRO",
-              role: "Technical Partner",
-              note: "Aerospace Payload Qualification & Launch Authorization.",
-              image: { src: "/src/assets/brand/inspace-logo.png", alt: "IN-SPACe logo", variant: "logo" }
-            },
-            {
-              name: "ISRO",
-              role: "Launch Partner (Mission Context)",
-              note: "Launch integration context for aerospace qualification workflows.",
-              image: { src: "/src/assets/brand/isro-logo.png", alt: "ISRO logo", variant: "logo" }
-            },
-            {
-              name: "Association Montessori Internationale (AMI)",
-              role: "Pedagogical Affiliate",
-              note: "Alignment with Global Montessori Standards (0-18).",
-              image: { src: "/src/assets/brand/ami-logo.png", alt: "AMI logo", variant: "logo" }
-            }
-          ],
-          scrollable: true,
-          style: "greyscale"
-        },
-
-        {
-          id: "col-transfer",
-          type: "highlightBox",
-          title: "Methodology Transfer Program",
-          body:
-            "We believe that 'Micro Research' should be the standard for all laboratory schools. We offer a structured Transfer Program to help other institutions replicate our observational infrastructure.",
-          bullets: [
-            "Protocol Training: Training your staff to become Embedded Researchers.",
-            "Ethics Architecture: Setting up your internal IRB and Consent frameworks.",
-            "Data Schema Licensing: Adopting our standardized variables for cross-institutional comparison."
+            { name: "ISRO", src: "/src/assets/brand/isro-logo.jpg", alt: "ISRO logo" },
+            { name: "IN-SPACe", src: "/src/assets/brand/inspace-logo.png", alt: "IN-SPACe logo" },
+            { name: "IIT Hyderabad", src: "/src/assets/brand/iit-hyderabad-logo.png", alt: "IIT Hyderabad logo" },
+            { name: "AMI", src: "/src/assets/brand/ami-logo.png", alt: "AMI logo" }
           ]
         },
 
         {
-          id: "col-start",
-          type: "buttonCards",
-          header: "How to Start",
-          cards: [
-            {
-              headline: "Individual Researchers",
-              body:
-                "For PhD candidates, Post-Docs, and Faculty seeking data access or fellowships. Apply for visiting fellowships (2-8 weeks) or dataset access (requires IRB approval).",
-              button: { label: "Apply for Scholar Credentials", href: "#collab-form" }
-            },
-            {
-              headline: "Institutional Partners",
-              body:
-                "For Universities, Research Organizations, Policy Institutes, and NGOs seeking formal alliance.",
-              button: { label: "Request MOU Guidelines", href: "#collab-form" }
-            },
-            {
-              headline: "Press & Publishing",
-              body:
-                "For media inquiries, citation permissions, and interview requests.",
-              button: { label: "Download Media Kit", href: "/newsroom" }
-            }
-          ],
-          footerNote: "Timeline: Proposals are reviewed on a rolling basis (2-4 weeks)."
-        },
-
-        {
-          id: "collab-form",
+          id: "collaborate-form",
           type: "form",
-          header: "Submit a Collaboration Request",
+          header: "Submit a Collaboration Proposal",
           intro:
-            "Select your track and share a short proposal. We'll respond with the appropriate access steps (IRB, DUA, residency availability, or media guidelines).",
+            "Use this form to submit a formal proposal. Include sufficient detail for the Research Council to evaluate alignment with our protocols.",
           submit: {
             to: "research@blueblocks.in",
-            subject: "Collaboration Request — Blue Blocks Micro Research Institute",
+            subject: "Collaboration Proposal — Blue Blocks Micro Research Institute",
             successMessage: "Draft email opened in your mail client."
           },
           fields: [
+            { name: "name", label: "Full Name", type: "text", required: true },
+            { name: "email", label: "Institutional Email", type: "email", required: true },
+            { name: "affiliation", label: "Institution / Organization", type: "text", required: true },
             {
               name: "track",
               label: "Collaboration Track",
               type: "select",
               required: true,
               options: [
-                { label: "Scholar Track (PhD / Postdoc / Faculty)", value: "scholar" },
-                { label: "Institutional Track (University / NGO / Policy)", value: "institution" },
-                { label: "Media Track (Press / Publishing)", value: "media" }
-              ]
-            },
-            { name: "name", label: "Full Name", type: "text", required: true },
-            { name: "email", label: "Email", type: "email", required: true },
-            { name: "affiliation", label: "Affiliation / Organization", type: "text", required: true },
-            { name: "country", label: "Country", type: "text", required: false },
-            {
-              name: "intent",
-              label: "What are you requesting?",
-              type: "select",
-              required: true,
-              options: [
-                { label: "Visiting Fellowship (2–8 weeks)", value: "fellowship" },
-                { label: "Dataset Access (IRB + DUA)", value: "data-access" },
-                { label: "Joint Authorship / Micro-Study Collaboration", value: "joint-authorship" },
-                { label: "MOU / Long-term Alliance", value: "mou" },
-                { label: "Methodology Transfer Program", value: "transfer" },
-                { label: "Media / Citation / Interview", value: "media" }
+                { label: "Academic Research", value: "academic" },
+                { label: "Industry Partnership", value: "industry" },
+                { label: "Visiting Fellowship", value: "fellowship" },
+                { label: "Other", value: "other" }
               ]
             },
             {
-              name: "message",
-              label: "Proposal / Message",
+              name: "proposal",
+              label: "Proposal Summary",
               type: "textarea",
               required: true,
-              placeholder:
-                "Briefly describe your research question, timeline, data needs, and what you plan to publish."
+              placeholder: "Briefly describe your research interest, expected outcomes, and how access to our dataset would support your work."
+            },
+            {
+              name: "irb",
+              label: "Do you have IRB approval?",
+              type: "select",
+              required: false,
+              options: [
+                { label: "Yes", value: "yes" },
+                { label: "In Progress", value: "in-progress" },
+                { label: "Not Yet", value: "no" },
+                { label: "Not Applicable", value: "na" }
+              ]
             }
           ]
         },
 
         {
-          id: "col-faq",
+          id: "collab-faq",
           type: "accordion",
-          header: "FAQs",
+          header: "Collaboration FAQs",
           items: [
             {
-              q: "Can I visit as a researcher?",
+              q: "How long does the review process take?",
               a:
-                "Yes. We host 2-3 visiting researchers annually. Applications for 2-8 week residencies are available through the Scholar Track."
+                "Initial response within 5 business days. Full review takes 2-4 weeks depending on complexity and IRB requirements."
             },
             {
-              q: "Can other schools use your methodology?",
+              q: "Can I access identifiable data?",
               a:
-                "Yes. Micro Research is explicitly designed for adoption by other institutions. We offer a Methodology Transfer program."
+                "No. External researchers only access de-identified datasets. Identifiable data remains internal only."
             },
             {
-              q: "Are you affiliated with a university?",
+              q: "Do you charge for data access?",
               a:
-                "We are independent but maintain a strategic partnership with the Department of Design at IIT Hyderabad."
+                "Open Access materials are free. Researcher access may involve administrative fees for DUA processing."
+            },
+            {
+              q: "Can I visit the Innovation Labs?",
+              a:
+                "Through the Visiting Fellowship track only. Casual visits are not permitted to protect the educational environment."
             }
+          ]
+        },
+
+        {
+          id: "collab-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
+            { title: "Methodology", description: "Research protocols.", icon: "methodology", href: "/methodology" },
+            { title: "Downloads", description: "Framework documents.", icon: "download", href: "/downloads" },
+            { title: "Governance", description: "IRB-aligned standards.", icon: "governance", href: "/governance" }
           ]
         }
       ]
@@ -1644,22 +1670,22 @@ const siteContent = {
     "/newsroom": {
       title: "Newsroom",
       metaDescription:
-        "The Institutional Record: launches, patents, breakthroughs, and methodological lessons — documented with high-trust press resources and protocols.",
+        "Institutional news, mission milestones, publications, and press materials from Blue Blocks Micro Research Institute.",
       seo: {
-        title: "Newsroom | The Institutional Record | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/newsroom",
+        title: "Newsroom | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/newsroom",
         robots: "noindex,nofollow,noarchive,nosnippet",
         openGraph: {
           type: "website",
-          url: "https://blueblocks.in/newsroom",
-          title: "The Institutional Record",
+          url: "https://siddheshv1.lovable.app/newsroom",
+          title: "Newsroom",
           description:
-            "This newsroom documents what we've learned, what we've built, and what went wrong—mission milestones, patents, breakthroughs, and dead-ends.",
+            "Institutional news, mission milestones, publications, and press materials.",
           image: {
-            url: "https://blueblocks.in/og/newsroom.jpg",
+            url: "https://siddheshv1.lovable.app/og/newsroom.jpg",
             width: 1200,
             height: 630,
-            alt: "High-contrast newsroom visual"
+            alt: "Institutional newsroom"
           }
         }
       },
@@ -1668,21 +1694,22 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "WebPage",
           name: "Newsroom",
-          url: "https://blueblocks.in/newsroom",
-          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" }
+          url: "https://siddheshv1.lovable.app/newsroom",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" },
+          about: { "@type": "Thing", name: "Institutional news and press materials" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://blueblocks.in/newsroom" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://siddheshv1.lovable.app/newsroom" }
           ]
         },
         {
           "@context": "https://schema.org",
           "@type": "ItemList",
-          name: "Global Highlights",
+          name: "Latest News",
           itemListElement: [
             {
               "@type": "ListItem",
@@ -1690,7 +1717,7 @@ const siteContent = {
               item: {
                 "@type": "NewsArticle",
                 headline: "Blue Blocks Payload Authorized for ISRO Mission",
-                about: "Aerospace payload qualification and launch authorization"
+                about: "Mission milestone and authorization"
               }
             },
             {
@@ -1721,9 +1748,9 @@ const siteContent = {
           variant: "stark",
           headline: "The Institutional Record.",
           subheadline:
-            "This newsroom documents what we've learned, what we've built, and what went wrong. Satellite launches, patent filings, scientific breakthroughs, methodological dead-ends—all of it matters.",
+            "This newsroom documents what we've learned, what we've built, and what went wrong. Satellite launches, patent filings, scientific breakthroughs, methodological dead-ends—all of it matters. 15 years completed; Year 16 ongoing. Five utility patents filed to date.",
           primaryCta: { label: "Subscribe to Monthly Digest", href: "#digest-form" },
-          secondaryCta: { label: "Download Media Kit >", href: "#media-kit" },
+          secondaryCta: { label: "Download Media Kit >", href: "/downloads" },
           image: {
             src: "/src/assets/banners/newsroom-press.jpg",
             alt: "Printing press editorial visual",
@@ -1759,7 +1786,7 @@ const siteContent = {
               tag: "International",
               headline: "Nobel Peace Center Features Student Innovation",
               excerpt:
-                "Blue Blocks student projects have been selected for exhibition as exemplars of \"Youth-Led Innovation,\" validating our 0-18 Sovereignty Model on a global stage.",
+                "Blue Blocks Micro Research Institute student projects have been selected for exhibition as exemplars of \\\"Youth-Led Innovation,\\\" validating our 0-18 Sovereignty Model on a global stage.",
               cta: { label: "Read Coverage", href: "/newsroom/coverage/nobel-peace-center" },
               image: { src: "/src/assets/placeholders/card-default.jpg", alt: "International recognition", variant: "card", privacyBlur: false }
             }
@@ -1783,10 +1810,10 @@ const siteContent = {
             },
             {
               tag: "Student IP",
-              headline: "Utility Patent #4421 Filed: The \"Guardian\" Drone",
+              headline: "Utility Patent #4421 Filed: The \\\"Guardian\\\" Drone",
               meta: "September 02, 2025",
               body:
-                "The Drone Research Centre has filed its fifth utility patent, marking a significant milestone in our study of \"Innovation Agency\" in the 9-11 age group.",
+                "The Drone Research Centre has filed its fifth utility patent, marking a significant milestone in our study of 'Innovation Agency' in the 9-11 age group. Five utility patents filed to date.",
               cta: { label: "Read Update", href: "/newsroom/updates/utility-patent-4421" },
               image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Drone research visual", variant: "card", privacyBlur: true }
             },
@@ -1806,7 +1833,7 @@ const siteContent = {
           id: "media-kit",
           type: "grid3",
           header: "For the Press",
-          intro: "What journalists need to cover the Institute accurately.",
+          intro: "What journalists need to cover the Blue Blocks Micro Research Institute accurately.",
           items: [
             {
               title: "Logos & Identity",
@@ -1826,8 +1853,8 @@ const siteContent = {
               title: "Attribution Standards",
               icon: "file",
               body:
-                "Correct naming conventions for \"Blue Blocks Micro Research Institute\" and DOI referencing styles.",
-              cta: { label: "View Style Guide", href: "/publications-open-science" }
+                "Correct naming conventions for \\\"Blue Blocks Micro Research Institute\\\" and DOI referencing styles.",
+              cta: { label: "View Style Guide", href: "/publications" }
             }
           ]
         },
@@ -1889,46 +1916,56 @@ const siteContent = {
                 "All press materials include DOI references where applicable. For verification, contact press@blueblocks.in with your publication name and deadline."
             }
           ]
+        },
+
+        {
+          id: "news-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
+            { title: "Patents", description: "View patent registry.", icon: "patent", href: "/patents" },
+            { title: "Technical Briefs", description: "Mission documentation.", icon: "brief", href: "/technical-briefs/sbb-1" },
+            { title: "Downloads", description: "Media kit and resources.", icon: "download", href: "/downloads" }
+          ]
         }
       ]
     },
 
     "/contact": {
       title: "Contact",
-      metaDescription:
-        "Contact the Blue Blocks Micro Research Institute: research inquiries, press requests, collaboration proposals, and institutional correspondence.",
+      metaDescription: "Contact Blue Blocks Micro Research Institute for inquiries, collaborations, and media requests.",
       seo: {
         title: "Contact | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/contact",
+        canonical: "https://siddheshv1.lovable.app/contact",
         robots: "noindex,nofollow,noarchive,nosnippet",
         openGraph: {
           type: "website",
-          url: "https://blueblocks.in/contact",
-          title: "Contact the Institute",
-          description:
-            "Research inquiries, press requests, collaboration proposals, and institutional correspondence.",
+          url: "https://siddheshv1.lovable.app/contact",
+          title: "Contact",
+          description: "Reach out to Blue Blocks Micro Research Institute for research, media, or partnership inquiries.",
           image: {
-            url: "https://blueblocks.in/og/contact.jpg",
+            url: "https://siddheshv1.lovable.app/og/contact.jpg",
             width: 1200,
             height: 630,
-            alt: "Institutional contact"
+            alt: "Contact page visual"
           }
         }
       },
       schemas: [
         {
           "@context": "https://schema.org",
-          "@type": "WebPage",
+          "@type": "ContactPage",
           name: "Contact",
-          url: "https://blueblocks.in/contact",
-          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" }
+          url: "https://siddheshv1.lovable.app/contact",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Contact", item: "https://blueblocks.in/contact" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Contact", item: "https://siddheshv1.lovable.app/contact" }
           ]
         }
       ],
@@ -1937,137 +1974,39 @@ const siteContent = {
           id: "contact-hero",
           type: "hero",
           variant: "stark",
-          headline: "Contact.",
+          headline: "Contact Us.",
           subheadline:
-            "For research inquiries, press requests, or collaboration proposals. We respond to all institutional correspondence within 5 business days.",
-          primaryCta: { label: "Submit Inquiry", href: "#contact-form" },
+            "For research inquiries, collaboration proposals, media requests, or general questions, please reach out via the following channels.",
+          primaryCta: { label: "Email Research Team", href: "mailto:research@blueblocks.in" },
+          secondaryCta: { label: "Email Press Office", href: "mailto:press@blueblocks.in" },
           image: {
-            src: "/src/assets/banners/contact-institutional.jpg",
-            alt: "Institutional contact visual",
+            src: "/src/assets/banners/contact-hero.jpg",
+            alt: "Contact page visual",
             variant: "hero",
             privacyBlur: false,
             caption: ""
           }
-        },
-
-        {
-          id: "contact-channels",
-          type: "grid3",
-          header: "Direct Channels",
-          items: [
-            {
-              title: "Research Inquiries",
-              icon: "microscope",
-              body:
-                "For data access requests, IRB documentation, visiting fellowships, and academic collaborations.",
-              cta: { label: "research@blueblocks.in", href: "mailto:research@blueblocks.in" }
-            },
-            {
-              title: "Press & Media",
-              icon: "mic",
-              body:
-                "For interview requests, media kit access, attribution verification, and publication inquiries.",
-              cta: { label: "press@blueblocks.in", href: "mailto:press@blueblocks.in" }
-            },
-            {
-              title: "General",
-              icon: "mail",
-              body:
-                "For general correspondence, partnerships, and institutional inquiries.",
-              cta: { label: "info@blueblocks.in", href: "mailto:info@blueblocks.in" }
-            }
-          ]
-        },
-
-        {
-          id: "contact-form",
-          type: "form",
-          header: "Submit an Inquiry",
-          intro:
-            "Use this form for research proposals, press requests, or general institutional correspondence.",
-          submit: {
-            to: "info@blueblocks.in",
-            subject: "Website Inquiry — Blue Blocks Micro Research Institute",
-            successMessage: "Draft email opened in your mail client."
-          },
-          fields: [
-            { name: "name", label: "Full Name", type: "text", required: true },
-            { name: "email", label: "Email", type: "email", required: true },
-            {
-              name: "type",
-              label: "Inquiry Type",
-              type: "select",
-              required: true,
-              options: [
-                { label: "Research / Data Access", value: "research" },
-                { label: "Press / Media", value: "press" },
-                { label: "Collaboration Proposal", value: "collaboration" },
-                { label: "General Inquiry", value: "general" },
-                { label: "Staff Access Request", value: "staff-access" }
-              ]
-            },
-            { name: "affiliation", label: "Affiliation / Organization", type: "text", required: false },
-            {
-              name: "message",
-              label: "Message",
-              type: "textarea",
-              required: true,
-              placeholder: "Please include relevant context: your research question, publication, deadline, or specific request."
-            }
-          ]
-        },
-
-        {
-          id: "contact-faq",
-          type: "accordion",
-          header: "Contact FAQs",
-          items: [
-            {
-              q: "How long does it take to get a response?",
-              a:
-                "We respond to all institutional correspondence within 5 business days. Complex requests (IRB, fellowships) may require 2-4 weeks for review."
-            },
-            {
-              q: "Can I visit the Institute?",
-              a:
-                "Visits are by appointment only to protect the educational environment. Apply through the Collaborate page for visiting fellowship opportunities."
-            },
-            {
-              q: "Can I interview minors?",
-              a:
-                "Direct access to minors is strictly regulated. Interviews require Ethics Committee approval, parental presence, and non-disruptive scheduling."
-            },
-            {
-              q: "Where should dataset access requests go?",
-              a:
-                "Start through Collaborate. Researcher access requires IRB approval and a signed Data Use Agreement."
-            }
-          ]
         }
       ]
     },
 
-    // ============ NEW PAGES ============
-
-    "/technical-briefs/sbb-1": {
-      title: "Technical Brief: Mission SBB-1",
-      metaDescription:
-        "Flight qualification record, authorization pathway, and institutional archive summary for the SBB-1 payload aboard ISRO PSLV-C62.",
+    "/privacy": {
+      title: "Privacy Policy",
+      metaDescription: "Privacy policy for Blue Blocks Micro Research Institute website and data handling.",
       seo: {
-        title: "Technical Brief: Mission SBB-1 | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/technical-briefs/sbb-1",
+        title: "Privacy Policy | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/privacy",
         robots: "noindex,nofollow,noarchive,nosnippet",
         openGraph: {
-          type: "article",
-          url: "https://blueblocks.in/technical-briefs/sbb-1",
-          title: "Technical Brief: Mission SBB-1",
-          description:
-            "Flight qualification record, authorization pathway, and institutional archive summary for the SBB-1 payload.",
+          type: "website",
+          url: "https://siddheshv1.lovable.app/privacy",
+          title: "Privacy Policy",
+          description: "Privacy policy detailing data collection, usage, and protection at Blue Blocks Micro Research Institute.",
           image: {
-            url: "https://blueblocks.in/og/sbb-1.jpg",
+            url: "https://siddheshv1.lovable.app/og/privacy.jpg",
             width: 1200,
             height: 630,
-            alt: "Aerospace technical brief"
+            alt: "Privacy policy visual"
           }
         }
       },
@@ -2075,2646 +2014,276 @@ const siteContent = {
         {
           "@context": "https://schema.org",
           "@type": "WebPage",
-          name: "Technical Brief: Mission SBB-1",
-          url: "https://blueblocks.in/technical-briefs/sbb-1",
-          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" }
+          name: "Privacy Policy",
+          url: "https://siddheshv1.lovable.app/privacy",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Technical Briefs", item: "https://blueblocks.in/technical-briefs" },
-            { "@type": "ListItem", position: 3, name: "Mission SBB-1", item: "https://blueblocks.in/technical-briefs/sbb-1" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Privacy Policy", item: "https://siddheshv1.lovable.app/privacy" }
           ]
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Report",
-          name: "Mission SBB-1 Technical Brief",
-          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          about: "Flight qualification and authorization pathway for student-built payload"
         }
       ],
       sections: [
         {
-          id: "sbb1-hero",
+          id: "privacy-content",
+          type: "textBlock",
+          header: "Privacy Policy",
+          body:
+            "Blue Blocks Micro Research Institute is committed to protecting your privacy. This policy explains how we collect, use, and safeguard your information when you visit our website or engage with our research data."
+        }
+      ]
+    },
+
+    "/terms": {
+      title: "Terms of Use",
+      metaDescription: "Terms of use for Blue Blocks Micro Research Institute website and services.",
+      seo: {
+        title: "Terms of Use | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/terms",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "website",
+          url: "https://siddheshv1.lovable.app/terms",
+          title: "Terms of Use",
+          description: "Terms and conditions governing the use of Blue Blocks Micro Research Institute website and services.",
+          image: {
+            url: "https://siddheshv1.lovable.app/og/terms.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Terms of use visual"
+          }
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Terms of Use",
+          url: "https://siddheshv1.lovable.app/terms",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Terms of Use", item: "https://siddheshv1.lovable.app/terms" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "terms-content",
+          type: "textBlock",
+          header: "Terms of Use",
+          body:
+            "By accessing or using the Blue Blocks Micro Research Institute website, you agree to comply with these terms. Please read them carefully before using our services."
+        }
+      ]
+    },
+
+    "/technical-briefs/sbb-1": {
+      title: "Technical Brief: SBB-1",
+      metaDescription: "Technical brief for the SBB-1 mission by Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "Technical Brief: SBB-1 | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/technical-briefs/sbb-1",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "article",
+          url: "https://siddheshv1.lovable.app/technical-briefs/sbb-1",
+          title: "Technical Brief: SBB-1",
+          description: "Detailed technical brief on the SBB-1 mission payload and flight qualification.",
+          image: {
+            url: "https://siddheshv1.lovable.app/og/technical-briefs/sbb-1.jpg",
+            width: 1200,
+            height: 630,
+            alt: "SBB-1 technical brief"
+          }
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "TechArticle",
+          name: "Technical Brief: SBB-1",
+          url: "https://siddheshv1.lovable.app/technical-briefs/sbb-1",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Technical Briefs", item: "https://siddheshv1.lovable.app/technical-briefs/sbb-1" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "tech-brief-hero",
           type: "hero",
           variant: "stark",
-          headline: "Technical Brief: Mission SBB-1",
+          headline: "Technical Brief: SBB-1",
           subheadline:
-            "Flight Qualification, Authorization & Pedagogical Valorization. This document records the institutional documentation pathway for the SBB-1 payload authorization and its pre-integration flight qualification.",
-          primaryCta: { label: "Download Demo Technical Brief", href: "/downloads/sbb-1-technical-brief", download: true },
-          secondaryCta: { label: "Read Newsroom Dispatch", href: "/newsroom/dispatch/isro-payload-authorization" },
+            "Comprehensive technical documentation of the SBB-1 CubeSat payload, flight qualification, and mission outcomes.",
+          primaryCta: { label: "Download Full Brief", href: "/downloads/sbb-1-technical-brief" },
           image: {
-            src: "/src/assets/banners/technical-brief-aero.jpg",
-            alt: "Aerospace engineering environment",
+            src: "/src/assets/banners/technical-briefs/sbb-1.jpg",
+            alt: "SBB-1 technical brief visual",
             variant: "hero",
             privacyBlur: false,
             caption: ""
           }
-        },
-        {
-          id: "sbb1-summary",
-          type: "textBlock",
-          header: "Executive Summary",
-          body:
-            "Blue Blocks Montessori School, in technical collaboration with TakeMe2Space, integrated a 1U student payload for launch aboard ISRO PSLV-C62. The Blue Blocks Micro Research Institute served as the pedagogical research partner, structuring the mission as a longitudinal protocol to test adolescent resilience, TRL-9 performance under constraints, and failure recovery behavior."
-        },
-        {
-          id: "sbb1-metadata",
-          type: "comparisonTable",
-          heading: "Mission Metadata",
-          intro: "",
-          headers: ["Field", "Value"],
-          rows: [
-            ["Document ID", "SBB1-AUTH-001 (Demo Archive Copy)"],
-            ["Payload", "SBB-1 (1U) — Thermal sensor module"],
-            ["Launch Vehicle", "PSLV-C62"],
-            ["Authorization Body", "IN-SPACe (Department of Space, Govt. of India)"],
-            ["Qualification Focus", "Thermal + Vibration readiness"],
-            ["Outcome Note", "Launch vehicle anomaly (Stage 4 ignition failure at T+847 seconds)"],
-            ["Archive Status", "Curated institutional record (demo)"]
-          ]
-        },
-        {
-          id: "sbb1-abstract",
-          type: "textBlock",
-          header: "Abstract",
-          body:
-            "This brief records the institutional documentation pathway for the SBB-1 payload authorization and its pre-integration flight qualification. It summarizes the compliance requirements expected of a student payload intended for Low Earth Orbit operations, including debris mitigation adherence, radio/frequency allocation requirements, and safety verification protocols."
-        },
-        {
-          id: "sbb1-compliance",
-          type: "list",
-          sectionName: "Compliance Layer",
-          header: "Qualification & Compliance Requirements",
-          items: [
-            {
-              title: "Orbital Debris Mitigation",
-              description: "IADC-aligned debris mitigation principles for student payloads."
-            },
-            {
-              title: "Frequency Allocation",
-              description: "Radio frequency coordination and allocation verification."
-            },
-            {
-              title: "Integration Safety Review",
-              description: "Pre-integration safety verification protocols."
-            },
-            {
-              title: "Qualification Readiness",
-              description: "Thermal + Vibration qualification assumptions validated."
-            }
-          ]
-        },
-        {
-          id: "sbb1-why",
-          type: "highlightBox",
-          title: "Why It Matters",
-          body:
-            "Traditional academic projects are designed to succeed in controlled conditions. This mission was designed to test what happens when reality does not cooperate. The launch anomaly did not invalidate the learning protocol — it strengthened it. The mission outcome validated the curriculum not through orbital success, but through Valorization: proving to the students that their engineering was 'real enough to fail in real ways.'"
-        },
-        {
-          id: "sbb1-gallery",
-          type: "cards",
-          header: "Mission Documentation",
-          variant: "iconCards",
-          cards: [
-            {
-              tag: "Hardware",
-              headline: "Satellite Hardware",
-              body: "CubeSat thermal sensor module components.",
-              image: { src: "/src/assets/placeholders/labs/satellite-hardware.jpg", alt: "Satellite hardware", variant: "card" }
-            },
-            {
-              tag: "Avionics",
-              headline: "Avionics Integration",
-              body: "Pre-flight avionics qualification setup.",
-              image: { src: "/src/assets/placeholders/labs/avionics.jpg", alt: "Avionics integration", variant: "card" }
-            },
-            {
-              tag: "Protocols",
-              headline: "Protocol Documentation",
-              body: "Flight qualification documentation archive.",
-              image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Protocol notes", variant: "card" }
-            }
-          ]
         }
       ]
     },
 
     "/presentations/marrakesh-human-capital": {
-      title: "Marrakesh: Defining Future Human Capital",
-      metaDescription:
-        "A framework for building Innovation Economies (0–18), presented at the IMF Annual Meetings in Marrakesh.",
+      title: "Presentation: Marrakesh Human Capital",
+      metaDescription: "Presentation on defining future human capital through innovation economies by Blue Blocks Micro Research Institute.",
       seo: {
-        title: "Marrakesh Presentation | Future Human Capital | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/presentations/marrakesh-human-capital",
+        title: "Presentation: Marrakesh Human Capital | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/presentations/marrakesh-human-capital",
         robots: "noindex,nofollow,noarchive,nosnippet",
         openGraph: {
-          type: "article",
-          url: "https://blueblocks.in/presentations/marrakesh-human-capital",
-          title: "Marrakesh: Defining Future Human Capital",
-          description:
-            "A framework for building Innovation Economies (0–18), presented at the IMF Annual Meetings.",
+          type: "presentation",
+          url: "https://siddheshv1.lovable.app/presentations/marrakesh-human-capital",
+          title: "Presentation: Marrakesh Human Capital",
+          description: "Insights into innovation economies and longitudinal hypothesis development presented at IMF Annual Meetings.",
           image: {
-            url: "https://blueblocks.in/og/marrakesh.jpg",
+            url: "https://siddheshv1.lovable.app/og/presentations/marrakesh-human-capital.jpg",
             width: 1200,
             height: 630,
-            alt: "Conference presentation"
+            alt: "Marrakesh presentation"
           }
         }
       },
       schemas: [
         {
           "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "Marrakesh: Defining Future Human Capital",
-          url: "https://blueblocks.in/presentations/marrakesh-human-capital",
-          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" }
+          "@type": "PresentationDigitalDocument",
+          name: "Presentation: Marrakesh Human Capital",
+          url: "https://siddheshv1.lovable.app/presentations/marrakesh-human-capital",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Presentations", item: "https://blueblocks.in/presentations" },
-            { "@type": "ListItem", position: 3, name: "Marrakesh", item: "https://blueblocks.in/presentations/marrakesh-human-capital" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Presentations", item: "https://siddheshv1.lovable.app/presentations/marrakesh-human-capital" }
           ]
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "CreativeWork",
-          name: "Marrakesh: Defining Future Human Capital",
-          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          about: "Innovation economy framework presentation"
         }
       ],
       sections: [
         {
-          id: "marr-hero",
+          id: "presentation-hero",
           type: "hero",
           variant: "stark",
-          headline: "Marrakesh: Defining Future Human Capital",
+          headline: "Presentation: Marrakesh Human Capital",
           subheadline:
-            "A framework for building Innovation Economies (0–18). At the IMF Annual Meetings, Blue Blocks' model was positioned as a scalable prototype for an Innovation Economy pipeline.",
-          primaryCta: { label: "Download Demo Deck Outline", href: "/downloads/marrakesh-deck-outline", download: true },
-          secondaryCta: { label: "Request Full Deck", href: "/contact?subject=Full%20Marrakesh%20Deck%20Request" },
+            "A detailed presentation on innovation economies and longitudinal hypothesis development, delivered at the IMF Annual Meetings.",
+          primaryCta: { label: "Download Presentation Slides", href: "/downloads/marrakesh-presentation" },
           image: {
-            src: "/src/assets/banners/presentation-conference.jpg",
-            alt: "Conference presentation hall",
+            src: "/src/assets/banners/presentations/marrakesh-human-capital.jpg",
+            alt: "Marrakesh presentation visual",
             variant: "hero",
             privacyBlur: false,
             caption: ""
           }
-        },
-        {
-          id: "marr-overview",
-          type: "textBlock",
-          header: "Overview",
-          body:
-            "At the IMF Annual Meetings, Blue Blocks' model was positioned as a scalable prototype for an Innovation Economy pipeline. The presentation highlighted how early-stage exposure to high-stakes engineering creates a resilient R&D pipeline for the nation."
-        },
-        {
-          id: "marr-thesis",
-          type: "highlightBox",
-          title: "Core Thesis",
-          body:
-            "Universities have research funding and PhDs — but lack long-term access to developing children. Schools have children for 15 years — but lack research infrastructure. Blue Blocks runs both."
-        },
-        {
-          id: "marr-hypothesis",
-          type: "textBlock",
-          variant: "accent",
-          header: "Longitudinal Hypothesis",
-          body:
-            "We posit that adolescents exposed to TRL-9 constraints develop higher Problem-Solving Agency by tertiary education."
-        },
-        {
-          id: "marr-indicators",
-          type: "grid3",
-          header: "Early Indicators",
-          items: [
-            {
-              title: "STEM Persistence",
-              body: "Patent-holding students show stronger STEM persistence in tertiary education."
-            },
-            {
-              title: "Prototype Ownership",
-              body: "Prototype ownership correlates with autonomy and self-directed learning."
-            },
-            {
-              title: "Failure Recovery",
-              body: "Failure recovery improves when constraints are real, not simulated."
-            }
-          ]
-        },
-        {
-          id: "marr-slides",
-          type: "list",
-          sectionName: "Presentation Outline",
-          header: "Slide Outline (8 Sections)",
-          items: [
-            { title: "1. The Research Gap", description: "Why traditional education systems fail to produce innovators." },
-            { title: "2. Embedded Solution", description: "Integrating research into the learning environment." },
-            { title: "3. Micro-Research Architecture", description: "High-frequency, practitioner-executable protocols." },
-            { title: "4. TRL-9 Environments", description: "Real constraints, real failure, real learning." },
-            { title: "5. IP as Output Metric", description: "Patents as evidence of educational efficacy." },
-            { title: "6. Failure Recovery Variable", description: "Measuring resilience through authentic setbacks." },
-            { title: "7. Replication Model", description: "How to transfer this methodology to other institutions." },
-            { title: "8. Collaboration Pathways", description: "Opportunities for academic and policy partnerships." }
-          ]
         }
       ]
     },
 
     "/proceedings/oslo-2026": {
-      title: "Oslo Summit 2026 Proceedings Archive",
-      metaDescription:
-        "Proceedings archive from the Oslo Summit at the Nobel Peace Center, January 2026 — institutional release record and open-data protocols.",
+      title: "Proceedings Archive: Oslo 2026",
+      metaDescription: "Archive of proceedings from the Oslo Summit 2026 featuring Blue Blocks Micro Research Institute.",
       seo: {
-        title: "Oslo Summit 2026 Proceedings Archive | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/proceedings/oslo-2026",
+        title: "Proceedings Archive: Oslo 2026 | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/proceedings/oslo-2026",
         robots: "noindex,nofollow,noarchive,nosnippet",
         openGraph: {
-          type: "website",
-          url: "https://blueblocks.in/proceedings/oslo-2026",
-          title: "Oslo Summit 2026 Proceedings Archive",
-          description:
-            "Institutional release record from the Nobel Peace Center presentation, January 28, 2026.",
+          type: "collection",
+          url: "https://siddheshv1.lovable.app/proceedings/oslo-2026",
+          title: "Proceedings Archive: Oslo 2026",
+          description: "Official proceedings and archival materials from the Oslo Summit 2026.",
           image: {
-            url: "https://blueblocks.in/og/oslo.jpg",
+            url: "https://siddheshv1.lovable.app/og/proceedings/oslo-2026.jpg",
             width: 1200,
             height: 630,
-            alt: "Oslo summit auditorium"
+            alt: "Oslo proceedings"
           }
         }
       },
       schemas: [
         {
           "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "Oslo Summit 2026 Proceedings Archive",
-          url: "https://blueblocks.in/proceedings/oslo-2026",
-          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" }
+          "@type": "CollectionPage",
+          name: "Proceedings Archive: Oslo 2026",
+          url: "https://siddheshv1.lovable.app/proceedings/oslo-2026",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Proceedings", item: "https://blueblocks.in/proceedings" },
-            { "@type": "ListItem", position: 3, name: "Oslo 2026", item: "https://blueblocks.in/proceedings/oslo-2026" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Proceedings", item: "https://siddheshv1.lovable.app/proceedings/oslo-2026" }
           ]
         }
       ],
       sections: [
         {
-          id: "oslo-hero",
+          id: "proceedings-hero",
           type: "hero",
           variant: "stark",
-          headline: "Proceedings Archive: Oslo Summit 2026",
+          headline: "Proceedings Archive: Oslo 2026",
           subheadline:
-            "Nobel Peace Center — institutional release record. On January 28, 2026, Founder Pavan Goyal delivered the world premiere of the Blue Blocks Innovation Pedagogy (0–18).",
-          primaryCta: { label: "Download Archive Items", href: "/downloads/oslo-archive-items", download: true },
-          secondaryCta: { label: "View Publications", href: "/publications-open-science" },
+            "Comprehensive archive of the Oslo Summit 2026, including presentations, datasets, and official documentation.",
+          primaryCta: { label: "Download Proceedings", href: "/downloads/oslo-2026-proceedings" },
           image: {
-            src: "/src/assets/banners/proceedings-auditorium.jpg",
-            alt: "Grand auditorium for proceedings",
+            src: "/src/assets/banners/proceedings/oslo-2026.jpg",
+            alt: "Oslo proceedings visual",
             variant: "hero",
             privacyBlur: false,
             caption: ""
           }
-        },
-        {
-          id: "oslo-context",
-          type: "textBlock",
-          header: "Context",
-          body:
-            "On January 28, 2026, at the Nobel Peace Center, Founder Pavan Goyal delivered the world premiere of the Blue Blocks Innovation Pedagogy (0–18). Selected by the Monisc Committee (supported by the Norwegian UNESCO Commission) as a global benchmark, this session formalized the release of student-generated datasets into an international open science network."
-        },
-        {
-          id: "oslo-archive",
-          type: "cards",
-          header: "Archive Items",
-          variant: "iconCards",
-          cards: [
-            {
-              tag: "Document",
-              headline: "Official Invitation Letter (Demo)",
-              body: "Formal invitation from the Monisc Committee for the Oslo Summit presentation."
-            },
-            {
-              tag: "Presentation",
-              headline: "Pedagogical Framework Presentation (Demo)",
-              body: "The 0–18 Innovation Pedagogy framework as presented at the Nobel Peace Center."
-            },
-            {
-              tag: "Protocol",
-              headline: "Open-Data Release Protocol (Demo)",
-              body: "Documentation of the open science data release and archival procedures."
-            }
-          ]
-        },
-        {
-          id: "oslo-ethics",
-          type: "highlightBox",
-          title: "Ethical Statement",
-          body:
-            "This archive does not disclose identifiable records. Public access artifacts preserve methodological context, not subject identity. All student data referenced has been anonymized per k-anonymity standards."
         }
       ]
     },
 
     "/downloads": {
       title: "Downloads",
-      metaDescription:
-        "Downloadable institutional artifacts and documentation from the Blue Blocks Micro Research Institute.",
-      seo: {
-        title: "Downloads | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/downloads",
-        robots: "noindex,nofollow,noarchive,nosnippet",
-        openGraph: {
-          type: "website",
-          url: "https://blueblocks.in/downloads",
-          title: "Downloads",
-          description:
-            "Downloadable institutional artifacts and documentation.",
-          image: {
-            url: "https://blueblocks.in/og/downloads.jpg",
-            width: 1200,
-            height: 630,
-            alt: "Downloads archive"
-          }
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "Downloads",
-          url: "https://blueblocks.in/downloads",
-          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Downloads", item: "https://blueblocks.in/downloads" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "downloads-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Downloads",
-          subheadline:
-            "This area contains downloadable institutional artifacts and documentation. Where \"demo\" is specified, files are placeholders until official PDFs are released via DOI.",
-          image: {
-            src: "/src/assets/banners/downloads-archive.jpg",
-            alt: "Downloads archive visual",
-            variant: "hero",
-            privacyBlur: false,
-            caption: ""
-          }
-        },
-        {
-          id: "downloads-list",
-          type: "downloadList",
-          header: "Available Downloads",
-          items: [
-            {
-              title: "Institute Prospectus (Demo)",
-              description: "Institutional overview, governance architecture, research domains, labs.",
-              href: "/downloads/institute-prospectus"
-            },
-            {
-              title: "Micro Research Methodology Framework (Demo)",
-              description: "Operational method: bounded protocols, ecological validity, publication intent.",
-              href: "/downloads/micro-research-framework"
-            },
-            {
-              title: "Micro Dataset Specification v1.0 (Demo)",
-              description: "Variable dictionary, anonymization conventions, data structures.",
-              href: "/downloads/micro-dataset-specification"
-            },
-            {
-              title: "Citation Guide (Demo)",
-              description: "How to cite Institute materials and DOI-based assets.",
-              href: "/downloads/citation-guide"
-            },
-            {
-              title: "Schema Definitions (.zip) (Demo)",
-              description: "Variable sets (Innovation Index, Bio-Metric Log, Academic Correlation).",
-              href: "/downloads/schema-definitions"
-            },
-            {
-              title: "Brand Asset Pack (.zip) (Demo)",
-              description: "Logos, identity, typography guidance placeholders.",
-              href: "/downloads/brand-asset-pack"
-            },
-            {
-              title: "Leadership Bio Sheet (Demo)",
-              description: "Approved bios/headshots placeholders.",
-              href: "/downloads/leadership-bio-sheet"
-            }
-          ]
-        }
-      ]
-    },
-
-    "/downloads/institute-prospectus": {
-      title: "Institute Prospectus",
-      metaDescription: "Institutional overview, governance architecture, research domains, and labs.",
-      seo: {
-        title: "Institute Prospectus (Demo) | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/downloads/institute-prospectus",
-        robots: "noindex,nofollow,noarchive,nosnippet"
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "Institute Prospectus",
-          url: "https://blueblocks.in/downloads/institute-prospectus"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Downloads", item: "https://blueblocks.in/downloads" },
-            { "@type": "ListItem", position: 3, name: "Institute Prospectus", item: "https://blueblocks.in/downloads/institute-prospectus" }
-          ]
-        }
-      ],
-      downloadMeta: {
-        filename: "institute-prospectus-demo.txt",
-        version: "Demo v1.0",
-        lastUpdated: "February 2026"
-      },
-      sections: [
-        {
-          id: "dl-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Institute Prospectus (Demo)",
-          subheadline: "Institutional overview, governance architecture, research domains, and labs.",
-          image: { src: "/src/assets/banners/governance-oversight.jpg", alt: "Governance banner", variant: "hero" }
-        },
-        {
-          id: "dl-info",
-          type: "highlightBox",
-          title: "Download Information",
-          body: "Version: Demo v1.0\nLast Updated: February 2026\n\nThis is a demo placeholder file. The official PDF will be released with DOI upon publication."
-        },
-        {
-          id: "dl-button",
-          type: "downloadButton",
-          label: "Download Demo File",
-          filename: "institute-prospectus-demo.txt",
-          content: "BLUE BLOCKS MICRO RESEARCH INSTITUTE\nInstitute Prospectus (Demo)\n\nThis is a placeholder file.\nThe official prospectus will be released with DOI upon publication.\n\nFor inquiries: research@blueblocks.in"
-        }
-      ]
-    },
-
-    "/downloads/micro-research-framework": {
-      title: "Micro Research Methodology Framework",
-      metaDescription: "Operational method: bounded protocols, ecological validity, publication intent.",
-      seo: {
-        title: "Micro Research Framework (Demo) | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/downloads/micro-research-framework",
-        robots: "noindex,nofollow,noarchive,nosnippet"
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "Micro Research Methodology Framework",
-          url: "https://blueblocks.in/downloads/micro-research-framework"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Downloads", item: "https://blueblocks.in/downloads" },
-            { "@type": "ListItem", position: 3, name: "Micro Research Framework", item: "https://blueblocks.in/downloads/micro-research-framework" }
-          ]
-        }
-      ],
-      downloadMeta: {
-        filename: "micro-research-framework-demo.txt",
-        version: "Demo v1.0",
-        lastUpdated: "February 2026"
-      },
-      sections: [
-        {
-          id: "dl-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Micro Research Methodology Framework (Demo)",
-          subheadline: "Operational method: bounded protocols, ecological validity, publication intent.",
-          image: { src: "/src/assets/banners/methodology-framework.jpg", alt: "Methodology banner", variant: "hero" }
-        },
-        {
-          id: "dl-info",
-          type: "highlightBox",
-          title: "Download Information",
-          body: "Version: Demo v1.0\nLast Updated: February 2026\nDOI: 10.5281/zenodo.XXXXX (pending)\n\nThis is a demo placeholder file. The official PDF will be released with DOI upon publication."
-        },
-        {
-          id: "dl-button",
-          type: "downloadButton",
-          label: "Download Demo File",
-          filename: "micro-research-framework-demo.txt",
-          content: "BLUE BLOCKS MICRO RESEARCH INSTITUTE\nMicro Research Methodology Framework (Demo)\n\nThis is a placeholder file.\nThe official framework paper will be released with DOI upon publication.\n\nFor inquiries: research@blueblocks.in"
-        }
-      ]
-    },
-
-    "/downloads/micro-dataset-specification": {
-      title: "Micro Dataset Specification v1.0",
-      metaDescription: "Variable dictionary, anonymization conventions, data structures.",
-      seo: {
-        title: "Micro Dataset Specification (Demo) | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/downloads/micro-dataset-specification",
-        robots: "noindex,nofollow,noarchive,nosnippet"
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "Micro Dataset Specification",
-          url: "https://blueblocks.in/downloads/micro-dataset-specification"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Downloads", item: "https://blueblocks.in/downloads" },
-            { "@type": "ListItem", position: 3, name: "Dataset Specification", item: "https://blueblocks.in/downloads/micro-dataset-specification" }
-          ]
-        }
-      ],
-      downloadMeta: {
-        filename: "micro-dataset-specification-demo.txt",
-        version: "Demo v1.0",
-        lastUpdated: "February 2026"
-      },
-      sections: [
-        {
-          id: "dl-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Micro Dataset Specification v1.0 (Demo)",
-          subheadline: "Variable dictionary, anonymization conventions, data structures.",
-          image: { src: "/src/assets/banners/governance-oversight.jpg", alt: "Dataset banner", variant: "hero" }
-        },
-        {
-          id: "dl-info",
-          type: "highlightBox",
-          title: "Download Information",
-          body: "Version: Demo v1.0\nLast Updated: February 2026\nDOI: 10.5281/zenodo.YYYYY (pending)\n\nThis is a demo placeholder file."
-        },
-        {
-          id: "dl-button",
-          type: "downloadButton",
-          label: "Download Demo File",
-          filename: "micro-dataset-specification-demo.txt",
-          content: "BLUE BLOCKS MICRO RESEARCH INSTITUTE\nMicro Dataset Specification v1.0 (Demo)\n\nThis is a placeholder file.\nThe official specification will be released with DOI upon publication.\n\nFor inquiries: research@blueblocks.in"
-        }
-      ]
-    },
-
-    "/downloads/citation-guide": {
-      title: "Citation Guide",
-      metaDescription: "How to cite Institute materials and DOI-based assets.",
-      seo: {
-        title: "Citation Guide (Demo) | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/downloads/citation-guide",
-        robots: "noindex,nofollow,noarchive,nosnippet"
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "Citation Guide",
-          url: "https://blueblocks.in/downloads/citation-guide"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Downloads", item: "https://blueblocks.in/downloads" },
-            { "@type": "ListItem", position: 3, name: "Citation Guide", item: "https://blueblocks.in/downloads/citation-guide" }
-          ]
-        }
-      ],
-      downloadMeta: {
-        filename: "citation-guide-demo.txt",
-        version: "Demo v1.0",
-        lastUpdated: "February 2026"
-      },
-      sections: [
-        {
-          id: "dl-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Citation Guide (Demo)",
-          subheadline: "How to cite Institute materials and DOI-based assets.",
-          image: { src: "/src/assets/banners/governance-oversight.jpg", alt: "Citation banner", variant: "hero" }
-        },
-        {
-          id: "dl-info",
-          type: "highlightBox",
-          title: "Download Information",
-          body: "Version: Demo v1.0\nLast Updated: February 2026\n\nThis is a demo placeholder file."
-        },
-        {
-          id: "dl-button",
-          type: "downloadButton",
-          label: "Download Demo File",
-          filename: "citation-guide-demo.txt",
-          content: "BLUE BLOCKS MICRO RESEARCH INSTITUTE\nCitation Guide (Demo)\n\nThis is a placeholder file.\nThe official citation guide will be released upon publication.\n\nFor inquiries: research@blueblocks.in"
-        }
-      ]
-    },
-
-    "/downloads/schema-definitions": {
-      title: "Schema Definitions",
-      metaDescription: "Variable sets (Innovation Index, Bio-Metric Log, Academic Correlation).",
-      seo: {
-        title: "Schema Definitions (Demo) | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/downloads/schema-definitions",
-        robots: "noindex,nofollow,noarchive,nosnippet"
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "Schema Definitions",
-          url: "https://blueblocks.in/downloads/schema-definitions"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Downloads", item: "https://blueblocks.in/downloads" },
-            { "@type": "ListItem", position: 3, name: "Schema Definitions", item: "https://blueblocks.in/downloads/schema-definitions" }
-          ]
-        }
-      ],
-      downloadMeta: {
-        filename: "schema-definitions-demo.txt",
-        version: "Demo v1.0",
-        lastUpdated: "February 2026"
-      },
-      sections: [
-        {
-          id: "dl-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Schema Definitions (.zip) (Demo)",
-          subheadline: "Variable sets (Innovation Index, Bio-Metric Log, Academic Correlation).",
-          image: { src: "/src/assets/banners/governance-oversight.jpg", alt: "Schema banner", variant: "hero" }
-        },
-        {
-          id: "dl-info",
-          type: "highlightBox",
-          title: "Download Information",
-          body: "Version: Demo v1.0\nLast Updated: February 2026\n\nThis is a demo placeholder file."
-        },
-        {
-          id: "dl-button",
-          type: "downloadButton",
-          label: "Download Demo File",
-          filename: "schema-definitions-demo.txt",
-          content: "BLUE BLOCKS MICRO RESEARCH INSTITUTE\nSchema Definitions (Demo)\n\nThis is a placeholder file.\nThe official schema definitions will be released upon publication.\n\nVariable Sets:\n- Innovation Index (Variable Set A)\n- Bio-Metric Log (Variable Set B)\n- Academic Correlation (Variable Set C)\n\nFor inquiries: research@blueblocks.in"
-        }
-      ]
-    },
-
-    "/downloads/brand-asset-pack": {
-      title: "Brand Asset Pack",
-      metaDescription: "Logos, identity, typography guidance placeholders.",
-      seo: {
-        title: "Brand Asset Pack (Demo) | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/downloads/brand-asset-pack",
-        robots: "noindex,nofollow,noarchive,nosnippet"
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "Brand Asset Pack",
-          url: "https://blueblocks.in/downloads/brand-asset-pack"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Downloads", item: "https://blueblocks.in/downloads" },
-            { "@type": "ListItem", position: 3, name: "Brand Asset Pack", item: "https://blueblocks.in/downloads/brand-asset-pack" }
-          ]
-        }
-      ],
-      downloadMeta: {
-        filename: "brand-asset-pack-demo.txt",
-        version: "Demo v1.0",
-        lastUpdated: "February 2026"
-      },
-      sections: [
-        {
-          id: "dl-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Brand Asset Pack (.zip) (Demo)",
-          subheadline: "Logos, identity, typography guidance placeholders.",
-          image: { src: "/src/assets/banners/governance-oversight.jpg", alt: "Brand assets banner", variant: "hero" }
-        },
-        {
-          id: "dl-info",
-          type: "highlightBox",
-          title: "Download Information",
-          body: "Version: Demo v1.0\nLast Updated: February 2026\n\nThis is a demo placeholder file."
-        },
-        {
-          id: "dl-button",
-          type: "downloadButton",
-          label: "Download Demo File",
-          filename: "brand-asset-pack-demo.txt",
-          content: "BLUE BLOCKS MICRO RESEARCH INSTITUTE\nBrand Asset Pack (Demo)\n\nThis is a placeholder file.\nThe official brand assets will be released upon request.\n\nFor press inquiries: press@blueblocks.in"
-        }
-      ]
-    },
-
-    "/downloads/leadership-bio-sheet": {
-      title: "Leadership Bio Sheet",
-      metaDescription: "Approved bios/headshots placeholders.",
-      seo: {
-        title: "Leadership Bio Sheet (Demo) | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/downloads/leadership-bio-sheet",
-        robots: "noindex,nofollow,noarchive,nosnippet"
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "Leadership Bio Sheet",
-          url: "https://blueblocks.in/downloads/leadership-bio-sheet"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Downloads", item: "https://blueblocks.in/downloads" },
-            { "@type": "ListItem", position: 3, name: "Leadership Bio Sheet", item: "https://blueblocks.in/downloads/leadership-bio-sheet" }
-          ]
-        }
-      ],
-      downloadMeta: {
-        filename: "leadership-bio-sheet-demo.txt",
-        version: "Demo v1.0",
-        lastUpdated: "February 2026"
-      },
-      sections: [
-        {
-          id: "dl-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Leadership Bio Sheet (Demo)",
-          subheadline: "Approved bios/headshots placeholders.",
-          image: { src: "/src/assets/banners/governance-oversight.jpg", alt: "Leadership banner", variant: "hero" }
-        },
-        {
-          id: "dl-info",
-          type: "highlightBox",
-          title: "Download Information",
-          body: "Version: Demo v1.0\nLast Updated: February 2026\n\nThis is a demo placeholder file."
-        },
-        {
-          id: "dl-button",
-          type: "downloadButton",
-          label: "Download Demo File",
-          filename: "leadership-bio-sheet-demo.txt",
-          content: "BLUE BLOCKS MICRO RESEARCH INSTITUTE\nLeadership Bio Sheet (Demo)\n\nThis is a placeholder file.\nThe official leadership bios will be released upon request.\n\nPavan Goyal - Principal Investigator & Founder\nMunira Hussain - Director of Pedagogy\n\nFor press inquiries: press@blueblocks.in"
-        }
-      ]
-    },
-
-    "/staff-access": {
-      title: "Staff Access (Restricted)",
-      metaDescription: "Internal research archive access for authorized staff only.",
-      seo: {
-        title: "Staff Access (Restricted) | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/staff-access",
-        robots: "noindex,nofollow,noarchive,nosnippet"
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "Staff Access",
-          url: "https://blueblocks.in/staff-access"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Staff Access", item: "https://blueblocks.in/staff-access" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "staff-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Staff Access (Restricted)",
-          subheadline: "Internal research archive. Access is restricted to protect minors, consent governance, identifiable records, and linking keys between subject codes and individuals.",
-          primaryCta: { label: "Request Staff Access", href: "/contact?subject=Staff%20Access%20Request" },
-          secondaryCta: { label: "Go to Open Access", href: "/publications-open-science#open-access" },
-          image: {
-            src: "/src/assets/banners/governance-oversight.jpg",
-            alt: "Restricted access banner",
-            variant: "hero",
-            privacyBlur: false,
-            caption: ""
-          }
-        },
-        {
-          id: "staff-notice",
-          type: "highlightBox",
-          title: "Access Restriction Notice",
-          body:
-            "This area is restricted to protect:\n• Minors' privacy and welfare\n• Consent governance protocols\n• Identifiable records\n• Linking keys between subject codes and individuals\n\nUnauthorized access attempts are logged."
-        },
-        {
-          id: "staff-actions",
-          type: "buttonCards",
-          header: "What You Can Do",
-          cards: [
-            {
-              headline: "Request Staff Access",
-              body: "If you are an authorized staff member, submit an access request through the contact form.",
-              button: { label: "Request Access", href: "/contact?subject=Staff%20Access%20Request" }
-            },
-            {
-              headline: "View Open Access Materials",
-              body: "Public datasets and publications are available without restriction.",
-              button: { label: "Go to Open Access", href: "/publications-open-science#open-access" }
-            }
-          ]
-        }
-      ]
-    },
-
-    "/newsroom/dispatch/isro-payload-authorization": {
-      title: "Dispatch: Payload Authorized for ISRO Mission",
-      metaDescription: "Twelve students designed a thermal sensor payload, authorized by IN-SPACe for PSLV-C62 launch.",
-      seo: {
-        title: "Dispatch: Payload Authorized for ISRO Mission | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/newsroom/dispatch/isro-payload-authorization",
-        robots: "noindex,nofollow,noarchive,nosnippet"
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "NewsArticle",
-          headline: "Dispatch: Payload Authorized for ISRO Mission",
-          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          datePublished: "2025-06-15",
-          url: "https://blueblocks.in/newsroom/dispatch/isro-payload-authorization"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://blueblocks.in/newsroom" },
-            { "@type": "ListItem", position: 3, name: "Dispatch", item: "https://blueblocks.in/newsroom/dispatch/isro-payload-authorization" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "dispatch-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Dispatch: Payload Authorized for ISRO Mission",
-          subheadline: "Twelve students (ages 12–16) contributed to development of a thermal sensor payload intended for Low Earth Orbit operations.",
-          primaryCta: { label: "Read Technical Brief", href: "/technical-briefs/sbb-1" },
-          secondaryCta: { label: "Request Media Kit", href: "/contact?subject=Media%20Kit%20Request" },
-          image: { src: "/src/assets/banners/newsroom-press.jpg", alt: "Newsroom banner", variant: "hero" }
-        },
-        {
-          id: "dispatch-summary",
-          type: "textBlock",
-          header: "Summary",
-          body:
-            "Twelve students (ages 12–16) contributed to development of a thermal sensor payload intended for Low Earth Orbit operations. After extensive technical review and qualification readiness checks, the payload was approved for integration aboard ISRO PSLV-C62 via IN-SPACe authorization pathways."
-        },
-        {
-          id: "dispatch-timeline",
-          type: "timeline",
-          heading: "Mission Timeline",
-          items: [
-            { year: "Phase 1", title: "Prototype Iteration", description: "Multiple iteration cycles logged during initial development." },
-            { year: "Phase 2", title: "Qualification Layer", description: "Thermal and vibration qualification readiness testing." },
-            { year: "Phase 3", title: "Authorization Milestone", description: "IN-SPACe formal authorization for launch integration." },
-            { year: "Phase 4", title: "Launch & Outcome", description: "Launch vehicle anomaly (Stage 4 ignition failure at T+847 seconds) → Resilience protocol dataset recorded." }
-          ]
-        }
-      ]
-    },
-
-    "/newsroom/coverage/nobel-peace-center": {
-      title: "Coverage: Nobel Peace Center Features Student Innovation",
-      metaDescription: "Blue Blocks student projects and methodology presented at the Nobel Peace Center as exemplars of youth-led innovation.",
-      seo: {
-        title: "Coverage: Nobel Peace Center Features Student Innovation | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/newsroom/coverage/nobel-peace-center",
-        robots: "noindex,nofollow,noarchive,nosnippet"
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "NewsArticle",
-          headline: "Coverage: Nobel Peace Center Features Student Innovation",
-          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          datePublished: "2026-01-28",
-          url: "https://blueblocks.in/newsroom/coverage/nobel-peace-center"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://blueblocks.in/newsroom" },
-            { "@type": "ListItem", position: 3, name: "Coverage", item: "https://blueblocks.in/newsroom/coverage/nobel-peace-center" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "coverage-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Coverage: Nobel Peace Center Features Student Innovation",
-          subheadline: "Blue Blocks student projects and institutional methodology were presented in an international forum as exemplars of youth-led innovation.",
-          primaryCta: { label: "View Oslo Proceedings", href: "/proceedings/oslo-2026" },
-          image: { src: "/src/assets/banners/proceedings-auditorium.jpg", alt: "Nobel Peace Center", variant: "hero" }
-        },
-        {
-          id: "coverage-overview",
-          type: "textBlock",
-          header: "Overview",
-          body:
-            "Blue Blocks student projects and institutional methodology were presented in an international forum as exemplars of youth-led innovation. The presentation was selected by the Monisc Committee (supported by the Norwegian UNESCO Commission) as a global benchmark for integrating space science with education."
-        },
-        {
-          id: "coverage-showcased",
-          type: "grid3",
-          header: "What Was Showcased",
-          items: [
-            { title: "0–18 Longitudinal Model", body: "Continuous observation from birth to adulthood." },
-            { title: "TRL-Based Environments", body: "Real constraints, real failure, real learning." },
-            { title: "Patent-Backed Outputs", body: "Student IP as evidence of educational efficacy." },
-            { title: "Open Science Archival", body: "Citation discipline and DOI-based publication." }
-          ]
-        },
-        {
-          id: "coverage-disclaimer",
-          type: "highlightBox",
-          title: "Disclaimer",
-          body: "This coverage page is a curated summary. Verified external links will be added upon publication clearance."
-        }
-      ]
-    },
-
-    "/newsroom/updates/iit-hyderabad-advisory": {
-      title: "Update: IIT Hyderabad Formalizes Advisory Role",
-      metaDescription: "The Department of Design at IIT Hyderabad joins the Research Council for technical validation.",
-      seo: {
-        title: "Update: IIT Hyderabad Advisory | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/newsroom/updates/iit-hyderabad-advisory",
-        robots: "noindex,nofollow,noarchive,nosnippet"
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "NewsArticle",
-          headline: "Update: IIT Hyderabad Formalizes Advisory Role",
-          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          datePublished: "2025-10-15",
-          url: "https://blueblocks.in/newsroom/updates/iit-hyderabad-advisory"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://blueblocks.in/newsroom" },
-            { "@type": "ListItem", position: 3, name: "Update", item: "https://blueblocks.in/newsroom/updates/iit-hyderabad-advisory" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "update-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Update: IIT Hyderabad Formalizes Advisory Role",
-          subheadline: "The Department of Design at IIT Hyderabad joins the Research Council to provide technical validation for student prototyping.",
-          primaryCta: { label: "Learn About Collaboration", href: "/collaborate" },
-          image: { src: "/src/assets/banners/newsroom-press.jpg", alt: "Update banner", variant: "hero" }
-        },
-        {
-          id: "update-content",
-          type: "textBlock",
-          header: "Partnership Details",
-          body:
-            "The Department of Design at IIT Hyderabad has formalized its advisory role with the Blue Blocks Micro Research Institute. This partnership provides technical validation for student prototyping initiatives and strengthens the academic credibility of our longitudinal research programs.\n\nThe collaboration includes:\n• Design thinking methodology integration\n• Prototyping validation protocols\n• Joint research opportunities for graduate students"
-        }
-      ]
-    },
-
-    "/newsroom/updates/utility-patent-4421": {
-      title: "Update: Utility Patent #4421 Filed",
-      metaDescription: "The Drone Research Centre has filed its fifth utility patent for 'The Guardian' sanitization drone.",
-      seo: {
-        title: "Update: Utility Patent #4421 Filed | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/newsroom/updates/utility-patent-4421",
-        robots: "noindex,nofollow,noarchive,nosnippet"
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "NewsArticle",
-          headline: "Update: Utility Patent #4421 Filed",
-          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          datePublished: "2025-09-02",
-          url: "https://blueblocks.in/newsroom/updates/utility-patent-4421"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://blueblocks.in/newsroom" },
-            { "@type": "ListItem", position: 3, name: "Update", item: "https://blueblocks.in/newsroom/updates/utility-patent-4421" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "update-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Update: Utility Patent #4421 Filed",
-          subheadline: "The Drone Research Centre has filed its fifth utility patent, marking a significant milestone in our study of 'Innovation Agency' in the 9-11 age group.",
-          primaryCta: { label: "View IP Registry", href: "/publications-open-science#ip-registry" },
-          image: { src: "/src/assets/banners/newsroom-press.jpg", alt: "Patent update banner", variant: "hero" }
-        },
-        {
-          id: "update-content",
-          type: "textBlock",
-          header: "Patent Details",
-          body:
-            "The Drone Research Centre has filed its fifth utility patent: \"The Guardian\" Sanitization Drone.\n\nInventors: Drone Research Centre students (Ages 9-11)\nStatus: Examination Stage\nDescription: Dual-rotor autonomous drone for bio-hazard control.\n\nThis milestone supports our longitudinal study of 'Innovation Agency' — tracking how early patent ownership affects future STEM engagement and problem-solving capacity."
-        }
-      ]
-    },
-
-    "/newsroom/updates/visiting-scholars-2026": {
-      title: "Update: Visiting Scholar Applications Open for 2026",
-      metaDescription: "Applications are now open for the 2026 Winter Residency visiting scholar program.",
-      seo: {
-        title: "Update: Visiting Scholars 2026 | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/newsroom/updates/visiting-scholars-2026",
-        robots: "noindex,nofollow,noarchive,nosnippet"
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "NewsArticle",
-          headline: "Update: Visiting Scholar Applications Open for 2026 Cycle",
-          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          datePublished: "2025-08-10",
-          url: "https://blueblocks.in/newsroom/updates/visiting-scholars-2026"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://blueblocks.in/newsroom" },
-            { "@type": "ListItem", position: 3, name: "Update", item: "https://blueblocks.in/newsroom/updates/visiting-scholars-2026" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "update-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Update: Visiting Scholar Applications Open for 2026 Cycle",
-          subheadline: "We are now accepting proposals for the Winter Residency. PhD candidates focusing on longitudinal behavioral observation are encouraged to apply.",
-          primaryCta: { label: "Apply for Fellowship", href: "/collaborate" },
-          image: { src: "/src/assets/banners/newsroom-press.jpg", alt: "Fellowship update banner", variant: "hero" }
-        },
-        {
-          id: "update-content",
-          type: "textBlock",
-          header: "Fellowship Details",
-          body:
-            "Applications are now open for the 2026 Visiting Scholar program.\n\nDuration: 2-8 weeks\nFocus Areas: Longitudinal behavioral observation, micro-research methodology, education research\nEligibility: PhD candidates, Post-Docs, Faculty\n\nVisiting scholars will have access to our archive, methodology training, and collaboration opportunities with Embedded Research Fellows."
-        }
-      ]
-    },
-
-    "/sitemap": {
-      title: "Sitemap",
-      metaDescription: "A structured index of public pages for navigation and accessibility at Blue Blocks Micro Research Institute.",
-      seo: {
-        title: "Sitemap | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/sitemap",
-        robots: "noindex, nofollow, noarchive, nosnippet",
-        openGraph: {
-          type: "website",
-          url: "https://siddheshv1.lovable.app/sitemap",
-          title: "Sitemap | Blue Blocks Micro Research Institute",
-          description: "A structured index of public pages for navigation and accessibility.",
-          image: {
-            url: "https://siddheshv1.lovable.app/og/sitemap.jpg",
-            width: 1200,
-            height: 630,
-            alt: "Blue Blocks Micro Research Institute Sitemap"
-          }
-        },
-        twitter: {
-          card: "summary_large_image",
-          title: "Sitemap | Blue Blocks Micro Research Institute",
-          description: "A structured index of public pages for navigation and accessibility.",
-          image: "https://siddheshv1.lovable.app/og/sitemap.jpg"
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/",
-          logo: "https://siddheshv1.lovable.app/logo.png",
-          email: "research@blueblocks.in"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
-          name: "Sitemap",
-          url: "https://siddheshv1.lovable.app/sitemap",
-          description: "A structured index of public pages for navigation and accessibility.",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" },
-          hasPart: [
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter" },
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study" },
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/patents" },
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/books" },
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/team" },
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/downloads" }
-          ]
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Sitemap", item: "https://siddheshv1.lovable.app/sitemap" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "sitemap-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Sitemap",
-          subheadline: "A structured index of public pages for navigation and accessibility.",
-          image: { src: "/src/assets/banners/downloads-archive.jpg", alt: "Sitemap banner", variant: "hero" }
-        },
-        {
-          id: "sitemap-content",
-          type: "sitemap"
-        }
-      ]
-    },
-
-    // ============ PUBLICATIONS DETAIL PAGES ============
-
-    "/publications/in-space-authorization-letter": {
-      title: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
-      metaDescription: "Official IN-SPACe authorization record for the SBB-1 mission activity, preserved as a permanent institutional artifact for governance traceability.",
-      seo: {
-        title: "IN-SPACe Authorization Letter | Publications | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter",
-        robots: "noindex, nofollow, noarchive, nosnippet",
-        openGraph: {
-          type: "article",
-          url: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter",
-          title: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
-          description: "Official IN-SPACe authorization record for the SBB-1 mission activity, preserved for governance traceability.",
-          image: {
-            url: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80",
-            width: 1200,
-            height: 630,
-            alt: "Mission control environment"
-          }
-        },
-        twitter: {
-          card: "summary_large_image",
-          title: "IN-SPACe Authorization Letter | Blue Blocks",
-          description: "Official authorization record for SBB-1 mission, archived with DOI for citation.",
-          image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1200&q=80"
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/",
-          logo: "https://siddheshv1.lovable.app/logo.png",
-          email: "research@blueblocks.in"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "TechArticle",
-          name: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
-          headline: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
-          description: "Official IN-SPACe authorization record for the SBB-1 mission activity, preserved as a permanent institutional artifact.",
-          url: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter",
-          author: { "@type": "Organization", name: "IN-SPACe (Department of Space, Government of India)" },
-          publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          identifier: {
-            "@type": "PropertyValue",
-            propertyID: "DOI",
-            value: "10.5281/zenodo.18195108"
-          },
-          datePublished: "2026-01-07"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Publications", item: "https://siddheshv1.lovable.app/publications-open-science" },
-            { "@type": "ListItem", position: 3, name: "IN-SPACe Authorization Letter", item: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "auth-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
-          subheadline: "This page preserves the official authorization record issued for the SBB-1 mission activity. It is presented as a permanent institutional artifact for governance traceability and citation.",
-          primaryCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18195108", external: true },
-          secondaryCta: { label: "Download PDF", href: "/downloads/in-space-authorization-letter.pdf" },
-          image: {
-            src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=2400&q=80",
-            alt: "Mission control environment",
-            variant: "hero"
-          }
-        },
-        {
-          id: "auth-meta",
-          type: "metaStrip",
-          items: [
-            { label: "DOI", value: "10.5281/zenodo.18195108", href: "https://doi.org/10.5281/zenodo.18195108", external: true },
-            { label: "Record Type", value: "Administrative Authorization" },
-            { label: "Authority", value: "IN-SPACe (Dept. of Space, GoI)" },
-            { label: "Authorization No", value: "PMA/IN-SPACe/AUTH/2026/115" },
-            { label: "Date of Release", value: "07 January 2026" },
-            { label: "Access", value: "Public Record (Open Access)" }
-          ]
-        },
-        {
-          id: "auth-content",
-          type: "twoColumn",
-          left: {
-            sections: [
-              {
-                title: "Abstract",
-                body: "This record archives the official IN-SPACe authorization issued for the SBB-1 mission activity and preserves it as a citable, permanent administrative artifact. The purpose of hosting this document here is institutional traceability: it provides a verifiable governance reference for mission clearance, compliance readiness, and public documentation standards."
-              },
-              {
-                title: "What this record confirms",
-                bullets: [
-                  "Formal authorization was issued by IN-SPACe for the mission-related activity referenced in the document.",
-                  "The authorized entity is recorded as Blue Blocks Montessori Educational Society.",
-                  "The authorization is preserved for auditability, archival stability, and DOI-based referencing."
-                ]
-              },
-              {
-                title: "Usage & citation",
-                body: "This record may be cited in academic writing, governance documentation, and institutional reporting. Where reproduced, it should be cited via DOI to preserve a stable reference."
-              }
-            ]
-          },
-          right: {
-            panels: [
-              {
-                title: "Suggested Citation",
-                citation: "Blue Blocks Micro Research Institute. (2026). IN-SPACe Authorization Letter (SBB-1 / Blue Blocks) [Administrative record]. Zenodo. https://doi.org/10.5281/zenodo.18195108"
-              },
-              {
-                title: "Downloads & Links",
-                links: [
-                  { label: "Download PDF", href: "/downloads/in-space-authorization-letter.pdf", download: true },
-                  { label: "Related: SAPARYA Case Study", href: "/publications/saparya-imf-case-study" },
-                  { label: "Related Mission Reference", href: "https://blueblocks.in/Innovation/CubeSat-Mission/", external: true }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          id: "auth-evidence",
-          type: "galleryGrid",
-          sectionName: "Visual Evidence",
-          items: [
-            { title: "Document Archive", tag: "Record", image: { src: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80", alt: "Document close-up" } },
-            { title: "Archive Desk", tag: "Paperwork", image: { src: "https://images.unsplash.com/photo-1450101215322-bf5cd27642fc?auto=format&fit=crop&w=800&q=80", alt: "Archive paperwork" } },
-            { title: "Mission Control", tag: "Operations", image: { src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80", alt: "Mission control" } },
-            { title: "Lab Instruments", tag: "Technical", image: { src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80", alt: "Lab instruments" } }
-          ]
-        },
-        {
-          id: "auth-faq",
-          type: "accordion",
-          header: "Frequently Asked Questions",
-          items: [
-            {
-              q: "Is this the original authorization?",
-              a: "This page hosts the archived public record as preserved via DOI. The Zenodo record serves as the citation-grade source."
-            },
-            {
-              q: "Can institutions use this for verification?",
-              a: "Yes. This is specifically hosted to support governance traceability and documentation integrity."
-            },
-            {
-              q: "Does this reveal student identities?",
-              a: "No. This page is structured to preserve administrative proof-points without exposing minors or private data."
-            },
-            {
-              q: "Can this be reused in press or publications?",
-              a: "Yes, with proper DOI citation and without altering the document context."
-            }
-          ]
-        },
-        {
-          id: "auth-related",
-          type: "relatedCards",
-          header: "Related Registry",
-          cards: [
-            { title: "Patents Registry", description: "Student-generated inventions and IP filings.", icon: "patent", href: "/patents" },
-            { title: "Books", description: "Long-form publications for educators and families.", icon: "book", href: "/books" },
-            { title: "Newsroom", description: "Press releases and institutional updates.", icon: "newsroom", href: "/newsroom" }
-          ]
-        }
-      ]
-    },
-
-    "/publications/saparya-imf-case-study": {
-      title: "SAPARYA / IMF Conference Case Study",
-      metaDescription: "A documented adolescent engineering mission presented as an institutional case study in Montessori adolescence.",
-      seo: {
-        title: "SAPARYA Case Study | Publications | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study",
-        robots: "noindex, nofollow, noarchive, nosnippet",
-        openGraph: {
-          type: "article",
-          url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study",
-          title: "SAPARYA / IMF Conference Case Study",
-          description: "A documented adolescent engineering mission presented as an institutional case study.",
-          image: {
-            url: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80",
-            width: 1200,
-            height: 630,
-            alt: "Conference presentation"
-          }
-        },
-        twitter: {
-          card: "summary_large_image",
-          title: "SAPARYA Case Study | Blue Blocks",
-          description: "Adolescent engineering mission case study, archived with DOI.",
-          image: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80"
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/",
-          logo: "https://siddheshv1.lovable.app/logo.png",
-          email: "research@blueblocks.in"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "TechArticle",
-          name: "SAPARYA / IMF Conference Case Study",
-          headline: "SAPARYA / IMF Conference Case Study: SBB-1 Mission & Valorization",
-          description: "A documented adolescent engineering mission presented as an institutional case study in Montessori adolescence.",
-          url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study",
-          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          identifier: {
-            "@type": "PropertyValue",
-            propertyID: "DOI",
-            value: "10.5281/zenodo.18337934"
-          },
-          datePublished: "2026-01-24"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Publications", item: "https://siddheshv1.lovable.app/publications-open-science" },
-            { "@type": "ListItem", position: 3, name: "SAPARYA Case Study", item: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "saparya-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "SAPARYA / IMF Conference Case Study",
-          subheadline: "A documented adolescent engineering mission presented as an institutional case study in Montessori adolescence. The focus is not \"success,\" but the credibility of real-world responsibility and real-world consequences.",
-          primaryCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18337934", external: true },
-          secondaryCta: { label: "Download Conference Materials", href: "/downloads/saparya-conference-booklet.pdf" },
-          image: {
-            src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=2400&q=80",
-            alt: "Conference presentation",
-            variant: "hero"
-          }
-        },
-        {
-          id: "saparya-meta",
-          type: "metaStrip",
-          items: [
-            { label: "DOI", value: "10.5281/zenodo.18337934", href: "https://doi.org/10.5281/zenodo.18337934", external: true },
-            { label: "Domain", value: "Montessori Adolescence + Aerospace" },
-            { label: "Event", value: "Saparya 7th National Montessori Conference" },
-            { label: "Location", value: "Mumbai" },
-            { label: "Dates", value: "23–24 January 2026" },
-            { label: "Access", value: "Open Access Record" }
-          ]
-        },
-        {
-          id: "saparya-content",
-          type: "twoColumn",
-          left: {
-            sections: [
-              {
-                title: "Abstract",
-                body: "This case study documents how adolescents (ages 12–15) designed and built the SBB-1 hosted payload, navigated an 18-month technical review pathway, and received official authorization from IN-SPACe prior to launch. The work launched aboard ISRO PSLV-C62 on 12 January 2026. Although the launch vehicle experienced a Stage 4 ignition failure at T+847 seconds, the mission remains a valid pedagogical proof-point: the engineering work was real, professionally constrained, and accountable to external standards."
-              },
-              {
-                title: "Why this case study matters",
-                bullets: [
-                  "It documents a regulatory pathway, not a classroom simulation.",
-                  "It provides a traceable example of adolescent engineering under professional review.",
-                  "It frames \"valorization\" as responsibility under authentic stakes, including failure modes beyond student control."
-                ]
-              },
-              {
-                title: "Key highlights",
-                bullets: [
-                  "A 10cm continuity: Pink Tower → Binomial Cube → 1U CubeSat geometry (10cm x 10cm x 10cm)",
-                  "IN-SPACe authorization after an 18-month technical review cycle",
-                  "External technical constraints shaped the work (compliance, qualification, integration checks)",
-                  "Launch vehicle anomaly occurred at Stage 4 ignition (T+847 seconds)",
-                  "Pedagogical outcome: accountability, resilience, documentation discipline, and long-horizon iteration"
-                ]
-              }
-            ]
-          },
-          right: {
-            panels: [
-              {
-                title: "Suggested Citation",
-                citation: "Blue Blocks Micro Research Institute. (2026). SAPARYA / IMF Conference Case Study: SBB-1 Mission & Valorization [Case study]. Zenodo. https://doi.org/10.5281/zenodo.18337934"
-              },
-              {
-                title: "Downloads & Links",
-                links: [
-                  { label: "Conference Booklet PDF", href: "/downloads/saparya-conference-booklet.pdf", download: true },
-                  { label: "Presentation PDF", href: "/downloads/saparya-presentation.pdf", download: true },
-                  { label: "Governance Page", href: "/governance" },
-                  { label: "Patents Registry", href: "/patents" }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          id: "saparya-evidence",
-          type: "galleryGrid",
-          sectionName: "Visual Evidence",
-          items: [
-            { title: "Conference Stage", tag: "Event", image: { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80", alt: "Conference stage" } },
-            { title: "Rocket Launch", tag: "Mission", image: { src: "https://images.unsplash.com/photo-1541185934-01b600ea069c?auto=format&fit=crop&w=800&q=80", alt: "Rocket launch" } },
-            { title: "Presentation Slides", tag: "Content", image: { src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80", alt: "Presentation slides" } },
-            { title: "Mission Control", tag: "Operations", image: { src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80", alt: "Mission control" } }
-          ]
-        },
-        {
-          id: "saparya-faq",
-          type: "accordion",
-          header: "Frequently Asked Questions",
-          items: [
-            {
-              q: "Was the mission a success?",
-              a: "The pedagogical objective was professional-grade work under real constraints. The launch anomaly does not invalidate the engineering credibility of the process."
-            },
-            {
-              q: "Is this peer-reviewed?",
-              a: "This record is archived for citation and traceability. Publication-grade review occurs through internal research council processes and external validation where required."
-            },
-            {
-              q: "Can other institutions replicate this?",
-              a: "The methodology is designed to be transferable, but requires ethics infrastructure, longitudinal continuity, and documentation discipline."
-            }
-          ]
-        },
-        {
-          id: "saparya-related",
-          type: "relatedCards",
-          header: "Related Registry",
-          cards: [
-            { title: "Patents Registry", description: "Student-generated inventions and IP filings.", icon: "patent", href: "/patents" },
-            { title: "Books", description: "Long-form publications for educators.", icon: "book", href: "/books" },
-            { title: "Newsroom", description: "Press releases and institutional updates.", icon: "newsroom", href: "/newsroom" }
-          ]
-        }
-      ]
-    },
-
-    // ============ PATENTS PAGES ============
-
-    "/patents": {
-      title: "Patent Registry",
-      metaDescription: "Registry of student-generated inventions produced under high-stakes prototyping environments at Blue Blocks Micro Research Institute.",
-      seo: {
-        title: "Patent Registry | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/patents",
-        robots: "noindex, nofollow, noarchive, nosnippet",
-        openGraph: {
-          type: "website",
-          url: "https://siddheshv1.lovable.app/patents",
-          title: "Patent Registry | Blue Blocks Micro Research Institute",
-          description: "Registry of student-generated inventions produced under high-stakes prototyping environments.",
-          image: {
-            url: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1200&q=80",
-            width: 1200,
-            height: 630,
-            alt: "Blueprint engineering"
-          }
-        },
-        twitter: {
-          card: "summary_large_image",
-          title: "Patent Registry | Blue Blocks",
-          description: "Student-generated inventions from high-stakes prototyping environments.",
-          image: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1200&q=80"
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/",
-          logo: "https://siddheshv1.lovable.app/logo.png",
-          email: "research@blueblocks.in"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
-          name: "Patent Registry",
-          url: "https://siddheshv1.lovable.app/patents",
-          description: "Registry of student-generated inventions produced under high-stakes prototyping environments.",
-          hasPart: [
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/patents/automated-security-uav" },
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/patents/borehole-rescue-system" },
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/patents/contactless-delivery-system" },
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system" },
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system" }
-          ]
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "patents-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Patent Registry",
-          subheadline: "This registry documents student-generated inventions produced under high-stakes prototyping environments. All patent artifacts are presented as institutional records. Where details are under examination, fields are marked as pending.",
-          primaryCta: { label: "View Publications", href: "/publications-open-science" },
-          image: {
-            src: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=2400&q=80",
-            alt: "Blueprint engineering",
-            variant: "hero"
-          }
-        },
-        {
-          id: "patents-grid",
-          type: "patentGrid",
-          header: "Registered Patents",
-          intro: "Filter by status, domain, or age group to review inventions and their associated documentation.",
-          filterNote: "Status: Pending | Categories: Robotics, Medical Robotics, Public Health, Logistics",
-          cards: [
-            {
-              title: "System for Automated Security (UAV)",
-              status: "Pending",
-              category: "Robotics / UAS",
-              filingDate: "July 22, 2020",
-              ageGroup: "12–16",
-              applicationNo: "202041031343",
-              description: "A responsive aerial surveillance system for rapid safety operations using sensor fusion and geolocation routing.",
-              href: "/patents/automated-security-uav"
-            },
-            {
-              title: "Borehole Rescue System (BRS)",
-              status: "Pending",
-              category: "Robotics / Rescue",
-              filingDate: "July 25, 2020",
-              ageGroup: "12–16",
-              applicationNo: "202041027026",
-              description: "A vertical-access rescue apparatus engineered for narrow-shaft stabilization and safe extraction.",
-              href: "/patents/borehole-rescue-system"
-            },
-            {
-              title: "Autonomous Contactless Delivery System (ACDS)",
-              status: "Pending",
-              category: "Autonomous Logistics",
-              filingDate: "June 25, 2020",
-              ageGroup: "12–16",
-              applicationNo: "TBD",
-              description: "An autonomous logistics platform built for contamination-safe distribution scenarios.",
-              href: "/patents/contactless-delivery-system"
-            },
-            {
-              title: "Autonomous Medical Assistance System (AMAS)",
-              status: "Pending",
-              category: "Medical Robotics",
-              filingDate: "June 25, 2020",
-              ageGroup: "12–16",
-              applicationNo: "202041027075",
-              description: "A telerobotic platform for contactless medical support, sampling, and sanitation.",
-              href: "/patents/autonomous-medical-assistance-system"
-            },
-            {
-              title: "Autonomous Health Monitoring System (AHMS)",
-              status: "Pending",
-              category: "Bio-Telemetry",
-              filingDate: "June 25, 2020",
-              ageGroup: "12–16",
-              applicationNo: "TBD",
-              description: "A remote surveillance and alerting network using non-invasive biometric sensing and patrol logic.",
-              href: "/patents/autonomous-health-monitoring-system"
-            }
-          ]
-        }
-      ]
-    },
-
-    "/patents/automated-security-uav": {
-      title: "System for Automated Security (UAV)",
-      metaDescription: "A responsive aerial surveillance system engineered to reduce latency in emergency security operations.",
-      seo: {
-        title: "Automated Security UAV Patent | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/patents/automated-security-uav",
-        robots: "noindex, nofollow, noarchive, nosnippet",
-        openGraph: {
-          type: "article",
-          url: "https://siddheshv1.lovable.app/patents/automated-security-uav",
-          title: "Automated Security UAV Patent",
-          description: "A responsive aerial surveillance system for rapid safety operations.",
-          image: {
-            url: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
-            width: 1200,
-            height: 630,
-            alt: "Robotics blueprint"
-          }
-        },
-        twitter: {
-          card: "summary_large_image",
-          title: "Automated Security UAV | Blue Blocks",
-          description: "Student-generated patent for aerial surveillance system.",
-          image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80"
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/",
-          logo: "https://siddheshv1.lovable.app/logo.png",
-          email: "research@blueblocks.in"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "CreativeWork",
-          name: "System for Automated Security (UAV)",
-          description: "A responsive aerial surveillance system engineered to reduce latency in emergency security operations.",
-          url: "https://siddheshv1.lovable.app/patents/automated-security-uav",
-          creator: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          identifier: {
-            "@type": "PropertyValue",
-            propertyID: "Patent Application Number",
-            value: "202041031343"
-          }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
-            { "@type": "ListItem", position: 3, name: "Automated Security UAV", item: "https://siddheshv1.lovable.app/patents/automated-security-uav" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "uav-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "System for Automated Security (UAV)",
-          subheadline: "A responsive aerial surveillance system engineered to reduce latency in emergency security operations using sensor fusion and rule-based response logic.",
-          primaryCta: { label: "Back to Patents", href: "/patents" },
-          image: { src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=2400&q=80", alt: "Robotics blueprint", variant: "hero" }
-        },
-        {
-          id: "uav-meta",
-          type: "metaStrip",
-          items: [
-            { label: "Filing Date", value: "July 22, 2020" },
-            { label: "Status", value: "Pending" },
-            { label: "Category", value: "Robotics / UAS" },
-            { label: "Age Group", value: "12–16" },
-            { label: "Application No", value: "202041031343" }
-          ]
-        },
-        {
-          id: "uav-content",
-          type: "twoColumn",
-          left: {
-            sections: [
-              { title: "Abstract", body: "A responsive aerial surveillance system engineered to reduce latency in emergency security operations. The system receives encrypted alerts, triangulates a target location, and executes safety actions using sensor fusion and rule-based response logic." },
-              { title: "Problem Solved", body: "Traditional emergency response suffers from time delays, blind spots, and limited real-time visibility. This system is designed to rapidly provide aerial situational awareness and extend monitoring coverage during critical incidents." },
-              { title: "How It Works", body: "A central trigger generates an alert, location is identified through routing logic, and the UAV initiates a response flight. Onboard sensors capture telemetry and visual feeds for real-time monitoring. Safety actions follow a defined operational protocol." },
-              { title: "Key Components", bullets: ["Alert ingestion and routing logic", "UAV platform + stabilization", "Sensor fusion (visual + telemetry)", "Secure logging and reporting"] }
-            ]
-          },
-          right: {
-            panels: [
-              {
-                title: "Inventors",
-                profiles: [
-                  { name: "Aryan Oleti", href: "/team/aryan-oleti" },
-                  { name: "Hasith Sankuri", href: "/team/hasith-sankuri" },
-                  { name: "Akshat Gupta", href: "/team/akshat-gupta" }
-                ]
-              },
-              {
-                title: "Related Links",
-                links: [
-                  { label: "Back to Patents Registry", href: "/patents" },
-                  { label: "View Publications", href: "/publications-open-science" }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          id: "uav-gallery",
-          type: "galleryGrid",
-          sectionName: "Diagrams & Process Images",
-          items: [
-            { title: "Technical Blueprint", tag: "Design", image: { src: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=800&q=80", alt: "Blueprint" } },
-            { title: "Mechanical Systems", tag: "Engineering", image: { src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80", alt: "Mechanical" } },
-            { title: "Electronics", tag: "Components", image: { src: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80", alt: "Electronics" } }
-          ]
-        },
-        {
-          id: "uav-faq",
-          type: "accordion",
-          header: "Patent FAQs",
-          items: [
-            { q: "Who owns this patent?", a: "IP rights remain with the student inventors. The Institute facilitates filing and provides pedagogical context." },
-            { q: "Can this be licensed?", a: "Licensing inquiries can be routed through the Contact page." },
-            { q: "How can I verify this filing?", a: "The application number can be verified through the Indian Patent Office database." }
-          ]
-        },
-        {
-          id: "uav-related",
-          type: "relatedCards",
-          header: "Related Registry",
-          cards: [
-            { title: "Patents Registry", description: "View all registered patents.", icon: "patent", href: "/patents" },
-            { title: "Publications", description: "Research docket and case studies.", icon: "publication", href: "/publications-open-science" },
-            { title: "Books", description: "Long-form publications.", icon: "book", href: "/books" }
-          ]
-        }
-      ]
-    },
-
-    "/patents/borehole-rescue-system": {
-      title: "Borehole Rescue System (BRS)",
-      metaDescription: "A rescue apparatus designed for narrow-shaft environments with adaptive positioning and safe extraction mechanisms.",
-      seo: {
-        title: "Borehole Rescue System Patent | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/patents/borehole-rescue-system",
-        robots: "noindex, nofollow, noarchive, nosnippet",
-        openGraph: {
-          type: "article",
-          url: "https://siddheshv1.lovable.app/patents/borehole-rescue-system",
-          title: "Borehole Rescue System Patent",
-          description: "A rescue apparatus for narrow-shaft environments with adaptive positioning.",
-          image: {
-            url: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
-            width: 1200,
-            height: 630,
-            alt: "Robotics engineering"
-          }
-        },
-        twitter: {
-          card: "summary_large_image",
-          title: "Borehole Rescue System | Blue Blocks",
-          description: "Student-generated patent for rescue apparatus.",
-          image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80"
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/",
-          logo: "https://siddheshv1.lovable.app/logo.png",
-          email: "research@blueblocks.in"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "CreativeWork",
-          name: "Borehole Rescue System (BRS)",
-          description: "A rescue apparatus for narrow-shaft environments.",
-          url: "https://siddheshv1.lovable.app/patents/borehole-rescue-system",
-          creator: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          identifier: {
-            "@type": "PropertyValue",
-            propertyID: "Patent Application Number",
-            value: "202041027026"
-          }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
-            { "@type": "ListItem", position: 3, name: "Borehole Rescue System", item: "https://siddheshv1.lovable.app/patents/borehole-rescue-system" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "brs-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Borehole Rescue System (BRS)",
-          subheadline: "A rescue apparatus designed for narrow-shaft environments using adaptive positioning, anti-collision awareness, and a retention mechanism for safe extraction.",
-          primaryCta: { label: "Back to Patents", href: "/patents" },
-          image: { src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=2400&q=80", alt: "Robotics engineering", variant: "hero" }
-        },
-        {
-          id: "brs-meta",
-          type: "metaStrip",
-          items: [
-            { label: "Filing Date", value: "July 25, 2020" },
-            { label: "Status", value: "Pending" },
-            { label: "Category", value: "Robotics / Rescue Systems" },
-            { label: "Age Group", value: "12–16" },
-            { label: "Application No", value: "202041027026" }
-          ]
-        },
-        {
-          id: "brs-content",
-          type: "twoColumn",
-          left: {
-            sections: [
-              { title: "Abstract", body: "A rescue apparatus designed for narrow-shaft environments. The system uses adaptive positioning, anti-collision awareness, and a retention mechanism to stabilize and lift a subject safely from a vertical shaft." },
-              { title: "Problem Solved", body: "Rescue operations in boreholes are constrained by limited access, visibility, and high risk of secondary harm. This system aims to reduce mechanical instability and increase extraction safety." },
-              { title: "How It Works", body: "The apparatus descends with controlled stabilization. Sensors guide positioning to avoid collision, and a secure retention mechanism stabilizes the subject before controlled extraction." },
-              { title: "Key Components", bullets: ["Narrow-shaft compatible footprint", "Anti-collision sensing", "Stabilization + retention mechanism", "Controlled lift system"] }
-            ]
-          },
-          right: {
-            panels: [
-              {
-                title: "Inventors",
-                profiles: [
-                  { name: "Dhairya Singh Bangari", href: "/team/dhairya-singh-bangari" },
-                  { name: "Sanshray Padhy", href: "/team/sanshray-padhy" },
-                  { name: "Ayushmaan", href: "/team/ayushmaan" }
-                ]
-              },
-              { title: "Related Links", links: [{ label: "Back to Patents Registry", href: "/patents" }, { label: "View Publications", href: "/publications-open-science" }] }
-            ]
-          }
-        },
-        {
-          id: "brs-faq",
-          type: "accordion",
-          header: "Patent FAQs",
-          items: [
-            { q: "Who owns this patent?", a: "IP rights remain with the student inventors. The Institute facilitates filing." },
-            { q: "Has this been tested?", a: "Prototype testing details are maintained in internal records." }
-          ]
-        }
-      ]
-    },
-
-    "/patents/contactless-delivery-system": {
-      title: "Autonomous Contactless Delivery System (ACDS)",
-      metaDescription: "An autonomous logistics ecosystem for contactless distribution during high-risk contamination scenarios.",
-      seo: {
-        title: "Contactless Delivery System Patent | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/patents/contactless-delivery-system",
-        robots: "noindex, nofollow, noarchive, nosnippet",
-        openGraph: {
-          type: "article",
-          url: "https://siddheshv1.lovable.app/patents/contactless-delivery-system",
-          title: "Contactless Delivery System Patent",
-          description: "An autonomous logistics ecosystem for contactless distribution.",
-          image: {
-            url: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80",
-            width: 1200,
-            height: 630,
-            alt: "Robotics"
-          }
-        },
-        twitter: {
-          card: "summary_large_image",
-          title: "Contactless Delivery System | Blue Blocks",
-          description: "Student-generated patent for autonomous logistics.",
-          image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80"
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/",
-          logo: "https://siddheshv1.lovable.app/logo.png",
-          email: "research@blueblocks.in"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "CreativeWork",
-          name: "Autonomous Contactless Delivery System (ACDS)",
-          description: "An autonomous logistics ecosystem for contactless distribution.",
-          url: "https://siddheshv1.lovable.app/patents/contactless-delivery-system",
-          creator: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
-            { "@type": "ListItem", position: 3, name: "Contactless Delivery System", item: "https://siddheshv1.lovable.app/patents/contactless-delivery-system" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "acds-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Autonomous Contactless Delivery System (ACDS)",
-          subheadline: "An autonomous logistics ecosystem for contactless distribution during high-risk contamination scenarios.",
-          primaryCta: { label: "Back to Patents", href: "/patents" },
-          image: { src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=2400&q=80", alt: "Robotics", variant: "hero" }
-        },
-        {
-          id: "acds-meta",
-          type: "metaStrip",
-          items: [
-            { label: "Filing Date", value: "June 25, 2020" },
-            { label: "Status", value: "Pending" },
-            { label: "Category", value: "Autonomous Logistics / Public Health" },
-            { label: "Age Group", value: "12–16" },
-            { label: "Application No", value: "TBD" }
-          ]
-        },
-        {
-          id: "acds-content",
-          type: "twoColumn",
-          left: {
-            sections: [
-              { title: "Abstract", body: "An autonomous logistics ecosystem for contactless distribution during high-risk contamination scenarios. Integrates navigation, sanitation, item handling, and inspection to reduce human exposure during distribution operations." },
-              { title: "Problem Solved", body: "Manual delivery during contagion scenarios increases exposure risk and operational bottlenecks. ACDS is designed to support safer last-mile delivery workflows." },
-              { title: "How It Works", body: "The system navigates to a target location, conducts sanitation cycles, performs item handling using controlled mechanisms, and logs delivery confirmation through sensor feedback." },
-              { title: "Key Components", bullets: ["Autonomous navigation + telemetry", "Sanitation atomization module", "Item handling mechanism (robotic handling logic)", "Inspection/verification via sensors"] }
-            ]
-          },
-          right: {
-            panels: [
-              {
-                title: "Inventors",
-                profiles: [
-                  { name: "Akira Mani", href: "/team/akira-mani" },
-                  { name: "Aditi Vuppala", href: "/team/aditi-vuppala" },
-                  { name: "Uma V Jayaraman", href: "/team/uma-v-jayaraman" },
-                  { name: "Nayonika Vadlamudi", href: "/team/nayonika-vadlamudi" }
-                ]
-              },
-              { title: "Related Links", links: [{ label: "Back to Patents Registry", href: "/patents" }] }
-            ]
-          }
-        }
-      ]
-    },
-
-    "/patents/autonomous-medical-assistance-system": {
-      title: "Autonomous Medical Assistance System (AMAS)",
-      metaDescription: "A telerobotic medical support platform designed for contactless assistance during crisis conditions.",
-      seo: {
-        title: "Medical Assistance System Patent | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system",
-        robots: "noindex, nofollow, noarchive, nosnippet",
-        openGraph: {
-          type: "article",
-          url: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system",
-          title: "Autonomous Medical Assistance System Patent",
-          description: "A telerobotic medical support platform for contactless assistance.",
-          image: {
-            url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-            width: 1200,
-            height: 630,
-            alt: "Medical robotics"
-          }
-        },
-        twitter: {
-          card: "summary_large_image",
-          title: "Medical Assistance System | Blue Blocks",
-          description: "Student-generated patent for medical robotics.",
-          image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/",
-          logo: "https://siddheshv1.lovable.app/logo.png",
-          email: "research@blueblocks.in"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "CreativeWork",
-          name: "Autonomous Medical Assistance System (AMAS)",
-          description: "A telerobotic medical support platform for contactless assistance.",
-          url: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system",
-          creator: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          identifier: {
-            "@type": "PropertyValue",
-            propertyID: "Patent Application Number",
-            value: "202041027075"
-          }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
-            { "@type": "ListItem", position: 3, name: "Medical Assistance System", item: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "amas-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Autonomous Medical Assistance System (AMAS)",
-          subheadline: "A telerobotic medical support platform designed for contactless assistance during crisis conditions.",
-          primaryCta: { label: "Back to Patents", href: "/patents" },
-          image: { src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=2400&q=80", alt: "Medical robotics", variant: "hero" }
-        },
-        {
-          id: "amas-meta",
-          type: "metaStrip",
-          items: [
-            { label: "Filing Date", value: "June 25, 2020" },
-            { label: "Status", value: "Pending" },
-            { label: "Category", value: "Medical Robotics / Telerobotics" },
-            { label: "Age Group", value: "12–16" },
-            { label: "Application No", value: "202041027075" }
-          ]
-        },
-        {
-          id: "amas-content",
-          type: "twoColumn",
-          left: {
-            sections: [
-              { title: "Abstract", body: "A telerobotic medical support platform designed for contactless assistance during crisis conditions. Supports sample retrieval, controlled handling tasks, and sanitation protocols to reduce physical contact." },
-              { title: "Problem Solved", body: "Direct contact during outbreaks raises risk for healthcare staff and patients. AMAS is designed to reduce exposure in repeatable support workflows." },
-              { title: "How It Works", body: "A remote operator or predefined protocol controls robotic actions. The system integrates sensor feedback and sanitation cycles to maintain safer operational handling." },
-              { title: "Key Components", bullets: ["Robotic arms + controlled handling", "Imaging and sensor integration", "Sanitation (UVGI + chemical)", "Remote operation/control interface"] }
-            ]
-          },
-          right: {
-            panels: [
-              {
-                title: "Inventors",
-                profiles: [
-                  { name: "Trisha Mohit Sachanandani", href: "/team/trisha-mohit-sachanandani" },
-                  { name: "Ananya", href: "/team/ananya" },
-                  { name: "Aarini Khadse", href: "/team/aarini-khadse" },
-                  { name: "Anya", href: "/team/anya" }
-                ]
-              },
-              { title: "Related Links", links: [{ label: "Back to Patents Registry", href: "/patents" }] }
-            ]
-          }
-        }
-      ]
-    },
-
-    "/patents/autonomous-health-monitoring-system": {
-      title: "Autonomous Health Monitoring System (AHMS)",
-      metaDescription: "A remote epidemiological surveillance network designed for non-invasive biometric detection and alerting.",
-      seo: {
-        title: "Health Monitoring System Patent | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system",
-        robots: "noindex, nofollow, noarchive, nosnippet",
-        openGraph: {
-          type: "article",
-          url: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system",
-          title: "Autonomous Health Monitoring System Patent",
-          description: "A remote surveillance network for non-invasive biometric detection.",
-          image: {
-            url: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80",
-            width: 1200,
-            height: 630,
-            alt: "Bio-telemetry"
-          }
-        },
-        twitter: {
-          card: "summary_large_image",
-          title: "Health Monitoring System | Blue Blocks",
-          description: "Student-generated patent for bio-telemetry.",
-          image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=80"
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/",
-          logo: "https://siddheshv1.lovable.app/logo.png",
-          email: "research@blueblocks.in"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "CreativeWork",
-          name: "Autonomous Health Monitoring System (AHMS)",
-          description: "A remote surveillance network for non-invasive biometric detection.",
-          url: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system",
-          creator: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
-            { "@type": "ListItem", position: 3, name: "Health Monitoring System", item: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "ahms-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Autonomous Health Monitoring System (AHMS)",
-          subheadline: "A remote epidemiological surveillance network designed for non-invasive biometric detection and alerting.",
-          primaryCta: { label: "Back to Patents", href: "/patents" },
-          image: { src: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2400&q=80", alt: "Bio-telemetry", variant: "hero" }
-        },
-        {
-          id: "ahms-meta",
-          type: "metaStrip",
-          items: [
-            { label: "Filing Date", value: "June 25, 2020" },
-            { label: "Status", value: "Pending" },
-            { label: "Category", value: "Bio-Telemetry / Public Health" },
-            { label: "Age Group", value: "12–16" },
-            { label: "Application No", value: "TBD" }
-          ]
-        },
-        {
-          id: "ahms-content",
-          type: "twoColumn",
-          left: {
-            sections: [
-              { title: "Abstract", body: "A remote epidemiological surveillance network designed for non-invasive biometric detection and alerting. Uses thermal sensing and signal extraction methods to detect potential health anomalies without direct contact." },
-              { title: "Problem Solved", body: "Large-scale monitoring requires non-invasive, repeatable, low-contact methods. AHMS is designed to support safer screening and pattern detection." },
-              { title: "How It Works", body: "The system captures thermal and visual signals, processes indicators through detection logic, and triggers alerts based on thresholds or anomaly patterns." },
-              { title: "Key Components", bullets: ["Infrared thermography capture", "Signal extraction / biometric detection logic", "Autonomous patrol/positioning logic", "Alerting + reporting framework"] }
-            ]
-          },
-          right: {
-            panels: [
-              {
-                title: "Inventors",
-                profiles: [
-                  { name: "Shourya Cheruku", href: "/team/shourya-cheruku" },
-                  { name: "Anshul A.", href: "/team/anshul-a" },
-                  { name: "Nihal Gautham", href: "/team/nihal-gautham" },
-                  { name: "Vivasvath", href: "/team/vivasvath" }
-                ]
-              },
-              { title: "Related Links", links: [{ label: "Back to Patents Registry", href: "/patents" }] }
-            ]
-          }
-        }
-      ]
-    },
-
-    // ============ BOOKS PAGES ============
-
-    "/books": {
-      title: "Books",
-      metaDescription: "Selected long-form publications from Blue Blocks Micro Research Institute for families, educators, and institutional partners.",
-      seo: {
-        title: "Books | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/books",
-        robots: "noindex, nofollow, noarchive, nosnippet",
-        openGraph: {
-          type: "website",
-          url: "https://siddheshv1.lovable.app/books",
-          title: "Books | Blue Blocks Micro Research Institute",
-          description: "Long-form publications for families, educators, and institutional partners.",
-          image: {
-            url: "https://images.unsplash.com/photo-1455885666463-39f77c2476e4?auto=format&fit=crop&w=1200&q=80",
-            width: 1200,
-            height: 630,
-            alt: "Book on desk"
-          }
-        },
-        twitter: {
-          card: "summary_large_image",
-          title: "Books | Blue Blocks",
-          description: "Long-form publications for families and educators.",
-          image: "https://images.unsplash.com/photo-1455885666463-39f77c2476e4?auto=format&fit=crop&w=1200&q=80"
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/",
-          logo: "https://siddheshv1.lovable.app/logo.png",
-          email: "research@blueblocks.in"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
-          name: "Books",
-          url: "https://siddheshv1.lovable.app/books",
-          description: "Selected long-form publications for families, educators, and institutional partners.",
-          hasPart: [
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/books/lining-the-nest" }
-          ]
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Books", item: "https://siddheshv1.lovable.app/books" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "books-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Books",
-          subheadline: "Selected long-form publications that support families, educators, and institutional partners. These titles are provided as public references and are linked to verified purchase platforms where applicable.",
-          primaryCta: { label: "View Publications", href: "/publications-open-science" },
-          image: { src: "https://images.unsplash.com/photo-1455885666463-39f77c2476e4?auto=format&fit=crop&w=2400&q=80", alt: "Book on desk", variant: "hero" }
-        },
-        {
-          id: "books-grid",
-          type: "cards",
-          variant: "blogGrid",
-          cards: [
-            {
-              tag: "Book",
-              headline: "Lining The Nest",
-              body: "A structured companion for building environments that protect curiosity while increasing responsibility over time.",
-              cta: { label: "View Book", href: "/books/lining-the-nest" },
-              image: { src: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80", alt: "Open book pages", variant: "card" }
-            }
-          ]
-        }
-      ]
-    },
-
-    "/books/lining-the-nest": {
-      title: "Lining The Nest",
-      metaDescription: "A long-form guide for families and educators on building environments that protect curiosity, increase responsibility, and support long-horizon growth.",
-      seo: {
-        title: "Lining The Nest | Books | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/books/lining-the-nest",
-        robots: "noindex, nofollow, noarchive, nosnippet",
-        openGraph: {
-          type: "book",
-          url: "https://siddheshv1.lovable.app/books/lining-the-nest",
-          title: "Lining The Nest",
-          description: "A guide for families and educators on building environments that protect curiosity.",
-          image: {
-            url: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80",
-            width: 1200,
-            height: 630,
-            alt: "Open book pages"
-          }
-        },
-        twitter: {
-          card: "summary_large_image",
-          title: "Lining The Nest | Blue Blocks",
-          description: "A guide for families and educators on building learning environments.",
-          image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80"
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/",
-          logo: "https://siddheshv1.lovable.app/logo.png",
-          email: "research@blueblocks.in"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Book",
-          name: "Lining The Nest",
-          description: "A long-form guide for families and educators on building environments that protect curiosity.",
-          url: "https://siddheshv1.lovable.app/books/lining-the-nest",
-          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          offers: {
-            "@type": "Offer",
-            url: "https://amzn.in/d/09xLf6FE",
-            availability: "https://schema.org/InStock",
-            priceCurrency: "INR"
-          }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Books", item: "https://siddheshv1.lovable.app/books" },
-            { "@type": "ListItem", position: 3, name: "Lining The Nest", item: "https://siddheshv1.lovable.app/books/lining-the-nest" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "nest-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Lining The Nest",
-          subheadline: "A long-form guide for families and educators on building environments that protect curiosity, increase responsibility, and support long-horizon growth.",
-          primaryCta: { label: "Buy on Amazon", href: "https://amzn.in/d/09xLf6FE", external: true },
-          secondaryCta: { label: "Download Sample Chapter", href: "/downloads/lining-the-nest-sample-chapter.pdf" },
-          image: { src: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=2400&q=80", alt: "Open book pages", variant: "hero" }
-        },
-        {
-          id: "nest-meta",
-          type: "metaStrip",
-          items: [
-            { label: "Category", value: "Book" },
-            { label: "Audience", value: "Parents / Educators" },
-            { label: "Availability", value: "Amazon", href: "https://amzn.in/d/09xLf6FE", external: true }
-          ]
-        },
-        {
-          id: "nest-content",
-          type: "twoColumn",
-          left: {
-            sections: [
-              { title: "Overview", body: "Lining The Nest is presented as a practical narrative on how environments shape behaviour over time. It focuses on observation, structure, and repeatable routines that reduce noise and increase clarity for both adults and children." },
-              { title: "Key themes", bullets: ["Environment as a behavioural scaffold", "Structure without rigidity", "Responsibility as a gradual transfer", "Observation-led decision making", "Long-horizon culture in learning spaces"] },
-              { title: "Sample chapters", body: "A preview set of sample pages is provided for review. The full book is available via Amazon." }
-            ]
-          },
-          right: {
-            panels: [
-              {
-                title: "Buy / Links",
-                links: [
-                  { label: "Buy on Amazon", href: "https://amzn.in/d/09xLf6FE", external: true },
-                  { label: "Download Sample Chapter PDF", href: "/downloads/lining-the-nest-sample-chapter.pdf", download: true }
-                ]
-              },
-              {
-                title: "About the Author(s)",
-                profiles: [
-                  { name: "Author Profile 1", role: "Placeholder", href: "/team/author-profile-1" },
-                  { name: "Author Profile 2", role: "Placeholder", href: "/team/author-profile-2" },
-                  { name: "Editorial Contributor", role: "Placeholder", href: "/team/editorial-contributor" }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          id: "nest-faq",
-          type: "accordion",
-          header: "Frequently Asked Questions",
-          items: [
-            { q: "Where can I purchase the book?", a: "The verified listing is available via Amazon through the link above." },
-            { q: "Can I quote sections publicly?", a: "Short excerpts may be used with attribution. For extended reproduction, request permissions via the Contact page." },
-            { q: "Do you offer bulk orders?", a: "Bulk enquiries can be routed through the Contact page for fulfilment guidance." }
-          ]
-        },
-        {
-          id: "nest-related",
-          type: "relatedCards",
-          header: "Related",
-          cards: [
-            { title: "Back to Books", description: "View all books.", icon: "book", href: "/books" },
-            { title: "Downloads", description: "Sample chapters and resources.", icon: "publication", href: "/downloads" },
-            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications-open-science" }
-          ]
-        }
-      ]
-    },
-
-    // ============ DOWNLOADS HUB ============
-
-    "/downloads": {
-      title: "Downloads",
-      metaDescription: "Consolidated hub for public reference materials, conference artifacts, and citation-grade documents from Blue Blocks Micro Research Institute.",
+      metaDescription: "Download media kits, research frameworks, and institutional documents from Blue Blocks Micro Research Institute.",
       seo: {
         title: "Downloads | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/downloads",
-        robots: "noindex, nofollow, noarchive, nosnippet",
+        robots: "noindex,nofollow,noarchive,nosnippet",
         openGraph: {
           type: "website",
           url: "https://siddheshv1.lovable.app/downloads",
-          title: "Downloads | Blue Blocks Micro Research Institute",
-          description: "Public reference materials, conference artifacts, and citation-grade documents.",
+          title: "Downloads",
+          description: "Access media kits, research frameworks, and institutional documents.",
           image: {
-            url: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80",
+            url: "https://siddheshv1.lovable.app/og/downloads.jpg",
             width: 1200,
             height: 630,
-            alt: "Documents archive"
+            alt: "Downloads page visual"
           }
-        },
-        twitter: {
-          card: "summary_large_image",
-          title: "Downloads | Blue Blocks",
-          description: "Public reference materials and citation-grade documents.",
-          image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80"
         }
       },
       schemas: [
         {
           "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/",
-          logo: "https://siddheshv1.lovable.app/logo.png",
-          email: "research@blueblocks.in"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
+          "@type": "WebPage",
           name: "Downloads",
           url: "https://siddheshv1.lovable.app/downloads",
-          description: "Public reference materials, conference artifacts, and citation-grade documents."
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
         },
         {
           "@context": "https://schema.org",
@@ -4731,95 +2300,266 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "Downloads",
-          subheadline: "This hub consolidates public reference material, conference artifacts, and citation-grade documents. Items are grouped to keep the site navigable until CMS publishing is live.",
-          primaryCta: { label: "View Publications", href: "/publications-open-science" },
-          image: { src: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=2400&q=80", alt: "Documents archive", variant: "hero" }
-        },
-        {
-          id: "downloads-publications",
-          type: "downloadList",
-          header: "Publications",
-          items: [
-            { title: "IN-SPACe Authorization Letter", type: "PDF", description: "Official authorization record for SBB-1 mission.", href: "/downloads/in-space-authorization-letter.pdf" },
-            { title: "SAPARYA Conference Booklet", type: "PDF", description: "Conference materials from the 7th National Montessori Conference.", href: "/downloads/saparya-conference-booklet.pdf" },
-            { title: "SAPARYA Presentation", type: "PDF", description: "Presentation slides from the IMF Conference.", href: "/downloads/saparya-presentation.pdf" }
-          ]
-        },
-        {
-          id: "downloads-books",
-          type: "downloadList",
-          header: "Books",
-          items: [
-            { title: "Lining The Nest – Sample Chapter", type: "PDF", description: "Preview pages from the book.", href: "/downloads/lining-the-nest-sample-chapter.pdf" }
-          ]
-        },
-        {
-          id: "downloads-media",
-          type: "downloadList",
-          header: "Media",
-          items: [
-            { title: "Media Kit", type: "ZIP", description: "Press materials and attribution guidelines.", href: "/downloads/media-kit.zip" },
-            { title: "Brand Asset Pack", type: "ZIP", description: "Logos, typography, and identity files.", href: "/downloads/brand-assets.zip" },
-            { title: "Leadership Bio Sheet", type: "PDF", description: "Approved biographies and headshots.", href: "/downloads/leadership-bio.pdf" }
-          ]
+          subheadline:
+            "Access media kits, research frameworks, and institutional documents for press and academic use.",
+          primaryCta: { label: "Request Media Kit", href: "/downloads/media-kit" },
+          image: {
+            src: "/src/assets/banners/downloads.jpg",
+            alt: "Downloads page visual",
+            variant: "hero",
+            privacyBlur: false,
+            caption: ""
+          }
         }
       ]
     },
 
-    // ============ TEAM PAGES ============
-
-    "/team": {
-      title: "Team",
-      metaDescription: "Leadership and research team at Blue Blocks Micro Research Institute.",
+    "/staff-access": {
+      title: "Staff Access",
+      metaDescription: "Internal access portal for Blue Blocks Micro Research Institute staff and researchers.",
       seo: {
-        title: "Team | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/team",
-        robots: "noindex, nofollow, noarchive, nosnippet",
+        title: "Staff Access | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/staff-access",
+        robots: "noindex,nofollow,noarchive,nosnippet",
         openGraph: {
           type: "website",
-          url: "https://siddheshv1.lovable.app/team",
-          title: "Team | Blue Blocks Micro Research Institute",
-          description: "Leadership and research team profiles.",
+          url: "https://siddheshv1.lovable.app/staff-access",
+          title: "Staff Access",
+          description: "Secure internal access portal for staff and researchers.",
           image: {
-            url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
+            url: "https://siddheshv1.lovable.app/og/staff-access.jpg",
             width: 1200,
             height: 630,
-            alt: "Lab instruments"
+            alt: "Staff access portal"
           }
-        },
-        twitter: {
-          card: "summary_large_image",
-          title: "Team | Blue Blocks",
-          description: "Leadership and research team profiles.",
-          image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
         }
       },
       schemas: [
         {
           "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/"
+          "@type": "WebPage",
+          name: "Staff Access",
+          url: "https://siddheshv1.lovable.app/staff-access",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
         },
         {
           "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/",
-          logo: "https://siddheshv1.lovable.app/logo.png",
-          email: "research@blueblocks.in"
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Staff Access", item: "https://siddheshv1.lovable.app/staff-access" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "staff-access-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Staff Access",
+          subheadline:
+            "Secure portal for internal staff and researchers to access sensitive data and administrative tools.",
+          primaryCta: { label: "Login", href: "/staff-login" },
+          image: {
+            src: "/src/assets/banners/staff-access.jpg",
+            alt: "Staff access visual",
+            variant: "hero",
+            privacyBlur: false,
+            caption: ""
+          }
+        }
+      ]
+    },
+
+    "/sitemap": {
+      title: "Sitemap",
+      metaDescription: "Sitemap for Blue Blocks Micro Research Institute website.",
+      seo: {
+        title: "Sitemap | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/sitemap",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "website",
+          url: "https://siddheshv1.lovable.app/sitemap",
+          title: "Sitemap",
+          description: "Comprehensive sitemap of Blue Blocks Micro Research Institute website.",
+          image: {
+            url: "https://siddheshv1.lovable.app/og/sitemap.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Sitemap visual"
+          }
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Sitemap",
+          url: "https://siddheshv1.lovable.app/sitemap",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
         },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Sitemap", item: "https://siddheshv1.lovable.app/sitemap" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "sitemap-content",
+          type: "textBlock",
+          header: "Sitemap",
+          body:
+            "This page provides a comprehensive overview of all pages and resources available on the Blue Blocks Micro Research Institute website."
+        }
+      ]
+    },
+
+    "/books": {
+      title: "Books",
+      metaDescription: "Long-form publications and books by Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "Books | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/books",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "collection",
+          url: "https://siddheshv1.lovable.app/books",
+          title: "Books",
+          description: "Long-form publications authored or curated by Blue Blocks Micro Research Institute.",
+          image: {
+            url: "https://siddheshv1.lovable.app/og/books.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Books collection"
+          }
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Books",
+          url: "https://siddheshv1.lovable.app/books",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Books", item: "https://siddheshv1.lovable.app/books" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "books-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Books",
+          subheadline:
+            "Explore long-form publications and books authored or curated by Blue Blocks Micro Research Institute.",
+          primaryCta: { label: "Browse Books", href: "/books" },
+          image: {
+            src: "/src/assets/banners/books.jpg",
+            alt: "Books collection visual",
+            variant: "hero",
+            privacyBlur: false,
+            caption: ""
+          }
+        }
+      ]
+    },
+
+    "/patents": {
+      title: "Patents",
+      metaDescription: "Patent registry and intellectual property filings by Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "Patents | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/patents",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "collection",
+          url: "https://siddheshv1.lovable.app/patents",
+          title: "Patents",
+          description: "Registry of patents and intellectual property filings by Blue Blocks Micro Research Institute.",
+          image: {
+            url: "https://siddheshv1.lovable.app/og/patents.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Patents registry"
+          }
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Patents",
+          url: "https://siddheshv1.lovable.app/patents",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "patents-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Patents",
+          subheadline:
+            "Five utility patents filed to date by Blue Blocks Micro Research Institute students. Explore the registry and learn about our intellectual property.",
+          primaryCta: { label: "View Patent Registry", href: "/patents" },
+          image: {
+            src: "/src/assets/banners/patents.jpg",
+            alt: "Patents registry visual",
+            variant: "hero",
+            privacyBlur: false,
+            caption: ""
+          }
+        }
+      ]
+    },
+
+    "/team": {
+      title: "Team",
+      metaDescription: "Meet the leadership, researchers, and staff of Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "Team | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/team",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "collection",
+          url: "https://siddheshv1.lovable.app/team",
+          title: "Team",
+          description: "Leadership, researchers, and staff of Blue Blocks Micro Research Institute.",
+          image: {
+            url: "https://siddheshv1.lovable.app/og/team.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Team members"
+          }
+        }
+      },
+      schemas: [
         {
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           name: "Team",
           url: "https://siddheshv1.lovable.app/team",
-          description: "Leadership and research team at Blue Blocks Micro Research Institute.",
-          hasPart: [
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/team/pavan-goyal" },
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/team/munira-hussain" },
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/team/adolescent-research-cohort" }
-          ]
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
         },
         {
           "@context": "https://schema.org",
@@ -4836,607 +2576,19 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "Team",
-          subheadline: "Leadership and research team profiles at Blue Blocks Micro Research Institute.",
-          primaryCta: { label: "View Governance", href: "/governance" },
-          image: { src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=2400&q=80", alt: "Lab instruments", variant: "hero" }
-        },
-        {
-          id: "team-grid",
-          type: "cards",
-          variant: "profiles",
-          header: "Leadership",
-          cards: [
-            {
-              headline: "Pavan Goyal",
-              tag: "Principal Investigator & Founder",
-              body: "Oversees the longitudinal integrity of the 0-18 study. Holds AMI certification across all developmental planes.",
-              cta: { label: "View Profile", href: "/team/pavan-goyal" },
-              image: { src: "/src/assets/placeholders/avatars/pavan.jpg", alt: "Pavan Goyal", variant: "avatar" }
-            },
-            {
-              headline: "Munira Hussain",
-              tag: "Director of Pedagogy",
-              body: "Ensures all research protocols integrate seamlessly with the Montessori curriculum.",
-              cta: { label: "View Profile", href: "/team/munira-hussain" },
-              image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar" }
-            },
-            {
-              headline: "Adolescent Research Cohort",
-              tag: "Student Researchers",
-              body: "The collective group of adolescent researchers contributing to patents and mission work.",
-              cta: { label: "View Profile", href: "/team/adolescent-research-cohort" },
-              image: { src: "/src/assets/placeholders/avatars/headshot-1.jpg", alt: "Research cohort", variant: "avatar" }
-            }
-          ]
-        }
-      ]
-    },
-
-    "/team/pavan-goyal": {
-      title: "Pavan Goyal",
-      metaDescription: "Principal Investigator & Founder at Blue Blocks Micro Research Institute.",
-      seo: {
-        title: "Pavan Goyal | Team | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/team/pavan-goyal",
-        robots: "noindex, nofollow, noarchive, nosnippet",
-        openGraph: {
-          type: "profile",
-          url: "https://siddheshv1.lovable.app/team/pavan-goyal",
-          title: "Pavan Goyal | Blue Blocks Micro Research Institute",
-          description: "Principal Investigator & Founder",
-          image: {
-            url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-            width: 1200,
-            height: 630,
-            alt: "Lab environment"
-          }
-        },
-        twitter: {
-          card: "summary",
-          title: "Pavan Goyal | Blue Blocks",
-          description: "Principal Investigator & Founder",
-          image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/",
-          logo: "https://siddheshv1.lovable.app/logo.png",
-          email: "research@blueblocks.in"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          name: "Pavan Goyal",
-          jobTitle: "Principal Investigator & Founder",
-          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          url: "https://siddheshv1.lovable.app/team/pavan-goyal"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Team", item: "https://siddheshv1.lovable.app/team" },
-            { "@type": "ListItem", position: 3, name: "Pavan Goyal", item: "https://siddheshv1.lovable.app/team/pavan-goyal" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "pavan-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Pavan Goyal",
-          subheadline: "Principal Investigator & Founder",
-          primaryCta: { label: "Back to Team", href: "/team" },
-          image: { src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=2400&q=80", alt: "Lab environment", variant: "hero" }
-        },
-        {
-          id: "pavan-content",
-          type: "twoColumn",
-          left: {
-            sections: [
-              { title: "Role", body: "Principal Investigator & Founder" },
-              { title: "Overview", body: "Pavan Goyal oversees the longitudinal integrity of the 0-18 study at Blue Blocks Micro Research Institute. He holds the rare complete AMI certification across all developmental planes, enabling a cohesive pedagogical vision from infancy through adolescence.\n\nHis work focuses on embedding research infrastructure within learning environments, ensuring that observation protocols integrate seamlessly with educational practice." }
-            ]
-          },
-          right: {
-            panels: [
-              {
-                title: "Links",
-                links: [
-                  { label: "Contact", href: "/contact" },
-                  { label: "Publications", href: "/publications-open-science" },
-                  { label: "Patents Registry", href: "/patents" }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          id: "pavan-related",
-          type: "relatedCards",
-          header: "Related Work",
-          cards: [
-            { title: "Patents", description: "Student-generated inventions.", icon: "patent", href: "/patents" },
-            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications-open-science" }
-          ]
-        }
-      ]
-    },
-
-    "/team/munira-hussain": {
-      title: "Munira Hussain",
-      metaDescription: "Director of Pedagogy at Blue Blocks Micro Research Institute.",
-      seo: {
-        title: "Munira Hussain | Team | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/team/munira-hussain",
-        robots: "noindex, nofollow, noarchive, nosnippet",
-        openGraph: {
-          type: "profile",
-          url: "https://siddheshv1.lovable.app/team/munira-hussain",
-          title: "Munira Hussain | Blue Blocks Micro Research Institute",
-          description: "Director of Pedagogy",
-          image: {
-            url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-            width: 1200,
-            height: 630,
-            alt: "Lab environment"
-          }
-        },
-        twitter: {
-          card: "summary",
-          title: "Munira Hussain | Blue Blocks",
-          description: "Director of Pedagogy",
-          image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/",
-          logo: "https://siddheshv1.lovable.app/logo.png",
-          email: "research@blueblocks.in"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          name: "Munira Hussain",
-          jobTitle: "Director of Pedagogy",
-          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          url: "https://siddheshv1.lovable.app/team/munira-hussain"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Team", item: "https://siddheshv1.lovable.app/team" },
-            { "@type": "ListItem", position: 3, name: "Munira Hussain", item: "https://siddheshv1.lovable.app/team/munira-hussain" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "munira-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Munira Hussain",
-          subheadline: "Director of Pedagogy",
-          primaryCta: { label: "Back to Team", href: "/team" },
-          image: { src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=2400&q=80", alt: "Lab environment", variant: "hero" }
-        },
-        {
-          id: "munira-content",
-          type: "twoColumn",
-          left: {
-            sections: [
-              { title: "Role", body: "Director of Pedagogy" },
-              { title: "Overview", body: "Munira Hussain ensures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the \"Children's House\" environment.\n\nCredentials: AMI Diploma / M.Ed\n\nHer work focuses on maintaining pedagogical integrity while enabling embedded observation and longitudinal data collection." }
-            ]
-          },
-          right: {
-            panels: [
-              {
-                title: "Links",
-                links: [
-                  { label: "Contact", href: "/contact" },
-                  { label: "Governance", href: "/governance" }
-                ]
-              }
-            ]
-          }
-        }
-      ]
-    },
-
-    "/team/adolescent-research-cohort": {
-      title: "Adolescent Research Cohort",
-      metaDescription: "The collective group of adolescent researchers contributing to patents and mission work at Blue Blocks Micro Research Institute.",
-      seo: {
-        title: "Adolescent Research Cohort | Team | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/team/adolescent-research-cohort",
-        robots: "noindex, nofollow, noarchive, nosnippet",
-        openGraph: {
-          type: "website",
-          url: "https://siddheshv1.lovable.app/team/adolescent-research-cohort",
-          title: "Adolescent Research Cohort | Blue Blocks",
-          description: "Student researchers contributing to patents and mission work.",
-          image: {
-            url: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80",
-            width: 1200,
-            height: 630,
-            alt: "Lab environment"
-          }
-        },
-        twitter: {
-          card: "summary",
-          title: "Adolescent Research Cohort | Blue Blocks",
-          description: "Student researchers contributing to patents and mission work.",
-          image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80"
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/",
-          logo: "https://siddheshv1.lovable.app/logo.png",
-          email: "research@blueblocks.in"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Organization",
-          name: "Adolescent Research Cohort",
-          parentOrganization: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          url: "https://siddheshv1.lovable.app/team/adolescent-research-cohort"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Team", item: "https://siddheshv1.lovable.app/team" },
-            { "@type": "ListItem", position: 3, name: "Adolescent Research Cohort", item: "https://siddheshv1.lovable.app/team/adolescent-research-cohort" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "cohort-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Adolescent Research Cohort",
-          subheadline: "Student Researchers (Ages 12-18)",
-          primaryCta: { label: "Back to Team", href: "/team" },
-          image: { src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=2400&q=80", alt: "Lab environment", variant: "hero" }
-        },
-        {
-          id: "cohort-content",
-          type: "twoColumn",
-          left: {
-            sections: [
-              { title: "Overview", body: "The Adolescent Research Cohort represents the collective group of student researchers contributing to patents, mission work, and longitudinal studies at Blue Blocks Micro Research Institute.\n\nThese students work within TRL-9 environments on real engineering challenges, producing patentable inventions and contributing to aerospace missions.\n\nIndividual student profiles are maintained internally to protect privacy. Patent records list inventors by name with parental consent." }
-            ]
-          },
-          right: {
-            panels: [
-              {
-                title: "Related Work",
-                links: [
-                  { label: "Patents Registry", href: "/patents" },
-                  { label: "Publications", href: "/publications-open-science" },
-                  { label: "Governance", href: "/governance" }
-                ]
-              }
-            ]
-          }
-        }
-      ]
-    },
-
-    "/privacy": {
-      title: "Privacy Policy",
-      metaDescription:
-        "Privacy Policy for Blue Blocks Micro Research Institute: how we handle contact requests, website analytics, and privacy safeguards.",
-      seo: {
-        title: "Privacy Policy | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/privacy",
-        robots: "noindex,nofollow,noarchive,nosnippet",
-        openGraph: {
-          type: "website",
-          url: "https://blueblocks.in/privacy",
-          title: "Privacy Policy",
-          description:
-            "How we handle contact inquiries, website data, and privacy safeguards — aligned with ethical research standards.",
-          image: {
-            url: "https://blueblocks.in/og/privacy.jpg",
-            width: 1200,
-            height: 630,
-            alt: "Privacy governance and institutional oversight"
-          }
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "Privacy Policy",
-          url: "https://blueblocks.in/privacy",
-          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Privacy Policy", item: "https://blueblocks.in/privacy" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "privacy-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Privacy Policy.",
           subheadline:
-            "We operate under strict privacy expectations consistent with ethical research governance. This policy explains how website-level data is handled and how inquiries are processed.",
-          primaryCta: { label: "Contact the Institute", href: "/contact" },
-          secondaryCta: { label: "Governance & Oversight", href: "/governance" },
+            "Meet the leadership, researchers, and staff who drive the Blue Blocks Micro Research Institute's mission.",
+          primaryCta: { label: "View Profiles", href: "/team" },
           image: {
-            src: "/src/assets/banners/governance-oversight.jpg",
-            alt: "Privacy and oversight",
+            src: "/src/assets/banners/team.jpg",
+            alt: "Team members visual",
             variant: "hero",
             privacyBlur: false,
-            caption: "Privacy governance applies to all public-facing Institute systems."
+            caption: ""
           }
-        },
-        {
-          id: "privacy-last-updated",
-          type: "highlightBox",
-          title: "Last Updated",
-          body:
-            "Last Updated: February 2026\n\nIf you have questions about this policy, contact us at privacy@blueblocks.in (or use the contact form).",
-          cta: { label: "Open Contact Page", href: "/contact" }
-        },
-        {
-          id: "privacy-scope",
-          type: "textBlock",
-          header: "1) Scope",
-          body:
-            "This Privacy Policy applies to the Blue Blocks Micro Research Institute website and its public pages.\n\nIt covers:\n• contact form submissions and email inquiries\n• newsletter / DOI alert subscriptions\n• website analytics and performance logs (if enabled)\n• download requests (media kit, guidelines)\n\nThis policy does not replace or disclose internal research governance processes related to minors and longitudinal records."
-        },
-        {
-          id: "privacy-data-we-collect",
-          type: "textBlock",
-          header: "2) Information We Collect",
-          body:
-            "We collect limited information necessary to respond to inquiries.\n\nA) Information you provide:\n• name, email address, affiliation\n• message content and context\n• optional deadlines, publication intent, verification requests\n\nB) Automatic technical information (if enabled):\n• IP address (server logs)\n• device/browser metadata\n• timestamps and pages accessed\n\nWe do not intentionally collect sensitive personal information through the public website."
-        },
-        {
-          id: "privacy-how-we-use",
-          type: "textBlock",
-          header: "3) How We Use Information",
-          body:
-            "We use collected information only for:\n• responding to research proposals, partnerships, and press inquiries\n• verifying institutional affiliation for access-tier requests\n• sending DOI alerts or institutional updates (only if you opt in)\n• maintaining security and operational integrity\n\nWe do not sell personal information and do not use contact data for advertising profiling."
-        },
-        {
-          id: "privacy-sharing",
-          type: "textBlock",
-          header: "4) Sharing & Disclosure",
-          body:
-            "We may share inquiry information only when necessary:\n\n• internal review by Institute staff\n• governance review (ethics/oversight verification where applicable)\n• legal obligations when required by law\n\nWe do not share personal information with unrelated third parties."
-        },
-        {
-          id: "privacy-retention",
-          type: "textBlock",
-          header: "5) Data Retention",
-          body:
-            "We retain inquiry data only as long as needed to:\n\n• Complete proposal review and correspondence\n• Maintain operational records\n• Document access approvals (where relevant)\n\nYou may request deletion of your inquiry information unless retention is legally required."
-        },
-        {
-          id: "privacy-security",
-          type: "textBlock",
-          header: "6) Security",
-          body:
-            "We maintain reasonable technical and organizational safeguards to reduce unauthorized access.\n\nSecurity practices may include:\n• access restrictions and role-based permissions\n• secure storage practices\n• anonymization principles for public materials\n\nNo public website can guarantee absolute security."
-        },
-        {
-          id: "privacy-rights",
-          type: "textBlock",
-          header: "7) Your Rights",
-          body:
-            "You may request:\n\n• access to the data you submitted\n• correction of inaccurate information\n• deletion of inquiry records\n\nTo request any of the above, email: privacy@blueblocks.in"
-        },
-        {
-          id: "privacy-faq",
-          type: "accordion",
-          header: "Privacy FAQs",
-          items: [
-            {
-              q: "Do you collect children's data through this website?",
-              a:
-                "No. The public website does not collect identifiable data about minors. Research datasets are governed separately under Institute consent and IRB standards."
-            },
-            {
-              q: "Do you run tracking ads or advertising pixels?",
-              a:
-                "We do not run advertising-based tracking. If analytics are enabled, they are used only for site performance, stability, and security monitoring."
-            },
-            {
-              q: "How do I request removal of my details?",
-              a:
-                "Email privacy@blueblocks.in with your request and the email address used during submission."
-            }
-          ]
         }
       ]
-    },
-
-    "/terms": {
-      title: "Terms of Use",
-      metaDescription:
-        "Terms of Use for the Blue Blocks Micro Research Institute website: permitted use, intellectual property, citations, disclaimers, and data access conditions.",
-      seo: {
-        title: "Terms of Use | Blue Blocks Micro Research Institute",
-        canonical: "https://blueblocks.in/terms",
-        robots: "noindex,nofollow,noarchive,nosnippet",
-        openGraph: {
-          type: "website",
-          url: "https://blueblocks.in/terms",
-          title: "Terms of Use",
-          description:
-            "Rules governing use of this website, citations, intellectual property, and institutional materials.",
-          image: {
-            url: "https://blueblocks.in/og/terms.jpg",
-            width: 1200,
-            height: 630,
-            alt: "Terms and institutional governance"
-          }
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "Terms of Use",
-          url: "https://blueblocks.in/terms",
-          isPartOf: { "@type": "WebSite", url: "https://blueblocks.in/" }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Terms of Use", item: "https://blueblocks.in/terms" }
-          ]
-        }
-      ],
-      sections: [
-        {
-          id: "terms-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Terms of Use.",
-          subheadline:
-            "These terms govern access to and use of public-facing Institute materials. By using this website, you agree to the conditions below.",
-          primaryCta: { label: "View Publications", href: "/publications-open-science" },
-          secondaryCta: { label: "Contact", href: "/contact" },
-          image: {
-            src: "/src/assets/banners/governance-oversight.jpg",
-            alt: "Institutional governance banner",
-            variant: "hero",
-            privacyBlur: false,
-            caption: "Terms protect open science while ensuring ethical constraints remain intact."
-          }
-        },
-        {
-          id: "terms-last-updated",
-          type: "highlightBox",
-          title: "Last Updated",
-          body:
-            "Last Updated: February 2026\n\nIf you do not agree to these terms, please discontinue use of the website.",
-          cta: { label: "Privacy Policy", href: "/privacy" }
-        },
-        {
-          id: "terms-permitted",
-          type: "textBlock",
-          header: "1) Permitted Use",
-          body:
-            "You may use this website for:\n• reading Institute publications and updates\n• referencing open access materials\n• submitting collaboration requests\n\nYou may not use this website to:\n• scrape content for resale or automated republishing\n• misrepresent institutional claims\n• attempt to access restricted datasets without approval"
-        },
-        {
-          id: "terms-ip",
-          type: "textBlock",
-          header: "2) Intellectual Property",
-          body:
-            "All content on this website — including frameworks, methodology descriptions, visuals, and documentation — is protected unless explicitly labeled open access.\n\nStudent-generated inventions and patents remain attributed to student inventors where applicable and recorded in the Institute registry."
-        },
-        {
-          id: "terms-citation",
-          type: "textBlock",
-          header: "3) Citations & Attribution",
-          body:
-            "When citing Institute materials, you must:\n• cite DOI records where provided\n• preserve context and disclaimers\n• avoid implying institutional endorsement\n\nWhere possible, DOI-based citation is preferred."
-        },
-        {
-          id: "terms-disclaimer",
-          type: "textBlock",
-          header: "4) Disclaimers",
-          body:
-            "This website provides institutional documentation and research summaries.\n\nWhile we aim for accuracy, materials may be updated without notice.\n\nNothing on this site constitutes:\n• legal advice\n• medical advice\n• guaranteed research outcomes"
-        },
-        {
-          id: "terms-restricted",
-          type: "textBlock",
-          header: "5) Restricted Access & Data",
-          body:
-            "Certain datasets and materials are restricted due to:\n• protection of minors\n• consent conditions\n• anonymization and k-anonymity requirements\n• institutional security protocols\n\nRequests for restricted access may require IRB approval and a signed Data Use Agreement."
-        },
-        {
-          id: "terms-external-links",
-          type: "textBlock",
-          header: "6) External Links",
-          body:
-            "This website may link to third-party resources such as Zenodo.\n\nWe do not control third-party sites and are not responsible for external policies or content."
-        },
-        {
-          id: "terms-changes",
-          type: "textBlock",
-          header: "7) Changes",
-          body:
-            "We may update these Terms of Use at any time.\n\nContinued use of the website indicates acceptance of the updated terms."
-        },
-        {
-          id: "terms-faq",
-          type: "accordion",
-          header: "Terms FAQs",
-          items: [
-            {
-              q: "Can I reuse content from this site in my paper?",
-              a:
-                "Yes, if the material is marked open access or you cite it properly. DOI-based citations are preferred."
-            },
-            {
-              q: "Can I access restricted datasets?",
-              a:
-                "Not without approval. Researcher access requires IRB clearance and a signed agreement."
-            },
-            {
-              q: "Where should I request access?",
-              a:
-                "Use the Collaborate page and submit an access request through the relevant track."
-            }
-          ]
-        }
-      ]
-    },
+    }
   },
 };
 
