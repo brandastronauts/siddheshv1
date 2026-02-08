@@ -15,9 +15,13 @@ const Header = () => {
       <div className="container-grid">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex flex-col items-start group">
-            <img src={logo} alt={brand.siteName} className="h-12 md:h-14 w-auto" />
-            <span className="hidden md:block text-[10px] font-medium text-deep-ink/70 group-hover:text-primary-navy transition-colors leading-tight mt-0.5">
+          <Link to="/" className="flex items-center gap-3 group">
+            <img 
+              src={logo} 
+              alt={brand.siteName} 
+              className="h-10 md:h-12 w-auto object-contain mix-blend-multiply" 
+            />
+            <span className="hidden md:block text-xs font-semibold text-deep-ink/80 group-hover:text-primary-navy transition-colors leading-tight">
               {brand.headerTagline}
             </span>
           </Link>
