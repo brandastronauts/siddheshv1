@@ -22,6 +22,10 @@ import SplitSection from './sections/SplitSection';
 import GalleryGridSection from './sections/GalleryGridSection';
 import DownloadButtonSection from './sections/DownloadButtonSection';
 import SitemapSection from './sections/SitemapSection';
+import MetaStripSection from './sections/MetaStripSection';
+import TwoColumnSection from './sections/TwoColumnSection';
+import RelatedCardsSection from './sections/RelatedCardsSection';
+import PatentGridSection from './sections/PatentGridSection';
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -60,6 +64,10 @@ const SectionRenderer = ({ sections }) => {
       galleryGrid: GalleryGridSection,
       downloadButton: DownloadButtonSection,
       sitemap: SitemapSection,
+      metaStrip: MetaStripSection,
+      twoColumn: TwoColumnSection,
+      relatedCards: RelatedCardsSection,
+      patentGrid: PatentGridSection,
     };
 
     const Component = components[type];
