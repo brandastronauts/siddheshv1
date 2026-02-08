@@ -47,6 +47,7 @@ const App = () => (
           <Route path="/newsroom/coverage/:slug" element={<GenericPage />} />
           <Route path="/newsroom/updates/:slug" element={<GenericPage />} />
           <Route path="/sitemap" element={<GenericPage />} />
+          <Route path="/sitemap-html" element={<GenericPage />} />
           
           {/* Publications detail pages */}
           <Route path="/publications/:slug" element={<GenericPage />} />
