@@ -6,7 +6,7 @@ const sitemapData = {
     { name: "Home", url: "/", status: "complete" },
     { name: "The Institute", url: "/the-institute", status: "complete" },
     { name: "Methodology", url: "/methodology", status: "complete" },
-    { name: "Publications & Open Science", url: "/publications-open-science", status: "complete" },
+    { name: "Publications", url: "/publications", status: "complete" },
     { name: "Governance & Oversight", url: "/governance", status: "complete" },
     { name: "Collaborate", url: "/collaborate", status: "complete" },
     { name: "Newsroom", url: "/newsroom", status: "complete" },
