@@ -48,6 +48,21 @@ const App = () => (
           <Route path="/newsroom/updates/:slug" element={<GenericPage />} />
           <Route path="/sitemap" element={<GenericPage />} />
           
+          {/* Publications detail pages */}
+          <Route path="/publications/:slug" element={<GenericPage />} />
+          
+          {/* Patents pages */}
+          <Route path="/patents" element={<GenericPage />} />
+          <Route path="/patents/:slug" element={<GenericPage />} />
+          
+          {/* Books pages */}
+          <Route path="/books" element={<GenericPage />} />
+          <Route path="/books/:slug" element={<GenericPage />} />
+          
+          {/* Team pages */}
+          <Route path="/team" element={<GenericPage />} />
+          <Route path="/team/:slug" element={<GenericPage />} />
+          
           {/* Catch-all route for 404 */}
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

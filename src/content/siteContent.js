@@ -922,11 +922,11 @@ const siteContent = {
           id: "docket-hero",
           type: "hero",
           variant: "clean",
-          headline: "The Research Docket",
+          headline: "Publications & Open Science",
           subheadline:
-            "Everything we publish gets a DOI and lands in Zenodo. This page tracks what's currently in progress—manuscripts under review, datasets being cleaned, patents in examination, and intellectual property filings currently processing through the Blue Blocks Micro Research Institute.",
-          primaryCta: { label: "Subscribe for DOI Alerts", href: "#doi-alerts" },
-          secondaryCta: { label: "View Citation Guidelines >", href: "#citation-guidelines" },
+            "Everything we publish is archived for traceability. This docket lists public administrative records, case studies, and publication pipelines. Where applicable, each item carries a DOI and is preserved in Zenodo for citation permanence.",
+          primaryCta: { label: "Browse Zenodo", href: "https://zenodo.org/communities/blueblocks/", external: true },
+          secondaryCta: { label: "View Citation Guidelines", href: "#citation-guidelines" },
           image: {
             src: "/src/assets/banners/publications-doi.jpg",
             alt: "DOI docket hero visual",
@@ -934,6 +934,32 @@ const siteContent = {
             privacyBlur: false,
             caption: ""
           }
+        },
+
+        {
+          id: "published-records",
+          type: "cards",
+          header: "Published Records",
+          intro: "Public administrative records and case studies preserved with DOI for citation permanence.",
+          variant: "blogGrid",
+          cards: [
+            {
+              tag: "Published Record",
+              headline: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
+              meta: "DOI: 10.5281/zenodo.18195108",
+              body: "Official authorization archived for governance traceability and open-access citation.",
+              cta: { label: "View Record", href: "/publications/in-space-authorization-letter" },
+              image: { src: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80", alt: "Satellite authorization record", variant: "card", privacyBlur: false }
+            },
+            {
+              tag: "Published Case Study",
+              headline: "SAPARYA / IMF Conference Case Study (SBB-1 Mission & Valorization)",
+              meta: "DOI: 10.5281/zenodo.18337934",
+              body: "A documented adolescent engineering mission and the pedagogical outcome of real-world stakes.",
+              cta: { label: "View Case Study", href: "/publications/saparya-imf-case-study" },
+              image: { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80", alt: "Conference case study", variant: "card", privacyBlur: false }
+            }
+          ]
         },
 
         {
@@ -3254,6 +3280,1197 @@ const siteContent = {
         {
           id: "sitemap-content",
           type: "sitemap"
+        }
+      ]
+    },
+
+    // ============ PUBLICATIONS DETAIL PAGES ============
+
+    "/publications/in-space-authorization-letter": {
+      title: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
+      metaDescription: "Official IN-SPACe authorization record for the SBB-1 mission activity, preserved as a permanent institutional artifact for governance traceability.",
+      seo: {
+        title: "IN-SPACe Authorization Letter | Publications | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/publications/in-space-authorization-letter",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "IN-SPACe Authorization Letter",
+          url: "https://blueblocks.in/publications/in-space-authorization-letter"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://blueblocks.in/publications-open-science" },
+            { "@type": "ListItem", position: 3, name: "IN-SPACe Authorization Letter", item: "https://blueblocks.in/publications/in-space-authorization-letter" }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          name: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
+          author: { "@type": "Organization", name: "IN-SPACe (Department of Space, Government of India)" },
+          identifier: "10.5281/zenodo.18195108"
+        }
+      ],
+      sections: [
+        {
+          id: "auth-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
+          subheadline: "This page preserves the official authorization record issued for the SBB-1 mission activity. It is presented as a permanent institutional artifact for governance traceability and citation.",
+          primaryCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18195108", external: true },
+          secondaryCta: { label: "Download PDF", href: "/downloads/in-space-authorization-letter.pdf" },
+          image: {
+            src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=2400&q=80",
+            alt: "Mission control environment",
+            variant: "hero"
+          }
+        },
+        {
+          id: "auth-meta",
+          type: "metaStrip",
+          items: [
+            { label: "DOI", value: "10.5281/zenodo.18195108", href: "https://doi.org/10.5281/zenodo.18195108", external: true },
+            { label: "Record Type", value: "Administrative Authorization" },
+            { label: "Authority", value: "IN-SPACe (Dept. of Space, GoI)" },
+            { label: "Authorization No", value: "PMA/IN-SPACe/AUTH/2026/115" },
+            { label: "Date of Release", value: "07 January 2026" },
+            { label: "Access", value: "Public Record (Open Access)" }
+          ]
+        },
+        {
+          id: "auth-content",
+          type: "twoColumn",
+          left: {
+            sections: [
+              {
+                title: "Abstract",
+                body: "This record archives the official IN-SPACe authorization issued for the SBB-1 mission activity and preserves it as a citable, permanent administrative artifact. The purpose of hosting this document here is institutional traceability: it provides a verifiable governance reference for mission clearance, compliance readiness, and public documentation standards."
+              },
+              {
+                title: "What this record confirms",
+                bullets: [
+                  "Formal authorization was issued by IN-SPACe for the mission-related activity referenced in the document.",
+                  "The authorized entity is recorded as Blue Blocks Montessori Educational Society.",
+                  "The authorization is preserved for auditability, archival stability, and DOI-based referencing."
+                ]
+              },
+              {
+                title: "Usage & citation",
+                body: "This record may be cited in academic writing, governance documentation, and institutional reporting. Where reproduced, it should be cited via DOI to preserve a stable reference."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Suggested Citation",
+                citation: "Blue Blocks Micro Research Institute. (2026). IN-SPACe Authorization Letter (SBB-1 / Blue Blocks) [Administrative record]. Zenodo. https://doi.org/10.5281/zenodo.18195108"
+              },
+              {
+                title: "Downloads & Links",
+                links: [
+                  { label: "Download PDF", href: "/downloads/in-space-authorization-letter.pdf", download: true },
+                  { label: "Related: SAPARYA Case Study", href: "/publications/saparya-imf-case-study" },
+                  { label: "Related Mission Reference", href: "https://blueblocks.in/Innovation/CubeSat-Mission/", external: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "auth-evidence",
+          type: "galleryGrid",
+          sectionName: "Visual Evidence",
+          items: [
+            { title: "Document Archive", tag: "Record", image: { src: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80", alt: "Document close-up" } },
+            { title: "Archive Desk", tag: "Paperwork", image: { src: "https://images.unsplash.com/photo-1450101215322-bf5cd27642fc?auto=format&fit=crop&w=800&q=80", alt: "Archive paperwork" } },
+            { title: "Mission Control", tag: "Operations", image: { src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80", alt: "Mission control" } },
+            { title: "Lab Instruments", tag: "Technical", image: { src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80", alt: "Lab instruments" } }
+          ]
+        },
+        {
+          id: "auth-faq",
+          type: "accordion",
+          header: "Frequently Asked Questions",
+          items: [
+            {
+              q: "Is this the original authorization?",
+              a: "This page hosts the archived public record as preserved via DOI. The Zenodo record serves as the citation-grade source."
+            },
+            {
+              q: "Can institutions use this for verification?",
+              a: "Yes. This is specifically hosted to support governance traceability and documentation integrity."
+            },
+            {
+              q: "Does this reveal student identities?",
+              a: "No. This page is structured to preserve administrative proof-points without exposing minors or private data."
+            },
+            {
+              q: "Can this be reused in press or publications?",
+              a: "Yes, with proper DOI citation and without altering the document context."
+            }
+          ]
+        },
+        {
+          id: "auth-related",
+          type: "relatedCards",
+          header: "Related Registry",
+          cards: [
+            { title: "Patents Registry", description: "Student-generated inventions and IP filings.", icon: "patent", href: "/patents" },
+            { title: "Books", description: "Long-form publications for educators and families.", icon: "book", href: "/books" },
+            { title: "Newsroom", description: "Press releases and institutional updates.", icon: "newsroom", href: "/newsroom" }
+          ]
+        }
+      ]
+    },
+
+    "/publications/saparya-imf-case-study": {
+      title: "SAPARYA / IMF Conference Case Study",
+      metaDescription: "A documented adolescent engineering mission presented as an institutional case study in Montessori adolescence.",
+      seo: {
+        title: "SAPARYA Case Study | Publications | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/publications/saparya-imf-case-study",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "SAPARYA / IMF Conference Case Study",
+          url: "https://blueblocks.in/publications/saparya-imf-case-study"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://blueblocks.in/publications-open-science" },
+            { "@type": "ListItem", position: 3, name: "SAPARYA Case Study", item: "https://blueblocks.in/publications/saparya-imf-case-study" }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          name: "SAPARYA / IMF Conference Case Study",
+          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          identifier: "10.5281/zenodo.18337934"
+        }
+      ],
+      sections: [
+        {
+          id: "saparya-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "SAPARYA / IMF Conference Case Study",
+          subheadline: "A documented adolescent engineering mission presented as an institutional case study in Montessori adolescence. The focus is not \"success,\" but the credibility of real-world responsibility and real-world consequences.",
+          primaryCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18337934", external: true },
+          secondaryCta: { label: "Download Conference Materials", href: "/downloads/saparya-conference-booklet.pdf" },
+          image: {
+            src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=2400&q=80",
+            alt: "Conference presentation",
+            variant: "hero"
+          }
+        },
+        {
+          id: "saparya-meta",
+          type: "metaStrip",
+          items: [
+            { label: "DOI", value: "10.5281/zenodo.18337934", href: "https://doi.org/10.5281/zenodo.18337934", external: true },
+            { label: "Domain", value: "Montessori Adolescence + Aerospace" },
+            { label: "Event", value: "Saparya 7th National Montessori Conference" },
+            { label: "Location", value: "Mumbai" },
+            { label: "Dates", value: "23–24 January 2026" },
+            { label: "Access", value: "Open Access Record" }
+          ]
+        },
+        {
+          id: "saparya-content",
+          type: "twoColumn",
+          left: {
+            sections: [
+              {
+                title: "Abstract",
+                body: "This case study documents how adolescents (ages 12–15) designed and built the SBB-1 hosted payload, navigated an 18-month technical review pathway, and received official authorization from IN-SPACe prior to launch. The work launched aboard ISRO PSLV-C62 on 12 January 2026. Although the launch vehicle experienced a Stage 4 ignition failure at T+847 seconds, the mission remains a valid pedagogical proof-point: the engineering work was real, professionally constrained, and accountable to external standards."
+              },
+              {
+                title: "Why this case study matters",
+                bullets: [
+                  "It documents a regulatory pathway, not a classroom simulation.",
+                  "It provides a traceable example of adolescent engineering under professional review.",
+                  "It frames \"valorization\" as responsibility under authentic stakes, including failure modes beyond student control."
+                ]
+              },
+              {
+                title: "Key highlights",
+                bullets: [
+                  "A 10cm continuity: Pink Tower → Binomial Cube → 1U CubeSat geometry (10cm x 10cm x 10cm)",
+                  "IN-SPACe authorization after an 18-month technical review cycle",
+                  "External technical constraints shaped the work (compliance, qualification, integration checks)",
+                  "Launch vehicle anomaly occurred at Stage 4 ignition (T+847 seconds)",
+                  "Pedagogical outcome: accountability, resilience, documentation discipline, and long-horizon iteration"
+                ]
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Suggested Citation",
+                citation: "Blue Blocks Micro Research Institute. (2026). SAPARYA / IMF Conference Case Study: SBB-1 Mission & Valorization [Case study]. Zenodo. https://doi.org/10.5281/zenodo.18337934"
+              },
+              {
+                title: "Downloads & Links",
+                links: [
+                  { label: "Conference Booklet PDF", href: "/downloads/saparya-conference-booklet.pdf", download: true },
+                  { label: "Presentation PDF", href: "/downloads/saparya-presentation.pdf", download: true },
+                  { label: "Governance Page", href: "/governance" },
+                  { label: "Patents Registry", href: "/patents" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "saparya-evidence",
+          type: "galleryGrid",
+          sectionName: "Visual Evidence",
+          items: [
+            { title: "Conference Stage", tag: "Event", image: { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=800&q=80", alt: "Conference stage" } },
+            { title: "Rocket Launch", tag: "Mission", image: { src: "https://images.unsplash.com/photo-1541185934-01b600ea069c?auto=format&fit=crop&w=800&q=80", alt: "Rocket launch" } },
+            { title: "Presentation Slides", tag: "Content", image: { src: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80", alt: "Presentation slides" } },
+            { title: "Mission Control", tag: "Operations", image: { src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80", alt: "Mission control" } }
+          ]
+        },
+        {
+          id: "saparya-faq",
+          type: "accordion",
+          header: "Frequently Asked Questions",
+          items: [
+            {
+              q: "Was the mission a success?",
+              a: "The pedagogical objective was professional-grade work under real constraints. The launch anomaly does not invalidate the engineering credibility of the process."
+            },
+            {
+              q: "Is this peer-reviewed?",
+              a: "This record is archived for citation and traceability. Publication-grade review occurs through internal research council processes and external validation where required."
+            },
+            {
+              q: "Can other institutions replicate this?",
+              a: "The methodology is designed to be transferable, but requires ethics infrastructure, longitudinal continuity, and documentation discipline."
+            }
+          ]
+        },
+        {
+          id: "saparya-related",
+          type: "relatedCards",
+          header: "Related Registry",
+          cards: [
+            { title: "Patents Registry", description: "Student-generated inventions and IP filings.", icon: "patent", href: "/patents" },
+            { title: "Books", description: "Long-form publications for educators.", icon: "book", href: "/books" },
+            { title: "Newsroom", description: "Press releases and institutional updates.", icon: "newsroom", href: "/newsroom" }
+          ]
+        }
+      ]
+    },
+
+    // ============ PATENTS PAGES ============
+
+    "/patents": {
+      title: "Patent Registry",
+      metaDescription: "Registry of student-generated inventions produced under high-stakes prototyping environments at Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "Patent Registry | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/patents",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Patent Registry",
+          url: "https://blueblocks.in/patents"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Patents", item: "https://blueblocks.in/patents" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "patents-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Patent Registry",
+          subheadline: "This registry documents student-generated inventions produced under high-stakes prototyping environments. All patent artifacts are presented as institutional records. Where details are under examination, fields are marked as pending.",
+          primaryCta: { label: "View Publications", href: "/publications-open-science" },
+          image: {
+            src: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=2400&q=80",
+            alt: "Blueprint engineering",
+            variant: "hero"
+          }
+        },
+        {
+          id: "patents-grid",
+          type: "patentGrid",
+          header: "Registered Patents",
+          intro: "Filter by status, domain, or age group to review inventions and their associated documentation.",
+          filterNote: "Status: Pending | Categories: Robotics, Medical Robotics, Public Health, Logistics",
+          cards: [
+            {
+              title: "System for Automated Security (UAV)",
+              status: "Pending",
+              category: "Robotics / UAS",
+              filingDate: "July 22, 2020",
+              ageGroup: "12–16",
+              applicationNo: "202041031343",
+              description: "A responsive aerial surveillance system for rapid safety operations using sensor fusion and geolocation routing.",
+              href: "/patents/automated-security-uav"
+            },
+            {
+              title: "Borehole Rescue System (BRS)",
+              status: "Pending",
+              category: "Robotics / Rescue",
+              filingDate: "July 25, 2020",
+              ageGroup: "12–16",
+              applicationNo: "202041027026",
+              description: "A vertical-access rescue apparatus engineered for narrow-shaft stabilization and safe extraction.",
+              href: "/patents/borehole-rescue-system"
+            },
+            {
+              title: "Autonomous Contactless Delivery System (ACDS)",
+              status: "Pending",
+              category: "Autonomous Logistics",
+              filingDate: "June 25, 2020",
+              ageGroup: "12–16",
+              applicationNo: "TBD",
+              description: "An autonomous logistics platform built for contamination-safe distribution scenarios.",
+              href: "/patents/contactless-delivery-system"
+            },
+            {
+              title: "Autonomous Medical Assistance System (AMAS)",
+              status: "Pending",
+              category: "Medical Robotics",
+              filingDate: "June 25, 2020",
+              ageGroup: "12–16",
+              applicationNo: "202041027075",
+              description: "A telerobotic platform for contactless medical support, sampling, and sanitation.",
+              href: "/patents/autonomous-medical-assistance-system"
+            },
+            {
+              title: "Autonomous Health Monitoring System (AHMS)",
+              status: "Pending",
+              category: "Bio-Telemetry",
+              filingDate: "June 25, 2020",
+              ageGroup: "12–16",
+              applicationNo: "TBD",
+              description: "A remote surveillance and alerting network using non-invasive biometric sensing and patrol logic.",
+              href: "/patents/autonomous-health-monitoring-system"
+            }
+          ]
+        }
+      ]
+    },
+
+    "/patents/automated-security-uav": {
+      title: "System for Automated Security (UAV)",
+      metaDescription: "A responsive aerial surveillance system engineered to reduce latency in emergency security operations.",
+      seo: {
+        title: "Automated Security UAV Patent | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/patents/automated-security-uav",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "System for Automated Security (UAV)",
+          url: "https://blueblocks.in/patents/automated-security-uav"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Patents", item: "https://blueblocks.in/patents" },
+            { "@type": "ListItem", position: 3, name: "Automated Security UAV", item: "https://blueblocks.in/patents/automated-security-uav" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "uav-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "System for Automated Security (UAV)",
+          subheadline: "A responsive aerial surveillance system engineered to reduce latency in emergency security operations using sensor fusion and rule-based response logic.",
+          primaryCta: { label: "Back to Patents", href: "/patents" },
+          image: { src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=2400&q=80", alt: "Robotics blueprint", variant: "hero" }
+        },
+        {
+          id: "uav-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Filing Date", value: "July 22, 2020" },
+            { label: "Status", value: "Pending" },
+            { label: "Category", value: "Robotics / UAS" },
+            { label: "Age Group", value: "12–16" },
+            { label: "Application No", value: "202041031343" }
+          ]
+        },
+        {
+          id: "uav-content",
+          type: "twoColumn",
+          left: {
+            sections: [
+              { title: "Abstract", body: "A responsive aerial surveillance system engineered to reduce latency in emergency security operations. The system receives encrypted alerts, triangulates a target location, and executes safety actions using sensor fusion and rule-based response logic." },
+              { title: "Problem Solved", body: "Traditional emergency response suffers from time delays, blind spots, and limited real-time visibility. This system is designed to rapidly provide aerial situational awareness and extend monitoring coverage during critical incidents." },
+              { title: "How It Works", body: "A central trigger generates an alert, location is identified through routing logic, and the UAV initiates a response flight. Onboard sensors capture telemetry and visual feeds for real-time monitoring. Safety actions follow a defined operational protocol." },
+              { title: "Key Components", bullets: ["Alert ingestion and routing logic", "UAV platform + stabilization", "Sensor fusion (visual + telemetry)", "Secure logging and reporting"] }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Inventors",
+                profiles: [
+                  { name: "Aryan Oleti", href: "/team/aryan-oleti" },
+                  { name: "Hasith Sankuri", href: "/team/hasith-sankuri" },
+                  { name: "Akshat Gupta", href: "/team/akshat-gupta" }
+                ]
+              },
+              {
+                title: "Related Links",
+                links: [
+                  { label: "Back to Patents Registry", href: "/patents" },
+                  { label: "View Publications", href: "/publications-open-science" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "uav-gallery",
+          type: "galleryGrid",
+          sectionName: "Diagrams & Process Images",
+          items: [
+            { title: "Technical Blueprint", tag: "Design", image: { src: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=800&q=80", alt: "Blueprint" } },
+            { title: "Mechanical Systems", tag: "Engineering", image: { src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80", alt: "Mechanical" } },
+            { title: "Electronics", tag: "Components", image: { src: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80", alt: "Electronics" } }
+          ]
+        },
+        {
+          id: "uav-faq",
+          type: "accordion",
+          header: "Patent FAQs",
+          items: [
+            { q: "Who owns this patent?", a: "IP rights remain with the student inventors. The Institute facilitates filing and provides pedagogical context." },
+            { q: "Can this be licensed?", a: "Licensing inquiries can be routed through the Contact page." },
+            { q: "How can I verify this filing?", a: "The application number can be verified through the Indian Patent Office database." }
+          ]
+        },
+        {
+          id: "uav-related",
+          type: "relatedCards",
+          header: "Related Registry",
+          cards: [
+            { title: "Patents Registry", description: "View all registered patents.", icon: "patent", href: "/patents" },
+            { title: "Publications", description: "Research docket and case studies.", icon: "publication", href: "/publications-open-science" },
+            { title: "Books", description: "Long-form publications.", icon: "book", href: "/books" }
+          ]
+        }
+      ]
+    },
+
+    "/patents/borehole-rescue-system": {
+      title: "Borehole Rescue System (BRS)",
+      metaDescription: "A rescue apparatus designed for narrow-shaft environments with adaptive positioning and safe extraction mechanisms.",
+      seo: {
+        title: "Borehole Rescue System Patent | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/patents/borehole-rescue-system",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        { "@context": "https://schema.org", "@type": "WebPage", name: "Borehole Rescue System (BRS)", url: "https://blueblocks.in/patents/borehole-rescue-system" },
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+          { "@type": "ListItem", position: 2, name: "Patents", item: "https://blueblocks.in/patents" },
+          { "@type": "ListItem", position: 3, name: "Borehole Rescue System", item: "https://blueblocks.in/patents/borehole-rescue-system" }
+        ]}
+      ],
+      sections: [
+        {
+          id: "brs-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Borehole Rescue System (BRS)",
+          subheadline: "A rescue apparatus designed for narrow-shaft environments using adaptive positioning, anti-collision awareness, and a retention mechanism for safe extraction.",
+          primaryCta: { label: "Back to Patents", href: "/patents" },
+          image: { src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=2400&q=80", alt: "Robotics engineering", variant: "hero" }
+        },
+        {
+          id: "brs-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Filing Date", value: "July 25, 2020" },
+            { label: "Status", value: "Pending" },
+            { label: "Category", value: "Robotics / Rescue Systems" },
+            { label: "Age Group", value: "12–16" },
+            { label: "Application No", value: "202041027026" }
+          ]
+        },
+        {
+          id: "brs-content",
+          type: "twoColumn",
+          left: {
+            sections: [
+              { title: "Abstract", body: "A rescue apparatus designed for narrow-shaft environments. The system uses adaptive positioning, anti-collision awareness, and a retention mechanism to stabilize and lift a subject safely from a vertical shaft." },
+              { title: "Problem Solved", body: "Rescue operations in boreholes are constrained by limited access, visibility, and high risk of secondary harm. This system aims to reduce mechanical instability and increase extraction safety." },
+              { title: "How It Works", body: "The apparatus descends with controlled stabilization. Sensors guide positioning to avoid collision, and a secure retention mechanism stabilizes the subject before controlled extraction." },
+              { title: "Key Components", bullets: ["Narrow-shaft compatible footprint", "Anti-collision sensing", "Stabilization + retention mechanism", "Controlled lift system"] }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Inventors",
+                profiles: [
+                  { name: "Dhairya Singh Bangari", href: "/team/dhairya-singh-bangari" },
+                  { name: "Sanshray Padhy", href: "/team/sanshray-padhy" },
+                  { name: "Ayushmaan", href: "/team/ayushmaan" }
+                ]
+              },
+              { title: "Related Links", links: [{ label: "Back to Patents Registry", href: "/patents" }, { label: "View Publications", href: "/publications-open-science" }] }
+            ]
+          }
+        },
+        {
+          id: "brs-faq",
+          type: "accordion",
+          header: "Patent FAQs",
+          items: [
+            { q: "Who owns this patent?", a: "IP rights remain with the student inventors. The Institute facilitates filing." },
+            { q: "Has this been tested?", a: "Prototype testing details are maintained in internal records." }
+          ]
+        }
+      ]
+    },
+
+    "/patents/contactless-delivery-system": {
+      title: "Autonomous Contactless Delivery System (ACDS)",
+      metaDescription: "An autonomous logistics ecosystem for contactless distribution during high-risk contamination scenarios.",
+      seo: {
+        title: "Contactless Delivery System Patent | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/patents/contactless-delivery-system",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        { "@context": "https://schema.org", "@type": "WebPage", name: "Autonomous Contactless Delivery System", url: "https://blueblocks.in/patents/contactless-delivery-system" },
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+          { "@type": "ListItem", position: 2, name: "Patents", item: "https://blueblocks.in/patents" },
+          { "@type": "ListItem", position: 3, name: "Contactless Delivery System", item: "https://blueblocks.in/patents/contactless-delivery-system" }
+        ]}
+      ],
+      sections: [
+        {
+          id: "acds-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Autonomous Contactless Delivery System (ACDS)",
+          subheadline: "An autonomous logistics ecosystem for contactless distribution during high-risk contamination scenarios.",
+          primaryCta: { label: "Back to Patents", href: "/patents" },
+          image: { src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=2400&q=80", alt: "Robotics", variant: "hero" }
+        },
+        {
+          id: "acds-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Filing Date", value: "June 25, 2020" },
+            { label: "Status", value: "Pending" },
+            { label: "Category", value: "Autonomous Logistics / Public Health" },
+            { label: "Age Group", value: "12–16" },
+            { label: "Application No", value: "TBD" }
+          ]
+        },
+        {
+          id: "acds-content",
+          type: "twoColumn",
+          left: {
+            sections: [
+              { title: "Abstract", body: "An autonomous logistics ecosystem for contactless distribution during high-risk contamination scenarios. Integrates navigation, sanitation, item handling, and inspection to reduce human exposure during distribution operations." },
+              { title: "Problem Solved", body: "Manual delivery during contagion scenarios increases exposure risk and operational bottlenecks. ACDS is designed to support safer last-mile delivery workflows." },
+              { title: "How It Works", body: "The system navigates to a target location, conducts sanitation cycles, performs item handling using controlled mechanisms, and logs delivery confirmation through sensor feedback." },
+              { title: "Key Components", bullets: ["Autonomous navigation + telemetry", "Sanitation atomization module", "Item handling mechanism (robotic handling logic)", "Inspection/verification via sensors"] }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Inventors",
+                profiles: [
+                  { name: "Akira Mani", href: "/team/akira-mani" },
+                  { name: "Aditi Vuppala", href: "/team/aditi-vuppala" },
+                  { name: "Uma V Jayaraman", href: "/team/uma-v-jayaraman" },
+                  { name: "Nayonika Vadlamudi", href: "/team/nayonika-vadlamudi" }
+                ]
+              },
+              { title: "Related Links", links: [{ label: "Back to Patents Registry", href: "/patents" }] }
+            ]
+          }
+        }
+      ]
+    },
+
+    "/patents/autonomous-medical-assistance-system": {
+      title: "Autonomous Medical Assistance System (AMAS)",
+      metaDescription: "A telerobotic medical support platform designed for contactless assistance during crisis conditions.",
+      seo: {
+        title: "Medical Assistance System Patent | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/patents/autonomous-medical-assistance-system",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        { "@context": "https://schema.org", "@type": "WebPage", name: "Autonomous Medical Assistance System", url: "https://blueblocks.in/patents/autonomous-medical-assistance-system" },
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+          { "@type": "ListItem", position: 2, name: "Patents", item: "https://blueblocks.in/patents" },
+          { "@type": "ListItem", position: 3, name: "Medical Assistance System", item: "https://blueblocks.in/patents/autonomous-medical-assistance-system" }
+        ]}
+      ],
+      sections: [
+        {
+          id: "amas-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Autonomous Medical Assistance System (AMAS)",
+          subheadline: "A telerobotic medical support platform designed for contactless assistance during crisis conditions.",
+          primaryCta: { label: "Back to Patents", href: "/patents" },
+          image: { src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=2400&q=80", alt: "Medical robotics", variant: "hero" }
+        },
+        {
+          id: "amas-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Filing Date", value: "June 25, 2020" },
+            { label: "Status", value: "Pending" },
+            { label: "Category", value: "Medical Robotics / Telerobotics" },
+            { label: "Age Group", value: "12–16" },
+            { label: "Application No", value: "202041027075" }
+          ]
+        },
+        {
+          id: "amas-content",
+          type: "twoColumn",
+          left: {
+            sections: [
+              { title: "Abstract", body: "A telerobotic medical support platform designed for contactless assistance during crisis conditions. Supports sample retrieval, controlled handling tasks, and sanitation protocols to reduce physical contact." },
+              { title: "Problem Solved", body: "Direct contact during outbreaks raises risk for healthcare staff and patients. AMAS is designed to reduce exposure in repeatable support workflows." },
+              { title: "How It Works", body: "A remote operator or predefined protocol controls robotic actions. The system integrates sensor feedback and sanitation cycles to maintain safer operational handling." },
+              { title: "Key Components", bullets: ["Robotic arms + controlled handling", "Imaging and sensor integration", "Sanitation (UVGI + chemical)", "Remote operation/control interface"] }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Inventors",
+                profiles: [
+                  { name: "Trisha Mohit Sachanandani", href: "/team/trisha-mohit-sachanandani" },
+                  { name: "Ananya", href: "/team/ananya" },
+                  { name: "Aarini Khadse", href: "/team/aarini-khadse" },
+                  { name: "Anya", href: "/team/anya" }
+                ]
+              },
+              { title: "Related Links", links: [{ label: "Back to Patents Registry", href: "/patents" }] }
+            ]
+          }
+        }
+      ]
+    },
+
+    "/patents/autonomous-health-monitoring-system": {
+      title: "Autonomous Health Monitoring System (AHMS)",
+      metaDescription: "A remote epidemiological surveillance network designed for non-invasive biometric detection and alerting.",
+      seo: {
+        title: "Health Monitoring System Patent | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/patents/autonomous-health-monitoring-system",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        { "@context": "https://schema.org", "@type": "WebPage", name: "Autonomous Health Monitoring System", url: "https://blueblocks.in/patents/autonomous-health-monitoring-system" },
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+          { "@type": "ListItem", position: 2, name: "Patents", item: "https://blueblocks.in/patents" },
+          { "@type": "ListItem", position: 3, name: "Health Monitoring System", item: "https://blueblocks.in/patents/autonomous-health-monitoring-system" }
+        ]}
+      ],
+      sections: [
+        {
+          id: "ahms-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Autonomous Health Monitoring System (AHMS)",
+          subheadline: "A remote epidemiological surveillance network designed for non-invasive biometric detection and alerting.",
+          primaryCta: { label: "Back to Patents", href: "/patents" },
+          image: { src: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=2400&q=80", alt: "Bio-telemetry", variant: "hero" }
+        },
+        {
+          id: "ahms-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Filing Date", value: "June 25, 2020" },
+            { label: "Status", value: "Pending" },
+            { label: "Category", value: "Bio-Telemetry / Public Health" },
+            { label: "Age Group", value: "12–16" },
+            { label: "Application No", value: "TBD" }
+          ]
+        },
+        {
+          id: "ahms-content",
+          type: "twoColumn",
+          left: {
+            sections: [
+              { title: "Abstract", body: "A remote epidemiological surveillance network designed for non-invasive biometric detection and alerting. Uses thermal sensing and signal extraction methods to detect potential health anomalies without direct contact." },
+              { title: "Problem Solved", body: "Large-scale monitoring requires non-invasive, repeatable, low-contact methods. AHMS is designed to support safer screening and pattern detection." },
+              { title: "How It Works", body: "The system captures thermal and visual signals, processes indicators through detection logic, and triggers alerts based on thresholds or anomaly patterns." },
+              { title: "Key Components", bullets: ["Infrared thermography capture", "Signal extraction / biometric detection logic", "Autonomous patrol/positioning logic", "Alerting + reporting framework"] }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Inventors",
+                profiles: [
+                  { name: "Shourya Cheruku", href: "/team/shourya-cheruku" },
+                  { name: "Anshul A.", href: "/team/anshul-a" },
+                  { name: "Nihal Gautham", href: "/team/nihal-gautham" },
+                  { name: "Vivasvath", href: "/team/vivasvath" }
+                ]
+              },
+              { title: "Related Links", links: [{ label: "Back to Patents Registry", href: "/patents" }] }
+            ]
+          }
+        }
+      ]
+    },
+
+    // ============ BOOKS PAGES ============
+
+    "/books": {
+      title: "Books",
+      metaDescription: "Selected long-form publications from Blue Blocks Micro Research Institute for families, educators, and institutional partners.",
+      seo: {
+        title: "Books | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/books",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        { "@context": "https://schema.org", "@type": "CollectionPage", name: "Books", url: "https://blueblocks.in/books" },
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+          { "@type": "ListItem", position: 2, name: "Books", item: "https://blueblocks.in/books" }
+        ]}
+      ],
+      sections: [
+        {
+          id: "books-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Books",
+          subheadline: "Selected long-form publications that support families, educators, and institutional partners. These titles are provided as public references and are linked to verified purchase platforms where applicable.",
+          primaryCta: { label: "View Publications", href: "/publications-open-science" },
+          image: { src: "https://images.unsplash.com/photo-1455885666463-39f77c2476e4?auto=format&fit=crop&w=2400&q=80", alt: "Book on desk", variant: "hero" }
+        },
+        {
+          id: "books-grid",
+          type: "cards",
+          variant: "blogGrid",
+          cards: [
+            {
+              tag: "Book",
+              headline: "Lining The Nest",
+              body: "A structured companion for building environments that protect curiosity while increasing responsibility over time.",
+              cta: { label: "View Book", href: "/books/lining-the-nest" },
+              image: { src: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80", alt: "Open book pages", variant: "card" }
+            }
+          ]
+        }
+      ]
+    },
+
+    "/books/lining-the-nest": {
+      title: "Lining The Nest",
+      metaDescription: "A long-form guide for families and educators on building environments that protect curiosity, increase responsibility, and support long-horizon growth.",
+      seo: {
+        title: "Lining The Nest | Books | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/books/lining-the-nest",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        { "@context": "https://schema.org", "@type": "Book", name: "Lining The Nest", author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }, url: "https://blueblocks.in/books/lining-the-nest" },
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+          { "@type": "ListItem", position: 2, name: "Books", item: "https://blueblocks.in/books" },
+          { "@type": "ListItem", position: 3, name: "Lining The Nest", item: "https://blueblocks.in/books/lining-the-nest" }
+        ]}
+      ],
+      sections: [
+        {
+          id: "nest-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Lining The Nest",
+          subheadline: "A long-form guide for families and educators on building environments that protect curiosity, increase responsibility, and support long-horizon growth.",
+          primaryCta: { label: "Buy on Amazon", href: "https://amzn.in/d/09xLf6FE", external: true },
+          secondaryCta: { label: "Download Sample Chapter", href: "/downloads/lining-the-nest-sample-chapter.pdf" },
+          image: { src: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=2400&q=80", alt: "Open book pages", variant: "hero" }
+        },
+        {
+          id: "nest-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Category", value: "Book" },
+            { label: "Audience", value: "Parents / Educators" },
+            { label: "Availability", value: "Amazon", href: "https://amzn.in/d/09xLf6FE", external: true }
+          ]
+        },
+        {
+          id: "nest-content",
+          type: "twoColumn",
+          left: {
+            sections: [
+              { title: "Overview", body: "Lining The Nest is presented as a practical narrative on how environments shape behaviour over time. It focuses on observation, structure, and repeatable routines that reduce noise and increase clarity for both adults and children." },
+              { title: "Key themes", bullets: ["Environment as a behavioural scaffold", "Structure without rigidity", "Responsibility as a gradual transfer", "Observation-led decision making", "Long-horizon culture in learning spaces"] },
+              { title: "Sample chapters", body: "A preview set of sample pages is provided for review. The full book is available via Amazon." }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Buy / Links",
+                links: [
+                  { label: "Buy on Amazon", href: "https://amzn.in/d/09xLf6FE", external: true },
+                  { label: "Download Sample Chapter PDF", href: "/downloads/lining-the-nest-sample-chapter.pdf", download: true }
+                ]
+              },
+              {
+                title: "About the Author(s)",
+                profiles: [
+                  { name: "Author Profile 1", role: "Placeholder", href: "/team/author-profile-1" },
+                  { name: "Author Profile 2", role: "Placeholder", href: "/team/author-profile-2" },
+                  { name: "Editorial Contributor", role: "Placeholder", href: "/team/editorial-contributor" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "nest-faq",
+          type: "accordion",
+          header: "Frequently Asked Questions",
+          items: [
+            { q: "Where can I purchase the book?", a: "The verified listing is available via Amazon through the link above." },
+            { q: "Can I quote sections publicly?", a: "Short excerpts may be used with attribution. For extended reproduction, request permissions via the Contact page." },
+            { q: "Do you offer bulk orders?", a: "Bulk enquiries can be routed through the Contact page for fulfilment guidance." }
+          ]
+        },
+        {
+          id: "nest-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Back to Books", description: "View all books.", icon: "book", href: "/books" },
+            { title: "Downloads", description: "Sample chapters and resources.", icon: "publication", href: "/downloads" },
+            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications-open-science" }
+          ]
+        }
+      ]
+    },
+
+    // ============ DOWNLOADS HUB ============
+
+    "/downloads": {
+      title: "Downloads",
+      metaDescription: "Consolidated hub for public reference materials, conference artifacts, and citation-grade documents from Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "Downloads | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/downloads",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        { "@context": "https://schema.org", "@type": "CollectionPage", name: "Downloads", url: "https://blueblocks.in/downloads" },
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+          { "@type": "ListItem", position: 2, name: "Downloads", item: "https://blueblocks.in/downloads" }
+        ]}
+      ],
+      sections: [
+        {
+          id: "downloads-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Downloads",
+          subheadline: "This hub consolidates public reference material, conference artifacts, and citation-grade documents. Items are grouped to keep the site navigable until CMS publishing is live.",
+          primaryCta: { label: "View Publications", href: "/publications-open-science" },
+          image: { src: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=2400&q=80", alt: "Documents archive", variant: "hero" }
+        },
+        {
+          id: "downloads-publications",
+          type: "downloadList",
+          header: "Publications",
+          items: [
+            { title: "IN-SPACe Authorization Letter", type: "PDF", description: "Official authorization record for SBB-1 mission.", href: "/downloads/in-space-authorization-letter.pdf" },
+            { title: "SAPARYA Conference Booklet", type: "PDF", description: "Conference materials from the 7th National Montessori Conference.", href: "/downloads/saparya-conference-booklet.pdf" },
+            { title: "SAPARYA Presentation", type: "PDF", description: "Presentation slides from the IMF Conference.", href: "/downloads/saparya-presentation.pdf" }
+          ]
+        },
+        {
+          id: "downloads-books",
+          type: "downloadList",
+          header: "Books",
+          items: [
+            { title: "Lining The Nest – Sample Chapter", type: "PDF", description: "Preview pages from the book.", href: "/downloads/lining-the-nest-sample-chapter.pdf" }
+          ]
+        },
+        {
+          id: "downloads-media",
+          type: "downloadList",
+          header: "Media",
+          items: [
+            { title: "Media Kit", type: "ZIP", description: "Press materials and attribution guidelines.", href: "/downloads/media-kit.zip" },
+            { title: "Brand Asset Pack", type: "ZIP", description: "Logos, typography, and identity files.", href: "/downloads/brand-assets.zip" },
+            { title: "Leadership Bio Sheet", type: "PDF", description: "Approved biographies and headshots.", href: "/downloads/leadership-bio.pdf" }
+          ]
+        }
+      ]
+    },
+
+    // ============ TEAM PAGES ============
+
+    "/team": {
+      title: "Team",
+      metaDescription: "Leadership and research team at Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "Team | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/team",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        { "@context": "https://schema.org", "@type": "CollectionPage", name: "Team", url: "https://blueblocks.in/team" },
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+          { "@type": "ListItem", position: 2, name: "Team", item: "https://blueblocks.in/team" }
+        ]}
+      ],
+      sections: [
+        {
+          id: "team-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Team",
+          subheadline: "Leadership and research team profiles at Blue Blocks Micro Research Institute.",
+          primaryCta: { label: "View Governance", href: "/governance" },
+          image: { src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=2400&q=80", alt: "Lab instruments", variant: "hero" }
+        },
+        {
+          id: "team-grid",
+          type: "cards",
+          variant: "profiles",
+          header: "Leadership",
+          cards: [
+            {
+              headline: "Pavan Goyal",
+              tag: "Principal Investigator & Founder",
+              body: "Oversees the longitudinal integrity of the 0-18 study. Holds AMI certification across all developmental planes.",
+              cta: { label: "View Profile", href: "/team/pavan-goyal" },
+              image: { src: "/src/assets/placeholders/avatars/pavan.jpg", alt: "Pavan Goyal", variant: "avatar" }
+            },
+            {
+              headline: "Munira Hussain",
+              tag: "Director of Pedagogy",
+              body: "Ensures all research protocols integrate seamlessly with the Montessori curriculum.",
+              cta: { label: "View Profile", href: "/team/munira-hussain" },
+              image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar" }
+            },
+            {
+              headline: "Adolescent Research Cohort",
+              tag: "Student Researchers",
+              body: "The collective group of adolescent researchers contributing to patents and mission work.",
+              cta: { label: "View Profile", href: "/team/adolescent-research-cohort" },
+              image: { src: "/src/assets/placeholders/avatars/headshot-1.jpg", alt: "Research cohort", variant: "avatar" }
+            }
+          ]
+        }
+      ]
+    },
+
+    "/team/pavan-goyal": {
+      title: "Pavan Goyal",
+      metaDescription: "Principal Investigator & Founder at Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "Pavan Goyal | Team | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/team/pavan-goyal",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        { "@context": "https://schema.org", "@type": "Person", name: "Pavan Goyal", jobTitle: "Principal Investigator & Founder" },
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+          { "@type": "ListItem", position: 2, name: "Team", item: "https://blueblocks.in/team" },
+          { "@type": "ListItem", position: 3, name: "Pavan Goyal", item: "https://blueblocks.in/team/pavan-goyal" }
+        ]}
+      ],
+      sections: [
+        {
+          id: "pavan-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Pavan Goyal",
+          subheadline: "Principal Investigator & Founder",
+          primaryCta: { label: "Back to Team", href: "/team" },
+          image: { src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=2400&q=80", alt: "Lab environment", variant: "hero" }
+        },
+        {
+          id: "pavan-content",
+          type: "twoColumn",
+          left: {
+            sections: [
+              { title: "Role", body: "Principal Investigator & Founder" },
+              { title: "Overview", body: "Pavan Goyal oversees the longitudinal integrity of the 0-18 study at Blue Blocks Micro Research Institute. He holds the rare complete AMI certification across all developmental planes, enabling a cohesive pedagogical vision from infancy through adolescence.\n\nHis work focuses on embedding research infrastructure within learning environments, ensuring that observation protocols integrate seamlessly with educational practice." }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Links",
+                links: [
+                  { label: "Contact", href: "/contact" },
+                  { label: "Publications", href: "/publications-open-science" },
+                  { label: "Patents Registry", href: "/patents" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "pavan-related",
+          type: "relatedCards",
+          header: "Related Work",
+          cards: [
+            { title: "Patents", description: "Student-generated inventions.", icon: "patent", href: "/patents" },
+            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications-open-science" }
+          ]
+        }
+      ]
+    },
+
+    "/team/munira-hussain": {
+      title: "Munira Hussain",
+      metaDescription: "Director of Pedagogy at Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "Munira Hussain | Team | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/team/munira-hussain",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        { "@context": "https://schema.org", "@type": "Person", name: "Munira Hussain", jobTitle: "Director of Pedagogy" },
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+          { "@type": "ListItem", position: 2, name: "Team", item: "https://blueblocks.in/team" },
+          { "@type": "ListItem", position: 3, name: "Munira Hussain", item: "https://blueblocks.in/team/munira-hussain" }
+        ]}
+      ],
+      sections: [
+        {
+          id: "munira-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Munira Hussain",
+          subheadline: "Director of Pedagogy",
+          primaryCta: { label: "Back to Team", href: "/team" },
+          image: { src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=2400&q=80", alt: "Lab environment", variant: "hero" }
+        },
+        {
+          id: "munira-content",
+          type: "twoColumn",
+          left: {
+            sections: [
+              { title: "Role", body: "Director of Pedagogy" },
+              { title: "Overview", body: "Munira Hussain ensures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the \"Children's House\" environment.\n\nCredentials: AMI Diploma / M.Ed\n\nHer work focuses on maintaining pedagogical integrity while enabling embedded observation and longitudinal data collection." }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Links",
+                links: [
+                  { label: "Contact", href: "/contact" },
+                  { label: "Governance", href: "/governance" }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+
+    "/team/adolescent-research-cohort": {
+      title: "Adolescent Research Cohort",
+      metaDescription: "The collective group of adolescent researchers contributing to patents and mission work at Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "Adolescent Research Cohort | Team | Blue Blocks Micro Research Institute",
+        canonical: "https://blueblocks.in/team/adolescent-research-cohort",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        { "@context": "https://schema.org", "@type": "Organization", name: "Adolescent Research Cohort" },
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://blueblocks.in/" },
+          { "@type": "ListItem", position: 2, name: "Team", item: "https://blueblocks.in/team" },
+          { "@type": "ListItem", position: 3, name: "Adolescent Research Cohort", item: "https://blueblocks.in/team/adolescent-research-cohort" }
+        ]}
+      ],
+      sections: [
+        {
+          id: "cohort-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Adolescent Research Cohort",
+          subheadline: "Student Researchers (Ages 12-18)",
+          primaryCta: { label: "Back to Team", href: "/team" },
+          image: { src: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=2400&q=80", alt: "Lab environment", variant: "hero" }
+        },
+        {
+          id: "cohort-content",
+          type: "twoColumn",
+          left: {
+            sections: [
+              { title: "Overview", body: "The Adolescent Research Cohort represents the collective group of student researchers contributing to patents, mission work, and longitudinal studies at Blue Blocks Micro Research Institute.\n\nThese students work within TRL-9 environments on real engineering challenges, producing patentable inventions and contributing to aerospace missions.\n\nIndividual student profiles are maintained internally to protect privacy. Patent records list inventors by name with parental consent." }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Related Work",
+                links: [
+                  { label: "Patents Registry", href: "/patents" },
+                  { label: "Publications", href: "/publications-open-science" },
+                  { label: "Governance", href: "/governance" }
+                ]
+              }
+            ]
+          }
         }
       ]
     },
