@@ -150,6 +150,58 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Technical Briefs / Presentations / Proceedings -->
+  <url>
+    <loc>https://siddheshv1.lovable.app/technical-briefs/sbb-1</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://siddheshv1.lovable.app/presentations/marrakesh-human-capital</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://siddheshv1.lovable.app/proceedings/oslo-2026</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Newsroom Subpages -->
+  <url>
+    <loc>https://siddheshv1.lovable.app/newsroom/dispatch/isro-payload-authorization</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://siddheshv1.lovable.app/newsroom/coverage/nobel-peace-center</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://siddheshv1.lovable.app/newsroom/updates/iit-hyderabad-advisory</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://siddheshv1.lovable.app/newsroom/updates/utility-patent-4421</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://siddheshv1.lovable.app/newsroom/updates/visiting-scholars-2026</loc>
+    <lastmod>2026-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
   <!-- Legal -->
   <url>
     <loc>https://siddheshv1.lovable.app/privacy</loc>

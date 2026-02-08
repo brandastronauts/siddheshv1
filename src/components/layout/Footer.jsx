@@ -80,6 +80,45 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Registries Row */}
+        <div className="mt-10 pt-8 border-t border-white/10">
+          <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/40">
+            Registries & Archives
+          </h4>
+          <div className="flex flex-wrap gap-4">
+            <Link to="/publications" className="text-sm text-white/60 hover:text-white transition-colors">
+              Publications
+            </Link>
+            <Link to="/patents" className="text-sm text-white/60 hover:text-white transition-colors">
+              Patents
+            </Link>
+            <Link to="/books" className="text-sm text-white/60 hover:text-white transition-colors">
+              Books
+            </Link>
+            <Link to="/team" className="text-sm text-white/60 hover:text-white transition-colors">
+              Team
+            </Link>
+            <Link to="/downloads" className="text-sm text-white/60 hover:text-white transition-colors">
+              Downloads
+            </Link>
+          </div>
+        </div>
+
+        {/* Utility Links Row */}
+        <div className="mt-6">
+          <div className="flex flex-wrap gap-4">
+            <Link to="/publications" className="text-xs text-white/40 hover:text-white/80 transition-colors">
+              Open Science Statement
+            </Link>
+            <Link to="/collaborate" className="text-xs text-white/40 hover:text-white/80 transition-colors">
+              Data Access
+            </Link>
+            <Link to="/governance" className="text-xs text-white/40 hover:text-white/80 transition-colors">
+              Research Ethics
+            </Link>
+          </div>
+        </div>
+
         {/* Newsletter Section */}
         <div className="mt-12 md:mt-16">
           <FooterNewsletter />

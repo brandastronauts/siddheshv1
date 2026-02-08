@@ -375,6 +375,19 @@ const siteContent = {
         },
 
         {
+          id: "home-explore-registries",
+          type: "buttonCards",
+          header: "Explore Registries",
+          cards: [
+            { label: "Publications", href: "/publications" },
+            { label: "Patents", href: "/patents" },
+            { label: "Books", href: "/books" },
+            { label: "Team", href: "/team" },
+            { label: "Downloads", href: "/downloads" }
+          ]
+        },
+
+        {
           id: "home-visual-evidence",
           type: "galleryGrid",
           sectionName: "Visual Evidence",
@@ -382,7 +395,7 @@ const siteContent = {
             "As a Micro Research Institute dealing with minors (Ages 0-18), we adhere to strict ethical guidelines regarding visual data. We prioritize subject privacy over public display.",
           header: "Visual Documentation Standards",
           body:
-            "Temporary technical placeholders are used until ethical clearance for institutional imagery is completed. All imagery released by the Institute must undergo a three-stage ethical clearance process to ensure it documents the process, not just the child. A curated, anonymized archive of our Labs and Methodologies is currently being digitized.",
+            "Temporary technical placeholders are used until ethical clearance for institutional imagery is completed. All Institute imagery undergoes a three-stage review to ensure it documents process without exposing minors or private data.",
           cta: { label: "Request Media Kit (Press Only)", href: "/downloads" },
           items: [
             {
