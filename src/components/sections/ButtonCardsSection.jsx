@@ -9,9 +9,46 @@ const iconMap = {
   briefcase: Briefcase,
 };
 
+// Default fallback cards for Explore Registries
+const defaultRegistryCards = [
+  {
+    title: "Publications",
+    description: "Administrative records, case studies, datasets, and open science archives.",
+    image: "https://images.unsplash.com/photo-1450101215322-bf5cd27642fc?auto=format&fit=crop&w=1200&q=80",
+    button: { label: "Browse Publications", href: "/publications" }
+  },
+  {
+    title: "Patents",
+    description: "Student innovation outcomes, patent filings, and technical documentation.",
+    image: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1200&q=80",
+    button: { label: "View Patents", href: "/patents" }
+  },
+  {
+    title: "Books",
+    description: "Long-form publications supporting families, educators, and research partners.",
+    image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80",
+    button: { label: "Explore Books", href: "/books" }
+  },
+  {
+    title: "Team",
+    description: "Researchers, embedded fellows, leadership, and institutional collaborators.",
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
+    button: { label: "Meet the Team", href: "/team" }
+  },
+  {
+    title: "Downloads",
+    description: "Technical briefs, presentations, proceedings, and public documents.",
+    image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80",
+    button: { label: "Access Downloads", href: "/downloads" }
+  }
+];
+
 const ButtonCardsSection = ({ heading, header, items, cards, footerNote }) => {
   const title = header || heading;
-  const cardData = cards || items || [];
+  
+  // Use provided cards/items, or fall back to default registry cards
+  const rawCardData = cards || items || [];
+  const cardData = rawCardData.length > 0 ? rawCardData : defaultRegistryCards;
 
   const renderButton = (item) => {
     const buttonData = item.button;
@@ -48,7 +85,7 @@ const ButtonCardsSection = ({ heading, header, items, cards, footerNote }) => {
 
     return (
       <Link
-        to={buttonData.href || '#'}
+        to={buttonData.href || '/'}
         className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group/btn"
       >
         {buttonData.label}
@@ -71,11 +108,13 @@ const ButtonCardsSection = ({ heading, header, items, cards, footerNote }) => {
           </motion.h2>
         )}
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        {/* 5-column grid for desktop (3+2 layout), 2 for tablet, 1 for mobile */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
           {cardData.map((item, index) => {
             const IconComponent = item.icon ? iconMap[item.icon] : null;
             const cardTitle = item.headline || item.title;
             const cardBody = item.body || item.description;
+            const cardImage = item.image;
             
             return (
               <motion.div
@@ -84,23 +123,37 @@ const ButtonCardsSection = ({ heading, header, items, cards, footerNote }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 border border-border/50 group"
+                className="bg-card rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 border border-border/50 group flex flex-col"
               >
-                {IconComponent && (
-                  <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-accent-cyan/10 flex items-center justify-center group-hover:bg-accent-cyan/20 transition-colors mb-4">
-                    <IconComponent className="w-6 h-6 text-accent-cyan" />
+                {/* Square image container */}
+                {cardImage && (
+                  <div className="aspect-square w-full overflow-hidden">
+                    <img
+                      src={cardImage}
+                      alt={cardTitle || 'Registry image'}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy"
+                    />
                   </div>
                 )}
                 
-                <h3 className="text-lg font-semibold text-deep-ink mb-3 group-hover:text-primary-navy transition-colors">
-                  {cardTitle}
-                </h3>
-                
-                <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                  {cardBody}
-                </p>
-                
-                {renderButton(item)}
+                <div className="p-5 flex flex-col flex-1">
+                  {IconComponent && !cardImage && (
+                    <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-accent-cyan/10 flex items-center justify-center group-hover:bg-accent-cyan/20 transition-colors mb-4">
+                      <IconComponent className="w-6 h-6 text-accent-cyan" />
+                    </div>
+                  )}
+                  
+                  <h3 className="text-lg font-semibold text-deep-ink mb-2 group-hover:text-primary-navy transition-colors">
+                    {cardTitle}
+                  </h3>
+                  
+                  <p className="text-sm text-muted-foreground mb-4 leading-relaxed flex-1">
+                    {cardBody}
+                  </p>
+                  
+                  {renderButton(item)}
+                </div>
               </motion.div>
             );
           })}

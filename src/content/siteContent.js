@@ -379,11 +379,36 @@ const siteContent = {
           type: "buttonCards",
           header: "Explore Registries",
           cards: [
-            { label: "Publications", href: "/publications" },
-            { label: "Patents", href: "/patents" },
-            { label: "Books", href: "/books" },
-            { label: "Team", href: "/team" },
-            { label: "Downloads", href: "/downloads" }
+            {
+              title: "Publications",
+              description: "Administrative records, case studies, datasets, and open science archives.",
+              image: "https://images.unsplash.com/photo-1450101215322-bf5cd27642fc?auto=format&fit=crop&w=1200&q=80",
+              button: { label: "Browse Publications", href: "/publications" }
+            },
+            {
+              title: "Patents",
+              description: "Student innovation outcomes, patent filings, and technical documentation.",
+              image: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1200&q=80",
+              button: { label: "View Patents", href: "/patents" }
+            },
+            {
+              title: "Books",
+              description: "Long-form publications supporting families, educators, and research partners.",
+              image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1200&q=80",
+              button: { label: "Explore Books", href: "/books" }
+            },
+            {
+              title: "Team",
+              description: "Researchers, embedded fellows, leadership, and institutional collaborators.",
+              image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
+              button: { label: "Meet the Team", href: "/team" }
+            },
+            {
+              title: "Downloads",
+              description: "Technical briefs, presentations, proceedings, and public documents.",
+              image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80",
+              button: { label: "Access Downloads", href: "/downloads" }
+            }
           ]
         },
 
