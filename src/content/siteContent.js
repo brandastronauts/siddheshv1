@@ -1024,10 +1024,9 @@ const siteContent = {
           id: "pub-hero",
           type: "hero",
           variant: "stark",
-          headline: "Publications & Open Science.",
-          subheadline:
-            "This is the institutional research docket. Papers, frameworks, and intellectual property generated through 15 years of embedded longitudinal research. We operate on Open Science principles—methodology papers, anonymized datasets, and outcome reports are archived in Zenodo for public access. Five utility patents filed to date.",
-          primaryCta: { label: "Browse Zenodo Archive", href: "https://zenodo.org/", external: true },
+          headline: "Publications & Open Science",
+          subheadline: "Everything we publish is archived for traceability. This docket lists public administrative records, case studies, and publication pipelines. Where applicable, each item carries a DOI and is preserved in Zenodo for citation permanence.",
+          primaryCta: { label: "Browse Zenodo", href: "https://zenodo.org/communities/blueblocks/", external: true },
           secondaryCta: { label: "View Methodology", href: "/methodology" },
           image: {
             src: "/src/assets/banners/publications-doi.jpg",
@@ -1041,8 +1040,7 @@ const siteContent = {
         {
           id: "pub-live-ticker",
           type: "ticker",
-          text:
-            "DOCKET STATUS: Active (2026 Cycle) /// MANUSCRIPTS IN REVIEW: 3 /// DOI ASSIGNMENTS: Pending /// OPEN ACCESS: CC-BY-4.0"
+          text: "DOCKET STATUS: Active (2026 Cycle) /// MANUSCRIPTS IN REVIEW: 3 /// DOI ASSIGNMENTS: Pending /// OPEN ACCESS: CC-BY-4.0"
         },
 
         {
@@ -1053,18 +1051,18 @@ const siteContent = {
           variant: "blogGrid",
           cards: [
             {
-              tag: "Administrative Record",
+              tag: "Published Record",
               headline: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
-              meta: "DOI: 10.5281/zenodo.18195108 • January 2026",
-              body: "Official authorization record for the SBB-1 mission activity, preserved as a permanent institutional artifact for governance traceability.",
+              meta: "DOI: 10.5281/zenodo.18195108",
+              body: "Official authorization archived for governance traceability and open-access citation.",
               cta: { label: "View Publication", href: "/publications/in-space-authorization-letter" },
               image: { src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80", alt: "Mission control", variant: "card" }
             },
             {
-              tag: "IMF Case Study",
-              headline: "SAPARYA: Building Innovation Capacity (0–18) Through Embedded Research",
-              meta: "IMF 7th National Montessori Conference • November 2024",
-              body: "Case study documenting the pedagogical framework and preliminary findings from the SAPARYA initiative.",
+              tag: "Published Case Study",
+              headline: "SAPARYA / IMF Conference Case Study (SBB-1 Mission & Valorization)",
+              meta: "DOI: 10.5281/zenodo.18337934",
+              body: "A documented adolescent engineering mission and the pedagogical outcome of real-world stakes.",
               cta: { label: "View Publication", href: "/publications/saparya-imf-case-study" },
               image: { src: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80", alt: "Conference presentation", variant: "card" }
             }
@@ -2338,16 +2336,99 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "Downloads",
-          subheadline:
-            "Access media kits, research frameworks, and institutional documents for press and academic use.",
-          primaryCta: { label: "Request Media Kit", href: "/downloads/media-kit" },
+          subheadline: "Access publications, media kits, research frameworks, and institutional documents for press and academic use. All downloads are provided for institutional reference and citation.",
+          primaryCta: { label: "View Publications", href: "/publications" },
           image: {
-            src: "/src/assets/banners/downloads.jpg",
+            src: "/src/assets/banners/downloads-archive.jpg",
             alt: "Downloads page visual",
             variant: "hero",
             privacyBlur: false,
             caption: ""
           }
+        },
+        {
+          id: "downloads-publications",
+          type: "downloadList",
+          header: "Publications",
+          intro: "Official publications and research records with DOI identifiers.",
+          items: [
+            {
+              title: "IN-SPACe Authorization Letter",
+              description: "Official authorization record for SBB-1 mission (DOI: 10.5281/zenodo.18195108)",
+              format: "PDF",
+              href: "/downloads/in-space-authorization-letter.pdf"
+            },
+            {
+              title: "SAPARYA Conference Booklet",
+              description: "Full case study from IMF 7th National Montessori Conference (DOI: 10.5281/zenodo.18337934)",
+              format: "PDF",
+              href: "/downloads/saparya-conference-booklet.pdf"
+            },
+            {
+              title: "SAPARYA Presentation Slides",
+              description: "Visual presentation materials from IMF conference",
+              format: "PDF",
+              href: "/downloads/saparya-presentation.pdf"
+            }
+          ]
+        },
+        {
+          id: "downloads-books",
+          type: "downloadList",
+          header: "Books & Sample Chapters",
+          intro: "Sample chapters and supplementary materials from published books.",
+          items: [
+            {
+              title: "Lining The Nest - Sample Chapter",
+              description: "Preview chapter from the book on building structured learning environments",
+              format: "PDF",
+              href: "/downloads/lining-the-nest-sample-chapter.pdf"
+            }
+          ]
+        },
+        {
+          id: "downloads-media",
+          type: "downloadList",
+          header: "Media & Press Resources",
+          intro: "Resources for journalists and media partners.",
+          items: [
+            {
+              title: "Media Kit",
+              description: "Complete media kit with logos, brand guidelines, and approved imagery",
+              format: "ZIP",
+              href: "/downloads/media-kit.zip"
+            },
+            {
+              title: "Brand Assets",
+              description: "High-resolution logos and typography files",
+              format: "ZIP",
+              href: "/downloads/brand-assets.zip"
+            },
+            {
+              title: "Leadership Bio Sheet",
+              description: "Approved biographies and headshots for Pavan Goyal and Munira Hussain",
+              format: "PDF",
+              href: "/downloads/leadership-bio.pdf"
+            }
+          ]
+        },
+        {
+          id: "downloads-note",
+          type: "textBlock",
+          variant: "muted",
+          header: "",
+          body: "Note: Some downloads are placeholder files pending official release. Contact press@blueblocks.in for specific document requests or verification."
+        },
+        {
+          id: "downloads-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
+            { title: "Patents", description: "IP registry.", icon: "patent", href: "/patents" },
+            { title: "Books", description: "Long-form publications.", icon: "book", href: "/books" },
+            { title: "Newsroom", description: "Press resources.", icon: "news", href: "/newsroom" }
+          ]
         }
       ]
     },
@@ -2448,11 +2529,22 @@ const siteContent = {
       ],
       sections: [
         {
-          id: "sitemap-content",
-          type: "textBlock",
-          header: "Sitemap",
-          body:
-            "This page provides a comprehensive overview of all pages and resources available on the Blue Blocks Micro Research Institute website."
+          id: "sitemap-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Sitemap",
+          subheadline: "Complete navigation index for the Blue Blocks Micro Research Institute website. Use this page to find any resource or verify that all routes are accessible.",
+          primaryCta: { label: "View Publications", href: "/publications" },
+          image: {
+            src: "/src/assets/banners/downloads-archive.jpg",
+            alt: "Sitemap navigation",
+            variant: "hero",
+            privacyBlur: false
+          }
+        },
+        {
+          id: "sitemap-navigation",
+          type: "sitemap"
         }
       ]
     },
@@ -2500,9 +2592,8 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "Books",
-          subheadline:
-            "Explore long-form publications and books authored or curated by Blue Blocks Micro Research Institute.",
-          primaryCta: { label: "Browse Books", href: "/books" },
+          subheadline: "Long-form publications supporting families, educators, and research partners. Our books translate 15 years of longitudinal research into practical frameworks for building structured learning environments.",
+          primaryCta: { label: "View Featured Book", href: "/books/lining-the-nest" },
           image: {
             src: "/src/assets/banners/books.jpg",
             alt: "Books collection visual",
@@ -2510,6 +2601,42 @@ const siteContent = {
             privacyBlur: false,
             caption: ""
           }
+        },
+        {
+          id: "books-list",
+          type: "cards",
+          header: "Published Books",
+          intro: "Long-form publications authored by Blue Blocks Micro Research Institute leadership.",
+          variant: "blogGrid",
+          cards: [
+            {
+              tag: "Featured",
+              headline: "Lining The Nest",
+              meta: "By Pavan Goyal • 280 pages",
+              body: "A comprehensive guide for families and educators on building structured learning environments that foster innovation capacity from early childhood through adolescence. Drawing on 15 years of longitudinal observation.",
+              cta: { label: "View Book Details", href: "/books/lining-the-nest" },
+              image: { src: "/src/assets/placeholders/card-default.jpg", alt: "Lining The Nest book cover", variant: "card" }
+            }
+          ]
+        },
+        {
+          id: "books-purchase",
+          type: "highlightBox",
+          variant: "accent",
+          header: "Purchase Options",
+          body: "Lining The Nest is available in paperback and digital formats through Amazon India.",
+          cta: { label: "Buy on Amazon", href: "https://amzn.in/d/09xLf6FE", external: true }
+        },
+        {
+          id: "books-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
+            { title: "Methodology", description: "Research protocols.", icon: "methodology", href: "/methodology" },
+            { title: "Team", description: "Meet the authors.", icon: "team", href: "/team" },
+            { title: "Downloads", description: "Sample chapters.", icon: "download", href: "/downloads" }
+          ]
         }
       ]
     },
@@ -2556,10 +2683,9 @@ const siteContent = {
           id: "patents-hero",
           type: "hero",
           variant: "stark",
-          headline: "Patents",
-          subheadline:
-            "Five utility patents filed to date by Blue Blocks Micro Research Institute students. Explore the registry and learn about our intellectual property.",
-          primaryCta: { label: "View Patent Registry", href: "/patents" },
+          headline: "Patent Registry",
+          subheadline: "Five utility patents filed to date by Blue Blocks Micro Research Institute students. These filings demonstrate that children can contribute meaningfully to the global innovation economy before reaching adulthood. All IP remains attributed to the student inventors.",
+          primaryCta: { label: "View Governance", href: "/governance" },
           image: {
             src: "/src/assets/banners/patents.jpg",
             alt: "Patents registry visual",
@@ -2567,6 +2693,94 @@ const siteContent = {
             privacyBlur: false,
             caption: ""
           }
+        },
+        {
+          id: "patents-grid",
+          type: "patentGrid",
+          header: "Filed Patents",
+          intro: "Registry of utility patents filed by student inventors. Application numbers are assigned upon filing; some entries show 'TBD' where filing is in preparation.",
+          patents: [
+            {
+              title: "Automated Security UAV",
+              applicationNo: "Filed",
+              inventors: "Drone Research Centre (Ages 10-14)",
+              status: "Filed",
+              description: "Autonomous unmanned aerial vehicle for perimeter security and surveillance applications.",
+              href: "/patents/automated-security-uav"
+            },
+            {
+              title: "Borehole Rescue System",
+              applicationNo: "Filed",
+              inventors: "Student Engineers (Ages 11-15)",
+              status: "Filed",
+              description: "Mechanical rescue system designed for borehole emergencies, developed in response to real-world incidents.",
+              href: "/patents/borehole-rescue-system"
+            },
+            {
+              title: "Contactless Delivery System",
+              applicationNo: "Filed",
+              inventors: "Drone Research Centre (Ages 10-13)",
+              status: "Filed",
+              description: "Automated contactless delivery mechanism for healthcare and logistics applications.",
+              href: "/patents/contactless-delivery-system"
+            },
+            {
+              title: "Autonomous Medical Assistance System",
+              applicationNo: "Filed",
+              inventors: "Student Engineers (Ages 12-16)",
+              status: "Filed",
+              description: "Autonomous system for medical assistance in remote or emergency situations.",
+              href: "/patents/autonomous-medical-assistance-system"
+            },
+            {
+              title: "Autonomous Health Monitoring System ('Guardian' Drone)",
+              applicationNo: "#4421",
+              inventors: "Drone Research Centre (Ages 9-11)",
+              status: "Filed",
+              description: "Autonomous health monitoring drone system—the youngest patent holders in the Institute's registry.",
+              href: "/patents/autonomous-health-monitoring-system"
+            }
+          ]
+        },
+        {
+          id: "patents-ip-rights",
+          type: "textBlock",
+          header: "Student IP Rights",
+          body: "All Intellectual Property created by students remains attributed to the student inventors. Blue Blocks Micro Research Institute facilitates the filing process and provides the pedagogical context but does not claim ownership. Patents are filed under the inventors' names with institutional support."
+        },
+        {
+          id: "patents-faq",
+          type: "accordion",
+          header: "Frequently Asked Questions",
+          items: [
+            {
+              q: "Who owns the patents?",
+              a: "All patents are filed under the student inventors' names. The Institute facilitates the process but does not claim ownership of student-generated IP."
+            },
+            {
+              q: "How can children file patents?",
+              a: "Children can be named as inventors on patent applications. The Institute provides legal support, technical documentation assistance, and the pedagogical framework that enables students to develop patentable innovations."
+            },
+            {
+              q: "Are these patents commercially available?",
+              a: "Licensing inquiries can be directed through our Contact page. All licensing decisions involve the student inventors and their families."
+            },
+            {
+              q: "What is the age range of inventors?",
+              a: "Our patent registry includes inventors as young as 9 years old. The age ranges reflect the cohorts working in different Innovation Labs (Drone Research Centre, Space Lab, etc.)."
+            }
+          ]
+        },
+        {
+          id: "patents-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
+            { title: "Governance", description: "IP rights policy.", icon: "governance", href: "/governance" },
+            { title: "Newsroom", description: "Patent announcements.", icon: "news", href: "/newsroom" },
+            { title: "Collaborate", description: "Licensing inquiries.", icon: "collaborate", href: "/collaborate" }
+          ]
         }
       ]
     },
@@ -2614,9 +2828,8 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "Team",
-          subheadline:
-            "Meet the leadership, researchers, and staff who drive the Blue Blocks Micro Research Institute's mission.",
-          primaryCta: { label: "View Profiles", href: "/team" },
+          subheadline: "Meet the leadership, researchers, and embedded fellows who drive the Blue Blocks Micro Research Institute's mission. 15 years of longitudinal research requires institutional stability and deep domain expertise.",
+          primaryCta: { label: "Contact", href: "/contact" },
           image: {
             src: "/src/assets/banners/team.jpg",
             alt: "Team members visual",
@@ -2624,6 +2837,63 @@ const siteContent = {
             privacyBlur: false,
             caption: ""
           }
+        },
+        {
+          id: "team-leadership",
+          type: "cards",
+          variant: "profiles",
+          header: "Leadership",
+          intro: "Internal leadership responsible for longitudinal integrity, pedagogy alignment, and institutional stewardship.",
+          cards: [
+            {
+              headline: "Pavan Goyal",
+              tag: "Principal Investigator & Founder",
+              body: "Credentials: AMI Diploma (0-18)\n\nOversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes.",
+              image: { src: "/src/assets/placeholders/avatars/pavan.jpg", alt: "Pavan Goyal", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/pavan-goyal" }
+            },
+            {
+              headline: "Munira Hussain",
+              tag: "Director of Pedagogy",
+              body: "Credentials: AMI Diploma / M.Ed\n\nEnsures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the 'Children's House.'",
+              image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/munira-hussain" }
+            }
+          ]
+        },
+        {
+          id: "team-research",
+          type: "cards",
+          variant: "profiles",
+          header: "Research Cohorts",
+          intro: "Student researchers and embedded fellows who participate in the Institute's innovation projects.",
+          cards: [
+            {
+              headline: "Adolescent Research Cohort",
+              tag: "Student Researchers (Ages 12-18)",
+              body: "The student researchers aged 12-18 who drive the Institute's innovation projects. Their work spans aerospace, healthcare, environmental monitoring, and autonomous systems.",
+              image: { src: "/src/assets/placeholders/labs/space-lab.jpg", alt: "Adolescent Research Cohort", variant: "avatar", privacyBlur: true },
+              cta: { label: "View Details", href: "/team/adolescent-research-cohort" }
+            }
+          ]
+        },
+        {
+          id: "team-privacy-note",
+          type: "textBlock",
+          variant: "muted",
+          header: "",
+          body: "Privacy Note: To protect the privacy of minors and maintain the integrity of the research environment, individual student profiles are not published. Student contributions are documented through the patent registry and mission archives."
+        },
+        {
+          id: "team-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Governance", description: "Leadership structure.", icon: "governance", href: "/governance" },
+            { title: "Patents", description: "Student innovations.", icon: "patent", href: "/patents" },
+            { title: "Collaborate", description: "Join the team.", icon: "collaborate", href: "/collaborate" },
+            { title: "Downloads", description: "Leadership bios.", icon: "download", href: "/downloads" }
+          ]
         }
       ]
     },
@@ -2672,10 +2942,10 @@ const siteContent = {
           id: "pub-detail-hero",
           type: "hero",
           variant: "stark",
-          headline: "IN-SPACe Authorization Letter",
-          subheadline: "Official authorization record for the SBB-1 mission activity, preserved as a permanent institutional artifact for governance traceability. DOI: 10.5281/zenodo.18195108",
-          primaryCta: { label: "Download PDF", href: "/downloads/in-space-authorization-letter" },
-          secondaryCta: { label: "Back to Publications", href: "/publications" },
+          headline: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
+          subheadline: "This page preserves the official authorization record issued for the SBB-1 mission activity. It is presented as a permanent institutional artifact for governance traceability and citation.",
+          primaryCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18195108", external: true },
+          secondaryCta: { label: "Download PDF", href: "/downloads/in-space-authorization-letter.pdf" },
           image: {
             src: "/src/assets/banners/publications-doi.jpg",
             alt: "IN-SPACe Authorization Letter",
@@ -2687,38 +2957,103 @@ const siteContent = {
           id: "pub-detail-meta",
           type: "metaStrip",
           items: [
-            { label: "Record Type", value: "Administrative Authorization" },
             { label: "DOI", value: "10.5281/zenodo.18195108" },
-            { label: "Date", value: "January 2026" },
-            { label: "Status", value: "Archived" }
+            { label: "Record Type", value: "Administrative Authorization" },
+            { label: "Authority", value: "IN-SPACe (Department of Space, Government of India)" },
+            { label: "Authorization No", value: "PMA/IN-SPACe/AUTH/2026/115" },
+            { label: "Date of Release", value: "07 January 2026" },
+            { label: "Access", value: "Public Record (Open Access)" }
           ]
+        },
+        {
+          id: "pub-abstract",
+          type: "textBlock",
+          header: "Abstract",
+          body: "This record archives the official IN-SPACe authorization issued for the SBB-1 mission activity and preserves it as a citable, permanent administrative artifact. The purpose of hosting this document here is institutional traceability: it provides a verifiable governance reference for mission clearance, compliance readiness, and public documentation standards."
         },
         {
           id: "pub-detail-content",
           type: "twoColumn",
           left: {
-            header: "Abstract",
-            body: "This document represents the official IN-SPACe (Indian National Space Promotion and Authorization Centre) authorization for the SBB-1 mission payload developed by Blue Blocks Micro Research Institute students. The authorization confirms that the student-designed thermal sensor payload met all regulatory requirements for integration aboard ISRO PSLV-C62.\n\nThe letter serves as a permanent institutional artifact, documenting the governance pathway from concept approval through flight qualification. It demonstrates that adolescent-led engineering projects can successfully navigate the same regulatory frameworks as professional aerospace initiatives."
+            header: "What This Record Confirms",
+            body: "Formal authorization was issued by IN-SPACe for the mission-related activity referenced in the document. The authorized entity is recorded as Blue Blocks Montessori Educational Society. The authorization is preserved for auditability, archival stability, and DOI-based referencing.\n\nThis record may be cited in academic writing, governance documentation, and institutional reporting. Where reproduced, it should be cited via DOI to preserve a stable reference."
           },
           right: {
-            header: "Key Highlights",
+            header: "Suggested Citation (APA)",
             items: [
-              "Official government authorization for student-led space payload",
-              "Compliance with ISRO flight qualification standards",
-              "Thermal and vibration testing certification",
-              "Archived for institutional governance traceability"
+              "Blue Blocks Micro Research Institute. (2026). IN-SPACe Authorization Letter (SBB-1 / Blue Blocks) [Administrative record]. Zenodo. https://doi.org/10.5281/zenodo.18195108"
             ],
-            cta: { label: "View on Zenodo", href: "https://zenodo.org/", external: true }
+            cta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18195108", external: true }
           }
+        },
+        {
+          id: "pub-downloads",
+          type: "grid3",
+          header: "Downloads & Links",
+          items: [
+            {
+              title: "Download PDF",
+              icon: "download",
+              body: "Full authorization letter in PDF format.",
+              cta: { label: "Download", href: "/downloads/in-space-authorization-letter.pdf" }
+            },
+            {
+              title: "Related Publication",
+              icon: "publication",
+              body: "SAPARYA / IMF Case Study on mission pedagogy.",
+              cta: { label: "View", href: "/publications/saparya-imf-case-study" }
+            },
+            {
+              title: "Mission Overview",
+              icon: "link",
+              body: "Blue Blocks CubeSat mission page.",
+              cta: { label: "Visit", href: "https://blueblocks.in/Innovation/CubeSat-Mission/", external: true }
+            }
+          ]
+        },
+        {
+          id: "pub-faq",
+          type: "accordion",
+          header: "Frequently Asked Questions",
+          items: [
+            {
+              q: "Is this the original authorization document?",
+              a: "Yes. This is an archived copy of the original authorization issued by IN-SPACe. The document has been preserved with its original formatting and content for institutional traceability."
+            },
+            {
+              q: "How can I verify this authorization?",
+              a: "The authorization can be verified through the IN-SPACe portal or by contacting IN-SPACe directly with the authorization number (PMA/IN-SPACe/AUTH/2026/115). The DOI provides permanent citation stability."
+            },
+            {
+              q: "Are there privacy concerns with this document?",
+              a: "The authorization letter is a public administrative record. Personal information has been reviewed for compliance with applicable privacy standards before archiving."
+            },
+            {
+              q: "Can I reuse or cite this document?",
+              a: "Yes. This document is archived under Open Access principles. Please cite using the DOI (10.5281/zenodo.18195108) to ensure stable reference."
+            }
+          ]
+        },
+        {
+          id: "pub-visual-evidence",
+          type: "galleryGrid",
+          header: "Visual Evidence",
+          intro: "Supporting documentation and mission context.",
+          images: [
+            { src: "/src/assets/placeholders/visual-evidence/avionics-rig-1.jpg", alt: "Mission control setup", caption: "Avionics integration testing facility" },
+            { src: "/src/assets/placeholders/visual-evidence/lab-bench-1.jpg", alt: "Documentation workspace", caption: "Administrative documentation archive" },
+            { src: "/src/assets/placeholders/visual-evidence/lunar-sim-1.jpg", alt: "Testing environment", caption: "Payload qualification testing" }
+          ]
         },
         {
           id: "pub-related",
           type: "relatedCards",
-          header: "Related",
+          header: "Related Registry",
           cards: [
-            { title: "Technical Brief: SBB-1", description: "Mission documentation.", icon: "brief", href: "/technical-briefs/sbb-1" },
-            { title: "Methodology", description: "Research protocols.", icon: "methodology", href: "/methodology" },
-            { title: "Patents", description: "Student IP registry.", icon: "patent", href: "/patents" }
+            { title: "Patents", description: "Student IP registry.", icon: "patent", href: "/patents" },
+            { title: "Books", description: "Long-form publications.", icon: "book", href: "/books" },
+            { title: "Newsroom", description: "Latest updates.", icon: "news", href: "/newsroom" },
+            { title: "Downloads", description: "All documents.", icon: "download", href: "/downloads" }
           ]
         }
       ]
@@ -2767,10 +3102,10 @@ const siteContent = {
           id: "pub-detail-hero",
           type: "hero",
           variant: "stark",
-          headline: "SAPARYA / IMF Case Study",
-          subheadline: "Case study documenting the pedagogical framework and preliminary findings from the SAPARYA initiative, presented at the IMF 7th National Montessori Conference.",
-          primaryCta: { label: "Download PDF", href: "/downloads/saparya-imf-case-study" },
-          secondaryCta: { label: "Back to Publications", href: "/publications" },
+          headline: "SAPARYA / IMF Conference Case Study (SBB-1 Mission & Valorization)",
+          subheadline: "A documented adolescent engineering mission and the pedagogical outcome of real-world stakes. Presented at the IMF 7th National Montessori Conference, November 2024.",
+          primaryCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18337934", external: true },
+          secondaryCta: { label: "Download Conference Materials", href: "/downloads/saparya-conference-booklet.pdf" },
           image: {
             src: "/src/assets/banners/publications-doi.jpg",
             alt: "SAPARYA Case Study",
@@ -2782,38 +3117,103 @@ const siteContent = {
           id: "pub-detail-meta",
           type: "metaStrip",
           items: [
-            { label: "Record Type", value: "Conference Paper" },
+            { label: "DOI", value: "10.5281/zenodo.18337934" },
+            { label: "Record Type", value: "Conference Case Study" },
             { label: "Event", value: "IMF 7th National Montessori Conference" },
             { label: "Date", value: "November 2024" },
-            { label: "Status", value: "Published" }
+            { label: "Status", value: "Published" },
+            { label: "Access", value: "Open Access" }
           ]
+        },
+        {
+          id: "pub-abstract",
+          type: "textBlock",
+          header: "Abstract",
+          body: "This case study documents the SAPARYA (Systematic Approach to Project-based Adolescent Research for Youth Advancement) initiative, a pedagogical framework designed to integrate high-stakes engineering projects into Montessori adolescent programs. The paper presents preliminary findings from the first cohort of students who participated in the SBB-1 space mission, demonstrating measurable improvements in problem-solving agency and technical competency.\n\nThe study examines how exposure to Technology Readiness Level 9 (TRL-9) constraints—where failure has real consequences—transforms student engagement and long-term innovation capacity. Preliminary data suggests that students who experience project 'valorization' (the moment when their work is validated by external, non-educational stakeholders) show significantly higher persistence in STEM fields."
         },
         {
           id: "pub-detail-content",
           type: "twoColumn",
           left: {
-            header: "Abstract",
-            body: "This case study documents the SAPARYA (Systematic Approach to Project-based Adolescent Research for Youth Advancement) initiative, a pedagogical framework designed to integrate high-stakes engineering projects into Montessori adolescent programs.\n\nThe paper presents preliminary findings from the first cohort of students who participated in the framework, demonstrating measurable improvements in problem-solving agency and technical competency."
+            header: "Why This Matters",
+            body: "Most educational engineering projects are simulations—students design bridges that never carry weight, or code apps that no one uses. SAPARYA inverts this model by placing adolescents in projects where failure is not an abstract grade but a real outcome.\n\nThe SBB-1 mission exemplifies this approach: twelve teenagers designed a thermal sensor payload that underwent the same flight qualification process as professional aerospace hardware. When PSLV-C62's Stage 4 failed at T+847 seconds, students experienced genuine engineering loss—and the pedagogical value of 'valorization' was proven."
           },
           right: {
-            header: "Key Findings",
+            header: "Key Highlights",
             items: [
-              "Framework for integrating TRL-9 projects into education",
-              "Measurable improvement in problem-solving agency",
-              "Replicable model for Montessori adolescent programs",
-              "Longitudinal tracking methodology"
+              "Framework for integrating TRL-9 projects into Montessori adolescent education",
+              "Measurable improvement in problem-solving agency scores",
+              "Replicable model for other educational institutions",
+              "Longitudinal tracking methodology for innovation capacity",
+              "First documented case of student-led space payload in Indian education"
             ],
-            cta: { label: "Back to Publications", href: "/publications" }
+            cta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18337934", external: true }
           }
+        },
+        {
+          id: "pub-downloads",
+          type: "grid3",
+          header: "Downloads & Supplementary Materials",
+          items: [
+            {
+              title: "Conference Booklet",
+              icon: "download",
+              body: "Full case study as presented at IMF.",
+              cta: { label: "Download PDF", href: "/downloads/saparya-conference-booklet.pdf" }
+            },
+            {
+              title: "Presentation Slides",
+              icon: "download",
+              body: "Visual presentation materials.",
+              cta: { label: "Download PDF", href: "/downloads/saparya-presentation.pdf" }
+            },
+            {
+              title: "Governance Protocol",
+              icon: "governance",
+              body: "IRB-aligned research standards.",
+              cta: { label: "View", href: "/governance" }
+            }
+          ]
+        },
+        {
+          id: "pub-citation",
+          type: "textBlock",
+          variant: "muted",
+          header: "Suggested Citation (APA)",
+          body: "Blue Blocks Micro Research Institute. (2024). SAPARYA: Building Innovation Capacity (0-18) Through Embedded Research [Conference case study]. IMF 7th National Montessori Conference. Zenodo. https://doi.org/10.5281/zenodo.18337934"
+        },
+        {
+          id: "pub-faq",
+          type: "accordion",
+          header: "Frequently Asked Questions",
+          items: [
+            {
+              q: "What does SAPARYA stand for?",
+              a: "SAPARYA is an acronym for Systematic Approach to Project-based Adolescent Research for Youth Advancement. It describes the pedagogical framework for integrating high-stakes engineering projects into adolescent education."
+            },
+            {
+              q: "Was the SBB-1 mission successful?",
+              a: "The SBB-1 payload achieved full flight qualification and was integrated aboard ISRO PSLV-C62. While the launch vehicle's Stage 4 failed at T+847 seconds (preventing orbital deployment), the pedagogical mission succeeded: students experienced genuine engineering stakes and 'valorization' of their work."
+            },
+            {
+              q: "Can other schools replicate this framework?",
+              a: "Yes. The SAPARYA framework is designed to be replicable. The case study includes implementation guidelines and the core principles can be adapted to various high-stakes project types beyond aerospace."
+            },
+            {
+              q: "How can I access the full dataset?",
+              a: "The published case study includes aggregate findings. De-identified individual-level data requires IRB approval and a signed Data Use Agreement. Apply through our Collaborate page."
+            }
+          ]
         },
         {
           id: "pub-related",
           type: "relatedCards",
-          header: "Related",
+          header: "Related Registry",
           cards: [
-            { title: "Methodology", description: "Research protocols.", icon: "methodology", href: "/methodology" },
+            { title: "Patents", description: "Student IP registry.", icon: "patent", href: "/patents" },
             { title: "Governance", description: "IRB standards.", icon: "governance", href: "/governance" },
-            { title: "Collaborate", description: "Partner with us.", icon: "collaborate", href: "/collaborate" }
+            { title: "Collaborate", description: "Partner with us.", icon: "collaborate", href: "/collaborate" },
+            { title: "Downloads", description: "All documents.", icon: "download", href: "/downloads" }
           ]
         }
       ]
@@ -3166,9 +3566,9 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "Lining The Nest",
-          subheadline: "A comprehensive guide for families and educators on building structured learning environments that foster innovation capacity from early childhood through adolescence.",
-          primaryCta: { label: "Purchase on Amazon", href: "https://amazon.com/", external: true },
-          secondaryCta: { label: "Download Sample Chapter", href: "/downloads/lining-the-nest-sample" },
+          subheadline: "A comprehensive guide for families and educators on building structured learning environments that foster innovation capacity from early childhood through adolescence. Drawing on 15 years of longitudinal observation at Blue Blocks Micro Research Institute.",
+          primaryCta: { label: "Buy on Amazon", href: "https://amzn.in/d/09xLf6FE", external: true },
+          secondaryCta: { label: "Download Sample Chapter", href: "/downloads/lining-the-nest-sample-chapter.pdf" },
           image: { src: "/src/assets/placeholders/card-default.jpg", alt: "Lining The Nest book cover", variant: "hero" }
         },
         {
@@ -3178,15 +3578,23 @@ const siteContent = {
             { label: "Format", value: "Paperback / Digital" },
             { label: "Pages", value: "280" },
             { label: "Author", value: "Pavan Goyal" },
-            { label: "Publisher", value: "Blue Blocks Press" }
+            { label: "Publisher", value: "Blue Blocks Press" },
+            { label: "Language", value: "English" },
+            { label: "ISBN", value: "Pending" }
           ]
+        },
+        {
+          id: "book-overview",
+          type: "textBlock",
+          header: "Overview",
+          body: "Lining The Nest provides a practical framework for parents and educators who want to create environments that nurture innovation capacity. This book translates 15 years of longitudinal observation at Blue Blocks Micro Research Institute into actionable strategies that any family or institution can implement.\n\nThe title references the metaphor of preparation: just as birds line their nests before eggs arrive, adults must prepare the environment before expecting children to innovate. The book argues that innovation capacity is not innate talent but an emergent property of well-structured environments."
         },
         {
           id: "book-content",
           type: "twoColumn",
           left: {
-            header: "About This Book",
-            body: "Lining The Nest provides a practical framework for parents and educators who want to create environments that nurture innovation capacity. Drawing on 15 years of longitudinal observation at Blue Blocks Micro Research Institute, this guide translates research findings into actionable strategies.\n\nThe book covers the critical developmental windows from birth to 18, with specific chapters on the sensorial explorer phase (0-6), the reasoning child (6-12), and the adolescent engineer (12-18)."
+            header: "Key Themes",
+            body: "The book is organized around three developmental windows:\n\n**The Sensorial Explorer (0-6):** How early manipulation of real materials builds the neural substrate for later engineering thinking.\n\n**The Reasoning Child (6-12):** Transitioning from exploration to systematic problem-solving; introducing constraints that challenge without overwhelming.\n\n**The Adolescent Engineer (12-18):** Supporting agency, IP creation, and the transition to adult-level contribution; the psychology of 'valorization.'"
           },
           right: {
             header: "Key Topics",
@@ -3195,10 +3603,68 @@ const siteContent = {
               "Scaffolding problem-solving without interference",
               "From play to invention: recognizing cognitive leaps",
               "Supporting adolescent agency and IP creation",
-              "Integrating real-world constraints into learning"
+              "Integrating real-world constraints into learning",
+              "The role of failure in building resilience",
+              "Balancing structure and freedom"
             ],
             cta: { label: "View Author Profile", href: "/team/pavan-goyal" }
           }
+        },
+        {
+          id: "book-purchase",
+          type: "highlightBox",
+          variant: "accent",
+          header: "Purchase Options",
+          body: "Lining The Nest is available in paperback and digital formats through Amazon India. International shipping available.",
+          cta: { label: "Buy on Amazon", href: "https://amzn.in/d/09xLf6FE", external: true }
+        },
+        {
+          id: "book-sample",
+          type: "grid3",
+          header: "Sample & Downloads",
+          items: [
+            {
+              title: "Sample Chapter",
+              icon: "download",
+              body: "Preview Chapter 3: 'The Reasoning Child' to get a sense of the book's approach.",
+              cta: { label: "Download PDF", href: "/downloads/lining-the-nest-sample-chapter.pdf" }
+            },
+            {
+              title: "Author Profile",
+              icon: "user",
+              body: "Learn more about Pavan Goyal, AMI-certified educator and Principal Investigator.",
+              cta: { label: "View Profile", href: "/team/pavan-goyal" }
+            },
+            {
+              title: "Methodology",
+              icon: "methodology",
+              body: "Understand the research methodology that informs the book's recommendations.",
+              cta: { label: "View Methodology", href: "/methodology" }
+            }
+          ]
+        },
+        {
+          id: "book-faq",
+          type: "accordion",
+          header: "Frequently Asked Questions",
+          items: [
+            {
+              q: "Who is this book for?",
+              a: "Lining The Nest is written for parents who want to support their children's innovation capacity, educators looking for research-backed approaches, and researchers interested in the practical application of longitudinal observation data."
+            },
+            {
+              q: "Do I need a Montessori background to use this book?",
+              a: "No. While the research was conducted in a Montessori environment, the principles are applicable to any educational setting. The book focuses on universal principles of environmental preparation and constraint introduction."
+            },
+            {
+              q: "Is this book available outside India?",
+              a: "Yes. Amazon provides international shipping. Digital formats are available globally."
+            },
+            {
+              q: "How does this book relate to the Institute's research?",
+              a: "The book translates findings from 15 years of embedded observation into practical guidance. It represents the 'applied' output of the Institute's longitudinal dataset."
+            }
+          ]
         },
         {
           id: "book-related",
@@ -3207,7 +3673,8 @@ const siteContent = {
           cards: [
             { title: "All Books", description: "Browse collection.", icon: "book", href: "/books" },
             { title: "Methodology", description: "Research protocols.", icon: "methodology", href: "/methodology" },
-            { title: "Team", description: "Meet the author.", icon: "team", href: "/team/pavan-goyal" }
+            { title: "Team", description: "Meet the author.", icon: "team", href: "/team/pavan-goyal" },
+            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" }
           ]
         }
       ]
