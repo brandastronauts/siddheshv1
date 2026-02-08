@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Clock, CheckCircle } from 'lucide-react';
 
-const PatentGridSection = ({ header, intro, filterNote, cards = [] }) => {
+const PatentGridSection = ({ header, intro, filterNote, cards = [], patents = [] }) => {
+  // Support both 'cards' and 'patents' props for flexibility
+  const items = cards.length > 0 ? cards : patents;
   return (
     <section className="section-spacing bg-background">
       <div className="container-grid">
@@ -40,7 +42,7 @@ const PatentGridSection = ({ header, intro, filterNote, cards = [] }) => {
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {cards.map((card, index) => {
+          {items.map((card, index) => {
             const isPending = card.status?.toLowerCase().includes('pending');
             const StatusIcon = isPending ? Clock : CheckCircle;
             
