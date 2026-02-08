@@ -2626,6 +2626,1095 @@ const siteContent = {
           }
         }
       ]
+    },
+
+    // ==================== PUBLICATIONS DETAIL PAGES ====================
+    "/publications/in-space-authorization-letter": {
+      title: "IN-SPACe Authorization Letter",
+      metaDescription: "Official IN-SPACe authorization record for the SBB-1 mission payload by Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "IN-SPACe Authorization Letter | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "article",
+          url: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter",
+          title: "IN-SPACe Authorization Letter",
+          description: "Official authorization record for the SBB-1 mission activity.",
+          image: {
+            url: "https://siddheshv1.lovable.app/og/publications/in-space-authorization-letter.jpg",
+            width: 1200,
+            height: 630,
+            alt: "IN-SPACe Authorization Letter"
+          }
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          name: "IN-SPACe Authorization Letter",
+          url: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://siddheshv1.lovable.app/publications" },
+            { "@type": "ListItem", position: 3, name: "IN-SPACe Authorization Letter", item: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "pub-detail-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "IN-SPACe Authorization Letter",
+          subheadline: "Official authorization record for the SBB-1 mission activity, preserved as a permanent institutional artifact for governance traceability. DOI: 10.5281/zenodo.18195108",
+          primaryCta: { label: "Download PDF", href: "/downloads/in-space-authorization-letter" },
+          secondaryCta: { label: "Back to Publications", href: "/publications" },
+          image: {
+            src: "/src/assets/banners/publications-doi.jpg",
+            alt: "IN-SPACe Authorization Letter",
+            variant: "hero",
+            privacyBlur: false
+          }
+        },
+        {
+          id: "pub-detail-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Record Type", value: "Administrative Authorization" },
+            { label: "DOI", value: "10.5281/zenodo.18195108" },
+            { label: "Date", value: "January 2026" },
+            { label: "Status", value: "Archived" }
+          ]
+        },
+        {
+          id: "pub-detail-content",
+          type: "twoColumn",
+          left: {
+            header: "Abstract",
+            body: "This document represents the official IN-SPACe (Indian National Space Promotion and Authorization Centre) authorization for the SBB-1 mission payload developed by Blue Blocks Micro Research Institute students. The authorization confirms that the student-designed thermal sensor payload met all regulatory requirements for integration aboard ISRO PSLV-C62.\n\nThe letter serves as a permanent institutional artifact, documenting the governance pathway from concept approval through flight qualification. It demonstrates that adolescent-led engineering projects can successfully navigate the same regulatory frameworks as professional aerospace initiatives."
+          },
+          right: {
+            header: "Key Highlights",
+            items: [
+              "Official government authorization for student-led space payload",
+              "Compliance with ISRO flight qualification standards",
+              "Thermal and vibration testing certification",
+              "Archived for institutional governance traceability"
+            ],
+            cta: { label: "View on Zenodo", href: "https://zenodo.org/", external: true }
+          }
+        },
+        {
+          id: "pub-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Technical Brief: SBB-1", description: "Mission documentation.", icon: "brief", href: "/technical-briefs/sbb-1" },
+            { title: "Methodology", description: "Research protocols.", icon: "methodology", href: "/methodology" },
+            { title: "Patents", description: "Student IP registry.", icon: "patent", href: "/patents" }
+          ]
+        }
+      ]
+    },
+
+    "/publications/saparya-imf-case-study": {
+      title: "SAPARYA / IMF Case Study",
+      metaDescription: "Case study documenting the pedagogical framework and findings from the SAPARYA initiative at IMF National Montessori Conference.",
+      seo: {
+        title: "SAPARYA / IMF Case Study | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "article",
+          url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study",
+          title: "SAPARYA / IMF Case Study",
+          description: "Case study on the SAPARYA pedagogical framework.",
+          image: {
+            url: "https://siddheshv1.lovable.app/og/publications/saparya-imf-case-study.jpg",
+            width: 1200,
+            height: 630,
+            alt: "SAPARYA Case Study"
+          }
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          name: "SAPARYA / IMF Case Study",
+          url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://siddheshv1.lovable.app/publications" },
+            { "@type": "ListItem", position: 3, name: "SAPARYA / IMF Case Study", item: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "pub-detail-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "SAPARYA / IMF Case Study",
+          subheadline: "Case study documenting the pedagogical framework and preliminary findings from the SAPARYA initiative, presented at the IMF 7th National Montessori Conference.",
+          primaryCta: { label: "Download PDF", href: "/downloads/saparya-imf-case-study" },
+          secondaryCta: { label: "Back to Publications", href: "/publications" },
+          image: {
+            src: "/src/assets/banners/publications-doi.jpg",
+            alt: "SAPARYA Case Study",
+            variant: "hero",
+            privacyBlur: false
+          }
+        },
+        {
+          id: "pub-detail-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Record Type", value: "Conference Paper" },
+            { label: "Event", value: "IMF 7th National Montessori Conference" },
+            { label: "Date", value: "November 2024" },
+            { label: "Status", value: "Published" }
+          ]
+        },
+        {
+          id: "pub-detail-content",
+          type: "twoColumn",
+          left: {
+            header: "Abstract",
+            body: "This case study documents the SAPARYA (Systematic Approach to Project-based Adolescent Research for Youth Advancement) initiative, a pedagogical framework designed to integrate high-stakes engineering projects into Montessori adolescent programs.\n\nThe paper presents preliminary findings from the first cohort of students who participated in the framework, demonstrating measurable improvements in problem-solving agency and technical competency."
+          },
+          right: {
+            header: "Key Findings",
+            items: [
+              "Framework for integrating TRL-9 projects into education",
+              "Measurable improvement in problem-solving agency",
+              "Replicable model for Montessori adolescent programs",
+              "Longitudinal tracking methodology"
+            ],
+            cta: { label: "Back to Publications", href: "/publications" }
+          }
+        },
+        {
+          id: "pub-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Methodology", description: "Research protocols.", icon: "methodology", href: "/methodology" },
+            { title: "Governance", description: "IRB standards.", icon: "governance", href: "/governance" },
+            { title: "Collaborate", description: "Partner with us.", icon: "collaborate", href: "/collaborate" }
+          ]
+        }
+      ]
+    },
+
+    // ==================== PATENTS DETAIL PAGES ====================
+    "/patents/automated-security-uav": {
+      title: "Automated Security UAV",
+      metaDescription: "Patent filing for Automated Security UAV system developed by Blue Blocks Micro Research Institute students.",
+      seo: {
+        title: "Automated Security UAV | Patents | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/patents/automated-security-uav",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "article",
+          url: "https://siddheshv1.lovable.app/patents/automated-security-uav",
+          title: "Patent: Automated Security UAV",
+          description: "Student-developed utility patent for automated security drone system."
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          name: "Patent: Automated Security UAV",
+          url: "https://siddheshv1.lovable.app/patents/automated-security-uav"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
+            { "@type": "ListItem", position: 3, name: "Automated Security UAV", item: "https://siddheshv1.lovable.app/patents/automated-security-uav" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "patent-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Automated Security UAV",
+          subheadline: "Utility patent for an autonomous unmanned aerial vehicle designed for perimeter security and surveillance applications. Developed by students aged 10-14 at the Drone Research Centre.",
+          primaryCta: { label: "View Patent Filing", href: "/downloads/patent-automated-security-uav" },
+          secondaryCta: { label: "Back to Patents", href: "/patents" },
+          image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Automated Security UAV", variant: "hero" }
+        },
+        {
+          id: "patent-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Patent Type", value: "Utility Patent" },
+            { label: "Filing Status", value: "Filed" },
+            { label: "Inventors Age", value: "10-14 years" },
+            { label: "Lab", value: "Drone Research Centre" }
+          ]
+        },
+        {
+          id: "patent-content",
+          type: "textBlock",
+          header: "Technical Summary",
+          body: "This utility patent covers an automated security UAV system featuring autonomous patrol capabilities, real-time threat detection, and integrated alert mechanisms. The system was designed and prototyped by elementary-aged students working in the Drone Research Centre.\n\nThe patent demonstrates that children can contribute meaningfully to the global innovation economy before reaching adulthood."
+        },
+        {
+          id: "patent-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "All Patents", description: "View registry.", icon: "patent", href: "/patents" },
+            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
+            { title: "Governance", description: "IP rights.", icon: "governance", href: "/governance" }
+          ]
+        }
+      ]
+    },
+
+    "/patents/borehole-rescue-system": {
+      title: "Borehole Rescue System",
+      metaDescription: "Patent filing for Borehole Rescue System developed by Blue Blocks Micro Research Institute students.",
+      seo: {
+        title: "Borehole Rescue System | Patents | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/patents/borehole-rescue-system",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
+            { "@type": "ListItem", position: 3, name: "Borehole Rescue System", item: "https://siddheshv1.lovable.app/patents/borehole-rescue-system" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "patent-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Borehole Rescue System",
+          subheadline: "Utility patent for a mechanical rescue system designed for borehole emergencies. Developed in response to real-world incidents by students aged 11-15.",
+          primaryCta: { label: "View Patent Filing", href: "/downloads/patent-borehole-rescue" },
+          secondaryCta: { label: "Back to Patents", href: "/patents" },
+          image: { src: "/src/assets/placeholders/labs/avionics.jpg", alt: "Borehole Rescue System", variant: "hero" }
+        },
+        {
+          id: "patent-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Patent Type", value: "Utility Patent" },
+            { label: "Filing Status", value: "Filed" },
+            { label: "Inventors Age", value: "11-15 years" },
+            { label: "Application", value: "Emergency Rescue" }
+          ]
+        },
+        {
+          id: "patent-content",
+          type: "textBlock",
+          header: "Technical Summary",
+          body: "This utility patent covers a mechanical rescue system specifically designed for borehole emergencies. The system includes innovative gripping mechanisms and extraction protocols developed by adolescent engineers in response to real-world incidents reported in Indian media."
+        },
+        {
+          id: "patent-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "All Patents", description: "View registry.", icon: "patent", href: "/patents" },
+            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
+            { title: "Governance", description: "IP rights.", icon: "governance", href: "/governance" }
+          ]
+        }
+      ]
+    },
+
+    "/patents/contactless-delivery-system": {
+      title: "Contactless Delivery System",
+      metaDescription: "Patent filing for Contactless Delivery System developed by Blue Blocks Micro Research Institute students.",
+      seo: {
+        title: "Contactless Delivery System | Patents | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/patents/contactless-delivery-system",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
+            { "@type": "ListItem", position: 3, name: "Contactless Delivery System", item: "https://siddheshv1.lovable.app/patents/contactless-delivery-system" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "patent-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Contactless Delivery System",
+          subheadline: "Utility patent for an automated contactless delivery mechanism. Developed during pandemic-era innovation sprints by students aged 10-13.",
+          primaryCta: { label: "View Patent Filing", href: "/downloads/patent-contactless-delivery" },
+          secondaryCta: { label: "Back to Patents", href: "/patents" },
+          image: { src: "/src/assets/placeholders/labs/drone-prototype.jpg", alt: "Contactless Delivery System", variant: "hero" }
+        },
+        {
+          id: "patent-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Patent Type", value: "Utility Patent" },
+            { label: "Filing Status", value: "Filed" },
+            { label: "Inventors Age", value: "10-13 years" },
+            { label: "Application", value: "Logistics / Healthcare" }
+          ]
+        },
+        {
+          id: "patent-content",
+          type: "textBlock",
+          header: "Technical Summary",
+          body: "This utility patent covers a contactless delivery system designed for safe package transfer in healthcare and logistics applications. The system was developed during pandemic-era innovation sprints when students identified a real-world need for contactless solutions."
+        },
+        {
+          id: "patent-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "All Patents", description: "View registry.", icon: "patent", href: "/patents" },
+            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
+            { title: "Team", description: "Meet researchers.", icon: "team", href: "/team" }
+          ]
+        }
+      ]
+    },
+
+    "/patents/autonomous-medical-assistance-system": {
+      title: "Autonomous Medical Assistance System",
+      metaDescription: "Patent filing for Autonomous Medical Assistance System developed by Blue Blocks Micro Research Institute students.",
+      seo: {
+        title: "Autonomous Medical Assistance System | Patents | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
+            { "@type": "ListItem", position: 3, name: "Autonomous Medical Assistance System", item: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "patent-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Autonomous Medical Assistance System",
+          subheadline: "Utility patent for an autonomous system providing medical assistance in remote or emergency situations. Developed by adolescent engineers aged 12-16.",
+          primaryCta: { label: "View Patent Filing", href: "/downloads/patent-medical-assistance" },
+          secondaryCta: { label: "Back to Patents", href: "/patents" },
+          image: { src: "/src/assets/placeholders/labs/space-lab.jpg", alt: "Autonomous Medical Assistance System", variant: "hero" }
+        },
+        {
+          id: "patent-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Patent Type", value: "Utility Patent" },
+            { label: "Filing Status", value: "Filed" },
+            { label: "Inventors Age", value: "12-16 years" },
+            { label: "Application", value: "Healthcare / Emergency" }
+          ]
+        },
+        {
+          id: "patent-content",
+          type: "textBlock",
+          header: "Technical Summary",
+          body: "This utility patent covers an autonomous medical assistance system designed for deployment in remote or emergency situations. The system integrates diagnostic sensors, communication modules, and first-response protocols developed by adolescent engineers."
+        },
+        {
+          id: "patent-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "All Patents", description: "View registry.", icon: "patent", href: "/patents" },
+            { title: "Governance", description: "IP rights.", icon: "governance", href: "/governance" },
+            { title: "Collaborate", description: "Partner with us.", icon: "collaborate", href: "/collaborate" }
+          ]
+        }
+      ]
+    },
+
+    "/patents/autonomous-health-monitoring-system": {
+      title: "Autonomous Health Monitoring System",
+      metaDescription: "Patent filing for Autonomous Health Monitoring System developed by Blue Blocks Micro Research Institute students.",
+      seo: {
+        title: "Autonomous Health Monitoring System | Patents | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
+            { "@type": "ListItem", position: 3, name: "Autonomous Health Monitoring System", item: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "patent-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Autonomous Health Monitoring System",
+          subheadline: "Utility patent (#4421) for an autonomous health monitoring system - the 'Guardian' drone. Developed by students aged 9-11 at the Drone Research Centre.",
+          primaryCta: { label: "View Patent Filing", href: "/downloads/patent-health-monitoring" },
+          secondaryCta: { label: "Back to Patents", href: "/patents" },
+          image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Autonomous Health Monitoring System", variant: "hero" }
+        },
+        {
+          id: "patent-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Patent Type", value: "Utility Patent" },
+            { label: "Patent Number", value: "#4421" },
+            { label: "Inventors Age", value: "9-11 years" },
+            { label: "Lab", value: "Drone Research Centre" }
+          ]
+        },
+        {
+          id: "patent-content",
+          type: "textBlock",
+          header: "Technical Summary",
+          body: "This utility patent (#4421) covers the 'Guardian' drone - an autonomous health monitoring system designed by the youngest patent holders in the Institute's registry. The system demonstrates that children as young as 9 can contribute to meaningful innovation when given appropriate scaffolding and real-world problems to solve."
+        },
+        {
+          id: "patent-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "All Patents", description: "View registry.", icon: "patent", href: "/patents" },
+            { title: "Newsroom", description: "Patent announcement.", icon: "news", href: "/newsroom/updates/utility-patent-4421" },
+            { title: "Team", description: "Meet researchers.", icon: "team", href: "/team" }
+          ]
+        }
+      ]
+    },
+
+    // ==================== BOOKS DETAIL PAGES ====================
+    "/books/lining-the-nest": {
+      title: "Lining The Nest",
+      metaDescription: "Lining The Nest - A guide for families and educators on building structured learning environments by Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "Lining The Nest | Books | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/books/lining-the-nest",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "book",
+          url: "https://siddheshv1.lovable.app/books/lining-the-nest",
+          title: "Lining The Nest",
+          description: "A guide for families and educators on building structured learning environments."
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Book",
+          name: "Lining The Nest",
+          url: "https://siddheshv1.lovable.app/books/lining-the-nest",
+          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Books", item: "https://siddheshv1.lovable.app/books" },
+            { "@type": "ListItem", position: 3, name: "Lining The Nest", item: "https://siddheshv1.lovable.app/books/lining-the-nest" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "book-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Lining The Nest",
+          subheadline: "A comprehensive guide for families and educators on building structured learning environments that foster innovation capacity from early childhood through adolescence.",
+          primaryCta: { label: "Purchase on Amazon", href: "https://amazon.com/", external: true },
+          secondaryCta: { label: "Download Sample Chapter", href: "/downloads/lining-the-nest-sample" },
+          image: { src: "/src/assets/placeholders/card-default.jpg", alt: "Lining The Nest book cover", variant: "hero" }
+        },
+        {
+          id: "book-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Format", value: "Paperback / Digital" },
+            { label: "Pages", value: "280" },
+            { label: "Author", value: "Pavan Goyal" },
+            { label: "Publisher", value: "Blue Blocks Press" }
+          ]
+        },
+        {
+          id: "book-content",
+          type: "twoColumn",
+          left: {
+            header: "About This Book",
+            body: "Lining The Nest provides a practical framework for parents and educators who want to create environments that nurture innovation capacity. Drawing on 15 years of longitudinal observation at Blue Blocks Micro Research Institute, this guide translates research findings into actionable strategies.\n\nThe book covers the critical developmental windows from birth to 18, with specific chapters on the sensorial explorer phase (0-6), the reasoning child (6-12), and the adolescent engineer (12-18)."
+          },
+          right: {
+            header: "Key Topics",
+            items: [
+              "Creating the prepared environment at home",
+              "Scaffolding problem-solving without interference",
+              "From play to invention: recognizing cognitive leaps",
+              "Supporting adolescent agency and IP creation",
+              "Integrating real-world constraints into learning"
+            ],
+            cta: { label: "View Author Profile", href: "/team/pavan-goyal" }
+          }
+        },
+        {
+          id: "book-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "All Books", description: "Browse collection.", icon: "book", href: "/books" },
+            { title: "Methodology", description: "Research protocols.", icon: "methodology", href: "/methodology" },
+            { title: "Team", description: "Meet the author.", icon: "team", href: "/team/pavan-goyal" }
+          ]
+        }
+      ]
+    },
+
+    // ==================== TEAM DETAIL PAGES ====================
+    "/team/pavan-goyal": {
+      title: "Pavan Goyal",
+      metaDescription: "Profile of Pavan Goyal, Principal Investigator and Founder of Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "Pavan Goyal | Team | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/team/pavan-goyal",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "profile",
+          url: "https://siddheshv1.lovable.app/team/pavan-goyal",
+          title: "Pavan Goyal - Principal Investigator",
+          description: "Profile of Pavan Goyal, Principal Investigator and Founder."
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Pavan Goyal",
+          url: "https://siddheshv1.lovable.app/team/pavan-goyal",
+          jobTitle: "Principal Investigator & Founder",
+          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Team", item: "https://siddheshv1.lovable.app/team" },
+            { "@type": "ListItem", position: 3, name: "Pavan Goyal", item: "https://siddheshv1.lovable.app/team/pavan-goyal" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "profile-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Pavan Goyal",
+          subheadline: "Principal Investigator & Founder. Oversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes (AMI Diploma 0-18).",
+          primaryCta: { label: "Contact", href: "mailto:research@blueblocks.in" },
+          secondaryCta: { label: "Back to Team", href: "/team" },
+          image: { src: "/src/assets/placeholders/avatars/pavan.jpg", alt: "Pavan Goyal", variant: "hero" }
+        },
+        {
+          id: "profile-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Role", value: "Principal Investigator & Founder" },
+            { label: "Credentials", value: "AMI Diploma (0-18)" },
+            { label: "Focus", value: "Longitudinal Study Integrity" },
+            { label: "Tenure", value: "15+ years" }
+          ]
+        },
+        {
+          id: "profile-content",
+          type: "textBlock",
+          header: "Biography",
+          body: "Pavan Goyal is the Principal Investigator and Founder of Blue Blocks Micro Research Institute. He oversees the longitudinal integrity of the 0-18 study and holds the rare distinction of complete AMI certification across all developmental planes.\n\nWith over 15 years of embedded observation experience, Pavan has pioneered the Micro Research methodology that enables continuous, high-frequency data capture without disrupting the educational environment. His work bridges the gap between traditional academic research and the living laboratory of the Montessori environment.\n\nPavan is the author of 'Lining The Nest' and has presented the Institute's findings at international forums including the IMF Annual Meetings and the Nobel Peace Center."
+        },
+        {
+          id: "profile-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "All Team", description: "View profiles.", icon: "team", href: "/team" },
+            { title: "Governance", description: "Leadership structure.", icon: "governance", href: "/governance" },
+            { title: "Books", description: "Lining The Nest.", icon: "book", href: "/books/lining-the-nest" }
+          ]
+        }
+      ]
+    },
+
+    "/team/munira-hussain": {
+      title: "Munira Hussain",
+      metaDescription: "Profile of Munira Hussain, Director of Pedagogy at Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "Munira Hussain | Team | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/team/munira-hussain",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "profile",
+          url: "https://siddheshv1.lovable.app/team/munira-hussain",
+          title: "Munira Hussain - Director of Pedagogy",
+          description: "Profile of Munira Hussain, Director of Pedagogy."
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Munira Hussain",
+          url: "https://siddheshv1.lovable.app/team/munira-hussain",
+          jobTitle: "Director of Pedagogy",
+          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Team", item: "https://siddheshv1.lovable.app/team" },
+            { "@type": "ListItem", position: 3, name: "Munira Hussain", item: "https://siddheshv1.lovable.app/team/munira-hussain" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "profile-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Munira Hussain",
+          subheadline: "Director of Pedagogy. Ensures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the 'Children's House.' Credentials: AMI Diploma / M.Ed.",
+          primaryCta: { label: "Contact", href: "mailto:research@blueblocks.in" },
+          secondaryCta: { label: "Back to Team", href: "/team" },
+          image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "hero" }
+        },
+        {
+          id: "profile-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Role", value: "Director of Pedagogy" },
+            { label: "Credentials", value: "AMI Diploma / M.Ed" },
+            { label: "Focus", value: "Curriculum Integration" },
+            { label: "Specialization", value: "Children's House" }
+          ]
+        },
+        {
+          id: "profile-content",
+          type: "textBlock",
+          header: "Biography",
+          body: "Munira Hussain serves as Director of Pedagogy at Blue Blocks Micro Research Institute. She ensures that all research protocols integrate seamlessly with the Montessori curriculum without disrupting the sacred environment of the 'Children's House.'\n\nWith dual credentials in AMI methodology and educational leadership (M.Ed), Munira brings a unique perspective that balances research objectives with pedagogical integrity. Her work ensures that observation protocols enhance rather than interfere with the natural learning process."
+        },
+        {
+          id: "profile-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "All Team", description: "View profiles.", icon: "team", href: "/team" },
+            { title: "Methodology", description: "Research protocols.", icon: "methodology", href: "/methodology" },
+            { title: "Governance", description: "Leadership structure.", icon: "governance", href: "/governance" }
+          ]
+        }
+      ]
+    },
+
+    "/team/adolescent-research-cohort": {
+      title: "Adolescent Research Cohort",
+      metaDescription: "Information about the Adolescent Research Cohort at Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "Adolescent Research Cohort | Team | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/team/adolescent-research-cohort",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Team", item: "https://siddheshv1.lovable.app/team" },
+            { "@type": "ListItem", position: 3, name: "Adolescent Research Cohort", item: "https://siddheshv1.lovable.app/team/adolescent-research-cohort" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "cohort-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Adolescent Research Cohort",
+          subheadline: "The student researchers aged 12-18 who drive the Institute's innovation projects. Their work spans aerospace, healthcare, environmental monitoring, and autonomous systems.",
+          primaryCta: { label: "View Patents", href: "/patents" },
+          secondaryCta: { label: "Back to Team", href: "/team" },
+          image: { src: "/src/assets/placeholders/labs/space-lab.jpg", alt: "Adolescent Research Cohort", variant: "hero" }
+        },
+        {
+          id: "cohort-content",
+          type: "textBlock",
+          header: "About the Cohort",
+          body: "The Adolescent Research Cohort represents the Institute's most active innovators. These students, aged 12-18, are responsible for the majority of patent filings and participate in high-stakes projects including the SBB-1 space mission.\n\nTo protect the privacy of minors and maintain the integrity of the research environment, individual student profiles are not published. Their contributions are documented through the patent registry and mission archives."
+        },
+        {
+          id: "cohort-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Patents", description: "Student innovations.", icon: "patent", href: "/patents" },
+            { title: "Technical Brief: SBB-1", description: "Mission documentation.", icon: "brief", href: "/technical-briefs/sbb-1" },
+            { title: "Governance", description: "Privacy protocols.", icon: "governance", href: "/governance" }
+          ]
+        }
+      ]
+    },
+
+    // ==================== NEWSROOM SUBPAGES ====================
+    "/newsroom/dispatch/isro-payload-authorization": {
+      title: "ISRO Payload Authorization Dispatch",
+      metaDescription: "Official dispatch on Blue Blocks payload authorization for ISRO PSLV-C62 mission.",
+      seo: {
+        title: "ISRO Payload Authorization | Newsroom | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/newsroom/dispatch/isro-payload-authorization",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "NewsArticle",
+          name: "ISRO Payload Authorization Dispatch",
+          url: "https://siddheshv1.lovable.app/newsroom/dispatch/isro-payload-authorization"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://siddheshv1.lovable.app/newsroom" },
+            { "@type": "ListItem", position: 3, name: "ISRO Payload Authorization", item: "https://siddheshv1.lovable.app/newsroom/dispatch/isro-payload-authorization" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "dispatch-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Blue Blocks Payload Authorized for ISRO Mission",
+          subheadline: "Twelve teenagers (ages 12-16) designed a thermal sensor payload. IN-SPACe authorized it for PSLV-C62 launch after eighteen months of technical review.",
+          primaryCta: { label: "Read Technical Brief", href: "/technical-briefs/sbb-1" },
+          secondaryCta: { label: "Back to Newsroom", href: "/newsroom" },
+          image: { src: "/src/assets/placeholders/labs/avionics.jpg", alt: "ISRO Payload Authorization", variant: "hero" }
+        },
+        {
+          id: "dispatch-content",
+          type: "textBlock",
+          header: "Full Dispatch",
+          body: "Blue Blocks Montessori School, in technical collaboration with TakeMe2Space, has received official authorization from IN-SPACe (Indian National Space Promotion and Authorization Centre) to integrate a 1U payload aboard ISRO PSLV-C62.\n\nThe payload, designed by twelve teenagers aged 12-16, underwent eighteen months of technical review including thermal and vibration testing to meet flight qualification standards. This marks one of the first instances of a student-designed payload receiving official government authorization for an ISRO launch vehicle.\n\nThe Blue Blocks Micro Research Institute served as the pedagogical partner, structuring the mission to test adolescent resilience under TRL-9 constraints."
+        },
+        {
+          id: "dispatch-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Technical Brief: SBB-1", description: "Full mission documentation.", icon: "brief", href: "/technical-briefs/sbb-1" },
+            { title: "IN-SPACe Authorization", description: "Official record.", icon: "publication", href: "/publications/in-space-authorization-letter" },
+            { title: "All News", description: "Back to newsroom.", icon: "news", href: "/newsroom" }
+          ]
+        }
+      ]
+    },
+
+    "/newsroom/coverage/nobel-peace-center": {
+      title: "Nobel Peace Center Coverage",
+      metaDescription: "Coverage of Blue Blocks Micro Research Institute's exhibition at the Nobel Peace Center.",
+      seo: {
+        title: "Nobel Peace Center | Newsroom | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/newsroom/coverage/nobel-peace-center",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "NewsArticle",
+          name: "Nobel Peace Center Coverage",
+          url: "https://siddheshv1.lovable.app/newsroom/coverage/nobel-peace-center"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://siddheshv1.lovable.app/newsroom" },
+            { "@type": "ListItem", position: 3, name: "Nobel Peace Center", item: "https://siddheshv1.lovable.app/newsroom/coverage/nobel-peace-center" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "coverage-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Nobel Peace Center Features Student Innovation",
+          subheadline: "Blue Blocks Micro Research Institute student projects have been selected for exhibition as exemplars of 'Youth-Led Innovation,' validating our 0-18 Sovereignty Model on a global stage.",
+          primaryCta: { label: "View Oslo Proceedings", href: "/proceedings/oslo-2026" },
+          secondaryCta: { label: "Back to Newsroom", href: "/newsroom" },
+          image: { src: "/src/assets/placeholders/card-default.jpg", alt: "Nobel Peace Center", variant: "hero" }
+        },
+        {
+          id: "coverage-content",
+          type: "textBlock",
+          header: "International Recognition",
+          body: "On January 28, 2026, at the Nobel Peace Center in Oslo, Founder Pavan Goyal delivered the 'World Premiere' of the Blue Blocks Innovation Pedagogy (0-18). Selected by the Monisc Committee (supported by the Norwegian UNESCO Commission) as a 'global benchmark' for integrating space science with youth education.\n\nThis international recognition validates the Institute's approach to treating children as capable innovators rather than passive learners. Student projects were exhibited alongside the presentation, demonstrating the tangible outcomes of the 0-18 methodology."
+        },
+        {
+          id: "coverage-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Oslo Proceedings", description: "Full archive.", icon: "archive", href: "/proceedings/oslo-2026" },
+            { title: "Methodology", description: "Our approach.", icon: "methodology", href: "/methodology" },
+            { title: "All News", description: "Back to newsroom.", icon: "news", href: "/newsroom" }
+          ]
+        }
+      ]
+    },
+
+    "/newsroom/updates/iit-hyderabad-advisory": {
+      title: "IIT Hyderabad Advisory Role",
+      metaDescription: "Update on IIT Hyderabad Design Department formalizing advisory role with Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "IIT Hyderabad Advisory | Newsroom | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/newsroom/updates/iit-hyderabad-advisory",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "NewsArticle",
+          name: "IIT Hyderabad Advisory Role",
+          url: "https://siddheshv1.lovable.app/newsroom/updates/iit-hyderabad-advisory",
+          datePublished: "2025-10-15"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://siddheshv1.lovable.app/newsroom" },
+            { "@type": "ListItem", position: 3, name: "IIT Hyderabad Advisory", item: "https://siddheshv1.lovable.app/newsroom/updates/iit-hyderabad-advisory" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "update-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "IIT Hyderabad Design Dept. Formalizes Advisory Role",
+          subheadline: "The Department of Design at IIT Hyderabad joins the Research Council to provide technical validation for student prototyping.",
+          primaryCta: { label: "View Governance", href: "/governance" },
+          secondaryCta: { label: "Back to Newsroom", href: "/newsroom" },
+          image: { src: "/src/assets/placeholders/labs/data-wing.jpg", alt: "IIT Hyderabad Partnership", variant: "hero" }
+        },
+        {
+          id: "update-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Date", value: "October 15, 2025" },
+            { label: "Category", value: "Institutional Alliance" },
+            { label: "Partner", value: "IIT Hyderabad" }
+          ]
+        },
+        {
+          id: "update-content",
+          type: "textBlock",
+          header: "Partnership Details",
+          body: "The Department of Design at IIT Hyderabad has formalized an advisory role with Blue Blocks Micro Research Institute. Faculty members will join the Research Council to provide independent technical validation for student prototyping projects.\n\nThis partnership strengthens the Institute's external oversight mechanisms and provides students with access to university-level engineering expertise during the prototyping phase."
+        },
+        {
+          id: "update-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Governance", description: "Advisory structure.", icon: "governance", href: "/governance" },
+            { title: "Collaborate", description: "Partner with us.", icon: "collaborate", href: "/collaborate" },
+            { title: "All News", description: "Back to newsroom.", icon: "news", href: "/newsroom" }
+          ]
+        }
+      ]
+    },
+
+    "/newsroom/updates/utility-patent-4421": {
+      title: "Utility Patent #4421 Filed",
+      metaDescription: "Update on the filing of Utility Patent #4421 - The Guardian Drone by Blue Blocks Micro Research Institute students.",
+      seo: {
+        title: "Utility Patent #4421 | Newsroom | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/newsroom/updates/utility-patent-4421",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "NewsArticle",
+          name: "Utility Patent #4421 Filed",
+          url: "https://siddheshv1.lovable.app/newsroom/updates/utility-patent-4421",
+          datePublished: "2025-09-02"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://siddheshv1.lovable.app/newsroom" },
+            { "@type": "ListItem", position: 3, name: "Patent #4421", item: "https://siddheshv1.lovable.app/newsroom/updates/utility-patent-4421" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "update-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Utility Patent #4421 Filed: The 'Guardian' Drone",
+          subheadline: "The Drone Research Centre has filed its fifth utility patent, marking a significant milestone in our study of 'Innovation Agency' in the 9-11 age group.",
+          primaryCta: { label: "View Patent", href: "/patents/autonomous-health-monitoring-system" },
+          secondaryCta: { label: "Back to Newsroom", href: "/newsroom" },
+          image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Guardian Drone Patent", variant: "hero" }
+        },
+        {
+          id: "update-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Date", value: "September 02, 2025" },
+            { label: "Category", value: "Student IP" },
+            { label: "Patent Number", value: "#4421" },
+            { label: "Lab", value: "Drone Research Centre" }
+          ]
+        },
+        {
+          id: "update-content",
+          type: "textBlock",
+          header: "Milestone Achievement",
+          body: "The Drone Research Centre has filed its fifth utility patent, marking a significant milestone in our longitudinal study of 'Innovation Agency' in the 9-11 age group.\n\nThe 'Guardian' drone represents an autonomous health monitoring system designed by some of the youngest patent holders in the Institute's registry. This filing demonstrates that children as young as 9 can contribute meaningfully to the global innovation economy when given appropriate scaffolding and real-world problems to solve.\n\nFive utility patents have now been filed to date by Blue Blocks Micro Research Institute students."
+        },
+        {
+          id: "update-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Patent Details", description: "Guardian drone.", icon: "patent", href: "/patents/autonomous-health-monitoring-system" },
+            { title: "All Patents", description: "View registry.", icon: "patent", href: "/patents" },
+            { title: "All News", description: "Back to newsroom.", icon: "news", href: "/newsroom" }
+          ]
+        }
+      ]
+    },
+
+    "/newsroom/updates/visiting-scholars-2026": {
+      title: "Visiting Scholar Applications 2026",
+      metaDescription: "Information about visiting scholar applications for the 2026 Winter Residency at Blue Blocks Micro Research Institute.",
+      seo: {
+        title: "Visiting Scholars 2026 | Newsroom | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/newsroom/updates/visiting-scholars-2026",
+        robots: "noindex,nofollow,noarchive,nosnippet"
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "NewsArticle",
+          name: "Visiting Scholar Applications 2026",
+          url: "https://siddheshv1.lovable.app/newsroom/updates/visiting-scholars-2026",
+          datePublished: "2025-08-10"
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://siddheshv1.lovable.app/newsroom" },
+            { "@type": "ListItem", position: 3, name: "Visiting Scholars 2026", item: "https://siddheshv1.lovable.app/newsroom/updates/visiting-scholars-2026" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "update-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Visiting Scholar Applications Open for 2026 Cycle",
+          subheadline: "We are now accepting proposals for the Winter Residency. PhD candidates focusing on longitudinal behavioral observation are encouraged to apply.",
+          primaryCta: { label: "Apply via Collaborate", href: "/collaborate" },
+          secondaryCta: { label: "Back to Newsroom", href: "/newsroom" },
+          image: { src: "/src/assets/placeholders/labs/space-lab.jpg", alt: "Visiting Scholars", variant: "hero" }
+        },
+        {
+          id: "update-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Date", value: "August 10, 2025" },
+            { label: "Category", value: "Fellowship" },
+            { label: "Residency", value: "Winter 2026" },
+            { label: "Duration", value: "2-8 weeks" }
+          ]
+        },
+        {
+          id: "update-content",
+          type: "textBlock",
+          header: "Fellowship Opportunity",
+          body: "Blue Blocks Micro Research Institute is now accepting proposals for the Winter 2026 Visiting Scholar Residency. PhD candidates focusing on longitudinal behavioral observation are particularly encouraged to apply.\n\nVisiting scholars gain access to the Institute's archive and can work directly with the longitudinal dataset during their 2-8 week residency. Proposals should demonstrate clear alignment with the Institute's research focus on innovation capacity development.\n\nApplications are reviewed by the Research Council on a rolling basis."
+        },
+        {
+          id: "update-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Collaborate", description: "Submit proposal.", icon: "collaborate", href: "/collaborate" },
+            { title: "Methodology", description: "Research approach.", icon: "methodology", href: "/methodology" },
+            { title: "Governance", description: "Ethics & access.", icon: "governance", href: "/governance" }
+          ]
+        }
+      ]
     }
   },
 };
