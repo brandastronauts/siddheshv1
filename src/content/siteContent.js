@@ -1025,7 +1025,7 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "Publications & Open Science",
-          subheadline: "Everything we publish is archived for traceability. This docket lists public administrative records, case studies, and publication pipelines. Where applicable, each item carries a DOI and is preserved in Zenodo for citation permanence.",
+          subheadline: "Everything we publish is archived for traceability. This docket lists public administrative records, case studies, datasets, and publication pipelines. Where applicable, each item carries a DOI and is preserved in Zenodo for citation permanence. Our objective is continuity, citation stability, and governance transparency rather than promotional publishing.",
           primaryCta: { label: "Browse Zenodo", href: "https://zenodo.org/communities/blueblocks/", external: true },
           secondaryCta: { label: "View Methodology", href: "/methodology" },
           image: {
@@ -1054,7 +1054,7 @@ const siteContent = {
               tag: "Published Record",
               headline: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
               meta: "DOI: 10.5281/zenodo.18195108",
-              body: "Official authorization archived for governance traceability and open-access citation.",
+              body: "Official authorization archived for governance traceability, regulatory documentation continuity, and citation permanence.",
               cta: { label: "View Publication", href: "/publications/in-space-authorization-letter" },
               image: { src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80", alt: "Mission control", variant: "card" }
             },
@@ -1062,7 +1062,7 @@ const siteContent = {
               tag: "Published Case Study",
               headline: "SAPARYA / IMF Conference Case Study (SBB-1 Mission & Valorization)",
               meta: "DOI: 10.5281/zenodo.18337934",
-              body: "A documented adolescent engineering mission and the pedagogical outcome of real-world stakes.",
+              body: "A documented adolescent engineering mission presented as an institutional case study in responsibility, professional constraints, and authentic engineering stakes.",
               cta: { label: "View Publication", href: "/publications/saparya-imf-case-study" },
               image: { src: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80", alt: "Conference presentation", variant: "card" }
             }
@@ -2336,7 +2336,7 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "Downloads",
-          subheadline: "Access publications, media kits, research frameworks, and institutional documents for press and academic use. All downloads are provided for institutional reference and citation.",
+          subheadline: "This hub consolidates public reference materials, conference artifacts, and citation-grade documentation.",
           primaryCta: { label: "View Publications", href: "/publications" },
           image: {
             src: "/src/assets/banners/downloads-archive.jpg",
@@ -2592,7 +2592,7 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "Books",
-          subheadline: "Long-form publications supporting families, educators, and research partners. Our books translate 15 years of longitudinal research into practical frameworks for building structured learning environments.",
+          subheadline: "Selected long-form publications supporting families, educators, and institutional partners. These titles serve as reflective documentation rather than promotional literature.",
           primaryCta: { label: "View Featured Book", href: "/books/lining-the-nest" },
           image: {
             src: "/src/assets/banners/books.jpg",
@@ -2613,7 +2613,7 @@ const siteContent = {
               tag: "Featured",
               headline: "Lining The Nest",
               meta: "By Pavan Goyal • 280 pages",
-              body: "A comprehensive guide for families and educators on building structured learning environments that foster innovation capacity from early childhood through adolescence. Drawing on 15 years of longitudinal observation.",
+              body: "A structured narrative exploring how environments shape responsibility, curiosity, and long-horizon learning culture.",
               cta: { label: "View Book Details", href: "/books/lining-the-nest" },
               image: { src: "/src/assets/placeholders/card-default.jpg", alt: "Lining The Nest book cover", variant: "card" }
             }
@@ -2684,7 +2684,7 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "Patent Registry",
-          subheadline: "Five utility patents filed to date by Blue Blocks Micro Research Institute students. These filings demonstrate that children can contribute meaningfully to the global innovation economy before reaching adulthood. All IP remains attributed to the student inventors.",
+          subheadline: "This registry documents student-generated inventions produced within high-stakes prototyping environments. The Institute facilitates filing and documentation, while intellectual property remains with student inventors (with parental consent where applicable). Five utility patents filed to date.",
           primaryCta: { label: "View Governance", href: "/governance" },
           image: {
             src: "/src/assets/banners/patents.jpg",
@@ -2943,7 +2943,7 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
-          subheadline: "This page preserves the official authorization record issued for the SBB-1 mission activity. It is presented as a permanent institutional artifact for governance traceability and citation.",
+          subheadline: "This page preserves the official authorization record issued for the SBB-1 mission activity. It is presented as a permanent institutional artifact supporting governance traceability, regulatory transparency, and citation continuity.",
           primaryCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18195108", external: true },
           secondaryCta: { label: "Download PDF", href: "/downloads/in-space-authorization-letter.pdf" },
           image: {
@@ -2969,14 +2969,14 @@ const siteContent = {
           id: "pub-abstract",
           type: "textBlock",
           header: "Abstract",
-          body: "This record archives the official IN-SPACe authorization issued for the SBB-1 mission activity and preserves it as a citable, permanent administrative artifact. The purpose of hosting this document here is institutional traceability: it provides a verifiable governance reference for mission clearance, compliance readiness, and public documentation standards."
+          body: "This record archives the official IN-SPACe authorization issued for the SBB-1 mission activity and preserves it as a citable administrative artifact. Its inclusion in the Institute's registry ensures continuity of regulatory documentation, verification stability for external institutions, and DOI-based citation permanence."
         },
         {
           id: "pub-detail-content",
           type: "twoColumn",
           left: {
             header: "What This Record Confirms",
-            body: "Formal authorization was issued by IN-SPACe for the mission-related activity referenced in the document. The authorized entity is recorded as Blue Blocks Montessori Educational Society. The authorization is preserved for auditability, archival stability, and DOI-based referencing.\n\nThis record may be cited in academic writing, governance documentation, and institutional reporting. Where reproduced, it should be cited via DOI to preserve a stable reference."
+            body: "• Formal authorization issued by IN-SPACe for the mission-related activity referenced in the document.\n• Authorized entity recorded as Blue Blocks Montessori Educational Society.\n• Clearance documented for institutional archival stability.\n• DOI preservation ensures long-term verifiability.\n\n**Usage & Citation**\nThis record may be cited in academic research publications, governance and compliance documentation, institutional reporting, and press verification contexts."
           },
           right: {
             header: "Suggested Citation (APA)",
@@ -3102,8 +3102,8 @@ const siteContent = {
           id: "pub-detail-hero",
           type: "hero",
           variant: "stark",
-          headline: "SAPARYA / IMF Conference Case Study (SBB-1 Mission & Valorization)",
-          subheadline: "A documented adolescent engineering mission and the pedagogical outcome of real-world stakes. Presented at the IMF 7th National Montessori Conference, November 2024.",
+          headline: "SAPARYA / IMF Conference Case Study: Valorization in Orbit",
+          subheadline: "This case study documents how adolescents designed and built a CubeSat payload under authentic aerospace constraints. The work underwent an 18-month review process prior to launch authorization. Although the launch vehicle experienced a Stage-4 ignition anomaly, the pedagogical outcome remains valid: students operated under real professional stakes, regulatory constraints, and accountability structures.",
           primaryCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18337934", external: true },
           secondaryCta: { label: "Download Conference Materials", href: "/downloads/saparya-conference-booklet.pdf" },
           image: {
@@ -3141,11 +3141,11 @@ const siteContent = {
           right: {
             header: "Key Highlights",
             items: [
-              "Framework for integrating TRL-9 projects into Montessori adolescent education",
-              "Measurable improvement in problem-solving agency scores",
-              "Replicable model for other educational institutions",
-              "Longitudinal tracking methodology for innovation capacity",
-              "First documented case of student-led space payload in Indian education"
+              "Montessori material continuity → aerospace geometry",
+              "External regulatory review pathway",
+              "Professional engineering documentation discipline",
+              "Launch anomaly independent of payload design",
+              "Demonstrated adolescent engineering responsibility"
             ],
             cta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18337934", external: true }
           }
@@ -3273,10 +3273,67 @@ const siteContent = {
           ]
         },
         {
-          id: "patent-content",
+          id: "patent-abstract",
           type: "textBlock",
-          header: "Technical Summary",
-          body: "This utility patent covers an automated security UAV system featuring autonomous patrol capabilities, real-time threat detection, and integrated alert mechanisms. The system was designed and prototyped by elementary-aged students working in the Drone Research Centre.\n\nThe patent demonstrates that children can contribute meaningfully to the global innovation economy before reaching adulthood."
+          header: "Abstract",
+          body: "This utility patent covers an automated security UAV system featuring autonomous patrol capabilities, real-time threat detection, and integrated alert mechanisms. The system was designed and prototyped by elementary-aged students working in the Drone Research Centre."
+        },
+        {
+          id: "patent-problem",
+          type: "textBlock",
+          header: "Problem Solved",
+          body: "Traditional perimeter security relies on static cameras and manual patrols, which leave coverage gaps and respond slowly to intrusions. This system provides continuous autonomous aerial surveillance with real-time alerting capabilities."
+        },
+        {
+          id: "patent-how",
+          type: "twoColumn",
+          left: {
+            header: "How It Works",
+            body: "The UAV follows pre-programmed patrol routes using GPS waypoint navigation. Onboard sensors detect motion and thermal anomalies within the patrol zone. When a potential intrusion is identified, the system triggers an alert to a ground control station and autonomously repositions to track the anomaly while maintaining visual contact."
+          },
+          right: {
+            header: "Key Components",
+            items: [
+              "GPS-guided autonomous navigation module",
+              "Thermal and motion detection sensor array",
+              "Real-time video transmission system",
+              "Ground control alert interface",
+              "Automated return-to-base protocol",
+              "Weather-resistant airframe design"
+            ]
+          }
+        },
+        {
+          id: "patent-inventors",
+          type: "metaStrip",
+          items: [
+            { label: "Inventors", value: "Drone Research Centre (Ages 10-14)" },
+            { label: "Filing Status", value: "Filed" },
+            { label: "Application No", value: "TBD" }
+          ]
+        },
+        {
+          id: "patent-faq",
+          type: "accordion",
+          header: "Frequently Asked Questions",
+          items: [
+            {
+              q: "Who owns this patent?",
+              a: "Student inventors retain IP ownership. The Institute facilitates the filing process but does not claim ownership."
+            },
+            {
+              q: "How is the patent verified?",
+              a: "All filings undergo institutional review board oversight before submission."
+            },
+            {
+              q: "Is licensing available?",
+              a: "Licensing inquiries are handled on a case-by-case basis through the Contact page, with involvement of the student inventors and their families."
+            },
+            {
+              q: "How is student privacy maintained?",
+              a: "Minor protection protocols are maintained throughout the filing and publication process."
+            }
+          ]
         },
         {
           id: "patent-related",
@@ -3332,10 +3389,67 @@ const siteContent = {
           ]
         },
         {
-          id: "patent-content",
+          id: "patent-abstract",
           type: "textBlock",
-          header: "Technical Summary",
+          header: "Abstract",
           body: "This utility patent covers a mechanical rescue system specifically designed for borehole emergencies. The system includes innovative gripping mechanisms and extraction protocols developed by adolescent engineers in response to real-world incidents reported in Indian media."
+        },
+        {
+          id: "patent-problem",
+          type: "textBlock",
+          header: "Problem Solved",
+          body: "Borehole accidents, particularly involving children falling into open or abandoned borewells, remain a recurring emergency in rural India. Existing rescue methods are improvised and time-consuming. This system provides a purpose-built mechanical extraction device that can be deployed rapidly."
+        },
+        {
+          id: "patent-how",
+          type: "twoColumn",
+          left: {
+            header: "How It Works",
+            body: "The rescue system uses a telescoping mechanical arm with adaptive gripping attachments sized for borehole diameters. The device is lowered into the borewell and uses a combination of mechanical grip and pneumatic cushioning to safely secure and extract the trapped individual. The system is designed for rapid deployment by first responders with minimal training."
+          },
+          right: {
+            header: "Key Components",
+            items: [
+              "Telescoping mechanical extraction arm",
+              "Adaptive gripping mechanism for variable diameters",
+              "Pneumatic cushioning system for safe extraction",
+              "Integrated camera for visual guidance",
+              "Portable deployment frame",
+              "First-responder operation manual"
+            ]
+          }
+        },
+        {
+          id: "patent-inventors",
+          type: "metaStrip",
+          items: [
+            { label: "Inventors", value: "Student Engineers (Ages 11-15)" },
+            { label: "Filing Status", value: "Filed" },
+            { label: "Application No", value: "TBD" }
+          ]
+        },
+        {
+          id: "patent-faq",
+          type: "accordion",
+          header: "Frequently Asked Questions",
+          items: [
+            {
+              q: "Who owns this patent?",
+              a: "Student inventors retain IP ownership. The Institute facilitates the filing process but does not claim ownership."
+            },
+            {
+              q: "How is the patent verified?",
+              a: "All filings undergo institutional review board oversight before submission."
+            },
+            {
+              q: "Is licensing available?",
+              a: "Licensing inquiries are handled on a case-by-case basis through the Contact page, with involvement of the student inventors and their families."
+            },
+            {
+              q: "How is student privacy maintained?",
+              a: "Minor protection protocols are maintained throughout the filing and publication process."
+            }
+          ]
         },
         {
           id: "patent-related",
@@ -3391,10 +3505,55 @@ const siteContent = {
           ]
         },
         {
-          id: "patent-content",
+          id: "patent-abstract",
           type: "textBlock",
-          header: "Technical Summary",
+          header: "Abstract",
           body: "This utility patent covers a contactless delivery system designed for safe package transfer in healthcare and logistics applications. The system was developed during pandemic-era innovation sprints when students identified a real-world need for contactless solutions."
+        },
+        {
+          id: "patent-problem",
+          type: "textBlock",
+          header: "Problem Solved",
+          body: "During the COVID-19 pandemic, conventional delivery methods posed infection transmission risks. Healthcare facilities and residential areas required a mechanism for safe, contact-free package handover. This system addresses that gap with an automated transfer protocol."
+        },
+        {
+          id: "patent-how",
+          type: "twoColumn",
+          left: {
+            header: "How It Works",
+            body: "The system uses a drone-mounted secure container with an automated release mechanism. The delivery drone navigates to a designated drop zone using GPS coordinates, descends to a safe altitude, and deploys the package into a sanitized receiving bay. The entire sequence operates without human-to-human contact."
+          },
+          right: {
+            header: "Key Components",
+            items: [
+              "Secure payload container with locking mechanism",
+              "Automated release and descent system",
+              "GPS-guided delivery navigation",
+              "Sanitized receiving bay specification",
+              "Weight-adaptive payload suspension",
+              "Return-to-base automation"
+            ]
+          }
+        },
+        {
+          id: "patent-inventors",
+          type: "metaStrip",
+          items: [
+            { label: "Inventors", value: "Drone Research Centre (Ages 10-13)" },
+            { label: "Filing Status", value: "Filed" },
+            { label: "Application No", value: "TBD" }
+          ]
+        },
+        {
+          id: "patent-faq",
+          type: "accordion",
+          header: "Frequently Asked Questions",
+          items: [
+            { q: "Who owns this patent?", a: "Student inventors retain IP ownership. The Institute facilitates the filing process but does not claim ownership." },
+            { q: "How is the patent verified?", a: "All filings undergo institutional review board oversight before submission." },
+            { q: "Is licensing available?", a: "Licensing inquiries are handled on a case-by-case basis through the Contact page, with involvement of the student inventors and their families." },
+            { q: "How is student privacy maintained?", a: "Minor protection protocols are maintained throughout the filing and publication process." }
+          ]
         },
         {
           id: "patent-related",
@@ -3450,10 +3609,55 @@ const siteContent = {
           ]
         },
         {
-          id: "patent-content",
+          id: "patent-abstract",
           type: "textBlock",
-          header: "Technical Summary",
+          header: "Abstract",
           body: "This utility patent covers an autonomous medical assistance system designed for deployment in remote or emergency situations. The system integrates diagnostic sensors, communication modules, and first-response protocols developed by adolescent engineers."
+        },
+        {
+          id: "patent-problem",
+          type: "textBlock",
+          header: "Problem Solved",
+          body: "Remote and underserved areas frequently lack immediate medical response infrastructure. Emergency situations in such locations suffer from delayed first-response times. This system provides autonomous initial medical assessment and communication capabilities to bridge the gap between incident and professional medical arrival."
+        },
+        {
+          id: "patent-how",
+          type: "twoColumn",
+          left: {
+            header: "How It Works",
+            body: "The system deploys an autonomous unit to the emergency location using GPS coordinates. Upon arrival, it performs basic diagnostic assessment through integrated sensors (pulse oximetry, temperature, blood pressure), establishes a communication link with medical professionals, and can dispense basic first-aid supplies. All data is transmitted in real-time to the nearest medical facility."
+          },
+          right: {
+            header: "Key Components",
+            items: [
+              "Autonomous navigation and deployment system",
+              "Integrated diagnostic sensor suite",
+              "Real-time telemedicine communication link",
+              "Basic first-aid supply dispensing module",
+              "Environmental assessment sensors",
+              "Ruggedized housing for field deployment"
+            ]
+          }
+        },
+        {
+          id: "patent-inventors",
+          type: "metaStrip",
+          items: [
+            { label: "Inventors", value: "Student Engineers (Ages 12-16)" },
+            { label: "Filing Status", value: "Filed" },
+            { label: "Application No", value: "TBD" }
+          ]
+        },
+        {
+          id: "patent-faq",
+          type: "accordion",
+          header: "Frequently Asked Questions",
+          items: [
+            { q: "Who owns this patent?", a: "Student inventors retain IP ownership. The Institute facilitates the filing process but does not claim ownership." },
+            { q: "How is the patent verified?", a: "All filings undergo institutional review board oversight before submission." },
+            { q: "Is licensing available?", a: "Licensing inquiries are handled on a case-by-case basis through the Contact page, with involvement of the student inventors and their families." },
+            { q: "How is student privacy maintained?", a: "Minor protection protocols are maintained throughout the filing and publication process." }
+          ]
         },
         {
           id: "patent-related",
@@ -3509,10 +3713,55 @@ const siteContent = {
           ]
         },
         {
-          id: "patent-content",
+          id: "patent-abstract",
           type: "textBlock",
-          header: "Technical Summary",
-          body: "This utility patent (#4421) covers the 'Guardian' drone - an autonomous health monitoring system designed by the youngest patent holders in the Institute's registry. The system demonstrates that children as young as 9 can contribute to meaningful innovation when given appropriate scaffolding and real-world problems to solve."
+          header: "Abstract",
+          body: "This utility patent (#4421) covers the 'Guardian' drone — an autonomous health monitoring system designed by the youngest patent holders in the Institute's registry. The system demonstrates that children as young as 9 can contribute to meaningful innovation when given appropriate scaffolding and real-world problems to solve."
+        },
+        {
+          id: "patent-problem",
+          type: "textBlock",
+          header: "Problem Solved",
+          body: "Continuous health monitoring in institutional environments (schools, care facilities) requires non-intrusive observation systems that do not disrupt daily activity. Manual monitoring is labor-intensive and provides intermittent data points. This system provides autonomous, continuous environmental and occupant health assessment."
+        },
+        {
+          id: "patent-how",
+          type: "twoColumn",
+          left: {
+            header: "How It Works",
+            body: "The Guardian drone operates on pre-programmed patrol routes within enclosed or semi-enclosed spaces. It uses passive sensing (thermal, air quality, ambient noise analysis) to establish baseline environmental health metrics. Deviations from baseline trigger alerts to facility administrators. The system operates autonomously with minimal noise to avoid disrupting the monitored environment."
+          },
+          right: {
+            header: "Key Components",
+            items: [
+              "Low-noise dual-rotor propulsion system",
+              "Passive thermal and air quality sensors",
+              "Ambient environmental baseline engine",
+              "Deviation detection and alert system",
+              "Autonomous patrol route programming",
+              "Compact form factor for indoor operation"
+            ]
+          }
+        },
+        {
+          id: "patent-inventors",
+          type: "metaStrip",
+          items: [
+            { label: "Inventors", value: "Drone Research Centre (Ages 9-11)" },
+            { label: "Filing Status", value: "Filed" },
+            { label: "Patent Number", value: "#4421" }
+          ]
+        },
+        {
+          id: "patent-faq",
+          type: "accordion",
+          header: "Frequently Asked Questions",
+          items: [
+            { q: "Who owns this patent?", a: "Student inventors retain IP ownership. The Institute facilitates the filing process but does not claim ownership." },
+            { q: "How is the patent verified?", a: "All filings undergo institutional review board oversight before submission." },
+            { q: "Is licensing available?", a: "Licensing inquiries are handled on a case-by-case basis through the Contact page, with involvement of the student inventors and their families." },
+            { q: "How is student privacy maintained?", a: "Minor protection protocols are maintained throughout the filing and publication process." }
+          ]
         },
         {
           id: "patent-related",
@@ -3587,14 +3836,14 @@ const siteContent = {
           id: "book-overview",
           type: "textBlock",
           header: "Overview",
-          body: "Lining The Nest provides a practical framework for parents and educators who want to create environments that nurture innovation capacity. This book translates 15 years of longitudinal observation at Blue Blocks Micro Research Institute into actionable strategies that any family or institution can implement.\n\nThe title references the metaphor of preparation: just as birds line their nests before eggs arrive, adults must prepare the environment before expecting children to innovate. The book argues that innovation capacity is not innate talent but an emergent property of well-structured environments."
+          body: "Lining The Nest examines how structured environments support developmental responsibility over time. It emphasizes observation-led decision making, gradual autonomy, and continuity between home, school, and research environments.\n\nThe title references the metaphor of preparation: just as birds line their nests before eggs arrive, adults must prepare the environment before expecting children to innovate. The book argues that innovation capacity is not innate talent but an emergent property of well-structured environments."
         },
         {
           id: "book-content",
           type: "twoColumn",
           left: {
             header: "Key Themes",
-            body: "The book is organized around three developmental windows:\n\n**The Sensorial Explorer (0-6):** How early manipulation of real materials builds the neural substrate for later engineering thinking.\n\n**The Reasoning Child (6-12):** Transitioning from exploration to systematic problem-solving; introducing constraints that challenge without overwhelming.\n\n**The Adolescent Engineer (12-18):** Supporting agency, IP creation, and the transition to adult-level contribution; the psychology of 'valorization.'"
+            body: "The book is organized around five core themes:\n\n**Environment as behavioral scaffold:** How structured spaces shape behavior before instruction begins.\n\n**Structured independence:** Balancing freedom with clear boundaries to foster self-direction.\n\n**Responsibility transfer:** Moving ownership of decisions from adults to children over time.\n\n**Observation-led pedagogy:** Using systematic observation rather than testing to guide development.\n\n**Long-horizon developmental culture:** Building habits and capacities measured in years, not semesters."
           },
           right: {
             header: "Key Topics",
@@ -3649,20 +3898,16 @@ const siteContent = {
           header: "Frequently Asked Questions",
           items: [
             {
-              q: "Who is this book for?",
-              a: "Lining The Nest is written for parents who want to support their children's innovation capacity, educators looking for research-backed approaches, and researchers interested in the practical application of longitudinal observation data."
+              q: "Where can I purchase this book?",
+              a: "Lining The Nest is available on Amazon India. International shipping and digital formats are available."
             },
             {
-              q: "Do I need a Montessori background to use this book?",
-              a: "No. While the research was conducted in a Montessori environment, the principles are applicable to any educational setting. The book focuses on universal principles of environmental preparation and constraint introduction."
+              q: "Can I quote from this book?",
+              a: "Yes, with proper attribution. Please cite using standard academic citation format referencing the author and publisher."
             },
             {
-              q: "Is this book available outside India?",
-              a: "Yes. Amazon provides international shipping. Digital formats are available globally."
-            },
-            {
-              q: "How does this book relate to the Institute's research?",
-              a: "The book translates findings from 15 years of embedded observation into practical guidance. It represents the 'applied' output of the Institute's longitudinal dataset."
+              q: "Are bulk orders available?",
+              a: "Yes. For institutional or bulk orders, please reach out through our Contact page."
             }
           ]
         },
