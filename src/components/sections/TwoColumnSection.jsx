@@ -4,7 +4,7 @@ import { ArrowRight, Download, ExternalLink, Copy, Check } from 'lucide-react';
 import { useState } from 'react';
 import SmartImage from '../common/SmartImage';
 
-const TwoColumnSection = ({ left = {}, right = {} }) => {
+const TwoColumnSection = ({ left = {}, right = {}, compact = false }) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = (text) => {
@@ -177,7 +177,7 @@ const TwoColumnSection = ({ left = {}, right = {} }) => {
   };
 
   return (
-    <section className="section-spacing bg-background">
+    <section className={`${compact ? 'py-8 md:py-12' : 'section-spacing'} bg-background`}>
       <div className="container-grid">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Left column - 2/3 width */}
