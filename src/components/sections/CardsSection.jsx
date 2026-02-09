@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SmartImage from '../common/SmartImage';
+import { getIcon } from '../../lib/iconMap';
 
 const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
   const title = header || heading;
@@ -123,6 +124,16 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
                     {item.tag}
                   </span>
                 )}
+
+                {/* Icon for cards with icon field */}
+                {!isProfiles && !item.image && (() => {
+                  const CardIcon = getIcon(item.icon);
+                  return CardIcon ? (
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-cyan/10 to-primary-navy/10 flex items-center justify-center mb-4">
+                      <CardIcon className="w-5 h-5 text-accent-cyan" aria-hidden="true" />
+                    </div>
+                  ) : null;
+                })()}
 
                 <h3 className="text-xl font-semibold text-deep-ink mb-2 group-hover:text-primary-navy transition-colors">
                   {item.headline || item.title}

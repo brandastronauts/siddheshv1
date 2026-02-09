@@ -1,13 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Microscope, Building2, GraduationCap, Briefcase, ArrowRight } from 'lucide-react';
-
-const iconMap = {
-  microscope: Microscope,
-  building: Building2,
-  graduation: GraduationCap,
-  briefcase: Briefcase,
-};
+import { ArrowRight } from 'lucide-react';
+import { getIcon } from '../../lib/iconMap';
 
 // Fallback image for failed loads
 const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1600&q=80";
@@ -16,30 +10,35 @@ const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1589829545856-d10d557c
 const defaultRegistryCards = [
   {
     title: "Publications",
+    icon: "archive",
     description: "Administrative records, case studies, datasets, and open science archives.",
     image: "https://images.unsplash.com/photo-1450101215322-bf5cd27642fc?auto=format&fit=crop&w=1600&q=80",
     button: { label: "Browse Publications", href: "/publications" }
   },
   {
     title: "Patents",
+    icon: "lightbulb",
     description: "Student innovation outcomes, patent filings, and technical documentation.",
     image: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1600&q=80",
     button: { label: "View Patents", href: "/patents" }
   },
   {
     title: "Books",
+    icon: "book",
     description: "Long-form publications supporting families, educators, and research partners.",
     image: "https://images.unsplash.com/photo-1455885666463-39f77c2476e4?auto=format&fit=crop&w=1600&q=80",
     button: { label: "Explore Books", href: "/books" }
   },
   {
     title: "Team",
+    icon: "users",
     description: "Researchers, embedded fellows, leadership, and institutional collaborators.",
     image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=1600&q=80",
     button: { label: "Meet the Team", href: "/team" }
   },
   {
     title: "Downloads",
+    icon: "download",
     description: "Technical briefs, presentations, proceedings, and public documents.",
     image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80",
     button: { label: "Access Downloads", href: "/downloads" }
@@ -114,7 +113,7 @@ const ButtonCardsSection = ({ heading, header, items, cards, footerNote }) => {
         {/* 5-column grid for desktop (3+2 layout), 2 for tablet, 1 for mobile */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
           {cardData.map((item, index) => {
-            const IconComponent = item.icon ? iconMap[item.icon] : null;
+            const IconComponent = getIcon(item.icon);
             const cardTitle = item.headline || item.title;
             const cardBody = item.body || item.description;
             const cardImage = item.image;

@@ -1,30 +1,5 @@
-import { Shield, Eye, Scale, Check, Users, Mail, Newspaper, MessageSquare, Microscope, Building2, GraduationCap, Briefcase, Database, Target, Feather, FileText, Lock, AlertTriangle, Wrench, ArrowRight, Download } from 'lucide-react';
 import { motion } from 'framer-motion';
-
-const iconMap = {
-  shield: Shield,
-  eye: Eye,
-  scale: Scale,
-  check: Check,
-  users: Users,
-  user: Users,
-  mail: Mail,
-  newspaper: Newspaper,
-  message: MessageSquare,
-  microscope: Microscope,
-  building: Building2,
-  graduation: GraduationCap,
-  briefcase: Briefcase,
-  database: Database,
-  target: Target,
-  feather: Feather,
-  file: FileText,
-  lock: Lock,
-  alert: AlertTriangle,
-  tool: Wrench,
-  arrow: ArrowRight,
-  download: Download,
-};
+import { getIcon } from '../../lib/iconMap';
 
 const Grid3Section = ({ heading, header, intro, items }) => {
   const title = header || heading;
@@ -64,7 +39,7 @@ const Grid3Section = ({ heading, header, intro, items }) => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {items.map((item, index) => {
-            const IconComponent = item.icon ? iconMap[item.icon] : null;
+            const IconComponent = getIcon(item.icon);
             const description = item.body || item.description;
             
             return (

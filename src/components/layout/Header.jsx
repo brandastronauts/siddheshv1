@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import siteContent from '../../content/siteContent';
 import logo from '../../assets/logo.png';
+import { getIcon } from '../../lib/iconMap';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -34,12 +35,16 @@ const Header = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
+                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 inline-flex items-center gap-1.5 ${
                     isActive
                       ? 'text-primary-navy bg-primary-navy/5'
                       : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
                   }`}
                 >
+                  {(() => {
+                    const NavIcon = getIcon(item.icon);
+                    return NavIcon ? <NavIcon className="w-3.5 h-3.5" aria-hidden="true" /> : null;
+                  })()}
                   {item.label}
                 </Link>
               );
@@ -80,12 +85,16 @@ const Header = () => {
                       key={item.path}
                       to={item.path}
                       onClick={() => setMobileMenuOpen(false)}
-                      className={`px-4 py-3 text-base font-medium rounded-xl transition-all duration-200 ${
+                      className={`px-4 py-3 text-base font-medium rounded-xl transition-all duration-200 flex items-center gap-2 ${
                         isActive
                           ? 'text-primary-navy bg-primary-navy/5'
                           : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
                       }`}
                     >
+                      {(() => {
+                        const NavIcon = getIcon(item.icon);
+                        return NavIcon ? <NavIcon className="w-4 h-4" aria-hidden="true" /> : null;
+                      })()}
                       {item.label}
                     </Link>
                   );

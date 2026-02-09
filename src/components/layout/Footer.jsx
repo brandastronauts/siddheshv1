@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, ArrowUpRight } from 'lucide-react';
+import { Mail, ArrowUpRight, FileText, Lightbulb, BookOpen, Users, Download, Lock, ScrollText, MapPin } from 'lucide-react';
 import siteContent from '../../content/siteContent';
 import logo from '../../assets/logo.png';
 import FooterNewsletter from '../FooterNewsletter';
@@ -86,19 +86,24 @@ const Footer = () => {
             Registries & Archives
           </h4>
           <div className="flex flex-wrap gap-4">
-            <Link to="/publications" className="text-sm text-white/60 hover:text-white transition-colors">
+            <Link to="/publications" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors">
+              <FileText className="w-3.5 h-3.5" aria-hidden="true" />
               Publications
             </Link>
-            <Link to="/patents" className="text-sm text-white/60 hover:text-white transition-colors">
+            <Link to="/patents" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors">
+              <Lightbulb className="w-3.5 h-3.5" aria-hidden="true" />
               Patents
             </Link>
-            <Link to="/books" className="text-sm text-white/60 hover:text-white transition-colors">
+            <Link to="/books" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors">
+              <BookOpen className="w-3.5 h-3.5" aria-hidden="true" />
               Books
             </Link>
-            <Link to="/team" className="text-sm text-white/60 hover:text-white transition-colors">
+            <Link to="/team" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors">
+              <Users className="w-3.5 h-3.5" aria-hidden="true" />
               Team
             </Link>
-            <Link to="/downloads" className="text-sm text-white/60 hover:text-white transition-colors">
+            <Link to="/downloads" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors">
+              <Download className="w-3.5 h-3.5" aria-hidden="true" />
               Downloads
             </Link>
           </div>
@@ -129,13 +134,16 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/40">
             <p>© {new Date().getFullYear()} {brand.siteName}. All rights reserved.</p>
             <div className="flex items-center gap-6">
-              <Link to="/privacy" className="hover:text-white/80 transition-colors">
+              <Link to="/privacy" className="inline-flex items-center gap-1 hover:text-white/80 transition-colors">
+                <Lock className="w-3 h-3" aria-hidden="true" />
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="hover:text-white/80 transition-colors">
+              <Link to="/terms" className="inline-flex items-center gap-1 hover:text-white/80 transition-colors">
+                <ScrollText className="w-3 h-3" aria-hidden="true" />
                 Terms of Use
               </Link>
-              <Link to="/sitemap" className="hover:text-white/80 transition-colors">
+              <Link to="/sitemap" className="inline-flex items-center gap-1 hover:text-white/80 transition-colors">
+                <MapPin className="w-3 h-3" aria-hidden="true" />
                 Sitemap
               </Link>
             </div>
