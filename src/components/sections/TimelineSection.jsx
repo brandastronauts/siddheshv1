@@ -1,10 +1,11 @@
-const TimelineSection = ({ heading, items }) => {
+const TimelineSection = ({ heading, header, items = [] }) => {
+  const title = header || heading;
   return (
     <section className="section-spacing bg-background">
       <div className="container-grid">
-        {heading && (
+        {title && (
           <h2 className="text-3xl md:text-4xl font-bold text-center text-deep-ink mb-12">
-            {heading}
+            {title}
           </h2>
         )}
         
@@ -29,7 +30,7 @@ const TimelineSection = ({ heading, items }) => {
                     {item.title}
                   </h3>
                   <p className="text-muted-foreground">
-                    {item.description}
+                    {item.description || item.body}
                   </p>
                 </div>
                 
