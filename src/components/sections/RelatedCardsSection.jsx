@@ -1,14 +1,8 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, FileText, BookOpen, Newspaper, ShieldCheck } from 'lucide-react';
-
-const iconMap = {
-  patent: ShieldCheck,
-  publication: FileText,
-  book: BookOpen,
-  newsroom: Newspaper,
-  default: FileText,
-};
+import { ArrowRight } from 'lucide-react';
+import { getIcon } from '../../lib/iconMap';
+import { FileText } from 'lucide-react';
 
 const RelatedCardsSection = ({ header, cards = [] }) => {
   return (
@@ -27,7 +21,7 @@ const RelatedCardsSection = ({ header, cards = [] }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {cards.map((card, index) => {
-            const IconComponent = iconMap[card.icon] || iconMap.default;
+            const IconComponent = getIcon(card.icon) || FileText;
             
             return (
               <motion.div

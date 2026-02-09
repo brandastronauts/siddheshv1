@@ -13,14 +13,14 @@ const siteContent = {
   },
 
   nav: [
-    { label: "Home", path: "/" },
-    { label: "The Institute", path: "/the-institute" },
-    { label: "Methodology", path: "/methodology" },
-    { label: "Publications", path: "/publications" },
-    { label: "Governance", path: "/governance" },
-    { label: "Collaborate", path: "/collaborate" },
-    { label: "Newsroom", path: "/newsroom" },
-    { label: "Contact", path: "/contact" },
+    { label: "Home", path: "/", icon: "home" },
+    { label: "The Institute", path: "/the-institute", icon: "institute" },
+    { label: "Methodology", path: "/methodology", icon: "methodology" },
+    { label: "Publications", path: "/publications", icon: "publication" },
+    { label: "Governance", path: "/governance", icon: "governance" },
+    { label: "Collaborate", path: "/collaborate", icon: "collaborate" },
+    { label: "Newsroom", path: "/newsroom", icon: "newsroom" },
+    { label: "Contact", path: "/contact", icon: "contact" },
   ],
 
   pages: {
@@ -228,16 +228,19 @@ const siteContent = {
           items: [
             {
               title: "Longitudinal Continuity (0-18)",
+              icon: "calendar",
               body:
                 "Most child development studies observe children once or twice. We've tracked the same children continuously through our Embedded Research Fellows from age 3 to 18. 15 years completed; Year 16 ongoing. This continuity shows us the trajectory of how capabilities develop not just what children can do at one moment, but proving that the engineer of 18 is built by the sensorial explorer of 3."
             },
             {
               title: "Ecological Validity - Real Projects, Not Lab Tasks",
+              icon: "target",
               body:
                 "We reject the 'Goldfish Bowl' fallacy of academic research. Children in sterile labs behave like subjects; children in Innovation Labs behave like engineers. Our data is derived from TRL-9 ecosystems where the risk of failure is real, not simulated. When we observe problem-solving behavior, children are solving actual problems by designing flight hardware, not completing worksheets about flight hardware; they are actually saving a mission."
             },
             {
               title: "Sovereign Intellectual Property",
+              icon: "lightbulb",
               body:
                 "The ultimate metric of educational efficacy is not testing, but creation. Our students transition from passive learners to Sovereign IP holders, with five utility patents filed to date by elementary-aged students. With this we prove that children can contribute to the global innovation economy even before they turn 18 and graduate."
             }
@@ -381,30 +384,35 @@ const siteContent = {
           cards: [
             {
               title: "Publications",
+              icon: "archive",
               description: "Administrative records, case studies, datasets, and open science archives.",
               image: "https://images.unsplash.com/photo-1450101215322-bf5cd27642fc?auto=format&fit=crop&w=1600&q=80",
               button: { label: "Browse Publications", href: "/publications" }
             },
             {
               title: "Patents",
+              icon: "lightbulb",
               description: "Student innovation outcomes, patent filings, and technical documentation.",
               image: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1600&q=80",
               button: { label: "View Patents", href: "/patents" }
             },
             {
               title: "Books",
+              icon: "book",
               description: "Long-form publications supporting families, educators, and research partners.",
               image: "https://images.unsplash.com/photo-1455885666463-39f77c2476e4?auto=format&fit=crop&w=1600&q=80",
               button: { label: "Explore Books", href: "/books" }
             },
             {
               title: "Team",
+              icon: "users",
               description: "Researchers, embedded fellows, leadership, and institutional collaborators.",
               image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=1600&q=80",
               button: { label: "Meet the Team", href: "/team" }
             },
             {
               title: "Downloads",
+              icon: "download",
               description: "Technical briefs, presentations, proceedings, and public documents.",
               image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80",
               button: { label: "Access Downloads", href: "/downloads" }
