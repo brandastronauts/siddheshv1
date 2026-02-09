@@ -3169,17 +3169,17 @@ const siteContent = {
     },
 
     "/publications/saparya-imf-case-study": {
-      title: "SAPARYA / IMF Case Study",
-      metaDescription: "Case study documenting the pedagogical framework and findings from the SAPARYA initiative at IMF National Montessori Conference.",
+      title: "Valorization In Orbit — An Adolescent CubeSat Mission",
+      metaDescription: "Peer-reviewed case study presented at Saparya 7th National Montessori Conference documenting how seventeen adolescent students designed, built, and launched the SBB-1 CubeSat hosted payload.",
       seo: {
-        title: "SAPARYA / IMF Case Study | Blue Blocks Micro Research Institute",
+        title: "Valorization In Orbit — An Adolescent CubeSat Mission | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study",
         robots: "noindex,nofollow,noarchive,nosnippet",
         openGraph: {
           type: "article",
           url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study",
-          title: "SAPARYA / IMF Case Study",
-          description: "Case study on the SAPARYA pedagogical framework.",
+          title: "Valorization In Orbit — An Adolescent CubeSat Mission",
+          description: "Case study on adolescent CubeSat mission presented at Saparya 7th National Montessori Conference.",
           image: {
             url: "https://siddheshv1.lovable.app/og/publications/saparya-imf-case-study.jpg",
             width: 1200,
@@ -3192,7 +3192,7 @@ const siteContent = {
         {
           "@context": "https://schema.org",
           "@type": "Article",
-          name: "SAPARYA / IMF Case Study",
+          name: "Valorization In Orbit — An Adolescent CubeSat Mission",
           url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study",
           isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
         },
@@ -3202,107 +3202,222 @@ const siteContent = {
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
             { "@type": "ListItem", position: 2, name: "Publications", item: "https://siddheshv1.lovable.app/publications" },
-            { "@type": "ListItem", position: 3, name: "SAPARYA / IMF Case Study", item: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study" }
+            { "@type": "ListItem", position: 3, name: "Valorization In Orbit", item: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study" }
           ]
         }
       ],
       sections: [
         {
-          id: "pub-detail-hero",
+          id: "saparya-hero",
           type: "hero",
-          variant: "stark",
-          headline: "SAPARYA / IMF Conference Case Study: Valorization in Orbit",
-          subheadline: "This case study documents how adolescents designed and built a CubeSat payload under authentic aerospace constraints. The work underwent an 18-month review process prior to launch authorization. Although the launch vehicle experienced a Stage-4 ignition anomaly, the pedagogical outcome remains valid: students operated under real professional stakes, regulatory constraints, and accountability structures.",
-          primaryCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18337934", external: true },
-          secondaryCta: { label: "Download Conference Materials", href: "/downloads/saparya-conference-booklet.pdf" },
-          image: {
-            src: "/src/assets/banners/publications-doi.jpg",
-            alt: "SAPARYA Case Study",
-            variant: "hero",
-            privacyBlur: false
-          }
+          variant: "publication",
+          headline: "Valorization In Orbit — An Adolescent CubeSat Mission",
+          subheadline: "Saparya 7th National Montessori Conference | Mumbai | 23–24 January 2026",
+          image: { src: "/src/assets/banners/publications-doi.jpg", alt: "SAPARYA Case Study", variant: "hero", privacyBlur: false }
         },
         {
-          id: "pub-detail-meta",
+          id: "saparya-meta",
           type: "metaStrip",
           items: [
-            { label: "DOI", value: "10.5281/zenodo.18337934" },
-            { label: "Record Type", value: "Conference Case Study" },
-            { label: "Event", value: "IMF 7th National Montessori Conference" },
-            { label: "Date", value: "November 2024" },
+            { label: "DOI", value: "10.5281/zenodo.18337934", href: "https://doi.org/10.5281/zenodo.18337934", external: true },
+            { label: "Type", value: "Conference Case Study" },
             { label: "Status", value: "Published" },
+            { label: "Event", value: "Saparya 7th National Montessori Conference" },
+            { label: "Date", value: "23–24 January 2026" },
+            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" },
             { label: "Access", value: "Open Access" }
           ]
         },
         {
-          id: "pub-abstract",
-          type: "textBlock",
-          header: "Abstract",
-          body: "This case study documents the SAPARYA (Systematic Approach to Project-based Adolescent Research for Youth Advancement) initiative, a pedagogical framework designed to integrate high-stakes engineering projects into Montessori adolescent programs. The paper presents preliminary findings from the first cohort of students who participated in the SBB-1 space mission, demonstrating measurable improvements in problem-solving agency and technical competency.\n\nThe study examines how exposure to Technology Readiness Level 9 (TRL-9) constraints—where failure has real consequences—transforms student engagement and long-term innovation capacity. Preliminary data suggests that students who experience project 'valorization' (the moment when their work is validated by external, non-educational stakeholders) show significantly higher persistence in STEM fields."
-        },
-        {
-          id: "pub-detail-content",
+          id: "saparya-abstract",
           type: "twoColumn",
+          compact: true,
           left: {
-            header: "Why This Matters",
-            body: "Most educational engineering projects are simulations—students design bridges that never carry weight, or code apps that no one uses. SAPARYA inverts this model by placing adolescents in projects where failure is not an abstract grade but a real outcome.\n\nThe SBB-1 mission exemplifies this approach: twelve teenagers designed a thermal sensor payload that underwent the same flight qualification process as professional aerospace hardware. When PSLV-C62's Stage 4 failed at T+847 seconds, students experienced genuine engineering loss—and the pedagogical value of 'valorization' was proven."
+            sections: [
+              {
+                title: "Abstract",
+                body: "This case study documents how seventeen students (ages 12–15) from Blue Blocks Montessori School designed and built the SBB-1 CubeSat hosted payload, received official authorization from IN-SPACe after an 18-month technical review, and witnessed their payload's launch aboard ISRO's PSLV-C62 rocket on January 12, 2026. Though the mission ended in failure when Stage 4 of the launch vehicle malfunctioned, the experience embodied Dr. Montessori's concept of \"valorization\" — adolescents developing personal worth through meaningful contribution to society. The document connects Montessori's developmental stages through the symbolic 10cm cube, from the Pink Tower to the CubeSat, demonstrating how adolescents can engage in genuine professional work when given authentic challenges and responsibility."
+              }
+            ]
           },
           right: {
-            header: "Key Highlights",
-            items: [
-              "Montessori material continuity → aerospace geometry",
-              "External regulatory review pathway",
-              "Professional engineering documentation discipline",
-              "Launch anomaly independent of payload design",
-              "Demonstrated adolescent engineering responsibility"
-            ],
-            cta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18337934", external: true }
+            panels: [
+              {
+                title: "Repository & Access",
+                links: [
+                  { label: "View on Zenodo (DOI)", href: "https://doi.org/10.5281/zenodo.18337934", external: true },
+                  { label: "Conference Booklet (PDF)", href: "/downloads/saparya-conference-booklet.pdf", download: true },
+                  { label: "Presentation Slides (PDF)", href: "/downloads/saparya-presentation.pdf", download: true }
+                ]
+              }
+            ]
           }
         },
         {
-          id: "pub-downloads",
-          type: "grid3",
-          header: "Downloads & Supplementary Materials",
-          items: [
-            {
-              title: "Conference Booklet",
-              icon: "download",
-              body: "Full case study as presented at IMF.",
-              cta: { label: "Download PDF", href: "/downloads/saparya-conference-booklet.pdf" }
-            },
-            {
-              title: "Presentation Slides",
-              icon: "download",
-              body: "Visual presentation materials.",
-              cta: { label: "Download PDF", href: "/downloads/saparya-presentation.pdf" }
-            },
-            {
-              title: "Governance Protocol",
-              icon: "governance",
-              body: "IRB-aligned research standards.",
-              cta: { label: "View", href: "/governance" }
-            }
-          ]
+          id: "saparya-introduction",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Introduction",
+                body: "This record archives a peer-reviewed case study presented at Saparya, the 7th National Montessori Conference organized by the Indian Montessori Foundation (IMF) in Mumbai. The presentation documents how seventeen adolescent students (ages 12–15) from Blue Blocks Montessori School designed, built, and launched a CubeSat hosted payload, and how the experience embodied Dr. Montessori's concept of \"valorization\" even when the mission ended in launch vehicle failure."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Related Publications",
+                links: [
+                  { label: "IN-SPACe Authorization Letter", href: "/publications/in-space-authorization-letter" },
+                  { label: "Methodology", href: "/methodology" }
+                ]
+              }
+            ]
+          }
         },
         {
-          id: "pub-citation",
+          id: "saparya-methodology",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Methodology",
+                body: "The presentation employs a longitudinal case study methodology, tracking the student cohort across the 18-month mission lifecycle from initial design through launch day. Data sources include mission documentation, IN-SPACe regulatory correspondence, student reflections, and observational records from the prepared environment.\n\nThe theoretical framework draws on Dr. Maria Montessori's developmental psychology, specifically her writings on the \"valorization of the personality\" during the third plane of development (ages 12–18). The case study tests whether aerospace engineering, conducted under authentic professional constraints, can serve as a vehicle for valorization when adolescents assume genuine responsibility for outcomes."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Theoretical Framework",
+                citation: "Valorization of the personality — Dr. Maria Montessori's concept describing adolescents developing personal worth through meaningful contribution to society, tested here through authentic aerospace engineering constraints."
+              }
+            ]
+          }
+        },
+        {
+          id: "saparya-results",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Results — The 10cm Cube as Developmental Thread",
+                body: "The presentation traces a symbolic geometric connection across Montessori's planes of development, from the 10cm Pink Tower cube (first plane sensorial material) through the Binomial Cube (second plane mathematical abstraction) to the 10cm³ CubeSat standard (third plane professional application). This continuity illustrates how foundational Montessori materials prepare the child for complex real-world engagement."
+              },
+              {
+                title: "Valorization Through Authentic Work",
+                body: "Despite mission failure at T+847 seconds when PSLV-C62's Stage 4 malfunctioned, the student researchers demonstrated measurable valorization outcomes:",
+                bullets: [
+                  "Sustained engagement across 18 months",
+                  "Professional-grade documentation practices",
+                  "Regulatory navigation with IN-SPACe",
+                  "Resilient response to public failure"
+                ]
+              },
+              {
+                title: "Institutional Architecture",
+                body: "The mission operated through a tripartite structure enabling adolescent-led execution:",
+                bullets: [
+                  "The school provided the student research team",
+                  "The research institute delivered pedagogical scaffolding and regulatory navigation",
+                  "TM2Space contributed technical architecture and launch integration"
+                ]
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Key Finding",
+                citation: "The case argues that valorization emerges from the authenticity of the challenge, not the success of the outcome."
+              }
+            ]
+          }
+        },
+        {
+          id: "saparya-discussion",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Discussion — Conference Session Context",
+                body: "The presentation was delivered under the session theme \"Serving the Future\", examining how adolescents develop through purposeful, real-world work. The Blue Blocks case demonstrated that adolescents can undertake the full lifecycle of a professional aerospace mission, engaging with domain experts as part of their prepared environment while assuming real responsibility within a collaborative community."
+              },
+              {
+                title: "Implications for Montessori Secondary Education",
+                body: "The case study suggests that valorization does not require insulation from failure. The PSLV-C62 Stage 4 anomaly, a public, high-stakes failure beyond the students' control, became itself a pedagogical event. Student responses documented in the case study indicate that authentic engagement with uncertainty may strengthen rather than undermine the valorization process."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Cross-References",
+                links: [
+                  { label: "Patent Registry", href: "/patents" },
+                  { label: "Governance", href: "/governance" },
+                  { label: "Downloads", href: "/downloads" },
+                  { label: "Publications Index", href: "/publications" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "saparya-acknowledgments",
           type: "textBlock",
-          variant: "muted",
-          header: "Suggested Citation (APA)",
-          body: "Blue Blocks Micro Research Institute. (2024). SAPARYA: Building Innovation Capacity (0-18) Through Embedded Research [Conference case study]. IMF 7th National Montessori Conference. Zenodo. https://doi.org/10.5281/zenodo.18337934"
+          header: "Acknowledgments",
+          body: "The authors acknowledge:\n\n• IN-SPACe for mission authorization\n• ISRO for payload integration and Mission Control access\n• The Indian Montessori Foundation (IMF)\n• Association Montessori Internationale (AMI)\n• Mission advisors who treated adolescent work with professional rigor"
         },
         {
-          id: "pub-faq",
+          id: "saparya-supplementary",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Supplementary Materials",
+                body: "Conference Materials:",
+                bullets: [
+                  "Saparya 7th National Montessori Conference Booklet (Mumbai, 23–24 January 2026)",
+                  "Presentation Abstract (Public Version)"
+                ]
+              },
+              {
+                title: "Authors",
+                body: "Gorinta, Sanjay Ramaraju · Padhy, Sanshray · Ponnala, Sreshta · Rudraraju, Ashrith · Reddy, Atla Ashrith · Kumar, Bikki Maneesh · Goyal, Saachi · Hussain Kagalwalla, Ummehani · Mehta, Aahan Hemal · Gupta, Amaira · Sunkara, Dhruti · Adusumilli, Karthikeya · Aditya Rao, Pratheetha · Vijaya Krishna, Ranvir · Reddy, Bolusani Varun · Satya Rallapalli, Viaan · Agarwal, Vedika\n\nProject Leader:\nMr. Pavan Goyal (Founder, Blue Blocks; Trustee, Indian Montessori Foundation)"
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "How to Cite (APA)",
+                citation: "Gorinta, S. R., Padhy, S., Ponnala, S., Rudraraju, A., Reddy, A. A., Kumar, B. M., Goyal, S., Hussain Kagalwalla, U., Mehta, A. H., Gupta, A., Sunkara, D., Adusumilli, K., Aditya Rao, P., Vijaya Krishna, R., Reddy, B. V., Satya Rallapalli, V., & Agarwal, V. (2026). Valorization in orbit — An adolescent CubeSat mission [Conference presentation]. Saparya 7th National Montessori Conference, Mumbai, India. https://doi.org/10.5281/zenodo.18195108"
+              },
+              {
+                title: "Downloads",
+                links: [
+                  { label: "Conference Booklet (PDF)", href: "/downloads/saparya-conference-booklet.pdf", download: true },
+                  { label: "Presentation Slides (PDF)", href: "/downloads/saparya-presentation.pdf", download: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "saparya-faq",
           type: "accordion",
           header: "Frequently Asked Questions",
           items: [
             {
-              q: "What does SAPARYA stand for?",
-              a: "SAPARYA is an acronym for Systematic Approach to Project-based Adolescent Research for Youth Advancement. It describes the pedagogical framework for integrating high-stakes engineering projects into adolescent education."
-            },
-            {
               q: "Was the SBB-1 mission successful?",
-              a: "The SBB-1 payload achieved full flight qualification and was integrated aboard ISRO PSLV-C62. While the launch vehicle's Stage 4 failed at T+847 seconds (preventing orbital deployment), the pedagogical mission succeeded: students experienced genuine engineering stakes and 'valorization' of their work."
+              a: "The SBB-1 payload achieved full flight qualification and was integrated aboard ISRO PSLV-C62. While the launch vehicle's Stage 4 failed at T+847 seconds (preventing orbital deployment), the pedagogical mission succeeded: students experienced genuine engineering stakes and valorization of their work."
             },
             {
               q: "Can other schools replicate this framework?",
@@ -3310,19 +3425,29 @@ const siteContent = {
             },
             {
               q: "How can I access the full dataset?",
-              a: "The published case study includes aggregate findings. De-identified individual-level data requires IRB approval and a signed Data Use Agreement. Apply through our Collaborate page."
+              a: "The published case study includes aggregate findings. De-identified individual-level data requires IRB approval and a signed Data Use Agreement. Apply through the Collaborate page."
+            },
+            {
+              q: "Can media cite this document?",
+              a: "Yes, with DOI attribution."
             }
           ]
         },
         {
-          id: "pub-related",
+          id: "saparya-archival-note",
+          type: "textBlock",
+          variant: "muted",
+          body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
+        },
+        {
+          id: "saparya-related",
           type: "relatedCards",
           header: "Related Registry",
           cards: [
+            { title: "Methodology", description: "Lab-to-Launch framework.", icon: "publication", href: "/methodology" },
             { title: "Patents", description: "Student IP registry.", icon: "patent", href: "/patents" },
-            { title: "Governance", description: "IRB standards.", icon: "governance", href: "/governance" },
-            { title: "Collaborate", description: "Partner with us.", icon: "collaborate", href: "/collaborate" },
-            { title: "Downloads", description: "All documents.", icon: "download", href: "/downloads" }
+            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" },
+            { title: "Downloads", description: "All documents.", icon: "default", href: "/downloads" }
           ]
         }
       ]
