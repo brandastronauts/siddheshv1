@@ -103,8 +103,10 @@ const HeroSection = ({
     return <Link to={href} className={className}>{content}</Link>;
   };
 
+  const isCompact = variant === 'publication' || variant === 'archive';
+
   return (
-    <section className="relative overflow-hidden h-[360px] md:h-[520px] flex items-center">
+    <section className={`relative overflow-hidden ${isCompact ? 'h-[200px] md:h-[260px]' : 'h-[360px] md:h-[520px]'} flex items-center`}>
       {/* Animated background - only show when no image */}
       {!hasImage && <HeroBackground />}
 
@@ -118,35 +120,36 @@ const HeroSection = ({
         <motion.div 
           className="absolute inset-0 z-0"
           initial={{ scale: 1 }}
-          animate={{ scale: 1.02 }}
-          transition={{ duration: 20, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
+          animate={isCompact ? {} : { scale: 1.02 }}
+          transition={isCompact ? {} : { duration: 20, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
         >
           <img
             src={resolvedImageSrc}
             alt={heroImage?.alt || ''}
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
-          {/* Dark gradient overlay for text readability - layered approach */}
           <div 
             className="absolute inset-0" 
             style={{ 
-              background: 'linear-gradient(to bottom, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.35) 100%)' 
+              background: isCompact
+                ? 'linear-gradient(to bottom, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.65) 100%)'
+                : 'linear-gradient(to bottom, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.35) 100%)' 
             }} 
           />
-          {/* Radial vignette overlay */}
-          <div 
-            className="absolute inset-0" 
-            style={{ 
-              background: 'radial-gradient(circle at 20% 20%, rgba(0,0,0,0.55), rgba(0,0,0,0.85))' 
-            }} 
-          />
-          {/* Subtle grain texture */}
-          <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNhKSIvPjwvc3ZnPg==')]" />
+          {!isCompact && (
+            <>
+              <div 
+                className="absolute inset-0" 
+                style={{ background: 'radial-gradient(circle at 20% 20%, rgba(0,0,0,0.55), rgba(0,0,0,0.85))' }} 
+              />
+              <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNhKSIvPjwvc3ZnPg==')]" />
+            </>
+          )}
         </motion.div>
       )}
 
-      <div className="container-grid relative z-10 py-12 md:py-16">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className={`container-grid relative z-10 ${isCompact ? 'py-6 md:py-8' : 'py-12 md:py-16'}`}>
+        <div className={`${isCompact ? 'max-w-5xl' : 'max-w-4xl'} mx-auto text-center`}>
           {/* Optional eyebrow - hidden when image is present */}
           {!hasImage && (
             <motion.div
@@ -165,10 +168,12 @@ const HeroSection = ({
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className={`font-bold mb-6 text-balance leading-[1.1] ${
-              hasImage 
-                ? 'text-[34px] md:text-[52px] text-white' 
-                : 'text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-deep-ink'
+            className={`font-bold mb-4 text-balance leading-[1.1] ${
+              isCompact
+                ? 'text-[22px] md:text-[32px] text-white'
+                : hasImage 
+                  ? 'text-[34px] md:text-[52px] text-white' 
+                  : 'text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-deep-ink'
             }`}
             style={hasImage ? { textShadow: '0 2px 14px rgba(0,0,0,0.55)' } : {}}
           >
@@ -180,10 +185,12 @@ const HeroSection = ({
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className={`mb-8 max-w-3xl mx-auto leading-relaxed ${
-                hasImage 
-                  ? 'text-base md:text-lg text-white/85' 
-                  : 'text-lg md:text-xl text-muted-foreground'
+              className={`mb-6 max-w-3xl mx-auto leading-relaxed ${
+                isCompact
+                  ? 'text-sm md:text-base text-white/75'
+                  : hasImage 
+                    ? 'text-base md:text-lg text-white/85' 
+                    : 'text-lg md:text-xl text-muted-foreground'
               }`}
               style={hasImage ? { textShadow: '0 2px 14px rgba(0,0,0,0.55)' } : {}}
             >
