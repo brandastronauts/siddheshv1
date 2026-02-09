@@ -1100,36 +1100,50 @@ const siteContent = {
 
         {
           id: "ip-registry",
-          type: "bento",
+          type: "cards",
           header: "Intellectual Property Registry",
-          intro: "Highlighted outcomes currently in examination or filing preparation. Five utility patents filed to date.",
-          items: [
+          intro: "Highlighted innovation outcomes emerging from the Institute's longitudinal research environments. These inventions represent student-generated engineering work conducted under authentic professional constraints. Five utility patents filed to date.",
+          variant: "blogGrid",
+          cards: [
             {
-              size: "lg",
-              tag: "Flight Qualified - ISRO PSLV-C62",
-              headline: "Thermal Sensor CubeSat Payload (1U Form Factor)",
-              body:
-                "Modular sensor housing for low Earth orbit thermal data collection. Inventors: Cohort SBB-1 (Ages 12-16).",
-              footer: "Mission Complete",
-              image: { src: "/src/assets/placeholders/labs/avionics.jpg", alt: "CubeSat payload", variant: "card", privacyBlur: false }
+              tag: "Patent Pending · Robotics / Unmanned Aerial Systems",
+              headline: "System for Automated Security (UAV)",
+              meta: "Application No: 202041031343",
+              body: "A responsive aerial surveillance platform engineered to reduce emergency response latency through encrypted alert ingestion, geolocation triangulation, and autonomous safety-response execution.",
+              cta: { label: "View Patent", href: "/patents/automated-security-uav" },
+              image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Patent-001-Providing Security", variant: "card", privacyBlur: false }
             },
             {
-              size: "md",
-              tag: "Patent Pending - #4421",
-              headline: "\"The Guardian\" Sanitization Drone",
-              body:
-                "Dual-rotor autonomous drone for bio-hazard control. Inventors: Drone Research Centre (Ages 9-11).",
-              footer: "Examination Stage",
-              image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Sanitization drone", variant: "card", privacyBlur: true }
+              tag: "Patent Pending · Robotics / Rescue Systems",
+              headline: "Borehole Rescue System (BRS)",
+              meta: "Application No: 202041027026",
+              body: "A vertical-access rescue apparatus designed for narrow subterranean environments, integrating adaptive aerial stabilization, lidar-based collision avoidance, and automated retention mechanisms for safe subject extraction.",
+              cta: { label: "View Patent", href: "/patents/borehole-rescue-system" },
+              image: { src: "/src/assets/placeholders/labs/avionics.jpg", alt: "Patent-002-Rescue Person", variant: "card", privacyBlur: false }
             },
             {
-              size: "sm",
-              tag: "Filing Prep",
-              headline: "Sub-Soil Moisture Array",
-              body:
-                "Passive sensor network for semi-arid zones. Inventors: Terra Utopia Team.",
-              footer: "Preparation",
-              image: { src: "/src/assets/placeholders/labs/terra-utopia.jpg", alt: "Moisture array sensors", variant: "card", privacyBlur: false }
+              tag: "Patent Pending · Autonomous Logistics / Public Health Engineering",
+              headline: "Autonomous Contactless Delivery System (ACDS)",
+              meta: "Application No: TBD",
+              body: "An autonomous logistics platform enabling sterile delivery workflows during contagion scenarios through robotic handling, sanitation atomization, and computer-vision verification systems.",
+              cta: { label: "View Patent", href: "/patents/contactless-delivery-system" },
+              image: { src: "/src/assets/placeholders/labs/drone-prototype.jpg", alt: "Patent-003-Essential Item", variant: "card", privacyBlur: false }
+            },
+            {
+              tag: "Patent Pending · Medical Robotics / Telerobotics",
+              headline: "Autonomous Medical Assistance System (AMAS)",
+              meta: "Application No: 202041027075",
+              body: "A contactless medical support platform featuring robotic manipulation systems, imaging diagnostics, and sanitation protocols for epidemiological crisis environments.",
+              cta: { label: "View Patent", href: "/patents/autonomous-medical-assistance-system" },
+              image: { src: "/src/assets/placeholders/labs/space-lab.jpg", alt: "Patent-004-Medical Assistance", variant: "card", privacyBlur: false }
+            },
+            {
+              tag: "Patent Pending · Bio-Telemetry / Public Health Surveillance",
+              headline: "Autonomous Health Monitoring System (AHMS)",
+              meta: "Application No: TBD",
+              body: "A remote epidemiological surveillance network using infrared thermography, video plethysmography, and autonomous navigation to monitor health indicators in high-density environments.",
+              cta: { label: "View Patent", href: "/patents/autonomous-health-monitoring-system" },
+              image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Patent-005-health Parameter", variant: "card", privacyBlur: false }
             }
           ]
         },
@@ -3455,556 +3469,507 @@ const siteContent = {
 
     // ==================== PATENTS DETAIL PAGES ====================
     "/patents/automated-security-uav": {
-      title: "Automated Security UAV",
-      metaDescription: "Patent filing for Automated Security UAV system developed by Blue Blocks Micro Research Institute students.",
+      title: "System for Automated Security (UAV)",
+      metaDescription: "Patent filing for System for Automated Security UAV — a responsive aerial surveillance platform developed by Blue Blocks Micro Research Institute students.",
       seo: {
-        title: "Automated Security UAV | Patents | Blue Blocks Micro Research Institute",
+        title: "System for Automated Security (UAV) | Patents | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/patents/automated-security-uav",
         robots: "noindex,nofollow,noarchive,nosnippet",
         openGraph: {
           type: "article",
           url: "https://siddheshv1.lovable.app/patents/automated-security-uav",
-          title: "Patent: Automated Security UAV",
-          description: "Student-developed utility patent for automated security drone system."
+          title: "Patent: System for Automated Security (UAV)",
+          description: "Utility patent for a responsive aerial surveillance platform."
         }
       },
       schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          name: "Patent: Automated Security UAV",
-          url: "https://siddheshv1.lovable.app/patents/automated-security-uav"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
-            { "@type": "ListItem", position: 3, name: "Automated Security UAV", item: "https://siddheshv1.lovable.app/patents/automated-security-uav" }
-          ]
-        }
+        { "@context": "https://schema.org", "@type": "Article", name: "Patent: System for Automated Security (UAV)", url: "https://siddheshv1.lovable.app/patents/automated-security-uav" },
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+          { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
+          { "@type": "ListItem", position: 3, name: "System for Automated Security (UAV)", item: "https://siddheshv1.lovable.app/patents/automated-security-uav" }
+        ]}
       ],
       sections: [
         {
-          id: "patent-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Automated Security UAV",
-          subheadline: "Utility patent for an autonomous unmanned aerial vehicle designed for perimeter security and surveillance applications. Developed by students aged 10-14 at the Drone Research Centre.",
-          primaryCta: { label: "View Patent Filing", href: "/downloads/patent-automated-security-uav" },
-          secondaryCta: { label: "Back to Patents", href: "/patents" },
+          id: "patent-hero", type: "hero", variant: "publication",
+          headline: "System for Automated Security (UAV)",
+          subheadline: "Patent Pending · Application No. 202041031343 · Robotics / Unmanned Aerial Systems",
           image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Automated Security UAV", variant: "hero" }
         },
         {
-          id: "patent-meta",
-          type: "metaStrip",
+          id: "patent-meta", type: "metaStrip",
           items: [
-            { label: "Patent Type", value: "Utility Patent" },
-            { label: "Filing Status", value: "Filed" },
-            { label: "Inventors Age", value: "10-14 years" },
-            { label: "Lab", value: "Drone Research Centre" }
+            { label: "Status", value: "Patent Pending" },
+            { label: "Application No", value: "202041031343" },
+            { label: "Category", value: "Robotics / Unmanned Aerial Systems" },
+            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" }
           ]
         },
         {
-          id: "patent-abstract",
-          type: "textBlock",
-          header: "Abstract",
-          body: "This utility patent covers an automated security UAV system featuring autonomous patrol capabilities, real-time threat detection, and integrated alert mechanisms. The system was designed and prototyped by elementary-aged students working in the Drone Research Centre."
+          id: "patent-abstract", type: "twoColumn", compact: true,
+          left: { sections: [
+            { title: "Abstract", body: "A responsive aerial surveillance platform engineered to reduce emergency response latency through encrypted alert ingestion, geolocation triangulation, and autonomous safety-response execution. The system was designed and prototyped by students working in the Drone Research Centre under authentic professional constraints." }
+          ]},
+          right: { panels: [
+            { title: "Registry Links", links: [
+              { label: "Patent Registry", href: "/patents" },
+              { label: "Publications", href: "/publications" },
+              { label: "Downloads", href: "/downloads" }
+            ]}
+          ]}
         },
         {
-          id: "patent-problem",
-          type: "textBlock",
-          header: "Problem Solved",
-          body: "Traditional perimeter security relies on static cameras and manual patrols, which leave coverage gaps and respond slowly to intrusions. This system provides continuous autonomous aerial surveillance with real-time alerting capabilities."
-        },
-        {
-          id: "patent-how",
-          type: "twoColumn",
-          left: {
-            header: "How It Works",
-            body: "The UAV follows pre-programmed patrol routes using GPS waypoint navigation. Onboard sensors detect motion and thermal anomalies within the patrol zone. When a potential intrusion is identified, the system triggers an alert to a ground control station and autonomously repositions to track the anomaly while maintaining visual contact."
-          },
-          right: {
-            header: "Key Components",
-            items: [
+          id: "patent-body", type: "twoColumn", compact: true,
+          left: { sections: [
+            { title: "Problem Context", body: "Traditional perimeter security relies on static cameras and manual patrols, which leave coverage gaps and respond slowly to intrusions. Emergency response latency in monitored environments remains a critical vulnerability, particularly in institutional and residential settings." },
+            { title: "Technical Architecture", body: "The UAV follows pre-programmed patrol routes using GPS waypoint navigation. Onboard sensors detect motion and thermal anomalies within the patrol zone. When a potential intrusion is identified, the system triggers an encrypted alert to a ground control station and autonomously repositions to track the anomaly while maintaining visual contact.", bullets: [
               "GPS-guided autonomous navigation module",
               "Thermal and motion detection sensor array",
-              "Real-time video transmission system",
-              "Ground control alert interface",
+              "Encrypted real-time alert transmission",
+              "Geolocation triangulation system",
               "Automated return-to-base protocol",
               "Weather-resistant airframe design"
-            ]
-          }
+            ]}
+          ]},
+          right: { panels: [
+            { title: "Institutional Context", citation: "This invention was generated within the Blue Blocks Micro Research Institute's longitudinal research environment. Student inventors retain intellectual property ownership, with the Institute facilitating filing and documentation under governance oversight." },
+            { title: "Inventors", citation: "Drone Research Centre student cohort\nBlue Blocks Micro Research Institute" }
+          ]}
         },
         {
-          id: "patent-inventors",
-          type: "metaStrip",
+          id: "patent-citation", type: "twoColumn", compact: true,
+          left: { sections: [
+            { title: "How to Cite", body: "Blue Blocks Micro Research Institute. (2020). System for Automated Security (UAV) [Patent application No. 202041031343]. Indian Patent Office." }
+          ]},
+          right: { panels: [
+            { title: "Cross-References", links: [
+              { label: "Methodology", href: "/methodology" },
+              { label: "Governance", href: "/governance" },
+              { label: "Downloads", href: "/downloads" }
+            ]}
+          ]}
+        },
+        {
+          id: "patent-faq", type: "accordion", header: "Frequently Asked Questions",
           items: [
-            { label: "Inventors", value: "Drone Research Centre (Ages 10-14)" },
-            { label: "Filing Status", value: "Filed" },
-            { label: "Application No", value: "TBD" }
+            { q: "Who owns this patent?", a: "Student inventors retain IP ownership. The Institute facilitates the filing process but does not claim ownership." },
+            { q: "How is the patent verified?", a: "All filings undergo institutional review board oversight before submission." },
+            { q: "Is licensing available?", a: "Licensing inquiries are handled on a case-by-case basis through the Contact page, with involvement of the student inventors and their families." },
+            { q: "How is student privacy maintained?", a: "Minor protection protocols are maintained throughout the filing and publication process." }
           ]
         },
         {
-          id: "patent-faq",
-          type: "accordion",
-          header: "Frequently Asked Questions",
-          items: [
-            {
-              q: "Who owns this patent?",
-              a: "Student inventors retain IP ownership. The Institute facilitates the filing process but does not claim ownership."
-            },
-            {
-              q: "How is the patent verified?",
-              a: "All filings undergo institutional review board oversight before submission."
-            },
-            {
-              q: "Is licensing available?",
-              a: "Licensing inquiries are handled on a case-by-case basis through the Contact page, with involvement of the student inventors and their families."
-            },
-            {
-              q: "How is student privacy maintained?",
-              a: "Minor protection protocols are maintained throughout the filing and publication process."
-            }
-          ]
+          id: "patent-archival", type: "textBlock", variant: "muted",
+          body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
         },
         {
-          id: "patent-related",
-          type: "relatedCards",
-          header: "Related",
+          id: "patent-related", type: "relatedCards", header: "Related Registry",
           cards: [
-            { title: "All Patents", description: "View registry.", icon: "patent", href: "/patents" },
             { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
-            { title: "Governance", description: "IP rights.", icon: "governance", href: "/governance" }
+            { title: "Methodology", description: "Lab-to-Launch framework.", icon: "publication", href: "/methodology" },
+            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" },
+            { title: "Downloads", description: "All documents.", icon: "default", href: "/downloads" }
           ]
         }
       ]
     },
 
     "/patents/borehole-rescue-system": {
-      title: "Borehole Rescue System",
-      metaDescription: "Patent filing for Borehole Rescue System developed by Blue Blocks Micro Research Institute students.",
+      title: "Borehole Rescue System (BRS)",
+      metaDescription: "Patent filing for Borehole Rescue System — a vertical-access rescue apparatus developed by Blue Blocks Micro Research Institute students.",
       seo: {
-        title: "Borehole Rescue System | Patents | Blue Blocks Micro Research Institute",
+        title: "Borehole Rescue System (BRS) | Patents | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/patents/borehole-rescue-system",
         robots: "noindex,nofollow,noarchive,nosnippet"
       },
       schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
-            { "@type": "ListItem", position: 3, name: "Borehole Rescue System", item: "https://siddheshv1.lovable.app/patents/borehole-rescue-system" }
-          ]
-        }
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+          { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
+          { "@type": "ListItem", position: 3, name: "Borehole Rescue System", item: "https://siddheshv1.lovable.app/patents/borehole-rescue-system" }
+        ]}
       ],
       sections: [
         {
-          id: "patent-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Borehole Rescue System",
-          subheadline: "Utility patent for a mechanical rescue system designed for borehole emergencies. Developed in response to real-world incidents by students aged 11-15.",
-          primaryCta: { label: "View Patent Filing", href: "/downloads/patent-borehole-rescue" },
-          secondaryCta: { label: "Back to Patents", href: "/patents" },
+          id: "patent-hero", type: "hero", variant: "publication",
+          headline: "Borehole Rescue System (BRS)",
+          subheadline: "Patent Pending · Application No. 202041027026 · Robotics / Rescue Systems",
           image: { src: "/src/assets/placeholders/labs/avionics.jpg", alt: "Borehole Rescue System", variant: "hero" }
         },
         {
-          id: "patent-meta",
-          type: "metaStrip",
+          id: "patent-meta", type: "metaStrip",
           items: [
-            { label: "Patent Type", value: "Utility Patent" },
-            { label: "Filing Status", value: "Filed" },
-            { label: "Inventors Age", value: "11-15 years" },
-            { label: "Application", value: "Emergency Rescue" }
+            { label: "Status", value: "Patent Pending" },
+            { label: "Application No", value: "202041027026" },
+            { label: "Category", value: "Robotics / Rescue Systems" },
+            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" }
           ]
         },
         {
-          id: "patent-abstract",
-          type: "textBlock",
-          header: "Abstract",
-          body: "This utility patent covers a mechanical rescue system specifically designed for borehole emergencies. The system includes innovative gripping mechanisms and extraction protocols developed by adolescent engineers in response to real-world incidents reported in Indian media."
+          id: "patent-abstract", type: "twoColumn", compact: true,
+          left: { sections: [
+            { title: "Abstract", body: "A vertical-access rescue apparatus designed for narrow subterranean environments, integrating adaptive aerial stabilization, lidar-based collision avoidance, and automated retention mechanisms for safe subject extraction. Developed in response to real-world borewell accidents reported across India." }
+          ]},
+          right: { panels: [
+            { title: "Registry Links", links: [
+              { label: "Patent Registry", href: "/patents" },
+              { label: "Publications", href: "/publications" },
+              { label: "Downloads", href: "/downloads" }
+            ]}
+          ]}
         },
         {
-          id: "patent-problem",
-          type: "textBlock",
-          header: "Problem Solved",
-          body: "Borehole accidents, particularly involving children falling into open or abandoned borewells, remain a recurring emergency in rural India. Existing rescue methods are improvised and time-consuming. This system provides a purpose-built mechanical extraction device that can be deployed rapidly."
-        },
-        {
-          id: "patent-how",
-          type: "twoColumn",
-          left: {
-            header: "How It Works",
-            body: "The rescue system uses a telescoping mechanical arm with adaptive gripping attachments sized for borehole diameters. The device is lowered into the borewell and uses a combination of mechanical grip and pneumatic cushioning to safely secure and extract the trapped individual. The system is designed for rapid deployment by first responders with minimal training."
-          },
-          right: {
-            header: "Key Components",
-            items: [
+          id: "patent-body", type: "twoColumn", compact: true,
+          left: { sections: [
+            { title: "Problem Context", body: "Borehole accidents, particularly involving children falling into open or abandoned borewells, remain a recurring emergency in rural India. Existing rescue methods are improvised and time-consuming, frequently resulting in fatalities due to extraction delays." },
+            { title: "Technical Architecture", body: "The rescue system uses a telescoping mechanical arm with adaptive gripping attachments sized for borehole diameters. The device integrates lidar-based collision avoidance for safe descent and pneumatic cushioning for subject retention.", bullets: [
               "Telescoping mechanical extraction arm",
               "Adaptive gripping mechanism for variable diameters",
-              "Pneumatic cushioning system for safe extraction",
+              "Lidar-based collision avoidance system",
+              "Pneumatic cushioning for safe extraction",
               "Integrated camera for visual guidance",
-              "Portable deployment frame",
-              "First-responder operation manual"
-            ]
-          }
+              "Portable deployment frame for first responders"
+            ]}
+          ]},
+          right: { panels: [
+            { title: "Institutional Context", citation: "This invention was generated within the Blue Blocks Micro Research Institute's longitudinal research environment. Student inventors retain intellectual property ownership, with the Institute facilitating filing and documentation under governance oversight." },
+            { title: "Inventors", citation: "Student Engineers (Ages 11–15)\nBlue Blocks Micro Research Institute" }
+          ]}
         },
         {
-          id: "patent-inventors",
-          type: "metaStrip",
+          id: "patent-citation", type: "twoColumn", compact: true,
+          left: { sections: [
+            { title: "How to Cite", body: "Blue Blocks Micro Research Institute. (2020). Borehole Rescue System (BRS) [Patent application No. 202041027026]. Indian Patent Office." }
+          ]},
+          right: { panels: [
+            { title: "Cross-References", links: [
+              { label: "Methodology", href: "/methodology" },
+              { label: "Governance", href: "/governance" },
+              { label: "Downloads", href: "/downloads" }
+            ]}
+          ]}
+        },
+        {
+          id: "patent-faq", type: "accordion", header: "Frequently Asked Questions",
           items: [
-            { label: "Inventors", value: "Student Engineers (Ages 11-15)" },
-            { label: "Filing Status", value: "Filed" },
-            { label: "Application No", value: "TBD" }
+            { q: "Who owns this patent?", a: "Student inventors retain IP ownership. The Institute facilitates the filing process but does not claim ownership." },
+            { q: "How is the patent verified?", a: "All filings undergo institutional review board oversight before submission." },
+            { q: "Is licensing available?", a: "Licensing inquiries are handled on a case-by-case basis through the Contact page." },
+            { q: "How is student privacy maintained?", a: "Minor protection protocols are maintained throughout the filing and publication process." }
           ]
         },
         {
-          id: "patent-faq",
-          type: "accordion",
-          header: "Frequently Asked Questions",
-          items: [
-            {
-              q: "Who owns this patent?",
-              a: "Student inventors retain IP ownership. The Institute facilitates the filing process but does not claim ownership."
-            },
-            {
-              q: "How is the patent verified?",
-              a: "All filings undergo institutional review board oversight before submission."
-            },
-            {
-              q: "Is licensing available?",
-              a: "Licensing inquiries are handled on a case-by-case basis through the Contact page, with involvement of the student inventors and their families."
-            },
-            {
-              q: "How is student privacy maintained?",
-              a: "Minor protection protocols are maintained throughout the filing and publication process."
-            }
-          ]
+          id: "patent-archival", type: "textBlock", variant: "muted",
+          body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
         },
         {
-          id: "patent-related",
-          type: "relatedCards",
-          header: "Related",
+          id: "patent-related", type: "relatedCards", header: "Related Registry",
           cards: [
-            { title: "All Patents", description: "View registry.", icon: "patent", href: "/patents" },
             { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
-            { title: "Governance", description: "IP rights.", icon: "governance", href: "/governance" }
+            { title: "Methodology", description: "Lab-to-Launch framework.", icon: "publication", href: "/methodology" },
+            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" },
+            { title: "Downloads", description: "All documents.", icon: "default", href: "/downloads" }
           ]
         }
       ]
     },
 
     "/patents/contactless-delivery-system": {
-      title: "Contactless Delivery System",
-      metaDescription: "Patent filing for Contactless Delivery System developed by Blue Blocks Micro Research Institute students.",
+      title: "Autonomous Contactless Delivery System (ACDS)",
+      metaDescription: "Patent filing for Autonomous Contactless Delivery System — an autonomous logistics platform developed by Blue Blocks Micro Research Institute students.",
       seo: {
-        title: "Contactless Delivery System | Patents | Blue Blocks Micro Research Institute",
+        title: "Autonomous Contactless Delivery System (ACDS) | Patents | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/patents/contactless-delivery-system",
         robots: "noindex,nofollow,noarchive,nosnippet"
       },
       schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
-            { "@type": "ListItem", position: 3, name: "Contactless Delivery System", item: "https://siddheshv1.lovable.app/patents/contactless-delivery-system" }
-          ]
-        }
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+          { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
+          { "@type": "ListItem", position: 3, name: "Contactless Delivery System", item: "https://siddheshv1.lovable.app/patents/contactless-delivery-system" }
+        ]}
       ],
       sections: [
         {
-          id: "patent-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Contactless Delivery System",
-          subheadline: "Utility patent for an automated contactless delivery mechanism. Developed during pandemic-era innovation sprints by students aged 10-13.",
-          primaryCta: { label: "View Patent Filing", href: "/downloads/patent-contactless-delivery" },
-          secondaryCta: { label: "Back to Patents", href: "/patents" },
+          id: "patent-hero", type: "hero", variant: "publication",
+          headline: "Autonomous Contactless Delivery System (ACDS)",
+          subheadline: "Patent Pending · Application No. TBD · Autonomous Logistics / Public Health Engineering",
           image: { src: "/src/assets/placeholders/labs/drone-prototype.jpg", alt: "Contactless Delivery System", variant: "hero" }
         },
         {
-          id: "patent-meta",
-          type: "metaStrip",
+          id: "patent-meta", type: "metaStrip",
           items: [
-            { label: "Patent Type", value: "Utility Patent" },
-            { label: "Filing Status", value: "Filed" },
-            { label: "Inventors Age", value: "10-13 years" },
-            { label: "Application", value: "Logistics / Healthcare" }
+            { label: "Status", value: "Patent Pending" },
+            { label: "Application No", value: "TBD" },
+            { label: "Category", value: "Autonomous Logistics / Public Health Engineering" },
+            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" }
           ]
         },
         {
-          id: "patent-abstract",
-          type: "textBlock",
-          header: "Abstract",
-          body: "This utility patent covers a contactless delivery system designed for safe package transfer in healthcare and logistics applications. The system was developed during pandemic-era innovation sprints when students identified a real-world need for contactless solutions."
+          id: "patent-abstract", type: "twoColumn", compact: true,
+          left: { sections: [
+            { title: "Abstract", body: "An autonomous logistics platform enabling sterile delivery workflows during contagion scenarios through robotic handling, sanitation atomization, and computer-vision verification systems. Developed during pandemic-era innovation sprints when students identified a real-world need for contactless solutions." }
+          ]},
+          right: { panels: [
+            { title: "Registry Links", links: [
+              { label: "Patent Registry", href: "/patents" },
+              { label: "Publications", href: "/publications" },
+              { label: "Downloads", href: "/downloads" }
+            ]}
+          ]}
         },
         {
-          id: "patent-problem",
-          type: "textBlock",
-          header: "Problem Solved",
-          body: "During the COVID-19 pandemic, conventional delivery methods posed infection transmission risks. Healthcare facilities and residential areas required a mechanism for safe, contact-free package handover. This system addresses that gap with an automated transfer protocol."
-        },
-        {
-          id: "patent-how",
-          type: "twoColumn",
-          left: {
-            header: "How It Works",
-            body: "The system uses a drone-mounted secure container with an automated release mechanism. The delivery drone navigates to a designated drop zone using GPS coordinates, descends to a safe altitude, and deploys the package into a sanitized receiving bay. The entire sequence operates without human-to-human contact."
-          },
-          right: {
-            header: "Key Components",
-            items: [
+          id: "patent-body", type: "twoColumn", compact: true,
+          left: { sections: [
+            { title: "Problem Context", body: "During the COVID-19 pandemic, conventional delivery methods posed infection transmission risks. Healthcare facilities and residential areas required a mechanism for safe, contact-free package handover with integrated sanitation protocols." },
+            { title: "Technical Architecture", body: "The system uses a drone-mounted secure container with an automated release mechanism and sanitation atomization. Computer-vision verification confirms delivery integrity.", bullets: [
               "Secure payload container with locking mechanism",
-              "Automated release and descent system",
-              "GPS-guided delivery navigation",
-              "Sanitized receiving bay specification",
+              "Sanitation atomization system",
+              "Computer-vision delivery verification",
+              "GPS-guided autonomous navigation",
               "Weight-adaptive payload suspension",
               "Return-to-base automation"
-            ]
-          }
+            ]}
+          ]},
+          right: { panels: [
+            { title: "Institutional Context", citation: "This invention was generated within the Blue Blocks Micro Research Institute's longitudinal research environment. Student inventors retain intellectual property ownership, with the Institute facilitating filing and documentation under governance oversight." },
+            { title: "Inventors", citation: "Drone Research Centre student cohort (Ages 10–13)\nBlue Blocks Micro Research Institute" }
+          ]}
         },
         {
-          id: "patent-inventors",
-          type: "metaStrip",
-          items: [
-            { label: "Inventors", value: "Drone Research Centre (Ages 10-13)" },
-            { label: "Filing Status", value: "Filed" },
-            { label: "Application No", value: "TBD" }
-          ]
+          id: "patent-citation", type: "twoColumn", compact: true,
+          left: { sections: [
+            { title: "How to Cite", body: "Blue Blocks Micro Research Institute. (2020). Autonomous Contactless Delivery System (ACDS) [Patent application]. Indian Patent Office." }
+          ]},
+          right: { panels: [
+            { title: "Cross-References", links: [
+              { label: "Methodology", href: "/methodology" },
+              { label: "Governance", href: "/governance" },
+              { label: "Downloads", href: "/downloads" }
+            ]}
+          ]}
         },
         {
-          id: "patent-faq",
-          type: "accordion",
-          header: "Frequently Asked Questions",
+          id: "patent-faq", type: "accordion", header: "Frequently Asked Questions",
           items: [
             { q: "Who owns this patent?", a: "Student inventors retain IP ownership. The Institute facilitates the filing process but does not claim ownership." },
             { q: "How is the patent verified?", a: "All filings undergo institutional review board oversight before submission." },
-            { q: "Is licensing available?", a: "Licensing inquiries are handled on a case-by-case basis through the Contact page, with involvement of the student inventors and their families." },
+            { q: "Is licensing available?", a: "Licensing inquiries are handled on a case-by-case basis through the Contact page." },
             { q: "How is student privacy maintained?", a: "Minor protection protocols are maintained throughout the filing and publication process." }
           ]
         },
         {
-          id: "patent-related",
-          type: "relatedCards",
-          header: "Related",
+          id: "patent-archival", type: "textBlock", variant: "muted",
+          body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
+        },
+        {
+          id: "patent-related", type: "relatedCards", header: "Related Registry",
           cards: [
-            { title: "All Patents", description: "View registry.", icon: "patent", href: "/patents" },
             { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
-            { title: "Team", description: "Meet researchers.", icon: "team", href: "/team" }
+            { title: "Methodology", description: "Lab-to-Launch framework.", icon: "publication", href: "/methodology" },
+            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" },
+            { title: "Downloads", description: "All documents.", icon: "default", href: "/downloads" }
           ]
         }
       ]
     },
 
     "/patents/autonomous-medical-assistance-system": {
-      title: "Autonomous Medical Assistance System",
-      metaDescription: "Patent filing for Autonomous Medical Assistance System developed by Blue Blocks Micro Research Institute students.",
+      title: "Autonomous Medical Assistance System (AMAS)",
+      metaDescription: "Patent filing for Autonomous Medical Assistance System — a contactless medical support platform developed by Blue Blocks Micro Research Institute students.",
       seo: {
-        title: "Autonomous Medical Assistance System | Patents | Blue Blocks Micro Research Institute",
+        title: "Autonomous Medical Assistance System (AMAS) | Patents | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system",
         robots: "noindex,nofollow,noarchive,nosnippet"
       },
       schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
-            { "@type": "ListItem", position: 3, name: "Autonomous Medical Assistance System", item: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system" }
-          ]
-        }
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+          { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
+          { "@type": "ListItem", position: 3, name: "Autonomous Medical Assistance System", item: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system" }
+        ]}
       ],
       sections: [
         {
-          id: "patent-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Autonomous Medical Assistance System",
-          subheadline: "Utility patent for an autonomous system providing medical assistance in remote or emergency situations. Developed by adolescent engineers aged 12-16.",
-          primaryCta: { label: "View Patent Filing", href: "/downloads/patent-medical-assistance" },
-          secondaryCta: { label: "Back to Patents", href: "/patents" },
+          id: "patent-hero", type: "hero", variant: "publication",
+          headline: "Autonomous Medical Assistance System (AMAS)",
+          subheadline: "Patent Pending · Application No. 202041027075 · Medical Robotics / Telerobotics",
           image: { src: "/src/assets/placeholders/labs/space-lab.jpg", alt: "Autonomous Medical Assistance System", variant: "hero" }
         },
         {
-          id: "patent-meta",
-          type: "metaStrip",
+          id: "patent-meta", type: "metaStrip",
           items: [
-            { label: "Patent Type", value: "Utility Patent" },
-            { label: "Filing Status", value: "Filed" },
-            { label: "Inventors Age", value: "12-16 years" },
-            { label: "Application", value: "Healthcare / Emergency" }
+            { label: "Status", value: "Patent Pending" },
+            { label: "Application No", value: "202041027075" },
+            { label: "Category", value: "Medical Robotics / Telerobotics" },
+            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" }
           ]
         },
         {
-          id: "patent-abstract",
-          type: "textBlock",
-          header: "Abstract",
-          body: "This utility patent covers an autonomous medical assistance system designed for deployment in remote or emergency situations. The system integrates diagnostic sensors, communication modules, and first-response protocols developed by adolescent engineers."
+          id: "patent-abstract", type: "twoColumn", compact: true,
+          left: { sections: [
+            { title: "Abstract", body: "A contactless medical support platform featuring robotic manipulation systems, imaging diagnostics, and sanitation protocols for epidemiological crisis environments. The system integrates diagnostic sensors, communication modules, and first-response protocols developed by adolescent engineers." }
+          ]},
+          right: { panels: [
+            { title: "Registry Links", links: [
+              { label: "Patent Registry", href: "/patents" },
+              { label: "Publications", href: "/publications" },
+              { label: "Downloads", href: "/downloads" }
+            ]}
+          ]}
         },
         {
-          id: "patent-problem",
-          type: "textBlock",
-          header: "Problem Solved",
-          body: "Remote and underserved areas frequently lack immediate medical response infrastructure. Emergency situations in such locations suffer from delayed first-response times. This system provides autonomous initial medical assessment and communication capabilities to bridge the gap between incident and professional medical arrival."
-        },
-        {
-          id: "patent-how",
-          type: "twoColumn",
-          left: {
-            header: "How It Works",
-            body: "The system deploys an autonomous unit to the emergency location using GPS coordinates. Upon arrival, it performs basic diagnostic assessment through integrated sensors (pulse oximetry, temperature, blood pressure), establishes a communication link with medical professionals, and can dispense basic first-aid supplies. All data is transmitted in real-time to the nearest medical facility."
-          },
-          right: {
-            header: "Key Components",
-            items: [
-              "Autonomous navigation and deployment system",
-              "Integrated diagnostic sensor suite",
+          id: "patent-body", type: "twoColumn", compact: true,
+          left: { sections: [
+            { title: "Problem Context", body: "Remote and underserved areas frequently lack immediate medical response infrastructure. Emergency situations in such locations suffer from delayed first-response times, particularly during epidemiological crises when human contact poses additional transmission risks." },
+            { title: "Technical Architecture", body: "The system deploys an autonomous unit to the emergency location using GPS coordinates. Upon arrival, it performs basic diagnostic assessment through integrated sensors and establishes a communication link with medical professionals.", bullets: [
+              "Robotic manipulation systems for contactless intervention",
+              "Integrated diagnostic sensor suite (pulse oximetry, temperature, blood pressure)",
               "Real-time telemedicine communication link",
-              "Basic first-aid supply dispensing module",
-              "Environmental assessment sensors",
+              "Imaging diagnostics module",
+              "Sanitation protocols for contaminated environments",
               "Ruggedized housing for field deployment"
-            ]
-          }
+            ]}
+          ]},
+          right: { panels: [
+            { title: "Institutional Context", citation: "This invention was generated within the Blue Blocks Micro Research Institute's longitudinal research environment. Student inventors retain intellectual property ownership, with the Institute facilitating filing and documentation under governance oversight." },
+            { title: "Inventors", citation: "Student Engineers (Ages 12–16)\nBlue Blocks Micro Research Institute" }
+          ]}
         },
         {
-          id: "patent-inventors",
-          type: "metaStrip",
-          items: [
-            { label: "Inventors", value: "Student Engineers (Ages 12-16)" },
-            { label: "Filing Status", value: "Filed" },
-            { label: "Application No", value: "TBD" }
-          ]
+          id: "patent-citation", type: "twoColumn", compact: true,
+          left: { sections: [
+            { title: "How to Cite", body: "Blue Blocks Micro Research Institute. (2020). Autonomous Medical Assistance System (AMAS) [Patent application No. 202041027075]. Indian Patent Office." }
+          ]},
+          right: { panels: [
+            { title: "Cross-References", links: [
+              { label: "Methodology", href: "/methodology" },
+              { label: "Governance", href: "/governance" },
+              { label: "Downloads", href: "/downloads" }
+            ]}
+          ]}
         },
         {
-          id: "patent-faq",
-          type: "accordion",
-          header: "Frequently Asked Questions",
+          id: "patent-faq", type: "accordion", header: "Frequently Asked Questions",
           items: [
             { q: "Who owns this patent?", a: "Student inventors retain IP ownership. The Institute facilitates the filing process but does not claim ownership." },
             { q: "How is the patent verified?", a: "All filings undergo institutional review board oversight before submission." },
-            { q: "Is licensing available?", a: "Licensing inquiries are handled on a case-by-case basis through the Contact page, with involvement of the student inventors and their families." },
+            { q: "Is licensing available?", a: "Licensing inquiries are handled on a case-by-case basis through the Contact page." },
             { q: "How is student privacy maintained?", a: "Minor protection protocols are maintained throughout the filing and publication process." }
           ]
         },
         {
-          id: "patent-related",
-          type: "relatedCards",
-          header: "Related",
+          id: "patent-archival", type: "textBlock", variant: "muted",
+          body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
+        },
+        {
+          id: "patent-related", type: "relatedCards", header: "Related Registry",
           cards: [
-            { title: "All Patents", description: "View registry.", icon: "patent", href: "/patents" },
-            { title: "Governance", description: "IP rights.", icon: "governance", href: "/governance" },
-            { title: "Collaborate", description: "Partner with us.", icon: "collaborate", href: "/collaborate" }
+            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
+            { title: "Methodology", description: "Lab-to-Launch framework.", icon: "publication", href: "/methodology" },
+            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" },
+            { title: "Downloads", description: "All documents.", icon: "default", href: "/downloads" }
           ]
         }
       ]
     },
 
     "/patents/autonomous-health-monitoring-system": {
-      title: "Autonomous Health Monitoring System",
-      metaDescription: "Patent filing for Autonomous Health Monitoring System developed by Blue Blocks Micro Research Institute students.",
+      title: "Autonomous Health Monitoring System (AHMS)",
+      metaDescription: "Patent filing for Autonomous Health Monitoring System — a remote epidemiological surveillance network developed by Blue Blocks Micro Research Institute students.",
       seo: {
-        title: "Autonomous Health Monitoring System | Patents | Blue Blocks Micro Research Institute",
+        title: "Autonomous Health Monitoring System (AHMS) | Patents | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system",
         robots: "noindex,nofollow,noarchive,nosnippet"
       },
       schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
-            { "@type": "ListItem", position: 3, name: "Autonomous Health Monitoring System", item: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system" }
-          ]
-        }
+        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+          { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
+          { "@type": "ListItem", position: 3, name: "Autonomous Health Monitoring System", item: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system" }
+        ]}
       ],
       sections: [
         {
-          id: "patent-hero",
-          type: "hero",
-          variant: "stark",
-          headline: "Autonomous Health Monitoring System",
-          subheadline: "Utility patent (#4421) for an autonomous health monitoring system - the 'Guardian' drone. Developed by students aged 9-11 at the Drone Research Centre.",
-          primaryCta: { label: "View Patent Filing", href: "/downloads/patent-health-monitoring" },
-          secondaryCta: { label: "Back to Patents", href: "/patents" },
+          id: "patent-hero", type: "hero", variant: "publication",
+          headline: "Autonomous Health Monitoring System (AHMS)",
+          subheadline: "Patent Pending · Application No. TBD · Bio-Telemetry / Public Health Surveillance",
           image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Autonomous Health Monitoring System", variant: "hero" }
         },
         {
-          id: "patent-meta",
-          type: "metaStrip",
+          id: "patent-meta", type: "metaStrip",
           items: [
-            { label: "Patent Type", value: "Utility Patent" },
-            { label: "Patent Number", value: "#4421" },
-            { label: "Inventors Age", value: "9-11 years" },
-            { label: "Lab", value: "Drone Research Centre" }
+            { label: "Status", value: "Patent Pending" },
+            { label: "Application No", value: "TBD" },
+            { label: "Category", value: "Bio-Telemetry / Public Health Surveillance" },
+            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" }
           ]
         },
         {
-          id: "patent-abstract",
-          type: "textBlock",
-          header: "Abstract",
-          body: "This utility patent (#4421) covers the 'Guardian' drone — an autonomous health monitoring system designed by the youngest patent holders in the Institute's registry. The system demonstrates that children as young as 9 can contribute to meaningful innovation when given appropriate scaffolding and real-world problems to solve."
+          id: "patent-abstract", type: "twoColumn", compact: true,
+          left: { sections: [
+            { title: "Abstract", body: "A remote epidemiological surveillance network using infrared thermography, video plethysmography, and autonomous navigation to monitor health indicators in high-density environments. The system provides continuous, non-intrusive health observation without disrupting monitored environments." }
+          ]},
+          right: { panels: [
+            { title: "Registry Links", links: [
+              { label: "Patent Registry", href: "/patents" },
+              { label: "Publications", href: "/publications" },
+              { label: "Downloads", href: "/downloads" }
+            ]}
+          ]}
         },
         {
-          id: "patent-problem",
-          type: "textBlock",
-          header: "Problem Solved",
-          body: "Continuous health monitoring in institutional environments (schools, care facilities) requires non-intrusive observation systems that do not disrupt daily activity. Manual monitoring is labor-intensive and provides intermittent data points. This system provides autonomous, continuous environmental and occupant health assessment."
+          id: "patent-body", type: "twoColumn", compact: true,
+          left: { sections: [
+            { title: "Problem Context", body: "Continuous health monitoring in institutional environments (schools, care facilities, public spaces) requires non-intrusive observation systems that do not disrupt daily activity. Manual monitoring is labor-intensive and provides only intermittent data points." },
+            { title: "Technical Architecture", body: "The system operates on pre-programmed patrol routes within enclosed or semi-enclosed spaces, using passive sensing to establish baseline environmental health metrics. Deviations from baseline trigger alerts to facility administrators.", bullets: [
+              "Infrared thermography for contactless temperature screening",
+              "Video plethysmography for remote vital sign estimation",
+              "Autonomous navigation in high-density environments",
+              "Baseline deviation detection and alert system",
+              "Low-noise operation for non-disruptive monitoring",
+              "Compact form factor for indoor deployment"
+            ]}
+          ]},
+          right: { panels: [
+            { title: "Institutional Context", citation: "This invention was generated within the Blue Blocks Micro Research Institute's longitudinal research environment. Student inventors retain intellectual property ownership, with the Institute facilitating filing and documentation under governance oversight." },
+            { title: "Inventors", citation: "Drone Research Centre student cohort (Ages 9–11)\nBlue Blocks Micro Research Institute" }
+          ]}
         },
         {
-          id: "patent-how",
-          type: "twoColumn",
-          left: {
-            header: "How It Works",
-            body: "The Guardian drone operates on pre-programmed patrol routes within enclosed or semi-enclosed spaces. It uses passive sensing (thermal, air quality, ambient noise analysis) to establish baseline environmental health metrics. Deviations from baseline trigger alerts to facility administrators. The system operates autonomously with minimal noise to avoid disrupting the monitored environment."
-          },
-          right: {
-            header: "Key Components",
-            items: [
-              "Low-noise dual-rotor propulsion system",
-              "Passive thermal and air quality sensors",
-              "Ambient environmental baseline engine",
-              "Deviation detection and alert system",
-              "Autonomous patrol route programming",
-              "Compact form factor for indoor operation"
-            ]
-          }
+          id: "patent-citation", type: "twoColumn", compact: true,
+          left: { sections: [
+            { title: "How to Cite", body: "Blue Blocks Micro Research Institute. (2020). Autonomous Health Monitoring System (AHMS) [Patent application]. Indian Patent Office." }
+          ]},
+          right: { panels: [
+            { title: "Cross-References", links: [
+              { label: "Methodology", href: "/methodology" },
+              { label: "Governance", href: "/governance" },
+              { label: "Downloads", href: "/downloads" }
+            ]}
+          ]}
         },
         {
-          id: "patent-inventors",
-          type: "metaStrip",
-          items: [
-            { label: "Inventors", value: "Drone Research Centre (Ages 9-11)" },
-            { label: "Filing Status", value: "Filed" },
-            { label: "Patent Number", value: "#4421" }
-          ]
-        },
-        {
-          id: "patent-faq",
-          type: "accordion",
-          header: "Frequently Asked Questions",
+          id: "patent-faq", type: "accordion", header: "Frequently Asked Questions",
           items: [
             { q: "Who owns this patent?", a: "Student inventors retain IP ownership. The Institute facilitates the filing process but does not claim ownership." },
             { q: "How is the patent verified?", a: "All filings undergo institutional review board oversight before submission." },
-            { q: "Is licensing available?", a: "Licensing inquiries are handled on a case-by-case basis through the Contact page, with involvement of the student inventors and their families." },
+            { q: "Is licensing available?", a: "Licensing inquiries are handled on a case-by-case basis through the Contact page." },
             { q: "How is student privacy maintained?", a: "Minor protection protocols are maintained throughout the filing and publication process." }
           ]
         },
         {
-          id: "patent-related",
-          type: "relatedCards",
-          header: "Related",
+          id: "patent-archival", type: "textBlock", variant: "muted",
+          body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
+        },
+        {
+          id: "patent-related", type: "relatedCards", header: "Related Registry",
           cards: [
-            { title: "All Patents", description: "View registry.", icon: "patent", href: "/patents" },
-            { title: "Newsroom", description: "Patent announcement.", icon: "news", href: "/newsroom/updates/utility-patent-4421" },
-            { title: "Team", description: "Meet researchers.", icon: "team", href: "/team" }
+            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
+            { title: "Methodology", description: "Lab-to-Launch framework.", icon: "publication", href: "/methodology" },
+            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" },
+            { title: "Downloads", description: "All documents.", icon: "default", href: "/downloads" }
           ]
         }
       ]
