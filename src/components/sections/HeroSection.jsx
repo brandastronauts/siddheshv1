@@ -106,7 +106,7 @@ const HeroSection = ({
   const isCompact = variant === 'publication' || variant === 'archive';
 
   return (
-    <section className={`relative overflow-hidden ${isCompact ? 'h-[200px] md:h-[260px]' : 'h-[360px] md:h-[520px]'} flex items-center`}>
+    <section className={`relative overflow-hidden ${isCompact ? 'min-h-[200px] md:min-h-[260px]' : 'min-h-[420px] md:min-h-[520px]'} flex items-center`}>
       {/* Animated background - only show when no image */}
       {!hasImage && <HeroBackground />}
 
@@ -148,7 +148,7 @@ const HeroSection = ({
         </motion.div>
       )}
 
-      <div className={`container-grid relative z-10 ${isCompact ? 'py-6 md:py-8' : 'py-12 md:py-16'}`}>
+      <div className={`container-grid relative z-10 ${isCompact ? 'pt-20 pb-6 md:py-8' : 'pt-24 pb-12 md:py-16'}`}>
         <div className={`${isCompact ? 'max-w-5xl' : 'max-w-4xl'} mx-auto text-center`}>
           {/* Optional eyebrow - hidden when image is present */}
           {!hasImage && (
