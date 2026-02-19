@@ -180,8 +180,8 @@ const siteContent = {
               position: 2,
               item: {
                 "@type": "Article",
-                headline: "Marrakesh: Defining Future Human Capital",
-                about: "Innovation economies and longitudinal hypothesis development",
+                headline: "Saparya: From Pink Tower to CubeSat",
+                about: "AMI Saparya 2026 — Montessori pedagogy and adolescent-led CubeSat engineering",
                 author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
               }
             },
@@ -261,10 +261,10 @@ const siteContent = {
               action: { label: "Read Technical Brief", href: "/technical-briefs/sbb-1" }
             },
             {
-              tag: "IMF Annual Meetings",
-              headline: "Marrakesh: Defining Future Human Capital",
+              tag: "AMI Saparya 2026",
+              headline: "Saparya: From Pink Tower to CubeSat",
               body:
-                "Blue Blocks Micro Research Institute's pedagogical framework was presented as a scalable model for \\\"Innovation Economies.\\\" The case study highlighted how early-stage exposure to high-stakes engineering creates a resilient R&D pipeline for the nation. Focus: Investigating whether early exposure to high-stakes engineering impacts long-term innovation capacity. Longitudinal Hypothesis: We posit that adolescents exposed to TRL-9 constraints (Technology Readiness Level 9) develop significantly higher 'Problem-Solving Agency' by the time they reach tertiary education. Preliminary Findings: While full data maturation is projected for 2026-2030, early indicators suggest a strong correlation: students who held utility patents between ages 12-16 are already pursuing STEM majors at markedly higher rates than matched control groups.",
+                "At the AMI Saparya 2026 conference, Blue Blocks students presented the SBB-1 mission not as a simulation, but as a fully authorized aerospace endeavor. The presentation demonstrated the scalable impact of Montessori pedagogy, where adolescent learners transitioned from conceptual physics to securing flight authorization from IN-SPACe for an ISRO launch. Focus: Documenting the journey of adolescents (ages 12-16) who designed and engineered a flight-ready CubeSat payload. The case study explores how the \"Lab-to-Launch\" framework enables students to navigate professional aerospace constraints, from PCB design to regulatory compliance. Research Question: Can adolescent-led teams, guided by Montessori principles, achieve the rigorous technical and regulatory standards required for deployment on commercial space platforms? Outcome: The SBB-1 project achieved definitive valorization through its upcoming launch aboard ISRO's PSLV-C62, formally authorized by IN-SPACe. The work received commendation from the IN-SPACe Director and was showcased to the global Montessori community at both the IMF Saparya and Monisc conferences, setting a new benchmark for student-led innovation.",
               action: { label: "View Presentation", href: "/presentations/marrakesh-human-capital" }
             },
             {
