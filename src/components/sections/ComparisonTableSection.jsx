@@ -37,16 +37,21 @@ const ComparisonTableSection = ({ heading, header, headers, columns, rows, intro
             {intro}
           </motion.p>
         )}
+
+        {/* Mobile scroll hint */}
+        <p className="text-xs text-muted-foreground text-center mb-3 md:hidden" aria-hidden="true">
+          ← Scroll to compare →
+        </p>
         
-        <div className="max-w-4xl mx-auto overflow-x-auto">
-          <table className="w-full bg-card rounded-xl border border-border/50 shadow-card overflow-hidden">
+        <div className="max-w-4xl mx-auto overflow-x-auto -mx-4 px-4 md:mx-auto md:px-0">
+          <table className="w-full bg-card rounded-xl border border-border/50 shadow-card overflow-hidden min-w-[540px]">
             {tableHeaders && (
               <thead>
                 <tr className="bg-primary-navy text-white">
                   {tableHeaders.map((h, index) => (
                     <th
                       key={index}
-                      className="px-6 py-4 text-left text-sm font-semibold first:rounded-tl-xl last:rounded-tr-xl"
+                      className="px-4 md:px-6 py-4 text-left text-sm font-semibold first:rounded-tl-xl last:rounded-tr-xl whitespace-nowrap"
                     >
                       {h}
                     </th>
@@ -58,7 +63,7 @@ const ComparisonTableSection = ({ heading, header, headers, columns, rows, intro
               {normalizedRows.map((row, rowIndex) => (
                 <tr key={rowIndex} className="hover:bg-surface/50 transition-colors">
                   {row.map((cell, cellIndex) => (
-                    <td key={cellIndex} className="px-6 py-4 text-sm">
+                    <td key={cellIndex} className="px-4 md:px-6 py-4 text-sm">
                       {typeof cell === 'boolean' ? (
                         cell ? (
                           <Check className="w-5 h-5 text-green-500" />

@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SmartImage from '../common/SmartImage';
+import ExpandableText from '../common/ExpandableText';
+import MobileExpandModal from '../common/MobileExpandModal';
 import { getIcon } from '../../lib/iconMap';
 
 const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
@@ -77,91 +79,107 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
                 ? 'md:grid-cols-2 gap-6' 
                 : 'md:grid-cols-2 lg:grid-cols-3 gap-6'
         }`}>
-          {cardData.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className={`card-elegant overflow-hidden group ${isProfiles ? 'text-center' : ''}`}
-            >
-              {/* Avatar for profiles variant */}
-              {isProfiles && item.image && (
-                <div className="pt-6 flex justify-center">
-                  <div className="w-20 h-20 rounded-full overflow-hidden bg-surface border-2 border-border/50">
+          {cardData.map((item, index) => {
+            const bodyText = item.body || item.description || '';
+            const cardTitle = item.headline || item.title || '';
+            const cardAction = item.action || item.cta;
+
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 }}
+                className={`card-elegant overflow-hidden group ${isProfiles ? 'text-center' : ''}`}
+              >
+                {/* Avatar for profiles variant */}
+                {isProfiles && item.image && (
+                  <div className="pt-6 flex justify-center">
+                    <div className="w-20 h-20 rounded-full overflow-hidden bg-surface border-2 border-border/50">
+                      <SmartImage
+                        src={item.image.src}
+                        alt={item.image.alt}
+                        variant="avatar"
+                        privacyBlur={item.image.privacyBlur}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                )}
+
+                {/* Card image for non-profile variants */}
+                {!isProfiles && item.image && (
+                  <div className="relative h-48 overflow-hidden">
                     <SmartImage
                       src={item.image.src}
                       alt={item.image.alt}
-                      variant="avatar"
+                      variant={item.image.variant || 'card'}
                       privacyBlur={item.image.privacyBlur}
-                      className="w-full h-full object-cover"
+                      aspect="16:9"
+                      className="w-full h-full"
                     />
+                    {/* Gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-deep-ink/20 to-transparent" />
                   </div>
+                )}
+
+                <div className="p-6 lg:p-8">
+                  {/* Tag for pressRoom or newsGrid variant */}
+                  {item.tag && (
+                    <span className={`mb-3 inline-block ${isNewsGrid ? 'text-xs font-semibold text-accent-cyan uppercase tracking-wider' : 'badge-accent'}`}>
+                      {item.tag}
+                    </span>
+                  )}
+
+                  {/* Icon for cards with icon field */}
+                  {!isProfiles && !item.image && (() => {
+                    const CardIcon = getIcon(item.icon);
+                    return CardIcon ? (
+                      <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-cyan/10 to-primary-navy/10 flex items-center justify-center mb-4">
+                        <CardIcon className="w-5 h-5 text-accent-cyan" aria-hidden="true" />
+                      </div>
+                    ) : null;
+                  })()}
+
+                  <h3 className="text-xl font-semibold text-deep-ink mb-2 group-hover:text-primary-navy transition-colors">
+                    {cardTitle}
+                  </h3>
+                  
+                  {/* Meta for newsGrid */}
+                  {item.meta && (
+                    <p className="text-xs text-muted-foreground mb-3">
+                      {item.meta}
+                    </p>
+                  )}
+                  
+                  {item.subtitle && !item.meta && (
+                    <p className="text-sm text-accent-cyan font-medium mb-3">
+                      {item.subtitle}
+                    </p>
+                  )}
+                  
+                  {/* Body text — expandable if long */}
+                  <ExpandableText text={bodyText} charThreshold={200} className="mb-5" />
+
+                  {/* Action button */}
+                  {cardAction && renderAction(cardAction)}
+
+                  {/* Mobile expand modal for news / press cards */}
+                  {(isNewsGrid || isPressRoom) && bodyText && (
+                    <MobileExpandModal
+                      label="Full Story"
+                      title={cardTitle}
+                      tag={item.tag}
+                      meta={item.meta}
+                      body={bodyText}
+                      action={cardAction}
+                    />
+                  )}
                 </div>
-              )}
-
-              {/* Card image for non-profile variants */}
-              {!isProfiles && item.image && (
-                <div className="relative h-48 overflow-hidden">
-                  <SmartImage
-                    src={item.image.src}
-                    alt={item.image.alt}
-                    variant={item.image.variant || 'card'}
-                    privacyBlur={item.image.privacyBlur}
-                    aspect="16:9"
-                    className="w-full h-full"
-                  />
-                  {/* Gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-deep-ink/20 to-transparent" />
-                </div>
-              )}
-
-              <div className="p-6 lg:p-8">
-                {/* Tag for pressRoom or newsGrid variant */}
-                {item.tag && (
-                  <span className={`mb-3 inline-block ${isNewsGrid ? 'text-xs font-semibold text-accent-cyan uppercase tracking-wider' : 'badge-accent'}`}>
-                    {item.tag}
-                  </span>
-                )}
-
-                {/* Icon for cards with icon field */}
-                {!isProfiles && !item.image && (() => {
-                  const CardIcon = getIcon(item.icon);
-                  return CardIcon ? (
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-cyan/10 to-primary-navy/10 flex items-center justify-center mb-4">
-                      <CardIcon className="w-5 h-5 text-accent-cyan" aria-hidden="true" />
-                    </div>
-                  ) : null;
-                })()}
-
-                <h3 className="text-xl font-semibold text-deep-ink mb-2 group-hover:text-primary-navy transition-colors">
-                  {item.headline || item.title}
-                </h3>
-                
-                {/* Meta for newsGrid */}
-                {item.meta && (
-                  <p className="text-xs text-muted-foreground mb-3">
-                    {item.meta}
-                  </p>
-                )}
-                
-                {item.subtitle && !item.meta && (
-                  <p className="text-sm text-accent-cyan font-medium mb-3">
-                    {item.subtitle}
-                  </p>
-                )}
-                
-                <p className="text-muted-foreground text-sm leading-relaxed mb-5">
-                  {item.body || item.description}
-                </p>
-
-                {/* Action button for pressRoom or cta for newsGrid */}
-                {item.action && renderAction(item.action)}
-                {item.cta && renderAction(item.cta)}
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
