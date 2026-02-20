@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, HelpCircle } from 'lucide-react';
+import ExpandableText from '../common/ExpandableText';
 
 const AccordionSection = ({ heading, header, intro, items }) => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -90,9 +91,12 @@ const AccordionSection = ({ heading, header, intro, items }) => {
                       transition={{ duration: 0.3, ease: 'easeInOut' }}
                     >
                       <div className="px-5 md:px-6 pb-6 pt-0 pl-[4.5rem]">
-                        <p className="text-muted-foreground leading-relaxed">
-                          {answer}
-                        </p>
+                        <ExpandableText
+                          text={answer}
+                          collapsedLines={4}
+                          minChars={260}
+                          textClassName="text-muted-foreground"
+                        />
                       </div>
                     </motion.div>
                   )}

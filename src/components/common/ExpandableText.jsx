@@ -1,66 +1,70 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 /**
- * ExpandableText — collapses text > charThreshold with smooth animated expand/collapse.
+ * ExpandableText
+ *
  * Props:
- *   text          {string}  The full text to display.
- *   charThreshold {number}  Character count before collapse kicks in (default 280).
- *   lines         {number}  Tailwind line-clamp lines when collapsed (default 4).
- *   className     {string}  Extra classes forwarded to the wrapper.
+ *   text           {string}          The full text content to display.
+ *   collapsedLines {number}          Lines visible when collapsed (default 4). Maps to Tailwind line-clamp-N.
+ *   minChars       {number}          Min char count before collapsing kicks in (default 260).
+ *   className      {string}          Extra classes forwarded to the wrapper <div>.
+ *   textClassName  {string}          Extra classes forwarded to the <p> element.
+ *   forceDesktop   {boolean}         If true, also clamp on desktop (default false = desktop always shows full).
+ *
+ * Behaviour:
+ *   - Desktop: always shows full text (no toggle), unless forceDesktop=true.
+ *   - Mobile: collapses to `collapsedLines` via CSS line-clamp. Toggle "Read more / Show less".
+ *   - If text length <= minChars → renders normally (no toggle ever).
+ *   - CTAs / children rendered outside the collapsible area are unaffected.
  */
+
+// Map collapsedLines → Tailwind line-clamp utility
+const clampClass = (n) => {
+  const map = { 1: 'line-clamp-1', 2: 'line-clamp-2', 3: 'line-clamp-3', 4: 'line-clamp-4', 5: 'line-clamp-5', 6: 'line-clamp-6' };
+  return map[n] || 'line-clamp-4';
+};
+
 const ExpandableText = ({
   text = '',
-  charThreshold = 280,
+  collapsedLines = 4,
+  minChars = 260,
   className = '',
+  textClassName = '',
+  forceDesktop = false,
 }) => {
   const [expanded, setExpanded] = useState(false);
-  const isLong = text.length > charThreshold;
 
-  if (!isLong) {
+  // Short text — render plainly with no toggle
+  if (!text || text.length <= minChars) {
     return (
-      <p className={`text-sm text-muted-foreground leading-relaxed ${className}`}>
+      <p className={`text-sm text-muted-foreground leading-relaxed ${textClassName} ${className}`}>
         {text}
       </p>
     );
   }
 
-  const collapsed = text.slice(0, charThreshold).trimEnd();
+  // The desktop visibility: if forceDesktop, use line-clamp everywhere; otherwise hide toggle on md+
+  const clamp = clampClass(collapsedLines);
+  // collapsed class on mobile (sm), always visible on md+
+  const collapsedMobileClass = forceDesktop
+    ? (expanded ? '' : clamp)
+    : `md:line-clamp-none ${expanded ? '' : clamp}`;
 
   return (
     <div className={className}>
-      <AnimatePresence initial={false} mode="wait">
-        {expanded ? (
-          <motion.p
-            key="expanded"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="text-sm text-muted-foreground leading-relaxed"
-          >
-            {text}
-          </motion.p>
-        ) : (
-          <motion.p
-            key="collapsed"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="text-sm text-muted-foreground leading-relaxed"
-          >
-            {collapsed}
-            <span className="text-muted-foreground/60">…</span>
-          </motion.p>
-        )}
-      </AnimatePresence>
+      {/* Text layer — line-clamp controlled via className */}
+      <p
+        className={`text-sm text-muted-foreground leading-relaxed transition-all duration-300 ${collapsedMobileClass} ${textClassName}`}
+      >
+        {text}
+      </p>
 
+      {/* Toggle — hidden on desktop unless forceDesktop */}
       <button
-        onClick={() => setExpanded(prev => !prev)}
+        onClick={() => setExpanded((prev) => !prev)}
         aria-expanded={expanded}
-        className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-link-blue hover:text-secondary-blue transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-link-blue rounded"
+        className={`mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-link-blue hover:text-secondary-blue transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-link-blue rounded ${forceDesktop ? '' : 'md:hidden'}`}
       >
         {expanded ? (
           <>Show less <ChevronUp className="w-3.5 h-3.5" aria-hidden="true" /></>

@@ -69,7 +69,7 @@ const FeaturedStoriesSection = ({ header, layout, main, side }) => {
                     {main.headline}
                   </h3>
                   {main.excerpt && (
-                    <ExpandableText text={main.excerpt} charThreshold={240} className="mb-4" />
+                    <ExpandableText text={main.excerpt} collapsedLines={4} minChars={240} className="mb-4" />
                   )}
                   {renderCta(main.cta)}
                 </div>
@@ -100,7 +100,7 @@ const FeaturedStoriesSection = ({ header, layout, main, side }) => {
                       {story.headline}
                     </h4>
                     {storyBody && (
-                      <ExpandableText text={storyBody} charThreshold={220} className="mb-3" />
+                      <ExpandableText text={storyBody} collapsedLines={4} minChars={220} className="mb-3" />
                     )}
                     {renderCta(story.cta)}
 

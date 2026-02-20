@@ -82,7 +82,7 @@ const LibraryCardsSection = ({ heading, header, sectionName, intro, items, cards
                     
                     {isNewFormat ? (
                       <>
-                        <ExpandableText text={bodyText} charThreshold={160} />
+                        <ExpandableText text={bodyText} collapsedLines={4} minChars={160} />
                         {/* Mobile expand for publication abstract cards */}
                         {bodyText.length > 160 && (
                           <MobileExpandModal
