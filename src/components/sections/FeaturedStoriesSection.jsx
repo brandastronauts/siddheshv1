@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import SmartImage from '../common/SmartImage';
+import ExpandableText from '../common/ExpandableText';
+import MobileExpandModal from '../common/MobileExpandModal';
 
 const FeaturedStoriesSection = ({ header, layout, main, side }) => {
   const renderCta = (cta) => {
@@ -67,9 +69,7 @@ const FeaturedStoriesSection = ({ header, layout, main, side }) => {
                     {main.headline}
                   </h3>
                   {main.excerpt && (
-                    <p className="text-muted-foreground leading-relaxed mb-4">
-                      {main.excerpt}
-                    </p>
+                    <ExpandableText text={main.excerpt} charThreshold={240} className="mb-4" />
                   )}
                   {renderCta(main.cta)}
                 </div>
@@ -80,31 +80,43 @@ const FeaturedStoriesSection = ({ header, layout, main, side }) => {
           {/* Side stories */}
           {side && side.length > 0 && (
             <div className={`${layout === 'asymmetric' ? 'lg:col-span-2' : ''} flex flex-col gap-6`}>
-              {side.map((story, index) => (
-                <motion.article
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="group flex-1 rounded-xl bg-surface border border-border/50 p-6 hover:border-accent-cyan/30 transition-colors"
-                >
-                  {story.tag && (
-                    <span className="text-xs font-semibold text-accent-cyan uppercase tracking-wider mb-2 block">
-                      {story.tag}
-                    </span>
-                  )}
-                  <h4 className="text-lg font-bold text-deep-ink mb-2 group-hover:text-primary-navy transition-colors">
-                    {story.headline}
-                  </h4>
-                  {story.excerpt && (
-                    <p className="text-sm text-muted-foreground leading-relaxed mb-3">
-                      {story.excerpt}
-                    </p>
-                  )}
-                  {renderCta(story.cta)}
-                </motion.article>
-              ))}
+              {side.map((story, index) => {
+                const storyBody = story.body || story.excerpt || '';
+                return (
+                  <motion.article
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="group flex-1 rounded-xl bg-surface border border-border/50 p-6 hover:border-accent-cyan/30 transition-colors"
+                  >
+                    {story.tag && (
+                      <span className="text-xs font-semibold text-accent-cyan uppercase tracking-wider mb-2 block">
+                        {story.tag}
+                      </span>
+                    )}
+                    <h4 className="text-lg font-bold text-deep-ink mb-2 group-hover:text-primary-navy transition-colors">
+                      {story.headline}
+                    </h4>
+                    {storyBody && (
+                      <ExpandableText text={storyBody} charThreshold={220} className="mb-3" />
+                    )}
+                    {renderCta(story.cta)}
+
+                    {/* Mobile expand for side stories */}
+                    {storyBody.length > 220 && (
+                      <MobileExpandModal
+                        label="Full Story"
+                        title={story.headline}
+                        tag={story.tag}
+                        body={storyBody}
+                        action={story.cta ? { label: story.cta.label, href: story.cta.href } : undefined}
+                      />
+                    )}
+                  </motion.article>
+                );
+              })}
             </div>
           )}
         </div>

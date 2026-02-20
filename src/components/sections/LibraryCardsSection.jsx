@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { FileText, BookOpen, Lock } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ExpandableText from '../common/ExpandableText';
+import MobileExpandModal from '../common/MobileExpandModal';
 
 const LibraryCardsSection = ({ heading, header, sectionName, intro, items, cards, cta }) => {
   const title = header || heading;
@@ -45,8 +47,8 @@ const LibraryCardsSection = ({ heading, header, sectionName, intro, items, cards
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {cardData.map((item, index) => {
-            // Detect if this is the new format (status/body) or old format (authors/journal/year)
             const isNewFormat = item.status !== undefined || item.body !== undefined;
+            const bodyText = item.body || '';
             
             return (
               <motion.div
@@ -79,9 +81,19 @@ const LibraryCardsSection = ({ heading, header, sectionName, intro, items, cards
                     </h3>
                     
                     {isNewFormat ? (
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {item.body}
-                      </p>
+                      <>
+                        <ExpandableText text={bodyText} charThreshold={160} />
+                        {/* Mobile expand for publication abstract cards */}
+                        {bodyText.length > 160 && (
+                          <MobileExpandModal
+                            label="View Abstract"
+                            title={item.title}
+                            tag={item.status}
+                            body={bodyText}
+                            facts={item.authors ? [{ label: 'Authors', value: item.authors }] : []}
+                          />
+                        )}
+                      </>
                     ) : (
                       <>
                         <p className="text-sm text-muted-foreground mb-1">
