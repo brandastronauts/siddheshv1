@@ -207,7 +207,7 @@ const siteContent = {
           variant: "precision",
           headline: "The World's First Micro Research Institute",
           subheadline:
-            "We are compiling the most granular dataset on human innovation capacity from birth to age 18. 15 years completed; Year 16 ongoing. Embedded observation across toddlers, elementary students, and adolescents. Not lab experiments. Not surveys. Daily records of what children actually do when given real engineering challenges.",
+            "We are compiling the most granular dataset on human innovation capacity from birth to age 18. 15 years completed; Year 16 ongoing. \nEmbedded observation across toddlers, elementary students, and adolescents. Not lab experiments. Not surveys. Daily records of what children actually do when given real engineering challenges.",
           primaryCta: { label: "Read the Methodology Paper", href: "/methodology" },
           secondaryCta: { label: "Zenodo Community", href: "https://zenodo.org/", external: true },
           image: {
