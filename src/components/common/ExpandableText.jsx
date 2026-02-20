@@ -64,13 +64,13 @@ const ExpandableText = ({
       <button
         onClick={() => setExpanded((prev) => !prev)}
         aria-expanded={expanded}
-        className={`mt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-link-blue hover:text-secondary-blue transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-link-blue rounded ${forceDesktop ? '' : 'md:hidden'}`}
+      className={`mt-1.5 inline-flex items-center justify-center w-6 h-6 text-muted-foreground/60 hover:text-link-blue transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-link-blue rounded-full ${forceDesktop ? '' : 'md:hidden'}`}
+        aria-label={expanded ? 'Show less' : 'Read more'}
       >
-        {expanded ? (
-          <>Show less <ChevronUp className="w-3.5 h-3.5" aria-hidden="true" /></>
-        ) : (
-          <>Read more <ChevronDown className="w-3.5 h-3.5" aria-hidden="true" /></>
-        )}
+        {expanded
+          ? <ChevronUp className="w-4 h-4" aria-hidden="true" />
+          : <ChevronDown className="w-4 h-4" aria-hidden="true" />
+        }
       </button>
     </div>
   );

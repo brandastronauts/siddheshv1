@@ -165,17 +165,7 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
                   {/* Action button */}
                   {cardAction && renderAction(cardAction)}
 
-                  {/* Mobile expand modal for news / press cards */}
-                  {(isNewsGrid || isPressRoom) && bodyText && (
-                    <MobileExpandModal
-                      label="Full Story"
-                      title={cardTitle}
-                      tag={item.tag}
-                      meta={item.meta}
-                      body={bodyText}
-                      action={cardAction}
-                    />
-                  )}
+                  {/* Mobile expand modal removed — ExpandableText handles inline expand */}
                 </div>
               </motion.div>
             );
