@@ -333,7 +333,7 @@ const siteContent = {
               status: "[Longitudinal Compilation]",
               title: "From 0 to 1: The Genesis of Patentable Thought (Ages 6-12)",
               body:
-                "Synthesizing 5 years of data from the Drone Research Centre to map the cognitive leap from \\\"play\\\" to \\\"invention.\\\""
+                "Defining the protocol for 25 embedded fellows to document behavioral data without disrupting the \"Children's House\" environment."
             }
           ],
           cta: { label: "Access Restricted - Awaiting Publication", disabled: true }
@@ -1090,7 +1090,7 @@ const siteContent = {
               headline: "The \\\"Sovereign IP\\\" Effect: Longitudinal Impact of Patent Ownership",
               meta: "Domain: Innovation | Est: 2027",
               body:
-                "Synthesizing 5 years of data from the Drone Research Centre to map the cognitive leap from \\\"play\\\" to \\\"invention.\\\"",
+                "Defining the protocol for 25 embedded fellows to document behavioral data without disrupting the \"Children's House\" environment.",
               cta: { label: "Request Access", href: "/collaborate" },
               image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Innovation manuscript", variant: "card", privacyBlur: false }
             },
