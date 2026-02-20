@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Check } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ExpandableText from '../common/ExpandableText';
 
 const HighlightBoxSection = ({ heading, title, text, body, bullets, cta }) => {
   const displayTitle = title || heading;
@@ -35,9 +36,13 @@ const HighlightBoxSection = ({ heading, title, text, body, bullets, cta }) => {
               )}
               
               {displayText && (
-                <p className="text-lg text-white/85 mb-6 max-w-2xl mx-auto leading-relaxed text-center whitespace-pre-line">
-                  {displayText}
-                </p>
+                <ExpandableText
+                  text={displayText}
+                  collapsedLines={4}
+                  minChars={300}
+                  textClassName="text-lg text-white/85 text-center whitespace-pre-line"
+                  className="mb-6 max-w-2xl mx-auto"
+                />
               )}
 
               {bullets && bullets.length > 0 && (

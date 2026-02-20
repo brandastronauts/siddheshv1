@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
+import ExpandableText from '../common/ExpandableText';
 
 const TextBlockSection = ({ heading, header, sectionName, intro, content, body, cta, alignment = 'left', variant }) => {
   const title = header || heading;
@@ -55,9 +56,13 @@ const TextBlockSection = ({ heading, header, sectionName, intro, content, body, 
           )}
           
           {text && (
-            <div className="text-muted-foreground leading-relaxed whitespace-pre-line">
-              {text}
-            </div>
+            <ExpandableText
+              text={text}
+              collapsedLines={5}
+              minChars={320}
+              textClassName="whitespace-pre-line"
+              className="mb-2"
+            />
           )}
 
           {cta && (

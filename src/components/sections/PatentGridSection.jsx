@@ -104,7 +104,7 @@ const PatentGridSection = ({ header, intro, filterNote, cards = [], patents = []
 
                   {/* Description — expandable */}
                   {descText && (
-                    <ExpandableText text={descText} charThreshold={180} className="mb-4" />
+                    <ExpandableText text={descText} collapsedLines={4} minChars={180} className="mb-4" />
                   )}
 
                   {/* Mobile expand modal */}

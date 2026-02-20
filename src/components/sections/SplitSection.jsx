@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import SmartImage from '../common/SmartImage';
+import ExpandableText from '../common/ExpandableText';
 
 const SplitSection = ({ header, left, right }) => {
   const renderCta = (cta) => {
@@ -55,9 +56,13 @@ const SplitSection = ({ header, left, right }) => {
                     </h3>
                   )}
                   {left.body && (
-                    <div className="text-muted-foreground leading-relaxed whitespace-pre-line mb-6">
-                      {left.body}
-                    </div>
+                    <ExpandableText
+                      text={left.body}
+                      collapsedLines={5}
+                      minChars={300}
+                      textClassName="whitespace-pre-line"
+                      className="mb-6"
+                    />
                   )}
                   {left.ctas && left.ctas.length > 0 && (
                     <div className="flex flex-wrap gap-4">

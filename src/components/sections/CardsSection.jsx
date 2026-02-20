@@ -160,7 +160,7 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
                   )}
                   
                   {/* Body text — expandable if long */}
-                  <ExpandableText text={bodyText} charThreshold={200} className="mb-5" />
+                  <ExpandableText text={bodyText} collapsedLines={4} minChars={200} className="mb-5" />
 
                   {/* Action button */}
                   {cardAction && renderAction(cardAction)}
