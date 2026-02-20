@@ -104,16 +104,7 @@ const FeaturedStoriesSection = ({ header, layout, main, side }) => {
                     )}
                     {renderCta(story.cta)}
 
-                    {/* Mobile expand for side stories */}
-                    {storyBody.length > 220 && (
-                      <MobileExpandModal
-                        label="Full Story"
-                        title={story.headline}
-                        tag={story.tag}
-                        body={storyBody}
-                        action={story.cta ? { label: story.cta.label, href: story.cta.href } : undefined}
-                      />
-                    )}
+                    {/* Full story expand handled by ExpandableText inline */}
                   </motion.article>
                 );
               })}
