@@ -1,5 +1,5 @@
 import {
-  Home, Building2, FlaskConical, FileText, Shield, Handshake, Megaphone, Mail,
+  Home, Building2, FlaskConical, FileText, Shield, ShieldCheck, Handshake, Megaphone, Mail,
   Archive, Lightbulb, BookOpen, Users, Download, Database, Lock, Microscope,
   GraduationCap, Briefcase, Eye, Scale, Check, Newspaper, MessageSquare,
   Target, Feather, AlertTriangle, Wrench, ArrowRight, Calendar, Rocket,
@@ -53,6 +53,7 @@ const iconMap = {
 
   // Governance / Compliance
   shield: Shield,
+  shieldCheck: ShieldCheck,
   scale: Scale,
   check: Check,
   badgeCheck: BadgeCheck,

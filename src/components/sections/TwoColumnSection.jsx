@@ -4,9 +4,11 @@ import { ArrowRight, Download, ExternalLink, Copy, Check } from 'lucide-react';
 import { useState } from 'react';
 import SmartImage from '../common/SmartImage';
 import ExpandableText from '../common/ExpandableText';
+import { getIcon } from '../../lib/iconMap';
 
-const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, compact = false }) => {
+const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, compact = false, variant }) => {
   const [copied, setCopied] = useState(false);
+  const isCards = variant === 'cards';
 
   const handleCopy = (text) => {
     navigator.clipboard.writeText(text);
@@ -46,6 +48,48 @@ const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, compac
     );
   };
 
+  /* ── Styled card column for variant="cards" ── */
+  const renderCardColumn = (col) => {
+    const ColIcon = getIcon(col.icon);
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        className="rounded-2xl border border-border/50 bg-white shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden h-full"
+      >
+        {/* Card header */}
+        <div className="bg-gradient-to-br from-surface to-white p-6 pb-4 border-b border-border/30">
+          <div className="flex items-center gap-3 mb-2">
+            {ColIcon && (
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent-cyan/10 to-primary-navy/10 flex items-center justify-center flex-shrink-0">
+                <ColIcon className="w-5 h-5 text-accent-cyan" />
+              </div>
+            )}
+            <h3 className="text-xl font-bold text-deep-ink">{col.heading}</h3>
+          </div>
+          {col.lead && (
+            <p className="text-sm text-muted-foreground leading-relaxed mt-2">{col.lead}</p>
+          )}
+        </div>
+
+        {/* Items list */}
+        <div className="p-6 space-y-5">
+          {(col.items || []).map((item, i) => (
+            <div key={i} className="flex gap-3">
+              <span className="mt-1.5 w-2 h-2 rounded-full bg-accent-cyan flex-shrink-0" />
+              <div>
+                <span className="text-sm font-semibold text-deep-ink">{item.label}:</span>
+                <span className="text-sm text-muted-foreground ml-1 leading-relaxed">{item.text}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </motion.div>
+    );
+  };
+
+  /* ── Plain column (original format) ── */
   const renderColumnContent = (col) => {
     const sections = col.sections || (col.heading || col.body ? [{ title: col.heading, body: col.body, bullets: col.bullets }] : []);
     
@@ -103,7 +147,6 @@ const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, compac
           </h4>
         )}
 
-        {/* Links list */}
         {panel.links && (
           <div className="space-y-3">
             {panel.links.map((link, i) => (
@@ -112,7 +155,6 @@ const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, compac
           </div>
         )}
 
-        {/* Citation box */}
         {panel.citation && (
           <div className="bg-white border border-border/30 rounded-lg p-4">
             <p className="text-sm text-muted-foreground leading-relaxed mb-3 italic">
@@ -128,7 +170,6 @@ const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, compac
           </div>
         )}
 
-        {/* Inventor/Author cards */}
         {panel.profiles && (
           <div className="space-y-3">
             {panel.profiles.map((profile, i) => (
@@ -165,7 +206,6 @@ const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, compac
           </div>
         )}
 
-        {/* Image gallery thumbnails */}
         {panel.images && (
           <div className="grid grid-cols-3 gap-2">
             {panel.images.map((img, i) => (
@@ -210,14 +250,24 @@ const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, compac
             {intro}
           </motion.p>
         )}
-        <div className={`grid grid-cols-1 ${hasRightPanels ? 'lg:grid-cols-3' : 'lg:grid-cols-2'} gap-8 lg:gap-12`}>
-          <div className={hasRightPanels ? 'lg:col-span-2' : ''}>
-            {renderLeftContent()}
+
+        {isCards ? (
+          /* Cards variant — equal two-column styled cards */
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+            {renderCardColumn(left)}
+            {renderCardColumn(right)}
           </div>
-          <div className={hasRightPanels ? 'lg:col-span-1' : ''}>
-            {hasRightPanels ? renderRightPanel() : renderColumnContent(right)}
+        ) : (
+          <div className={`grid grid-cols-1 ${hasRightPanels ? 'lg:grid-cols-3' : 'lg:grid-cols-2'} gap-8 lg:gap-12`}>
+            <div className={hasRightPanels ? 'lg:col-span-2' : ''}>
+              {renderLeftContent()}
+            </div>
+            <div className={hasRightPanels ? 'lg:col-span-1' : ''}>
+              {hasRightPanels ? renderRightPanel() : renderColumnContent(right)}
+            </div>
           </div>
-        </div>
+        )}
+
         {footer && (
           <motion.p
             initial={{ opacity: 0, y: 16 }}
