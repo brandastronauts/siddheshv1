@@ -27,9 +27,11 @@ const TextBlockSection = ({ heading, header, sectionName, intro, content, body, 
     );
   }
 
-  // Default legal-style text block (clean, left-aligned, no card)
+  // Default text block
+  const isCompact = isLegal || variant === 'compact';
+
   return (
-    <section className="py-10 md:py-14 bg-background">
+    <section className={isCompact ? 'py-4 md:py-6 bg-background' : 'py-10 md:py-14 bg-background'}>
       <div className="container-grid">
         <motion.div 
           initial={{ opacity: 0, y: 16 }}
