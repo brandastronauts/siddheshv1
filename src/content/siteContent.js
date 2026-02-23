@@ -1,6 +1,8 @@
 // Single source of truth for all site content
 // All page copy and structure comes from this file
 
+const SITE_URL = 'https://research.blueblocks.in';
+
 const siteContent = {
   brand: {
     siteName: "Blue Blocks Micro Research Institute",
@@ -2315,7 +2317,7 @@ const siteContent = {
           id: "privacy-hero",
           type: "textBlock",
           header: "Privacy Policy",
-          body: "Effective Date: January 1, 2025\n\nBlue Blocks Micro Research Institute (\"the Institute,\" \"we,\" \"us,\" or \"our\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (siddheshv1.lovable.app) or engage with our services."
+          body: "Effective Date: January 1, 2025\n\nBlue Blocks Micro Research Institute (\"the Institute,\" \"we,\" \"us,\" or \"our\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (research.blueblocks.in) or engage with our services."
         },
         {
           id: "privacy-collection",
@@ -5033,5 +5035,11 @@ const siteContent = {
     }
   },
 };
+// Post-process: replace all legacy domain references with canonical SITE_URL
+const processed = JSON.parse(
+  JSON.stringify(siteContent)
+    .replace(/https:\/\/siddheshv1\.lovable\.app/g, SITE_URL)
+    .replace(/https:\/\/bb-researchv2\.vercel\.app/g, SITE_URL)
+);
 
-export default siteContent;
+export default processed;

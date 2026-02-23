@@ -6,7 +6,7 @@
  * Follows schema.org vocabulary — ready for WordPress CMS field mapping.
  */
 
-const SITE_URL = 'https://bb-researchv2.vercel.app';
+const SITE_URL = 'https://research.blueblocks.in';
 const ORG_NAME = 'Blue Blocks Micro Research Institute';
 const ORG_ALT_NAME = 'BBMRI';
 const ORG_URL = SITE_URL;
