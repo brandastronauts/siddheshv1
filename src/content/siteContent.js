@@ -810,7 +810,7 @@ const siteContent = {
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
-                  "We believe that laboratory isolation distorts natural behavior. A child solving a puzzle in front of a 'researcher' is not the same child building a drone in their own lab space. Ecological truth comes from embedding observation into daily environment. In micro-research, every child is both subject and agent — the environment doesn't adapt to research; research adapts to the environment."
+                  "We believe that laboratory isolation distorts natural behavior. A child solving a puzzle in front of a 'researcher' is not the same child building a drone in their own lab space. Ecological truth comes from embedding observation into the daily environment. In micro-research, every child is both subject and agent — the environment doesn't adapt to research; research adapts to the environment."
               }
             },
             {
@@ -819,7 +819,16 @@ const siteContent = {
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
-                  "By maintaining 15 years of continuous internal comparison: the same children, tracked over time, compared against themselves at earlier developmental stages."
+                  "By maintaining 15 years of continuous internal comparison: the same children, tracked over time, compared against themselves at earlier developmental stages. We don't need to compare Child A to Child B; we compare Child A at age 5 to Child A at age 15. Each child becomes their own control over the longitudinal arc."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "How do you handle consent for observing children?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text:
+                  "Parental consent is obtained at enrollment. Parents are informed that anonymized behavioral observations are part of the educational program. They receive annual summaries of what types of data are collected. Any parent can opt their child out of observation at any time, with no effect on the child's educational experience."
               }
             }
           ]
@@ -830,10 +839,10 @@ const siteContent = {
           id: "meth-hero",
           type: "hero",
           variant: "stark",
-          headline: "The Micro Research Framework.",
+          headline: "The Micro-Research Framework.",
           subheadline:
-            "Micro Research is not a shortcut. It is a protocol—designed for practitioners, not PhDs. The core principle is simple: high-frequency observation accumulated over years produces the same statistical power as large-sample, one-time studies. But with one crucial advantage: you track the same individual across time instead of comparing strangers. We know how Subject-847 was at age 5, at age 12, and at age 17. No cross-sectional study can do that.",
-          primaryCta: { label: "Download Framework Paper", href: "/downloads/micro-research-framework" },
+            "We built Blue Blocks to generate research, not accommodate it. Since 2009, we've run high-frequency observation directly inside learning environments—recording what actually happens rather than staging what we hope to measure. This isn't retrofitted academic study. It's methodology embedded in practice from day one.",
+          primaryCta: { label: "Download Framework Paper (PDF)", href: "/downloads/micro-research-framework" },
           secondaryCta: { label: "View Publications", href: "/publications" },
           image: {
             src: "/src/assets/banners/methodology-framework.jpg",
@@ -845,107 +854,208 @@ const siteContent = {
         },
 
         {
-          id: "meth-principles",
-          type: "grid3",
-          header: "The Microprotocol Stack",
-          intro:
-            "Each observation follows a bounded protocol: single variable, under 5 minutes, executed by the practitioner (not an external observer). Hundreds of these micro-observations, compiled over years, form the dataset. Statistical power comes from longitudinal accumulation, not sample scale.",
+          id: "meth-pillars",
+          type: "cards",
+          header: "The Four Pillars of Micro-Research — What makes a study \"Micro\"?",
           items: [
             {
-              title: "Bounded Observations",
-              icon: "clock",
+              title: "Single Bounded Question",
+              icon: "target",
               body:
-                "Each observation unit must be scoped to a single variable and recordable in under 5 minutes. Complexity emerges from volume, not from individual observation depth."
+                "We ask one thing at a time. Not \"How does age, gender, and material type affect work duration?\" but \"How long do 4-year-olds work with the pink tower?\" Compound questions get split. One question, one protocol, one dataset."
             },
             {
-              title: "Practitioner Execution",
-              icon: "user",
+              title: "Observable Behavior",
+              icon: "eye",
               body:
-                "Observation is executed by embedded guides—not external researchers. This minimizes the 'Visitor Effect' that distorts natural behavior."
+                "\"Child concentrated deeply\" is inference. \"Child repeated stacking sequence 7 times without interruption\" is observation. We capture actions, gestures, exact words spoken. Analysis comes later. The observation record stays behavioral."
             },
             {
-              title: "Publication Intent",
+              title: "Minimal Footprint",
+              icon: "minimize",
+              body:
+                "Our Fellows observe while teaching. They're not clipboard-wielding strangers disrupting routines. A protocol that takes 12 minutes won't get done. We've learned through failure that consistency beats comprehensiveness. Five-minute protocols run for years. Twenty-minute protocols die in six weeks."
+            },
+            {
+              title: "Publication-Ready",
               icon: "file",
               body:
-                "Every observation record is generated with the expectation of eventual publication. This shifts the quality of documentation from 'notes' to 'evidence.'"
+                "If a protocol won't eventually get a DOI and land in Zenodo, we don't run it. This forces clarity. \"Interesting to track\" becomes \"worth publishing\" or gets dropped. The discipline of publication-intent changes what we're willing to measure."
             }
           ]
         },
 
         {
-          id: "meth-timeline",
+          id: "meth-compound",
+          type: "comparisonTable",
+          header: "The Compound Effect — Why Twenty Small Studies Beat One Large Study?",
+          intro:
+            "Running one micro-study tells you almost nothing. Running two hundred over fifteen years builds a dataset that shows developmental patterns nobody else can see.",
+          columns: ["Traditional Academic Study", "Blue Blocks Micro-Research"],
+          rows: [
+            { label: "Frequency", values: ["1 Study every 3 Years", "20+ Studies Annually"] },
+            { label: "Observer", values: ["External Researcher (High Interference)", "Teaching Fellow (Embedded)"] },
+            { label: "Duration", values: ["2–3 Years Funding Cycle", "Continuous (Long term)"] },
+            { label: "Cumulative Output (10 Yrs)", values: ["~5 Major Papers", "~200+ Micro-Studies"] }
+          ]
+        },
+
+        {
+          id: "meth-cycle",
           type: "timeline",
-          header: "From Observation to Archival: The Data Lifecycle",
+          header: "The 4-Week Cycle — Protocol to Publication in Four Weeks",
           items: [
             {
-              title: "Capture",
-              body: "Embedded Fellow observes naturalistic behavior and logs structured notes."
+              year: "Week 1",
+              title: "Protocol Design",
+              body:
+                "We draft the single question, sketch the recording sheet, and test it with three observations. If recording takes more than 5 minutes, we simplify. Most protocols fail this test twice before passing."
             },
             {
-              title: "Tag & Store",
-              body: "Data is coded, anonymized, and archived in the Data Wing."
+              year: "Week 2",
+              title: "Data Capture",
+              body:
+                "Fellows collect data during the work cycle. Recording happens in the moment, not from memory later. Each Fellow handles one protocol at a time."
             },
             {
-              title: "Aggregate",
-              body: "Multiple observations are synthesized into pattern summaries."
+              year: "Week 3",
+              title: "Synthesis",
+              body:
+                "We strip identifying details. Names become codes. Campus becomes Site A. Patterns are identified. Expected or unexpected, everything is recorded."
             },
             {
-              title: "Analyze",
-              body: "Research Council reviews patterns for statistical significance."
-            },
-            {
-              title: "Publish",
-              body: "DOI-assigned publications are archived to Zenodo for open access."
+              year: "Week 4",
+              title: "Publication",
+              body:
+                "Internal review catches errors. DOI registration follows. Dataset uploaded to Zenodo. Documentation updated. Study enters longitudinal archive."
             }
           ]
         },
 
         {
-          id: "meth-ecological",
-          type: "textBlock",
-          header: "Ecological Validity vs. Laboratory Control",
-          body:
-            "We prioritize 'Ecological Truth' over sterile experimentation. By embedding our protocols in the actual learning environment, we capture data that is representative of real behavior — not laboratory simulations. Yes, this introduces variance — but the variance is authentic. A drone built by a 10-year-old in our lab will fail for real reasons — not sanitized ones. We observe what children actually do when solving real problems, not what they do when being studied."
-        },
-
-        {
-          id: "meth-comparison",
-          type: "comparisonTable",
-          header: "Clinical Studies vs. Micro Research",
-          columns: ["Clinical Studies", "Micro Research"],
-          rows: [
-            { label: "Sample Size", values: ["Large (statistical power)", "Longitudinal (temporal power)"] },
-            { label: "Observation Duration", values: ["Single point / short-term", "Years / Continuous"] },
-            { label: "Observer", values: ["External Researcher", "Embedded Practitioner"] },
-            { label: "Setting", values: ["Lab / Controlled", "Naturalistic / Ecological"] },
-            { label: "Behavioral Validity", values: ["Subject to 'Visitor Effect'", "High Ecological Validity"] }
+          id: "meth-examples",
+          type: "accordion",
+          header: "Examples of Protocols We Have Run",
+          items: [
+            {
+              q: "Example A — The 3-Day Material Choice Study",
+              a:
+                "Question: What material do children choose first when entering the prepared environment?\n\nProtocol: Record child's age (years + months), first material touched, time of entry.\n\nTime Cost: 10 seconds per child."
+            },
+            {
+              q: "Example B — The 2-Week Help Study",
+              a:
+                "Question: When do children help each other without adult prompting?\n\nProtocol: Record helper age, recipient age, type of help, adult presence.\n\nTime Cost: 2 minutes per incident."
+            }
           ]
         },
 
         {
-          id: "meth-faq",
+          id: "meth-faq-fundamentals",
           type: "accordion",
-          header: "Methodological FAQs",
+          header: "Methodology Fundamentals",
           items: [
             {
               q: "Why not run a proper clinical study with control groups?",
               a:
-                "We believe that laboratory isolation distorts natural behavior. A child solving a puzzle in front of a 'researcher' is not the same child building a drone in their own lab space. Ecological truth comes from embedding observation into daily environment. In micro-research, every child is both subject and agent — the environment doesn't adapt to research; research adapts to the environment."
+                "We believe that laboratory isolation distorts natural behavior. A child solving a puzzle in front of a 'researcher' is not the same child building a drone in their own lab space. Ecological truth comes from embedding observation into the daily environment. In micro-research, every child is both subject and agent — the environment doesn't adapt to research; research adapts to the environment."
             },
+            {
+              q: "How is micro-research different from action research or ethnography?",
+              a:
+                "Action research seeks to change the environment. Ethnography seeks to describe it holistically. Micro-research does neither. We observe bounded behavioral events — single variables, short duration, repeated across time. We don't interpret culture. We don't intervene. We record specific actions and accumulate frequency data over years."
+            },
+            {
+              q: "Why do you call it 'micro' if the dataset spans 15 years?",
+              a:
+                "The 'micro' refers to the unit of observation, not the scope of the project. Each individual study is small: one question, one variable, under five minutes to record. The power comes from accumulating thousands of these micro-observations across years. The dataset is macro. The methodology is micro."
+            }
+          ]
+        },
+
+        {
+          id: "meth-faq-observer",
+          type: "accordion",
+          header: "Observer Protocol & Bias Mitigation",
+          items: [
+            {
+              q: "How do you prevent observer bias when Fellows are also teachers?",
+              a:
+                "By constraining what they record. A Fellow doesn't judge whether a child is 'engaged' or 'struggling.' They record: 'Child picked up material at 9:14. Put it down at 9:17. Repeated sequence 3 times.' The protocol forces behavioral description. Interpretation is separated from observation and happens later, during synthesis."
+            },
+            {
+              q: "What training do Fellows receive before collecting data?",
+              a:
+                "Every Fellow completes a calibration period: they run the same protocol simultaneously and independently, then compare records. If inter-observer agreement falls below 85%, the protocol is simplified until agreement is reached. Only then does live data collection begin."
+            },
+            {
+              q: "What happens when a Fellow's presence does affect the child's behavior?",
+              a:
+                "It happens less than people expect, because Fellows are already part of the environment. They're not visitors. But when it does happen — a child performing for the observer, for example — the Fellow flags it in the record. Flagged entries are excluded from pattern analysis but retained in the raw dataset for transparency."
+            }
+          ]
+        },
+
+        {
+          id: "meth-faq-quality",
+          type: "accordion",
+          header: "Data Quality & Limitations",
+          items: [
             {
               q: "How do you maintain scientific rigor without a control group?",
               a:
                 "By maintaining 15 years of continuous internal comparison: the same children, tracked over time, compared against themselves at earlier developmental stages. We don't need to compare Child A to Child B; we compare Child A at age 5 to Child A at age 15. Each child becomes their own control over the longitudinal arc."
             },
             {
-              q: "Are your findings reproducible?",
+              q: "What are the known limitations of this methodology?",
               a:
-                "The protocols are reproducible. The dataset is unique. Our goal is to make the methodology framework open-source via Zenodo so that other embedded institutions can replicate the approach."
+                "Three primary limitations: (1) The dataset is site-specific — our findings describe what happens in this particular prepared environment, not all environments. (2) Observer-as-teacher introduces role conflict that calibration reduces but cannot eliminate. (3) Small cohort sizes mean individual outliers have outsized statistical influence. We document all three in every publication."
             },
             {
-              q: "What software do you use?",
+              q: "Are your findings reproducible?",
               a:
-                "Observation logging is internal (custom forms). Data processing is handled in the Data Wing. Analysis uses standard statistical tools. Final publications are prepared in LaTeX / PDF."
+                "The protocols are reproducible. The dataset is unique. Our goal is to make the methodology framework open-source via Zenodo so that other embedded institutions can replicate the approach. We publish full protocols, recording sheets, and calibration procedures for this reason."
+            }
+          ]
+        },
+
+        {
+          id: "meth-faq-publication",
+          type: "accordion",
+          header: "Publication & Evidence",
+          items: [
+            {
+              q: "Why do you publish to Zenodo instead of traditional journals?",
+              a:
+                "Speed and permanence. Traditional peer review takes 12–18 months. Zenodo gives us a DOI within days. Our micro-studies are small, bounded, and self-contained — they don't need 8,000-word journal articles. A 4-page dataset publication with methodology, raw data, and basic analysis serves the scientific record better than waiting two years for a prestige journal."
+            },
+            {
+              q: "How do you ensure publication quality without traditional peer review?",
+              a:
+                "Internal review by the Research Council, which includes external advisors. Every publication passes three checks: (1) Protocol adherence — did the Fellow follow the recording procedure? (2) Data integrity — are there gaps, anomalies, or flagged entries? (3) Anonymization — are all identifying details removed? This isn't peer review in the traditional sense, but it enforces a quality floor."
+            }
+          ]
+        },
+
+        {
+          id: "meth-faq-ethics",
+          type: "accordion",
+          header: "Ethics & Child Protection",
+          items: [
+            {
+              q: "How do you handle consent for observing children?",
+              a:
+                "Parental consent is obtained at enrollment. Parents are informed that anonymized behavioral observations are part of the educational program. They receive annual summaries of what types of data are collected. Any parent can opt their child out of observation at any time, with no effect on the child's educational experience."
+            },
+            {
+              q: "What data do you store about individual children?",
+              a:
+                "Behavioral records only. No photographs, no video, no audio recordings. Children are identified by numeric codes, not names. Age is recorded in years and months. Gender is recorded only when the specific protocol requires it. Location within the environment is recorded generically (e.g., 'practical life area') not specifically."
+            },
+            {
+              q: "Who has access to the raw dataset?",
+              a:
+                "The Research Director and designated Research Council members. Raw data never leaves the internal archive. Published datasets are fully anonymized — codes are reassigned so that even internal staff cannot re-identify subjects from published data. The anonymization protocol is documented and available for institutional review."
             }
           ]
         },
