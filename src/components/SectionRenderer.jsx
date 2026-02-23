@@ -27,6 +27,18 @@ import TwoColumnSection from './sections/TwoColumnSection';
 import RelatedCardsSection from './sections/RelatedCardsSection';
 import PatentGridSection from './sections/PatentGridSection';
 import ProfileSection from './sections/ProfileSection';
+import {
+  DossierHeaderSection,
+  DossierSectionBlock,
+  DossierQuoteStripSection,
+  DossierSpecTableSection,
+  DossierTimelineSection,
+  DossierNoticeSection,
+  DossierPrinciplesSection,
+  DossierGallerySection,
+  DossierArchiveNoticeSection,
+  DossierRelatedSection,
+} from './sections/DossierSections';
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -70,6 +82,16 @@ const SectionRenderer = ({ sections }) => {
       relatedCards: RelatedCardsSection,
       patentGrid: PatentGridSection,
       profile: ProfileSection,
+      dossierHeader: DossierHeaderSection,
+      dossierSection: DossierSectionBlock,
+      dossierQuoteStrip: DossierQuoteStripSection,
+      dossierSpecTable: DossierSpecTableSection,
+      dossierTimeline: DossierTimelineSection,
+      dossierNotice: DossierNoticeSection,
+      dossierPrinciples: DossierPrinciplesSection,
+      dossierGallery: DossierGallerySection,
+      dossierArchiveNotice: DossierArchiveNoticeSection,
+      dossierRelated: DossierRelatedSection,
     };
 
     const Component = components[type];

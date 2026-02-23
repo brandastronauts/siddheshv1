@@ -261,4 +261,52 @@
     @apply border-primary-navy/40;
     background: hsl(240 93% 25% / 0.05);
   }
+
+  /* ═══ Dossier — NASA/ESA mission document utilities ═══ */
+  .dossier-container {
+    @apply w-full max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-12;
+  }
+
+  .dossier-content-width {
+    @apply max-w-[1100px];
+  }
+
+  .dossier-section-spacing {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @media (min-width: 768px) {
+    .dossier-section-spacing {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .dossier-section-spacing {
+      padding-top: 120px;
+      padding-bottom: 120px;
+    }
+  }
+
+  .dossier-label {
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: hsl(var(--muted-foreground) / 0.55);
+  }
+
+  .dossier-body {
+    font-size: 15px;
+    line-height: 1.75;
+    color: hsl(var(--deep-ink) / 0.72);
+  }
+
+  .dossier-divider {
+    height: 1px;
+    width: 100%;
+    background: hsl(var(--border) / 0.35);
+  }
 }
