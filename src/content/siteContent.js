@@ -2593,13 +2593,13 @@ const siteContent = {
               title: "SAPARYA Conference Booklet",
               description: "Full case study from IMF 7th National Montessori Conference (DOI: 10.5281/zenodo.18337934)",
               format: "PDF",
-              href: "/downloads"
+              href: "/downloads/saparya-conference-booklet.pdf"
             },
             {
               title: "SAPARYA Presentation Slides",
               description: "Visual presentation materials from IMF conference",
               format: "PDF",
-              href: "/downloads"
+              href: "/downloads/saparya-presentation-slides.pdf"
             }
           ]
         },

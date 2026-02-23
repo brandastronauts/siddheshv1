@@ -14,6 +14,7 @@ const DownloadListSection = ({ heading, header, items = [] }) => {
   const renderItem = (item, index) => {
     const Icon = getIcon(item.type || item.format);
     const isExternal = item.href?.startsWith('http');
+    const isFile = /\.(pdf|zip|docx?|xlsx?|pptx?|txt|csv)$/i.test(item.href);
     const displayMeta = item.type || item.format || 'PDF';
 
     const content = (
@@ -39,13 +40,14 @@ const DownloadListSection = ({ heading, header, items = [] }) => {
 
     const className = "bg-card rounded-xl p-5 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border/50 group cursor-pointer block";
 
-    if (isExternal) {
+    if (isExternal || isFile) {
       return (
         <motion.a
           key={index}
           href={item.href}
           target="_blank"
           rel="noopener noreferrer"
+          download={isFile && !isExternal ? undefined : undefined}
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
