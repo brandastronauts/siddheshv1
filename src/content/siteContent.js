@@ -3119,6 +3119,62 @@ const siteContent = {
           ]
         },
         {
+          id: "team-board",
+          type: "cards",
+          variant: "profiles",
+          header: "Board of Directors & Leadership - Who Runs This",
+          cards: [
+            {
+              headline: "Pavan Goyal",
+              tag: "Principal Investigator & Founder",
+              body: "Credentials: AMI Diploma (0-18)\n\nOversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes.",
+              image: { src: "/src/assets/placeholders/avatars/pavan.jpg", alt: "Pavan Goyal", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/pavan-goyal" }
+            },
+            {
+              headline: "Munira Hussain",
+              tag: "Director of Pedagogy",
+              body: "Credentials: AMI Diploma / M.Ed\n\nEnsures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the \"Children's House.\"",
+              image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/munira-hussain" }
+            },
+            {
+              headline: "[Name Pending]",
+              tag: "Non-Executive Director",
+              body: "Credentials: [Relevant Industry Credential]\n\nAdvises on long-term institutional strategy and external partnerships.",
+              image: { src: "/src/assets/placeholders/avatars/director-placeholder.jpg", alt: "Non-Executive Director", variant: "avatar", privacyBlur: false }
+            }
+          ]
+        },
+        {
+          id: "team-council",
+          type: "cards",
+          variant: "profiles",
+          header: "Research Council & Advisory Board",
+          intro: "External experts who provide technical validation for student innovation and methodological oversight.",
+          cards: [
+            {
+              headline: "[Prof. Name Pending]",
+              tag: "Technical Validation Advisor",
+              body: "Affiliation: IIT Hyderabad (Dept of Design)\n\nReviews TRL claims and engineering prototypes for the Space & Drone Labs.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Technical Validation Advisor", variant: "avatar", privacyBlur: false }
+            },
+            {
+              headline: "[Name Pending]",
+              tag: "Independent Ethics Auditor",
+              body: "Affiliation: [External Institution / Parent Body]\n\nEnsures compliance with child safety protocols and consent architecture.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Independent Ethics Auditor", variant: "avatar", privacyBlur: false }
+            },
+            {
+              headline: "Ad-Hoc Committee",
+              tag: "Peer Review Panel",
+              subtitle: "Convened per Publication",
+              body: "A rotating panel of external PhDs convened solely to validate foundational methodology papers prior to DOI registration.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Peer Review Panel", variant: "avatar", privacyBlur: false }
+            }
+          ]
+        },
+        {
           id: "team-research",
           type: "cards",
           variant: "profiles",
