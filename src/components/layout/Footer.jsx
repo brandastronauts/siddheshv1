@@ -17,8 +17,8 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-flex items-center gap-2.5 mb-5">
-              <div className="h-9 w-9 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-white/20">
-                <img src={logo} alt={brand.siteName} className="h-7 w-7 object-contain" />
+              <div className="h-10 w-10 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-white/20">
+                <img src={logo} alt={brand.siteName} className="h-9 w-9 object-contain" />
               </div>
               <div className="flex flex-col leading-none">
                 <span className="text-sm font-bold text-white/95">Blue Blocks</span>
