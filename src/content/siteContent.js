@@ -1684,34 +1684,53 @@ const siteContent = {
         {
           id: "gov-ip",
           type: "twoColumn",
+          variant: "cards",
           header: "Student IP Rights & Data Security",
           left: {
             heading: "Student IP Rights",
-            body:
-              "We fundamentally believe that age does not preclude ownership.\n\nSovereignty: Utility patents generated in the Innovation Labs are filed in the name of the student inventors.\n\nInstitute Role: The Institute acts as the \"Facilitator\" and funds the filing process but claims 0% ownership of student-generated IP.\n\nAttribution: All student contributions to larger papers are cited as \"Co-Authors,\" not subjects."
+            icon: "award",
+            lead: "We fundamentally believe that age does not preclude ownership.",
+            items: [
+              { label: "Sovereignty", text: "Utility patents generated in the Innovation Labs are filed in the name of the student inventors." },
+              { label: "Institute Role", text: "The Institute acts as the \"Facilitator\" and funds the filing process but claims 0% ownership of student-generated IP." },
+              { label: "Attribution", text: "All student contributions to larger papers are cited as \"Co-Authors,\" not subjects." }
+            ]
           },
           right: {
             heading: "Data Security & Anonymization",
-            body:
-              "K-Anonymity: All datasets are scrubbed of PII (Personally Identifiable Information). Names are replaced with alphanumeric codes (e.g., Subject-847-A).\n\nVisual Privacy: Faces in published documentation are obscured or digitized.\n\nStorage: Longitudinal records are stored in an air-gapped internal server (The Data Wing), accessible only to the Principal Investigator and Lead Fellows."
+            icon: "shieldCheck",
+            items: [
+              { label: "K-Anonymity", text: "All datasets are scrubbed of PII (Personally Identifiable Information). Names are replaced with alphanumeric codes (e.g., Subject-847-A)." },
+              { label: "Visual Privacy", text: "Faces in published documentation are obscured or digitized." },
+              { label: "Storage", text: "Longitudinal records are stored in an air-gapped internal server (The Data Wing), accessible only to the Principal Investigator and Lead Fellows." }
+            ]
           }
         },
 
         {
           id: "gov-team",
           type: "twoColumn",
+          variant: "cards",
           header: "The Research & Observation Team",
           intro:
             "Data collection is conducted by a dual-layer team, ensuring both pedagogical sensitivity and technical accuracy.",
           left: {
             heading: "Embedded Research Fellows (AMI)",
-            body:
-              "Who They Are: AMI-Certified Pedagogues.\n\nObservation Focus: Developmental & Behavioral Data.\n\nFunction: They're the child's regular teacher, not a stranger with a clipboard. Children behave naturally because observation is invisible. The guide records observations during lunch or after school, never during work cycles."
+            icon: "graduation",
+            items: [
+              { label: "Who They Are", text: "AMI-Certified Pedagogues." },
+              { label: "Observation Focus", text: "Developmental & Behavioral Data." },
+              { label: "Function", text: "They're the child's regular teacher, not a stranger with a clipboard. Children behave naturally because observation is invisible. The guide records observations during lunch or after school, never during work cycles." }
+            ]
           },
           right: {
             heading: "Research Associates (Subject Experts)",
-            body:
-              "Who They Are: Engineers, Data Scientists, and Domain Specialists.\n\nObservation Focus: Performance & Competency Data.\n\nFunction: These experts conduct focused observations within the Innovation Labs. They track \"External Output\"—measuring engineering fidelity, failure recovery rates, and technical precision during high-stakes prototyping (e.g., Drone flight tests)."
+            icon: "flask",
+            items: [
+              { label: "Who They Are", text: "Engineers, Data Scientists, and Domain Specialists." },
+              { label: "Observation Focus", text: "Performance & Competency Data." },
+              { label: "Function", text: "These experts conduct focused observations within the Innovation Labs. They track \"External Output\"—measuring engineering fidelity, failure recovery rates, and technical precision during high-stakes prototyping (e.g., Drone flight tests)." }
+            ]
           },
           footer: "To apply for a Visiting Researcher position, please visit the Collaborate tab."
         },
