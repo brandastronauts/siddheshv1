@@ -2316,60 +2316,70 @@ const siteContent = {
         {
           id: "privacy-hero",
           type: "textBlock",
+          variant: "legal",
           header: "Privacy Policy",
           body: "Effective Date: January 1, 2025\n\nBlue Blocks Micro Research Institute (\"the Institute,\" \"we,\" \"us,\" or \"our\") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website (research.blueblocks.in) or engage with our services."
         },
         {
           id: "privacy-collection",
           type: "textBlock",
+          variant: "legal",
           header: "1. Information We Collect",
           body: "Personal Information: When you contact us, subscribe to updates, or submit collaboration proposals, we may collect your name, email address, institutional affiliation, and message content.\n\nAutomatically Collected Information: We may collect technical data such as your IP address, browser type, operating system, referring URLs, pages visited, and timestamps. This data is collected through standard server logs and analytics tools.\n\nCookies: Our website may use essential cookies to ensure proper functionality. We do not use advertising or tracking cookies."
         },
         {
           id: "privacy-use",
           type: "textBlock",
+          variant: "legal",
           header: "2. How We Use Your Information",
           body: "We use the information we collect to:\n\n• Respond to inquiries and collaboration proposals\n• Send institutional updates and newsletters (only with your explicit consent)\n• Improve our website's functionality and user experience\n• Maintain security and prevent unauthorized access\n• Comply with legal obligations\n\nWe do not sell, rent, or trade your personal information to third parties."
         },
         {
           id: "privacy-research",
           type: "textBlock",
+          variant: "legal",
           header: "3. Research Data & Child Privacy",
           body: "The Institute conducts longitudinal observational research involving minors. All research data is governed by strict protocols:\n\n• All published research data is fully anonymized using alphanumeric subject codes\n• No personally identifiable information of research subjects is published or shared\n• Parental/guardian consent is obtained for all research participation\n• Children aged 7+ are granted the right to decline participation\n• Parents maintain the right to withdraw data access at any time\n• Photographs are published only with separate photo consent and face obscuration\n\nResearch data handling is separate from website visitor data and is governed by our IRB-aligned protocols detailed on our Governance page."
         },
         {
           id: "privacy-sharing",
           type: "textBlock",
+          variant: "legal",
           header: "4. Data Sharing & Third Parties",
           body: "We may share information with:\n\n• Service Providers: Trusted third-party services that assist in website hosting, analytics, and email delivery, bound by confidentiality agreements\n• Legal Requirements: When required by law, regulation, or legal process\n• Academic Partners: Anonymized, aggregated data for collaborative research purposes only\n\nWe do not share personal information with advertisers or marketing platforms."
         },
         {
           id: "privacy-security",
           type: "textBlock",
+          variant: "legal",
           header: "5. Data Security",
           body: "We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These measures include encrypted data transmission (SSL/TLS), secure server infrastructure, and access controls limiting data access to authorized personnel only."
         },
         {
           id: "privacy-rights",
           type: "textBlock",
+          variant: "legal",
           header: "6. Your Rights",
           body: "You have the right to:\n\n• Access the personal information we hold about you\n• Request correction of inaccurate information\n• Request deletion of your personal information\n• Withdraw consent for communications at any time\n• Lodge a complaint with a data protection authority\n\nTo exercise any of these rights, please contact us at the email address provided on our Contact page."
         },
         {
           id: "privacy-retention",
           type: "textBlock",
+          variant: "legal",
           header: "7. Data Retention",
           body: "We retain personal information only for as long as necessary to fulfill the purposes outlined in this policy, or as required by law. Website analytics data is retained for a maximum of 26 months. Contact form submissions are retained for 3 years unless you request earlier deletion."
         },
         {
           id: "privacy-changes",
           type: "textBlock",
+          variant: "legal",
           header: "8. Changes to This Policy",
           body: "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. We encourage you to review this policy periodically."
         },
         {
           id: "privacy-contact",
           type: "textBlock",
+          variant: "legal",
           header: "9. Contact Us",
           body: "If you have any questions about this Privacy Policy or our data practices, please contact us through our Contact page or write to:\n\nBlue Blocks Micro Research Institute\nHyderabad, India"
         }
@@ -2401,66 +2411,77 @@ const siteContent = {
         {
           id: "terms-hero",
           type: "textBlock",
+          variant: "legal",
           header: "Terms of Use",
           body: "Effective Date: January 1, 2025\n\nBy accessing or using the Blue Blocks Micro Research Institute website (siddheshv1.lovable.app), you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use our website."
         },
         {
           id: "terms-acceptance",
           type: "textBlock",
+          variant: "legal",
           header: "1. Acceptance of Terms",
           body: "These Terms of Use constitute a legally binding agreement between you (\"User,\" \"you,\" or \"your\") and Blue Blocks Micro Research Institute (\"the Institute,\" \"we,\" \"us,\" or \"our\"). By accessing, browsing, or using this website, you acknowledge that you have read, understood, and agree to be bound by these terms."
         },
         {
           id: "terms-use",
           type: "textBlock",
+          variant: "legal",
           header: "2. Permitted Use",
           body: "You may use this website for lawful purposes only. You agree not to:\n\n• Use the website in any way that violates applicable laws or regulations\n• Attempt to gain unauthorized access to any portion of the website or its systems\n• Use automated tools (bots, scrapers, crawlers) to extract content without prior written permission\n• Reproduce, distribute, or commercially exploit any content without authorization\n• Interfere with or disrupt the website's infrastructure or security features\n• Impersonate any person or entity, or misrepresent your affiliation"
         },
         {
           id: "terms-ip",
           type: "textBlock",
+          variant: "legal",
           header: "3. Intellectual Property",
           body: "All content on this website — including but not limited to text, images, graphics, logos, research publications, technical briefs, and design elements — is the intellectual property of Blue Blocks Micro Research Institute or its licensors and is protected by applicable copyright, trademark, and intellectual property laws.\n\nAcademic Citation: You may cite our published research in academic work, provided proper attribution is given using the citation formats provided on each publication page.\n\nStudent IP: Patents and innovations generated by student researchers remain the intellectual property of the student inventors, as detailed in our Governance policies."
         },
         {
           id: "terms-publications",
           type: "textBlock",
+          variant: "legal",
           header: "4. Research Publications & Downloads",
           body: "Research publications, technical briefs, and downloadable materials are provided for informational and academic purposes. While we strive for accuracy:\n\n• Research findings represent observational data and should not be construed as medical, educational, or professional advice\n• DOI-registered publications are preserved in Zenodo and subject to their respective terms\n• Pre-print and working papers may be updated or revised without notice\n• Downloaded materials may not be redistributed without permission"
         },
         {
           id: "terms-privacy",
           type: "textBlock",
+          variant: "legal",
           header: "5. Privacy & Data Protection",
           body: "Your use of this website is also governed by our Privacy Policy. By using the website, you consent to the data practices described therein. We are committed to protecting the privacy of all users and research subjects."
         },
         {
           id: "terms-disclaimers",
           type: "textBlock",
+          variant: "legal",
           header: "6. Disclaimers",
           body: "This website and its content are provided \"as is\" and \"as available\" without warranties of any kind, either express or implied. The Institute does not warrant that:\n\n• The website will be uninterrupted, secure, or error-free\n• The content is complete, accurate, or current at all times\n• Any defects will be corrected in a timely manner\n\nThe Institute shall not be liable for any direct, indirect, incidental, consequential, or punitive damages arising from your use of or inability to use the website."
         },
         {
           id: "terms-links",
           type: "textBlock",
+          variant: "legal",
           header: "7. Third-Party Links",
           body: "Our website may contain links to third-party websites, including Zenodo, institutional partners, and external resources. These links are provided for convenience and do not imply endorsement. We are not responsible for the content, privacy practices, or terms of any third-party sites."
         },
         {
           id: "terms-modifications",
           type: "textBlock",
+          variant: "legal",
           header: "8. Modifications",
           body: "We reserve the right to modify these Terms of Use at any time without prior notice. Changes will be effective immediately upon posting to this page. Your continued use of the website after any modifications constitutes acceptance of the updated terms."
         },
         {
           id: "terms-governing",
           type: "textBlock",
+          variant: "legal",
           header: "9. Governing Law",
           body: "These Terms of Use shall be governed by and construed in accordance with the laws of India. Any disputes arising from these terms or your use of the website shall be subject to the exclusive jurisdiction of the courts in Hyderabad, Telangana, India."
         },
         {
           id: "terms-contact",
           type: "textBlock",
+          variant: "legal",
           header: "10. Contact",
           body: "For questions regarding these Terms of Use, please contact us through our Contact page or write to:\n\nBlue Blocks Micro Research Institute\nHyderabad, India"
         }
