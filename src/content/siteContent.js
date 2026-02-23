@@ -4359,6 +4359,19 @@ const siteContent = {
           ]
         },
         {
+          id: "profile-card",
+          type: "profile",
+          name: "Pavan Goyal",
+          role: "Principal Investigator & Founder",
+          image: { src: "/src/assets/placeholders/avatars/pavan.jpg", alt: "Pavan Goyal", variant: "avatar" },
+          email: "research@blueblocks.in",
+          socials: [
+            { type: "linkedin", href: "https://www.linkedin.com/in/pavangoyal/", label: "LinkedIn" },
+            { type: "website", href: "https://blueblocks.in", label: "Website" }
+          ],
+          bio: "Oversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes (AMI Diploma 0-18). 15+ years of embedded observation experience."
+        },
+        {
           id: "profile-content",
           type: "textBlock",
           header: "Biography",
@@ -4430,6 +4443,18 @@ const siteContent = {
             { label: "Focus", value: "Curriculum Integration" },
             { label: "Specialization", value: "Children's House" }
           ]
+        },
+        {
+          id: "profile-card",
+          type: "profile",
+          name: "Munira Hussain",
+          role: "Director of Pedagogy",
+          image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar" },
+          email: "research@blueblocks.in",
+          socials: [
+            { type: "linkedin", href: "https://www.linkedin.com/in/munirahussain/", label: "LinkedIn" }
+          ],
+          bio: "Ensures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the Children's House. Credentials: AMI Diploma / M.Ed."
         },
         {
           id: "profile-content",
