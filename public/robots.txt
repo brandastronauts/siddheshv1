@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /
 
-Sitemap: https://siddheshv1.lovable.app/sitemap.xml
+Sitemap: https://research.blueblocks.in/sitemap.xml
