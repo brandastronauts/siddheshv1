@@ -16,13 +16,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <Link to="/" className="inline-flex items-center gap-3 mb-5">
-              <div className="h-10 w-10 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/10 overflow-hidden">
-                <img src={logo} alt={brand.siteName} className="h-8 w-auto object-contain brightness-0 invert opacity-90" />
+            <Link to="/" className="inline-flex items-center gap-2.5 mb-5">
+              <div className="h-9 w-9 rounded-lg bg-white/15 flex items-center justify-center overflow-hidden border border-white/10">
+                <img src={logo} alt={brand.siteName} className="h-7 w-7 object-contain brightness-0 invert" />
               </div>
-              <div className="flex flex-col leading-tight">
-                <span className="text-sm font-bold text-white/90">Blue Blocks</span>
-                <span className="text-[10px] font-semibold text-white/50 uppercase tracking-wider">Micro Research Institute</span>
+              <div className="flex flex-col leading-none">
+                <span className="text-sm font-bold text-white/95">Blue Blocks</span>
+                <span className="text-[9px] font-semibold text-white/50 uppercase tracking-[0.08em]">Micro Research Institute</span>
               </div>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed max-w-md mb-8">
