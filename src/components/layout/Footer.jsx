@@ -90,24 +90,24 @@ const Footer = () => {
           <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/40">
             Registries & Archives
           </h4>
-          <div className="flex flex-wrap gap-4">
-            <Link to="/publications" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors">
+          <div className="flex flex-wrap gap-x-4 gap-y-2">
+            <Link to="/publications" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors py-1 min-h-[44px] sm:min-h-0">
               <FileText className="w-3.5 h-3.5" aria-hidden="true" />
               Publications
             </Link>
-            <Link to="/patents" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors">
+            <Link to="/patents" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors py-1 min-h-[44px] sm:min-h-0">
               <Lightbulb className="w-3.5 h-3.5" aria-hidden="true" />
               Patents
             </Link>
-            <Link to="/books" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors">
+            <Link to="/books" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors py-1 min-h-[44px] sm:min-h-0">
               <BookOpen className="w-3.5 h-3.5" aria-hidden="true" />
               Books
             </Link>
-            <Link to="/team" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors">
+            <Link to="/team" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors py-1 min-h-[44px] sm:min-h-0">
               <Users className="w-3.5 h-3.5" aria-hidden="true" />
               Team
             </Link>
-            <Link to="/downloads" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors">
+            <Link to="/downloads" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors py-1 min-h-[44px] sm:min-h-0">
               <Download className="w-3.5 h-3.5" aria-hidden="true" />
               Downloads
             </Link>
@@ -136,18 +136,18 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-10 pt-8 border-t border-white/10">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/40">
+          <div className="flex flex-col items-center gap-4 text-xs text-white/40 md:flex-row md:justify-between">
             <p>© {new Date().getFullYear()} {brand.siteName}. All rights reserved.</p>
-            <div className="flex items-center gap-6">
-              <Link to="/privacy" className="inline-flex items-center gap-1 hover:text-white/80 transition-colors">
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
+              <Link to="/privacy" className="inline-flex items-center gap-1 py-1 hover:text-white/80 transition-colors min-h-[44px] sm:min-h-0">
                 <Lock className="w-3 h-3" aria-hidden="true" />
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="inline-flex items-center gap-1 hover:text-white/80 transition-colors">
+              <Link to="/terms" className="inline-flex items-center gap-1 py-1 hover:text-white/80 transition-colors min-h-[44px] sm:min-h-0">
                 <ScrollText className="w-3 h-3" aria-hidden="true" />
                 Terms of Use
               </Link>
-              <Link to="/sitemap" className="inline-flex items-center gap-1 hover:text-white/80 transition-colors">
+              <Link to="/sitemap" className="inline-flex items-center gap-1 py-1 hover:text-white/80 transition-colors min-h-[44px] sm:min-h-0">
                 <MapPin className="w-3 h-3" aria-hidden="true" />
                 Sitemap
               </Link>

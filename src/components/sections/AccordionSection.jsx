@@ -90,7 +90,7 @@ const AccordionSection = ({ heading, header, intro, items }) => {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3, ease: 'easeInOut' }}
                     >
-                      <div className="px-5 md:px-6 pb-6 pt-0 pl-[4.5rem]">
+                      <div className="px-5 md:px-6 pb-6 pt-0 pl-5 md:pl-[4.5rem]">
                         <ExpandableText
                           text={answer}
                           collapsedLines={4}
