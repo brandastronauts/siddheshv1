@@ -3694,18 +3694,7 @@ const siteContent = {
             { q: "Can media cite this document?", a: "Yes, with DOI attribution." }
           ]
         },
-        {
-          id: "pub-visual-evidence",
-          type: "galleryGrid",
-          header: "Visual Evidence",
-          intro: "Supporting documentation and mission context.",
-          images: [
-            { src: "/src/assets/placeholders/visual-evidence/avionics-rig-1.jpg", alt: "Mission control setup", caption: "Avionics integration testing" },
-            { src: "/src/assets/placeholders/visual-evidence/lab-bench-1.jpg", alt: "Documentation workspace", caption: "Administrative archive" },
-            { src: "/src/assets/placeholders/visual-evidence/lunar-sim-1.jpg", alt: "Testing environment", caption: "Payload qualification" },
-            { src: "/src/assets/placeholders/visual-evidence/drone-frame-1.jpg", alt: "Hardware assembly", caption: "Engineering workspace" }
-          ]
-        },
+        
         {
           id: "pub-archival-note",
           type: "textBlock",
