@@ -26,6 +26,7 @@ import MetaStripSection from './sections/MetaStripSection';
 import TwoColumnSection from './sections/TwoColumnSection';
 import RelatedCardsSection from './sections/RelatedCardsSection';
 import PatentGridSection from './sections/PatentGridSection';
+import ProfileSection from './sections/ProfileSection';
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -68,6 +69,7 @@ const SectionRenderer = ({ sections }) => {
       twoColumn: TwoColumnSection,
       relatedCards: RelatedCardsSection,
       patentGrid: PatentGridSection,
+      profile: ProfileSection,
     };
 
     const Component = components[type];
