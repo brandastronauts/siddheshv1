@@ -17,14 +17,21 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <img 
-              src={logo} 
-              alt={brand.siteName} 
-              className="h-10 md:h-12 w-auto object-contain mix-blend-multiply" 
-            />
-            <span className="hidden md:block text-xs font-semibold text-deep-ink/80 group-hover:text-primary-navy transition-colors leading-tight">
-              {brand.headerTagline}
-            </span>
+            <div className="h-10 md:h-12 w-10 md:w-12 rounded-lg bg-white flex items-center justify-center shadow-sm border border-border/30 overflow-hidden">
+              <img 
+                src={logo} 
+                alt={brand.siteName} 
+                className="h-8 md:h-10 w-auto object-contain" 
+              />
+            </div>
+            <div className="hidden md:flex flex-col leading-tight">
+              <span className="text-sm font-bold text-deep-ink group-hover:text-primary-navy transition-colors">
+                Blue Blocks
+              </span>
+              <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
+                Micro Research Institute
+              </span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

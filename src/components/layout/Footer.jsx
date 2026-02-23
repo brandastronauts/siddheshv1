@@ -17,8 +17,13 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-flex items-center gap-3 mb-5">
-              <img src={logo} alt={brand.siteName} className="h-10 w-auto brightness-0 invert opacity-90" />
-              <span className="text-lg font-semibold text-white/90">{brand.siteName}</span>
+              <div className="h-10 w-10 rounded-lg bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/10 overflow-hidden">
+                <img src={logo} alt={brand.siteName} className="h-8 w-auto object-contain brightness-0 invert opacity-90" />
+              </div>
+              <div className="flex flex-col leading-tight">
+                <span className="text-sm font-bold text-white/90">Blue Blocks</span>
+                <span className="text-[10px] font-semibold text-white/50 uppercase tracking-wider">Micro Research Institute</span>
+              </div>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed max-w-md mb-8">
               {brand.ethicsTagline}
