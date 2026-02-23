@@ -3996,17 +3996,17 @@ const siteContent = {
 
     // ==================== PATENTS DETAIL PAGES ====================
     "/patents/automated-security-uav": {
-      title: "System for Automated Security (UAV)",
-      metaDescription: "Patent filing for System for Automated Security UAV — a responsive aerial surveillance platform developed by Blue Blocks Micro Research Institute students.",
+      title: "Patent Portfolio : System for Automated Security (UAV)",
+      metaDescription: "Patent filing for System for Automated Security UAV — a responsive aerial surveillance system developed by Blue Blocks Micro Research Institute students.",
       seo: {
-        title: "System for Automated Security (UAV) | Patents | Blue Blocks Micro Research Institute",
+        title: "Patent Portfolio : System for Automated Security (UAV) | Patents | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/patents/automated-security-uav",
         robots: "noindex,nofollow,noarchive,nosnippet",
         openGraph: {
           type: "article",
           url: "https://siddheshv1.lovable.app/patents/automated-security-uav",
           title: "Patent: System for Automated Security (UAV)",
-          description: "Utility patent for a responsive aerial surveillance platform."
+          description: "Utility patent for a responsive aerial surveillance system."
         }
       },
       schemas: [
@@ -4014,57 +4014,58 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "CreativeWork",
           name: "System for Automated Security (UAV)",
-          description: "A responsive aerial surveillance platform engineered to reduce emergency response latency.",
+          description: "A responsive aerial surveillance system designed to mitigate latency in emergency security operations.",
           identifier: "202041031343",
           creator: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
         }
       ],
+      stickyCta: { label: "Download Patent PDF", href: "/downloads/security-uav-patent.pdf", type: "download" },
       sections: [
         {
           id: "patent-hero", type: "hero", variant: "publication",
-          headline: "System for Automated Security (UAV)",
-          subheadline: "Patent Pending · Application No. 202041031343 · Robotics / Unmanned Aerial Systems",
+          headline: "Patent Portfolio : System for Automated Security (UAV)",
+          subheadline: "Patent Pending · Application No. 202041031343 · Robotics / Unnamed Aerial Systems (UAS)",
           image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Automated Security UAV", variant: "hero" }
         },
         {
           id: "patent-meta", type: "metaStrip",
           items: [
-            { label: "Status", value: "Patent Pending" },
-            { label: "Application No", value: "202041031343" },
-            { label: "Category", value: "Robotics / Unmanned Aerial Systems" },
-            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" }
+            { label: "Filing Date", value: "July 22, 2020" },
+            { label: "Status", value: "Pending" },
+            { label: "Category", value: "Robotics / Unnamed Aerial Systems (UAS)" },
+            { label: "Age Group", value: "Adolescent Researchers (12-16 years)" }
           ]
         },
         {
           id: "patent-abstract", type: "twoColumn", compact: true,
           left: { sections: [
-            { title: "Abstract", body: "A responsive aerial surveillance platform engineered to reduce emergency response latency through encrypted alert ingestion, geolocation triangulation, and autonomous safety-response execution. The system was designed and prototyped by students working in the Drone Research Centre under authentic professional constraints." }
+            { title: "Patent Abstract", body: "A responsive aerial surveillance system designed to mitigate latency in emergency security operations. The invention comprises a drone-based security unit capable of receiving encrypted alert signals from a user device, automatically triangulating the subject's geolocation. Upon arrival, the unit's controller executes a decision matrix based on sensor fusion data, including acoustic and visual inputs, to perform safety actions ranging from suspect apprehension to environmental illumination and alarm activation." },
+            { title: "Inventors", body: "Aryan Oleti (Student inventor)\nHasith Sankuri (student inventor)\nAkshat Gupta (student inventor)" },
+            { title: "Application Number", body: "202041031343" }
           ]},
           right: { panels: [
             { title: "Registry Links", links: [
               { label: "Patent Registry", href: "/patents" },
               { label: "Publications", href: "/publications" },
               { label: "Downloads", href: "/downloads" }
+            ]},
+            { title: "Download", links: [
+              { label: "Download PDF", href: "/downloads/security-uav-patent.pdf", external: true }
             ]}
           ]}
         },
         {
-          id: "patent-body", type: "twoColumn", compact: true,
-          left: { sections: [
-            { title: "Problem Context", body: "Traditional perimeter security relies on static cameras and manual patrols, which leave coverage gaps and respond slowly to intrusions. Emergency response latency in monitored environments remains a critical vulnerability, particularly in institutional and residential settings." },
-            { title: "Technical Architecture", body: "The UAV follows pre-programmed patrol routes using GPS waypoint navigation. Onboard sensors detect motion and thermal anomalies within the patrol zone. When a potential intrusion is identified, the system triggers an encrypted alert to a ground control station and autonomously repositions to track the anomaly while maintaining visual contact.", bullets: [
-              "GPS-guided autonomous navigation module",
-              "Thermal and motion detection sensor array",
-              "Encrypted real-time alert transmission",
-              "Geolocation triangulation system",
-              "Automated return-to-base protocol",
-              "Weather-resistant airframe design"
-            ]}
-          ]},
-          right: { panels: [
-            { title: "Institutional Context", citation: "This invention was generated within the Blue Blocks Micro Research Institute's longitudinal research environment. Student inventors retain intellectual property ownership, with the Institute facilitating filing and documentation under governance oversight." },
-            { title: "Inventors", citation: "Drone Research Centre student cohort\nBlue Blocks Micro Research Institute" }
-          ]}
+          id: "patent-specs", type: "comparisonTable",
+          header: "Technical Specifications",
+          columns: ["Component Subsystem", "Hardware / Operational Parameters"],
+          rows: [
+            ["Security Unit Architecture", "Unmanned Aerial Vehicle (UAV); Multi-rotor or Fixed-wing configuration with retractable aerodynamic wings."],
+            ["Sensor Array", "Gyroscope, MEMS Accelerometer, Acoustic Sensors, Thermal/Heat Sensors, Proximity Sensors."],
+            ["Avionics & Compute", "Onboard Controller (RISC/CISC Architecture) running User Identification Module and Gesture Sensing Module."],
+            ["Navigation & Tracking", "GPS/GNSS Coordinates, Relative Positioning Algorithms, Real-time Image Recognition for target locking."],
+            ["Safety Payloads", "Integrated deterrents including: Taser, Pepper Spray, High-Velocity Jet Spray, Gas Emitter, and Laser Tracking Systems."],
+            ["Communication Protocol", "Wireless Network Integration (4G/5G/WiMAX) for bi-directional telemetry between User Device, UAV, and Remote Server."]
+          ]
         },
         {
           id: "patent-citation", type: "twoColumn", compact: true,
@@ -4105,10 +4106,10 @@ const siteContent = {
     },
 
     "/patents/borehole-rescue-system": {
-      title: "Borehole Rescue System (BRS)",
+      title: "Patent Portfolio : Borehole Rescue System (BRS)",
       metaDescription: "Patent filing for Borehole Rescue System — a vertical-access rescue apparatus developed by Blue Blocks Micro Research Institute students.",
       seo: {
-        title: "Borehole Rescue System (BRS) | Patents | Blue Blocks Micro Research Institute",
+        title: "Patent Portfolio : Borehole Rescue System (BRS) | Patents | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/patents/borehole-rescue-system",
         robots: "noindex,nofollow,noarchive,nosnippet"
       },
@@ -4119,52 +4120,53 @@ const siteContent = {
           { "@type": "ListItem", position: 3, name: "Borehole Rescue System", item: "https://siddheshv1.lovable.app/patents/borehole-rescue-system" }
         ]}
       ],
+      stickyCta: { label: "Download Patent PDF", href: "/downloads/borehole-rescue-patent.pdf", type: "download" },
       sections: [
         {
           id: "patent-hero", type: "hero", variant: "publication",
-          headline: "Borehole Rescue System (BRS)",
-          subheadline: "Patent Pending · Application No. 202041027026 · Robotics / Rescue Systems",
+          headline: "Patent Portfolio : Borehole Rescue System (BRS)",
+          subheadline: "Patent Pending · Application No. 202041027026 · Robotics / Subterranean Rescue Systems",
           image: { src: "/src/assets/placeholders/labs/avionics.jpg", alt: "Borehole Rescue System", variant: "hero" }
         },
         {
           id: "patent-meta", type: "metaStrip",
           items: [
-            { label: "Status", value: "Patent Pending" },
-            { label: "Application No", value: "202041027026" },
-            { label: "Category", value: "Robotics / Rescue Systems" },
-            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" }
+            { label: "Filing Date", value: "July 25, 2020" },
+            { label: "Status", value: "Pending" },
+            { label: "Category", value: "Robotics / Subterranean Rescue Systems" },
+            { label: "Age Group", value: "Adolescent Researchers (12-16 years)" }
           ]
         },
         {
           id: "patent-abstract", type: "twoColumn", compact: true,
           left: { sections: [
-            { title: "Abstract", body: "A vertical-access rescue apparatus designed for narrow subterranean environments, integrating adaptive aerial stabilization, lidar-based collision avoidance, and automated retention mechanisms for safe subject extraction. Developed in response to real-world borewell accidents reported across India." }
+            { title: "Patent Abstract", body: "The present disclosure details a vertical-access rescue apparatus featuring an adaptive aerial platform capable of contracting its physical footprint to traverse narrow subterranean shafts. Equipped with anti-collision Lidar sensors and a specialized retention mechanism, the device autonomously stabilizes within the borehole environment. It provides a secure, mechanically actuated platform for lifting subjects to the surface, significantly reducing the operational risks associated with conventional parallel-pit rescue techniques." },
+            { title: "Inventors", body: "Dhairya Singh Bangari (Student inventor)\nSanshray Padhy (Student inventor)\nAyushmaan (Student inventor)" },
+            { title: "Application Number", body: "202041027026" }
           ]},
           right: { panels: [
             { title: "Registry Links", links: [
               { label: "Patent Registry", href: "/patents" },
               { label: "Publications", href: "/publications" },
               { label: "Downloads", href: "/downloads" }
+            ]},
+            { title: "Download", links: [
+              { label: "Download PDF", href: "/downloads/borehole-rescue-patent.pdf", external: true }
             ]}
           ]}
         },
         {
-          id: "patent-body", type: "twoColumn", compact: true,
-          left: { sections: [
-            { title: "Problem Context", body: "Borehole accidents, particularly involving children falling into open or abandoned borewells, remain a recurring emergency in rural India. Existing rescue methods are improvised and time-consuming, frequently resulting in fatalities due to extraction delays." },
-            { title: "Technical Architecture", body: "The rescue system uses a telescoping mechanical arm with adaptive gripping attachments sized for borehole diameters. The device integrates lidar-based collision avoidance for safe descent and pneumatic cushioning for subject retention.", bullets: [
-              "Telescoping mechanical extraction arm",
-              "Adaptive gripping mechanism for variable diameters",
-              "Lidar-based collision avoidance system",
-              "Pneumatic cushioning for safe extraction",
-              "Integrated camera for visual guidance",
-              "Portable deployment frame for first responders"
-            ]}
-          ]},
-          right: { panels: [
-            { title: "Institutional Context", citation: "This invention was generated within the Blue Blocks Micro Research Institute's longitudinal research environment. Student inventors retain intellectual property ownership, with the Institute facilitating filing and documentation under governance oversight." },
-            { title: "Inventors", citation: "Student Engineers (Ages 11–15)\nBlue Blocks Micro Research Institute" }
-          ]}
+          id: "patent-specs", type: "comparisonTable",
+          header: "Technical Specifications",
+          columns: ["Component Subsystem", "Hardware / Operational Parameters"],
+          rows: [
+            ["Chassis Architecture", "Unmanned Aerial Vehicle (UAV) configuration (Quadcopter/Drone) featuring Retractable Wings with a Scissor Hinge Mechanism."],
+            ["Avionics & Compute", "Onboard Microcontroller unit (CISC/RISC architecture) processing real-time control signals via wireless telemetry (LAN/WAN/4G)."],
+            ["Sensor Array", "Anti-Collision Sensors (Proximity/Lidar), Gas Detection Modules (for poisonous subterranean gases), Gyroscopes, and MEMS Accelerometers."],
+            ["Vision & Navigation", "Low-latency Camera module with Noiseless Capturing capabilities; supports Thermal and Infrared imaging for low-light subterranean visibility."],
+            ["Payload & Actuation", "Foldable Platform for subject retention; automated expansion/retraction logic driven by borehole dimensional analysis."],
+            ["Communication", "Bi-directional audio transmission (Sound Transmitter/Receiver) enabling direct communication between the surface operator and the subject."]
+          ]
         },
         {
           id: "patent-citation", type: "twoColumn", compact: true,
