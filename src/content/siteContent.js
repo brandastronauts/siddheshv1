@@ -1252,7 +1252,7 @@ const siteContent = {
               meta: "DOI: 10.5281/zenodo.18195108",
               body: "Official authorization archived for governance traceability, regulatory documentation continuity, and citation permanence.",
               cta: { label: "View Publication", href: "/publications/in-space-authorization-letter" },
-              image: { src: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=800&q=80", alt: "Mission control", variant: "card" }
+              image: { src: "/src/assets/placeholders/labs/authorization-letter.jpg", alt: "IN-SPACe authorization document", variant: "card" }
             },
             {
               tag: "Published Case Study",
@@ -1260,7 +1260,7 @@ const siteContent = {
               meta: "DOI: 10.5281/zenodo.18337934",
               body: "A documented adolescent engineering mission presented as an institutional case study in responsibility, professional constraints, and authentic engineering stakes.",
               cta: { label: "View Publication", href: "/publications/saparya-imf-case-study" },
-              image: { src: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80", alt: "Conference presentation", variant: "card" }
+              image: { src: "/src/assets/placeholders/labs/conference-presentation.jpg", alt: "Conference presentation", variant: "card" }
             }
           ]
         },
@@ -1307,7 +1307,7 @@ const siteContent = {
               meta: "Application No: 202041031343",
               body: "A responsive aerial surveillance platform engineered to reduce emergency response latency through encrypted alert ingestion, geolocation triangulation, and autonomous safety-response execution.",
               cta: { label: "View Patent", href: "/patents/automated-security-uav" },
-              image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Patent-001-Providing Security", variant: "card", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/labs/patent-uav.jpg", alt: "Patent-001-Providing Security", variant: "card", privacyBlur: false }
             },
             {
               tag: "Patent Pending · Robotics / Rescue Systems",
@@ -1315,7 +1315,7 @@ const siteContent = {
               meta: "Application No: 202041027026",
               body: "A vertical-access rescue apparatus designed for narrow subterranean environments, integrating adaptive aerial stabilization, lidar-based collision avoidance, and automated retention mechanisms for safe subject extraction.",
               cta: { label: "View Patent", href: "/patents/borehole-rescue-system" },
-              image: { src: "/src/assets/placeholders/labs/avionics.jpg", alt: "Patent-002-Rescue Person", variant: "card", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/labs/patent-rescue.jpg", alt: "Patent-002-Rescue Person", variant: "card", privacyBlur: false }
             },
             {
               tag: "Patent Pending · Autonomous Logistics / Public Health Engineering",
@@ -1323,7 +1323,7 @@ const siteContent = {
               meta: "Application No: TBD",
               body: "An autonomous logistics platform enabling sterile delivery workflows during contagion scenarios through robotic handling, sanitation atomization, and computer-vision verification systems.",
               cta: { label: "View Patent", href: "/patents/contactless-delivery-system" },
-              image: { src: "/src/assets/placeholders/labs/drone-prototype.jpg", alt: "Patent-003-Essential Item", variant: "card", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/labs/patent-delivery.jpg", alt: "Patent-003-Essential Item", variant: "card", privacyBlur: false }
             },
             {
               tag: "Patent Pending · Medical Robotics / Telerobotics",
@@ -1331,7 +1331,7 @@ const siteContent = {
               meta: "Application No: 202041027075",
               body: "A contactless medical support platform featuring robotic manipulation systems, imaging diagnostics, and sanitation protocols for epidemiological crisis environments.",
               cta: { label: "View Patent", href: "/patents/autonomous-medical-assistance-system" },
-              image: { src: "/src/assets/placeholders/labs/space-lab.jpg", alt: "Patent-004-Medical Assistance", variant: "card", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/labs/patent-medical.jpg", alt: "Patent-004-Medical Assistance", variant: "card", privacyBlur: false }
             },
             {
               tag: "Patent Pending · Bio-Telemetry / Public Health Surveillance",
@@ -1339,7 +1339,7 @@ const siteContent = {
               meta: "Application No: TBD",
               body: "A remote epidemiological surveillance network using infrared thermography, video plethysmography, and autonomous navigation to monitor health indicators in high-density environments.",
               cta: { label: "View Patent", href: "/patents/autonomous-health-monitoring-system" },
-              image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Patent-005-health Parameter", variant: "card", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/labs/patent-health.jpg", alt: "Patent-005-health Parameter", variant: "card", privacyBlur: false }
             }
           ]
         },
