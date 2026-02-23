@@ -15,6 +15,7 @@ import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import LegalPage from "./pages/LegalPage";
 import GenericPage from "./pages/GenericPage";
+import ScrollToTopOnRouteChange from "./components/ui/ScrollToTopOnRouteChange";
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTopOnRouteChange />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/the-institute" element={<TheInstitutePage />} />
