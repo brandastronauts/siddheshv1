@@ -2618,6 +2618,32 @@ const siteContent = {
           ]
         },
         {
+          id: "downloads-patents",
+          type: "downloadList",
+          header: "Patents / Technical Documentation",
+          intro: "Patent drawings and technical documentation for student-generated inventions.",
+          items: [
+            {
+              title: "Autonomous Contactless Delivery System (ACDS) — Patent Drawings",
+              description: "Electromechanical delivery unit with multi-axis robotic arm and sanitation systems for contactless distribution.",
+              format: "PDF",
+              href: "/downloads/acds-patent.pdf"
+            },
+            {
+              title: "Autonomous Medical Assistance System (AMAS) — Patent Drawings",
+              description: "Telerobotic intervention platform for contactless medical support during epidemiological crises.",
+              format: "PDF",
+              href: "/downloads/amas-patent.pdf"
+            },
+            {
+              title: "Autonomous Health Monitoring System (AHMS) — Patent Drawings",
+              description: "Remote epidemiological surveillance network using infrared thermography and video plethysmography.",
+              format: "PDF",
+              href: "/downloads/ahms-patent.pdf"
+            }
+          ]
+        },
+        {
           id: "downloads-media",
           type: "downloadList",
           header: "Media & Press Resources",
@@ -3929,7 +3955,7 @@ const siteContent = {
               { label: "Downloads", href: "/downloads" }
             ]},
             { title: "Download", links: [
-              { label: "Download PDF", href: "/downloads/acds.pdf", external: true }
+              { label: "Download PDF", href: "/downloads/acds-patent.pdf", external: true }
             ]}
           ]}
         },
@@ -3985,10 +4011,10 @@ const siteContent = {
     },
 
     "/patents/autonomous-medical-assistance-system": {
-      title: "Autonomous Medical Assistance System (AMAS)",
-      metaDescription: "Patent filing for Autonomous Medical Assistance System — a contactless medical support platform developed by Blue Blocks Micro Research Institute students.",
+      title: "Patent Portfolio : Autonomous Medical Assistance System (AMAS)",
+      metaDescription: "Patent filing for Autonomous Medical Assistance System — a telerobotic intervention platform designed for contactless medical support during epidemiological crises.",
       seo: {
-        title: "Autonomous Medical Assistance System (AMAS) | Patents | Blue Blocks Micro Research Institute",
+        title: "Patent Portfolio : Autonomous Medical Assistance System (AMAS) | Patents | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system",
         robots: "noindex,nofollow,noarchive,nosnippet"
       },
@@ -4002,49 +4028,49 @@ const siteContent = {
       sections: [
         {
           id: "patent-hero", type: "hero", variant: "publication",
-          headline: "Autonomous Medical Assistance System (AMAS)",
-          subheadline: "Patent Pending · Application No. 202041027075 · Medical Robotics / Telerobotics",
+          headline: "Patent Portfolio : Autonomous Medical Assistance System (AMAS)",
+          subheadline: "Patent Pending · Application No. 202041027075 · Medical Robotics / Telerobotics / Epidemiology",
           image: { src: "/src/assets/placeholders/labs/space-lab.jpg", alt: "Autonomous Medical Assistance System", variant: "hero" }
         },
         {
           id: "patent-meta", type: "metaStrip",
           items: [
-            { label: "Status", value: "Patent Pending" },
-            { label: "Application No", value: "202041027075" },
-            { label: "Category", value: "Medical Robotics / Telerobotics" },
-            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" }
+            { label: "Filing Date", value: "June 25, 2020" },
+            { label: "Status", value: "Pending" },
+            { label: "Category", value: "Medical Robotics / Telerobotics / Epidemiology" },
+            { label: "Age Group", value: "Adolescent Researchers (12-16 years)" }
           ]
         },
         {
           id: "patent-abstract", type: "twoColumn", compact: true,
           left: { sections: [
-            { title: "Abstract", body: "A contactless medical support platform featuring robotic manipulation systems, imaging diagnostics, and sanitation protocols for epidemiological crisis environments. The system integrates diagnostic sensors, communication modules, and first-response protocols developed by adolescent engineers." }
+            { title: "Patent Abstract", body: "A telerobotic intervention platform designed for contactless medical support during epidemiological crises. The system comprises a deployable Medical Unit integrated with variable-geometry robotic arms for the sterile retrieval of biological specimens and the precise distribution of vaccines. Guided by a sensor fusion array and high-fidelity imaging devices, the unit executes autonomous navigation protocols while utilizing an onboard Sanitation Arrangement (UVGI and chemical atomizers) to enforce sterility in contaminated zones." },
+            { title: "Inventors", body: "Trisha Mohit Sachanandani (Student Inventor)\nAnanya (Student Inventor)\nAarini Khadse (Student Inventor)\nAnya (Student Inventor)" },
+            { title: "Application Number", body: "202041027075" }
           ]},
           right: { panels: [
             { title: "Registry Links", links: [
               { label: "Patent Registry", href: "/patents" },
               { label: "Publications", href: "/publications" },
               { label: "Downloads", href: "/downloads" }
+            ]},
+            { title: "Download", links: [
+              { label: "Download PDF", href: "/downloads/amas-patent.pdf", external: true }
             ]}
           ]}
         },
         {
-          id: "patent-body", type: "twoColumn", compact: true,
-          left: { sections: [
-            { title: "Problem Context", body: "Remote and underserved areas frequently lack immediate medical response infrastructure. Emergency situations in such locations suffer from delayed first-response times, particularly during epidemiological crises when human contact poses additional transmission risks." },
-            { title: "Technical Architecture", body: "The system deploys an autonomous unit to the emergency location using GPS coordinates. Upon arrival, it performs basic diagnostic assessment through integrated sensors and establishes a communication link with medical professionals.", bullets: [
-              "Robotic manipulation systems for contactless intervention",
-              "Integrated diagnostic sensor suite (pulse oximetry, temperature, blood pressure)",
-              "Real-time telemedicine communication link",
-              "Imaging diagnostics module",
-              "Sanitation protocols for contaminated environments",
-              "Ruggedized housing for field deployment"
-            ]}
-          ]},
-          right: { panels: [
-            { title: "Institutional Context", citation: "This invention was generated within the Blue Blocks Micro Research Institute's longitudinal research environment. Student inventors retain intellectual property ownership, with the Institute facilitating filing and documentation under governance oversight." },
-            { title: "Inventors", citation: "Student Engineers (Ages 12–16)\nBlue Blocks Micro Research Institute" }
-          ]}
+          id: "patent-specs", type: "comparisonTable",
+          header: "Technical Specifications",
+          columns: ["Component Subsystem", "Hardware / Operational Parameters"],
+          rows: [
+            ["Chassis Architecture", "Autonomous Medical Unit with GPS-Guided Navigation and Flight Management Systems."],
+            ["Manipulation", "Retractable Robotic Arms with detachable end-effectors tailored for handling fragile medical entities (vials/syringes)."],
+            ["Sterilization Protocol", "Dual-mode Sanitation Arrangement: UVGI System (UVC Radiation) for DNA disruption and Sprinkler/Atomizer for chemical disinfection (Sodium Hypochlorite)."],
+            ["Vision & Diagnostics", "RGB-D Cameras with Machine Learning algorithms for patient condition analysis (Health Statistics/Wound Severity) and surface irregularity detection."],
+            ["Sensor Fusion", "Integrated array including Proximity Sensors, Motion Trackers, Gyroscopes, and Accelerometers for collision avoidance and stability."],
+            ["Payload Integrity", "Thermally Insulated Storage compartment ensuring bio-specimen viability and vaccine cold-chain maintenance."]
+          ]
         },
         {
           id: "patent-citation", type: "twoColumn", compact: true,
@@ -4085,10 +4111,10 @@ const siteContent = {
     },
 
     "/patents/autonomous-health-monitoring-system": {
-      title: "Autonomous Health Monitoring System (AHMS)",
+      title: "Patent Portfolio : Autonomous Health Monitoring System (AHMS)",
       metaDescription: "Patent filing for Autonomous Health Monitoring System — a remote epidemiological surveillance network developed by Blue Blocks Micro Research Institute students.",
       seo: {
-        title: "Autonomous Health Monitoring System (AHMS) | Patents | Blue Blocks Micro Research Institute",
+        title: "Patent Portfolio : Autonomous Health Monitoring System (AHMS) | Patents | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system",
         robots: "noindex,nofollow,noarchive,nosnippet"
       },
@@ -4102,49 +4128,49 @@ const siteContent = {
       sections: [
         {
           id: "patent-hero", type: "hero", variant: "publication",
-          headline: "Autonomous Health Monitoring System (AHMS)",
-          subheadline: "Patent Pending · Application No. TBD · Bio-Telemetry / Public Health Surveillance",
+          headline: "Patent Portfolio : Autonomous Health Monitoring System (AHMS)",
+          subheadline: "Patent Pending · Medical Robotics / Public Health Surveillance / Bio-Telemetry",
           image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Autonomous Health Monitoring System", variant: "hero" }
         },
         {
           id: "patent-meta", type: "metaStrip",
           items: [
-            { label: "Status", value: "Patent Pending" },
-            { label: "Application No", value: "TBD" },
-            { label: "Category", value: "Bio-Telemetry / Public Health Surveillance" },
-            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" }
+            { label: "Filing Date", value: "June 25, 2020" },
+            { label: "Status", value: "Pending" },
+            { label: "Category", value: "Medical Robotics / Public Health Surveillance / Bio-Telemetry" },
+            { label: "Age Group", value: "Adolescent Researchers (12-16 years)" }
           ]
         },
         {
           id: "patent-abstract", type: "twoColumn", compact: true,
           left: { sections: [
-            { title: "Abstract", body: "A remote epidemiological surveillance network using infrared thermography, video plethysmography, and autonomous navigation to monitor health indicators in high-density environments. The system provides continuous, non-intrusive health observation without disrupting monitored environments." }
+            { title: "Patent Abstract", body: "A remote epidemiological surveillance network designed for the mass filtration of asymptomatic carriers during infectious disease outbreaks. The system deploys an autonomous Monitoring Unit equipped with infrared thermography and video plethysmography modules to capture non-invasive biometric data (body temperature, heart rate). Governed by a Server Arrangement with pre-loaded machine learning logic, the unit executes GPS-Autonomous navigation to patrol high-density zones, identifying subjects exceeding pre-determined thermal thresholds." },
+            { title: "Inventors", body: "Shourya Cheruku (Student Inventor)\nAnshul A. (Student Inventor)\nNihal Gautham (Student Inventor)\nVivasvath (Student Inventor)" },
+            { title: "Application Number", body: "\u2014" }
           ]},
           right: { panels: [
             { title: "Registry Links", links: [
               { label: "Patent Registry", href: "/patents" },
               { label: "Publications", href: "/publications" },
               { label: "Downloads", href: "/downloads" }
+            ]},
+            { title: "Download", links: [
+              { label: "Download PDF", href: "/downloads/ahms-patent.pdf", external: true }
             ]}
           ]}
         },
         {
-          id: "patent-body", type: "twoColumn", compact: true,
-          left: { sections: [
-            { title: "Problem Context", body: "Continuous health monitoring in institutional environments (schools, care facilities, public spaces) requires non-intrusive observation systems that do not disrupt daily activity. Manual monitoring is labor-intensive and provides only intermittent data points." },
-            { title: "Technical Architecture", body: "The system operates on pre-programmed patrol routes within enclosed or semi-enclosed spaces, using passive sensing to establish baseline environmental health metrics. Deviations from baseline trigger alerts to facility administrators.", bullets: [
-              "Infrared thermography for contactless temperature screening",
-              "Video plethysmography for remote vital sign estimation",
-              "Autonomous navigation in high-density environments",
-              "Baseline deviation detection and alert system",
-              "Low-noise operation for non-disruptive monitoring",
-              "Compact form factor for indoor deployment"
-            ]}
-          ]},
-          right: { panels: [
-            { title: "Institutional Context", citation: "This invention was generated within the Blue Blocks Micro Research Institute's longitudinal research environment. Student inventors retain intellectual property ownership, with the Institute facilitating filing and documentation under governance oversight." },
-            { title: "Inventors", citation: "Drone Research Centre student cohort (Ages 9–11)\nBlue Blocks Micro Research Institute" }
-          ]}
+          id: "patent-specs", type: "comparisonTable",
+          header: "Technical Specifications",
+          columns: ["Component Subsystem", "Hardware / Operational Parameters"],
+          rows: [
+            ["Chassis Architecture", "Mobile Monitoring Unit (UAV/Drone configuration) capable of GPS-Autonomous Control and obstacle avoidance via proximity sensing."],
+            ["Biometric Sensors", "Infrared Thermometer for thermal scanning; Video Plethysmography algorithms for remote heart rate/breathing rate analysis."],
+            ["Vision & Recognition", "Imaging Instrument (RGB/RGB-D Camera) integrated with Facial Recognition Modules for subject identification and demographic analysis (Age/Gender)."],
+            ["Compute Logic", "Onboard Processor (RISC/CISC) running Machine Learning Algorithms to compensate for environmental variables (ambient temperature/pressure)."],
+            ["Navigation", "Sensor fusion array including Gyroscopes, Accelerometers, and Motion Trackers for stable flight and \"Point of Origin\" return protocols."],
+            ["Response System", "Audio-visual feedback system (Sound Emitting Device) to issue real-time health alerts to subjects exceeding bio-parameter thresholds."]
+          ]
         },
         {
           id: "patent-citation", type: "twoColumn", compact: true,
