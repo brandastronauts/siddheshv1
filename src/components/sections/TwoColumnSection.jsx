@@ -6,6 +6,17 @@ import SmartImage from '../common/SmartImage';
 import ExpandableText from '../common/ExpandableText';
 import { getIcon } from '../../lib/iconMap';
 
+const URL_REGEX = /(https?:\/\/[^\s,)]+)/g;
+const linkifyText = (text) => {
+  if (typeof text !== 'string' || !URL_REGEX.test(text)) return text;
+  const parts = text.split(URL_REGEX);
+  return parts.map((part, i) =>
+    /^https?:\/\//.test(part) ? (
+      <a key={i} href={part} target="_blank" rel="noopener noreferrer" className="text-link-blue hover:text-secondary-blue underline break-all transition-colors">{part}</a>
+    ) : part
+  );
+};
+
 const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, compact = false, variant }) => {
   const [copied, setCopied] = useState(false);
   const isCards = variant === 'cards';
@@ -119,7 +130,7 @@ const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, compac
             {section.bullets.map((bullet, i) => (
               <li key={i} className="flex items-start gap-2 text-muted-foreground">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan mt-2 flex-shrink-0" />
-                <span>{bullet}</span>
+                <span>{linkifyText(bullet)}</span>
               </li>
             ))}
           </ul>
