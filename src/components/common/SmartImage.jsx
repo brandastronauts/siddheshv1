@@ -193,6 +193,7 @@ const SmartImage = ({
           <img
             src={effectiveSrc}
             alt={alt}
+            loading="lazy"
             onLoad={() => setIsLoaded(true)}
             onError={() => setHasError(true)}
             className={`absolute inset-0 w-full h-full object-cover transition-all duration-500 ${

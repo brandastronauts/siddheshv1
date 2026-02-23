@@ -2259,6 +2259,32 @@ const siteContent = {
             privacyBlur: false,
             caption: ""
           }
+        },
+        {
+          id: "contact-form",
+          type: "form",
+          header: "Submit an Inquiry",
+          description: "Use this form to reach the appropriate team directly. All required fields are marked with an asterisk.",
+          fields: [
+            { name: "name", label: "Full Name", type: "text", required: true, placeholder: "e.g. Dr. Jane Smith" },
+            { name: "email", label: "Institutional Email", type: "email", required: true, placeholder: "you@institution.edu" },
+            { name: "inquiryType", label: "Inquiry Type", type: "select", required: true, options: [
+              { label: "Research Collaboration", value: "research" },
+              { label: "Media Inquiry", value: "media" },
+              { label: "General Question", value: "general" },
+              { label: "Data Access Request", value: "data-access" }
+            ]},
+            { name: "institution", label: "Institution / Organization", type: "text", required: false, placeholder: "Optional" },
+            { name: "phone", label: "Phone Number", type: "text", required: false, placeholder: "Optional" },
+            { name: "message", label: "Message", type: "textarea", required: true, placeholder: "Please describe your inquiry in detail..." }
+          ],
+          submitLabel: "Send Inquiry",
+          submit: {
+            to: "research@blueblocks.in",
+            mediaTo: "press@blueblocks.in",
+            subject: "Website Inquiry",
+            successMessage: "Thank you. Our team will respond within 2–3 working days."
+          }
         }
       ]
     },

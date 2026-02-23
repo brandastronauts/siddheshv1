@@ -6,10 +6,12 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
   const [formData, setFormData] = useState({});
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [honeypot, setHoneypot] = useState('');
 
   const title = header || heading;
   const subtitle = intro || description;
   const emailTo = submit?.to || recipientEmail;
+  const mediaEmailTo = submit?.mediaTo;
   const emailSubject = submit?.subject || `Contact Form Submission`;
   const successMessage = submit?.successMessage || "Draft email opened in your mail client.";
 
@@ -23,6 +25,9 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
         return 'Please enter a valid email address';
       }
     }
+    if (value && value.length > 2000) {
+      return `${field.label} is too long (max 2000 characters)`;
+    }
     return null;
   };
 
@@ -30,7 +35,6 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: null }));
     }
@@ -38,6 +42,9 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
+    // Honeypot check — bots fill this hidden field
+    if (honeypot) return;
     
     // Validate all fields
     const newErrors = {};
@@ -53,11 +60,15 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
       return;
     }
 
+    // Determine recipient based on inquiry type
+    const inquiryType = formData.inquiryType || '';
+    const isMedia = inquiryType === 'media';
+    const recipient = isMedia && mediaEmailTo ? mediaEmailTo : emailTo;
+
     // Build email body
     const emailBody = fields
       .map((field) => {
         const value = formData[field.name] || 'N/A';
-        // For select fields with object options, find the label
         if (field.type === 'select' && field.options?.[0]?.label) {
           const selectedOption = field.options.find(opt => opt.value === value);
           return `${field.label}: ${selectedOption?.label || value}`;
@@ -66,11 +77,21 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
       })
       .join('\n\n');
 
-    const subject = emailSubject.includes(formData.name) 
-      ? emailSubject 
+    // Build subject with inquiry type
+    const inquiryLabel = (() => {
+      const field = fields.find(f => f.name === 'inquiryType');
+      if (field?.options) {
+        const opt = field.options.find(o => o.value === inquiryType);
+        return opt?.label || inquiryType;
+      }
+      return inquiryType;
+    })();
+
+    const subject = inquiryLabel
+      ? `${emailSubject} — ${inquiryLabel} — ${formData.name || 'Website'}`
       : `${emailSubject} — ${formData.name || 'Website'}`;
     
-    const mailtoLink = `mailto:${emailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:${encodeURIComponent(recipient)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
     
     window.open(mailtoLink, '_blank');
     setSubmitted(true);
@@ -89,7 +110,7 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
               <CheckCircle className="w-8 h-8 text-green-600" />
             </div>
             <h3 className="text-2xl font-bold text-deep-ink mb-3">
-              Email Draft Opened
+              Inquiry Submitted
             </h3>
             <p className="text-muted-foreground mb-6">
               {successMessage}
@@ -99,9 +120,9 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
                 setSubmitted(false);
                 setFormData({});
               }}
-              className="text-link-blue hover:text-secondary-blue font-medium"
+              className="text-link-blue hover:text-secondary-blue font-medium min-h-[44px]"
             >
-              Submit another request
+              Submit another inquiry
             </button>
           </motion.div>
         </div>
@@ -142,9 +163,23 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
             onSubmit={handleSubmit} 
-            className="bg-card rounded-2xl p-8 shadow-card border border-border/50"
+            className="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border/50"
           >
-            <div className="space-y-6">
+            {/* Honeypot field — hidden from real users, bots fill it */}
+            <div className="absolute -left-[9999px]" aria-hidden="true">
+              <label htmlFor="website_url_hp">Website</label>
+              <input
+                type="text"
+                id="website_url_hp"
+                name="website_url_hp"
+                tabIndex={-1}
+                autoComplete="off"
+                value={honeypot}
+                onChange={(e) => setHoneypot(e.target.value)}
+              />
+            </div>
+
+            <div className="space-y-5">
               {fields.map((field) => (
                 <div key={field.name}>
                   <label
@@ -152,7 +187,7 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
                     className="block text-sm font-medium text-deep-ink mb-2"
                   >
                     {field.label}
-                    {field.required && <span className="text-red-500 ml-1">*</span>}
+                    {field.required && <span className="text-destructive ml-1">*</span>}
                   </label>
                   
                   {field.type === 'textarea' ? (
@@ -162,8 +197,8 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
                       rows={4}
                       value={formData[field.name] || ''}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-cyan transition-all ${
-                        errors[field.name] ? 'border-red-400' : 'border-border'
+                      className={`w-full px-4 py-3 min-h-[44px] rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-cyan transition-all ${
+                        errors[field.name] ? 'border-destructive' : 'border-border'
                       }`}
                       placeholder={field.placeholder || ''}
                     />
@@ -173,13 +208,12 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
                       name={field.name}
                       value={formData[field.name] || ''}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent-cyan transition-all ${
-                        errors[field.name] ? 'border-red-400' : 'border-border'
+                      className={`w-full px-4 py-3 min-h-[44px] rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent-cyan transition-all ${
+                        errors[field.name] ? 'border-destructive' : 'border-border'
                       }`}
                     >
                       <option value="">Select an option</option>
                       {field.options?.map((option, idx) => {
-                        // Support both string options and {label, value} objects
                         const optionValue = typeof option === 'string' ? option : option.value;
                         const optionLabel = typeof option === 'string' ? option : option.label;
                         return (
@@ -196,15 +230,15 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
                       name={field.name}
                       value={formData[field.name] || ''}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-cyan transition-all ${
-                        errors[field.name] ? 'border-red-400' : 'border-border'
+                      className={`w-full px-4 py-3 min-h-[44px] rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-cyan transition-all ${
+                        errors[field.name] ? 'border-destructive' : 'border-border'
                       }`}
                       placeholder={field.placeholder || ''}
                     />
                   )}
                   
                   {errors[field.name] && (
-                    <p className="mt-2 text-sm text-red-500">{errors[field.name]}</p>
+                    <p className="mt-2 text-sm text-destructive">{errors[field.name]}</p>
                   )}
                 </div>
               ))}
@@ -212,7 +246,7 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
             
             <button
               type="submit"
-              className="mt-8 w-full flex items-center justify-center gap-2 px-6 py-3 bg-primary-navy text-white font-medium rounded-lg hover:bg-secondary-blue transition-all duration-200 hover:shadow-lg"
+              className="mt-8 w-full flex items-center justify-center gap-2 px-6 py-3 min-h-[48px] bg-primary-navy text-white font-medium rounded-lg hover:bg-secondary-blue transition-all duration-200 hover:shadow-lg"
             >
               {submitLabel || 'Submit Request'}
               <Send className="w-4 h-4" />
