@@ -2901,6 +2901,18 @@ const siteContent = {
               description: "Remote epidemiological surveillance network using infrared thermography and video plethysmography.",
               format: "PDF",
               href: "/downloads/ahms-patent.pdf"
+            },
+            {
+              title: "System for Automated Security (UAV) — Patent Drawings",
+              description: "Responsive aerial surveillance system for emergency security operations with encrypted alert ingestion and geolocation triangulation.",
+              format: "PDF",
+              href: "/downloads/security-uav-patent.pdf"
+            },
+            {
+              title: "Borehole Rescue System (BRS) — Patent Drawings",
+              description: "Vertical-access rescue apparatus with adaptive aerial platform, lidar-based collision avoidance, and automated retention mechanisms.",
+              format: "PDF",
+              href: "/downloads/borehole-rescue-patent.pdf"
             }
           ]
         },
