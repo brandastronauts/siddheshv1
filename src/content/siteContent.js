@@ -3885,10 +3885,10 @@ const siteContent = {
     },
 
     "/patents/contactless-delivery-system": {
-      title: "Autonomous Contactless Delivery System (ACDS)",
-      metaDescription: "Patent filing for Autonomous Contactless Delivery System — an autonomous logistics platform developed by Blue Blocks Micro Research Institute students.",
+      title: "Patent Portfolio : Autonomous Contactless Delivery System (ACDS)",
+      metaDescription: "Patent filing for Autonomous Contactless Delivery System — an autonomous logistics ecosystem engineered for contactless distribution during high-risk contagion scenarios.",
       seo: {
-        title: "Autonomous Contactless Delivery System (ACDS) | Patents | Blue Blocks Micro Research Institute",
+        title: "Patent Portfolio : Autonomous Contactless Delivery System (ACDS) | Patents | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/patents/contactless-delivery-system",
         robots: "noindex,nofollow,noarchive,nosnippet"
       },
@@ -3902,49 +3902,49 @@ const siteContent = {
       sections: [
         {
           id: "patent-hero", type: "hero", variant: "publication",
-          headline: "Autonomous Contactless Delivery System (ACDS)",
-          subheadline: "Patent Pending · Application No. TBD · Autonomous Logistics / Public Health Engineering",
+          headline: "Patent Portfolio : Autonomous Contactless Delivery System (ACDS)",
+          subheadline: "Patent Pending · Robotics / Autonomous Logistics / Public Health Engineering",
           image: { src: "/src/assets/placeholders/labs/drone-prototype.jpg", alt: "Contactless Delivery System", variant: "hero" }
         },
         {
           id: "patent-meta", type: "metaStrip",
           items: [
-            { label: "Status", value: "Patent Pending" },
-            { label: "Application No", value: "TBD" },
-            { label: "Category", value: "Autonomous Logistics / Public Health Engineering" },
-            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" }
+            { label: "Filing Date", value: "June 25, 2020" },
+            { label: "Status", value: "Pending" },
+            { label: "Category", value: "Robotics / Autonomous Logistics / Public Health Engineering" },
+            { label: "Age Group", value: "Adolescent Researchers (12-16 years)" }
           ]
         },
         {
           id: "patent-abstract", type: "twoColumn", compact: true,
           left: { sections: [
-            { title: "Abstract", body: "An autonomous logistics platform enabling sterile delivery workflows during contagion scenarios through robotic handling, sanitation atomization, and computer-vision verification systems. Developed during pandemic-era innovation sprints when students identified a real-world need for contactless solutions." }
+            { title: "Patent Abstract", body: "An autonomous logistics ecosystem engineered to facilitate contactless distribution during high-risk contagion scenarios. The architecture integrates a mobile Delivery Unit equipped with a multi-axis robotic arm and an onboard sanitation sprinkler system for the dynamic disinfection of essential goods. Controlled via a centralized Server Arrangement, the unit employs computer vision algorithms for biological quality inspection (ripeness/defects) and GPS-Autonomous telemetry to execute sterile, human-independent supply chain operations." },
+            { title: "Inventors", body: "Akira Mani (Student Inventor)\nAditi Vuppala (Student Inventor)\nUma V Jayaraman (Student Inventor)\nNayonika Vadlamudi (Student Inventor)" },
+            { title: "Application Number", body: "—" }
           ]},
           right: { panels: [
             { title: "Registry Links", links: [
               { label: "Patent Registry", href: "/patents" },
               { label: "Publications", href: "/publications" },
               { label: "Downloads", href: "/downloads" }
+            ]},
+            { title: "Download", links: [
+              { label: "Download PDF", href: "/downloads/acds.pdf", external: true }
             ]}
           ]}
         },
         {
-          id: "patent-body", type: "twoColumn", compact: true,
-          left: { sections: [
-            { title: "Problem Context", body: "During the COVID-19 pandemic, conventional delivery methods posed infection transmission risks. Healthcare facilities and residential areas required a mechanism for safe, contact-free package handover with integrated sanitation protocols." },
-            { title: "Technical Architecture", body: "The system uses a drone-mounted secure container with an automated release mechanism and sanitation atomization. Computer-vision verification confirms delivery integrity.", bullets: [
-              "Secure payload container with locking mechanism",
-              "Sanitation atomization system",
-              "Computer-vision delivery verification",
-              "GPS-guided autonomous navigation",
-              "Weight-adaptive payload suspension",
-              "Return-to-base automation"
-            ]}
-          ]},
-          right: { panels: [
-            { title: "Institutional Context", citation: "This invention was generated within the Blue Blocks Micro Research Institute's longitudinal research environment. Student inventors retain intellectual property ownership, with the Institute facilitating filing and documentation under governance oversight." },
-            { title: "Inventors", citation: "Drone Research Centre student cohort (Ages 10–13)\nBlue Blocks Micro Research Institute" }
-          ]}
+          id: "patent-specs", type: "comparisonTable",
+          header: "Technical Specifications",
+          columns: ["Component Subsystem", "Hardware / Operational Parameters"],
+          rows: [
+            ["Chassis Architecture", "Electromechanical Delivery Unit with GPS-Autonomous Control; capable of 3D movement without ground operator intervention."],
+            ["Manipulation", "Programmable Robotic Arm featuring servo-actuated Upper and Lower Claws (Gripping Structure) for secure payload handling."],
+            ["Sanitation Protocol", "Integrated Sprinkler/Atomizer System dispensing variable concentration fluids (0.1-10% Sodium Hypochlorite, Phenol) for surface disinfection."],
+            ["Vision & Compute", "High-performance Digital Camera utilizing Machine Learning Algorithms for object recognition and quality assurance (Freshness/Ripeness analysis)."],
+            ["Navigation Sensors", "Sensor fusion array including MEMS Accelerometers, Gyroscopes, Collision Sensors, and Proximity Sensors."],
+            ["Payload Integrity", "Thermally Insulated Storage compartment to maintain payload sanctity against external pressure/temperature variables."]
+          ]
         },
         {
           id: "patent-citation", type: "twoColumn", compact: true,
