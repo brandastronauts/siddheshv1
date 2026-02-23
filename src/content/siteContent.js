@@ -2511,15 +2511,127 @@ const siteContent = {
           variant: "stark",
           headline: "Technical Brief: SBB-1",
           subheadline:
-            "Comprehensive technical documentation of the SBB-1 CubeSat payload, flight qualification, and mission outcomes.",
-          primaryCta: { label: "Download Full Brief", href: "/downloads/sbb-1-technical-brief" },
+            "Mission SBB-1 — Flight Qualification, Payload Integration & Valorization. A pedagogical aerospace mission by Blue Blocks Micro Research Institute in collaboration with TakeMe2Space, authorized by IN-SPACe for ISRO PSLV-C62.",
           image: {
-            src: "/src/assets/banners/technical-briefs/sbb-1.jpg",
-            alt: "SBB-1 technical brief visual",
-            variant: "hero",
-            privacyBlur: false,
-            caption: ""
+            src: "/src/assets/banners/technical-brief-aero.jpg",
+            alt: "SBB-1 CubeSat payload mission documentation",
+            variant: "hero"
           }
+        },
+        {
+          id: "sbb1-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Mission Designator", value: "SBB-1" },
+            { label: "Launch Vehicle", value: "ISRO PSLV-C62" },
+            { label: "Authorization", value: "IN-SPACe (Govt. of India)" },
+            { label: "Payload Class", value: "1U CubeSat (Thermal Sensor)" },
+            { label: "Status", value: "Flight-Qualified · Launch Anomaly (Stage 4)" },
+            { label: "Classification", value: "Institutional Archive · Not for Distribution" }
+          ]
+        },
+        {
+          id: "sbb1-abstract",
+          type: "textBlock",
+          sectionName: "Abstract",
+          header: "Mission Overview",
+          body: "Mission SBB-1 represents a first-of-its-kind pedagogical aerospace mission in which adolescent students (ages 12–16) at Blue Blocks Montessori School designed, engineered, and flight-qualified a 1U CubeSat thermal sensor payload for deployment aboard ISRO's Polar Satellite Launch Vehicle (PSLV-C62).\n\nThe Blue Blocks Micro Research Institute served as the pedagogical architecture partner, structuring the mission within a 'Lab-to-Launch' framework that tested adolescent resilience, professional engineering discipline, and regulatory navigation under authentic TRL-9 (Technology Readiness Level 9) constraints.\n\nThe payload successfully passed all flight qualification tests — including thermal vacuum cycling and random vibration testing — and received formal authorization from the Indian National Space Promotion and Authorisation Centre (IN-SPACe), Government of India. The mission launched on 30 December 2024. While the payload met every engineering standard, the PSLV-C62 launch vehicle experienced a Stage 4 ignition failure at T+847 seconds, resulting in a sub-nominal orbit insertion."
+        },
+        {
+          id: "sbb1-valorization",
+          type: "textBlock",
+          sectionName: "Key Finding",
+          header: "Valorization Through Failure",
+          body: "The mission outcome validated the curriculum not through orbital success, but through what the Institute terms 'Valorization' — proving to the students that their engineering was real enough to fail in real ways.\n\nThe Stage 4 anomaly provided an unscripted, high-stakes lesson in aerospace engineering reality. Students confronted genuine mission failure — not a simulated exercise — and were required to process the technical, emotional, and professional dimensions of an outcome beyond their control. This experience is now documented as the single most significant pedagogical event in the Institute's longitudinal study.\n\nThe SBB-1 mission conclusively demonstrates that adolescent-led teams, guided by Montessori principles of self-directed learning and intrinsic motivation, can meet the rigorous technical and regulatory standards required for deployment on national space platforms."
+        },
+        {
+          id: "sbb1-technical",
+          type: "twoColumn",
+          header: "Technical Specifications & Mission Timeline",
+          left: {
+            sections: [
+              {
+                title: "Payload Specifications",
+                bullets: [
+                  "Form Factor: 1U CubeSat standard (10 × 10 × 10 cm)",
+                  "Primary Instrument: Multi-point thermal sensor array",
+                  "Mass: Within PSLV auxiliary payload allocation limits",
+                  "Power: Autonomous battery system with regulated DC output",
+                  "Data Interface: Standard CubeSat communication protocol",
+                  "PCB Design: Student-led, fabricated and assembled in-house",
+                  "Integration Partner: TakeMe2Space (technical collaboration)"
+                ]
+              },
+              {
+                title: "Flight Qualification Tests (Passed)",
+                bullets: [
+                  "Thermal Vacuum Cycling: Simulated orbital thermal extremes (-20°C to +60°C)",
+                  "Random Vibration Testing: Launch-load simulation per ISRO specifications",
+                  "Electromagnetic Compatibility (EMC): Verified non-interference with launch vehicle systems",
+                  "Structural Integrity: Mechanical stress analysis and fit-check verification",
+                  "All tests conducted at ISRO-approved facilities with formal sign-off"
+                ]
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Mission Timeline",
+                links: [
+                  { label: "2023 Q1 — Concept & Team Formation", href: "#" },
+                  { label: "2023 Q2-Q3 — PCB Design & Prototyping", href: "#" },
+                  { label: "2023 Q4 — IN-SPACe Application Filed", href: "#" },
+                  { label: "2024 Q1-Q2 — Technical Reviews & Iterations", href: "#" },
+                  { label: "2024 Q3 — Flight Qualification Tests (Pass)", href: "#" },
+                  { label: "2024 Q4 — IN-SPACe Authorization Granted", href: "#" },
+                  { label: "30 Dec 2024 — PSLV-C62 Launch", href: "#" },
+                  { label: "T+847s — Stage 4 Ignition Anomaly", href: "#" }
+                ]
+              },
+              {
+                title: "Authorization Record",
+                citation: "IN-SPACe Authorization No. IN-SPACe/AUTH/2024/SBB-1 — Government of India, Department of Space. Formal authorization for Blue Blocks Montessori School payload integration aboard ISRO PSLV-C62."
+              }
+            ]
+          }
+        },
+        {
+          id: "sbb1-pedagogical",
+          type: "textBlock",
+          sectionName: "Pedagogical Architecture",
+          header: "The Lab-to-Launch Framework",
+          body: "The 'Lab-to-Launch' framework is the Institute's proprietary pedagogical model for integrating high-stakes industrial projects into the Montessori curriculum. The framework operates on three principles:\n\n1. Authentic Constraints — Students operate within the same regulatory, engineering, and timeline constraints as professional aerospace teams. No simplified or 'educational' versions of standards are used.\n\n2. Self-Directed Navigation — Consistent with Montessori pedagogy, students determine their own work allocation, problem-solving approaches, and team structures. Adult mentors provide domain expertise but do not direct the engineering process.\n\n3. Valorization as Outcome — Success is not measured by mission outcome (orbital deployment) but by the degree to which students internalize professional engineering identity. The question is not 'Did the payload reach orbit?' but 'Do the students now understand themselves as engineers?'\n\nThe SBB-1 mission is the first complete execution of this framework, spanning 18 months from concept to launch. The Stage 4 anomaly, while unplanned, provided the most powerful validation of Principle 3 — students experienced genuine professional failure and demonstrated measurable resilience and reflective capacity in post-mission debriefs."
+        },
+        {
+          id: "sbb1-gallery",
+          type: "galleryGrid",
+          header: "Visual Documentation",
+          columns: 3,
+          images: [
+            { src: "/src/assets/placeholders/labs/avionics.jpg", alt: "Avionics integration bench", caption: "Payload avionics integration" },
+            { src: "/src/assets/placeholders/labs/satellite-hardware.jpg", alt: "CubeSat hardware assembly", caption: "1U CubeSat assembly" },
+            { src: "/src/assets/placeholders/labs/authorization-letter.jpg", alt: "IN-SPACe authorization document", caption: "IN-SPACe authorization" },
+            { src: "/src/assets/placeholders/labs/drone-prototype.jpg", alt: "Prototype testing phase", caption: "Early prototype testing" },
+            { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Flight qualification protocol notes", caption: "Qualification protocols" },
+            { src: "/src/assets/placeholders/labs/space-lab.jpg", alt: "Student workspace during mission", caption: "Mission operations workspace" }
+          ]
+        },
+        {
+          id: "sbb1-archival",
+          type: "textBlock",
+          variant: "muted",
+          body: "This technical brief is maintained as part of the Blue Blocks Micro Research Institute's institutional archive. It is not intended for commercial distribution. All mission data, student identities, and proprietary methodologies are protected under the Institute's governance framework. Citation of this document must reference the institutional DOI and conform to academic standards."
+        },
+        {
+          id: "sbb1-related",
+          type: "relatedCards",
+          header: "Related Documentation",
+          cards: [
+            { title: "IN-SPACe Authorization Letter", description: "Official authorization record archived on Zenodo.", icon: "publication", href: "/publications/in-space-authorization-letter" },
+            { title: "Saparya Conference Presentation", description: "SBB-1 case study presented at AMI Saparya 2026.", icon: "presentation", href: "/presentations/marrakesh-human-capital" },
+            { title: "Downloads Hub", description: "Access mission documents and media kit.", icon: "download", href: "/downloads" }
+          ]
         }
       ]
     },
