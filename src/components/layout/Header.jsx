@@ -17,11 +17,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="h-9 md:h-10 w-9 md:w-10 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-border/20">
+            <div className="h-10 md:h-12 w-10 md:w-12 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-border/20">
               <img 
                 src={logo} 
                 alt={brand.siteName} 
-                className="h-7 md:h-8 w-7 md:w-8 object-contain" 
+                className="h-9 md:h-10 w-9 md:w-10 object-contain" 
               />
             </div>
             <div className="flex flex-col leading-none">
