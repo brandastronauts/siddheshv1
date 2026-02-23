@@ -2173,6 +2173,22 @@ const siteContent = {
         },
 
         {
+          id: "news-faq",
+          type: "accordion",
+          header: "Newsroom FAQs",
+          items: [
+            {
+              q: "Can journalists visit the campus?",
+              a: "Yes, by appointment only. Media visits are scheduled outside of core observational hours to ensure zero interference with the longitudinal study. Please contact media@blueblocks.in at least 5 business days in advance."
+            },
+            {
+              q: "How should I refer to the school vs. the institute?",
+              a: "Please distinguish between the two entities. \"Blue Blocks Montessori School\" is the educational body. \"Blue Blocks Micro Research Institute\" is a research organization. When citing data, please attribute the Institute."
+            }
+          ]
+        },
+
+        {
           id: "news-related",
           type: "relatedCards",
           header: "Related",
