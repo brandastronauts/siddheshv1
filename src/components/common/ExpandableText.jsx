@@ -38,9 +38,9 @@ const ExpandableText = ({
   // Short text — render plainly with no toggle
   if (!text || text.length <= minChars) {
     return (
-      <p className={`text-sm text-muted-foreground leading-relaxed ${textClassName} ${className}`}>
+      <div className={`text-sm text-muted-foreground leading-relaxed whitespace-pre-line ${textClassName} ${className}`}>
         {text}
-      </p>
+      </div>
     );
   }
 
@@ -54,11 +54,11 @@ const ExpandableText = ({
   return (
     <div className={className}>
       {/* Text layer — line-clamp controlled via className */}
-      <p
-        className={`text-sm text-muted-foreground leading-relaxed transition-all duration-300 ${collapsedMobileClass} ${textClassName}`}
+      <div
+        className={`text-sm text-muted-foreground leading-relaxed transition-all duration-300 whitespace-pre-line ${collapsedMobileClass} ${textClassName}`}
       >
         {text}
-      </p>
+      </div>
 
       {/* Toggle — hidden on desktop unless forceDesktop */}
       <button

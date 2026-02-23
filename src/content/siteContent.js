@@ -806,33 +806,118 @@ const siteContent = {
           mainEntity: [
             {
               "@type": "Question",
-              name: "Why not run a proper clinical study with control groups?",
+              name: "What's the difference between 'Jungle Research' and 'Zoo Research'?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text:
-                  "We believe that laboratory isolation distorts natural behavior. A child solving a puzzle in front of a 'researcher' is not the same child building a drone in their own lab space. Ecological truth comes from embedding observation into the daily environment. In micro-research, every child is both subject and agent — the environment doesn't adapt to research; research adapts to the environment."
+                text: "Zoo Research brings children to labs or exposes them to unfamiliar observers. The setting is controlled but unnatural — children know they're being studied, so they perform. Jungle Research observes children in their everyday environment with familiar adults present. Nothing changes. Behavior stays authentic. Access spans years, not hours. We only conduct Jungle Research."
               }
             },
             {
               "@type": "Question",
-              name: "How do you maintain scientific rigor without a control group?",
+              name: "What are the 'Four Gates' and why can't studies bypass them?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text:
-                  "By maintaining 15 years of continuous internal comparison: the same children, tracked over time, compared against themselves at earlier developmental stages. We don't need to compare Child A to Child B; we compare Child A at age 5 to Child A at age 15. Each child becomes their own control over the longitudinal arc."
+                text: "Four checkpoints every study must pass before data collection begins. Gate 1 (Longitudinal): Does this connect to children we've observed before? Gate 2 (Naturalistic): Can we observe without disrupting the environment? Gate 3 (Specificity): Is the question bounded and precise — not vague? Gate 4 (Micro): One question, under three weeks of collection, under five minutes per observation, single output. Fail any gate, the study gets redesigned or rejected. No exceptions."
               }
             },
             {
               "@type": "Question",
-              name: "How do you handle consent for observing children?",
+              name: "What does 'Continuity Advantage' mean?",
               acceptedAnswer: {
                 "@type": "Answer",
-                text:
-                  "Parental consent is obtained at enrollment. Parents are informed that anonymized behavioral observations are part of the educational program. They receive annual summaries of what types of data are collected. Any parent can opt their child out of observation at any time, with no effect on the child's educational experience."
+                text: "Most research produces snapshots — isolated observations at single points in time. We produce something closer to cinema — the same children observed across developmental phases, year after year. This reveals what episodic observation misses: how behaviors emerge, how they evolve, what triggers transitions, what persists."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "How do you prevent observer bias when Fellows already know the children?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Three ways. First, the See/Hear Rule: record only what you can see or hear. Actions, words, timing, context — nothing else. Second, inter-rater reliability: Fellows record the same footage, we compare sheets, discrepancies reveal drift into interpretation. We require 80% agreement minimum before deployment and reassess every quarter. Third, disclosure: every publication states that embedded observers have perspectives we reduce but do not eliminate."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "What qualifications do your observers need?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Per BEOP v1.0: professional Montessori credential (AMI, AMS, or equivalent), minimum three months working in the specific environment, eight hours of BEOP Observer Training, demonstrated inter-rater reliability at 80% or higher, quarterly reliability checks, and annual ethics refresher."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "What's the difference between observation and interpretation?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Observation records behavior: 'Child attempted task four times; completed on fifth attempt.' Interpretation assigns meaning: 'Child struggled.' We capture actions, exact words, timing, context. We don't record emotions, motivations, or judgments — those belong in analysis, clearly separated from the raw record."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "You acknowledge you can't establish causation. What can you establish?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Correlations, patterns, sequences, temporal relationships. We observe that X precedes Y, or that children who do A tend to also do B. We do not claim X causes Y — that requires experimental manipulation, which we don't conduct. Our contribution is pattern detection across time."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "Your sample isn't random — families chose Montessori. How does that affect findings?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "It's a selection effect we state explicitly. Our panel consists of children whose families opted into this educational approach — that's not representative of all children. Findings may differ in other contexts, populations, or pedagogies. We note this in every publication."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "What happens to findings that contradict established Montessori literature?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "They go into the archive like everything else. Methodological honesty means documenting what we observe, not what we expected. The Montessori tradition gives us our observation culture — systematic watching, careful recording, pattern recognition. It doesn't predetermine our conclusions."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "Why do you publish to Zenodo?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Zenodo provides DOIs, version control, and permanent archival — the infrastructure required for research that will be cited and built upon. Every micro-study becomes a citable, permanent record. We also pursue peer review for work that warrants it. Zenodo and peer-reviewed journals serve different functions; we use both."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "What happens to a study that produces no clear pattern?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "It gets documented with 'no significant pattern observed' as the finding. Null results are results — they stop other researchers from chasing the same dead end. We record what we hypothesized, what we observed, and why the data didn't converge. The archive includes failures."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "Can parents opt out of having their child observed?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Yes. Opted-out children are excluded from all data collection. Their behavior is never recorded, even if a protocol is running in their environment. This applies retroactively: if a parent withdraws consent, we remove that child's data from any unpublished study. The consent process is documented in MREF v1.0."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "How is children's privacy protected in published research?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Names become codes at point of collection — not later. Campus names become Site A, Site B. Age is recorded in years and months, never birthdates. Anonymization happens during data capture, not during publication prep. The Child Data Classification Standard (CDCS v1.0) defines four tiers of data sensitivity with handling requirements for each."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "Who has oversight of research ethics?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Internal ethics review is mandatory before any publication. The review checks consent compliance, anonymization completeness, and whether limitations are accurately stated. We follow MREF v1.0 standards and document compliance in every publication. The ethics framework itself is published — anyone can assess whether we follow our own rules."
               }
             }
           ]
-        }
+        },
         {
           "@context": "https://schema.org",
           "@type": "CreativeWork",
@@ -948,13 +1033,11 @@ const siteContent = {
           items: [
             {
               q: "Example A — The 3-Day Material Choice Study",
-              a:
-                "Question: What material do children choose first when entering the prepared environment?\n\nProtocol: Record child's age (years + months), first material touched, time of entry.\n\nTime Cost: 10 seconds per child."
+              a: "Question: What material do children choose first when entering the prepared environment?\n\nProtocol: Record child's age (years + months), first material touched, time of entry.\n\nTime Cost: 10 seconds per child."
             },
             {
               q: "Example B — The 2-Week Help Study",
-              a:
-                "Question: When do children help each other without adult prompting?\n\nProtocol: Record helper age, recipient age, type of help, adult presence.\n\nTime Cost: 2 minutes per incident."
+              a: "Question: When do children help each other without adult prompting?\n\nProtocol: Record helper age, recipient age, type of help, adult presence.\n\nTime Cost: 2 minutes per incident."
             }
           ]
         },
@@ -965,19 +1048,16 @@ const siteContent = {
           header: "Methodology Fundamentals",
           items: [
             {
-              q: "Why not run a proper clinical study with control groups?",
-              a:
-                "We believe that laboratory isolation distorts natural behavior. A child solving a puzzle in front of a 'researcher' is not the same child building a drone in their own lab space. Ecological truth comes from embedding observation into the daily environment. In micro-research, every child is both subject and agent — the environment doesn't adapt to research; research adapts to the environment."
+              q: "Q1.1: What's the difference between 'Jungle Research' and 'Zoo Research'?",
+              a: "Zoo Research brings children to labs or exposes them to unfamiliar observers. The setting is controlled but unnatural — children know they're being studied, so they perform. Jungle Research observes children in their everyday environment with familiar adults present. Nothing changes. Behavior stays authentic. Access spans years, not hours. We only conduct Jungle Research. Any study requiring artificial conditions or external observers gets rejected at the design stage — not as preference, but as policy."
             },
             {
-              q: "How is micro-research different from action research or ethnography?",
-              a:
-                "Action research seeks to change the environment. Ethnography seeks to describe it holistically. Micro-research does neither. We observe bounded behavioral events — single variables, short duration, repeated across time. We don't interpret culture. We don't intervene. We record specific actions and accumulate frequency data over years."
+              q: "Q1.2: What are the 'Four Gates' and why can't studies bypass them?",
+              a: "Four checkpoints every study must pass before data collection begins. Gate 1 (Longitudinal): Does this connect to children we've observed before? Gate 2 (Naturalistic): Can we observe without disrupting the environment? Gate 3 (Specificity): Is the question bounded and precise — not vague? Gate 4 (Micro): One question, under three weeks of collection, under five minutes per observation, single output. Fail any gate, the study gets redesigned or rejected. No exceptions. The gates exist because loose questions produce unusable data."
             },
             {
-              q: "Why do you call it 'micro' if the dataset spans 15 years?",
-              a:
-                "The 'micro' refers to the unit of observation, not the scope of the project. Each individual study is small: one question, one variable, under five minutes to record. The power comes from accumulating thousands of these micro-observations across years. The dataset is macro. The methodology is micro."
+              q: "Q1.3: What does 'Continuity Advantage' mean?",
+              a: "Most research produces snapshots — isolated observations at single points in time. We produce something closer to cinema — the same children observed across developmental phases, year after year. This reveals what episodic observation misses: how behaviors emerge, how they evolve, what triggers transitions, what persists. Institutions with rotating subjects and temporary access cannot replicate this. Continuity is our primary methodological asset."
             }
           ]
         },
@@ -988,19 +1068,16 @@ const siteContent = {
           header: "Observer Protocol & Bias Mitigation",
           items: [
             {
-              q: "How do you prevent observer bias when Fellows are also teachers?",
-              a:
-                "By constraining what they record. A Fellow doesn't judge whether a child is 'engaged' or 'struggling.' They record: 'Child picked up material at 9:14. Put it down at 9:17. Repeated sequence 3 times.' The protocol forces behavioral description. Interpretation is separated from observation and happens later, during synthesis."
+              q: "Q2.1: How do you prevent observer bias when Fellows already know the children?",
+              a: "Three ways. First, the See/Hear Rule: record only what you can see or hear. Actions, words, timing, context — nothing else. 'Child was frustrated' fails. 'Child pushed materials away, said I can't do this' passes. Second, inter-rater reliability: Fellows record the same footage, we compare sheets, discrepancies reveal drift into interpretation. We require 80% agreement minimum before deployment and reassess every quarter. Third, disclosure: every publication states that embedded observers have perspectives we reduce but do not eliminate."
             },
             {
-              q: "What training do Fellows receive before collecting data?",
-              a:
-                "Every Fellow completes a calibration period: they run the same protocol simultaneously and independently, then compare records. If inter-observer agreement falls below 85%, the protocol is simplified until agreement is reached. Only then does live data collection begin."
+              q: "Q2.2: What qualifications do your observers need?",
+              a: "Per BEOP v1.0: professional Montessori credential (AMI, AMS, or equivalent), minimum three months working in the specific environment, eight hours of BEOP Observer Training, demonstrated inter-rater reliability at 80% or higher, quarterly reliability checks, and annual ethics refresher. We don't use untrained volunteers. Embedded observation requires trained observers — that's the trade-off."
             },
             {
-              q: "What happens when a Fellow's presence does affect the child's behavior?",
-              a:
-                "It happens less than people expect, because Fellows are already part of the environment. They're not visitors. But when it does happen — a child performing for the observer, for example — the Fellow flags it in the record. Flagged entries are excluded from pattern analysis but retained in the raw dataset for transparency."
+              q: "Q2.3: What's the difference between observation and interpretation?",
+              a: "Observation records behavior: 'Child attempted task four times; completed on fifth attempt.' Interpretation assigns meaning: 'Child struggled.' We capture actions, exact words, timing, context. We don't record emotions, motivations, or judgments — those belong in analysis, clearly separated from the raw record. This separation is what makes our data usable by other researchers."
             }
           ]
         },
@@ -1011,19 +1088,16 @@ const siteContent = {
           header: "Data Quality & Limitations",
           items: [
             {
-              q: "How do you maintain scientific rigor without a control group?",
-              a:
-                "By maintaining 15 years of continuous internal comparison: the same children, tracked over time, compared against themselves at earlier developmental stages. We don't need to compare Child A to Child B; we compare Child A at age 5 to Child A at age 15. Each child becomes their own control over the longitudinal arc."
+              q: "Q3.1: You acknowledge you can't establish causation. What can you establish?",
+              a: "Correlations, patterns, sequences, temporal relationships. We observe that X precedes Y, or that children who do A tend to also do B. We do not claim X causes Y — that requires experimental manipulation, which we don't conduct. Our contribution is pattern detection across time: seeing what emerges over years of continuous observation. Causal claims belong to controlled experiments. Descriptive claims grounded in extensive naturalistic data belong to us."
             },
             {
-              q: "What are the known limitations of this methodology?",
-              a:
-                "Three primary limitations: (1) The dataset is site-specific — our findings describe what happens in this particular prepared environment, not all environments. (2) Observer-as-teacher introduces role conflict that calibration reduces but cannot eliminate. (3) Small cohort sizes mean individual outliers have outsized statistical influence. We document all three in every publication."
+              q: "Q3.2: Your sample isn't random — families chose Montessori. How does that affect findings?",
+              a: "It's a selection effect we state explicitly. Our panel consists of children whose families opted into this educational approach — that's not representative of all children. Findings may differ in other contexts, populations, or pedagogies. We note this in every publication. Generalization requires evidence from multiple settings; we provide one data point, not universal claims."
             },
             {
-              q: "Are your findings reproducible?",
-              a:
-                "The protocols are reproducible. The dataset is unique. Our goal is to make the methodology framework open-source via Zenodo so that other embedded institutions can replicate the approach. We publish full protocols, recording sheets, and calibration procedures for this reason."
+              q: "Q3.3: What happens to findings that contradict established Montessori literature?",
+              a: "They go into the archive like everything else. Methodological honesty means documenting what we observe, not what we expected. The Montessori tradition gives us our observation culture — systematic watching, careful recording, pattern recognition. It doesn't predetermine our conclusions."
             }
           ]
         },
@@ -1034,14 +1108,12 @@ const siteContent = {
           header: "Publication & Evidence",
           items: [
             {
-              q: "Why do you publish to Zenodo instead of traditional journals?",
-              a:
-                "Speed and permanence. Traditional peer review takes 12–18 months. Zenodo gives us a DOI within days. Our micro-studies are small, bounded, and self-contained — they don't need 8,000-word journal articles. A 4-page dataset publication with methodology, raw data, and basic analysis serves the scientific record better than waiting two years for a prestige journal."
+              q: "Q4.1: Why do you publish to Zenodo?",
+              a: "Zenodo provides DOIs, version control, and permanent archival — the infrastructure required for research that will be cited and built upon. Every micro-study becomes a citable, permanent record. We also pursue peer review for work that warrants it. Zenodo and peer-reviewed journals serve different functions; we use both."
             },
             {
-              q: "How do you ensure publication quality without traditional peer review?",
-              a:
-                "Internal review by the Research Council, which includes external advisors. Every publication passes three checks: (1) Protocol adherence — did the Fellow follow the recording procedure? (2) Data integrity — are there gaps, anomalies, or flagged entries? (3) Anonymization — are all identifying details removed? This isn't peer review in the traditional sense, but it enforces a quality floor."
+              q: "Q4.2: What happens to a study that produces no clear pattern?",
+              a: "It gets documented with 'no significant pattern observed' as the finding. Null results are results — they stop other researchers from chasing the same dead end. We record what we hypothesized, what we observed, and why the data didn't converge. The archive includes failures. Selective publication of only positive results is a known way to corrupt an evidence base; we avoid it."
             }
           ]
         },
@@ -1052,19 +1124,16 @@ const siteContent = {
           header: "Ethics & Child Protection",
           items: [
             {
-              q: "How do you handle consent for observing children?",
-              a:
-                "Parental consent is obtained at enrollment. Parents are informed that anonymized behavioral observations are part of the educational program. They receive annual summaries of what types of data are collected. Any parent can opt their child out of observation at any time, with no effect on the child's educational experience."
+              q: "Q5.1: Can parents opt out of having their child observed?",
+              a: "Yes. Opted-out children are excluded from all data collection. Their behavior is never recorded, even if a protocol is running in their environment. This applies retroactively: if a parent withdraws consent, we remove that child's data from any unpublished study. The consent process is documented in MREF v1.0."
             },
             {
-              q: "What data do you store about individual children?",
-              a:
-                "Behavioral records only. No photographs, no video, no audio recordings. Children are identified by numeric codes, not names. Age is recorded in years and months. Gender is recorded only when the specific protocol requires it. Location within the environment is recorded generically (e.g., 'practical life area') not specifically."
+              q: "Q5.2: How is children's privacy protected in published research?",
+              a: "Names become codes at point of collection — not later. Campus names become Site A, Site B. Age is recorded in years and months, never birthdates. Anonymization happens during data capture, not during publication prep. The Child Data Classification Standard (CDCS v1.0) defines four tiers of data sensitivity with handling requirements for each."
             },
             {
-              q: "Who has access to the raw dataset?",
-              a:
-                "The Research Director and designated Research Council members. Raw data never leaves the internal archive. Published datasets are fully anonymized — codes are reassigned so that even internal staff cannot re-identify subjects from published data. The anonymization protocol is documented and available for institutional review."
+              q: "Q5.3: Who has oversight of research ethics?",
+              a: "Internal ethics review is mandatory before any publication. The review checks consent compliance, anonymization completeness, and whether limitations are accurately stated. We follow MREF v1.0 standards and document compliance in every publication. The ethics framework itself is published — anyone can assess whether we follow our own rules."
             }
           ]
         },
