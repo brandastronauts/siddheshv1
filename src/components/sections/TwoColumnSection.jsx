@@ -19,12 +19,13 @@ const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, compac
   const renderCta = (cta) => {
     if (!cta) return null;
     
-    const isInternal = cta.href?.startsWith('/');
-    const isExternal = cta.href?.startsWith('http');
+    const isFile = /\.(pdf|zip|docx?|xlsx?|pptx?|txt|csv)$/i.test(cta.href);
+    const isInternal = cta.href?.startsWith('/') && !isFile;
+    const isExternal = cta.href?.startsWith('http') || cta.external || isFile;
     const isDownload = cta.download;
     const className = "inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group";
     
-    const Icon = isDownload ? Download : isExternal ? ExternalLink : ArrowRight;
+    const Icon = isDownload || isFile ? Download : isExternal ? ExternalLink : ArrowRight;
     const content = (
       <>
         {cta.label}
