@@ -16,19 +16,19 @@ const Header = () => {
       <div className="container-grid">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-3 group">
-            <div className="h-10 md:h-12 w-10 md:w-12 rounded-lg bg-white flex items-center justify-center shadow-sm border border-border/30 overflow-hidden">
+          <Link to="/" className="flex items-center gap-2.5 group">
+            <div className="h-9 md:h-10 w-9 md:w-10 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-border/20">
               <img 
                 src={logo} 
                 alt={brand.siteName} 
-                className="h-8 md:h-10 w-auto object-contain" 
+                className="h-7 md:h-8 w-7 md:w-8 object-contain" 
               />
             </div>
-            <div className="hidden md:flex flex-col leading-tight">
-              <span className="text-sm font-bold text-deep-ink group-hover:text-primary-navy transition-colors">
+            <div className="flex flex-col leading-none">
+              <span className="text-[13px] md:text-sm font-bold text-deep-ink group-hover:text-primary-navy transition-colors tracking-tight">
                 Blue Blocks
               </span>
-              <span className="text-[10px] font-semibold text-muted-foreground uppercase tracking-wider">
+              <span className="text-[9px] md:text-[10px] font-semibold text-muted-foreground uppercase tracking-[0.08em]">
                 Micro Research Institute
               </span>
             </div>
