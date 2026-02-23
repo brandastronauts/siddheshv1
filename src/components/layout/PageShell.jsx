@@ -3,6 +3,19 @@ import { useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import siteContent from '../../content/siteContent';
+import { buildGlobalSchemas, buildBreadcrumbsFromPath } from '../../lib/schemaBuilders';
+
+// Schema types auto-generated globally — filter these from page-specific schemas to avoid duplicates
+const GLOBAL_SCHEMA_TYPES = new Set([
+  'Organization', 'ResearchOrganization', 'EducationalOrganization',
+  'WebSite', 'WebPage', 'BreadcrumbList',
+]);
+
+const isGlobalSchemaType = (schema) => {
+  const type = schema['@type'];
+  const types = Array.isArray(type) ? type : [type];
+  return types.every(t => GLOBAL_SCHEMA_TYPES.has(t));
+};
 
 const PageShell = ({ children }) => {
   const location = useLocation();
@@ -89,23 +102,35 @@ const PageShell = ({ children }) => {
     }
 
     // Remove old schema scripts
-    document.querySelectorAll('script[data-schema="page"]').forEach(el => el.remove());
+    document.querySelectorAll('script[data-schema]').forEach(el => el.remove());
 
-    // Inject JSON-LD schemas
-    if (page.schemas && Array.isArray(page.schemas)) {
-      page.schemas.forEach((schema, index) => {
-        const script = document.createElement('script');
-        script.type = 'application/ld+json';
-        script.setAttribute('data-schema', 'page');
-        script.setAttribute('data-schema-index', index.toString());
-        script.textContent = JSON.stringify(schema);
-        document.head.appendChild(script);
-      });
-    }
+    // Build global schemas (Organization, WebSite, WebPage, BreadcrumbList)
+    const breadcrumbs = buildBreadcrumbsFromPath(location.pathname);
+    const globalSchemas = buildGlobalSchemas({
+      pageName: page.title || '',
+      pagePath: location.pathname,
+      breadcrumbs,
+    });
+
+    // Filter page-specific schemas to remove types already covered by global schemas
+    const pageSpecificSchemas = (page.schemas || []).filter(s => !isGlobalSchemaType(s));
+
+    // Merge: global schemas first, then page-specific
+    const allSchemas = [...globalSchemas, ...pageSpecificSchemas];
+
+    // Inject all JSON-LD schemas
+    allSchemas.forEach((schema, index) => {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.setAttribute('data-schema', index < globalSchemas.length ? 'global' : 'page');
+      script.setAttribute('data-schema-index', index.toString());
+      script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
+    });
 
     // Cleanup on unmount
     return () => {
-      document.querySelectorAll('script[data-schema="page"]').forEach(el => el.remove());
+      document.querySelectorAll('script[data-schema]').forEach(el => el.remove());
     };
   }, [location.pathname, page]);
 

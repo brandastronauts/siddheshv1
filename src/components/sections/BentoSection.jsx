@@ -1,5 +1,6 @@
 import SmartImage from '../common/SmartImage';
 import { motion } from 'framer-motion';
+import ExpandableText from '../common/ExpandableText';
 
 const BentoSection = ({ heading, header, intro, items }) => {
   const title = header || heading;
@@ -76,9 +77,12 @@ const BentoSection = ({ heading, header, intro, items }) => {
                     {item.headline || item.title}
                   </h3>
                   
-                  <p className="text-muted-foreground leading-relaxed text-sm">
-                    {item.body || item.description}
-                  </p>
+                  <ExpandableText
+                    text={item.body || item.description}
+                    collapsedLines={4}
+                    minChars={200}
+                    textClassName="leading-relaxed"
+                  />
                   
                   {item.footer && (
                     <p className="mt-4 text-xs font-medium text-accent-cyan uppercase tracking-wider">

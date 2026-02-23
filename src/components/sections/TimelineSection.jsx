@@ -1,3 +1,5 @@
+import ExpandableText from '../common/ExpandableText';
+
 const TimelineSection = ({ heading, header, items = [] }) => {
   const title = header || heading;
   return (
@@ -29,9 +31,11 @@ const TimelineSection = ({ heading, header, items = [] }) => {
                   <h3 className="text-xl font-semibold text-deep-ink mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-muted-foreground">
-                    {item.description || item.body}
-                  </p>
+                  <ExpandableText
+                    text={item.description || item.body}
+                    collapsedLines={4}
+                    minChars={200}
+                  />
                 </div>
                 
                 {/* Dot */}
