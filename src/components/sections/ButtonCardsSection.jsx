@@ -10,6 +10,15 @@ import booksImg from '@/assets/cards/books-card.jpg';
 import teamImg from '@/assets/cards/team-card.jpg';
 import downloadsImg from '@/assets/cards/downloads-card.jpg';
 
+// Image map to override content-provided URLs with local assets
+const cardImageMap = {
+  'Publications': publicationsImg,
+  'Patents': patentsImg,
+  'Books': booksImg,
+  'Team': teamImg,
+  'Downloads': downloadsImg,
+};
+
 // Fallback image for failed loads
 const FALLBACK_IMAGE = publicationsImg;
 
@@ -123,7 +132,7 @@ const ButtonCardsSection = ({ heading, header, items, cards, footerNote }) => {
             const IconComponent = getIcon(item.icon);
             const cardTitle = item.headline || item.title;
             const cardBody = item.body || item.description;
-            const cardImage = item.image;
+            const cardImage = cardImageMap[cardTitle] || item.image;
             
             return (
               <motion.div
