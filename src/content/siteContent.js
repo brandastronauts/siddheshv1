@@ -1870,16 +1870,19 @@ const siteContent = {
           cards: [
             {
               headline: "Individual Researchers",
+              icon: "user",
               body: "For PhD candidates, Post-Docs, and Faculty seeking data access or fellowships. Apply for visiting fellowships (2-8 weeks) or dataset access (requires IRB approval).",
               button: { label: "Apply for Scholar Credentials", href: "#collaborate-form-apply" }
             },
             {
               headline: "Institutional Partners",
+              icon: "building",
               body: "For Universities, Research Organizations, Policy Institutes, and NGOs seeking formal alliance.",
               button: { label: "Request MOU Guidelines", href: "#collaborate-form-apply" }
             },
             {
               headline: "Press & Publishing",
+              icon: "newspaper",
               body: "For media inquiries, citation permissions, and interview requests.",
               button: { label: "Download Media Kit", href: "#collaborate-form-apply" }
             }
