@@ -257,7 +257,7 @@ const siteContent = {
               tag: "ISRO / IN-SPACe / Pedagogical Review",
               headline: "Mission SBB-1: Flight Qualification & Valorization",
               body:
-                "Blue Blocks Montessori School, in technical collaboration with TakeMe2Space, integrated a 1U payload aboard ISRO PSLV-C62. The Blue Blocks Micro Research Institute served as the pedagogical partner, structuring the mission to test adolescent resilience. While the payload met all flight qualifications (Thermal/Vibration), the launch vehicle's Stage 4 ignition failure at T+847 seconds provided the ultimate lesson. The mission outcome validated the curriculum not through orbital success, but through Valorization: proving to the students that their engineering was \\\"real enough to fail in real ways.",
+                "Blue Blocks Montessori School, in technical collaboration with TakeMe2Space, integrated a 1U payload aboard ISRO PSLV-C62. The Blue Blocks Micro Research Institute served as the pedagogical partner, structuring the mission to test adolescent resilience. While the payload met all flight qualifications (Thermal/Vibration), the launch vehicle's Stage 4 ignition failure at T+847 seconds provided the ultimate lesson. The mission outcome validated the curriculum not through orbital success, but through Valorization: proving to the students that their engineering was \"real enough to fail in real ways.",
               action: { label: "Read Technical Brief", href: "/technical-briefs/sbb-1" }
             },
             {
@@ -271,7 +271,7 @@ const siteContent = {
               tag: "International Diplomacy / MONISC",
               headline: "Oslo Summit: A Global Benchmark",
               body:
-                "On January 28, 2026, at the Nobel Peace Center, Founder Pavan Goyal delivered the \\\"World Premiere\\\" of the Blue Blocks Innovation Pedagogy (0–18). Selected by the Monisc Committee (supported by the Norwegian UNESCO Commission) as a \\\"global benchmark\\\" for integrating space science, this session formally releases our student-generated datasets to the international network. The Zenodo archive preserves the complete administrative context: the Official Invitation, the Pedagogical Framework presentation, and the open-data release protocols.",
+                "On January 28, 2026, at the Nobel Peace Center, Founder Pavan Goyal delivered the \"World Premiere\" of the Blue Blocks Innovation Pedagogy (0–18). Selected by the Monisc Committee (supported by the Norwegian UNESCO Commission) as a \"global benchmark\" for integrating space science, this session formally releases our student-generated datasets to the international network. The Zenodo archive preserves the complete administrative context: the Official Invitation, the Pedagogical Framework presentation, and the open-data release protocols.",
               action: { label: "Access Proceedings Archive", href: "/proceedings/oslo-2026" }
             }
           ]
@@ -321,7 +321,7 @@ const siteContent = {
               status: "[In Draft - Internal Review]",
               title: "Standardization of Micro-Observations in Non-Clinical Settings",
               body:
-                "Defining the protocol for 25 embedded fellows to document behavioral data without disrupting the \\\"Children's House\\\" environment."
+                "Defining the protocol for 25 embedded fellows to document behavioral data without disrupting the \"Children's House\" environment."
             },
             {
               status: "[Forensic Analysis]",
@@ -350,7 +350,7 @@ const siteContent = {
                 "Yes. It is a distinct internal entity with its own governance and objectives. While Blue Blocks Montessori School focuses on the Cambridge/AMI curriculum, the Institute is solely dedicated to longitudinal observation and providing the pedagogical architecture for high-stakes industrial projects (SBB-1, Patents)."
             },
             {
-              q: "What does \\\"Micro Research\\\" mean?",
+              q: "What does \"Micro Research\" mean?",
               a:
                 "It is a protocol of small-scale, high-frequency observation studies that run continuously for years. Rather than conducting one large study on 'how children learn math,' we execute 20+ micro-studies per year—each addressing one specific variable, recordable in under 5 minutes, sustained over time. The power of 'Micro' lies in accumulation; over 15 years, 200+ studies, 847 children generating a granular dataset becomes significant."
             },
@@ -367,7 +367,7 @@ const siteContent = {
             {
               q: "How do you ensure data validity in a non-clinical setting?",
               a:
-                "We rely on \\\"Ecological Consistency\\\" rather than sterile isolation. Standard clinical studies often suffer from the \\\"Visitor Effect\\\"—where research subjects exhibit altered behavior because a stranger is watching. Our data is collected by Embedded Research Fellows (the students' daily guides) who have spent 35,000+ hours with the students. This invisibility allows us to detect subtle, naturalistic developmental patterns that sporadic external observation invariably misses."
+                "We rely on \"Ecological Consistency\" rather than sterile isolation. Standard clinical studies often suffer from the \"Visitor Effect\"—where research subjects exhibit altered behavior because a stranger is watching. Our data is collected by Embedded Research Fellows (the students' daily guides) who have spent 35,000+ hours with the students. This invisibility allows us to detect subtle, naturalistic developmental patterns that sporadic external observation invariably misses."
             },
             {
               q: "What is the role of the Innovation Labs?",
@@ -1275,7 +1275,7 @@ const siteContent = {
           cards: [
             {
               tag: "Early Draft",
-              headline: "The \\\"Sovereign IP\\\" Effect: Longitudinal Impact of Patent Ownership",
+              headline: "The \"Sovereign IP\" Effect: Longitudinal Impact of Patent Ownership",
               meta: "Domain: Innovation | Est: 2027",
               body:
                 "Defining the protocol for 25 embedded fellows to document behavioral data without disrupting the \"Children's House\" environment.",
@@ -2040,7 +2040,7 @@ const siteContent = {
               tag: "International",
               headline: "Nobel Peace Center Features Student Innovation",
               excerpt:
-                "Blue Blocks Micro Research Institute student projects have been selected for exhibition as exemplars of \\\"Youth-Led Innovation,\\\" validating our 0-18 Sovereignty Model on a global stage.",
+                "Blue Blocks Micro Research Institute student projects have been selected for exhibition as exemplars of \"Youth-Led Innovation,\" validating our 0-18 Sovereignty Model on a global stage.",
               cta: { label: "Read Coverage", href: "/newsroom/coverage/nobel-peace-center" },
               image: { src: "/src/assets/placeholders/card-default.jpg", alt: "International recognition", variant: "card", privacyBlur: false }
             }
@@ -2064,7 +2064,7 @@ const siteContent = {
             },
             {
               tag: "Student IP",
-              headline: "Utility Patent #4421 Filed: The \\\"Guardian\\\" Drone",
+              headline: "Utility Patent #4421 Filed: The \"Guardian\" Drone",
               meta: "September 02, 2025",
               body:
                 "The Drone Research Centre has filed its fifth utility patent, marking a significant milestone in our study of 'Innovation Agency' in the 9-11 age group. Five utility patents filed to date.",
@@ -2107,7 +2107,7 @@ const siteContent = {
               title: "Attribution Standards",
               icon: "file",
               body:
-                "Correct naming conventions for \\\"Blue Blocks Micro Research Institute\\\" and DOI referencing styles.",
+                "Correct naming conventions for \"Blue Blocks Micro Research Institute\" and DOI referencing styles.",
               cta: { label: "View Style Guide", href: "/publications" }
             }
           ]
