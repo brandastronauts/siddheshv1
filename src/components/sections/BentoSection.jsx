@@ -31,15 +31,8 @@ const BentoSection = ({ heading, header, intro, items }) => {
           </motion.p>
         )}
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {items?.map((item, index) => {
-            // Size mapping for responsive grid spans
-            const sizeClasses = {
-              lg: 'lg:col-span-2',
-              md: 'lg:col-span-1',
-              sm: 'lg:col-span-1',
-            };
-            const spanClass = sizeClasses[item.size] || '';
             
             return (
               <motion.div
@@ -48,7 +41,7 @@ const BentoSection = ({ heading, header, intro, items }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 border border-border/50 ${spanClass}`}
+                className={`bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 border border-border/50 flex flex-col`}
               >
                 {/* Image */}
                 {item.image && (
@@ -66,7 +59,7 @@ const BentoSection = ({ heading, header, intro, items }) => {
                   </div>
                 )}
                 
-                <div className="p-6 lg:p-8">
+                <div className="p-6 lg:p-8 flex flex-col flex-1">
                   {item.tag && (
                     <span className="inline-block px-3 py-1 text-xs font-medium text-accent-cyan bg-accent-cyan/10 rounded-full mb-4">
                       {item.tag}

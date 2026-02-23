@@ -16,6 +16,15 @@ import satelliteHardwareImg from '@/assets/placeholders/labs/satellite-hardware.
 import dronePrototypeImg from '@/assets/placeholders/labs/drone-prototype.jpg';
 import lunarSimImg from '@/assets/placeholders/labs/lunar-sim.jpg';
 
+// Import publication/patent images
+import authorizationLetterImg from '@/assets/placeholders/labs/authorization-letter.jpg';
+import conferencePresentationImg from '@/assets/placeholders/labs/conference-presentation.jpg';
+import patentUavImg from '@/assets/placeholders/labs/patent-uav.jpg';
+import patentRescueImg from '@/assets/placeholders/labs/patent-rescue.jpg';
+import patentDeliveryImg from '@/assets/placeholders/labs/patent-delivery.jpg';
+import patentMedicalImg from '@/assets/placeholders/labs/patent-medical.jpg';
+import patentHealthImg from '@/assets/placeholders/labs/patent-health.jpg';
+
 // Import banner images
 import homePrecisionBanner from '@/assets/banners/home-precision.jpg';
 import instituteStarkBanner from '@/assets/banners/institute-stark.jpg';
@@ -94,6 +103,15 @@ const imageMap = {
   '/src/assets/banners/technical-brief-aero.jpg': technicalBriefAeroBanner,
   '/src/assets/banners/presentation-conference.jpg': presentationConferenceBanner,
   '/src/assets/banners/proceedings-auditorium.jpg': proceedingsAuditoriumBanner,
+  
+  // Publications & Patents
+  '/src/assets/placeholders/labs/authorization-letter.jpg': authorizationLetterImg,
+  '/src/assets/placeholders/labs/conference-presentation.jpg': conferencePresentationImg,
+  '/src/assets/placeholders/labs/patent-uav.jpg': patentUavImg,
+  '/src/assets/placeholders/labs/patent-rescue.jpg': patentRescueImg,
+  '/src/assets/placeholders/labs/patent-delivery.jpg': patentDeliveryImg,
+  '/src/assets/placeholders/labs/patent-medical.jpg': patentMedicalImg,
+  '/src/assets/placeholders/labs/patent-health.jpg': patentHealthImg,
   
   // Logos
   '/src/assets/placeholders/logos/logo-placeholder.png': logoPlaceholder,

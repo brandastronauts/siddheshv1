@@ -75,9 +75,7 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
             ? 'lg:grid-cols-1 max-w-4xl mx-auto gap-6' 
             : isProfiles
               ? 'md:grid-cols-2 lg:grid-cols-3 gap-6'
-              : hasImages 
-                ? 'md:grid-cols-2 gap-6' 
-                : 'md:grid-cols-2 lg:grid-cols-3 gap-6'
+              : 'md:grid-cols-2 lg:grid-cols-3 gap-6'
         }`}>
           {cardData.map((item, index) => {
             const bodyText = item.body || item.description || '';
@@ -91,7 +89,7 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`card-elegant overflow-hidden group ${isProfiles ? 'text-center' : ''}`}
+                className={`card-elegant overflow-hidden group flex flex-col ${isProfiles ? 'text-center' : ''}`}
               >
                 {/* Avatar for profiles variant */}
                 {isProfiles && item.image && (
@@ -117,14 +115,14 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
                       variant={item.image.variant || 'card'}
                       privacyBlur={item.image.privacyBlur}
                       aspect="16:9"
-                      className="w-full h-full"
+                      className="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500"
                     />
                     {/* Gradient overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-deep-ink/20 to-transparent" />
                   </div>
                 )}
 
-                <div className="p-6 lg:p-8">
+                <div className="p-6 lg:p-8 flex flex-col flex-1">
                   {/* Tag for pressRoom or newsGrid variant */}
                   {item.tag && (
                     <span className={`mb-3 inline-block ${isNewsGrid ? 'text-xs font-semibold text-accent-cyan uppercase tracking-wider' : 'badge-accent'}`}>
@@ -163,7 +161,9 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
                   <ExpandableText text={bodyText} collapsedLines={4} minChars={200} className="mb-5" />
 
                   {/* Action button */}
-                  {cardAction && renderAction(cardAction)}
+                  <div className="mt-auto pt-2">
+                    {cardAction && renderAction(cardAction)}
+                  </div>
 
                   {/* Mobile expand modal removed — ExpandableText handles inline expand */}
                 </div>
