@@ -1785,11 +1785,11 @@ const siteContent = {
           id: "collab-hero",
           type: "hero",
           variant: "stark",
-          headline: "Collaborate.",
+          headline: "Collaborative Science.",
           subheadline:
-            "The Blue Blocks Micro Research Institute welcomes proposals from researchers, industry partners, and policy makers. Access to longitudinal datasets requires formal application and IRB alignment. 15 years of data; five utility patents filed to date.",
-          primaryCta: { label: "Submit Proposal", href: "#collaborate-form" },
-          secondaryCta: { label: "View Governance", href: "/governance" },
+            "Scientific breakthrough rarely happens in isolation. The Blue Blocks Micro Research Institute opens its longitudinal infrastructure to external partners who share our commitment to rigorous, non-intrusive inquiry. We offer a 15-year continuous dataset (0-18) that simply does not exist elsewhere. No other institution in India has comparable longitudinal density. If you're studying child development and need real data, not theory, we can work together.",
+          primaryCta: { label: "Submit Research Proposal", href: "#collaborate-form" },
+          secondaryCta: { label: "View Data Access Protocols", href: "/governance" },
           image: {
             src: "/src/assets/banners/collaborate-network.jpg",
             alt: "Collaboration network visual",
@@ -1801,95 +1801,90 @@ const siteContent = {
 
         {
           id: "collab-tracks",
-          type: "grid3",
-          header: "Collaboration Tracks",
-          intro:
-            "Select the pathway that matches your institutional context. All tracks require formal application.",
-          items: [
-            {
-              title: "Academic Research",
-              icon: "microscope",
-              body:
-                "For PhD students, postdocs, and faculty seeking access to de-identified datasets. Requires IRB approval from your institution and a signed Data Use Agreement.",
-              cta: { label: "Apply for Access", href: "#collaborate-form" }
-            },
-            {
-              title: "Industry Partnership",
-              icon: "building",
-              body:
-                "For organizations exploring educational methodology or innovation pipeline development. Proposals reviewed by the Research Council.",
-              cta: { label: "Submit Proposal", href: "#collaborate-form" }
-            },
-            {
-              title: "Visiting Fellowship",
-              icon: "user",
-              body:
-                "2-8 week residency in the archive with full dataset access. Applications open for the 2026 Winter Residency.",
-              cta: { label: "Apply for Fellowship", href: "#collaborate-form" }
-            }
-          ]
+          type: "twoColumn",
+          variant: "cards",
+          header: "Ways To Work With Us",
+          left: {
+            heading: "The Scholar Track",
+            icon: "graduation",
+            lead: "Designed for PhD Candidates, Post-Docs, and Faculty.",
+            items: [
+              { label: "Visiting Fellowships", text: "We host 2-3 visiting scholars annually for intensive 2-8 week residencies. You work alongside our research fellows, access the 15-year dataset, and publish collaboratively." },
+              { label: "Data Access", text: "Apply for credentialed access to our anonymized longitudinal datasets (Tier 2 access under our data classification standard). Requires IRB approval from your institution and signed data use agreement." },
+              { label: "Joint Authorship", text: "Join specific micro-studies as co-investigator. We provide the observational infrastructure; you bring analytical frameworks or comparative data." }
+            ]
+          },
+          right: {
+            heading: "The Institutional Track",
+            icon: "building",
+            lead: "Designed for Universities, Policy Tanks, and NGOs.",
+            items: [
+              { label: "Joint MOUs", text: "Formalize long-term research alignments." },
+              { label: "Methodology Adoption", text: "Adopt the Micro Research framework in your own school or lab. We train your staff, transfer our observation protocols, and help you set up ethics infrastructure." },
+              { label: "Grant Alliances", text: "Co-application for international research grants requiring longitudinal K-12 data." }
+            ]
+          }
         },
 
         {
           id: "collab-logos",
           type: "logoStrip",
-          header: "Institutional Affiliations",
-          intro: "We work with academic partners and regulatory bodies.",
+          header: "Who We Work With",
+          intro: "Our network of technical validators and academic collaborators.",
           logos: [
-            { name: "ISRO", src: "/src/assets/brand/isro-logo.jpg", alt: "ISRO logo" },
-            { name: "IN-SPACe", src: "/src/assets/brand/inspace-logo.png", alt: "IN-SPACe logo" },
-            { name: "IIT Hyderabad", src: "/src/assets/brand/iit-hyderabad-logo.png", alt: "IIT Hyderabad logo" },
-            { name: "AMI", src: "/src/assets/brand/ami-logo.png", alt: "AMI logo" }
+            { name: "IIT Hyderabad", src: "/src/assets/brand/iit-hyderabad-logo.png", alt: "IIT Hyderabad logo", role: "Academic Partner (Dept. of Design)", collaboration: "Prototyping Validation & Design Thinking Methodology." },
+            { name: "IN-SPACe / ISRO", src: "/src/assets/brand/inspace-logo.png", alt: "IN-SPACe logo", role: "Technical Partner", collaboration: "Aerospace Payload Qualification & Launch Authorization." },
+            { name: "AMI", src: "/src/assets/brand/ami-logo.png", alt: "AMI logo", role: "Pedagogical Affiliate", collaboration: "Alignment with Global Montessori Standards (0-18)." }
+          ]
+        },
+
+        {
+          id: "collab-transfer",
+          type: "grid3",
+          header: "Methodology Transfer Program",
+          intro:
+            "We believe that \"Micro Research\" should be the standard for all laboratory schools. We offer a structured Transfer Program to help other institutions replicate our observational infrastructure.",
+          items: [
+            {
+              title: "Protocol Training",
+              icon: "clipboardList",
+              body: "Training your staff to become Embedded Researchers."
+            },
+            {
+              title: "Ethics Architecture",
+              icon: "shield",
+              body: "Setting up your internal IRB and Consent frameworks."
+            },
+            {
+              title: "Data Schema Licensing",
+              icon: "database",
+              body: "Adopting our standardized variables for cross-institutional comparison."
+            }
           ]
         },
 
         {
           id: "collaborate-form",
-          type: "form",
-          header: "Submit a Collaboration Proposal",
-          intro:
-            "Use this form to submit a formal proposal. Include sufficient detail for the Research Council to evaluate alignment with our protocols.",
-          submit: {
-            to: "research@blueblocks.in",
-            subject: "Collaboration Proposal — Blue Blocks Micro Research Institute",
-            successMessage: "Draft email opened in your mail client."
-          },
-          fields: [
-            { name: "name", label: "Full Name", type: "text", required: true },
-            { name: "email", label: "Institutional Email", type: "email", required: true },
-            { name: "affiliation", label: "Institution / Organization", type: "text", required: true },
+          type: "buttonCards",
+          header: "How to Start",
+          cards: [
             {
-              name: "track",
-              label: "Collaboration Track",
-              type: "select",
-              required: true,
-              options: [
-                { label: "Academic Research", value: "academic" },
-                { label: "Industry Partnership", value: "industry" },
-                { label: "Visiting Fellowship", value: "fellowship" },
-                { label: "Other", value: "other" }
-              ]
+              headline: "Individual Researchers",
+              body: "For PhD candidates, Post-Docs, and Faculty seeking data access or fellowships. Apply for visiting fellowships (2-8 weeks) or dataset access (requires IRB approval).",
+              button: { label: "Apply for Scholar Credentials", href: "#collaborate-form-apply" }
             },
             {
-              name: "proposal",
-              label: "Proposal Summary",
-              type: "textarea",
-              required: true,
-              placeholder: "Briefly describe your research interest, expected outcomes, and how access to our dataset would support your work."
+              headline: "Institutional Partners",
+              body: "For Universities, Research Organizations, Policy Institutes, and NGOs seeking formal alliance.",
+              button: { label: "Request MOU Guidelines", href: "#collaborate-form-apply" }
             },
             {
-              name: "irb",
-              label: "Do you have IRB approval?",
-              type: "select",
-              required: false,
-              options: [
-                { label: "Yes", value: "yes" },
-                { label: "In Progress", value: "in-progress" },
-                { label: "Not Yet", value: "no" },
-                { label: "Not Applicable", value: "na" }
-              ]
+              headline: "Press & Publishing",
+              body: "For media inquiries, citation permissions, and interview requests.",
+              button: { label: "Download Media Kit", href: "#collaborate-form-apply" }
             }
-          ]
+          ],
+          footerNote: "Timeline: Proposals are reviewed on a rolling basis (2-4 weeks)."
         },
 
         {
@@ -1898,24 +1893,16 @@ const siteContent = {
           header: "Collaboration FAQs",
           items: [
             {
-              q: "How long does the review process take?",
-              a:
-                "Initial response within 5 business days. Full review takes 2-4 weeks depending on complexity and IRB requirements."
+              q: "Can I visit as a researcher?",
+              a: "We host 2-3 visiting researchers annually. Applications for 2-8 week residencies are available through the Scholar Track."
             },
             {
-              q: "Can I access identifiable data?",
-              a:
-                "No. External researchers only access de-identified datasets. Identifiable data remains internal only."
+              q: "Can other schools use your methodology?",
+              a: "Yes. Micro Research is explicitly designed for adoption by other institutions. We offer a Methodology Transfer program."
             },
             {
-              q: "Do you charge for data access?",
-              a:
-                "Open Access materials are free. Researcher access may involve administrative fees for DUA processing."
-            },
-            {
-              q: "Can I visit the Innovation Labs?",
-              a:
-                "Through the Visiting Fellowship track only. Casual visits are not permitted to protect the educational environment."
+              q: "Are you affiliated with a university?",
+              a: "We are independent but maintain a strategic partnership with the Department of Design at IIT Hyderabad."
             }
           ]
         },
