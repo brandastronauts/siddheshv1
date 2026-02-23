@@ -126,8 +126,14 @@ const ButtonCardsSection = ({ heading, header, items, cards, footerNote }) => {
           </motion.h2>
         )}
         
-        {/* 5-column grid for desktop (3+2 layout), 2 for tablet, 1 for mobile */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 max-w-7xl mx-auto">
+        {/* Responsive grid: 5-col for 5 cards, 3-col centered for 3 cards */}
+        <div className={`grid grid-cols-1 sm:grid-cols-2 gap-6 mx-auto ${
+          cardData.length <= 3 
+            ? 'lg:grid-cols-3 max-w-5xl' 
+            : cardData.length === 4 
+              ? 'lg:grid-cols-4 max-w-6xl' 
+              : 'lg:grid-cols-3 xl:grid-cols-5 max-w-7xl'
+        }`}>
           {cardData.map((item, index) => {
             const IconComponent = getIcon(item.icon);
             const cardTitle = item.headline || item.title;

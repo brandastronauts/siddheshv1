@@ -31,6 +31,7 @@ const iconMap = {
   archive: Archive,
   scroll: ScrollText,
   clipboard: ClipboardList,
+  clipboardList: ClipboardList,
   chart: BarChart3,
   clock: Clock,
 
