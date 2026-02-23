@@ -833,6 +833,15 @@ const siteContent = {
             }
           ]
         }
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          name: "The Micro-Research Framework Paper",
+          description: "Operational methodology for high-frequency embedded observation in living learning environments.",
+          url: "https://bb-researchv2.vercel.app/downloads/micro-research-framework",
+          creator: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          encodingFormat: "application/pdf"
+        }
       ],
       sections: [
         {
@@ -1475,18 +1484,23 @@ const siteContent = {
       schemas: [
         {
           "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "Governance & Oversight",
-          url: "https://siddheshv1.lovable.app/governance",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" },
-          about: { "@type": "Thing", name: "Research governance and IRB alignment" }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Governance", item: "https://siddheshv1.lovable.app/governance" }
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "Who is responsible for ethical oversight?",
+              acceptedAnswer: { "@type": "Answer", text: "The Research Council provides independent oversight. All protocols are reviewed before launch." }
+            },
+            {
+              "@type": "Question",
+              name: "Can parents withdraw consent?",
+              acceptedAnswer: { "@type": "Answer", text: "Yes, at any time. Withdrawal removes future observations but does not retroactively remove anonymized data already aggregated." }
+            },
+            {
+              "@type": "Question",
+              name: "How do you prevent re-identification?",
+              acceptedAnswer: { "@type": "Answer", text: "We use k-anonymity: no combination of published variables (age range, school type, city) produces a group smaller than k=5. Individual re-identification is structurally prevented." }
+            }
           ]
         }
       ],
@@ -1666,19 +1680,11 @@ const siteContent = {
       schemas: [
         {
           "@context": "https://schema.org",
-          "@type": "WebPage",
+          "@type": "ContactPage",
           name: "Collaborate",
-          url: "https://siddheshv1.lovable.app/collaborate",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" },
+          url: "https://bb-researchv2.vercel.app/collaborate",
+          isPartOf: { "@type": "WebSite", url: "https://bb-researchv2.vercel.app/" },
           about: { "@type": "Thing", name: "Research collaboration and data access" }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Collaborate", item: "https://siddheshv1.lovable.app/collaborate" }
-          ]
         }
       ],
       sections: [
@@ -2178,23 +2184,7 @@ const siteContent = {
           }
         }
       },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "Privacy Policy",
-          url: "https://siddheshv1.lovable.app/privacy",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Privacy Policy", item: "https://siddheshv1.lovable.app/privacy" }
-          ]
-        }
-      ],
+      schemas: [],
       sections: [
         {
           id: "privacy-content",
@@ -2226,23 +2216,7 @@ const siteContent = {
           }
         }
       },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          name: "Terms of Use",
-          url: "https://siddheshv1.lovable.app/terms",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Terms of Use", item: "https://siddheshv1.lovable.app/terms" }
-          ]
-        }
-      ],
+      schemas: [],
       sections: [
         {
           id: "terms-content",
@@ -3054,19 +3028,14 @@ const siteContent = {
       schemas: [
         {
           "@context": "https://schema.org",
-          "@type": "Article",
-          name: "IN-SPACe Authorization Letter",
-          url: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Publications", item: "https://siddheshv1.lovable.app/publications" },
-            { "@type": "ListItem", position: 3, name: "IN-SPACe Authorization Letter", item: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter" }
-          ]
+          "@type": "ScholarlyArticle",
+          headline: "Authorization Certificate for Establishment and Operation of Student-Engineered Hosted Payload SBB-1",
+          description: "Official authorization archived for governance traceability, regulatory documentation continuity, and citation permanence.",
+          identifier: "10.5281/zenodo.18195108",
+          sameAs: "https://doi.org/10.5281/zenodo.18195108",
+          datePublished: "2026",
+          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
         }
       ],
       sections: [
@@ -3323,19 +3292,14 @@ const siteContent = {
       schemas: [
         {
           "@context": "https://schema.org",
-          "@type": "Article",
-          name: "Valorization In Orbit — An Adolescent CubeSat Mission",
-          url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Publications", item: "https://siddheshv1.lovable.app/publications" },
-            { "@type": "ListItem", position: 3, name: "Valorization In Orbit", item: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study" }
-          ]
+          "@type": "ScholarlyArticle",
+          headline: "Valorization In Orbit — An Adolescent CubeSat Mission",
+          description: "Case study documenting how seventeen students designed and built the SBB-1 CubeSat hosted payload, presented at Saparya 7th National Montessori Conference.",
+          identifier: "10.5281/zenodo.18337934",
+          sameAs: "https://doi.org/10.5281/zenodo.18337934",
+          datePublished: "2026-01-23",
+          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
         }
       ],
       sections: [
@@ -3601,12 +3565,14 @@ const siteContent = {
         }
       },
       schemas: [
-        { "@context": "https://schema.org", "@type": "Article", name: "Patent: System for Automated Security (UAV)", url: "https://siddheshv1.lovable.app/patents/automated-security-uav" },
-        { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-          { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
-          { "@type": "ListItem", position: 3, name: "System for Automated Security (UAV)", item: "https://siddheshv1.lovable.app/patents/automated-security-uav" }
-        ]}
+        {
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          name: "System for Automated Security (UAV)",
+          description: "A responsive aerial surveillance platform engineered to reduce emergency response latency.",
+          identifier: "202041031343",
+          creator: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
+        }
       ],
       sections: [
         {
@@ -4113,17 +4079,16 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "Book",
           name: "Lining The Nest",
-          url: "https://siddheshv1.lovable.app/books/lining-the-nest",
-          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Books", item: "https://siddheshv1.lovable.app/books" },
-            { "@type": "ListItem", position: 3, name: "Lining The Nest", item: "https://siddheshv1.lovable.app/books/lining-the-nest" }
-          ]
+          url: "https://bb-researchv2.vercel.app/books/lining-the-nest",
+          author: { "@type": "Person", name: "Pavan Goyal", affiliation: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" } },
+          numberOfPages: 280,
+          inLanguage: "en",
+          offers: {
+            "@type": "Offer",
+            url: "https://amzn.in/d/09xLf6FE",
+            availability: "https://schema.org/InStock"
+          },
+          sameAs: ["https://amzn.in/d/09xLf6FE"]
         }
       ],
       sections: [

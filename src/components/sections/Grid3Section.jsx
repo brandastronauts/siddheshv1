@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { getIcon } from '../../lib/iconMap';
+import ExpandableText from '../common/ExpandableText';
 
 const Grid3Section = ({ heading, header, intro, items }) => {
   const title = header || heading;
@@ -61,9 +62,12 @@ const Grid3Section = ({ heading, header, intro, items }) => {
                   {item.title}
                 </h3>
                 
-                <p className="text-muted-foreground leading-relaxed text-sm">
-                  {description}
-                </p>
+                <ExpandableText
+                  text={description}
+                  collapsedLines={4}
+                  minChars={200}
+                  textClassName="leading-relaxed"
+                />
                 
                 {item.email && (
                   <a

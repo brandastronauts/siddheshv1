@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, Download, ExternalLink, Copy, Check } from 'lucide-react';
 import { useState } from 'react';
 import SmartImage from '../common/SmartImage';
+import ExpandableText from '../common/ExpandableText';
 
 const TwoColumnSection = ({ left = {}, right = {}, compact = false }) => {
   const [copied, setCopied] = useState(false);
@@ -61,7 +62,12 @@ const TwoColumnSection = ({ left = {}, right = {}, compact = false }) => {
           <h3 className="text-lg font-bold text-deep-ink mb-3">{section.title}</h3>
         )}
         {section.body && (
-          <p className="text-muted-foreground leading-relaxed whitespace-pre-line">{section.body}</p>
+          <ExpandableText
+            text={section.body}
+            collapsedLines={6}
+            minChars={300}
+            textClassName="leading-relaxed whitespace-pre-line"
+          />
         )}
         {section.bullets && (
           <ul className="mt-3 space-y-2">

@@ -6,36 +6,113 @@
  * Follows schema.org vocabulary — ready for WordPress CMS field mapping.
  */
 
-const SITE_URL = 'https://siddheshv1.lovable.app';
+const SITE_URL = 'https://bb-researchv2.vercel.app';
 const ORG_NAME = 'Blue Blocks Micro Research Institute';
+const ORG_ALT_NAME = 'BBMRI';
 const ORG_URL = SITE_URL;
 
-// ─── Global Schemas ──────────────────────────────────────────────────────────
+// ─── Global Schemas (injected on every page via PageShell) ───────────────────
 
-export const buildOrganizationSchema = () => ({
-  '@context': 'https://schema.org',
-  '@type': ['Organization', 'ResearchOrganization', 'EducationalOrganization'],
-  name: ORG_NAME,
-  url: ORG_URL,
-  logo: `${SITE_URL}/logo.png`,
-  email: 'research@blueblocks.in',
-  contactPoint: {
-    '@type': 'ContactPoint',
+/**
+ * Build the set of global schemas that appear on every page.
+ * @param {object} opts  { pageName, pagePath, breadcrumbs }
+ *   breadcrumbs: [{ name, path }] — intermediate crumbs (Home is auto-prepended)
+ * @returns {Array} Array of schema objects
+ */
+export const buildGlobalSchemas = ({ pageName = '', pagePath = '/', breadcrumbs = [] } = {}) => {
+  const schemas = [];
+
+  // 1. Organization
+  schemas.push({
+    '@context': 'https://schema.org',
+    '@type': ['Organization', 'ResearchOrganization', 'EducationalOrganization'],
+    '@id': `${SITE_URL}/#organization`,
+    name: ORG_NAME,
+    alternateName: ORG_ALT_NAME,
+    url: ORG_URL,
+    logo: `${SITE_URL}/logo.png`,
     email: 'research@blueblocks.in',
-    contactType: 'research inquiries',
-  },
-  sameAs: [], // Placeholder: add social / profile URLs here
-});
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'research@blueblocks.in',
+      contactType: 'research inquiries',
+    },
+    sameAs: [],
+  });
 
-export const buildWebSiteSchema = () => ({
-  '@context': 'https://schema.org',
-  '@type': 'WebSite',
-  name: ORG_NAME,
-  url: ORG_URL,
-  // SearchAction omitted — no search UI currently
-});
+  // 2. WebSite (no SearchAction — no /search route exists)
+  schemas.push({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    name: ORG_NAME,
+    url: ORG_URL,
+  });
 
-// ─── Per-page Schemas ─────────────────────────────────────────────────────────
+  // 3. WebPage
+  schemas.push({
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${SITE_URL}${pagePath}#webpage`,
+    url: `${SITE_URL}${pagePath}`,
+    name: pageName,
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    about: { '@id': `${SITE_URL}/#organization` },
+  });
+
+  // 4. BreadcrumbList
+  const crumbItems = [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+  ];
+  breadcrumbs.forEach((c, i) => {
+    crumbItems.push({
+      '@type': 'ListItem',
+      position: i + 2,
+      name: c.name,
+      item: `${SITE_URL}${c.path}`,
+    });
+  });
+  // Add current page as final breadcrumb if not Home and not already in breadcrumbs
+  if (pagePath !== '/' && !breadcrumbs.some(c => c.path === pagePath)) {
+    crumbItems.push({
+      '@type': 'ListItem',
+      position: crumbItems.length + 1,
+      name: pageName,
+      item: `${SITE_URL}${pagePath}`,
+    });
+  }
+  schemas.push({
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbItems,
+  });
+
+  return schemas;
+};
+
+/**
+ * Build breadcrumbs array from a URL path.
+ * e.g. "/publications/some-slug" → [{ name: "Publications", path: "/publications" }]
+ * The current page is added separately by buildGlobalSchemas.
+ */
+export const buildBreadcrumbsFromPath = (pathname) => {
+  if (!pathname || pathname === '/') return [];
+  const segments = pathname.split('/').filter(Boolean);
+  if (segments.length <= 1) return [];
+  // Return intermediate segments (not the last one — that's the current page)
+  const crumbs = [];
+  for (let i = 0; i < segments.length - 1; i++) {
+    const path = '/' + segments.slice(0, i + 1).join('/');
+    const name = segments[i]
+      .split('-')
+      .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(' ');
+    crumbs.push({ name, path });
+  }
+  return crumbs;
+};
+
+// ─── Per-page Schema Helpers ─────────────────────────────────────────────────
 
 /**
  * Standard WebPage schema for any route.
@@ -72,7 +149,6 @@ export const buildBreadcrumbSchema = (crumbs = []) => ({
 
 /**
  * ScholarlyArticle — for /publications/* detail pages.
- * @param {object} pub  { title, abstract, datePublished, authors, url, keywords, pdfUrl }
  */
 export const buildScholarlyArticleSchema = ({
   title = '',
@@ -117,7 +193,6 @@ export const buildScholarlyArticleSchema = ({
 
 /**
  * CreativeWork — for /patents/* detail pages.
- * @param {object} pat  { title, abstract, datePublished, inventors, applicationNo, url, pdfUrl }
  */
 export const buildCreativeWorkSchema = ({
   title = '',
@@ -156,7 +231,6 @@ export const buildCreativeWorkSchema = ({
 
 /**
  * Book — for /books/* detail pages.
- * @param {object} b  { title, description, datePublished, authors, isbn, url, coverUrl }
  */
 export const buildBookSchema = ({
   title = '',
@@ -191,7 +265,6 @@ export const buildBookSchema = ({
 
 /**
  * Person — for researcher / team profiles.
- * @param {object} r  { name, jobTitle, description, url, imageUrl }
  */
 export const buildPersonSchema = ({
   name = '',
@@ -212,7 +285,6 @@ export const buildPersonSchema = ({
 
 /**
  * NewsArticle — for /newsroom/* detail pages.
- * @param {object} n  { title, description, datePublished, authors, url, imageUrl }
  */
 export const buildNewsArticleSchema = ({
   title = '',
@@ -252,7 +324,6 @@ export const buildNewsArticleSchema = ({
 
 /**
  * AboutPage + Organization + ItemList (board) — for /governance page.
- * @param {object} g  { description, boardMembers: [{ name, jobTitle }] }
  */
 export const buildGovernanceSchemas = ({
   description = '',
@@ -282,3 +353,6 @@ export const buildGovernanceSchemas = ({
     })),
   },
 ];
+
+// Export SITE_URL for use in siteContent.js
+export { SITE_URL, ORG_NAME };
