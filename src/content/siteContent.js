@@ -1580,7 +1580,7 @@ const siteContent = {
           variant: "stark",
           headline: "Governance & Oversight.",
           subheadline:
-            "Our research framework is guided by a commitment to Pedagogical Integrity. The Blue Blocks Micro Research Institute's advisory council ensures that all protocols align with both Montessori Principles and Global Privacy Standards (IRB). We prioritize a 'Child-First' methodology, where scientific observation seamlessly integrates with, and respects, the educational environment. Every observation protocol gets reviewed before launch.",
+            "Our research framework is guided by a commitment to Pedagogical Integrity. The Institute's advisory council ensures that all protocols align with both Montessori Principles and Global Privacy Standards (IRB). We prioritize a \"Child-First\" methodology, where scientific observation seamlessly integrates with, and respects, the educational environment. Every observation protocol gets reviewed before launch.",
           primaryCta: { label: "View IRB Guidelines", href: "#irb-guidelines" },
           image: {
             src: "/src/assets/banners/governance-oversight.jpg",
@@ -1596,8 +1596,6 @@ const siteContent = {
           type: "cards",
           variant: "profiles",
           header: "Board of Directors & Leadership - Who Runs This",
-          intro:
-            "Internal leadership responsible for longitudinal integrity, pedagogy alignment, and institutional stewardship.",
           cards: [
             {
               headline: "Pavan Goyal",
@@ -1611,7 +1609,7 @@ const siteContent = {
               headline: "Munira Hussain",
               tag: "Director of Pedagogy",
               body:
-                "Credentials: AMI Diploma / M.Ed\n\nEnsures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the 'Children's House.'",
+                "Credentials: AMI Diploma / M.Ed\n\nEnsures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the \"Children's House.\"",
               image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar", privacyBlur: false },
               cta: { label: "View Profile", href: "/team/munira-hussain" }
             },
@@ -1631,21 +1629,29 @@ const siteContent = {
           variant: "profiles",
           header: "Research Council & Advisory Board",
           intro:
-            "External academic advisors providing independent oversight on data access, ethical review, and methodological integrity.",
+            "External experts who provide technical validation for student innovation and methodological oversight.",
           cards: [
             {
-              headline: "[Advisor 1]",
-              tag: "External Academic Advisor",
+              headline: "[Prof. Name Pending]",
+              tag: "Technical Validation Advisor",
               body:
-                "Affiliation: [University / Organization]\n\nRole: Provides independent review of observation protocols and IRB alignment.",
-              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Academic Advisor", variant: "avatar", privacyBlur: false }
+                "Affiliation: IIT Hyderabad (Dept of Design)\n\nReviews TRL claims and engineering prototypes for the Space & Drone Labs.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Technical Validation Advisor", variant: "avatar", privacyBlur: false }
             },
             {
-              headline: "[Advisor 2]",
-              tag: "IRB / Ethics Consultant",
+              headline: "[Name Pending]",
+              tag: "Independent Ethics Auditor",
               body:
-                "Affiliation: [Relevant Institution]\n\nRole: Oversees privacy architecture and k-anonymization standards.",
-              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Ethics Consultant", variant: "avatar", privacyBlur: false }
+                "Affiliation: [External Institution / Parent Body]\n\nEnsures compliance with child safety protocols and consent architecture.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Independent Ethics Auditor", variant: "avatar", privacyBlur: false }
+            },
+            {
+              headline: "Ad-Hoc Committee",
+              tag: "Peer Review Panel",
+              subtitle: "Convened per Publication",
+              body:
+                "A rotating panel of external PhDs convened solely to validate foundational methodology papers prior to DOI registration.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Peer Review Panel", variant: "avatar", privacyBlur: false }
             }
           ]
         },
@@ -1653,62 +1659,61 @@ const siteContent = {
         {
           id: "irb-guidelines",
           type: "accordion",
-          header: "IRB-Aligned Standards & Privacy Architecture",
+          header: "Standards & Protocols",
           intro:
-            "Our research governance framework is built on IRB principles adapted for embedded observation.",
+            "Operating procedures derived from AMI principles and international research standards.",
           items: [
             {
-              q: "Informed Consent",
+              q: "Micro-Research Design Standards",
               a:
-                "All families provide comprehensive consent at enrollment. Consent forms explain: what data is collected, how it's used, how long it's retained, and the right to withdraw at any time. No child is observed without parental consent."
+                "Boundedness: Every study must address a single, bounded research question.\n\nCapture Time: Observations must be recordable in <5 minutes.\n\nDuration: Data collection cycles must not exceed 3 weeks to prevent observer fatigue.\n\nInterference: Protocols must result in Zero Interference with the child's natural work cycle. The child should never notice being observed. Observer stays in normal classroom role, records discreetly."
             },
             {
-              q: "Anonymization Protocols",
+              q: "Privacy & Informed Consent",
               a:
-                "Published datasets use k-anonymity standards. Names become alphanumeric codes. Ages become ranges. School location becomes 'urban Montessori school, Hyderabad, India.' Photos: faces blurred or cropped. No combination of published data points allows re-identification."
+                "Enrollment Consent: All families sign comprehensive research waivers upon school entry.\n\nChild Assent: Students aged 7+ are granted the \"Right to Decline\" participation without consequence.\n\nWithdrawal: Parents maintain the right to withdraw data access at any time.\n\nData Anonymization: All published records use alphanumeric codes (Subject-847-A, not names). Photos published only with separate photo consent and face obscuration. No re-identification pathway exists in public datasets."
             },
             {
-              q: "Data Retention & Access",
+              q: "Privacy & Informed Consent",
               a:
-                "Raw data is retained for the duration of the longitudinal study (15 years completed; Year 16 ongoing). Access tiers: (1) Open Access—published papers, aggregate stats. (2) Researcher Access—de-identified datasets, requires IRB + DUA. (3) Internal Only—identifiable data, staff only."
-            },
-            {
-              q: "Ethics Review Process",
-              a:
-                "All new observation protocols are reviewed by the Research Council before deployment. Reviews assess: scientific merit, privacy impact, disruption to learning environment, consent adequacy."
+                "Enrollment Consent: All families sign comprehensive research waivers upon school entry.\n\nChild Assent: Subjects aged 7+ are granted the \"Right to Decline\" participation without consequence.\n\nWithdrawal: Parents maintain the right to withdraw data access at any time while remaining enrolled in the school."
             }
           ]
         },
 
         {
           id: "gov-ip",
-          type: "textBlock",
-          header: "Student IP Rights",
-          body:
-            "All Intellectual Property created by students remains attributed to the student inventors. Blue Blocks Micro Research Institute facilitates the filing process and provides the pedagogical context but does not claim ownership. Five utility patents filed to date by elementary-aged students. Patents are filed under the inventors' names with institutional support. Licensing inquiries can be directed through the Contact page."
+          type: "twoColumn",
+          header: "Student IP Rights & Data Security",
+          left: {
+            heading: "Student IP Rights",
+            body:
+              "We fundamentally believe that age does not preclude ownership.\n\nSovereignty: Utility patents generated in the Innovation Labs are filed in the name of the student inventors.\n\nInstitute Role: The Institute acts as the \"Facilitator\" and funds the filing process but claims 0% ownership of student-generated IP.\n\nAttribution: All student contributions to larger papers are cited as \"Co-Authors,\" not subjects."
+          },
+          right: {
+            heading: "Data Security & Anonymization",
+            body:
+              "K-Anonymity: All datasets are scrubbed of PII (Personally Identifiable Information). Names are replaced with alphanumeric codes (e.g., Subject-847-A).\n\nVisual Privacy: Faces in published documentation are obscured or digitized.\n\nStorage: Longitudinal records are stored in an air-gapped internal server (The Data Wing), accessible only to the Principal Investigator and Lead Fellows."
+          }
         },
 
         {
-          id: "gov-faq",
-          type: "accordion",
-          header: "Governance FAQs",
-          items: [
-            {
-              q: "Who is responsible for ethical oversight?",
-              a:
-                "The Research Council provides independent oversight. All protocols are reviewed before launch."
-            },
-            {
-              q: "Can parents withdraw consent?",
-              a:
-                "Yes, at any time. Withdrawal removes future observations but does not retroactively remove anonymized data already aggregated."
-            },
-            {
-              q: "How do you prevent re-identification?",
-              a:
-                "We use k-anonymity: no combination of published variables (age range, school type, city) produces a group smaller than k=5. Individual re-identification is structurally prevented."
-            }
-          ]
+          id: "gov-team",
+          type: "twoColumn",
+          header: "The Research & Observation Team",
+          intro:
+            "Data collection is conducted by a dual-layer team, ensuring both pedagogical sensitivity and technical accuracy.",
+          left: {
+            heading: "Embedded Research Fellows (AMI)",
+            body:
+              "Who They Are: AMI-Certified Pedagogues.\n\nObservation Focus: Developmental & Behavioral Data.\n\nFunction: They're the child's regular teacher, not a stranger with a clipboard. Children behave naturally because observation is invisible. The guide records observations during lunch or after school, never during work cycles."
+          },
+          right: {
+            heading: "Research Associates (Subject Experts)",
+            body:
+              "Who They Are: Engineers, Data Scientists, and Domain Specialists.\n\nObservation Focus: Performance & Competency Data.\n\nFunction: These experts conduct focused observations within the Innovation Labs. They track \"External Output\"—measuring engineering fidelity, failure recovery rates, and technical precision during high-stakes prototyping (e.g., Drone flight tests)."
+          },
+          footer: "To apply for a Visiting Researcher position, please visit the Collaborate tab."
         },
 
         {
