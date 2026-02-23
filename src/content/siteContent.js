@@ -3519,20 +3519,14 @@ const siteContent = {
           ]
         },
         {
-          id: "pub-abstract",
+          id: "pub-introduction",
           type: "twoColumn",
           compact: true,
           left: {
             sections: [
               {
-                title: "Abstract",
-                body: "This record summarizes the formal Authorization Certificate No. PMA/IN-SPACe/AUTH/2026/115 issued by the Indian National Space Promotion and Authorization Centre (IN-SPACe).\n\nThe certificate formally designates Blue Blocks Montessori Educational Society as both Authorized Entity and Applicant, granting legal authorization for establishment and operation of the SBB-1 hosted payload.\n\nAs Applicant, the Society assumes sole legal responsibility for ensuring payload compliance with:",
-                bullets: [
-                  "Convention on International Liability for Damage Caused by Space Objects (Liability Convention)",
-                  "Convention on Registration of Objects Launched into Outer Space (Registration Convention)",
-                  "DOS Master Registry: INRSO/DOS/SC/2025/011-01 (29 Dec 2025)",
-                  "ITU Filing: IND2025-78363"
-                ]
+                title: "Introduction",
+                body: "This record archives a regulatory milestone in Indian K-12 space education, the first IN-SPACe authorization granted directly to a Montessori educational institution for a student-engineered orbital payload. The certificate validates that the SBB-1 payload, developed by students of Blue Blocks Montessori School under the pedagogical guidance of Blue Blocks Micro Research Institute and technical partnership with TM2Space, meets India's national space regulatory requirements for flight certification under the \"Lab-to-Launch\" framework."
               }
             ]
           },
@@ -3550,14 +3544,15 @@ const siteContent = {
           }
         },
         {
-          id: "pub-introduction",
+          id: "pub-abstract",
           type: "twoColumn",
           compact: true,
           left: {
             sections: [
               {
-                title: "Introduction",
-                body: "This record archives a regulatory milestone in Indian K-12 space education — the first IN-SPACe authorization granted directly to a Montessori educational institution for a student-engineered orbital payload.\n\nThe certificate validates that the SBB-1 hosted payload, developed by students of Blue Blocks Montessori School, under pedagogical guidance from the Blue Blocks Micro Research Institute and technical partnership with TM2Space, meets India's national space regulatory requirements for flight certification under the Lab-to-Launch framework."
+                title: "Abstract",
+                subtitle: "Official Record Summary:",
+                body: "This record summarizes the formal Authorization Certificate No. PMA/IN-SPACe/AUTH/2026/115 issued by the Indian National Space Promotion and Authorization Centre (IN-SPACe). The certificate formally designates Blue Blocks Montessori Educational Society as both the Authorized Entity and the Applicant, granting legal authorization for the establishment and operation of the SBB-1 hosted payload. As the Applicant, Blue Blocks Montessori Educational Society assumes sole legal responsibility for ensuring the payload's compliance with the Convention on International Liability for Damage Caused by Space Objects (Liability Convention) and the Convention on Registration of Objects Launched into Outer Space (Registration Convention). The authorization is supported by official registry references, including the Department of Space (DOS) Master Registry entry INRSO/DOS/SC/2025/011-01 for the hosted payload dated 29 December 2025, and the International Telecommunication Union (ITU) filing reference IND2025-78363, coordinated through the Host Entity."
               }
             ]
           },
@@ -3580,13 +3575,8 @@ const siteContent = {
           left: {
             sections: [
               {
-                title: "Methodology — Lab-to-Launch Framework",
-                body: "The SBB-1 payload was developed under the proprietary Lab-to-Launch pedagogical framework, enabling K-12 students to operate within professional aerospace constraints across the full product lifecycle.",
-                bullets: [
-                  "School — Student research team responsible for design, development, and testing",
-                  "Research Institute — Pedagogical scaffolding, documentation standards, and regulatory navigation",
-                  "Technical Partner (TM2Space) — Technical architecture, flight hardware validation, and launch integration support"
-                ]
+                title: "Methodology",
+                body: "The SBB-1 payload was developed under the proprietary \"Lab-to-Launch\" pedagogical framework — a structured methodology enabling K-12 students to operate within professional aerospace constraints while managing the complete product lifecycle from PCB design to payload integration. The framework operates through a tripartite institutional structure: the school provides the student research team responsible for design, development, and testing; the research institute delivers pedagogical scaffolding, research standards, and regulatory navigation; and TM2Space contributes technical architecture, flight hardware validation, and launch integration. This approach ensures student-led execution with institutional accountability, progressive skill development mapped to space-grade certification milestones, and regulatory alignment with IN-SPACe compliance requirements — maintaining pedagogical integrity while meeting the engineering rigor demanded by orbital deployment."
               }
             ]
           },
@@ -3606,13 +3596,14 @@ const siteContent = {
           left: {
             sections: [
               {
-                title: "Results — Payload Specifications",
-                body: "The authorization validates deployment of the SBB-1 hosted payload, independently designed by the student research team. While hosted on the MOI-1 satellite bus, the payload architecture remains proprietary.",
+                title: "Payload Specifications & Architecture",
+                body: "The IN-SPACe authorization validates the deployment of the SBB-1 payload, which was independently designed and developed by the student research team. While the payload is hosted on the MOI-1 bus, its architecture remains distinct and proprietary. The authorized configuration includes:",
                 bullets: [
-                  "Custom Avionics — In-house MCU, AES-256 encrypted data handling, RS485 differential serial communication",
-                  "BME280 — Pressure, temperature, humidity monitoring",
-                  "BNO055 — 9-axis orientation tracking, attitude determination",
-                  "206 PT RTD — Precision thermal monitoring, 1206 SMD form factor"
+                  "Custom Avionics: An in-house designed microcontroller unit featuring AES-256 encryption for secure data handling and RS485 differential serial communication.",
+                  "Sensor Integration:",
+                  "BME280: For environmental sensing (Pressure, Temperature, Humidity).",
+                  "BNO055: For attitude determination (9-axis Orientation).",
+                  "206 PT RTD: For precision thermal monitoring in a 1206 SMD form factor."
                 ]
               }
             ]
@@ -3633,14 +3624,15 @@ const siteContent = {
           left: {
             sections: [
               {
-                title: "Discussion — Regulatory & Legal Compliance",
-                body: "Authorization No. PMA/IN-SPACe/AUTH/2026/115 formally designates Blue Blocks Montessori Educational Society as Authorized Entity and Applicant.\n\nAs Applicant, the Society assumes legal responsibility for compliance with:",
+                title: "Regulatory & Legal Compliance",
+                body: "Authorization No. PMA/IN-SPACe/AUTH/2026/115 formally designates the Blue Blocks Montessori Educational Society as the Authorized Entity and Applicant. As the Applicant, the Society assumes sole legal responsibility for ensuring the payload's compliance with two critical international treaties:",
                 bullets: [
-                  "Liability Convention (Damage Caused by Space Objects)",
-                  "Registration Convention (Objects Launched into Outer Space)",
-                  "DOS Registry Entry: INRSO/DOS/SC/2025/011-01",
-                  "ITU Filing Reference: IND2025-78363"
+                  "The Convention on International Liability for Damage Caused by Space Objects (Liability Convention).",
+                  "The Convention on Registration of Objects Launched into Outer Space (Registration Convention)."
                 ]
+              },
+              {
+                body: "This authorization is substantiated by the Department of Space (DOS) Master Registry entry INRSO/DOS/SC/2025/011-01 (dated 29 December 2025) and the International Telecommunication Union (ITU) filing reference IND2025-78363."
               }
             ]
           },
@@ -3665,11 +3657,19 @@ const siteContent = {
           left: {
             sections: [
               {
-                title: "Supplementary — Media Coverage",
+                title: "Supplementary Materials",
+                subtitle: "Official Logs & Registry:",
                 bullets: [
-                  "NDTV (National) — \"17 Hyderabad Students Build Payload for Upcoming ISRO Launch\"",
-                  "India Today (National) — \"Blue Blocks Co-founder Munira Hussain: Students' CubeSat Set for ISRO Launch\"",
-                  "Telangana Today (Regional) — \"Hyderabad School Students Make History with CubeSat on ISRO's PSLV-C62\""
+                  "IN-SPACe Authorization Registry: https://www.inspace.gov.in/inspace?id=inspace_authorizations",
+                  "Mission Home & Logs: https://blueblocks.in/Innovation/CubeSat-Mission"
+                ]
+              },
+              {
+                subtitle: "Independent Media Coverage:",
+                bullets: [
+                  "NDTV (National): \"17 Hyderabad Students Build Payload for Upcoming ISRO Launch\" — https://www.ndtv.com/india-news/17-hyderabad-students-build-payload-for-upcoming-isro-launch-10569889",
+                  "India Today (National): \"Blue Blocks Co-founder Munira Hussain: Students' CubeSat Set for ISRO Launch\" — https://www.indiatoday.in/technology/video/blue-blocks-co-founder-munira-hussain-students-cubesat-set-for-isro-launch-ytvd-2848900-2026-01-08",
+                  "Telangana Today (Regional): \"Hyderabad School Students Make History with CubeSat on ISRO's PSLV-C62\" — https://telanganatoday.com/hyderabad-school-students-make-history-with-cubesat-on-isros-pslv-c62"
                 ]
               }
             ]
@@ -3678,7 +3678,7 @@ const siteContent = {
             panels: [
               {
                 title: "How to Cite (APA)",
-                citation: "Goyal, P. (2026). Authorization Certificate for Establishment and Operation of a Hosted Payload, namely Students of BlueBlocks-1 (SBB-1) (Authorization No. PMA/IN-SPACe/AUTH/2026/115). Blue Blocks Micro Research Institute. https://research.blueblocks.in/publications/CubeSat-INSPACE"
+                citation: "Goyal, P. (2026). Authorization Certificate For Establishment and operations of a hosted payload, namely Students of BlueBlocks-1 (SBB-1) (Authorization No. PMA/IN-SPACe/AUTH/2026/115). Blue Blocks Micro Research Institute. https://research.blueblocks.in/publications/CubeSat-INSPACE"
               }
             ]
           }
