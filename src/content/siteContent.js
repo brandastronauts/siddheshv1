@@ -3096,29 +3096,6 @@ const siteContent = {
           }
         },
         {
-          id: "team-leadership",
-          type: "cards",
-          variant: "profiles",
-          header: "Leadership",
-          intro: "Internal leadership responsible for longitudinal integrity, pedagogy alignment, and institutional stewardship.",
-          cards: [
-            {
-              headline: "Pavan Goyal",
-              tag: "Principal Investigator & Founder",
-              body: "Credentials: AMI Diploma (0-18)\n\nOversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes.",
-              image: { src: "/src/assets/placeholders/avatars/pavan.jpg", alt: "Pavan Goyal", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/pavan-goyal" }
-            },
-            {
-              headline: "Munira Hussain",
-              tag: "Director of Pedagogy",
-              body: "Credentials: AMI Diploma / M.Ed\n\nEnsures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the 'Children's House.'",
-              image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/munira-hussain" }
-            }
-          ]
-        },
-        {
           id: "team-board",
           type: "cards",
           variant: "profiles",
