@@ -1872,19 +1872,19 @@ const siteContent = {
               headline: "Individual Researchers",
               icon: "user",
               body: "For PhD candidates, Post-Docs, and Faculty seeking data access or fellowships. Apply for visiting fellowships (2-8 weeks) or dataset access (requires IRB approval).",
-              button: { label: "Apply for Scholar Credentials", href: "#collaborate-form-apply" }
+              button: { label: "Apply for Scholar Credentials", href: "/contact" }
             },
             {
               headline: "Institutional Partners",
               icon: "building",
               body: "For Universities, Research Organizations, Policy Institutes, and NGOs seeking formal alliance.",
-              button: { label: "Request MOU Guidelines", href: "#collaborate-form-apply" }
+              button: { label: "Request MOU Guidelines", href: "/contact" }
             },
             {
               headline: "Press & Publishing",
               icon: "newspaper",
               body: "For media inquiries, citation permissions, and interview requests.",
-              button: { label: "Download Media Kit", href: "#collaborate-form-apply" }
+              button: { label: "Download Media Kit", href: "/downloads" }
             }
           ],
           footerNote: "Timeline: Proposals are reviewed on a rolling basis (2-4 weeks)."
@@ -2253,7 +2253,7 @@ const siteContent = {
           primaryCta: { label: "Email Research Team", href: "mailto:research@blueblocks.in" },
           secondaryCta: { label: "Email Press Office", href: "mailto:press@blueblocks.in" },
           image: {
-            src: "/src/assets/banners/contact-hero.jpg",
+            src: "/src/assets/banners/contact-institutional.jpg",
             alt: "Contact page visual",
             variant: "hero",
             privacyBlur: false,
@@ -2593,13 +2593,13 @@ const siteContent = {
               title: "SAPARYA Conference Booklet",
               description: "Full case study from IMF 7th National Montessori Conference (DOI: 10.5281/zenodo.18337934)",
               format: "PDF",
-              href: "/downloads/saparya-conference-booklet.pdf"
+              href: "/downloads"
             },
             {
               title: "SAPARYA Presentation Slides",
               description: "Visual presentation materials from IMF conference",
               format: "PDF",
-              href: "/downloads/saparya-presentation.pdf"
+              href: "/downloads"
             }
           ]
         },
@@ -2709,7 +2709,7 @@ const siteContent = {
           headline: "Staff Access",
           subheadline:
             "Secure portal for internal staff and researchers to access sensitive data and administrative tools.",
-          primaryCta: { label: "Login", href: "/staff-login" },
+          primaryCta: { label: "Contact for Access", href: "/contact" },
           image: {
             src: "/src/assets/banners/staff-access.jpg",
             alt: "Staff access visual",
@@ -3467,8 +3467,8 @@ const siteContent = {
                 title: "Repository & Access",
                 links: [
                   { label: "View on Zenodo (DOI)", href: "https://doi.org/10.5281/zenodo.18337934", external: true },
-                  { label: "Conference Booklet (PDF)", href: "/downloads/saparya-conference-booklet.pdf", download: true },
-                  { label: "Presentation Slides (PDF)", href: "/downloads/saparya-presentation.pdf", download: true }
+                  { label: "Conference Booklet (PDF)", href: "/downloads", download: false },
+                  { label: "Presentation Slides (PDF)", href: "/downloads", download: false }
                 ]
               }
             ]
@@ -3624,8 +3624,8 @@ const siteContent = {
               {
                 title: "Downloads",
                 links: [
-                  { label: "Conference Booklet (PDF)", href: "/downloads/saparya-conference-booklet.pdf", download: true },
-                  { label: "Presentation Slides (PDF)", href: "/downloads/saparya-presentation.pdf", download: true }
+                  { label: "Conference Booklet (PDF)", href: "/downloads", download: false },
+                  { label: "Presentation Slides (PDF)", href: "/downloads", download: false }
                 ]
               }
             ]

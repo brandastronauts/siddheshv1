@@ -58,13 +58,25 @@ const HighlightBoxSection = ({ heading, title, text, body, bullets, cta }) => {
               
               {cta && (
                 <div className="text-center">
-                  <Link
-                    to={cta.path || cta.href || '#'}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-navy font-medium rounded-xl hover:bg-white/90 transition-all duration-200 hover:shadow-lg group"
-                  >
-                    {cta.label}
-                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  </Link>
+                  {cta.external || cta.href?.startsWith('http') ? (
+                    <a
+                      href={cta.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-navy font-medium rounded-xl hover:bg-white/90 transition-all duration-200 hover:shadow-lg group"
+                    >
+                      {cta.label}
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </a>
+                  ) : (
+                    <Link
+                      to={cta.path || cta.href || '#'}
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-navy font-medium rounded-xl hover:bg-white/90 transition-all duration-200 hover:shadow-lg group"
+                    >
+                      {cta.label}
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  )}
                 </div>
               )}
             </div>
