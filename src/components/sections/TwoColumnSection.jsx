@@ -5,7 +5,7 @@ import { useState } from 'react';
 import SmartImage from '../common/SmartImage';
 import ExpandableText from '../common/ExpandableText';
 
-const TwoColumnSection = ({ left = {}, right = {}, compact = false }) => {
+const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, compact = false }) => {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = (text) => {
@@ -46,8 +46,8 @@ const TwoColumnSection = ({ left = {}, right = {}, compact = false }) => {
     );
   };
 
-  const renderLeftContent = () => {
-    const sections = left.sections || [];
+  const renderColumnContent = (col) => {
+    const sections = col.sections || (col.heading || col.body ? [{ title: col.heading, body: col.body, bullets: col.bullets }] : []);
     
     return sections.map((section, index) => (
       <motion.div 
@@ -82,6 +82,8 @@ const TwoColumnSection = ({ left = {}, right = {}, compact = false }) => {
       </motion.div>
     ));
   };
+
+  const renderLeftContent = () => renderColumnContent(left);
 
   const renderRightPanel = () => {
     const panels = right.panels || [];
@@ -182,20 +184,50 @@ const TwoColumnSection = ({ left = {}, right = {}, compact = false }) => {
     ));
   };
 
+  const hasRightPanels = right.panels && right.panels.length > 0;
+
   return (
     <section className={`${compact ? 'py-8 md:py-12' : 'section-spacing'} bg-background`}>
       <div className="container-grid">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
-          {/* Left column - 2/3 width */}
-          <div className="lg:col-span-2">
+        {header && (
+          <motion.h2
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-deep-ink mb-6"
+          >
+            {header}
+          </motion.h2>
+        )}
+        {intro && (
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-lg text-muted-foreground text-center max-w-3xl mx-auto mb-12"
+          >
+            {intro}
+          </motion.p>
+        )}
+        <div className={`grid grid-cols-1 ${hasRightPanels ? 'lg:grid-cols-3' : 'lg:grid-cols-2'} gap-8 lg:gap-12`}>
+          <div className={hasRightPanels ? 'lg:col-span-2' : ''}>
             {renderLeftContent()}
           </div>
-
-          {/* Right column - 1/3 width */}
-          <div className="lg:col-span-1">
-            {renderRightPanel()}
+          <div className={hasRightPanels ? 'lg:col-span-1' : ''}>
+            {hasRightPanels ? renderRightPanel() : renderColumnContent(right)}
           </div>
         </div>
+        {footer && (
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-sm text-muted-foreground text-center mt-8"
+          >
+            {footer}
+          </motion.p>
+        )}
       </div>
     </section>
   );
