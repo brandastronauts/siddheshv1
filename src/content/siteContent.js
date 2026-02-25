@@ -1600,7 +1600,7 @@ const siteContent = {
               headline: "Pavan Goyal",
               tag: "Principal Investigator & Founder",
               body:
-                "Credentials: AMI Diploma (0-18)\n\nOversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes.",
+                "**Credentials:** AMI Diploma (0-18)\n\nOversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes.",
               image: { src: "/src/assets/placeholders/avatars/pavan.jpg", alt: "Pavan Goyal", variant: "avatar", privacyBlur: false },
               cta: { label: "View Profile", href: "/team/pavan-goyal" }
             },
@@ -1608,7 +1608,7 @@ const siteContent = {
               headline: "Munira Hussain",
               tag: "Director of Pedagogy",
               body:
-                "Credentials: AMI Diploma / M.Ed\n\nEnsures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the \"Children's House.\"",
+                "**Credentials:** AMI Diploma / M.Ed\n\nEnsures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the \"Children's House.\"",
               image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar", privacyBlur: false },
               cta: { label: "View Profile", href: "/team/munira-hussain" }
             }
@@ -1627,42 +1627,42 @@ const siteContent = {
               headline: "Prof. AVR Srikar",
               tag: "Technical Validation Advisor",
               body:
-                "Affiliation: IIT Hyderabad (Dept of Design)\n\nReviews TRL claims and engineering prototypes for the Space & Drone Labs.",
+                "**Affiliation:** IIT Hyderabad (Dept of Design)\n\nReviews TRL claims and engineering prototypes for the Space & Drone Labs.",
               image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Prof. AVR Srikar", variant: "avatar", privacyBlur: false }
             },
             {
               headline: "Prof. Apoorv Gogar",
               tag: "Methodological Oversight Advisor",
               body:
-                "Affiliation: Indian School of Business\n\nReviews research design and business application frameworks for student innovation projects.",
+                "**Affiliation:** Indian School of Business\n\nReviews research design and business application frameworks for student innovation projects.",
               image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Prof. Apoorv Gogar", variant: "avatar", privacyBlur: false }
             },
             {
               headline: "Rahul Jindal",
               tag: "Technology Validation Advisor",
               body:
-                "Affiliation: Director, Google\n\nProvides technical review for software and systems architecture in student technology projects.",
+                "**Affiliation:** Director, Google\n\nProvides technical review for software and systems architecture in student technology projects.",
               image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Rahul Jindal", variant: "avatar", privacyBlur: false }
             },
             {
               headline: "Sucheth Davaluri",
               tag: "Industry Validation Advisor",
               body:
-                "Affiliation: Vice-Chairman & CEO, Neuland Laboratories\n\nReviews commercialization pathways and industry-readiness of student innovations.",
+                "**Affiliation:** Vice-Chairman & CEO, Neuland Laboratories\n\nReviews commercialization pathways and industry-readiness of student innovations.",
               image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Sucheth Davaluri", variant: "avatar", privacyBlur: false }
             },
             {
               headline: "Manish Gupta",
               tag: "Enterprise Technology Advisor",
               body:
-                "Affiliation: Director, SAP\n\nEvaluates scalability and enterprise integration potential of student technology solutions.",
+                "**Affiliation:** Director, SAP\n\nEvaluates scalability and enterprise integration potential of student technology solutions.",
               image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Manish Gupta", variant: "avatar", privacyBlur: false }
             },
             {
               headline: "Ronak Kumar",
               tag: "Aerospace Domain Advisor",
               body:
-                "Affiliation: Founder, TakeMe2Space\n\nProvides technical mentorship and validation for Space Lab projects including satellite and propulsion initiatives.",
+                "**Affiliation:** Founder, TakeMe2Space\n\nProvides technical mentorship and validation for Space Lab projects including satellite and propulsion initiatives.",
               image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Ronak Kumar", variant: "avatar", privacyBlur: false }
             }
           ]
