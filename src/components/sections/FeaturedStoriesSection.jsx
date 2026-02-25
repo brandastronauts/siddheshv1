@@ -9,6 +9,14 @@ const FeaturedStoriesSection = ({ header, layout, main, side }) => {
   const renderCta = (cta) => {
     if (!cta) return null;
     
+    if (cta.disabled) {
+      return (
+        <span className="inline-flex items-center gap-1.5 text-sm font-medium text-muted-foreground opacity-60 cursor-not-allowed">
+          {cta.label}
+        </span>
+      );
+    }
+    
     const isInternal = cta.href?.startsWith('/');
     const className = "inline-flex items-center gap-1.5 text-sm font-medium text-link-blue hover:text-accent-cyan transition-colors group";
     
