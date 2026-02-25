@@ -15,6 +15,7 @@ import ContactPage from "./pages/ContactPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import LegalPage from "./pages/LegalPage";
 import GenericPage from "./pages/GenericPage";
+import CitationStandardsPage from "./pages/CitationStandardsPage";
 import ScrollToTopOnRouteChange from "./components/ui/ScrollToTopOnRouteChange";
 
 const queryClient = new QueryClient();
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/sitemap-html" element={<GenericPage />} />
           
           {/* Publications detail pages */}
+          <Route path="/publications/citation-standards" element={<CitationStandardsPage />} />
           <Route path="/publications/:slug" element={<GenericPage />} />
           
           {/* Patents pages */}
