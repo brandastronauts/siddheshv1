@@ -31,7 +31,7 @@ const HighlightBoxSection = ({ heading, title, text, body, bullets, cta }) => {
             
             <div className="relative z-10 p-8 md:p-12">
               {displayTitle && (
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-4 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">
                   {displayTitle}
                 </h2>
               )}

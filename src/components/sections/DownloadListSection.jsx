@@ -90,7 +90,7 @@ const DownloadListSection = ({ heading, header, intro, items = [] }) => {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-3xl font-bold text-deep-ink mb-4"
+            className="text-3xl md:text-4xl font-bold text-center text-deep-ink mb-6"
           >
             {title}
           </motion.h2>
