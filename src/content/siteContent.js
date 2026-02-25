@@ -700,7 +700,7 @@ const siteContent = {
           header: "Institutional Access",
           body:
             "Access to the Blue Blocks Micro Research Institute is restricted to protect the integrity of the observational environment. We welcome collaboration proposals from Post-Doctoral Researchers, Industrial Partners, and Policy Makers.",
-          cta: { label: "Request IRB Guidelines", href: "/governance" }
+          cta: { label: "View Governance Standards", href: "/governance" }
         },
 
         {
@@ -758,7 +758,7 @@ const siteContent = {
           cards: [
             { title: "Methodology", description: "Learn about our research protocols.", icon: "methodology", href: "/methodology" },
             { title: "Publications", description: "Research docket and publications.", icon: "publication", href: "/publications" },
-            { title: "Governance", description: "IRB-aligned standards and oversight.", icon: "governance", href: "/governance" }
+            { title: "Governance", description: "Standards and oversight.", icon: "governance", href: "/governance" }
           ]
         }
       ]
@@ -1521,7 +1521,7 @@ const siteContent = {
             { title: "Patents", description: "View patent registry.", icon: "patent", href: "/patents" },
             { title: "Books", description: "Long-form publications.", icon: "book", href: "/books" },
             { title: "Downloads", description: "Framework documents.", icon: "download", href: "/downloads" },
-            { title: "Governance", description: "IRB-aligned standards.", icon: "governance", href: "/governance" }
+            { title: "Governance", description: "Standards and oversight.", icon: "governance", href: "/governance" }
           ]
         }
       ]
@@ -1579,8 +1579,8 @@ const siteContent = {
           variant: "stark",
           headline: "Governance & Oversight.",
           subheadline:
-            "Our research framework is guided by a commitment to Pedagogical Integrity. The Institute's advisory council ensures that all protocols align with both Montessori Principles and Global Privacy Standards (IRB). We prioritize a \"Child-First\" methodology, where scientific observation seamlessly integrates with, and respects, the educational environment. Every observation protocol gets reviewed before launch.",
-          primaryCta: { label: "View IRB Guidelines", href: "#irb-guidelines" },
+            "Our research framework is guided by a commitment to Pedagogical Integrity. The Institute's advisory council ensures that all protocols align with both Montessori Principles and Global Privacy Standards. We prioritize a \"Child-First\" methodology, where scientific observation seamlessly integrates with, and respects, the educational environment. Every observation protocol gets reviewed before launch.",
+          primaryCta: { label: "IRB Guidelines – Available Soon", href: "#", disabled: true },
           image: {
             src: "/src/assets/banners/governance-oversight.jpg",
             alt: "Abstract governance visual",
@@ -1611,13 +1611,6 @@ const siteContent = {
                 "Credentials: AMI Diploma / M.Ed\n\nEnsures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the \"Children's House.\"",
               image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar", privacyBlur: false },
               cta: { label: "View Profile", href: "/team/munira-hussain" }
-            },
-            {
-              headline: "[Name Pending]",
-              tag: "Non-Executive Director",
-              body:
-                "Credentials: [Relevant Industry Credential]\n\nAdvises on long-term institutional strategy and external partnerships.",
-              image: { src: "/src/assets/placeholders/avatars/director-placeholder.jpg", alt: "Non-Executive Director", variant: "avatar", privacyBlur: false }
             }
           ]
         },
@@ -1631,26 +1624,46 @@ const siteContent = {
             "External experts who provide technical validation for student innovation and methodological oversight.",
           cards: [
             {
-              headline: "[Prof. Name Pending]",
+              headline: "Prof. AVR Srikar",
               tag: "Technical Validation Advisor",
               body:
                 "Affiliation: IIT Hyderabad (Dept of Design)\n\nReviews TRL claims and engineering prototypes for the Space & Drone Labs.",
-              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Technical Validation Advisor", variant: "avatar", privacyBlur: false }
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Prof. AVR Srikar", variant: "avatar", privacyBlur: false }
             },
             {
-              headline: "[Name Pending]",
-              tag: "Independent Ethics Auditor",
+              headline: "Prof. Apoorv Gogar",
+              tag: "Methodological Oversight Advisor",
               body:
-                "Affiliation: [External Institution / Parent Body]\n\nEnsures compliance with child safety protocols and consent architecture.",
-              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Independent Ethics Auditor", variant: "avatar", privacyBlur: false }
+                "Affiliation: Indian School of Business\n\nReviews research design and business application frameworks for student innovation projects.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Prof. Apoorv Gogar", variant: "avatar", privacyBlur: false }
             },
             {
-              headline: "Ad-Hoc Committee",
-              tag: "Peer Review Panel",
-              subtitle: "Convened per Publication",
+              headline: "Rahul Jindal",
+              tag: "Technology Validation Advisor",
               body:
-                "A rotating panel of external PhDs convened solely to validate foundational methodology papers prior to DOI registration.",
-              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Peer Review Panel", variant: "avatar", privacyBlur: false }
+                "Affiliation: Director, Google\n\nProvides technical review for software and systems architecture in student technology projects.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Rahul Jindal", variant: "avatar", privacyBlur: false }
+            },
+            {
+              headline: "Sucheth Davaluri",
+              tag: "Industry Validation Advisor",
+              body:
+                "Affiliation: Vice-Chairman & CEO, Neuland Laboratories\n\nReviews commercialization pathways and industry-readiness of student innovations.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Sucheth Davaluri", variant: "avatar", privacyBlur: false }
+            },
+            {
+              headline: "Manish Gupta",
+              tag: "Enterprise Technology Advisor",
+              body:
+                "Affiliation: Director, SAP\n\nEvaluates scalability and enterprise integration potential of student technology solutions.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Manish Gupta", variant: "avatar", privacyBlur: false }
+            },
+            {
+              headline: "Ronak Kumar",
+              tag: "Aerospace Domain Advisor",
+              body:
+                "Affiliation: Founder, TakeMe2Space\n\nProvides technical mentorship and validation for Space Lab projects including satellite and propulsion initiatives.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Ronak Kumar", variant: "avatar", privacyBlur: false }
             }
           ]
         },
@@ -1665,7 +1678,7 @@ const siteContent = {
             {
               q: "Micro-Research Design Standards",
               a:
-                "Boundedness: Every study must address a single, bounded research question.\n\nCapture Time: Observations must be recordable in <5 minutes.\n\nDuration: Data collection cycles must not exceed 3 weeks to prevent observer fatigue.\n\nInterference: Protocols must result in Zero Interference with the child's natural work cycle. The child should never notice being observed. Observer stays in normal classroom role, records discreetly."
+                "**Boundedness:** Every study must address a single, bounded research question.\n\n**Capture:** Observations must be recordable in <5 minutes.\n\n**Duration:** Data collection cycles must not exceed 3 weeks to prevent observer fatigue.\n\n**Continuity:** Protocols must support longitudinal tracking across developmental planes.\n\n**Observer Reliability:** All data collectors must meet inter-rater agreement thresholds before contributing to the dataset."
             },
             {
               q: "Privacy & Informed Consent",
@@ -1673,9 +1686,14 @@ const siteContent = {
                 "Enrollment Consent: All families sign comprehensive research waivers upon school entry.\n\nChild Assent: Students aged 7+ are granted the \"Right to Decline\" participation without consequence.\n\nWithdrawal: Parents maintain the right to withdraw data access at any time.\n\nData Anonymization: All published records use alphanumeric codes (Subject-847-A, not names). Photos published only with separate photo consent and face obscuration. No re-identification pathway exists in public datasets."
             },
             {
-              q: "Privacy & Informed Consent",
+              q: "Observer Standards & Reliability",
               a:
-                "Enrollment Consent: All families sign comprehensive research waivers upon school entry.\n\nChild Assent: Subjects aged 7+ are granted the \"Right to Decline\" participation without consequence.\n\nWithdrawal: Parents maintain the right to withdraw data access at any time while remaining enrolled in the school."
+                "**Credential Requirement:** All observers must hold a professional Montessori credential (AMI, AMS, or equivalent).\n\n**Environment Integration:** Minimum 3 months working in the specific classroom before eligibility.\n\n**Training:** Completion of BEOP Observer Training (8+ hours).\n\n**Reliability Threshold:** ≥80% inter-rater agreement required.\n\n**Ongoing Calibration:** Quarterly reassessment + annual ethics refresher."
+            },
+            {
+              q: "Continuity & Panel Tracking",
+              a:
+                "**Panel Definition:** Children tracked longitudinally across developmental phases.\n\n**Historical Linking:** New observations connect to prior records.\n\n**Attrition Protocol:** Exited students retain archived anonymized data.\n\n**Cross-Study Mapping:** Internal identifiers enable longitudinal analysis without identity exposure."
             }
           ]
         },
@@ -1731,7 +1749,8 @@ const siteContent = {
               { label: "Function", text: "These experts conduct focused observations within the Innovation Labs. They track \"External Output\"—measuring engineering fidelity, failure recovery rates, and technical precision during high-stakes prototyping (e.g., Drone flight tests)." }
             ]
           },
-          footer: "To apply for a Visiting Researcher position, please visit the Collaborate tab."
+          footer: "To apply for a Visiting Researcher position, please visit the Collaborate tab.",
+          cta: { label: "View Full Team →", href: "/team" }
         },
 
         {
@@ -1917,7 +1936,7 @@ const siteContent = {
             { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
             { title: "Methodology", description: "Research protocols.", icon: "methodology", href: "/methodology" },
             { title: "Downloads", description: "Framework documents.", icon: "download", href: "/downloads" },
-            { title: "Governance", description: "IRB-aligned standards.", icon: "governance", href: "/governance" }
+            { title: "Governance", description: "Standards and oversight.", icon: "governance", href: "/governance" }
           ]
         }
       ]
@@ -3366,72 +3385,42 @@ const siteContent = {
           }
         },
         {
-          id: "team-board",
-          type: "cards",
-          variant: "profiles",
-          header: "Board of Directors & Leadership - Who Runs This",
-          cards: [
-            {
-              headline: "Pavan Goyal",
-              tag: "Principal Investigator & Founder",
-              body: "Credentials: AMI Diploma (0-18)\n\nOversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes.",
-              image: { src: "/src/assets/placeholders/avatars/pavan.jpg", alt: "Pavan Goyal", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/pavan-goyal" }
-            },
-            {
-              headline: "Munira Hussain",
-              tag: "Director of Pedagogy",
-              body: "Credentials: AMI Diploma / M.Ed\n\nEnsures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the \"Children's House.\"",
-              image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/munira-hussain" }
-            },
-            {
-              headline: "[Name Pending]",
-              tag: "Non-Executive Director",
-              body: "Credentials: [Relevant Industry Credential]\n\nAdvises on long-term institutional strategy and external partnerships.",
-              image: { src: "/src/assets/placeholders/avatars/director-placeholder.jpg", alt: "Non-Executive Director", variant: "avatar", privacyBlur: false }
-            }
-          ]
-        },
-        {
-          id: "team-council",
-          type: "cards",
-          variant: "profiles",
-          header: "Research Council & Advisory Board",
-          intro: "External experts who provide technical validation for student innovation and methodological oversight.",
-          cards: [
-            {
-              headline: "[Prof. Name Pending]",
-              tag: "Technical Validation Advisor",
-              body: "Affiliation: IIT Hyderabad (Dept of Design)\n\nReviews TRL claims and engineering prototypes for the Space & Drone Labs.",
-              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Technical Validation Advisor", variant: "avatar", privacyBlur: false }
-            },
-            {
-              headline: "[Name Pending]",
-              tag: "Independent Ethics Auditor",
-              body: "Affiliation: [External Institution / Parent Body]\n\nEnsures compliance with child safety protocols and consent architecture.",
-              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Independent Ethics Auditor", variant: "avatar", privacyBlur: false }
-            },
-            {
-              headline: "Ad-Hoc Committee",
-              tag: "Peer Review Panel",
-              subtitle: "Convened per Publication",
-              body: "A rotating panel of external PhDs convened solely to validate foundational methodology papers prior to DOI registration.",
-              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Peer Review Panel", variant: "avatar", privacyBlur: false }
-            }
-          ]
+          id: "team-fellows",
+          type: "twoColumn",
+          variant: "cards",
+          header: "Research & Observation Team",
+          intro:
+            "Data collection is conducted by a dual-layer team, ensuring both pedagogical sensitivity and technical accuracy.",
+          left: {
+            heading: "Embedded Research Fellows (AMI)",
+            icon: "graduation",
+            items: [
+              { label: "Who They Are", text: "AMI-Certified Pedagogues." },
+              { label: "Observation Focus", text: "Developmental & Behavioral Data." },
+              { label: "Function", text: "They're the child's regular teacher, not a stranger with a clipboard. Children behave naturally because observation is invisible. The guide records observations during lunch or after school, never during work cycles." }
+            ]
+          },
+          right: {
+            heading: "Research Associates (Subject Experts)",
+            icon: "flask",
+            items: [
+              { label: "Who They Are", text: "Engineers, Data Scientists, and Domain Specialists." },
+              { label: "Observation Focus", text: "Performance & Competency Data." },
+              { label: "Function", text: "These experts conduct focused observations within the Innovation Labs. They track \"External Output\"—measuring engineering fidelity, failure recovery rates, and technical precision during high-stakes prototyping (e.g., Drone flight tests)." }
+            ]
+          }
         },
         {
           id: "team-research",
           type: "cards",
           variant: "profiles",
-          header: "Research Cohorts",
-          intro: "Student researchers and embedded fellows who participate in the Institute's innovation projects.",
+          header: "Research Cohorts – Student Researchers",
+          intro: "Students transition from learning innovation to producing it. They design functional prototypes under real engineering constraints.",
           cards: [
             {
               headline: "Adolescent Research Cohort",
-              tag: "Student Researchers (Ages 12-18)",
-              body: "The student researchers aged 12-18 who drive the Institute's innovation projects. Their work spans aerospace, healthcare, environmental monitoring, and autonomous systems.",
+              tag: "Student Researchers (Ages 12–16)",
+              body: "This cohort consists of students aged 12–16 working on Institute innovation projects across aerospace, autonomous systems, environmental monitoring, and applied research. They build real engineering outputs — not simulations.",
               image: { src: "/src/assets/placeholders/labs/space-lab.jpg", alt: "Adolescent Research Cohort", variant: "avatar", privacyBlur: true },
               cta: { label: "View Details", href: "/team/adolescent-research-cohort" }
             }
@@ -3449,7 +3438,7 @@ const siteContent = {
           type: "relatedCards",
           header: "Related",
           cards: [
-            { title: "Governance", description: "Leadership structure.", icon: "governance", href: "/governance" },
+            { title: "Governance", description: "Oversight & advisory board.", icon: "governance", href: "/governance" },
             { title: "Patents", description: "Student innovations.", icon: "patent", href: "/patents" },
             { title: "Collaborate", description: "Join the team.", icon: "collaborate", href: "/collaborate" },
             { title: "Downloads", description: "Leadership bios.", icon: "download", href: "/downloads" }
@@ -4970,8 +4959,8 @@ const siteContent = {
           id: "cohort-hero",
           type: "hero",
           variant: "stark",
-          headline: "Adolescent Research Cohort",
-          subheadline: "The student researchers aged 12-18 who drive the Institute's innovation projects. Their work spans aerospace, healthcare, environmental monitoring, and autonomous systems.",
+          headline: "The Adolescent Research Cohort",
+          subheadline: "This cohort consists of students aged 12–16 working on Institute innovation projects across aerospace, autonomous systems, environmental monitoring, and applied research. They build real engineering outputs — not simulations.",
           primaryCta: { label: "View Patents", href: "/patents" },
           secondaryCta: { label: "Back to Team", href: "/team" },
           image: { src: "/src/assets/placeholders/labs/space-lab.jpg", alt: "Adolescent Research Cohort", variant: "hero" }
@@ -4979,8 +4968,8 @@ const siteContent = {
         {
           id: "cohort-content",
           type: "textBlock",
-          header: "About the Cohort",
-          body: "The Adolescent Research Cohort represents the Institute's most active innovators. These students, aged 12-18, are responsible for the majority of patent filings and participate in high-stakes projects including the SBB-1 space mission.\n\nTo protect the privacy of minors and maintain the integrity of the research environment, individual student profiles are not published. Their contributions are documented through the patent registry and mission archives."
+          header: "Contribution, Not Enrichment",
+          body: "The SBB-1 CubeSat demonstrated adolescents can meet TRL-9 engineering constraints when given real problems and mentorship.\n\nParticipation is project-based, not course-based.\n\nStudents work alongside:\n• Research Fellows\n• External advisors\n• Industry partners\n\nOutputs include:\n• Hardware prototypes\n• Datasets with DOIs\n• Patent filings\n• Conference presentations\n\nThis is not enrichment. It is contribution."
         },
         {
           id: "cohort-related",
