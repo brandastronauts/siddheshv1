@@ -939,8 +939,8 @@ const siteContent = {
           headline: "The Micro-Research Framework.",
           subheadline:
             "We built Blue Blocks to generate research, not accommodate it. Since 2009, we've run high-frequency observation directly inside learning environments—recording what actually happens rather than staging what we hope to measure. This isn't retrofitted academic study. It's methodology embedded in practice from day one.",
-          primaryCta: { label: "Download Framework Paper (PDF)", href: "/downloads/micro-research-framework" },
-          secondaryCta: { label: "View Publications", href: "/publications" },
+          primaryCta: { label: "View Framework Paper", disabled: true },
+          secondaryCta: { label: "Zenodo Upload in Process", disabled: true },
           image: {
             src: "/src/assets/banners/methodology-framework.jpg",
             alt: "Methodology framework visual",
@@ -1051,15 +1051,15 @@ const siteContent = {
           header: "Methodology Fundamentals",
           items: [
             {
-              q: "Q1.1: What's the difference between 'Jungle Research' and 'Zoo Research'?",
+              q: "What's the difference between 'Jungle Research' and 'Zoo Research'?",
               a: "Zoo Research brings children to labs or exposes them to unfamiliar observers. The setting is controlled but unnatural — children know they're being studied, so they perform. Jungle Research observes children in their everyday environment with familiar adults present. Nothing changes. Behavior stays authentic. Access spans years, not hours. We only conduct Jungle Research. Any study requiring artificial conditions or external observers gets rejected at the design stage — not as preference, but as policy."
             },
             {
-              q: "Q1.2: What are the 'Four Gates' and why can't studies bypass them?",
+              q: "What are the 'Four Gates' and why can't studies bypass them?",
               a: "Four checkpoints every study must pass before data collection begins. Gate 1 (Longitudinal): Does this connect to children we've observed before? Gate 2 (Naturalistic): Can we observe without disrupting the environment? Gate 3 (Specificity): Is the question bounded and precise — not vague? Gate 4 (Micro): One question, under three weeks of collection, under five minutes per observation, single output. Fail any gate, the study gets redesigned or rejected. No exceptions. The gates exist because loose questions produce unusable data."
             },
             {
-              q: "Q1.3: What does 'Continuity Advantage' mean?",
+              q: "What does 'Continuity Advantage' mean?",
               a: "Most research produces snapshots — isolated observations at single points in time. We produce something closer to cinema — the same children observed across developmental phases, year after year. This reveals what episodic observation misses: how behaviors emerge, how they evolve, what triggers transitions, what persists. Institutions with rotating subjects and temporary access cannot replicate this. Continuity is our primary methodological asset."
             }
           ]
@@ -1071,15 +1071,15 @@ const siteContent = {
           header: "Observer Protocol & Bias Mitigation",
           items: [
             {
-              q: "Q2.1: How do you prevent observer bias when Fellows already know the children?",
+              q: "How do you prevent observer bias when Fellows already know the children?",
               a: "Three ways. First, the See/Hear Rule: record only what you can see or hear. Actions, words, timing, context — nothing else. 'Child was frustrated' fails. 'Child pushed materials away, said I can't do this' passes. Second, inter-rater reliability: Fellows record the same footage, we compare sheets, discrepancies reveal drift into interpretation. We require 80% agreement minimum before deployment and reassess every quarter. Third, disclosure: every publication states that embedded observers have perspectives we reduce but do not eliminate."
             },
             {
-              q: "Q2.2: What qualifications do your observers need?",
+              q: "What qualifications do your observers need?",
               a: "Per BEOP v1.0: professional Montessori credential (AMI, AMS, or equivalent), minimum three months working in the specific environment, eight hours of BEOP Observer Training, demonstrated inter-rater reliability at 80% or higher, quarterly reliability checks, and annual ethics refresher. We don't use untrained volunteers. Embedded observation requires trained observers — that's the trade-off."
             },
             {
-              q: "Q2.3: What's the difference between observation and interpretation?",
+              q: "What's the difference between observation and interpretation?",
               a: "Observation records behavior: 'Child attempted task four times; completed on fifth attempt.' Interpretation assigns meaning: 'Child struggled.' We capture actions, exact words, timing, context. We don't record emotions, motivations, or judgments — those belong in analysis, clearly separated from the raw record. This separation is what makes our data usable by other researchers."
             }
           ]
@@ -1091,15 +1091,15 @@ const siteContent = {
           header: "Data Quality & Limitations",
           items: [
             {
-              q: "Q3.1: You acknowledge you can't establish causation. What can you establish?",
+              q: "You acknowledge you can't establish causation. What can you establish?",
               a: "Correlations, patterns, sequences, temporal relationships. We observe that X precedes Y, or that children who do A tend to also do B. We do not claim X causes Y — that requires experimental manipulation, which we don't conduct. Our contribution is pattern detection across time: seeing what emerges over years of continuous observation. Causal claims belong to controlled experiments. Descriptive claims grounded in extensive naturalistic data belong to us."
             },
             {
-              q: "Q3.2: Your sample isn't random — families chose Montessori. How does that affect findings?",
+              q: "Your sample isn't random — families chose Montessori. How does that affect findings?",
               a: "It's a selection effect we state explicitly. Our panel consists of children whose families opted into this educational approach — that's not representative of all children. Findings may differ in other contexts, populations, or pedagogies. We note this in every publication. Generalization requires evidence from multiple settings; we provide one data point, not universal claims."
             },
             {
-              q: "Q3.3: What happens to findings that contradict established Montessori literature?",
+              q: "What happens to findings that contradict established Montessori literature?",
               a: "They go into the archive like everything else. Methodological honesty means documenting what we observe, not what we expected. The Montessori tradition gives us our observation culture — systematic watching, careful recording, pattern recognition. It doesn't predetermine our conclusions."
             }
           ]
@@ -1111,11 +1111,11 @@ const siteContent = {
           header: "Publication & Evidence",
           items: [
             {
-              q: "Q4.1: Why do you publish to Zenodo?",
+              q: "Why do you publish to Zenodo?",
               a: "Zenodo provides DOIs, version control, and permanent archival — the infrastructure required for research that will be cited and built upon. Every micro-study becomes a citable, permanent record. We also pursue peer review for work that warrants it. Zenodo and peer-reviewed journals serve different functions; we use both."
             },
             {
-              q: "Q4.2: What happens to a study that produces no clear pattern?",
+              q: "What happens to a study that produces no clear pattern?",
               a: "It gets documented with 'no significant pattern observed' as the finding. Null results are results — they stop other researchers from chasing the same dead end. We record what we hypothesized, what we observed, and why the data didn't converge. The archive includes failures. Selective publication of only positive results is a known way to corrupt an evidence base; we avoid it."
             }
           ]
@@ -1127,15 +1127,15 @@ const siteContent = {
           header: "Ethics & Child Protection",
           items: [
             {
-              q: "Q5.1: Can parents opt out of having their child observed?",
+              q: "Can parents opt out of having their child observed?",
               a: "Yes. Opted-out children are excluded from all data collection. Their behavior is never recorded, even if a protocol is running in their environment. This applies retroactively: if a parent withdraws consent, we remove that child's data from any unpublished study. The consent process is documented in MREF v1.0."
             },
             {
-              q: "Q5.2: How is children's privacy protected in published research?",
+              q: "How is children's privacy protected in published research?",
               a: "Names become codes at point of collection — not later. Campus names become Site A, Site B. Age is recorded in years and months, never birthdates. Anonymization happens during data capture, not during publication prep. The Child Data Classification Standard (CDCS v1.0) defines four tiers of data sensitivity with handling requirements for each."
             },
             {
-              q: "Q5.3: Who has oversight of research ethics?",
+              q: "Who has oversight of research ethics?",
               a: "Internal ethics review is mandatory before any publication. The review checks consent compliance, anonymization completeness, and whether limitations are accurately stated. We follow MREF v1.0 standards and document compliance in every publication. The ethics framework itself is published — anyone can assess whether we follow our own rules."
             }
           ]
@@ -1225,8 +1225,8 @@ const siteContent = {
           variant: "stark",
           headline: "Publications & Open Science",
           subheadline: "Everything we publish is archived for traceability. This docket lists public administrative records, case studies, datasets, and publication pipelines. Where applicable, each item carries a DOI and is preserved in Zenodo for citation permanence. Our objective is continuity, citation stability, and governance transparency rather than promotional publishing.",
-          primaryCta: { label: "Browse Zenodo", href: "https://zenodo.org/communities/blueblocks/", external: true },
-          secondaryCta: { label: "View Methodology", href: "/methodology" },
+          primaryCta: { label: "Browse Our Zenodo Community", href: "https://zenodo.org/communities/blueblocksmicroresearchinstitute/records?q=&l=list&p=1&s=10&sort=newest", external: true },
+          secondaryCta: { label: "View Citation Standards", href: "/publications/citation-standards" },
           image: {
             src: "/src/assets/banners/publications-doi.jpg",
             alt: "Open science research archive",
@@ -1399,7 +1399,7 @@ const siteContent = {
               sub: "Internal research team",
               body:
                 "Identifiable data (names, faces), unredacted observation videos, raw consent forms, linking keys between names and anonymous codes.",
-              cta: { label: "Staff Access", href: "/staff-access" },
+              cta: { label: "Secure Offline Storage", disabled: true },
               badge: "Restricted"
             }
           ]
@@ -1421,20 +1421,16 @@ const siteContent = {
           variant: "iconCards",
           cards: [
             {
-              tag: "PDF",
               headline: "Micro Research Methodology Framework",
-              meta: "DOI: 10.5281/zenodo.XXXXX",
               body:
                 "The complete operational manual including ethics and protocols.",
-              cta: { label: "Download (PDF)", href: "/downloads/micro-research-framework" }
+              cta: { label: "DOI Link (When Available)", disabled: true }
             },
             {
-              tag: "Spec",
               headline: "Micro Dataset Specification v1.0",
-              meta: "DOI: 10.5281/zenodo.YYYYY",
               body:
                 "The technical schema for variable definitions and anonymization standards.",
-              cta: { label: "Download Spec", href: "/downloads/micro-dataset-specification" }
+              cta: { label: "DOI Link (When Available)", disabled: true }
             },
             {
               tag: "Guide",
@@ -1442,7 +1438,7 @@ const siteContent = {
               meta: "Standard",
               body:
                 "Standard format for attributing Micro-Studies in academic work.",
-              cta: { label: "View Guide", href: "/downloads/citation-guide" }
+              cta: { label: "View Guide", href: "/publications/citation-standards" }
             }
           ]
         },
@@ -3991,6 +3987,132 @@ const siteContent = {
             { title: "Patents", description: "Student IP registry.", icon: "patent", href: "/patents" },
             { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" },
             { title: "Downloads", description: "All documents.", icon: "default", href: "/downloads" }
+          ]
+        }
+      ]
+    },
+
+    "/publications/citation-standards": {
+      title: "Citation Standards & Guide",
+      metaDescription: "Blue Blocks Micro Research Institute citation standards and guide for affiliated publications and datasets.",
+      seo: {
+        title: "Citation Standards & Guide | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/publications/citation-standards",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "website",
+          url: "https://siddheshv1.lovable.app/publications/citation-standards",
+          title: "Citation Standards & Guide",
+          description: "Policy requirements for all affiliated publications and datasets."
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Citation Standards & Guide",
+          url: "https://siddheshv1.lovable.app/publications/citation-standards",
+          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://siddheshv1.lovable.app/publications" },
+            { "@type": "ListItem", position: 3, name: "Citation Standards", item: "https://siddheshv1.lovable.app/publications/citation-standards" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "citation-hero",
+          type: "hero",
+          variant: "publication",
+          headline: "Blue Blocks Micro Research Institute\nCitation Standards & Guide",
+          subheadline: "Policy requirements for all affiliated publications and datasets.",
+          image: {
+            src: "/src/assets/banners/publications-doi.jpg",
+            alt: "Citation standards",
+            variant: "hero",
+            privacyBlur: false
+          }
+        },
+        {
+          id: "citation-standards",
+          type: "textBlock",
+          header: "Citation Standards",
+          body: "To maintain methodological consistency across our 15-year longitudinal research program, all affiliated publications and datasets must cite the Institute's foundational methodology and dataset specifications."
+        },
+        {
+          id: "citation-requirements",
+          type: "cards",
+          header: "Requirements",
+          items: [
+            {
+              title: "Foundational Citations",
+              icon: "file",
+              body: "Retrieve current foundational DOIs from our primary Zenodo community page and include them in your references."
+            },
+            {
+              title: "Digital Archiving",
+              icon: "archive",
+              body: "Add DOIs under \"Related Identifiers\" using \"References\" or \"IsSupplementedBy.\""
+            },
+            {
+              title: "Researcher Identity",
+              icon: "users",
+              body: "Link approved ORCID iD to outputs."
+            }
+          ]
+        },
+        {
+          id: "citation-adherence",
+          type: "textBlock",
+          variant: "muted",
+          body: "Adherence ensures contributions map accurately to the Blue Blocks research legacy."
+        },
+        {
+          id: "citation-guide",
+          type: "textBlock",
+          header: "Citation Guide"
+        },
+        {
+          id: "citation-methodology",
+          type: "highlightBox",
+          header: "Citing Methodology",
+          body: "Blue Blocks Micro Research Institute. (2025).\nMicro Research Methodology: A Framework for Embedded Educational Research (Version 2.0).\nZenodo.\nhttps://doi.org/10.5281/zenodo.XXXXXXX"
+        },
+        {
+          id: "citation-datasets",
+          type: "highlightBox",
+          header: "Citing Datasets",
+          body: "Blue Blocks Micro Research Institute. (2025).\nMicro Dataset Specification (Version 1.0).\nZenodo.\nhttps://doi.org/10.5281/zenodo.XXXXXXX"
+        },
+        {
+          id: "citation-formatting",
+          type: "list",
+          header: "Formatting Requirements",
+          items: [
+            "Include both DOIs in references",
+            "Add under \"Related Identifiers\"",
+            "Link ORCID iD"
+          ]
+        },
+        {
+          id: "citation-why",
+          type: "textBlock",
+          header: "Why This Matters",
+          body: "Consistent citation builds an interconnected evidence base."
+        },
+        {
+          id: "citation-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
+            { title: "Methodology", description: "Research protocols.", icon: "methodology", href: "/methodology" },
+            { title: "Downloads", description: "Framework documents.", icon: "download", href: "/downloads" }
           ]
         }
       ]
