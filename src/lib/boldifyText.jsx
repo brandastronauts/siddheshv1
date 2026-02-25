@@ -46,9 +46,32 @@ const BOLD_REGEX = new RegExp(`(${termPattern})`, 'g');
  * If input is not a string or contains no matches, returns the input unchanged.
  */
 export function boldifyText(text) {
-  if (typeof text !== 'string' || !BOLD_REGEX.test(text)) return text;
+  if (typeof text !== 'string') return text;
 
-  // Reset regex lastIndex
+  // First pass: handle **markdown bold** syntax
+  const MD_BOLD = /\*\*(.+?)\*\*/g;
+  const hasMarkdown = MD_BOLD.test(text);
+  MD_BOLD.lastIndex = 0;
+
+  if (hasMarkdown) {
+    // Split by **bold** markers
+    const parts = text.split(/\*\*(.+?)\*\*/g);
+    return parts.map((part, i) =>
+      i % 2 === 1 ? (
+        <strong key={`md-${i}`} className="font-semibold text-foreground">
+          {part}
+        </strong>
+      ) : (
+        <React.Fragment key={`md-${i}`}>{boldifyTerms(part)}</React.Fragment>
+      )
+    );
+  }
+
+  return boldifyTerms(text);
+}
+
+function boldifyTerms(text) {
+  if (typeof text !== 'string' || !BOLD_REGEX.test(text)) return text;
   BOLD_REGEX.lastIndex = 0;
 
   const parts = text.split(BOLD_REGEX);
