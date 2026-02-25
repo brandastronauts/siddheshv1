@@ -1806,8 +1806,8 @@ const siteContent = {
           headline: "Collaborative Science.",
           subheadline:
             "Scientific breakthrough rarely happens in isolation. The Blue Blocks Micro Research Institute opens its longitudinal infrastructure to external partners who share our commitment to rigorous, non-intrusive inquiry. We offer a 15-year continuous dataset (0-18) that simply does not exist elsewhere. No other institution in India has comparable longitudinal density. If you're studying child development and need real data, not theory, we can work together.",
-          primaryCta: { label: "Submit Research Proposal", href: "#collaborate-form" },
-          secondaryCta: { label: "View Data Access Protocols", href: "/governance" },
+          primaryCta: { label: "Submit Research Proposal", href: "/contact" },
+          secondaryCta: { label: "Our Data is Open Access", href: "/publications" },
           image: {
             src: "/src/assets/banners/collaborate-network.jpg",
             alt: "Collaboration network visual",
@@ -1848,11 +1848,14 @@ const siteContent = {
           id: "collab-logos",
           type: "logoStrip",
           header: "Who We Work With",
-          intro: "Our network of technical validators and academic collaborators.",
+          intro: "Our network of technical validators, academic collaborators, and industry partners.",
           logos: [
             { name: "IIT Hyderabad", src: "/src/assets/brand/iit-hyderabad-logo.png", alt: "IIT Hyderabad logo", role: "Academic Partner (Dept. of Design)", collaboration: "Prototyping Validation & Design Thinking Methodology." },
             { name: "IN-SPACe / ISRO", src: "/src/assets/brand/inspace-logo.png", alt: "IN-SPACe logo", role: "Technical Partner", collaboration: "Aerospace Payload Qualification & Launch Authorization." },
-            { name: "AMI", src: "/src/assets/brand/ami-logo.png", alt: "AMI logo", role: "Pedagogical Affiliate", collaboration: "Alignment with Global Montessori Standards (0-18)." }
+            { name: "AMI", src: "/src/assets/brand/ami-logo.png", alt: "AMI logo", role: "Pedagogical Affiliate", collaboration: "Alignment with Global Montessori Standards (0-18)." },
+            { name: "Cambridge Assessment International Education", src: "/src/assets/brand/cambridge-logo.png", alt: "Cambridge Assessment logo", role: "Academic Partner", collaboration: "International curriculum alignment and assessment framework for secondary programs." },
+            { name: "Zenodo / CERN", src: "/src/assets/brand/zenodo-logo.png", alt: "Zenodo logo", role: "Publication Partner", collaboration: "Open-access archival and DOI registration for all Institute research outputs." },
+            { name: "TakeMe2Space", src: "/src/assets/brand/takeme2space-logo.png", alt: "TakeMe2Space logo", role: "Industry Partner", collaboration: "Aerospace mentorship and technical validation for Space Lab projects." }
           ]
         },
 
@@ -1902,7 +1905,7 @@ const siteContent = {
               headline: "Press & Publishing",
               icon: "newspaper",
               body: "For media inquiries, citation permissions, and interview requests.",
-              button: { label: "Download Media Kit", href: "/downloads" }
+              button: { label: "Blue Blocks CubeSat Press Kit", href: "https://drive.google.com/drive/folders/1qAxUfbSOFcN3TYDPlX_7tHrYXFU39fxY?usp=sharing", external: true }
             }
           ],
           footerNote: "Timeline: Proposals are reviewed on a rolling basis (2-4 weeks)."
@@ -2858,25 +2861,25 @@ const siteContent = {
           id: "downloads-publications",
           type: "downloadList",
           header: "Publications",
-          intro: "Official publications and research records with DOI identifiers.",
+          intro: "Official publications and research records. Access via DOI for citation integrity and version control.",
           items: [
             {
               title: "IN-SPACe Authorization Letter",
-              description: "Official authorization record for SBB-1 mission (DOI: 10.5281/zenodo.18195108)",
-              format: "PDF",
-              href: "/downloads/in-space-authorization-letter.pdf"
+              description: "Official authorization record for SBB-1 mission",
+              format: "DOI",
+              href: "https://doi.org/10.5281/zenodo.18195108"
             },
             {
-              title: "SAPARYA Conference Booklet",
-              description: "Full case study from IMF 7th National Montessori Conference (DOI: 10.5281/zenodo.18337934)",
-              format: "PDF",
-              href: "/downloads/saparya-conference-booklet.pdf"
+              title: "SAPARYA Conference Booklet — IMF 7th National Montessori Conference",
+              description: "Full case study: From Pink Tower to CubeSat",
+              format: "DOI",
+              href: "https://doi.org/10.5281/zenodo.18337934"
             },
             {
               title: "SAPARYA Presentation Slides",
               description: "Visual presentation materials from IMF conference",
-              format: "PDF",
-              href: "/downloads/saparya-presentation-slides.pdf"
+              format: "DOI",
+              href: "https://doi.org/10.5281/zenodo.18337934"
             }
           ]
         },
@@ -2898,37 +2901,37 @@ const siteContent = {
           id: "downloads-patents",
           type: "downloadList",
           header: "Patents / Technical Documentation",
-          intro: "Patent drawings and technical documentation for student-generated inventions.",
+          intro: "Patent filings by student inventors. Access via DOI for citation integrity.",
           items: [
             {
-              title: "Autonomous Contactless Delivery System (ACDS) — Patent Drawings",
+              title: "Autonomous Contactless Delivery System (ACDS)",
               description: "Electromechanical delivery unit with multi-axis robotic arm and sanitation systems for contactless distribution.",
-              format: "PDF",
-              href: "/downloads/acds-patent.pdf"
+              format: "DOI",
+              href: "https://doi.org/10.5281/zenodo.18195108"
             },
             {
-              title: "Autonomous Medical Assistance System (AMAS) — Patent Drawings",
+              title: "Autonomous Medical Assistance System (AMAS)",
               description: "Telerobotic intervention platform for contactless medical support during epidemiological crises.",
-              format: "PDF",
-              href: "/downloads/amas-patent.pdf"
+              format: "DOI",
+              href: "https://doi.org/10.5281/zenodo.18195108"
             },
             {
-              title: "Autonomous Health Monitoring System (AHMS) — Patent Drawings",
+              title: "Autonomous Health Monitoring System (AHMS)",
               description: "Remote epidemiological surveillance network using infrared thermography and video plethysmography.",
-              format: "PDF",
-              href: "/downloads/ahms-patent.pdf"
+              format: "DOI",
+              href: "https://doi.org/10.5281/zenodo.18195108"
             },
             {
-              title: "System for Automated Security (UAV) — Patent Drawings",
+              title: "System for Automated Security (UAV)",
               description: "Responsive aerial surveillance system for emergency security operations with encrypted alert ingestion and geolocation triangulation.",
-              format: "PDF",
-              href: "/downloads/security-uav-patent.pdf"
+              format: "DOI",
+              href: "https://doi.org/10.5281/zenodo.18195108"
             },
             {
-              title: "Borehole Rescue System (BRS) — Patent Drawings",
+              title: "Borehole Rescue System (BRS)",
               description: "Vertical-access rescue apparatus with adaptive aerial platform, lidar-based collision avoidance, and automated retention mechanisms.",
-              format: "PDF",
-              href: "/downloads/borehole-rescue-patent.pdf"
+              format: "DOI",
+              href: "https://doi.org/10.5281/zenodo.18195108"
             }
           ]
         },
