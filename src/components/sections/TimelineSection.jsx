@@ -6,7 +6,7 @@ const TimelineSection = ({ heading, header, items = [] }) => {
     <section className="section-spacing bg-background">
       <div className="container-grid">
         {title && (
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-deep-ink mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-deep-ink mb-6">
             {title}
           </h2>
         )}
