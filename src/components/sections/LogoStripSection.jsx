@@ -7,7 +7,7 @@ import inspaceLogo from '@/assets/brand/inspace-logo.png';
 import isroLogo from '@/assets/brand/isro-logo.jpg';
 import amiLogo from '@/assets/brand/ami-logo.png';
 import cambridgeLogo from '@/assets/brand/cambridge-logo.png';
-import zenodoLogo from '@/assets/brand/zenodo-logo.png';
+import zenodoLogo from '@/assets/brand/zenodo-logo.svg';
 import takeme2spaceLogo from '@/assets/brand/takeme2space-logo.png';
 
 // Map for resolving logo paths to imports
@@ -19,6 +19,7 @@ const logoImports = {
   '/src/assets/brand/ami-logo.png': amiLogo,
   '/src/assets/brand/cambridge-logo.png': cambridgeLogo,
   '/src/assets/brand/zenodo-logo.png': zenodoLogo,
+  '/src/assets/brand/zenodo-logo.svg': zenodoLogo,
   '/src/assets/brand/takeme2space-logo.png': takeme2spaceLogo,
 };
 
@@ -73,11 +74,13 @@ const LogoStripSection = ({ heading, header, intro, logos, scrollable, style }) 
               >
                 <div className={`flex items-center justify-center h-16 mb-3 transition-all duration-300 ${isGreyscale ? 'opacity-60 grayscale hover:opacity-100 hover:grayscale-0' : 'opacity-80 hover:opacity-100'}`}>
                   {imageSrc ? (
-                    <img
-                      src={imageSrc}
-                      alt={imageAlt}
-                      className="h-14 w-auto max-w-[140px] object-contain"
-                    />
+                    <div className={`flex items-center justify-center ${rawSrc?.includes('takeme2space') ? 'bg-deep-ink rounded-lg px-4 py-2' : ''}`}>
+                      <img
+                        src={imageSrc}
+                        alt={imageAlt}
+                        className="h-14 w-auto max-w-[140px] object-contain"
+                      />
+                    </div>
                   ) : (
                     <div className="h-14 px-6 bg-muted rounded-lg flex items-center justify-center border border-border/50">
                       <span className="text-sm font-medium text-muted-foreground">
