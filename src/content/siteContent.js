@@ -4029,8 +4029,8 @@ const siteContent = {
           id: "citation-hero",
           type: "hero",
           variant: "publication",
-          headline: "Blue Blocks Micro Research Institute\nCitation Standards & Guide",
-          subheadline: "Policy requirements for all affiliated publications and datasets.",
+          headline: "Citation Standards & Guide",
+          subheadline: "Blue Blocks Micro Research Institute — Policy requirements for all affiliated publications and datasets.",
           image: {
             src: "/src/assets/banners/publications-doi.jpg",
             alt: "Citation standards",
@@ -4046,7 +4046,7 @@ const siteContent = {
         },
         {
           id: "citation-requirements",
-          type: "cards",
+          type: "grid3",
           header: "Requirements",
           items: [
             {
@@ -4073,37 +4073,33 @@ const siteContent = {
           body: "Adherence ensures contributions map accurately to the Blue Blocks research legacy."
         },
         {
-          id: "citation-guide",
-          type: "textBlock",
-          header: "Citation Guide"
-        },
-        {
-          id: "citation-methodology",
-          type: "highlightBox",
-          header: "Citing Methodology",
-          body: "Blue Blocks Micro Research Institute. (2025).\nMicro Research Methodology: A Framework for Embedded Educational Research (Version 2.0).\nZenodo.\nhttps://doi.org/10.5281/zenodo.XXXXXXX"
-        },
-        {
-          id: "citation-datasets",
-          type: "highlightBox",
-          header: "Citing Datasets",
-          body: "Blue Blocks Micro Research Institute. (2025).\nMicro Dataset Specification (Version 1.0).\nZenodo.\nhttps://doi.org/10.5281/zenodo.XXXXXXX"
-        },
-        {
-          id: "citation-formatting",
-          type: "list",
-          header: "Formatting Requirements",
-          items: [
-            "Include both DOIs in references",
-            "Add under \"Related Identifiers\"",
-            "Link ORCID iD"
-          ]
-        },
-        {
-          id: "citation-why",
-          type: "textBlock",
-          header: "Why This Matters",
-          body: "Consistent citation builds an interconnected evidence base."
+          id: "citation-guide-methodology",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Citing Methodology",
+                body: "Blue Blocks Micro Research Institute. (2025).\nMicro Research Methodology: A Framework for Embedded Educational Research (Version 2.0).\nZenodo.\nhttps://doi.org/10.5281/zenodo.XXXXXXX"
+              },
+              {
+                title: "Citing Datasets",
+                body: "Blue Blocks Micro Research Institute. (2025).\nMicro Dataset Specification (Version 1.0).\nZenodo.\nhttps://doi.org/10.5281/zenodo.XXXXXXX"
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Formatting Requirements",
+                citation: "• Include both DOIs in references\n• Add under \"Related Identifiers\"\n• Link ORCID iD"
+              },
+              {
+                title: "Why This Matters",
+                citation: "Consistent citation builds an interconnected evidence base. Proper attribution ensures every contribution maps accurately to the Blue Blocks research legacy and supports longitudinal traceability across the 15-year dataset."
+              }
+            ]
+          }
         },
         {
           id: "citation-related",
