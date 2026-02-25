@@ -140,7 +140,7 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
                 <div className="p-6 lg:p-8 flex flex-col flex-1">
                   {/* Tag for pressRoom or newsGrid variant */}
                   {item.tag && (
-                    <span className={`mb-3 inline-block ${isNewsGrid ? 'text-xs font-semibold text-accent-cyan uppercase tracking-wider' : 'badge-accent'}`}>
+                    <span className={`mb-3 ${isNewsGrid ? 'inline-block text-xs font-semibold text-accent-cyan uppercase tracking-wider' : isProfiles ? 'block text-center text-xs font-bold text-accent-cyan uppercase tracking-wider' : 'inline-block badge-accent'}`}>
                       {item.tag}
                     </span>
                   )}
