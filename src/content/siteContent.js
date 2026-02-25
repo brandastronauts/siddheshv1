@@ -2027,8 +2027,8 @@ const siteContent = {
           headline: "The Institutional Record.",
           subheadline:
             "This newsroom documents what we've learned, what we've built, and what went wrong. Satellite launches, patent filings, scientific breakthroughs, methodological dead-ends—all of it matters. 15 years completed; Year 16 ongoing. Five utility patents filed to date.",
-          primaryCta: { label: "Subscribe to Monthly Digest", href: "#digest-form" },
-          secondaryCta: { label: "Download Media Kit >", href: "/downloads" },
+          primaryCta: { label: "Monthly Digest – Available Shortly", disabled: true },
+          secondaryCta: { label: "Currently CubeSat Press Kit Available", href: "https://drive.google.com/drive/folders/1qAxUfbSOFcN3TYDPlX_7tHrYXFU39fxY?usp=sharing", external: true },
           image: {
             src: "/src/assets/banners/newsroom-press.jpg",
             alt: "Printing press editorial visual",
@@ -2054,17 +2054,17 @@ const siteContent = {
           side: [
             {
               tag: "Publication Event",
-              headline: "Micro Research Framework Published (Open Access)",
+              headline: "Publishing in Progress",
               excerpt:
-                "We have formally published the architectural blueprint for embedded longitudinal observation. This framework allows other institutions to replicate this without external funding. We spent three years figuring out what doesn't work before we got here.",
-              cta: { label: "View Press Release", href: "/methodology" },
+                "We are currently finalizing our architectural blueprint for embedded longitudinal observation and will be publishing it shortly. This upcoming framework will allow other institutions to replicate our approach without external funding. We spent three years figuring out what doesn't work before getting to this point.",
+              cta: { label: "View Press Release", disabled: true },
               image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Methodology framework", variant: "card", privacyBlur: false }
             },
             {
               tag: "International",
               headline: "Nobel Peace Center Features Student Innovation",
               excerpt:
-                "Blue Blocks Micro Research Institute student projects have been selected for exhibition as exemplars of \"Youth-Led Innovation,\" validating our 0-18 Sovereignty Model on a global stage.",
+                "Blue Blocks Micro Research Institute student projects have been selected for exhibition as exemplars of \"Youth-Led Innovation,\" validating our 0-18 Sovereignty Model on a global stage. Proceedings yet to be released by MONISC.",
               cta: { label: "Read Coverage", href: "/newsroom/coverage/nobel-peace-center" },
               image: { src: "/src/assets/placeholders/card-default.jpg", alt: "International recognition", variant: "card", privacyBlur: false }
             }
@@ -2085,15 +2085,6 @@ const siteContent = {
                 "The Department of Design at IIT Hyderabad joins the Research Council to provide technical validation for student prototyping.",
               cta: { label: "Read Update", href: "/newsroom/updates/iit-hyderabad-advisory" },
               image: { src: "/src/assets/placeholders/labs/data-wing.jpg", alt: "Institutional partnership visual", variant: "card", privacyBlur: false }
-            },
-            {
-              tag: "Student IP",
-              headline: "Utility Patent #4421 Filed: The \"Guardian\" Drone",
-              meta: "September 02, 2025",
-              body:
-                "The Drone Research Centre has filed its fifth utility patent, marking a significant milestone in our study of 'Innovation Agency' in the 9-11 age group. Five utility patents filed to date.",
-              cta: { label: "Read Update", href: "/newsroom/updates/utility-patent-4421" },
-              image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Drone research visual", variant: "card", privacyBlur: true }
             },
             {
               tag: "Fellowship",
@@ -2142,7 +2133,7 @@ const siteContent = {
           type: "form",
           header: "Subscribe to the Monthly Digest",
           intro:
-            "Receive a monthly summary of mission milestones, publications, patents, and institutional updates.",
+            "Receive a monthly summary of mission milestones, publications, patents, and institutional updates. For direct inquiries, email research@blueblocks.in.",
           submit: {
             to: "media@blueblocks.in",
             subject: "Monthly Digest Subscription — Blue Blocks Micro Research Institute",
@@ -2170,7 +2161,8 @@ const siteContent = {
               required: false,
               placeholder: "Publication interests, deadlines, or verification requests."
             }
-          ]
+          ],
+          contactNote: { label: "Email Research Team", href: "mailto:research@blueblocks.in" }
         },
 
         {
@@ -2792,7 +2784,7 @@ const siteContent = {
           headline: "Proceedings Archive: Oslo 2026",
           subheadline:
             "Comprehensive archive of the Oslo Summit 2026, including presentations, datasets, and official documentation.",
-          primaryCta: { label: "Download Proceedings", href: "/downloads/oslo-2026-proceedings" },
+          primaryCta: { label: "View MONISC Proceedings", disabled: true },
           image: {
             src: "/src/assets/banners/proceedings/oslo-2026.jpg",
             alt: "Oslo proceedings visual",
@@ -5102,7 +5094,7 @@ const siteContent = {
           variant: "stark",
           headline: "Nobel Peace Center Features Student Innovation",
           subheadline: "Blue Blocks Micro Research Institute student projects have been selected for exhibition as exemplars of 'Youth-Led Innovation,' validating our 0-18 Sovereignty Model on a global stage.",
-          primaryCta: { label: "View Oslo Proceedings", href: "/proceedings/oslo-2026" },
+          primaryCta: { label: "View MONISC Proceedings", disabled: true },
           secondaryCta: { label: "Back to Newsroom", href: "/newsroom" },
           image: { src: "/src/assets/placeholders/card-default.jpg", alt: "Nobel Peace Center", variant: "hero" }
         },
@@ -5110,14 +5102,14 @@ const siteContent = {
           id: "coverage-content",
           type: "textBlock",
           header: "International Recognition",
-          body: "On January 28, 2026, at the Nobel Peace Center in Oslo, Founder Pavan Goyal delivered the 'World Premiere' of the Blue Blocks Innovation Pedagogy (0-18). Selected by the Monisc Committee (supported by the Norwegian UNESCO Commission) as a 'global benchmark' for integrating space science with youth education.\n\nThis international recognition validates the Institute's approach to treating children as capable innovators rather than passive learners. Student projects were exhibited alongside the presentation, demonstrating the tangible outcomes of the 0-18 methodology."
+          body: "On January 28, 2026, at the Nobel Peace Center in Oslo, Founder Pavan Goyal delivered the 'World Premiere' of the Blue Blocks Innovation Pedagogy (0-18). Selected by the Monisc Committee (supported by the Norwegian UNESCO Commission) as a 'global benchmark' for integrating space science with youth education.\n\nThis international recognition validates the Institute's approach to treating children as capable innovators rather than passive learners. Student projects were exhibited alongside the presentation, demonstrating the tangible outcomes of the 0-18 methodology.\n\nProceedings yet to be released by MONISC."
         },
         {
           id: "coverage-related",
           type: "relatedCards",
           header: "Related",
           cards: [
-            { title: "Oslo Proceedings", description: "Full archive.", icon: "archive", href: "/proceedings/oslo-2026" },
+            { title: "MONISC Proceedings", description: "Awaiting release.", icon: "archive", href: "#" },
             { title: "Methodology", description: "Our approach.", icon: "methodology", href: "/methodology" },
             { title: "All News", description: "Back to newsroom.", icon: "news", href: "/newsroom" }
           ]
