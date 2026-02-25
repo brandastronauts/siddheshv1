@@ -1853,9 +1853,9 @@ const siteContent = {
             { name: "IIT Hyderabad", src: "/src/assets/brand/iit-hyderabad-logo.png", alt: "IIT Hyderabad logo", role: "Academic Partner (Dept. of Design)", collaboration: "Prototyping Validation & Design Thinking Methodology." },
             { name: "IN-SPACe / ISRO", src: "/src/assets/brand/inspace-logo.png", alt: "IN-SPACe logo", role: "Technical Partner", collaboration: "Aerospace Payload Qualification & Launch Authorization." },
             { name: "AMI", src: "/src/assets/brand/ami-logo.png", alt: "AMI logo", role: "Pedagogical Affiliate", collaboration: "Alignment with Global Montessori Standards (0-18)." },
-            { name: "Cambridge Assessment International Education", src: "/src/assets/brand/cambridge-logo.png", alt: "Cambridge Assessment logo", role: "Academic Partner", collaboration: "International curriculum alignment and assessment framework for secondary programs." },
-            { name: "Zenodo / CERN", src: "/src/assets/brand/zenodo-logo.png", alt: "Zenodo logo", role: "Publication Partner", collaboration: "Open-access archival and DOI registration for all Institute research outputs." },
-            { name: "TakeMe2Space", src: "/src/assets/brand/takeme2space-logo.png", alt: "TakeMe2Space logo", role: "Industry Partner", collaboration: "Aerospace mentorship and technical validation for Space Lab projects." }
+            { name: "Cambridge Assessment International Education", src: "/src/assets/brand/cambridge-logo.png", alt: "Cambridge Assessment International Education – Academic Partner", role: "Academic Partner", collaboration: "International curriculum alignment and assessment framework for secondary programs." },
+            { name: "Zenodo / CERN", src: "/src/assets/brand/zenodo-logo.svg", alt: "Zenodo – Publication Partner", role: "Publication Partner", collaboration: "Open-access archival and DOI registration for all Institute research outputs. Operated by CERN." },
+            { name: "TakeMe2Space", src: "/src/assets/brand/takeme2space-logo.png", alt: "TakeMe2Space – Industry Partner", role: "Industry Partner", collaboration: "Aerospace mentorship and technical validation for Space Lab projects." }
           ]
         },
 
