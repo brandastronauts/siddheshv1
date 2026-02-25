@@ -83,7 +83,11 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
           isPressRoom 
             ? 'lg:grid-cols-1 max-w-4xl mx-auto gap-6' 
             : isProfiles
-              ? 'md:grid-cols-2 lg:grid-cols-3 gap-6'
+              ? cardData.length === 2
+                ? 'md:grid-cols-2 max-w-2xl mx-auto gap-6'
+                : cardData.length <= 3
+                  ? 'md:grid-cols-2 lg:grid-cols-3 gap-6'
+                  : 'md:grid-cols-2 lg:grid-cols-3 gap-6'
               : cardData.length === 4 && !hasImages
                 ? 'sm:grid-cols-2 lg:grid-cols-4 gap-6'
                 : 'md:grid-cols-2 lg:grid-cols-3 gap-6'
