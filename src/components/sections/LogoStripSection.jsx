@@ -6,6 +6,9 @@ import iitLogo from '@/assets/brand/iit-hyderabad-logo.png';
 import inspaceLogo from '@/assets/brand/inspace-logo.png';
 import isroLogo from '@/assets/brand/isro-logo.jpg';
 import amiLogo from '@/assets/brand/ami-logo.png';
+import cambridgeLogo from '@/assets/brand/cambridge-logo.png';
+import zenodoLogo from '@/assets/brand/zenodo-logo.png';
+import takeme2spaceLogo from '@/assets/brand/takeme2space-logo.png';
 
 // Map for resolving logo paths to imports
 const logoImports = {
@@ -14,6 +17,9 @@ const logoImports = {
   '/src/assets/brand/isro-logo.png': isroLogo,
   '/src/assets/brand/isro-logo.jpg': isroLogo,
   '/src/assets/brand/ami-logo.png': amiLogo,
+  '/src/assets/brand/cambridge-logo.png': cambridgeLogo,
+  '/src/assets/brand/zenodo-logo.png': zenodoLogo,
+  '/src/assets/brand/takeme2space-logo.png': takeme2spaceLogo,
 };
 
 const LogoStripSection = ({ heading, header, intro, logos, scrollable, style }) => {

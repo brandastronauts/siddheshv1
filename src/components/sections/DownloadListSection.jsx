@@ -1,26 +1,35 @@
 import { Link } from 'react-router-dom';
-import { Download, FileText, FileArchive } from 'lucide-react';
+import { Download, FileText, FileArchive, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const DownloadListSection = ({ heading, header, items = [] }) => {
+const DownloadListSection = ({ heading, header, intro, items = [] }) => {
   const title = header || heading;
 
   const getIcon = (type) => {
     const t = type?.toLowerCase();
     if (t === 'zip') return FileArchive;
+    if (t === 'doi') return ExternalLink;
     return FileText;
+  };
+
+  const getActionIcon = (type) => {
+    const t = type?.toLowerCase();
+    if (t === 'doi') return ExternalLink;
+    return Download;
   };
 
   const renderItem = (item, index) => {
     const Icon = getIcon(item.type || item.format);
+    const ActionIcon = getActionIcon(item.type || item.format);
     const isExternal = item.href?.startsWith('http');
     const isFile = /\.(pdf|zip|docx?|xlsx?|pptx?|txt|csv)$/i.test(item.href);
+    const isDOI = (item.type || item.format || '').toLowerCase() === 'doi';
     const displayMeta = item.type || item.format || 'PDF';
 
     const content = (
       <div className="flex items-center gap-4">
-        <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary-navy/10 flex items-center justify-center">
-          <Icon className="w-5 h-5 text-primary-navy" />
+        <div className={`flex-shrink-0 w-10 h-10 rounded-lg ${isDOI ? 'bg-accent-cyan/10' : 'bg-primary-navy/10'} flex items-center justify-center`}>
+          <Icon className={`w-5 h-5 ${isDOI ? 'text-accent-cyan' : 'text-primary-navy'}`} />
         </div>
         
         <div className="flex-1 min-w-0">
@@ -33,7 +42,7 @@ const DownloadListSection = ({ heading, header, items = [] }) => {
         </div>
         
         <div className="flex-shrink-0 w-10 h-10 rounded-full bg-accent-cyan/10 flex items-center justify-center group-hover:bg-accent-cyan group-hover:text-white transition-all">
-          <Download className="w-5 h-5 text-accent-cyan group-hover:text-white" />
+          <ActionIcon className="w-5 h-5 text-accent-cyan group-hover:text-white" />
         </div>
       </div>
     );
@@ -47,7 +56,6 @@ const DownloadListSection = ({ heading, header, items = [] }) => {
           href={item.href}
           target="_blank"
           rel="noopener noreferrer"
-          download={isFile && !isExternal ? undefined : undefined}
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -82,10 +90,22 @@ const DownloadListSection = ({ heading, header, items = [] }) => {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-2xl md:text-3xl font-bold text-deep-ink mb-8"
+            className="text-2xl md:text-3xl font-bold text-deep-ink mb-4"
           >
             {title}
           </motion.h2>
+        )}
+
+        {intro && (
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.05 }}
+            className="text-sm text-muted-foreground mb-8 max-w-3xl"
+          >
+            {intro}
+          </motion.p>
         )}
         
         <div className="max-w-3xl space-y-4">
