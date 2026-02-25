@@ -1530,7 +1530,7 @@ const siteContent = {
     "/governance": {
       title: "Governance & Oversight",
       metaDescription:
-        "Governance & Oversight: IRB-aligned standards, privacy architecture, student IP rights, and research council review protocols for embedded longitudinal observation.",
+        "Governance & Oversight: privacy architecture, student IP rights, and research council review protocols for embedded longitudinal observation.",
       seo: {
         title: "Governance & Oversight | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/governance",
@@ -1540,7 +1540,7 @@ const siteContent = {
           url: "https://siddheshv1.lovable.app/governance",
           title: "Governance & Oversight",
           description:
-            "Protocols and oversight ensuring pedagogical integrity, privacy, and IRB-aligned research standards.",
+            "Protocols and oversight ensuring pedagogical integrity, privacy, and research governance standards.",
           image: {
             url: "https://siddheshv1.lovable.app/og/governance.jpg",
             width: 1200,
@@ -3374,7 +3374,7 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "Team",
-          subheadline: "Meet the leadership, researchers, and embedded fellows who drive the Blue Blocks Micro Research Institute's mission. 15 years of longitudinal research requires institutional stability and deep domain expertise.",
+          subheadline: "Meet the researchers, embedded fellows, and domain specialists who drive the Blue Blocks Micro Research Institute's mission. 15 years of longitudinal research requires institutional stability and deep domain expertise.",
           primaryCta: { label: "Contact", href: "/contact" },
           image: {
             src: "/src/assets/banners/team.jpg",
@@ -3411,16 +3411,43 @@ const siteContent = {
           }
         },
         {
+          id: "team-associates",
+          type: "cards",
+          variant: "profiles",
+          header: "Research Associates",
+          intro: "Engineers, data scientists, and domain specialists who conduct focused observations and technical validation within the Innovation Labs.",
+          cards: [
+            {
+              headline: "Aerospace Systems Associate",
+              tag: "Research Associate – Aerospace Systems",
+              body: "**Domain:** Aerospace Engineering & Flight Systems\n\nFocuses on flight qualification protocols, payload integration testing, and mission-critical systems validation. Supports the Space Lab's TRL assessment pipeline and contributes to vibration and thermal test documentation.",
+              image: { src: "/src/assets/placeholders/avatars/headshot-1.jpg", alt: "Aerospace Systems Associate", variant: "avatar", privacyBlur: false }
+            },
+            {
+              headline: "Autonomous Systems Associate",
+              tag: "Research Associate – Autonomous Systems",
+              body: "**Domain:** Robotics & Autonomous Navigation\n\nConducts performance analytics on drone prototypes and autonomous delivery systems. Validates sensor fusion accuracy, path-planning algorithms, and failure recovery rates during field testing.",
+              image: { src: "/src/assets/placeholders/avatars/headshot-2.jpg", alt: "Autonomous Systems Associate", variant: "avatar", privacyBlur: false }
+            },
+            {
+              headline: "Data & Longitudinal Analysis Associate",
+              tag: "Research Associate – Data Science",
+              body: "**Domain:** Statistical Analysis & Dataset Architecture\n\nManages the longitudinal data pipeline from raw observation records to anonymized publishable datasets. Maintains K-anonymity standards and coordinates DOI assignment through Zenodo.",
+              image: { src: "/src/assets/placeholders/avatars/headshot-3.jpg", alt: "Data Science Associate", variant: "avatar", privacyBlur: false }
+            }
+          ]
+        },
+        {
           id: "team-research",
           type: "cards",
           variant: "profiles",
           header: "Research Cohorts – Student Researchers",
-          intro: "Students transition from learning innovation to producing it. They design functional prototypes under real engineering constraints.",
+          intro: "Students who transition from learning about innovation to producing it. They design functional prototypes under real-world engineering constraints — not simulations.",
           cards: [
             {
               headline: "Adolescent Research Cohort",
               tag: "Student Researchers (Ages 12–16)",
-              body: "This cohort consists of students aged 12–16 working on Institute innovation projects across aerospace, autonomous systems, environmental monitoring, and applied research. They build real engineering outputs — not simulations.",
+              body: "Students who transition from learning about innovation to producing it. They design functional prototypes under real-world engineering constraints — not simulations.",
               image: { src: "/src/assets/placeholders/labs/space-lab.jpg", alt: "Adolescent Research Cohort", variant: "avatar", privacyBlur: true },
               cta: { label: "View Details", href: "/team/adolescent-research-cohort" }
             }
@@ -4960,7 +4987,7 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "The Adolescent Research Cohort",
-          subheadline: "This cohort consists of students aged 12–16 working on Institute innovation projects across aerospace, autonomous systems, environmental monitoring, and applied research. They build real engineering outputs — not simulations.",
+          subheadline: "This cohort consists of students aged 12–16 who work on Institute innovation projects across aerospace, autonomous systems, environmental monitoring, and applied research.",
           primaryCta: { label: "View Patents", href: "/patents" },
           secondaryCta: { label: "Back to Team", href: "/team" },
           image: { src: "/src/assets/placeholders/labs/space-lab.jpg", alt: "Adolescent Research Cohort", variant: "hero" }
@@ -4969,7 +4996,7 @@ const siteContent = {
           id: "cohort-content",
           type: "textBlock",
           header: "Contribution, Not Enrichment",
-          body: "The SBB-1 CubeSat demonstrated adolescents can meet TRL-9 engineering constraints when given real problems and mentorship.\n\nParticipation is project-based, not course-based.\n\nStudents work alongside:\n• Research Fellows\n• External advisors\n• Industry partners\n\nOutputs include:\n• Hardware prototypes\n• Datasets with DOIs\n• Patent filings\n• Conference presentations\n\nThis is not enrichment. It is contribution."
+          body: "They don't study engineering concepts in the abstract. They build.\n\nThe SBB-1 CubeSat — a functional satellite designed, assembled, and presented by this cohort — demonstrated that adolescents can meet TRL-9 (Technology Readiness Level 9) engineering constraints when given access to real problems and proper mentorship.\n\nParticipation is project-based, not course-based. Students enter when they demonstrate readiness — curiosity, persistence, and tolerance for failure. They work alongside Research Fellows, external advisors from the Research Council, and industry partners.\n\nOutputs include:\n• Hardware prototypes\n• Published datasets\n• Patent filings\n• Conference presentations\n\nThis is not enrichment. It is contribution."
         },
         {
           id: "cohort-related",

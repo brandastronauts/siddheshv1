@@ -18,7 +18,7 @@ const linkifyText = (text) => {
   );
 };
 
-const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, compact = false, variant }) => {
+const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, cta, compact = false, variant }) => {
   const [copied, setCopied] = useState(false);
   const isCards = variant === 'cards';
 
@@ -290,6 +290,17 @@ const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, compac
           >
             {footer}
           </motion.p>
+        )}
+
+        {cta && (
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mt-4"
+          >
+            {renderCta(cta)}
+          </motion.div>
         )}
       </div>
     </section>
