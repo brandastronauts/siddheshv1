@@ -89,7 +89,6 @@ const HeroSection = ({
     }
 
     // Secondary button
-    const isDisabled = ctaData.disabled;
     
     if (isDisabled) {
       return (
