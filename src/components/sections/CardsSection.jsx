@@ -88,9 +88,13 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
                 : cardData.length <= 3
                   ? 'md:grid-cols-2 lg:grid-cols-3 gap-6'
                   : 'md:grid-cols-2 lg:grid-cols-3 gap-6'
-              : cardData.length === 4 && !hasImages
-                ? 'sm:grid-cols-2 lg:grid-cols-4 gap-6'
-                : 'md:grid-cols-2 lg:grid-cols-3 gap-6'
+              : cardData.length === 1
+                ? 'max-w-lg mx-auto gap-6'
+                : cardData.length === 2
+                  ? 'md:grid-cols-2 max-w-3xl mx-auto gap-6'
+                  : cardData.length === 4 && !hasImages
+                    ? 'sm:grid-cols-2 lg:grid-cols-4 gap-6'
+                    : 'md:grid-cols-2 lg:grid-cols-3 gap-6'
         }`}>
           {cardData.map((item, index) => {
             const bodyText = item.body || item.description || '';

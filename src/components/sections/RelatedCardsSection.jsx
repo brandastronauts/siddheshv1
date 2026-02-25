@@ -19,8 +19,12 @@ const RelatedCardsSection = ({ header, cards = [] }) => {
           </motion.h2>
         )}
 
-        <div className={`grid grid-cols-1 gap-6 max-w-5xl mx-auto ${
-          cards.length === 4 ? 'sm:grid-cols-2 lg:grid-cols-4' : 'md:grid-cols-3 max-w-4xl'
+        <div className={`grid grid-cols-1 gap-6 mx-auto ${
+          cards.length === 1 ? 'max-w-sm' 
+          : cards.length === 2 ? 'sm:grid-cols-2 max-w-2xl' 
+          : cards.length === 3 ? 'md:grid-cols-3 max-w-4xl' 
+          : cards.length === 4 ? 'sm:grid-cols-2 lg:grid-cols-4 max-w-5xl' 
+          : 'md:grid-cols-3 max-w-5xl'
         }`}>
           {cards.map((card, index) => {
             const IconComponent = getIcon(card.icon) || FileText;
