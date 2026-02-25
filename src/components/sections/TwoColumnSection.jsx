@@ -5,6 +5,7 @@ import { useState } from 'react';
 import SmartImage from '../common/SmartImage';
 import ExpandableText from '../common/ExpandableText';
 import { getIcon } from '../../lib/iconMap';
+import { boldifyText } from '../../lib/boldifyText';
 
 const URL_REGEX = /(https?:\/\/[^\s,)]+)/g;
 const linkifyText = (text) => {
@@ -130,7 +131,7 @@ const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, compac
             {section.bullets.map((bullet, i) => (
               <li key={i} className="flex items-start gap-2 text-muted-foreground">
                 <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan mt-2 flex-shrink-0" />
-                <span>{linkifyText(bullet)}</span>
+                <span>{boldifyText(typeof linkifyText(bullet) === 'string' ? linkifyText(bullet) : bullet)}</span>
               </li>
             ))}
           </ul>

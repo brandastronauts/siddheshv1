@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ExpandableText from '../common/ExpandableText';
+import { boldifyText } from '../../lib/boldifyText';
 
 const TextBlockSection = ({ heading, header, sectionName, intro, content, body, cta, alignment = 'left', variant }) => {
   const title = header || heading;
@@ -20,7 +21,7 @@ const TextBlockSection = ({ heading, header, sectionName, intro, content, body, 
             viewport={{ once: true }}
             className="text-sm text-muted-foreground text-center max-w-4xl mx-auto leading-relaxed italic whitespace-pre-line"
           >
-            {text}
+            {boldifyText(text)}
           </motion.p>
         </div>
       </section>

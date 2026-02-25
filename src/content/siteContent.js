@@ -260,21 +260,22 @@ const siteContent = {
               headline: "Mission SBB-1: Flight Qualification & Valorization",
               body:
                 "Blue Blocks Montessori School, in technical collaboration with TakeMe2Space, integrated a 1U payload aboard ISRO PSLV-C62. The Blue Blocks Micro Research Institute served as the pedagogical partner, structuring the mission to test adolescent resilience. While the payload met all flight qualifications (Thermal/Vibration), the launch vehicle's Stage 4 ignition failure at T+847 seconds provided the ultimate lesson. The mission outcome validated the curriculum not through orbital success, but through Valorization: proving to the students that their engineering was \"real enough to fail in real ways.",
-              action: { label: "Read Technical Brief", href: "/technical-briefs/sbb-1" }
+              action: { label: "Read Technical Brief →", href: "https://doi.org/10.5281/zenodo.18195108", external: true }
             },
             {
-              tag: "AMI Saparya 2026",
+              tag: "AMI Saparya 2026 & Monisc",
               headline: "Saparya: From Pink Tower to CubeSat",
               body:
-                "At the AMI Saparya 2026 conference, Blue Blocks students presented the SBB-1 mission not as a simulation, but as a fully authorized aerospace endeavor. The presentation demonstrated the scalable impact of Montessori pedagogy, where adolescent learners transitioned from conceptual physics to securing flight authorization from IN-SPACe for an ISRO launch. Focus: Documenting the journey of adolescents (ages 12-16) who designed and engineered a flight-ready CubeSat payload. The case study explores how the \"Lab-to-Launch\" framework enables students to navigate professional aerospace constraints, from PCB design to regulatory compliance. Research Question: Can adolescent-led teams, guided by Montessori principles, achieve the rigorous technical and regulatory standards required for deployment on commercial space platforms? Outcome: The SBB-1 project achieved definitive valorization through its upcoming launch aboard ISRO's PSLV-C62, formally authorized by IN-SPACe. The work received commendation from the IN-SPACe Director and was showcased to the global Montessori community at both the IMF Saparya and Monisc conferences, setting a new benchmark for student-led innovation.",
-              action: { label: "View Presentation", href: "/presentations/marrakesh-human-capital" }
+                "At the AMI Saparya 2026 and Monisc conferences, Blue Blocks students presented the SBB-1 mission as a fully authorized aerospace endeavor, demonstrating the scalability of Montessori pedagogy. This case study documents how adolescent learners (ages 12-16) utilized a \"Lab-to-Launch\" framework to engineer a flight-ready CubeSat payload. Answering whether student-led teams can satisfy commercial space deployment standards, the project achieved definitive valorization. By navigating rigorous technical and regulatory constraints—from proprietary PCB design to securing formal IN-SPACe authorization for an ISRO PSLV-C62 launch—the students earned director-level commendation, establishing a definitive operational benchmark for adolescent-led aerospace innovation.",
+              action: { label: "View Presentation →", href: "https://doi.org/10.5281/zenodo.18337934", external: true }
             },
             {
               tag: "International Diplomacy / MONISC",
               headline: "Oslo Summit: A Global Benchmark",
               body:
                 "On January 28, 2026, at the Nobel Peace Center, Founder Pavan Goyal delivered the \"World Premiere\" of the Blue Blocks Innovation Pedagogy (0–18). Selected by the Monisc Committee (supported by the Norwegian UNESCO Commission) as a \"global benchmark\" for integrating space science, this session formally releases our student-generated datasets to the international network. The Zenodo archive preserves the complete administrative context: the Official Invitation, the Pedagogical Framework presentation, and the open-data release protocols.",
-              action: { label: "Access Proceedings Archive", href: "/proceedings/oslo-2026" }
+              action: { label: "Access Proceedings Archive", href: "/proceedings/oslo-2026" },
+              secondaryAction: { label: "Proceedings in Progress", disabled: true }
             }
           ]
         },
@@ -288,17 +289,17 @@ const siteContent = {
             "Our research activities follow the academic and developmental seasons. We run observation studies, student patent reviews, and technical testing on predictable cycles. Specific dates for public defenses and open workshops are announced 30 days in advance via our newsletter.",
           items: [
             {
-              title: "The Patent Defense Cycle",
+              title: "The Patent Filing Cycle",
               meta: "Quarterly (Internal)",
               description:
-                "Student researchers defend their utility designs before the Patent Review Board. Board decides: file patent, return for redesign, or abandon.",
+                "Students actively working on patenting new designs in the space section. Designs not yet presented before Patent Review Board.",
               statusLine: "Next Cycle: Awaiting Submission Phase"
             },
             {
-              title: "The Space Lab Simulation Series",
+              title: "The Space Lab Simulation Series: Launch Architecture & Anomaly Mitigation",
               meta: "Bi-Annual",
               description:
-                "Live stress-testing of avionics on the lunar terrain simulator. These aren't simulations—we're testing actual flight hardware before it goes to ISRO for integration. Open to academic partners by invitation (email: research@blueblocks.in).",
+                "Following the SBB-1 CubeSat launch, adolescent engineers now conduct computational modeling and stress testing of PSLV systems. Students analyze structural and aerodynamic vulnerabilities while testing actual flight hardware under extreme conditions prior to ISRO integration.",
               statusLine: "Status: Scheduled for Q3"
             },
             {
@@ -582,7 +583,7 @@ const siteContent = {
           headline: "The 0-18 Continuum.",
           subheadline:
             "We are a new category of research institution—built for questions that require decades, not semesters. By embedding rigorous observation protocols into a living Montessori environment, we have created the world's longest continuous record of human innovation capacity. Most child development studies observe children once or twice. We've been watching the same children for fifteen years. 15 years completed; Year 16 ongoing. Not surveys. Not lab visits. Daily observation records from their actual teachers, in their actual classrooms, working on actual problems.",
-          primaryCta: { label: "Download Institute Prospectus", href: "/downloads/institute-prospectus" },
+          primaryCta: { label: "Institute Prospectus Available Soon", href: "#", disabled: true },
           image: {
             src: "/src/assets/banners/institute-stark.jpg",
             alt: "High trust research institute visual",
@@ -665,9 +666,9 @@ const siteContent = {
             {
               size: "sm",
               tag: "Biosystem Wing",
-              headline: "Terra Utopia",
+              headline: "Terra Utopia & Biomimicry Hive",
               body:
-                "Measuring systems thinking in real-time. Students manage complex ecological variables.",
+                "Measuring systems thinking in real-time. Inside the Biomimicry Hive, students translate evolutionary blueprints into regenerative engineering. Simultaneously, Terra Utopia manages complex ecological variables, allowing adolescents to generate longitudinal data on soil moisture, closed-loop agriculture, and circular resource allocation.",
               image: { src: "/src/assets/placeholders/labs/terra-utopia.jpg", alt: "Environmental research facility", variant: "card", privacyBlur: true }
             },
             {
@@ -675,7 +676,7 @@ const siteContent = {
               tag: "Synthesis Hub",
               headline: "Data Wing",
               body:
-                "Central processing unit for Embedded Fellows to synthesize observations into longitudinal records.",
+                "The central processing unit where Embedded Fellows synthesize behavioral observations into longitudinal records. This facility ensures all data meets Institutional Review Board (IRB) and Ethical Privacy standards.",
               image: { src: "/src/assets/placeholders/labs/data-wing.jpg", alt: "Data wing facility", variant: "card", privacyBlur: true }
             }
           ]

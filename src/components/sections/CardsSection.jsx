@@ -5,6 +5,7 @@ import SmartImage from '../common/SmartImage';
 import ExpandableText from '../common/ExpandableText';
 import MobileExpandModal from '../common/MobileExpandModal';
 import { getIcon } from '../../lib/iconMap';
+import { boldifyText } from '../../lib/boldifyText';
 
 const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
   const title = header || heading;
@@ -161,8 +162,13 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
                   <ExpandableText text={bodyText} collapsedLines={4} minChars={200} className="mb-5" />
 
                   {/* Action button */}
-                  <div className="mt-auto pt-2">
+                  <div className="mt-auto pt-2 flex flex-wrap items-center gap-3">
                     {cardAction && renderAction(cardAction)}
+                    {item.secondaryAction && (
+                      <span className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground border border-border rounded-lg px-4 py-2 opacity-70 cursor-default">
+                        {item.secondaryAction.label}
+                      </span>
+                    )}
                   </div>
 
                   {/* Mobile expand modal removed — ExpandableText handles inline expand */}

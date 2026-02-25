@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { boldifyText } from '../../lib/boldifyText';
 
 /**
  * ExpandableText
@@ -39,7 +40,7 @@ const ExpandableText = ({
   if (!text || text.length <= minChars) {
     return (
       <div className={`text-sm text-muted-foreground leading-relaxed whitespace-pre-line ${textClassName} ${className}`}>
-        {text}
+        {boldifyText(text)}
       </div>
     );
   }
@@ -57,7 +58,7 @@ const ExpandableText = ({
       <div
         className={`text-sm text-muted-foreground leading-relaxed transition-all duration-300 whitespace-pre-line ${collapsedMobileClass} ${textClassName}`}
       >
-        {text}
+        {boldifyText(text)}
       </div>
 
       {/* Toggle — hidden on desktop unless forceDesktop */}

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ExpandableText from '../common/ExpandableText';
+import { boldifyText } from '../../lib/boldifyText';
 
 const HighlightBoxSection = ({ heading, title, text, body, bullets, cta }) => {
   const displayTitle = title || heading;
@@ -50,7 +51,7 @@ const HighlightBoxSection = ({ heading, title, text, body, bullets, cta }) => {
                   {bullets.map((bullet, index) => (
                     <li key={index} className="flex items-start gap-3 text-white/85">
                       <Check className="w-5 h-5 text-accent-cyan flex-shrink-0 mt-0.5" />
-                      <span className="text-sm md:text-base leading-relaxed">{bullet}</span>
+                      <span className="text-sm md:text-base leading-relaxed">{boldifyText(bullet)}</span>
                     </li>
                   ))}
                 </ul>
