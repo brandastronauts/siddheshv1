@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { getIcon } from '../../lib/iconMap';
 import ExpandableText from '../common/ExpandableText';
+import { boldifyText } from '../../lib/boldifyText';
 
 const Grid3Section = ({ heading, header, intro, items }) => {
   const title = header || heading;
@@ -32,7 +33,7 @@ const Grid3Section = ({ heading, header, intro, items }) => {
           >
             {intro.split('\n\n').map((paragraph, idx) => (
               <p key={idx} className="text-lg text-muted-foreground leading-relaxed mb-4 last:mb-0 text-center">
-                {paragraph}
+                {boldifyText(paragraph)}
               </p>
             ))}
           </motion.div>

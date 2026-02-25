@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Calendar } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { boldifyText } from '../../lib/boldifyText';
 
 const ListSection = ({ heading, header, sectionName, intro, items }) => {
   const title = header || heading;
@@ -71,7 +72,7 @@ const ListSection = ({ heading, header, sectionName, intro, items }) => {
                     )}
                   </div>
                   <p className="text-muted-foreground text-sm leading-relaxed">
-                    {item.description}
+                    {boldifyText(item.description)}
                   </p>
                   {item.statusLine && (
                     <p className="text-xs font-semibold text-accent-cyan mt-3 flex items-center gap-2">

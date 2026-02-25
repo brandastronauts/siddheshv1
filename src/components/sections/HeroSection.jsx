@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import HeroBackground from '../common/HeroBackground';
 import { ArrowRight, ExternalLink } from 'lucide-react';
+import { boldifyText } from '../../lib/boldifyText';
 
 // Import all hero banner images
 import homePrecision from '@/assets/banners/home-precision.jpg';
@@ -52,8 +53,16 @@ const HeroSection = ({
     const isExternal = ctaData.external;
     const isAnchor = ctaData.href?.startsWith('#');
     const href = ctaData.href || ctaData.path;
+    const isDisabled = ctaData.disabled;
     
     if (isPrimary) {
+      if (isDisabled) {
+        return (
+          <span className="btn-primary opacity-60 cursor-not-allowed text-white">
+            {ctaData.label}
+          </span>
+        );
+      }
       const className = "btn-primary group text-white";
       const content = (
         <>
@@ -194,7 +203,7 @@ const HeroSection = ({
               }`}
               style={hasImage ? { textShadow: '0 2px 14px rgba(0,0,0,0.55)' } : {}}
             >
-              {subtitle}
+              {boldifyText(subtitle)}
             </motion.p>
           )}
           

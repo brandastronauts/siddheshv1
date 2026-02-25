@@ -1,6 +1,7 @@
 import SmartImage from '../common/SmartImage';
 import { motion } from 'framer-motion';
 import ExpandableText from '../common/ExpandableText';
+import { boldifyText } from '../../lib/boldifyText';
 
 const BentoSection = ({ heading, header, intro, items }) => {
   const title = header || heading;
