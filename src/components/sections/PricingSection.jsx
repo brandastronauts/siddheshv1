@@ -6,6 +6,14 @@ const PricingSection = ({ header, columns }) => {
   const renderCta = (cta) => {
     if (!cta) return null;
     
+    if (cta.disabled) {
+      return (
+        <span className="btn-secondary w-full justify-center opacity-50 cursor-not-allowed">
+          {cta.label}
+        </span>
+      );
+    }
+    
     const isInternal = cta.href?.startsWith('/');
     const className = "btn-secondary w-full justify-center";
     

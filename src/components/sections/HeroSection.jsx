@@ -88,7 +88,21 @@ const HeroSection = ({
       return <Link to={href} className={className}>{content}</Link>;
     }
 
-    // Secondary button - use hero-specific styling when image is present
+    // Secondary button
+    const isDisabled = ctaData.disabled;
+    
+    if (isDisabled) {
+      return (
+        <span className={`inline-flex items-center justify-center gap-2 px-6 py-3 font-medium rounded-xl opacity-60 cursor-not-allowed ${
+          hasImage 
+            ? 'border-2 border-white/30 text-white/60 bg-white/5' 
+            : 'border border-border text-muted-foreground bg-muted'
+        }`}>
+          {ctaData.label}
+        </span>
+      );
+    }
+    
     const className = hasImage 
       ? "inline-flex items-center justify-center gap-2 px-6 py-3 font-medium rounded-xl border-2 border-white/40 text-white bg-white/10 backdrop-blur-sm transition-all duration-200 hover:bg-white/20 hover:border-white/60 group"
       : "btn-secondary group";

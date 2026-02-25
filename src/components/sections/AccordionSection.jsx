@@ -12,7 +12,7 @@ const AccordionSection = ({ heading, header, intro, items }) => {
   };
 
   return (
-    <section className="section-spacing bg-surface relative overflow-hidden">
+    <section className="py-8 md:py-10 bg-surface relative overflow-hidden">
       <div className="absolute inset-0 pattern-grid opacity-20" />
       
       <div className="container-grid relative z-10">

@@ -16,6 +16,7 @@ const BOLD_TERMS = [
   'PSLV-C62',
   'Valorization',
   'Sovereign IP',
+  'Sovereign IP Holders',
   'Patent-ready',
   'Patent-Ready',
   'Zenodo',
@@ -27,6 +28,8 @@ const BOLD_TERMS = [
   'Institutional Review Board (IRB)',
   'Institutional Review Board',
   'IRB',
+  'Goldfish Bowl',
+  '35,000+ Hours',
 ];
 
 // Sort by length descending so longer matches take priority

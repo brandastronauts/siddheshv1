@@ -18,6 +18,14 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
   const renderAction = (action) => {
     if (!action) return null;
     
+    if (action.disabled) {
+      return (
+        <span className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground opacity-60 cursor-not-allowed">
+          {action.label}
+        </span>
+      );
+    }
+    
     const isExternal = action.external || action.href?.startsWith('http');
     
     if (isExternal) {
@@ -76,7 +84,9 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
             ? 'lg:grid-cols-1 max-w-4xl mx-auto gap-6' 
             : isProfiles
               ? 'md:grid-cols-2 lg:grid-cols-3 gap-6'
-              : 'md:grid-cols-2 lg:grid-cols-3 gap-6'
+              : cardData.length === 4 && !hasImages
+                ? 'sm:grid-cols-2 lg:grid-cols-4 gap-6'
+                : 'md:grid-cols-2 lg:grid-cols-3 gap-6'
         }`}>
           {cardData.map((item, index) => {
             const bodyText = item.body || item.description || '';
