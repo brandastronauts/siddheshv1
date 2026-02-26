@@ -1,9 +1,11 @@
 import PageShell from '../components/layout/PageShell';
 import SectionRenderer from '../components/SectionRenderer';
-import siteContent from '../content/siteContent';
+import NotFoundPage from './NotFoundPage';
+import { getPage } from '../lib/getPage';
 
 const CollaboratePage = () => {
-  const page = siteContent.pages['/collaborate'];
+  const page = getPage('/collaborate');
+  if (!page) return <NotFoundPage />;
 
   return (
     <PageShell>

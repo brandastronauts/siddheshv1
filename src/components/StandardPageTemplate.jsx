@@ -178,6 +178,7 @@ const LightHero = ({ headline, subheadline, badge }) => (
             <span className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest rounded-full bg-primary-navy/8 text-primary-navy border border-primary-navy/10 mb-5">
               {badge === 'Governance' && <Shield className="w-3 h-3" />}
               {badge === 'Methodology' && <FlaskConical className="w-3 h-3" />}
+              {badge === 'Legal' && <Scale className="w-3 h-3" />}
               {badge}
             </span>
           </motion.div>

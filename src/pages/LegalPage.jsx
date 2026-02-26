@@ -1,15 +1,17 @@
 import { useLocation } from 'react-router-dom';
 import PageShell from '../components/layout/PageShell';
-import SectionRenderer from '../components/SectionRenderer';
-import siteContent from '../content/siteContent';
+import StandardPageTemplate from '../components/StandardPageTemplate';
+import NotFoundPage from './NotFoundPage';
+import { getPage } from '../lib/getPage';
 
 const LegalPage = () => {
   const location = useLocation();
-  const page = siteContent.pages[location.pathname];
-  
+  const page = getPage(location.pathname);
+  if (!page) return <NotFoundPage />;
+
   return (
     <PageShell>
-      <SectionRenderer sections={page?.sections} />
+      <StandardPageTemplate page={page} badge="Legal" />
     </PageShell>
   );
 };
