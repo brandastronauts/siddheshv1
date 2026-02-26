@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-primary-navy/20 to-transparent" />
       
       <div className="container-grid py-16 md:py-20 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-flex items-center gap-2.5 mb-5">
@@ -81,6 +81,30 @@ const Footer = () => {
                   {item.label}
                 </Link>
               ))}
+              <Link to="/methodology/innovation" className="block text-sm text-white/60 hover:text-white transition-colors">
+                Innovation Research
+              </Link>
+            </nav>
+          </div>
+
+          {/* Governance Column */}
+          <div className="md:col-span-2 lg:col-span-1">
+            <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/60">
+              Governance
+            </h4>
+            <nav className="space-y-3">
+              <Link to="/governance/ethics" className="block text-sm text-white/60 hover:text-white transition-colors">
+                Ethics & Privacy
+              </Link>
+              <Link to="/governance/standards" className="block text-sm text-white/60 hover:text-white transition-colors">
+                Research Standards
+              </Link>
+              <Link to="/governance/compliance" className="block text-sm text-white/60 hover:text-white transition-colors">
+                Regulatory Compliance
+              </Link>
+              <Link to="/governance/our-standards" className="block text-sm text-white/60 hover:text-white transition-colors">
+                Our Standards
+              </Link>
             </nav>
           </div>
         </div>
