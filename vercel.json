@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "headers": [
         {
           "key": "X-Robots-Tag",
@@ -21,8 +21,19 @@
         }
       ]
     },
+
     {
-      "source": "/assets/(.*)",
+      "source": "/assets/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+
+    {
+      "source": "/:path*.js",
       "headers": [
         {
           "key": "Cache-Control",
@@ -31,7 +42,7 @@
       ]
     },
     {
-      "source": "/(.*)\\.(?:js|css)$",
+      "source": "/:path*.css",
       "headers": [
         {
           "key": "Cache-Control",
@@ -39,8 +50,9 @@
         }
       ]
     },
+
     {
-      "source": "/(.*)\\.(?:woff|woff2|ttf|otf)$",
+      "source": "/:path*.(woff|woff2|ttf|otf)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -48,8 +60,9 @@
         }
       ]
     },
+
     {
-      "source": "/(.*)\\.(?:png|jpg|jpeg|webp|svg|gif|ico)$",
+      "source": "/:path*.(png|jpg|jpeg|webp|svg|gif|ico)",
       "headers": [
         {
           "key": "Cache-Control",
@@ -57,8 +70,9 @@
         }
       ]
     },
+
     {
-      "source": "/(.*)\\.(?:pdf)$",
+      "source": "/:path*.pdf",
       "headers": [
         {
           "key": "Cache-Control",
@@ -67,6 +81,7 @@
       ]
     }
   ],
+
   "redirects": [
     {
       "source": "/publications-open-science",
@@ -74,6 +89,7 @@
       "permanent": true
     }
   ],
+
   "rewrites": [
     {
       "source": "/sitemap.xml",
