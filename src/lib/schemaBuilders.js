@@ -37,7 +37,9 @@ export const buildGlobalSchemas = ({ pageName = '', pagePath = '/', breadcrumbs 
       email: 'research@blueblocks.in',
       contactType: 'research inquiries',
     },
-    sameAs: [],
+    sameAs: [
+      'https://zenodo.org/communities/blueblocksmicroresearchinstitute/records?q=&l=list&p=1&s=10&sort=newest',
+    ],
   });
 
   // 2. WebSite (no SearchAction — no /search route exists)
