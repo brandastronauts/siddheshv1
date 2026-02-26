@@ -17,6 +17,19 @@ const splitParagraphs = (text) => {
 const isBulletLine = (line) => /^•\s/.test(line.trim());
 const isNumberedLine = (line) => /^\d+\.\s/.test(line.trim());
 
+// Detect if a line is a short "sub-title" (no trailing period, under 60 chars, followed by longer text)
+const isSubTitle = (line, nextLine) => {
+  if (!line || !nextLine) return false;
+  const trimmed = line.trim();
+  if (trimmed.length > 65 || trimmed.length < 3) return false;
+  if (/[.!?,;]$/.test(trimmed)) return false;
+  if (isBulletLine(trimmed) || isNumberedLine(trimmed)) return false;
+  // Next line should be longer descriptive text
+  if (isBulletLine(nextLine) || isNumberedLine(nextLine)) return false;
+  if (nextLine.trim().length > trimmed.length) return true;
+  return false;
+};
+
 const parseBlock = (block) => {
   const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
   const elements = [];
@@ -37,9 +50,12 @@ const parseBlock = (block) => {
         i++;
       }
       elements.push({ type: 'numbered', items });
+    } else if (isSubTitle(lines[i], lines[i + 1])) {
+      elements.push({ type: 'subtitle', text: lines[i] });
+      i++;
     } else {
       const pLines = [];
-      while (i < lines.length && !isBulletLine(lines[i]) && !isNumberedLine(lines[i])) {
+      while (i < lines.length && !isBulletLine(lines[i]) && !isNumberedLine(lines[i]) && !isSubTitle(lines[i], lines[i + 1])) {
         pLines.push(lines[i]);
         i++;
       }
@@ -64,6 +80,22 @@ const parseBody = (body) => {
    RENDERED ELEMENTS
    ═══════════════════════════════════════════════════════════════════ */
 
+// Renders bullet items with the part before ":" as bold
+const boldifyBulletItem = (text, isLight = false) => {
+  const colonIdx = text.indexOf(':');
+  if (colonIdx > 0 && colonIdx < 50) {
+    const label = text.slice(0, colonIdx);
+    const rest = text.slice(colonIdx);
+    return (
+      <>
+        <strong className={`font-semibold ${isLight ? 'text-white' : 'text-deep-ink'}`}>{label}</strong>
+        {boldifyText(rest)}
+      </>
+    );
+  }
+  return boldifyText(text);
+};
+
 const RichBody = ({ body, variant = 'default' }) => {
   const elements = useMemo(() => parseBody(body), [body]);
   const isLight = variant === 'light';
@@ -78,7 +110,7 @@ const RichBody = ({ body, variant = 'default' }) => {
                 {el.items.map((item, j) => (
                   <li key={j} className={`flex items-start gap-3 text-body leading-relaxed ${isLight ? 'text-white/85' : 'text-foreground/85'}`}>
                     <span className="mt-[7px] w-2 h-2 rounded-full bg-accent-cyan flex-shrink-0" aria-hidden="true" />
-                    <span>{boldifyText(item)}</span>
+                    <span>{boldifyBulletItem(item, isLight)}</span>
                   </li>
                 ))}
               </ul>
@@ -104,6 +136,13 @@ const RichBody = ({ body, variant = 'default' }) => {
                 </motion.div>
               ))}
             </div>
+          );
+        }
+        if (el.type === 'subtitle') {
+          return (
+            <p key={i} className={`text-base font-semibold mt-2 ${isLight ? 'text-white' : 'text-deep-ink'}`}>
+              {el.text}
+            </p>
           );
         }
         return (
@@ -435,7 +474,7 @@ const HighlightSection = ({ id, heading, body }) => {
                           {el.items.map((item, j) => (
                             <li key={j} className="flex items-start gap-3 text-white/85 text-sm md:text-base leading-relaxed">
                               <span className="mt-[7px] w-2 h-2 rounded-full bg-accent-cyan flex-shrink-0" aria-hidden="true" />
-                              <span>{boldifyText(item)}</span>
+                              <span>{boldifyBulletItem(item, true)}</span>
                             </li>
                           ))}
                         </ul>
