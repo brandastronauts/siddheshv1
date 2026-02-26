@@ -2116,7 +2116,7 @@ const siteContent = {
               icon: "download",
               body:
                 "High-resolution vector files of the Institute seal and approved typography.",
-              cta: { label: "Download Asset Pack .zip", href: "/downloads/brand-asset-pack" }
+              cta: { label: "Download Media Kit", href: "/downloads/blue-blocks-mri-media-kit.pdf" }
             },
             {
               title: "Principal Investigator",
@@ -3039,10 +3039,10 @@ const siteContent = {
           intro: "Resources for journalists and media partners.",
           items: [
             {
-              title: "Media Kit",
+              title: "Media Kit (PDF)",
               description: "Complete media kit with logos, brand guidelines, and approved imagery",
-              format: "ZIP",
-              href: "/downloads/media-kit.zip"
+              format: "PDF",
+              href: "/downloads/blue-blocks-mri-media-kit.pdf"
             },
             {
               title: "Brand Assets",
