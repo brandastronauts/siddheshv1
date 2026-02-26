@@ -146,13 +146,13 @@ const HeroSection = ({
           transition={isCompact ? {} : { duration: 20, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
         >
             <img
-              src={resolvedSrcSet ? hero1280 : resolvedImageSrc}
+              src={resolvedSrcSet ? hero768 : resolvedImageSrc}
               srcSet={resolvedSrcSet || undefined}
-              sizes={resolvedSrcSet ? "(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 1280px) 1280px, 1920px" : undefined}
+              sizes={resolvedSrcSet ? "(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1200px" : undefined}
               alt={heroImage?.alt || ''}
               className="absolute inset-0 w-full h-full object-cover object-center"
               fetchPriority="high"
-              decoding="sync"
+              decoding="async"
               loading="eager"
               width={1920}
               height={1080}
