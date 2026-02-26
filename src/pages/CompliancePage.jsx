@@ -1,12 +1,12 @@
 import PageShell from '../components/layout/PageShell';
-import SectionRenderer from '../components/SectionRenderer';
+import StandardPageTemplate from '../components/StandardPageTemplate';
 import siteContent from '../content/siteContent';
 
 const CompliancePage = () => {
   const page = siteContent.pages['/governance/compliance'];
   return (
     <PageShell>
-      <SectionRenderer sections={page?.sections} />
+      <StandardPageTemplate page={page} badge="Governance" />
     </PageShell>
   );
 };
