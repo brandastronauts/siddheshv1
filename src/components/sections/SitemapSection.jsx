@@ -12,6 +12,16 @@ const sitemapData = {
     { name: "Newsroom", url: "/newsroom", status: "complete" },
     { name: "Contact", url: "/contact", status: "complete" },
   ],
+  governance: [
+    { name: "Ethics", url: "/governance/ethics", status: "complete" },
+    { name: "Research Standards", url: "/governance/standards", status: "complete" },
+    { name: "Compliance", url: "/governance/compliance", status: "complete" },
+    { name: "Our Standards", url: "/governance/our-standards", status: "complete" },
+  ],
+  methodology: [
+    { name: "Innovation", url: "/methodology/innovation", status: "complete" },
+  ],
+  ],
   publications: [
     { name: "IN-SPACe Authorization Letter", url: "/publications/in-space-authorization-letter", status: "complete" },
     { name: "SAPARYA / IMF Case Study", url: "/publications/saparya-imf-case-study", status: "complete" },
@@ -71,6 +81,30 @@ const SitemapSection = () => {
             <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Core Pages</h3>
             <ul className="space-y-2">
               {sitemapData.core.map((item) => (
+                <li key={item.url}>
+                  <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Governance</h3>
+            <ul className="space-y-2">
+              {sitemapData.governance.map((item) => (
+                <li key={item.url}>
+                  <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-widest text-muted-foreground mb-4">Methodology</h3>
+            <ul className="space-y-2">
+              {sitemapData.methodology.map((item) => (
                 <li key={item.url}>
                   <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
                     {item.name}
