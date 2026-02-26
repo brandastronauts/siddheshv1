@@ -5899,11 +5899,210 @@ const siteContent = {
     },
   },
 };
+
+// ═══════════════════════════════════════════════════════════════
+// CMS ENRICHMENT LAYER
+// Adds _cpt, _status, and structured `fields` to every page
+// for WordPress CPT + ACF migration readiness.
+// Zero impact on rendering — SectionRenderer ignores these keys.
+// ═══════════════════════════════════════════════════════════════
+
+const CPT_MAP = {
+  '/': 'page',
+  '/the-institute': 'page',
+  '/methodology': 'page',
+  '/methodology/innovation': 'innovation-project',
+  '/publications': 'page',
+  '/publications/in-space-authorization-letter': 'publication',
+  '/publications/saparya-imf-case-study': 'publication',
+  '/publications/citation-standards': 'page',
+  '/governance': 'page',
+  '/governance/ethics': 'governance-page',
+  '/governance/standards': 'governance-page',
+  '/governance/compliance': 'governance-page',
+  '/governance/our-standards': 'governance-page',
+  '/collaborate': 'page',
+  '/newsroom': 'page',
+  '/newsroom/dispatch/isro-payload-authorization': 'news-item',
+  '/newsroom/coverage/nobel-peace-center': 'news-item',
+  '/newsroom/updates/iit-hyderabad-advisory': 'news-item',
+  '/newsroom/updates/utility-patent-4421': 'news-item',
+  '/newsroom/updates/visiting-scholars-2026': 'news-item',
+  '/contact': 'page',
+  '/privacy': 'page',
+  '/terms': 'page',
+  '/technical-briefs/sbb-1': 'publication',
+  '/presentations/marrakesh-human-capital': 'presentation',
+  '/proceedings/oslo-2026': 'presentation',
+  '/downloads': 'download',
+  '/staff-access': 'page',
+  '/sitemap': 'page',
+  '/books': 'page',
+  '/books/lining-the-nest': 'book',
+  '/patents': 'page',
+  '/patents/automated-security-uav': 'patent',
+  '/patents/borehole-rescue-system': 'patent',
+  '/patents/contactless-delivery-system': 'patent',
+  '/patents/autonomous-medical-assistance-system': 'patent',
+  '/patents/autonomous-health-monitoring-system': 'patent',
+  '/team': 'page',
+  '/team/pavan-goyal': 'team-member',
+  '/team/munira-hussain': 'team-member',
+  '/team/adolescent-research-cohort': 'team-member',
+  '/faq': 'page',
+};
+
+// Structured fields extracted from existing section data for CMS mapping.
+// These do NOT duplicate or replace section content — they normalize metadata.
+const FIELDS_MAP = {
+  '/publications/in-space-authorization-letter': {
+    doi: '10.5281/zenodo.18195108',
+    zenodoUrl: 'https://doi.org/10.5281/zenodo.18195108',
+    publishedDate: '2026-01-07',
+    authors: [{ name: 'Blue Blocks Micro Research Institute', type: 'organization' }],
+    researchDomains: ['Aerospace', 'Regulatory'],
+    publicationStatus: 'Archived',
+    publicationType: 'Administrative Record',
+  },
+  '/publications/saparya-imf-case-study': {
+    doi: '10.5281/zenodo.18337934',
+    zenodoUrl: 'https://doi.org/10.5281/zenodo.18337934',
+    publishedDate: '2026-01-23',
+    authors: [
+      { name: 'Gorinta, Sanjay Ramaraju' }, { name: 'Padhy, Sanshray' }, { name: 'Ponnala, Sreshta' },
+      { name: 'Rudraraju, Ashrith' }, { name: 'Reddy, Atla Ashrith' }, { name: 'Kumar, Bikki Maneesh' },
+      { name: 'Goyal, Saachi' }, { name: 'Hussain Kagalwalla, Ummehani' }, { name: 'Mehta, Aahan Hemal' },
+      { name: 'Gupta, Amaira' }, { name: 'Sunkara, Dhruti' }, { name: 'Adusumilli, Karthikeya' },
+      { name: 'Aditya Rao, Pratheetha' }, { name: 'Vijaya Krishna, Ranvir' }, { name: 'Reddy, Bolusani Varun' },
+      { name: 'Satya Rallapalli, Viaan' }, { name: 'Agarwal, Vedika' },
+    ],
+    researchDomains: ['Aerospace', 'Montessori', 'Innovation'],
+    publicationStatus: 'Published',
+    publicationType: 'Conference Presentation',
+  },
+  '/technical-briefs/sbb-1': {
+    doi: '',
+    publishedDate: '2024-12-30',
+    authors: [{ name: 'Blue Blocks Micro Research Institute', type: 'organization' }],
+    researchDomains: ['Aerospace', 'Innovation'],
+    publicationStatus: 'Archived',
+    publicationType: 'Technical Brief',
+  },
+  '/patents/automated-security-uav': {
+    applicationNumber: '202041027026',
+    filingDate: '2020-06-25',
+    grantDate: '',
+    status: 'Granted',
+    category: 'Aerospace / UAV / Security Systems',
+    inventors: ['Student Inventors (Blue Blocks)'],
+    researchDomains: ['Aerospace', 'Autonomous Systems'],
+  },
+  '/patents/borehole-rescue-system': {
+    applicationNumber: '202041027026',
+    filingDate: '2020-06-25',
+    grantDate: '',
+    status: 'Granted',
+    category: 'Robotics / Search & Rescue / Autonomous Navigation',
+    inventors: ['Gorinta, Sanjay Ramaraju', 'Padhy, Sanshray'],
+    researchDomains: ['Robotics', 'Autonomous Systems'],
+  },
+  '/patents/contactless-delivery-system': {
+    applicationNumber: '',
+    filingDate: '2020-06-25',
+    grantDate: '',
+    status: 'Pending',
+    category: 'Robotics / Autonomous Logistics / Public Health Engineering',
+    inventors: ['Akira Mani', 'Aditi Vuppala', 'Uma V Jayaraman', 'Nayonika Vadlamudi'],
+    researchDomains: ['Robotics', 'Public Health'],
+  },
+  '/patents/autonomous-medical-assistance-system': {
+    applicationNumber: '202041027075',
+    filingDate: '2020-06-25',
+    grantDate: '',
+    status: 'Pending',
+    category: 'Medical Robotics / Telerobotics / Epidemiology',
+    inventors: ['Trisha Mohit Sachanandani', 'Ananya', 'Aarini Khadse', 'Anya'],
+    researchDomains: ['Medical Robotics', 'Public Health'],
+  },
+  '/patents/autonomous-health-monitoring-system': {
+    applicationNumber: '',
+    filingDate: '2020-06-25',
+    grantDate: '',
+    status: 'Pending',
+    category: 'Medical Robotics / Public Health Surveillance / Bio-Telemetry',
+    inventors: ['Student Inventors (Blue Blocks)'],
+    researchDomains: ['Medical Robotics', 'Public Health'],
+  },
+  '/newsroom/dispatch/isro-payload-authorization': {
+    publishedDate: '2024-12-30',
+    newsType: 'dispatch',
+    author: 'Blue Blocks Micro Research Institute',
+    researchDomains: ['Aerospace'],
+  },
+  '/newsroom/coverage/nobel-peace-center': {
+    publishedDate: '2026-01-28',
+    newsType: 'coverage',
+    author: 'Blue Blocks Micro Research Institute',
+    researchDomains: ['International', 'Innovation'],
+  },
+  '/newsroom/updates/iit-hyderabad-advisory': {
+    publishedDate: '2025-10-15',
+    newsType: 'update',
+    author: 'Blue Blocks Micro Research Institute',
+    researchDomains: ['Institutional Alliance'],
+  },
+  '/newsroom/updates/utility-patent-4421': {
+    publishedDate: '2025-09-01',
+    newsType: 'update',
+    author: 'Blue Blocks Micro Research Institute',
+    researchDomains: ['Innovation', 'IP'],
+  },
+  '/newsroom/updates/visiting-scholars-2026': {
+    publishedDate: '2025-08-10',
+    newsType: 'update',
+    author: 'Blue Blocks Micro Research Institute',
+    researchDomains: ['Fellowship'],
+  },
+  '/team/pavan-goyal': {
+    role: 'Principal Investigator & Founder',
+    credentials: ['AMI Diploma (0-18)'],
+    affiliations: ['Blue Blocks Micro Research Institute'],
+    tenure: '15+ years',
+  },
+  '/team/munira-hussain': {
+    role: 'Director of Pedagogy',
+    credentials: ['AMI Diploma', 'M.Ed'],
+    affiliations: ['Blue Blocks Micro Research Institute'],
+  },
+  '/team/adolescent-research-cohort': {
+    role: 'Student Researchers (Ages 12-16)',
+    credentials: [],
+    affiliations: ['Blue Blocks Micro Research Institute'],
+  },
+  '/books/lining-the-nest': {
+    publishedDate: '',
+    authors: [{ name: 'Pavan Goyal' }],
+    isbn: '',
+    pageCount: 280,
+    purchaseUrl: 'https://amzn.in/d/09xLf6FE',
+  },
+};
+
 // Post-process: replace all legacy domain references with canonical SITE_URL
 const processed = JSON.parse(
   JSON.stringify(siteContent)
     .replace(/https:\/\/siddheshv1\.lovable\.app/g, SITE_URL)
     .replace(/https:\/\/bb-researchv2\.vercel\.app/g, SITE_URL)
 );
+
+// Enrich every page with _cpt, _status, and fields
+Object.keys(processed.pages).forEach((route) => {
+  const page = processed.pages[route];
+  page._cpt = CPT_MAP[route] || 'page';
+  page._status = 'published';
+  if (FIELDS_MAP[route]) {
+    page.fields = FIELDS_MAP[route];
+  }
+});
 
 export default processed;
