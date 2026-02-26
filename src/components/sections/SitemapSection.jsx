@@ -62,6 +62,7 @@ const sitemapData = {
     { name: "Privacy Policy", url: "/privacy", status: "complete" },
     { name: "Terms of Use", url: "/terms", status: "complete" },
     { name: "Sitemap", url: "/sitemap", status: "complete" },
+    { name: "FAQ", url: "/faq", status: "complete" },
   ],
 };
 
