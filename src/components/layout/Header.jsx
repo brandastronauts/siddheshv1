@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import siteContent from '../../content/siteContent';
-import logo from '../../assets/logo.webp';
+import logo from '../../assets/logo.png';
 import { getIcon } from '../../lib/iconMap';
 
 /* ─── Desktop Dropdown ─────────────────────────────────────────────── */
@@ -163,7 +163,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="h-12 md:h-14 w-12 md:w-14 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-border/20">
+            <div className="h-12 md:h-14 w-12 md:w-14 rounded-lg bg-gradient-to-br from-primary-navy via-secondary-blue to-accent-cyan flex items-center justify-center overflow-hidden border border-primary-navy/20 shadow-sm">
               <img
                 src={logo}
                 alt={brand.siteName}

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Mail, ArrowUpRight, FileText, Lightbulb, BookOpen, Users, Download, Lock, ScrollText, MapPin } from 'lucide-react';
 import siteContent from '../../content/siteContent';
-import logo from '../../assets/logo.webp';
+import logo from '../../assets/logo.png';
 import FooterNewsletter from '../FooterNewsletter';
 
 const Footer = () => {
@@ -17,7 +17,7 @@ const Footer = () => {
           {/* Brand Column */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-flex items-center gap-2.5 mb-5">
-              <div className="h-12 w-12 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-white/20">
+              <div className="h-12 w-12 rounded-lg bg-gradient-to-br from-primary-navy via-secondary-blue to-accent-cyan flex items-center justify-center overflow-hidden border border-white/20 shadow-sm">
                 <img src={logo} alt={brand.siteName} className="h-11 w-11 object-contain" />
               </div>
               <div className="flex flex-col leading-none">
