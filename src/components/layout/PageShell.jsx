@@ -67,9 +67,13 @@ const PageShell = ({ children }) => {
     const description = page.seo?.openGraph?.description || page.metaDescription || page.meta?.description;
     setMeta('meta[name="description"]', description, { name: 'description' });
 
-    // Set robots
-    if (page.seo?.robots) {
+    // Robots: never inject noindex — all pages should be indexable
+    if (page.seo?.robots && !page.seo.robots.includes('noindex')) {
       setMeta('meta[name="robots"]', page.seo.robots, { name: 'robots' });
+    } else {
+      // Remove any existing noindex meta
+      const existingRobots = document.querySelector('meta[name="robots"]');
+      if (existingRobots) existingRobots.remove();
     }
 
     // Set canonical

@@ -17,9 +17,16 @@ const siteContent = {
   nav: [
     { label: "Home", path: "/", icon: "home" },
     { label: "The Institute", path: "/the-institute", icon: "institute" },
-    { label: "Methodology", path: "/methodology", icon: "methodology" },
+    { label: "Methodology", path: "/methodology", icon: "methodology", children: [
+      { label: "Innovation", path: "/methodology/innovation", icon: "lightbulb" },
+    ]},
     { label: "Publications", path: "/publications", icon: "publication" },
-    { label: "Governance", path: "/governance", icon: "governance" },
+    { label: "Governance", path: "/governance", icon: "governance", children: [
+      { label: "Ethics & Privacy", path: "/governance/ethics", icon: "lock" },
+      { label: "Research Standards", path: "/governance/standards", icon: "clipboardList" },
+      { label: "Regulatory Compliance", path: "/governance/compliance", icon: "scale" },
+      { label: "Our Standards", path: "/governance/our-standards", icon: "badgeCheck" },
+    ]},
     { label: "Collaborate", path: "/collaborate", icon: "collaborate" },
     { label: "Newsroom", path: "/newsroom", icon: "newsroom" },
     { label: "Contact", path: "/contact", icon: "contact" },
@@ -5312,7 +5319,410 @@ const siteContent = {
           ]
         }
       ]
-    }
+    },
+
+    // ═══════════════════════════════════════════════════════════════
+    // INNOVATION RESEARCH
+    // ═══════════════════════════════════════════════════════════════
+    "/methodology/innovation": {
+      title: "Innovation Research",
+      metaDescription: "How we study innovation in environments we designed — curriculum, space, and teaching integrated for longitudinal observation.",
+      seo: {
+        title: "Innovation Research | Blue Blocks Micro Research Institute",
+        canonical: `${SITE_URL}/methodology/innovation`,
+        openGraph: {
+          type: "article",
+          url: `${SITE_URL}/methodology/innovation`,
+          title: "Innovation Research | Blue Blocks Micro Research Institute",
+          description: "How we study innovation in environments we designed — curriculum, space, and teaching integrated for longitudinal observation.",
+        },
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          headline: "Innovation Research",
+          description: "How we study innovation in environments we designed — curriculum, space, and teaching integrated for longitudinal observation.",
+          url: `${SITE_URL}/methodology/innovation`,
+          publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: SITE_URL },
+        },
+      ],
+      sections: [
+        {
+          id: "innov-hero",
+          type: "hero",
+          headline: "INNOVATION RESEARCH",
+          subheadline: "How We Study What We Built",
+        },
+        {
+          id: "innov-integration",
+          type: "textBlock",
+          heading: "The Architect-Scientist Advantage",
+          body: "Most innovation research studies programs others designed, in spaces others built, with children others teach.\n\nOur Innovation research is different.\n\nWe designed the program. We built the spaces. We teach the children. And now we study what emerges.\n\nSame team. Full integration. No black boxes.\n\nWhen a university finds that 'innovation training works,' they can't tell you if it was the curriculum, the room, or the teacher. We can. Because we designed all three.",
+        },
+        {
+          id: "innov-dip",
+          type: "textBlock",
+          heading: "Our Framework",
+          body: "Didactic Innovation Principles (DIP) is our proprietary framework for designing environments where innovation emerges naturally.\n\nDIP draws on:\n• Montessori prepared environment theory\n• Developmental psychology across four planes (0-6, 6-12, 12-18)\n• 15 years of iterative refinement based on embedded observation\n\nDIP is not a teaching method. It's an environment design philosophy — principles for creating spaces where children naturally explore, construct, fail, iterate, and innovate.",
+        },
+        {
+          id: "innov-dip-principles",
+          type: "textBlock",
+          sectionName: "The DIP Principles (Summary)",
+          body: "• Prepared Environment: Every material, every placement is intentional\n• Developmental Alignment: Space design changes with the child's plane\n• Error as Information: Environment allows failure without adult intervention\n• Iteration Access: Children can repeat, refine, and retry\n• Cross-Domain Materials: Innovation happens at intersections",
+        },
+        {
+          id: "innov-labs",
+          type: "textBlock",
+          heading: "Purpose-Designed Research Environments",
+          body: "DIP Labs are physical spaces built on Didactic Innovation Principles. They are not generic classrooms with innovation materials added. They are research environments designed from the ground up for innovation emergence.",
+        },
+        {
+          id: "innov-labs-diff",
+          type: "textBlock",
+          sectionName: "What makes a DIP Lab different",
+          body: "• Layout based on observed movement patterns and collaboration emergence\n• Materials selected based on developmental observation, not catalogs\n• Zones designed for specific innovation behaviors (construction, iteration, documentation)\n• Continuous refinement — the space evolves based on what we observe",
+        },
+        {
+          id: "innov-labs-current",
+          type: "textBlock",
+          sectionName: "Current DIP Labs",
+          body: "• DIP Lab 1: First Plane (3-6) — Sensorial innovation foundations\n• DIP Lab 2: Second Plane (6-12) — Construction and collaborative innovation\n• Innovation Studio: Third Plane (12-18) — Design thinking and prototyping",
+        },
+        {
+          id: "innov-curriculum",
+          type: "textBlock",
+          heading: "A Developmental Sequence",
+          body: "Our innovation curriculum spans all four developmental planes. It was designed by AMI-trained educators with deep expertise in innovation pedagogy — the same team that conducts the research.",
+        },
+        {
+          id: "innov-curriculum-arc",
+          type: "textBlock",
+          sectionName: "Curriculum Arc",
+          body: "First Plane (0-6): Foundations\nSensorial exploration, error recognition, basic construction, materials manipulation. Innovation readiness through prepared environment.\n\nSecond Plane (6-12): Construction\nComplex construction, collaborative problem-solving, iteration cycles, documentation of process. Innovation as practice.\n\nThird Plane (12-18): Application\nDesign thinking methodology, real-world prototyping, external partnerships (ISRO CubeSat, IIT collaborations). Innovation as contribution.\n\nEach plane builds on the previous. We track children through all planes — observing how innovation capacity develops longitudinally.",
+        },
+        {
+          id: "innov-loop",
+          type: "textBlock",
+          heading: "How Observation Shapes Design",
+          body: "This is not static curriculum and fixed spaces. It's a living system.",
+        },
+        {
+          id: "innov-loop-steps",
+          type: "textBlock",
+          sectionName: "The Loop",
+          body: "1. We design a space/curriculum element based on developmental principles\n2. We observe how children actually use it\n3. We publish findings\n4. We refine the design based on observation\n5. We observe again\n\nThis has been running for 15 years. The DIP Labs and curriculum you see today are the result of hundreds of iterations — each informed by embedded observation.\n\nExample: Our construction collapse research revealed specific latency patterns. This informed how we position materials and when guides intervene (or don't). The space was adjusted. We observed the change. The findings were published. The loop continues.",
+        },
+        {
+          id: "innov-context",
+          type: "textBlock",
+          heading: "Context That Others Lack",
+          body: "When we publish findings on innovation development, the context is unique:\n• The space was designed by us — we know every design decision\n• The curriculum was designed by us — we know every pedagogical choice\n• The observation is embedded — zero observer effect\n• The refinement loop is continuous — we act on what we learn\n\nThis is Integrated Design-Research applied to innovation. It means our data has context that external researchers cannot provide.\n\nFor researchers:\nIf you use our innovation data, you're not just getting observations. You're getting observations from an environment we designed, using a curriculum we created, refined over 15 years. The design rationale is documented. The context is known.",
+        },
+        {
+          id: "innov-canon",
+          type: "highlightBox",
+          heading: "The Full Story — Innovation Canon (Coming Soon)",
+          body: "We are preparing a comprehensive Innovation Canon Paper documenting:\n• The complete design rationale for DIP\n• 15 years of environment iteration\n• The full 0-18 curriculum framework\n• How observation shaped every design decision\n\nThis will be published with a DOI and linked here — the definitive reference for understanding how our innovation research environment came to be.\n\nFor early access or collaboration inquiries: research@blueblocks.in",
+        },
+        {
+          id: "innov-cta",
+          type: "grid3",
+          header: "Work With Us",
+          items: [
+            {
+              title: "For Researchers",
+              icon: "microscope",
+              body: "Access innovation data from designed environments. Understand the context others can't provide.",
+              email: "research@blueblocks.in",
+            },
+            {
+              title: "For Institutions",
+              icon: "building",
+              body: "Partner on innovation environment design. Learn from 15 years of iteration.",
+              email: "research@blueblocks.in",
+            },
+            {
+              title: "For Educators",
+              icon: "graduation",
+              body: "Explore DIP principles for your own environment. Replicate with attribution.",
+              email: "research@blueblocks.in",
+            },
+          ],
+        },
+      ],
+    },
+
+    // ═══════════════════════════════════════════════════════════════
+    // ETHICS & PRIVACY
+    // ═══════════════════════════════════════════════════════════════
+    "/governance/ethics": {
+      title: "Ethics & Privacy",
+      metaDescription: "Consent, privacy protection, child rights, and what we never do.",
+      seo: {
+        title: "Ethics & Privacy | Blue Blocks Micro Research Institute",
+        canonical: `${SITE_URL}/governance/ethics`,
+        openGraph: {
+          type: "website",
+          url: `${SITE_URL}/governance/ethics`,
+          title: "Ethics & Privacy | Blue Blocks Micro Research Institute",
+          description: "Consent, privacy protection, child rights, and what we never do.",
+        },
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Ethics & Privacy",
+          description: "Consent, privacy protection, child rights, and what we never do.",
+          url: `${SITE_URL}/governance/ethics`,
+          about: { "@type": "Thing", name: "Research Ethics and Child Privacy" },
+        },
+      ],
+      sections: [
+        {
+          id: "ethics-hero",
+          type: "hero",
+          headline: "ETHICS & PRIVACY",
+          subheadline: "Consent, privacy protection, child rights, and what we never do.",
+        },
+        {
+          id: "ethics-commitment",
+          type: "textBlock",
+          heading: "Our Commitment",
+          body: "• Protecting privacy of every child\n• Obtaining meaningful consent\n• Never compromising education\n• Maintaining transparency",
+        },
+        {
+          id: "ethics-consent",
+          type: "textBlock",
+          heading: "Consent Architecture",
+          body: "Enrollment Consent\nAll families consent at enrollment. May withdraw while remaining enrolled.\n\nOngoing Consent\nReaffirmed annually. Notified of publications.\n\nChild Assent\nAge 7+. May decline without consequence.",
+        },
+        {
+          id: "ethics-committee",
+          type: "textBlock",
+          heading: "Ethics Advisory Committee",
+          body: "Principal Investigator + External advisor (IIT) + Parent representative. Reviews all studies.",
+        },
+        {
+          id: "ethics-never",
+          type: "comparisonTable",
+          heading: "What We Never Do",
+          headers: ["We Never", "Why"],
+          rows: [
+            ["Collect medical info without consent", "Privacy"],
+            ["Record income/caste data", "Discrimination risk"],
+            ["Conduct covert observation", "Transparency"],
+            ["Share identified data", "Protection"],
+          ],
+        },
+        {
+          id: "ethics-rights",
+          type: "textBlock",
+          heading: "Children's Rights",
+          body: "• Right to natural behavior\n• Right to privacy\n• Right to decline\n• Right to education first",
+        },
+      ],
+    },
+
+    // ═══════════════════════════════════════════════════════════════
+    // RESEARCH STANDARDS
+    // ═══════════════════════════════════════════════════════════════
+    "/governance/standards": {
+      title: "Research Standards",
+      metaDescription: "Study design, observer requirements, data standards, publication standards, and citation standards.",
+      seo: {
+        title: "Research Standards | Blue Blocks Micro Research Institute",
+        canonical: `${SITE_URL}/governance/standards`,
+        openGraph: {
+          type: "website",
+          url: `${SITE_URL}/governance/standards`,
+          title: "Research Standards | Blue Blocks Micro Research Institute",
+          description: "Study design, observer requirements, data standards, publication standards, and citation standards.",
+        },
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Research Standards",
+          description: "Study design, observer requirements, data standards, publication standards, and citation standards.",
+          url: `${SITE_URL}/governance/standards`,
+          about: { "@type": "Thing", name: "Research Standards and Data Governance" },
+        },
+      ],
+      sections: [
+        {
+          id: "standards-hero",
+          type: "hero",
+          headline: "RESEARCH STANDARDS",
+          subheadline: "Study design, observer requirements, data standards, publication standards, and citation standards.",
+        },
+        {
+          id: "standards-design",
+          type: "comparisonTable",
+          heading: "Study Design Standards",
+          headers: ["Constraint", "Specification"],
+          rows: [
+            ["Research question", "Single bounded question"],
+            ["Capture time", "<5 minutes"],
+            ["Duration", "<3 weeks"],
+            ["Design", "Publication-ready"],
+          ],
+        },
+        {
+          id: "standards-observer",
+          type: "textBlock",
+          heading: "Observer Standards",
+          body: "• AMI diploma required\n• Micro Research Protocol Training\n• Annual refresher\n• >80% inter-rater reliability",
+        },
+        {
+          id: "standards-data",
+          type: "textBlock",
+          heading: "Data Standards",
+          body: "All datasets follow Blue Blocks Micro Dataset Specification v1.0",
+        },
+        {
+          id: "standards-publication",
+          type: "textBlock",
+          heading: "Publication Standards",
+          body: "• Data verification\n• Anonymization check\n• Quality assessment\n• Ethics confirmation\n• PI sign-off",
+        },
+        {
+          id: "standards-citation",
+          type: "textBlock",
+          heading: "Citation Standards",
+          body: "Every study must cite DOI-001 (Methodology) and DOI-002 (Dataset Spec).",
+        },
+      ],
+    },
+
+    // ═══════════════════════════════════════════════════════════════
+    // REGULATORY COMPLIANCE
+    // ═══════════════════════════════════════════════════════════════
+    "/governance/compliance": {
+      title: "Regulatory Compliance",
+      metaDescription: "Compliance with international research ethics, GDPR, India's DPDP Act, and IRB-equivalent oversight for child development research.",
+      seo: {
+        title: "Regulatory Compliance | Blue Blocks Micro Research Institute",
+        canonical: `${SITE_URL}/governance/compliance`,
+        openGraph: {
+          type: "website",
+          url: `${SITE_URL}/governance/compliance`,
+          title: "Regulatory Compliance | Blue Blocks Micro Research Institute",
+          description: "Compliance with international research ethics, GDPR, India's DPDP Act, and IRB-equivalent oversight for child development research.",
+        },
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Regulatory Compliance",
+          description: "Compliance with international research ethics, GDPR, India's DPDP Act, and IRB-equivalent oversight.",
+          url: `${SITE_URL}/governance/compliance`,
+          about: { "@type": "Thing", name: "Regulatory Compliance and Data Protection" },
+        },
+      ],
+      sections: [
+        {
+          id: "compliance-hero",
+          type: "hero",
+          headline: "Regulatory Compliance",
+          subheadline: "We comply with international research ethics standards and applicable data protection regulations.",
+        },
+        {
+          id: "compliance-helsinki",
+          type: "textBlock",
+          heading: "International Ethics",
+          body: "Declaration of Helsinki\nWorld Medical Association (1964, amended 2013)\nCore principles: respect for individuals, subject wellbeing takes precedence, special protection for children, informed consent, ethics review.\n\nBelmont Report (1979)\nThree principles: Respect for Persons, Beneficence, Justice.\n\nUN Convention on Rights of the Child\nArticles 3, 12, 16, 19, 28: Best interests, right to express views, privacy, protection, education.",
+        },
+        {
+          id: "compliance-dpdp",
+          type: "textBlock",
+          heading: "Data Protection",
+          body: "India: DPDP Act 2023 — Primary Regulation\n• Lawful processing with consent\n• Purpose limitation\n• Data minimization\n• Security safeguards\n• Data principal rights\n\nChildren's data: Verifiable parental consent via our Longitudinal Consent Architecture.\n\nGDPR Alignment\nFor international collaboration: lawfulness, fairness, transparency, purpose limitation, minimization, accuracy, storage limitation, integrity, accountability.\n\nOther Indian Regulations\n• IT Act 2000: Reasonable security practices\n• POCSO Act 2012: Child protection, mandatory reporting\n• ICMR Guidelines 2017: Research ethics",
+        },
+        {
+          id: "compliance-irb",
+          type: "textBlock",
+          heading: "IRB Equivalence",
+          body: "Ethics Advisory Committee = IRB Equivalent\n\nOur EAC performs all core IRB functions:\n• Protocol review before data collection\n• Continuing oversight\n• Adverse event review\n• Modification approval\n• Documentation\n\nFor institutions requiring IRB approval for collaboration, our EAC approval satisfies this requirement.",
+        },
+        {
+          id: "compliance-docs",
+          type: "textBlock",
+          heading: "Compliance Documentation",
+          body: "• Consent records for all participating families\n• EAC meeting minutes\n• Protocol review records\n• Data processing logs\n• Training records\n• Annual compliance self-assessment",
+        },
+      ],
+    },
+
+    // ═══════════════════════════════════════════════════════════════
+    // OUR STANDARDS
+    // ═══════════════════════════════════════════════════════════════
+    "/governance/our-standards": {
+      title: "Our Standards",
+      metaDescription: "Three standards we created. Published with DOIs. Free to adopt (CC-BY-4.0).",
+      seo: {
+        title: "Our Standards | Blue Blocks MRI",
+        canonical: `${SITE_URL}/governance/our-standards`,
+        openGraph: {
+          type: "website",
+          url: `${SITE_URL}/governance/our-standards`,
+          title: "Our Standards | Blue Blocks MRI",
+          description: "Three standards we created. Published with DOIs. Free to adopt (CC-BY-4.0).",
+        },
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          name: "Our Standards",
+          description: "Three standards we created. Published with DOIs. Free to adopt (CC-BY-4.0).",
+          url: `${SITE_URL}/governance/our-standards`,
+          about: { "@type": "Thing", name: "Blue Blocks Open Standards" },
+        },
+      ],
+      sections: [
+        {
+          id: "ours-hero",
+          type: "hero",
+          headline: "Our Standards",
+          subheadline: "Three standards we created. Published with DOIs. Free to adopt (CC-BY-4.0).",
+        },
+        {
+          id: "ours-beop",
+          type: "textBlock",
+          heading: "BEOP v1.0",
+          sectionName: "Blue Blocks Embedded Observation Protocol",
+          body: "• Observer qualifications\n• Inter-rater reliability (≥80%)\n• Recording format\n• Quality assurance",
+          cta: { label: "Download (In Progress)", href: "https://zenodo.org/" },
+        },
+        {
+          id: "ours-mref",
+          type: "textBlock",
+          heading: "MREF v1.0",
+          sectionName: "Micro Research Ethics Framework",
+          body: "• Longitudinal Consent Architecture\n• Child protection\n• IRB-equivalent committee\n• Publication ethics",
+          cta: { label: "Download (In Progress)", href: "https://zenodo.org/" },
+        },
+        {
+          id: "ours-cdcs",
+          type: "textBlock",
+          heading: "CDCS v1.0",
+          sectionName: "Child Data Classification Standard",
+          body: "• 4-tier classification\n• Handling requirements\n• Security standards\n• Retention/destruction",
+          cta: { label: "Download (In Progress)", href: "https://zenodo.org/" },
+        },
+        {
+          id: "ours-adoption",
+          type: "textBlock",
+          heading: "Adoption",
+          body: "Free to adopt under CC-BY-4.0. Optional certification available.\n\nContact: research@blueblocks.in",
+        },
+      ],
+    },
   },
 };
 // Post-process: replace all legacy domain references with canonical SITE_URL

@@ -13,6 +13,11 @@ const TheInstitutePage = lazy(() => import("./pages/TheInstitutePage"));
 const MethodologyPage = lazy(() => import("./pages/MethodologyPage"));
 const PublicationsPage = lazy(() => import("./pages/PublicationsPage"));
 const GovernancePage = lazy(() => import("./pages/GovernancePage"));
+const InnovationPage = lazy(() => import("./pages/InnovationPage"));
+const EthicsPage = lazy(() => import("./pages/EthicsPage"));
+const ResearchStandardsPage = lazy(() => import("./pages/ResearchStandardsPage"));
+const CompliancePage = lazy(() => import("./pages/CompliancePage"));
+const OurStandardsPage = lazy(() => import("./pages/OurStandardsPage"));
 const CollaboratePage = lazy(() => import("./pages/CollaboratePage"));
 const NewsroomPage = lazy(() => import("./pages/NewsroomPage"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
@@ -43,6 +48,11 @@ const App = () => (
             <Route path="/methodology" element={<MethodologyPage />} />
             <Route path="/publications" element={<PublicationsPage />} />
             <Route path="/governance" element={<GovernancePage />} />
+            <Route path="/methodology/innovation" element={<InnovationPage />} />
+            <Route path="/governance/ethics" element={<EthicsPage />} />
+            <Route path="/governance/standards" element={<ResearchStandardsPage />} />
+            <Route path="/governance/compliance" element={<CompliancePage />} />
+            <Route path="/governance/our-standards" element={<OurStandardsPage />} />
             <Route path="/collaborate" element={<CollaboratePage />} />
             <Route path="/newsroom" element={<NewsroomPage />} />
             <Route path="/contact" element={<ContactPage />} />
