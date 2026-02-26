@@ -163,7 +163,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 group">
-            <div className="h-12 md:h-14 w-12 md:w-14 rounded-lg bg-gradient-to-br from-primary-navy via-secondary-blue to-accent-cyan flex items-center justify-center overflow-hidden border border-primary-navy/20 shadow-sm">
+            <div className="h-12 md:h-14 w-12 md:w-14 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-border/20">
               <img
                 src={logo}
                 alt={brand.siteName}
