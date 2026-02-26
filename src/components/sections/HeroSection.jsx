@@ -15,6 +15,7 @@ import newsroomPress from '@/assets/banners/newsroom-press.webp';
 import contactInstitutional from '@/assets/banners/contact-institutional.webp';
 
 // Responsive WebP hero variants for homepage LCP
+import hero480 from '@/assets/hero/hero-480.webp';
 import hero768 from '@/assets/hero/hero-768.webp';
 import hero1280 from '@/assets/hero/hero-1280.webp';
 import hero1920 from '@/assets/hero/hero-1920.webp';
@@ -41,8 +42,8 @@ const bannerImports = {
 
 // Responsive srcSet map — only homepage hero has multi-res WebP
 const responsiveSrcSets = {
-  '/src/assets/banners/home-precision.jpg': `${hero768} 768w, ${hero1280} 1280w, ${hero1920} 1920w`,
-  '/src/assets/banners/home-precision.webp': `${hero768} 768w, ${hero1280} 1280w, ${hero1920} 1920w`,
+  '/src/assets/banners/home-precision.jpg': `${hero480} 480w, ${hero768} 768w, ${hero1280} 1280w, ${hero1920} 1920w`,
+  '/src/assets/banners/home-precision.webp': `${hero480} 480w, ${hero768} 768w, ${hero1280} 1280w, ${hero1920} 1920w`,
 };
 
 // --- Sub-components ---
@@ -144,16 +145,17 @@ const HeroSection = ({
           animate={isCompact ? {} : { scale: 1.02 }}
           transition={isCompact ? {} : { duration: 20, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
         >
-          <img
-            src={resolvedSrcSet ? hero1920 : resolvedImageSrc}
-            srcSet={resolvedSrcSet || undefined}
-            sizes={resolvedSrcSet ? "100vw" : undefined}
-            alt={heroImage?.alt || ''}
-            className="absolute inset-0 w-full h-full object-cover object-center"
-            fetchPriority="high"
-            decoding="async"
-            width={1920}
-            height={1080}
+            <img
+              src={resolvedSrcSet ? hero1280 : resolvedImageSrc}
+              srcSet={resolvedSrcSet || undefined}
+              sizes={resolvedSrcSet ? "(max-width: 480px) 480px, (max-width: 768px) 768px, (max-width: 1280px) 1280px, 1920px" : undefined}
+              alt={heroImage?.alt || ''}
+              className="absolute inset-0 w-full h-full object-cover object-center"
+              fetchPriority="high"
+              decoding="sync"
+              loading="eager"
+              width={1920}
+              height={1080}
           />
           <div 
             className="absolute inset-0" 
