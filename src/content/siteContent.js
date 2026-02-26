@@ -5821,7 +5821,7 @@ const siteContent = {
         },
       ],
     },
-  },
+
     "/faq": {
       title: "FAQ",
       metaDescription: "Answers to common questions about Blue Blocks Micro Research Institute — our methodology, publications, privacy, and collaboration.",
