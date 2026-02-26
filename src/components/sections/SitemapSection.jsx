@@ -21,7 +21,6 @@ const sitemapData = {
   methodology: [
     { name: "Innovation", url: "/methodology/innovation", status: "complete" },
   ],
-  ],
   publications: [
     { name: "IN-SPACe Authorization Letter", url: "/publications/in-space-authorization-letter", status: "complete" },
     { name: "SAPARYA / IMF Case Study", url: "/publications/saparya-imf-case-study", status: "complete" },
