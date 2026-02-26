@@ -5950,6 +5950,7 @@ const CPT_MAP = {
   '/team/munira-hussain': 'team-member',
   '/team/adolescent-research-cohort': 'team-member',
   '/faq': 'page',
+  '/sitemap-html': 'page',
 };
 
 // Structured fields extracted from existing section data for CMS mapping.
