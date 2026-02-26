@@ -25,19 +25,19 @@ import patentDeliveryImg from '@/assets/placeholders/labs/patent-delivery.jpg';
 import patentMedicalImg from '@/assets/placeholders/labs/patent-medical.jpg';
 import patentHealthImg from '@/assets/placeholders/labs/patent-health.jpg';
 
-// Import banner images
-import homePrecisionBanner from '@/assets/banners/home-precision.jpg';
-import instituteStarkBanner from '@/assets/banners/institute-stark.jpg';
-import methodologyFrameworkBanner from '@/assets/banners/methodology-framework.jpg';
-import publicationsDoiBanner from '@/assets/banners/publications-doi.jpg';
-import governanceOversightBanner from '@/assets/banners/governance-oversight.jpg';
-import collaborateNetworkBanner from '@/assets/banners/collaborate-network.jpg';
-import newsroomPressBanner from '@/assets/banners/newsroom-press.jpg';
-import contactInstitutionalBanner from '@/assets/banners/contact-institutional.jpg';
-import downloadsArchiveBanner from '@/assets/banners/downloads-archive.jpg';
-import technicalBriefAeroBanner from '@/assets/banners/technical-brief-aero.jpg';
-import presentationConferenceBanner from '@/assets/banners/presentation-conference.jpg';
-import proceedingsAuditoriumBanner from '@/assets/banners/proceedings-auditorium.jpg';
+// Import banner images (WebP)
+import homePrecisionBanner from '@/assets/banners/home-precision.webp';
+import instituteStarkBanner from '@/assets/banners/institute-stark.webp';
+import methodologyFrameworkBanner from '@/assets/banners/methodology-framework.webp';
+import publicationsDoiBanner from '@/assets/banners/publications-doi.webp';
+import governanceOversightBanner from '@/assets/banners/governance-oversight.webp';
+import collaborateNetworkBanner from '@/assets/banners/collaborate-network.webp';
+import newsroomPressBanner from '@/assets/banners/newsroom-press.webp';
+import contactInstitutionalBanner from '@/assets/banners/contact-institutional.webp';
+import downloadsArchiveBanner from '@/assets/banners/downloads-archive.webp';
+import technicalBriefAeroBanner from '@/assets/banners/technical-brief-aero.webp';
+import presentationConferenceBanner from '@/assets/banners/presentation-conference.webp';
+import proceedingsAuditoriumBanner from '@/assets/banners/proceedings-auditorium.webp';
 
 // Import headshot placeholders
 import headshot1 from '@/assets/placeholders/avatars/headshot-1.jpg';
@@ -60,7 +60,7 @@ import fieldSoil1 from '@/assets/placeholders/visual-evidence/field-soil-1.jpg';
 import labBench1 from '@/assets/placeholders/visual-evidence/lab-bench-1.jpg';
 import lunarSim1 from '@/assets/placeholders/visual-evidence/lunar-sim-1.jpg';
 
-// Image path resolver map
+// Image path resolver map (supports both .jpg and .webp keys for banners)
 const imageMap = {
   // Labs
   '/src/assets/placeholders/labs/space-lab.jpg': spaceLabImg,
@@ -90,7 +90,7 @@ const imageMap = {
   '/src/assets/placeholders/visual-evidence/lab-bench-1.jpg': labBench1,
   '/src/assets/placeholders/visual-evidence/lunar-sim-1.jpg': lunarSim1,
   
-  // Banners
+  // Banners (.jpg keys → WebP imports)
   '/src/assets/banners/home-precision.jpg': homePrecisionBanner,
   '/src/assets/banners/institute-stark.jpg': instituteStarkBanner,
   '/src/assets/banners/methodology-framework.jpg': methodologyFrameworkBanner,
@@ -121,7 +121,7 @@ const imageMap = {
   '/src/assets/placeholders/card-default.jpg': cardDefault,
 };
 
-// Placeholder gradients for different variants (used only when no fallback image)
+// Placeholder gradients for different variants
 const placeholders = {
   hero: 'linear-gradient(135deg, hsl(240 93% 25% / 0.1) 0%, hsl(195 100% 46% / 0.15) 100%)',
   card: 'linear-gradient(135deg, hsl(220 20% 97%) 0%, hsl(220 13% 91%) 100%)',
@@ -130,13 +130,12 @@ const placeholders = {
   logo: 'linear-gradient(135deg, hsl(220 20% 97%) 0%, hsl(220 13% 91%) 100%)',
 };
 
-// Fallback images by variant
 const fallbackImages = {
   hero: heroDefault,
   card: cardDefault,
   grid: cardDefault,
   avatar: advisorPlaceholder,
-  logo: null, // Logos should always be provided
+  logo: null,
 };
 
 const aspectRatios = {
@@ -146,14 +145,16 @@ const aspectRatios = {
   '3:2': 'aspect-[3/2]',
 };
 
-// Resolve image path to actual import
+const defaultDimensions = {
+  '16:9': { width: 640, height: 360 },
+  '1:1': { width: 400, height: 400 },
+  '4:3': { width: 640, height: 480 },
+  '3:2': { width: 600, height: 400 },
+};
+
 const resolveImageSrc = (src) => {
   if (!src || src.trim() === '') return null;
-  // Check if it's a path that needs resolution
-  if (imageMap[src]) {
-    return imageMap[src];
-  }
-  // Return as-is (might be an already-imported asset or external URL)
+  if (imageMap[src]) return imageMap[src];
   return src;
 };
 
@@ -170,18 +171,13 @@ const SmartImage = ({
   const [hasError, setHasError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // Resolve the source path
   const resolvedSrc = resolveImageSrc(src);
-  
-  // Determine effective source: use provided src, or fall back to variant-based default
   const fallbackSrc = fallbackImages[variant] || fallbackImages.card;
   const effectiveSrc = resolvedSrc || fallbackSrc;
-  
   const showPlaceholder = !effectiveSrc || hasError;
   const aspectClass = aspectRatios[aspect] || aspectRatios['16:9'];
-
-  // For avatars, use square aspect ratio by default
   const effectiveAspectClass = variant === 'avatar' ? aspectRatios['1:1'] : aspectClass;
+  const dims = variant === 'avatar' ? defaultDimensions['1:1'] : (defaultDimensions[aspect] || defaultDimensions['16:9']);
 
   return (
     <figure className={`relative overflow-hidden ${className}`}>
@@ -194,6 +190,8 @@ const SmartImage = ({
             src={effectiveSrc}
             alt={alt}
             loading="lazy"
+            width={dims.width}
+            height={dims.height}
             onLoad={() => setIsLoaded(true)}
             onError={() => setHasError(true)}
             className={`absolute inset-0 w-full h-full object-cover transition-all duration-500 ${
@@ -205,18 +203,8 @@ const SmartImage = ({
         {showPlaceholder && (
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-muted-foreground">
-              <svg
-                className="w-12 h-12 mx-auto mb-2 opacity-30"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                />
+              <svg className="w-12 h-12 mx-auto mb-2 opacity-30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
             </div>
           </div>

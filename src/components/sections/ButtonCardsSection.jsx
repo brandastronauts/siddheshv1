@@ -155,6 +155,8 @@ const ButtonCardsSection = ({ heading, header, items, cards, footerNote }) => {
                     <img
                       src={cardImage}
                       alt={cardTitle || 'Registry image'}
+                      width={400}
+                      height={400}
                       className="w-full h-full object-cover grayscale transition-all duration-300 group-hover:scale-105 group-hover:grayscale-0"
                       loading="lazy"
                       referrerPolicy="no-referrer"

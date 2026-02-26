@@ -122,6 +122,9 @@ const GalleryGridSection = ({
                         <img
                           src={resolvedSrc}
                           alt={item.image?.alt || item.title}
+                          width={640}
+                          height={480}
+                          loading="lazy"
                           className={`w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-[1.02] ${
                             item.image?.privacyBlur ? 'privacy-blur' : ''
                           }`}
