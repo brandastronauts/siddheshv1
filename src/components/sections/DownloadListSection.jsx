@@ -50,12 +50,15 @@ const DownloadListSection = ({ heading, header, intro, items = [] }) => {
     const className = "bg-card rounded-xl p-5 shadow-card hover:shadow-card-hover transition-all duration-300 border border-border/50 group cursor-pointer block";
 
     if (isExternal || isFile) {
+      const isPdf = /\.pdf$/i.test(item.href);
+      const isSameOrigin = !isExternal;
       return (
         <motion.a
           key={index}
           href={item.href}
           target="_blank"
           rel="noopener noreferrer"
+          {...(isPdf && isSameOrigin ? { download: item.href.split('/').pop() } : {})}
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
