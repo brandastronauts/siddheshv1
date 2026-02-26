@@ -5822,6 +5822,82 @@ const siteContent = {
       ],
     },
   },
+    "/faq": {
+      title: "FAQ",
+      metaDescription: "Answers to common questions about Blue Blocks Micro Research Institute — our methodology, publications, privacy, and collaboration.",
+      seo: {
+        title: "FAQ | Blue Blocks Micro Research Institute",
+        canonical: `${SITE_URL}/faq`,
+        robots: "noindex,nofollow,noarchive,nosnippet",
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            { "@type": "Question", name: "What is Blue Blocks Micro Research Institute?", acceptedAnswer: { "@type": "Answer", text: "A longitudinal research organization embedded within Blue Blocks Montessori school in Hyderabad, India. We observe and document child development from birth through age 18." }},
+            { "@type": "Question", name: "What is Micro Research?", acceptedAnswer: { "@type": "Answer", text: "A methodology we developed for embedded educational observation — high-frequency, low-complexity studies designed for practitioner execution." }},
+            { "@type": "Question", name: "How is this different from a university lab?", acceptedAnswer: { "@type": "Answer", text: "Universities face structural constraints: researchers graduate, grants end. We built an institution where research never ends because the school never ends." }},
+            { "@type": "Question", name: "Where do you publish?", acceptedAnswer: { "@type": "Answer", text: "All publications on Zenodo with DOI registration. Open access." }},
+            { "@type": "Question", name: "How do you protect children's privacy?", acceptedAnswer: { "@type": "Answer", text: "All research data anonymized. Names never recorded. Individuals never identified." }},
+          ],
+        },
+      ],
+      heroTitle: "FAQ",
+      heroSubtitle: "Answers to common questions about our institute, research methodology, publications, privacy, and collaboration.",
+      faqSections: [
+        {
+          title: "About the Institute",
+          items: [
+            { q: "What is Blue Blocks Micro Research Institute?", a: "A longitudinal research organization embedded within Blue Blocks Montessori school in Hyderabad, India. We observe and document child development from birth through age 18." },
+            { q: "What is Micro Research?", a: "A methodology we developed for embedded educational observation — high-frequency, low-complexity studies designed for practitioner execution." },
+            { q: "How is this different from a university lab?", a: "Universities face structural constraints: researchers graduate, grants end. We built an institution where research never ends because the school never ends." },
+            { q: "Are you affiliated with a university?", a: "Independent, but partnered with IIT Hyderabad and affiliated with AMI." },
+          ],
+        },
+        {
+          title: "About Our Research",
+          items: [
+            { q: "What do you study?", a: "Three domains: Innovation (0–18), Montessori (0–18), Parenting (0–18)." },
+            { q: "How many children have you observed?", a: "847 children since 2009." },
+            { q: "How long have you been doing this?", a: "Since 2009 — 15 years of continuous observation." },
+            { q: "Who does the observation?", a: "25 Embedded Research Fellows — AMI-certified practitioners." },
+          ],
+        },
+        {
+          title: "About Publications",
+          items: [
+            { q: "Where do you publish?", a: "All publications on Zenodo with DOI registration. Open access." },
+            { q: "Are publications peer-reviewed?", a: "Internal review before release. Formal peer review for foundational papers." },
+            { q: "Can I access your data?", a: "Yes — published papers are open; anonymized datasets require application." },
+          ],
+        },
+        {
+          title: "About Privacy",
+          items: [
+            { q: "How do you protect children's privacy?", a: "All research data anonymized. Names never recorded. Individuals never identified." },
+            { q: "Do parents consent?", a: "Yes. All families provide consent at enrollment. May withdraw anytime." },
+            { q: "Do you experiment on children?", a: "No. We observe naturally occurring behavior. Never manipulate environments." },
+          ],
+        },
+        {
+          title: "About Collaboration",
+          items: [
+            { q: "Can I access your data?", a: "Qualified researchers can apply. Requirements: institutional affiliation, research purpose, ethics approval." },
+            { q: "Can I visit as a researcher?", a: "2–3 visiting researchers annually. Apply through our website." },
+            { q: "Can other schools use your methodology?", a: "Yes. Micro Research is designed for adoption by other institutions." },
+          ],
+        },
+        {
+          title: "About the School",
+          items: [
+            { q: "Is this a real school?", a: "Yes. Blue Blocks is a fully operating Montessori school (0–18)." },
+            { q: "Can I enroll my child?", a: "Visit blueblocks.in for school inquiries." },
+          ],
+        },
+      ],
+    },
+  },
 };
 // Post-process: replace all legacy domain references with canonical SITE_URL
 const processed = JSON.parse(

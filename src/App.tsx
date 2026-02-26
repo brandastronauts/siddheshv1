@@ -25,6 +25,7 @@ const NotFoundPage = lazy(() => import("./pages/NotFoundPage"));
 const LegalPage = lazy(() => import("./pages/LegalPage"));
 const GenericPage = lazy(() => import("./pages/GenericPage"));
 const CitationStandardsPage = lazy(() => import("./pages/CitationStandardsPage"));
+const FAQPage = lazy(() => import("./pages/FAQPage"));
 
 const queryClient = new QueryClient();
 
@@ -72,6 +73,7 @@ const App = () => (
             <Route path="/sitemap-html" element={<GenericPage />} />
             
             <Route path="/publications/citation-standards" element={<CitationStandardsPage />} />
+            <Route path="/faq" element={<FAQPage />} />
             <Route path="/publications/:slug" element={<GenericPage />} />
             
             <Route path="/patents" element={<GenericPage />} />
