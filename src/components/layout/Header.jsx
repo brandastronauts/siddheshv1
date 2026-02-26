@@ -168,8 +168,10 @@ const Header = () => {
                 src={logo}
                 alt={brand.siteName}
                 className="h-11 md:h-12 w-11 md:w-12 object-contain"
-                width={48}
-                height={48}
+                width={96}
+                height={96}
+                fetchPriority="high"
+                decoding="sync"
               />
             </div>
             <div className="flex flex-col leading-none">
