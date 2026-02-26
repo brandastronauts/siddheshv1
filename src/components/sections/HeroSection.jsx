@@ -147,6 +147,8 @@ const HeroSection = ({
         >
           <img
             src={resolvedImageSrc}
+            srcSet={`${resolvedImageSrc} 1920w`}
+            sizes="100vw"
             alt={heroImage?.alt || ''}
             className="absolute inset-0 w-full h-full object-cover object-center"
             fetchPriority="high"
