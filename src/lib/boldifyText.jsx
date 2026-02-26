@@ -82,7 +82,7 @@ export function boldifyText(text) {
     const parts = text.split(/\*\*(.+?)\*\*/g);
     return parts.map((part, i) =>
       i % 2 === 1 ? (
-        <strong key={`md-${i}`} className="font-semibold text-foreground">
+        <strong key={`md-${i}`} className="font-semibold text-inherit">
           {part}
         </strong>
       ) : (
@@ -102,7 +102,7 @@ function boldifyTerms(text) {
 
   return parts.map((part, i) =>
     BOLD_REGEX.test(part) ? (
-      <strong key={i} className="font-semibold text-foreground">
+      <strong key={i} className="font-semibold text-inherit">
         {part}
       </strong>
     ) : (
