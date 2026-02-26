@@ -22,7 +22,7 @@ const Footer = () => {
               </div>
               <div className="flex flex-col leading-none">
                 <span className="text-sm font-bold text-white/95">Blue Blocks</span>
-                <span className="text-[9px] font-semibold text-white/50 uppercase tracking-[0.08em]">Micro Research Institute</span>
+                <span className="text-[9px] font-semibold text-white/60 uppercase tracking-[0.08em]">Micro Research Institute</span>
               </div>
             </Link>
             <p className="text-white/60 text-sm leading-relaxed max-w-md mb-8">
@@ -50,7 +50,7 @@ const Footer = () => {
 
           {/* Navigation Column */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/40">
+             <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/60">
               Navigation
             </h4>
             <nav className="space-y-3">
@@ -68,7 +68,7 @@ const Footer = () => {
 
           {/* More Links Column */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/40">
+            <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/60">
               More
             </h4>
             <nav className="space-y-3">
@@ -87,7 +87,7 @@ const Footer = () => {
 
         {/* Registries Row */}
         <div className="mt-10 pt-8 border-t border-white/10">
-          <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/40">
+          <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/60">
             Registries & Archives
           </h4>
           <div className="flex flex-wrap gap-x-4 gap-y-2">
@@ -117,13 +117,13 @@ const Footer = () => {
         {/* Utility Links Row */}
         <div className="mt-6">
           <div className="flex flex-wrap gap-4">
-            <Link to="/publications" className="text-xs text-white/40 hover:text-white/80 transition-colors">
+            <Link to="/publications" className="text-xs text-white/60 hover:text-white/80 transition-colors">
               Open Science Statement
             </Link>
-            <Link to="/collaborate" className="text-xs text-white/40 hover:text-white/80 transition-colors">
+            <Link to="/collaborate" className="text-xs text-white/60 hover:text-white/80 transition-colors">
               Data Access
             </Link>
-            <Link to="/governance" className="text-xs text-white/40 hover:text-white/80 transition-colors">
+            <Link to="/governance" className="text-xs text-white/60 hover:text-white/80 transition-colors">
               Research Ethics
             </Link>
           </div>
@@ -136,7 +136,7 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="mt-10 pt-8 border-t border-white/10">
-          <div className="flex flex-col items-center gap-4 text-xs text-white/40 md:flex-row md:justify-between">
+          <div className="flex flex-col items-center gap-4 text-xs text-white/60 md:flex-row md:justify-between">
             <p>© {new Date().getFullYear()} {brand.siteName}. All rights reserved.</p>
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
               <Link to="/privacy" className="inline-flex items-center gap-1 py-1 hover:text-white/80 transition-colors min-h-[44px] sm:min-h-0">

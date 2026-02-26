@@ -33,7 +33,7 @@
     --secondary-foreground: 220 13% 13%;
 
     --muted: 220 14% 96%;
-    --muted-foreground: 220 9% 46%;
+    --muted-foreground: 220 9% 38%;
 
     --accent: 195 100% 46%;
     --accent-foreground: 0 0% 100%;
@@ -140,12 +140,15 @@
     background: hsl(195 100% 46% / 0.2);
   }
 
-  a {
-    @apply text-link-blue hover:text-secondary-blue transition-colors duration-200;
+  /* Focus-visible outlines for accessibility */
+  :focus-visible {
+    outline: 2px solid hsl(var(--accent-cyan));
+    outline-offset: 2px;
   }
 
-  ::selection {
-    background: hsl(195 100% 46% / 0.2);
+  /* Minimum text size safety net */
+  small, .text-xs {
+    font-size: max(0.75rem, 12px);
   }
 }
 
@@ -230,7 +233,7 @@
   .badge-accent {
     @apply inline-flex items-center px-3 py-1 text-xs font-medium rounded-full;
     background: hsl(195 100% 46% / 0.08);
-    color: hsl(195 100% 38%);
+    color: hsl(195 100% 28%);
   }
 
   .badge-navy {
@@ -292,16 +295,16 @@
 
   .dossier-label {
     font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
-    font-size: 11px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 0.15em;
-    color: hsl(var(--muted-foreground) / 0.55);
+    color: hsl(var(--muted-foreground) / 0.78);
   }
 
   .dossier-body {
     font-size: 15px;
     line-height: 1.75;
-    color: hsl(var(--deep-ink) / 0.72);
+    color: hsl(var(--deep-ink) / 0.82);
   }
 
   .dossier-divider {

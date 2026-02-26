@@ -133,7 +133,7 @@ const FooterNewsletter = () => {
                 Affiliation <span className="text-white/40">(optional)</span>
               </Label>
               <Select value={affiliation} onValueChange={setAffiliation}>
-                <SelectTrigger className="bg-white/5 border-white/10 text-white focus:border-accent-cyan focus:ring-accent-cyan/20 [&>span]:text-white/60 data-[state=open]:border-accent-cyan">
+                <SelectTrigger aria-label="Select affiliation" className="bg-white/5 border-white/10 text-white focus:border-accent-cyan focus:ring-accent-cyan/20 [&>span]:text-white/60 data-[state=open]:border-accent-cyan">
                   <SelectValue placeholder="Select affiliation" />
                 </SelectTrigger>
                 <SelectContent className="bg-deep-ink border-white/10">
