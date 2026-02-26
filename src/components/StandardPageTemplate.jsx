@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, ExternalLink } from 'lucide-react';
+import { ArrowRight, ExternalLink, Shield, BookOpen, Scale, FlaskConical, ClipboardCheck, Sparkles } from 'lucide-react';
 import { getIcon } from '../lib/iconMap';
 import { boldifyText } from '../lib/boldifyText';
 
@@ -9,24 +9,14 @@ import { boldifyText } from '../lib/boldifyText';
    TEXT PARSING HELPERS
    ═══════════════════════════════════════════════════════════════════ */
 
-/** Split body text on double newlines into paragraphs */
 const splitParagraphs = (text) => {
   if (!text) return [];
   return text.split(/\n\n+/).map(p => p.trim()).filter(Boolean);
 };
 
-/** Check if a line is a bullet */
 const isBulletLine = (line) => /^•\s/.test(line.trim());
-
-/** Check if a line is a numbered item */
 const isNumberedLine = (line) => /^\d+\.\s/.test(line.trim());
 
-/**
- * Parse a paragraph block into structured elements:
- * - { type: 'paragraph', text }
- * - { type: 'bullets', items: [] }
- * - { type: 'numbered', items: [] }
- */
 const parseBlock = (block) => {
   const lines = block.split('\n').map(l => l.trim()).filter(Boolean);
   const elements = [];
@@ -48,7 +38,6 @@ const parseBlock = (block) => {
       }
       elements.push({ type: 'numbered', items });
     } else {
-      // Collect consecutive non-list lines as paragraph text
       const pLines = [];
       while (i < lines.length && !isBulletLine(lines[i]) && !isNumberedLine(lines[i])) {
         pLines.push(lines[i]);
@@ -60,7 +49,6 @@ const parseBlock = (block) => {
   return elements;
 };
 
-/** Parse entire body into renderable elements */
 const parseBody = (body) => {
   if (!body) return [];
   const paragraphs = splitParagraphs(body);
@@ -76,41 +64,50 @@ const parseBody = (body) => {
    RENDERED ELEMENTS
    ═══════════════════════════════════════════════════════════════════ */
 
-const RichBody = ({ body }) => {
+const RichBody = ({ body, variant = 'default' }) => {
   const elements = useMemo(() => parseBody(body), [body]);
+  const isLight = variant === 'light';
 
   return (
     <div className="space-y-4">
       {elements.map((el, i) => {
         if (el.type === 'bullets') {
           return (
-            <ul key={i} className="space-y-2 pl-1">
-              {el.items.map((item, j) => (
-                <li key={j} className="flex items-start gap-3 text-body text-foreground/85 leading-relaxed">
-                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent-cyan flex-shrink-0" aria-hidden="true" />
-                  <span>{boldifyText(item)}</span>
-                </li>
-              ))}
-            </ul>
+            <div key={i} className={`rounded-xl p-5 ${isLight ? 'bg-white/5' : 'bg-surface/80 border border-border/30'}`}>
+              <ul className="space-y-3">
+                {el.items.map((item, j) => (
+                  <li key={j} className={`flex items-start gap-3 text-body leading-relaxed ${isLight ? 'text-white/85' : 'text-foreground/85'}`}>
+                    <span className="mt-[7px] w-2 h-2 rounded-full bg-accent-cyan flex-shrink-0" aria-hidden="true" />
+                    <span>{boldifyText(item)}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           );
         }
         if (el.type === 'numbered') {
           return (
-            <ol key={i} className="space-y-3 pl-1 counter-reset-custom">
+            <div key={i} className="space-y-3">
               {el.items.map((item, j) => (
-                <li key={j} className="flex items-start gap-3 text-body text-foreground/85 leading-relaxed">
-                  <span className="flex-shrink-0 w-7 h-7 rounded-lg bg-primary-navy/8 text-primary-navy text-xs font-bold flex items-center justify-center mt-0.5">
+                <motion.div
+                  key={j}
+                  initial={{ opacity: 0, x: -12 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: j * 0.06 }}
+                  className="flex items-start gap-4 p-4 rounded-xl bg-surface/80 border border-border/30 hover:border-accent-cyan/20 transition-colors"
+                >
+                  <span className="flex-shrink-0 w-8 h-8 rounded-xl bg-gradient-to-br from-primary-navy to-secondary-blue text-white text-sm font-bold flex items-center justify-center shadow-sm">
                     {j + 1}
                   </span>
-                  <span className="pt-0.5">{boldifyText(item)}</span>
-                </li>
+                  <span className="pt-1 text-body text-foreground/85 leading-relaxed">{boldifyText(item)}</span>
+                </motion.div>
               ))}
-            </ol>
+            </div>
           );
         }
-        // paragraph
         return (
-          <p key={i} className="text-body text-foreground/80 leading-relaxed whitespace-pre-line">
+          <p key={i} className={`text-body leading-relaxed whitespace-pre-line ${isLight ? 'text-white/80' : 'text-foreground/75'}`}>
             {boldifyText(el.text)}
           </p>
         );
@@ -120,24 +117,37 @@ const RichBody = ({ body }) => {
 };
 
 /* ═══════════════════════════════════════════════════════════════════
-   SECTION COMPONENTS
+   HERO WITH GRADIENT ORB + GLASSMORPHISM
    ═══════════════════════════════════════════════════════════════════ */
 
 const LightHero = ({ headline, subheadline, badge }) => (
-  <section className="relative overflow-hidden bg-surface border-b border-border/30">
-    <div className="absolute inset-0 pattern-grid opacity-[0.12]" />
-    <div className="container-grid relative z-10 pt-16 pb-12 md:pt-24 md:pb-16">
+  <section className="relative overflow-hidden bg-surface min-h-[280px] md:min-h-[340px] flex items-center">
+    {/* Gradient orbs */}
+    <div className="absolute top-[-80px] left-[-60px] w-[300px] h-[300px] rounded-full opacity-[0.07]" style={{ background: 'radial-gradient(circle, hsl(195 100% 46%), transparent 70%)' }} />
+    <div className="absolute bottom-[-60px] right-[-40px] w-[250px] h-[250px] rounded-full opacity-[0.05]" style={{ background: 'radial-gradient(circle, hsl(240 93% 25%), transparent 70%)' }} />
+    
+    {/* Grid pattern */}
+    <div className="absolute inset-0 pattern-grid opacity-[0.08]" />
+    
+    {/* Bottom gradient fade */}
+    <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background to-transparent" />
+
+    <div className="container-grid relative z-10 pt-16 pb-12 md:pt-20 md:pb-14">
       <div className="max-w-3xl mx-auto text-center">
         {badge && (
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
-            <span className="badge-navy mb-4 inline-block">{badge}</span>
+            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest rounded-full bg-primary-navy/8 text-primary-navy border border-primary-navy/10 mb-5">
+              {badge === 'Governance' && <Shield className="w-3 h-3" />}
+              {badge === 'Methodology' && <FlaskConical className="w-3 h-3" />}
+              {badge}
+            </span>
           </motion.div>
         )}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.05 }}
-          className="text-h1 md:text-display-2 text-deep-ink mb-4 text-balance"
+          className="text-h1 md:text-display-2 text-deep-ink mb-5 text-balance"
         >
           {headline}
         </motion.h1>
@@ -156,6 +166,10 @@ const LightHero = ({ headline, subheadline, badge }) => (
   </section>
 );
 
+/* ═══════════════════════════════════════════════════════════════════
+   TABLE OF CONTENTS — GLASSMORPHISM CARD
+   ═══════════════════════════════════════════════════════════════════ */
+
 const TableOfContents = ({ sections }) => {
   const headings = sections.filter(s =>
     (s.type === 'textBlock' || s.type === 'comparisonTable' || s.type === 'highlightBox' || s.type === 'grid3') && (s.heading || s.header)
@@ -163,133 +177,223 @@ const TableOfContents = ({ sections }) => {
   if (headings.length < 3) return null;
 
   return (
-    <nav className="bg-background border-b border-border/30" aria-label="Table of contents">
-      <div className="container-grid py-4">
-        <div className="max-w-[860px] mx-auto">
-          <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-2">On this page</p>
-          <div className="flex flex-wrap gap-x-4 gap-y-1">
+    <div className="bg-background border-b border-border/20">
+      <div className="container-grid py-5">
+        <motion.nav
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
+          className="max-w-[860px] mx-auto rounded-xl bg-surface/60 backdrop-blur-sm border border-border/30 p-4"
+          aria-label="Table of contents"
+        >
+          <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-muted-foreground mb-2.5 flex items-center gap-1.5">
+            <BookOpen className="w-3 h-3" />
+            On this page
+          </p>
+          <div className="flex flex-wrap gap-2">
             {headings.map((s, i) => (
               <a
                 key={i}
                 href={`#${s.id}`}
-                className="text-sm text-link-blue hover:text-secondary-blue transition-colors py-1"
+                className="text-sm px-3 py-1.5 rounded-lg text-link-blue hover:bg-primary-navy/5 hover:text-primary-navy transition-all duration-200"
               >
                 {s.heading || s.header}
               </a>
             ))}
           </div>
-        </div>
+        </motion.nav>
       </div>
-    </nav>
+    </div>
   );
 };
 
-const TextSection = ({ id, heading, sectionName, body, cta, isFirst }) => (
-  <section id={id} className={`${isFirst ? 'pt-12 md:pt-16' : 'pt-10 md:pt-14'} pb-2 bg-background`}>
-    <div className="container-grid">
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="max-w-[860px] mx-auto"
-      >
-        {sectionName && !heading && (
-          <h3 className="text-h3 text-deep-ink mb-4 flex items-center gap-2">
-            <span className="w-1 h-5 rounded-full bg-accent-cyan" aria-hidden="true" />
-            {sectionName}
-          </h3>
-        )}
-        {heading && (
-          <div className="mb-6">
-            <div className="divider-elegant mb-6" />
-            <h2 className="text-h2 md:text-h1 text-deep-ink">{heading}</h2>
+/* ═══════════════════════════════════════════════════════════════════
+   TEXT SECTION — CARD WRAPPED WITH ICON HEADERS
+   ═══════════════════════════════════════════════════════════════════ */
+
+const sectionIconMap = {
+  'commitment': Shield,
+  'consent': ClipboardCheck,
+  'ethics': Shield,
+  'committee': Scale,
+  'rights': Sparkles,
+  'observer': ClipboardCheck,
+  'data': BookOpen,
+  'publication': BookOpen,
+  'citation': BookOpen,
+  'adoption': Sparkles,
+  'framework': FlaskConical,
+  'principles': FlaskConical,
+  'labs': FlaskConical,
+  'curriculum': BookOpen,
+  'loop': Sparkles,
+  'context': Shield,
+  'integration': FlaskConical,
+  'helsinki': Scale,
+  'dpdp': Shield,
+  'irb': ClipboardCheck,
+  'docs': BookOpen,
+};
+
+const getSectionIcon = (id) => {
+  if (!id) return null;
+  for (const [key, Icon] of Object.entries(sectionIconMap)) {
+    if (id.includes(key)) return Icon;
+  }
+  return null;
+};
+
+const TextSection = ({ id, heading, sectionName, body, cta, isFirst, isAlt }) => {
+  const SectionIcon = getSectionIcon(id);
+
+  return (
+    <section id={id} className={`${isFirst ? 'pt-12 md:pt-16' : 'pt-8 md:pt-10'} pb-4 ${isAlt ? 'bg-surface/40' : 'bg-background'}`}>
+      <div className="container-grid">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="max-w-[860px] mx-auto"
+        >
+          {/* H3 sub-section (no heading, only sectionName) */}
+          {sectionName && !heading && (
+            <div className="mb-5 flex items-center gap-2.5">
+              <span className="w-1 h-6 rounded-full bg-gradient-to-b from-accent-cyan to-accent-cyan/40" aria-hidden="true" />
+              <h3 className="text-h3 text-deep-ink">{sectionName}</h3>
+            </div>
+          )}
+
+          {/* H2 section with card wrapper */}
+          {heading && (
+            <div className="mb-6 pt-6">
+              <div className="flex items-center gap-3 mb-1">
+                {SectionIcon && (
+                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-accent-cyan/10 to-primary-navy/10 flex items-center justify-center flex-shrink-0">
+                    <SectionIcon className="w-4.5 h-4.5 text-accent-cyan" />
+                  </div>
+                )}
+                <div>
+                  {sectionName && (
+                    <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-accent-cyan mb-0.5">{sectionName}</p>
+                  )}
+                  <h2 className="text-h2 md:text-h1 text-deep-ink">{heading}</h2>
+                </div>
+              </div>
+              <div className="mt-4 h-px bg-gradient-to-r from-accent-cyan/30 via-border/40 to-transparent" />
+            </div>
+          )}
+
+          {/* Body content in card */}
+          {body && (
+            <div className="rounded-2xl border border-border/30 bg-card p-6 md:p-8 shadow-card">
+              <RichBody body={body} />
+            </div>
+          )}
+
+          {/* CTA */}
+          {cta && (
+            <div className="mt-5">
+              {cta.href?.startsWith('http') ? (
+                <a
+                  href={cta.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-xl bg-primary-navy/5 text-primary-navy hover:bg-primary-navy/10 border border-primary-navy/10 transition-all duration-200 group"
+                >
+                  {cta.label}
+                  <ExternalLink className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
+                </a>
+              ) : (
+                <Link
+                  to={cta.href || '#'}
+                  className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-xl bg-primary-navy/5 text-primary-navy hover:bg-primary-navy/10 border border-primary-navy/10 transition-all duration-200 group"
+                >
+                  {cta.label}
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              )}
+            </div>
+          )}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+/* ═══════════════════════════════════════════════════════════════════
+   TABLE SECTION — ELEVATED CARD
+   ═══════════════════════════════════════════════════════════════════ */
+
+const TableSection = ({ id, heading, headers, rows, intro }) => {
+  const SectionIcon = getSectionIcon(id);
+
+  return (
+    <section id={id} className="pt-8 md:pt-10 pb-4 bg-background">
+      <div className="container-grid">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="max-w-[860px] mx-auto"
+        >
+          {heading && (
+            <div className="mb-6 pt-6">
+              <div className="flex items-center gap-3 mb-1">
+                {SectionIcon && (
+                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-accent-cyan/10 to-primary-navy/10 flex items-center justify-center flex-shrink-0">
+                    <SectionIcon className="w-4.5 h-4.5 text-accent-cyan" />
+                  </div>
+                )}
+                <h2 className="text-h2 md:text-h1 text-deep-ink">{heading}</h2>
+              </div>
+              <div className="mt-4 h-px bg-gradient-to-r from-accent-cyan/30 via-border/40 to-transparent" />
+            </div>
+          )}
+          {intro && <p className="text-body text-muted-foreground mb-5">{intro}</p>}
+
+          <p className="text-xs text-muted-foreground text-right mb-2 md:hidden" aria-hidden="true">← Scroll →</p>
+          <div className="overflow-x-auto -mx-5 px-5 md:mx-0 md:px-0">
+            <div className="rounded-2xl border border-border/30 shadow-card overflow-hidden">
+              <table className="w-full bg-card min-w-[400px]">
+                {headers && (
+                  <thead>
+                    <tr className="bg-gradient-to-r from-primary-navy to-secondary-blue text-white">
+                      {headers.map((h, i) => (
+                        <th key={i} scope="col" className="px-5 py-4 text-left text-sm font-semibold">
+                          {h}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                )}
+                <tbody className="divide-y divide-border/50">
+                  {(rows || []).map((row, ri) => {
+                    const cells = Array.isArray(row) ? row : [row];
+                    return (
+                      <tr key={ri} className="hover:bg-surface/60 transition-colors">
+                        {cells.map((cell, ci) => (
+                          <td key={ci} className={`px-5 py-4 text-sm ${ci === 0 ? 'font-medium text-deep-ink' : 'text-muted-foreground'}`}>
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
           </div>
-        )}
-        {sectionName && heading && (
-          <p className="text-sm font-semibold text-accent-cyan uppercase tracking-wider mb-3">{sectionName}</p>
-        )}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
 
-        <RichBody body={body} />
-
-        {cta && (
-          <div className="mt-6">
-            {cta.href?.startsWith('http') ? (
-              <a
-                href={cta.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group"
-              >
-                {cta.label}
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            ) : (
-              <Link
-                to={cta.href || '#'}
-                className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group"
-              >
-                {cta.label}
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            )}
-          </div>
-        )}
-      </motion.div>
-    </div>
-  </section>
-);
-
-const TableSection = ({ id, heading, headers, rows, intro }) => (
-  <section id={id} className="pt-10 md:pt-14 pb-2 bg-background">
-    <div className="container-grid">
-      <motion.div
-        initial={{ opacity: 0, y: 16 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="max-w-[860px] mx-auto"
-      >
-        {heading && (
-          <div className="mb-6">
-            <div className="divider-elegant mb-6" />
-            <h2 className="text-h2 md:text-h1 text-deep-ink">{heading}</h2>
-          </div>
-        )}
-        {intro && <p className="text-body text-muted-foreground mb-6">{intro}</p>}
-
-        <p className="text-xs text-muted-foreground text-right mb-2 md:hidden" aria-hidden="true">← Scroll →</p>
-        <div className="overflow-x-auto -mx-5 px-5 md:mx-0 md:px-0">
-          <table className="w-full bg-card rounded-xl border border-border/50 shadow-card overflow-hidden min-w-[400px]">
-            {headers && (
-              <thead>
-                <tr className="bg-primary-navy text-white">
-                  {headers.map((h, i) => (
-                    <th key={i} scope="col" className="px-5 py-3.5 text-left text-sm font-semibold first:rounded-tl-xl last:rounded-tr-xl">
-                      {h}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-            )}
-            <tbody className="divide-y divide-border">
-              {(rows || []).map((row, ri) => {
-                const cells = Array.isArray(row) ? row : [row];
-                return (
-                  <tr key={ri} className="hover:bg-surface/50 transition-colors">
-                    {cells.map((cell, ci) => (
-                      <td key={ci} className={`px-5 py-3.5 text-sm ${ci === 0 ? 'font-medium text-deep-ink' : 'text-muted-foreground'}`}>
-                        {cell}
-                      </td>
-                    ))}
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-      </motion.div>
-    </div>
-  </section>
-);
+/* ═══════════════════════════════════════════════════════════════════
+   HIGHLIGHT BOX — GRADIENT CARD WITH GLOW
+   ═══════════════════════════════════════════════════════════════════ */
 
 const HighlightSection = ({ id, heading, body }) => {
   const elements = useMemo(() => parseBody(body), [body]);
@@ -301,35 +405,45 @@ const HighlightSection = ({ id, heading, body }) => {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
           className="max-w-[860px] mx-auto"
         >
-          <div className="relative rounded-2xl overflow-hidden">
+          <div className="relative rounded-2xl overflow-hidden shadow-elevated">
+            {/* Multi-layer gradient */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary-navy via-secondary-blue to-primary-navy" />
-            <div className="absolute inset-0 opacity-10 pattern-grid" />
-            <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent-cyan/20 to-transparent" />
+            <div className="absolute inset-0 opacity-[0.06] pattern-grid" />
+            <div className="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-accent-cyan/15 to-transparent" />
+            <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-t from-primary-navy/50 to-transparent" />
+            
+            {/* Glow orb */}
+            <div className="absolute top-[-40px] right-[-40px] w-[200px] h-[200px] rounded-full opacity-20" style={{ background: 'radial-gradient(circle, hsl(195 100% 46%), transparent 70%)' }} />
+
             <div className="relative z-10 p-8 md:p-12">
-              <span className="inline-block px-3 py-1 text-[10px] font-bold uppercase tracking-widest rounded-full bg-white/15 text-white/90 mb-4">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.15em] rounded-full bg-white/15 text-white/90 border border-white/10 mb-5 backdrop-blur-sm">
+                <Sparkles className="w-3 h-3" />
                 Coming Soon
               </span>
               {heading && (
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-5">{heading}</h2>
+                <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">{heading}</h2>
               )}
               <div className="space-y-4">
                 {elements.map((el, i) => {
                   if (el.type === 'bullets') {
                     return (
-                      <ul key={i} className="space-y-2">
-                        {el.items.map((item, j) => (
-                          <li key={j} className="flex items-start gap-3 text-white/85 text-sm md:text-base leading-relaxed">
-                            <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent-cyan flex-shrink-0" aria-hidden="true" />
-                            <span>{boldifyText(item)}</span>
-                          </li>
-                        ))}
-                      </ul>
+                      <div key={i} className="rounded-xl bg-white/5 border border-white/10 p-5 backdrop-blur-sm">
+                        <ul className="space-y-3">
+                          {el.items.map((item, j) => (
+                            <li key={j} className="flex items-start gap-3 text-white/85 text-sm md:text-base leading-relaxed">
+                              <span className="mt-[7px] w-2 h-2 rounded-full bg-accent-cyan flex-shrink-0" aria-hidden="true" />
+                              <span>{boldifyText(item)}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     );
                   }
                   return (
-                    <p key={i} className="text-white/80 text-sm md:text-base leading-relaxed whitespace-pre-line">
+                    <p key={i} className="text-white/75 text-sm md:text-base leading-relaxed whitespace-pre-line">
                       {boldifyText(el.text)}
                     </p>
                   );
@@ -343,21 +457,29 @@ const HighlightSection = ({ id, heading, body }) => {
   );
 };
 
+/* ═══════════════════════════════════════════════════════════════════
+   CTA GRID — ELEVATED CARDS WITH HOVER
+   ═══════════════════════════════════════════════════════════════════ */
+
 const CtaGridSection = ({ id, header, items }) => (
-  <section id={id} className="py-12 md:py-16 bg-surface border-t border-border/30">
-    <div className="container-grid">
-      <div className="max-w-[860px] mx-auto">
+  <section id={id} className="py-14 md:py-20 bg-surface relative overflow-hidden">
+    {/* Background pattern */}
+    <div className="absolute inset-0 pattern-grid opacity-[0.15]" />
+    <div className="absolute top-[-60px] left-1/2 -translate-x-1/2 w-[400px] h-[200px] rounded-full opacity-[0.06]" style={{ background: 'radial-gradient(ellipse, hsl(195 100% 46%), transparent 70%)' }} />
+    
+    <div className="container-grid relative z-10">
+      <div className="max-w-[960px] mx-auto">
         {header && (
           <motion.h2
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-h2 md:text-h1 text-deep-ink mb-8 text-center"
+            className="text-h2 md:text-display-2 text-deep-ink mb-10 text-center"
           >
             {header}
           </motion.h2>
         )}
-        <div className={`grid grid-cols-1 gap-6 ${items?.length === 2 ? 'md:grid-cols-2' : 'md:grid-cols-3'}`}>
+        <div className={`grid grid-cols-1 gap-6 lg:gap-8 ${items?.length === 2 ? 'md:grid-cols-2 max-w-3xl mx-auto' : 'md:grid-cols-3'}`}>
           {(items || []).map((item, i) => {
             const Icon = getIcon(item.icon);
             return (
@@ -366,21 +488,22 @@ const CtaGridSection = ({ id, header, items }) => (
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.08 }}
-                className="card-elegant p-7 flex flex-col"
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                className="card-elegant p-8 flex flex-col group"
               >
                 {Icon && (
-                  <div className="w-10 h-10 rounded-lg bg-accent-cyan/8 flex items-center justify-center mb-4">
-                    <Icon className="w-5 h-5 text-accent-cyan" />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent-cyan/10 to-primary-navy/10 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
+                    <Icon className="w-6 h-6 text-accent-cyan" />
                   </div>
                 )}
-                <h3 className="text-lg font-semibold text-deep-ink mb-2">{item.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-4">
+                <h3 className="text-lg font-semibold text-deep-ink mb-2 group-hover:text-primary-navy transition-colors">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-1 mb-5">
                   {item.body || item.description}
                 </p>
                 {item.email && (
-                  <a href={`mailto:${item.email}`} className="text-sm text-link-blue hover:text-secondary-blue font-medium">
+                  <a href={`mailto:${item.email}`} className="inline-flex items-center gap-2 text-sm text-link-blue hover:text-secondary-blue font-medium group/link">
                     {item.email}
+                    <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-1" />
                   </a>
                 )}
               </motion.div>
@@ -404,6 +527,7 @@ const StandardPageTemplate = ({ page, badge }) => {
   const contentSections = sections.filter(s => s.type !== 'hero');
 
   let firstTextFound = false;
+  let sectionIndex = 0;
 
   return (
     <>
@@ -423,26 +547,31 @@ const StandardPageTemplate = ({ page, badge }) => {
         if (type === 'textBlock') {
           const isFirst = !firstTextFound;
           firstTextFound = true;
-          return <TextSection key={section.id || index} isFirst={isFirst} {...props} />;
+          const isAlt = sectionIndex % 2 === 1;
+          sectionIndex++;
+          return <TextSection key={section.id || index} isFirst={isFirst} isAlt={isAlt} {...props} />;
         }
 
         if (type === 'comparisonTable') {
+          sectionIndex++;
           return <TableSection key={section.id || index} {...props} />;
         }
 
         if (type === 'highlightBox') {
+          sectionIndex++;
           return <HighlightSection key={section.id || index} {...props} />;
         }
 
         if (type === 'grid3') {
+          sectionIndex++;
           return <CtaGridSection key={section.id || index} {...props} />;
         }
 
         return null;
       })}
 
-      {/* Bottom spacer */}
-      <div className="h-12 md:h-16 bg-background" />
+      {/* Bottom gradient spacer */}
+      <div className="h-16 md:h-20 bg-gradient-to-b from-background to-surface/30" />
     </>
   );
 };
