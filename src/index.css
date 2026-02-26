@@ -123,8 +123,9 @@
   }
 
   h1, h2 {
-    @apply font-serif font-semibold text-deep-ink;
+    @apply font-serif font-semibold;
     letter-spacing: -0.02em;
+    color: inherit;
   }
 
   h3, h4, h5, h6 {
