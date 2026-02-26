@@ -4,8 +4,7 @@ import HeroBackground from '../common/HeroBackground';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { boldifyText } from '../../lib/boldifyText';
 
-// Import all hero banner images (WebP)
-import homePrecision from '@/assets/banners/home-precision.webp';
+// Import non-homepage banner images (WebP)
 import instituteStark from '@/assets/banners/institute-stark.webp';
 import methodologyFramework from '@/assets/banners/methodology-framework.webp';
 import publicationsDoi from '@/assets/banners/publications-doi.webp';
@@ -14,16 +13,8 @@ import collaborateNetwork from '@/assets/banners/collaborate-network.webp';
 import newsroomPress from '@/assets/banners/newsroom-press.webp';
 import contactInstitutional from '@/assets/banners/contact-institutional.webp';
 
-// Responsive WebP hero variants for homepage LCP
-import hero480 from '@/assets/hero/hero-480.webp';
-import hero768 from '@/assets/hero/hero-768.webp';
-import hero1280 from '@/assets/hero/hero-1280.webp';
-import hero1920 from '@/assets/hero/hero-1920.webp';
-
-// Map for resolving banner paths to imports (support both .jpg and .webp keys)
+// Map for resolving banner paths to imports (homepage removed to eliminate LCP image)
 const bannerImports = {
-  '/src/assets/banners/home-precision.jpg': homePrecision,
-  '/src/assets/banners/home-precision.webp': homePrecision,
   '/src/assets/banners/institute-stark.jpg': instituteStark,
   '/src/assets/banners/institute-stark.webp': instituteStark,
   '/src/assets/banners/methodology-framework.jpg': methodologyFramework,
@@ -40,11 +31,11 @@ const bannerImports = {
   '/src/assets/banners/contact-institutional.webp': contactInstitutional,
 };
 
-// Responsive srcSet map — only homepage hero has multi-res WebP
-const responsiveSrcSets = {
-  '/src/assets/banners/home-precision.jpg': `${hero480} 480w, ${hero768} 768w, ${hero1280} 1280w, ${hero1920} 1920w`,
-  '/src/assets/banners/home-precision.webp': `${hero480} 480w, ${hero768} 768w, ${hero1280} 1280w, ${hero1920} 1920w`,
-};
+// Homepage hero paths — these resolve to gradient-only (no image loaded)
+const homepageHeroPaths = new Set([
+  '/src/assets/banners/home-precision.jpg',
+  '/src/assets/banners/home-precision.webp',
+]);
 
 // --- Sub-components ---
 
@@ -126,16 +117,33 @@ const HeroSection = ({
   const mainCta = primaryCta || cta;
   const altCta = secondaryCta;
   
-  const resolvedImageSrc = heroImage?.src ? (bannerImports[heroImage.src] || heroImage.src) : null;
-  const resolvedSrcSet = heroImage?.src ? (responsiveSrcSets[heroImage.src] || null) : null;
+  const isHomepageHero = heroImage?.src && homepageHeroPaths.has(heroImage.src);
+  const resolvedImageSrc = (!isHomepageHero && heroImage?.src) ? (bannerImports[heroImage.src] || heroImage.src) : null;
   const hasImage = !!resolvedImageSrc;
+  const hasBannerStyle = hasImage || isHomepageHero; // treat homepage gradient like a banner
   const isCompact = variant === 'publication' || variant === 'archive';
 
   return (
     <section className={`relative overflow-hidden ${isCompact ? 'min-h-[200px] md:min-h-[260px]' : 'min-h-[420px] md:min-h-[520px]'} flex items-center`}>
-      {!hasImage && <HeroBackground />}
-      {!hasImage && (
+      {!hasBannerStyle && <HeroBackground />}
+      {!hasBannerStyle && (
         <div className="absolute inset-0 bg-gradient-to-b from-surface/50 via-background to-background" />
+      )}
+
+      {/* Homepage gradient-only banner (no image loaded) */}
+      {isHomepageHero && (
+        <div className="absolute inset-0 z-0">
+          <div className="absolute inset-0" style={{
+            background: 'linear-gradient(135deg, hsl(240 93% 10%) 0%, hsl(240 93% 18%) 30%, hsl(210 80% 22%) 60%, hsl(195 85% 25%) 100%)'
+          }} />
+          <div className="absolute inset-0" style={{
+            background: 'radial-gradient(ellipse at 20% 20%, hsl(195 100% 46% / 0.15) 0%, transparent 50%)'
+          }} />
+          <div className="absolute inset-0" style={{
+            background: 'radial-gradient(ellipse at 80% 80%, hsl(240 93% 25% / 0.2) 0%, transparent 50%)'
+          }} />
+          <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNhKSIvPjwvc3ZnPg==')]" />
+        </div>
       )}
 
       {hasImage && (
@@ -146,9 +154,7 @@ const HeroSection = ({
           transition={isCompact ? {} : { duration: 20, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
         >
             <img
-              src={resolvedSrcSet ? hero768 : resolvedImageSrc}
-              srcSet={resolvedSrcSet || undefined}
-              sizes={resolvedSrcSet ? "(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1200px" : undefined}
+              src={resolvedImageSrc}
               alt={heroImage?.alt || ''}
               className="absolute inset-0 w-full h-full object-cover object-center"
               fetchPriority="high"
@@ -176,7 +182,7 @@ const HeroSection = ({
 
       <div className={`container-grid relative z-10 ${isCompact ? 'pt-20 pb-6 md:py-8' : 'pt-24 pb-12 md:py-16'}`}>
         <div className={`${isCompact ? 'max-w-5xl' : 'max-w-4xl'} mx-auto text-center`}>
-          {!hasImage && (
+          {!hasBannerStyle && (
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="mb-6">
               <span className="badge-accent">Micro Research Institute</span>
             </motion.div>
@@ -186,10 +192,10 @@ const HeroSection = ({
             initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
             className={`font-bold mb-4 text-balance leading-[1.1] ${
               isCompact ? 'text-[22px] md:text-[32px] text-white'
-                : hasImage ? 'text-[34px] md:text-[52px] text-white' 
+                : hasBannerStyle ? 'text-[34px] md:text-[52px] text-white' 
                 : 'text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-deep-ink'
             }`}
-            style={hasImage ? { textShadow: '0 2px 14px rgba(0,0,0,0.55)' } : {}}
+            style={hasBannerStyle ? { textShadow: '0 2px 14px rgba(0,0,0,0.55)' } : {}}
           >
             {title}
           </motion.h1>
@@ -199,10 +205,10 @@ const HeroSection = ({
               initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
               className={`mb-6 max-w-3xl mx-auto leading-relaxed whitespace-pre-line ${
                 isCompact ? 'text-sm md:text-base text-white/75'
-                  : hasImage ? 'text-base md:text-lg text-white/85' 
+                  : hasBannerStyle ? 'text-base md:text-lg text-white/85' 
                   : 'text-lg md:text-xl text-muted-foreground'
               }`}
-              style={hasImage ? { textShadow: '0 2px 14px rgba(0,0,0,0.55)' } : {}}
+              style={hasBannerStyle ? { textShadow: '0 2px 14px rgba(0,0,0,0.55)' } : {}}
             >
               {boldifyText(subtitle)}
             </motion.p>
@@ -210,14 +216,14 @@ const HeroSection = ({
           
           {(mainCta || altCta) && (
             <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="flex flex-col sm:flex-row gap-4 justify-center">
-              <HeroCta ctaData={mainCta} isPrimary={true} hasImage={hasImage} />
-              <HeroCta ctaData={altCta} isPrimary={false} hasImage={hasImage} />
+              <HeroCta ctaData={mainCta} isPrimary={true} hasImage={hasBannerStyle} />
+              <HeroCta ctaData={altCta} isPrimary={false} hasImage={hasBannerStyle} />
             </motion.div>
           )}
         </div>
       </div>
 
-      {!hasImage && (
+      {!hasBannerStyle && (
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
       )}
     </section>
