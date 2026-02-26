@@ -2,141 +2,145 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
+import seoSchemaConfig, { OG_SITE_NAME } from '../../lib/seoSchemaConfig';
 import siteContent from '../../content/siteContent';
-import { buildGlobalSchemas, buildBreadcrumbsFromPath } from '../../lib/schemaBuilders';
-
-// Schema types auto-generated globally — filter these from page-specific schemas to avoid duplicates
-const GLOBAL_SCHEMA_TYPES = new Set([
-  'Organization', 'ResearchOrganization', 'EducationalOrganization',
-  'WebSite', 'WebPage', 'BreadcrumbList',
-]);
-
-const isGlobalSchemaType = (schema) => {
-  const type = schema['@type'];
-  const types = Array.isArray(type) ? type : [type];
-  return types.every(t => GLOBAL_SCHEMA_TYPES.has(t));
-};
 
 const PageShell = ({ children }) => {
   const location = useLocation();
+  const seoConfig = seoSchemaConfig[location.pathname];
   const page = siteContent.pages[location.pathname];
 
   useEffect(() => {
-    if (!page) return;
-
-    // Update document title
-    if (page.seo?.title) {
-      document.title = page.seo.title;
-    } else if (page.title) {
-      document.title = `${page.title} | ${siteContent.brand.siteName}`;
-    }
-
-    // Helper to set or remove meta tag
+    // ── Helpers ───────────────────────────────────────────────────────────
     const setMeta = (selector, content, createAttrs = {}) => {
-      let element = document.querySelector(selector);
+      let el = document.querySelector(selector);
       if (content) {
-        if (!element) {
-          element = document.createElement('meta');
-          Object.entries(createAttrs).forEach(([key, value]) => {
-            element.setAttribute(key, value);
-          });
-          document.head.appendChild(element);
+        if (!el) {
+          el = document.createElement('meta');
+          Object.entries(createAttrs).forEach(([k, v]) => el.setAttribute(k, v));
+          document.head.appendChild(el);
         }
-        element.setAttribute('content', content);
-      } else if (element) {
-        element.remove();
+        el.setAttribute('content', content);
+      } else if (el) {
+        el.remove();
       }
     };
 
-    // Helper to set or remove link tag
     const setLink = (rel, href) => {
-      let element = document.querySelector(`link[rel="${rel}"]`);
+      let el = document.querySelector(`link[rel="${rel}"]`);
       if (href) {
-        if (!element) {
-          element = document.createElement('link');
-          element.setAttribute('rel', rel);
-          document.head.appendChild(element);
+        if (!el) {
+          el = document.createElement('link');
+          el.setAttribute('rel', rel);
+          document.head.appendChild(el);
         }
-        element.setAttribute('href', href);
-      } else if (element) {
-        element.remove();
+        el.setAttribute('href', href);
+      } else if (el) {
+        el.remove();
       }
     };
 
-    // Set meta description
-    const description = page.seo?.openGraph?.description || page.metaDescription || page.meta?.description;
-    setMeta('meta[name="description"]', description, { name: 'description' });
+    // ── If seoSchemaConfig has an entry, use it as single source of truth ──
+    if (seoConfig) {
+      const { meta, openGraph, twitter, jsonLd } = seoConfig;
 
-    // Robots: never inject noindex — all pages should be indexable
-    if (page.seo?.robots && !page.seo.robots.includes('noindex')) {
-      setMeta('meta[name="robots"]', page.seo.robots, { name: 'robots' });
-    } else {
-      // Remove any existing noindex meta
-      const existingRobots = document.querySelector('meta[name="robots"]');
-      if (existingRobots) existingRobots.remove();
-    }
+      // Title
+      if (meta.title) document.title = meta.title;
 
-    // Set canonical
-    if (page.seo?.canonical) {
-      setLink('canonical', page.seo.canonical);
-    }
+      // Meta tags
+      setMeta('meta[name="description"]', meta.description, { name: 'description' });
+      setMeta('meta[name="keywords"]', meta.keywords, { name: 'keywords' });
+      setMeta('meta[name="robots"]', meta.robots, { name: 'robots' });
 
-    // OpenGraph tags
-    if (page.seo?.openGraph) {
-      const og = page.seo.openGraph;
-      setMeta('meta[property="og:type"]', og.type, { property: 'og:type' });
-      setMeta('meta[property="og:url"]', og.url, { property: 'og:url' });
-      setMeta('meta[property="og:title"]', og.title, { property: 'og:title' });
-      setMeta('meta[property="og:description"]', og.description, { property: 'og:description' });
-      if (og.image) {
-        setMeta('meta[property="og:image"]', og.image.url, { property: 'og:image' });
-        setMeta('meta[property="og:image:width"]', og.image.width?.toString(), { property: 'og:image:width' });
-        setMeta('meta[property="og:image:height"]', og.image.height?.toString(), { property: 'og:image:height' });
-        setMeta('meta[property="og:image:alt"]', og.image.alt, { property: 'og:image:alt' });
+      // Canonical
+      setLink('canonical', meta.canonical);
+
+      // OpenGraph
+      if (openGraph) {
+        setMeta('meta[property="og:type"]', openGraph.type, { property: 'og:type' });
+        setMeta('meta[property="og:title"]', openGraph.title, { property: 'og:title' });
+        setMeta('meta[property="og:description"]', openGraph.description, { property: 'og:description' });
+        setMeta('meta[property="og:url"]', openGraph.url, { property: 'og:url' });
+        setMeta('meta[property="og:site_name"]', openGraph.site_name || OG_SITE_NAME, { property: 'og:site_name' });
+        setMeta('meta[property="og:image"]', openGraph.image, { property: 'og:image' });
+        setMeta('meta[property="og:locale"]', openGraph.locale, { property: 'og:locale' });
+      }
+
+      // Twitter
+      if (twitter) {
+        setMeta('meta[name="twitter:card"]', twitter.card, { name: 'twitter:card' });
+        setMeta('meta[name="twitter:title"]', twitter.title, { name: 'twitter:title' });
+        setMeta('meta[name="twitter:description"]', twitter.description, { name: 'twitter:description' });
+        setMeta('meta[name="twitter:image"]', twitter.image, { name: 'twitter:image' });
+      }
+
+      // JSON-LD — remove old, inject new
+      document.querySelectorAll('script[data-schema]').forEach(el => el.remove());
+      if (jsonLd) {
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.setAttribute('data-schema', 'page');
+        script.textContent = JSON.stringify(jsonLd);
+        document.head.appendChild(script);
+      }
+    } else if (page) {
+      // ── Fallback: use siteContent page SEO (for pages not in client doc) ──
+      if (page.seo?.title) {
+        document.title = page.seo.title;
+      } else if (page.title) {
+        document.title = `${page.title} | ${siteContent.brand.siteName}`;
+      }
+
+      const description = page.seo?.openGraph?.description || page.metaDescription || page.meta?.description;
+      setMeta('meta[name="description"]', description, { name: 'description' });
+
+      if (page.seo?.robots && !page.seo.robots.includes('noindex')) {
+        setMeta('meta[name="robots"]', page.seo.robots, { name: 'robots' });
+      } else {
+        const existing = document.querySelector('meta[name="robots"]');
+        if (existing) existing.remove();
+      }
+
+      if (page.seo?.canonical) setLink('canonical', page.seo.canonical);
+
+      if (page.seo?.openGraph) {
+        const og = page.seo.openGraph;
+        setMeta('meta[property="og:type"]', og.type, { property: 'og:type' });
+        setMeta('meta[property="og:url"]', og.url, { property: 'og:url' });
+        setMeta('meta[property="og:title"]', og.title, { property: 'og:title' });
+        setMeta('meta[property="og:description"]', og.description, { property: 'og:description' });
+        setMeta('meta[property="og:site_name"]', OG_SITE_NAME, { property: 'og:site_name' });
+        if (og.image) {
+          setMeta('meta[property="og:image"]', og.image.url || og.image, { property: 'og:image' });
+        }
+      }
+
+      if (page.seo?.twitter) {
+        const tw = page.seo.twitter;
+        setMeta('meta[name="twitter:card"]', tw.card, { name: 'twitter:card' });
+        setMeta('meta[name="twitter:title"]', tw.title, { name: 'twitter:title' });
+        setMeta('meta[name="twitter:description"]', tw.description, { name: 'twitter:description' });
+        setMeta('meta[name="twitter:image"]', tw.image, { name: 'twitter:image' });
+      }
+
+      // Fallback JSON-LD from siteContent schemas
+      document.querySelectorAll('script[data-schema]').forEach(el => el.remove());
+      if (page.schemas?.length) {
+        page.schemas.forEach((schema, i) => {
+          const script = document.createElement('script');
+          script.type = 'application/ld+json';
+          script.setAttribute('data-schema', 'page');
+          script.setAttribute('data-schema-index', i.toString());
+          script.textContent = JSON.stringify(schema);
+          document.head.appendChild(script);
+        });
       }
     }
 
-    // Twitter tags
-    if (page.seo?.twitter) {
-      const tw = page.seo.twitter;
-      setMeta('meta[name="twitter:card"]', tw.card, { name: 'twitter:card' });
-      setMeta('meta[name="twitter:title"]', tw.title, { name: 'twitter:title' });
-      setMeta('meta[name="twitter:description"]', tw.description, { name: 'twitter:description' });
-      setMeta('meta[name="twitter:image"]', tw.image, { name: 'twitter:image' });
-    }
-
-    // Remove old schema scripts
-    document.querySelectorAll('script[data-schema]').forEach(el => el.remove());
-
-    // Build global schemas (Organization, WebSite, WebPage, BreadcrumbList)
-    const breadcrumbs = buildBreadcrumbsFromPath(location.pathname);
-    const globalSchemas = buildGlobalSchemas({
-      pageName: page.title || '',
-      pagePath: location.pathname,
-      breadcrumbs,
-    });
-
-    // Filter page-specific schemas to remove types already covered by global schemas
-    const pageSpecificSchemas = (page.schemas || []).filter(s => !isGlobalSchemaType(s));
-
-    // Merge: global schemas first, then page-specific
-    const allSchemas = [...globalSchemas, ...pageSpecificSchemas];
-
-    // Inject all JSON-LD schemas
-    allSchemas.forEach((schema, index) => {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.setAttribute('data-schema', index < globalSchemas.length ? 'global' : 'page');
-      script.setAttribute('data-schema-index', index.toString());
-      script.textContent = JSON.stringify(schema);
-      document.head.appendChild(script);
-    });
-
-    // Cleanup on unmount
     return () => {
       document.querySelectorAll('script[data-schema]').forEach(el => el.remove());
     };
-  }, [location.pathname, page]);
+  }, [location.pathname, seoConfig, page]);
 
   return (
     <div className="min-h-screen flex flex-col">
