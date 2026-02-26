@@ -14,6 +14,11 @@ import collaborateNetwork from '@/assets/banners/collaborate-network.jpg';
 import newsroomPress from '@/assets/banners/newsroom-press.jpg';
 import contactInstitutional from '@/assets/banners/contact-institutional.jpg';
 
+// Responsive WebP hero variants for homepage LCP
+import hero768 from '@/assets/hero/hero-768.webp';
+import hero1280 from '@/assets/hero/hero-1280.webp';
+import hero1920 from '@/assets/hero/hero-1920.webp';
+
 // Map for resolving banner paths to imports
 const bannerImports = {
   '/src/assets/banners/home-precision.jpg': homePrecision,
@@ -24,6 +29,11 @@ const bannerImports = {
   '/src/assets/banners/collaborate-network.jpg': collaborateNetwork,
   '/src/assets/banners/newsroom-press.jpg': newsroomPress,
   '/src/assets/banners/contact-institutional.jpg': contactInstitutional,
+};
+
+// Responsive srcSet map — only homepage hero has multi-res WebP
+const responsiveSrcSets = {
+  '/src/assets/banners/home-precision.jpg': `${hero768} 768w, ${hero1280} 1280w, ${hero1920} 1920w`,
 };
 
 const HeroSection = ({ 
@@ -43,8 +53,9 @@ const HeroSection = ({
   const mainCta = primaryCta || cta;
   const altCta = secondaryCta;
   
-  // Resolve banner image source
+  // Resolve banner image source and responsive srcSet
   const resolvedImageSrc = heroImage?.src ? (bannerImports[heroImage.src] || heroImage.src) : null;
+  const resolvedSrcSet = heroImage?.src ? (responsiveSrcSets[heroImage.src] || null) : null;
   const hasImage = !!resolvedImageSrc;
 
   const renderCta = (ctaData, isPrimary = true) => {
@@ -146,9 +157,9 @@ const HeroSection = ({
           transition={isCompact ? {} : { duration: 20, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
         >
           <img
-            src={resolvedImageSrc}
-            srcSet={`${resolvedImageSrc} 1920w`}
-            sizes="100vw"
+            src={resolvedSrcSet ? hero1920 : resolvedImageSrc}
+            srcSet={resolvedSrcSet || undefined}
+            sizes={resolvedSrcSet ? "100vw" : undefined}
             alt={heroImage?.alt || ''}
             className="absolute inset-0 w-full h-full object-cover object-center"
             fetchPriority="high"
