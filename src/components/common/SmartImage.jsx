@@ -25,19 +25,6 @@ import patentDeliveryImg from '@/assets/placeholders/labs/patent-delivery.jpg';
 import patentMedicalImg from '@/assets/placeholders/labs/patent-medical.jpg';
 import patentHealthImg from '@/assets/placeholders/labs/patent-health.jpg';
 
-// Import banner images (WebP)
-import homePrecisionBanner from '@/assets/banners/home-precision.webp';
-import instituteStarkBanner from '@/assets/banners/institute-stark.webp';
-import methodologyFrameworkBanner from '@/assets/banners/methodology-framework.webp';
-import publicationsDoiBanner from '@/assets/banners/publications-doi.webp';
-import governanceOversightBanner from '@/assets/banners/governance-oversight.webp';
-import collaborateNetworkBanner from '@/assets/banners/collaborate-network.webp';
-import newsroomPressBanner from '@/assets/banners/newsroom-press.webp';
-import contactInstitutionalBanner from '@/assets/banners/contact-institutional.webp';
-import downloadsArchiveBanner from '@/assets/banners/downloads-archive.webp';
-import technicalBriefAeroBanner from '@/assets/banners/technical-brief-aero.webp';
-import presentationConferenceBanner from '@/assets/banners/presentation-conference.webp';
-import proceedingsAuditoriumBanner from '@/assets/banners/proceedings-auditorium.webp';
 
 // Import headshot placeholders
 import headshot1 from '@/assets/placeholders/avatars/headshot-1.jpg';
@@ -90,19 +77,7 @@ const imageMap = {
   '/src/assets/placeholders/visual-evidence/lab-bench-1.jpg': labBench1,
   '/src/assets/placeholders/visual-evidence/lunar-sim-1.jpg': lunarSim1,
   
-  // Banners (.jpg keys → WebP imports)
-  '/src/assets/banners/home-precision.jpg': homePrecisionBanner,
-  '/src/assets/banners/institute-stark.jpg': instituteStarkBanner,
-  '/src/assets/banners/methodology-framework.jpg': methodologyFrameworkBanner,
-  '/src/assets/banners/publications-doi.jpg': publicationsDoiBanner,
-  '/src/assets/banners/governance-oversight.jpg': governanceOversightBanner,
-  '/src/assets/banners/collaborate-network.jpg': collaborateNetworkBanner,
-  '/src/assets/banners/newsroom-press.jpg': newsroomPressBanner,
-  '/src/assets/banners/contact-institutional.jpg': contactInstitutionalBanner,
-  '/src/assets/banners/downloads-archive.jpg': downloadsArchiveBanner,
-  '/src/assets/banners/technical-brief-aero.jpg': technicalBriefAeroBanner,
-  '/src/assets/banners/presentation-conference.jpg': presentationConferenceBanner,
-  '/src/assets/banners/proceedings-auditorium.jpg': proceedingsAuditoriumBanner,
+  
   
   // Publications & Patents
   '/src/assets/placeholders/labs/authorization-letter.jpg': authorizationLetterImg,
