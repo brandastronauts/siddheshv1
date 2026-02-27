@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import siteContent from '../../content/siteContent';
+import { nav, brand } from '../../content/siteCore';
 import logo from '../../assets/logo.webp';
 import { getIcon } from '../../lib/iconMap';
 
@@ -153,7 +153,7 @@ const MobileAccordionItem = ({ item, location, closeMobileMenu }) => {
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const { nav, brand } = siteContent;
+  // nav and brand imported from siteCore
 
   const closeMobileMenu = () => setMobileMenuOpen(false);
 

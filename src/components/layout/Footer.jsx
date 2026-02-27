@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 import { Mail, ArrowUpRight, FileText, Lightbulb, BookOpen, Users, Download, Lock, ScrollText, MapPin } from 'lucide-react';
-import siteContent from '../../content/siteContent';
-import logo from '../../assets/logo.png';
+import { nav, brand } from '../../content/siteCore';
+import logo from '../../assets/logo.webp';
 import FooterNewsletter from '../FooterNewsletter';
 
 const Footer = () => {
-  const { nav, brand } = siteContent;
+  // nav and brand imported from siteCore
 
   return (
     <footer className="bg-deep-ink text-white relative overflow-hidden">
