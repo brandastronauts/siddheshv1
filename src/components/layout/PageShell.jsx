@@ -1,14 +1,21 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import seoSchemaConfig, { OG_SITE_NAME } from '../../lib/seoSchemaConfig';
-import siteContent from '../../content/siteContent';
+import { brand } from '../../content/siteCore';
 
 const PageShell = ({ children }) => {
   const location = useLocation();
   const seoConfig = seoSchemaConfig[location.pathname];
-  const page = siteContent.pages[location.pathname];
+  const [page, setPage] = useState(null);
+
+  // Lazy-load siteContent only for SEO (not blocking paint)
+  useEffect(() => {
+    import('../../content/siteContent').then((mod) => {
+      setPage(mod.default.pages[location.pathname] || null);
+    });
+  }, [location.pathname]);
 
   useEffect(() => {
     // ── Helpers ───────────────────────────────────────────────────────────
@@ -43,19 +50,12 @@ const PageShell = ({ children }) => {
     // ── If seoSchemaConfig has an entry, use it as single source of truth ──
     if (seoConfig) {
       const { meta, openGraph, twitter, jsonLd } = seoConfig;
-
-      // Title
       if (meta.title) document.title = meta.title;
-
-      // Meta tags
       setMeta('meta[name="description"]', meta.description, { name: 'description' });
       setMeta('meta[name="keywords"]', meta.keywords, { name: 'keywords' });
       setMeta('meta[name="robots"]', meta.robots, { name: 'robots' });
-
-      // Canonical
       setLink('canonical', meta.canonical);
 
-      // OpenGraph
       if (openGraph) {
         setMeta('meta[property="og:type"]', openGraph.type, { property: 'og:type' });
         setMeta('meta[property="og:title"]', openGraph.title, { property: 'og:title' });
@@ -66,7 +66,6 @@ const PageShell = ({ children }) => {
         setMeta('meta[property="og:locale"]', openGraph.locale, { property: 'og:locale' });
       }
 
-      // Twitter
       if (twitter) {
         setMeta('meta[name="twitter:card"]', twitter.card, { name: 'twitter:card' });
         setMeta('meta[name="twitter:title"]', twitter.title, { name: 'twitter:title' });
@@ -74,7 +73,6 @@ const PageShell = ({ children }) => {
         setMeta('meta[name="twitter:image"]', twitter.image, { name: 'twitter:image' });
       }
 
-      // JSON-LD — remove old, inject new
       document.querySelectorAll('script[data-schema]').forEach(el => el.remove());
       if (jsonLd) {
         const script = document.createElement('script');
@@ -84,11 +82,10 @@ const PageShell = ({ children }) => {
         document.head.appendChild(script);
       }
     } else if (page) {
-      // ── Fallback: use siteContent page SEO (for pages not in client doc) ──
       if (page.seo?.title) {
         document.title = page.seo.title;
       } else if (page.title) {
-        document.title = `${page.title} | ${siteContent.brand.siteName}`;
+        document.title = `${page.title} | ${brand.siteName}`;
       }
 
       const description = page.seo?.openGraph?.description || page.metaDescription || page.meta?.description;
@@ -123,7 +120,6 @@ const PageShell = ({ children }) => {
         setMeta('meta[name="twitter:image"]', tw.image, { name: 'twitter:image' });
       }
 
-      // Fallback JSON-LD from siteContent schemas
       document.querySelectorAll('script[data-schema]').forEach(el => el.remove());
       if (page.schemas?.length) {
         page.schemas.forEach((schema, i) => {
