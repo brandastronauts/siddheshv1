@@ -1608,7 +1608,7 @@ const siteContent = {
               tag: "Principal Investigator & Founder",
               body:
                 "**Credentials:** AMI Diploma (0-18)\n\nOversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes.",
-              image: { src: "/src/assets/placeholders/avatars/pavan.jpg", alt: "Pavan Goyal", variant: "avatar", privacyBlur: false },
+              image: { src: "/src/assets/placeholders/avatars/pavan.webp", alt: "Pavan Goyal", variant: "avatar", privacyBlur: false },
               cta: { label: "View Profile", href: "/team/pavan-goyal" }
             },
             {
@@ -4933,7 +4933,7 @@ const siteContent = {
           subheadline: "Principal Investigator & Founder. Oversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes (AMI Diploma 0-18).",
           primaryCta: { label: "Contact", href: "mailto:research@blueblocks.in" },
           secondaryCta: { label: "Back to Team", href: "/team" },
-          image: { src: "/src/assets/placeholders/avatars/pavan.jpg", alt: "Pavan Goyal", variant: "hero" }
+          image: { src: "/src/assets/placeholders/avatars/pavan.webp", alt: "Pavan Goyal", variant: "hero" }
         },
         {
           id: "profile-meta",
@@ -4950,7 +4950,7 @@ const siteContent = {
           type: "profile",
           name: "Pavan Goyal",
           role: "Principal Investigator & Founder",
-          image: { src: "/src/assets/placeholders/avatars/pavan.jpg", alt: "Pavan Goyal", variant: "avatar" },
+          image: { src: "/src/assets/placeholders/avatars/pavan.webp", alt: "Pavan Goyal", variant: "avatar" },
           email: "research@blueblocks.in",
           socials: [
             { type: "linkedin", href: "https://www.linkedin.com/in/pavangoyal/", label: "LinkedIn" },
