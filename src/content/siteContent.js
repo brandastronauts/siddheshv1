@@ -1684,27 +1684,6 @@ const siteContent = {
           intro: "Academic and operational researchers supporting longitudinal data integrity, STEM research modules, classroom-based documentation, and institutional research infrastructure across the 0–18 continuum.",
           cards: [
             {
-              headline: "D. Vinay Shyam Donakanti",
-              tag: "Research Data Analyst Intern",
-              body: "**Training:** B.Tech Computer Science & Data Science\n\nSupports digitization, coding, and structuring of Montessori observation records into standardized research datasets. Assists in data pipeline development, analytics documentation, and longitudinal data consistency across the 0–18 research archive.",
-              image: { src: "/src/assets/placeholders/avatars/vinay-donakanti.webp", alt: "D. Vinay Shyam Donakanti", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/vinay-donakanti" }
-            },
-            {
-              headline: "Sreedhar Reddy Boddu",
-              tag: "Research & Data Analyst",
-              body: "**Training:** B.Tech Civil Engineering (NIT Goa); Data Science & Analytics Certifications\n\nSupports ETL processes, dashboard development, and structured data visualization for classroom observation records. Contributes to predictive modeling frameworks and KPI tracking within the institute's longitudinal dataset architecture.",
-              image: { src: "/src/assets/placeholders/avatars/sreedhar-boddu.webp", alt: "Sreedhar Reddy Boddu", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/sreedhar-boddu" }
-            },
-            {
-              headline: "Sandhya Rao M",
-              tag: "AMI Elementary Guide | Biomimicry Educator",
-              body: "**Training:** AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation\n\nIntegrates Montessori pedagogy with structured research documentation in the Elementary environment. Contributes to interdisciplinary observation protocols, developmental research alignment, and nature-integrated inquiry frameworks.",
-              image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/sandhya-rao" }
-            },
-            {
               headline: "Dr. Sreemoyee Chakraborty",
               tag: "STEM Research Lead | Palaeontology & Earth Sciences",
               body: "**Training:** PhD, Palaeontology (ISI / University of Calcutta)\n\nLeads fossil-based STEM research modules and scientific inquiry frameworks within the institute. Contributes domain expertise in paleoclimate interpretation, geological data modeling, and child-led scientific investigation design.",
@@ -1719,11 +1698,32 @@ const siteContent = {
               cta: { label: "View Profile", href: "/team/shobha-ediga" }
             },
             {
+              headline: "Sandhya Rao M",
+              tag: "AMI Elementary Guide | Biomimicry Educator",
+              body: "**Training:** AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation\n\nIntegrates Montessori pedagogy with structured research documentation in the Elementary environment. Contributes to interdisciplinary observation protocols, developmental research alignment, and nature-integrated inquiry frameworks.",
+              image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/sandhya-rao" }
+            },
+            {
               headline: "Sruthi Matta",
               tag: "Research Team Lead — Pedagogy & Innovation",
               body: "**Training:** Graduate Diploma in Journalism (Concordia University); AEC Media Strategies & Advertising; B.A. Humanities\n\nLeads research initiatives focused on pedagogy and innovation frameworks. Develops rapid-cycle micro-research protocols, interdisciplinary documentation models, and inquiry systems embedded within natural classroom environments.",
               image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "avatar", privacyBlur: false },
               cta: { label: "View Profile", href: "/team/sruthi-matta" }
+            },
+            {
+              headline: "Sreedhar Reddy Boddu",
+              tag: "Research & Data Analyst",
+              body: "**Training:** B.Tech Civil Engineering (NIT Goa); Data Science & Analytics Certifications\n\nSupports ETL processes, dashboard development, and structured data visualization for classroom observation records. Contributes to predictive modeling frameworks and KPI tracking within the institute's longitudinal dataset architecture.",
+              image: { src: "/src/assets/placeholders/avatars/sreedhar-boddu.webp", alt: "Sreedhar Reddy Boddu", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/sreedhar-boddu" }
+            },
+            {
+              headline: "D. Vinay Shyam Donakanti",
+              tag: "Research Data Analyst Intern",
+              body: "**Training:** B.Tech Computer Science & Data Science\n\nSupports digitization, coding, and structuring of Montessori observation records into standardized research datasets. Assists in data pipeline development, analytics documentation, and longitudinal data consistency across the 0–18 research archive.",
+              image: { src: "/src/assets/placeholders/avatars/vinay-donakanti.webp", alt: "D. Vinay Shyam Donakanti", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/vinay-donakanti" }
             }
           ]
         },
@@ -3611,27 +3611,6 @@ const siteContent = {
           intro: "Academic and operational researchers supporting longitudinal data integrity, STEM research modules, classroom-based documentation, and institutional research infrastructure across the 0–18 continuum.",
           cards: [
             {
-              headline: "D. Vinay Shyam Donakanti",
-              tag: "Research Data Analyst Intern",
-              body: "B.Tech Computer Science & Data Science. Supports digitization, coding, and structuring of Montessori observation records into standardized research datasets.",
-              image: { src: "/src/assets/placeholders/avatars/vinay-donakanti.webp", alt: "D. Vinay Shyam Donakanti", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/vinay-donakanti" }
-            },
-            {
-              headline: "Sreedhar Reddy Boddu",
-              tag: "Research & Data Analyst",
-              body: "B.Tech Civil Engineering (NIT Goa); Data Science & Analytics Certifications. Supports ETL processes, dashboard development, and structured data visualization.",
-              image: { src: "/src/assets/placeholders/avatars/sreedhar-boddu.webp", alt: "Sreedhar Reddy Boddu", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/sreedhar-boddu" }
-            },
-            {
-              headline: "Sandhya Rao M",
-              tag: "AMI Elementary Guide | Biomimicry Educator",
-              body: "AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation. Integrates Montessori pedagogy with structured research documentation.",
-              image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/sandhya-rao" }
-            },
-            {
               headline: "Dr. Sreemoyee Chakraborty",
               tag: "STEM Research Lead | Palaeontology & Earth Sciences",
               body: "PhD, Palaeontology (ISI / University of Calcutta). Leads fossil-based STEM research modules and scientific inquiry frameworks.",
@@ -3646,11 +3625,32 @@ const siteContent = {
               cta: { label: "View Profile", href: "/team/shobha-ediga" }
             },
             {
+              headline: "Sandhya Rao M",
+              tag: "AMI Elementary Guide | Biomimicry Educator",
+              body: "AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation. Integrates Montessori pedagogy with structured research documentation.",
+              image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/sandhya-rao" }
+            },
+            {
               headline: "Sruthi Matta",
               tag: "Research Team Lead — Pedagogy & Innovation",
               body: "Graduate Diploma in Journalism (Concordia University); B.A. Humanities. Leads research initiatives focused on pedagogy and innovation frameworks.",
               image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "avatar", privacyBlur: false },
               cta: { label: "View Profile", href: "/team/sruthi-matta" }
+            },
+            {
+              headline: "Sreedhar Reddy Boddu",
+              tag: "Research & Data Analyst",
+              body: "B.Tech Civil Engineering (NIT Goa); Data Science & Analytics Certifications. Supports ETL processes, dashboard development, and structured data visualization.",
+              image: { src: "/src/assets/placeholders/avatars/sreedhar-boddu.webp", alt: "Sreedhar Reddy Boddu", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/sreedhar-boddu" }
+            },
+            {
+              headline: "D. Vinay Shyam Donakanti",
+              tag: "Research Data Analyst Intern",
+              body: "B.Tech Computer Science & Data Science. Supports digitization, coding, and structuring of Montessori observation records into standardized research datasets.",
+              image: { src: "/src/assets/placeholders/avatars/vinay-donakanti.webp", alt: "D. Vinay Shyam Donakanti", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/vinay-donakanti" }
             }
           ]
         },
