@@ -1688,42 +1688,42 @@ const siteContent = {
               tag: "STEM Research Lead | Palaeontology & Earth Sciences",
               body: "**Training:** PhD, Palaeontology (ISI / University of Calcutta)\n\nLeads fossil-based STEM research modules and scientific inquiry frameworks within the institute. Contributes domain expertise in paleoclimate interpretation, geological data modeling, and child-led scientific investigation design.",
               image: { src: "/src/assets/placeholders/avatars/sreemoyee-chakraborty.webp", alt: "Dr. Sreemoyee Chakraborty", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/sreemoyee-chakraborty" }
+              cta: { label: "View Profile", href: "/governance/team/dr-sreemoyee-chakraborty" }
             },
             {
               headline: "Dr. Shobha Ediga",
               tag: "Microbiological & Biochemical Research Lead",
               body: "**Training:** PhD, Plant Sciences (University of Hyderabad)\n\nProvides research oversight in biological sciences, laboratory methodologies, and adolescent-level scientific investigation. Supports integration of microbiology, biochemistry, and environmental inquiry within the Erdkinder research framework.",
               image: { src: "/src/assets/placeholders/avatars/shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/shobha-ediga" }
+              cta: { label: "View Profile", href: "/governance/team/dr-shobha-ediga" }
             },
             {
               headline: "Sandhya Rao M",
               tag: "AMI Elementary Guide | Biomimicry Educator",
               body: "**Training:** AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation\n\nIntegrates Montessori pedagogy with structured research documentation in the Elementary environment. Contributes to interdisciplinary observation protocols, developmental research alignment, and nature-integrated inquiry frameworks.",
               image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/sandhya-rao" }
+              cta: { label: "View Profile", href: "/governance/team/sandhya-rao-m" }
             },
             {
               headline: "Sruthi Matta",
               tag: "Research Team Lead — Pedagogy & Innovation",
               body: "**Training:** Graduate Diploma in Journalism (Concordia University); AEC Media Strategies & Advertising; B.A. Humanities\n\nLeads research initiatives focused on pedagogy and innovation frameworks. Develops rapid-cycle micro-research protocols, interdisciplinary documentation models, and inquiry systems embedded within natural classroom environments.",
               image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/sruthi-matta" }
+              cta: { label: "View Profile", href: "/governance/team/sruthi-matta" }
             },
             {
               headline: "Sreedhar Reddy Boddu",
               tag: "Research & Data Analyst",
               body: "**Training:** B.Tech Civil Engineering (NIT Goa); Data Science & Analytics Certifications\n\nSupports ETL processes, dashboard development, and structured data visualization for classroom observation records. Contributes to predictive modeling frameworks and KPI tracking within the institute's longitudinal dataset architecture.",
               image: { src: "/src/assets/placeholders/avatars/sreedhar-boddu.webp", alt: "Sreedhar Reddy Boddu", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/sreedhar-boddu" }
+              cta: { label: "View Profile", href: "/governance/team/sreedhar-reddy-boddu" }
             },
             {
               headline: "D. Vinay Shyam Donakanti",
               tag: "Research Data Analyst Intern",
               body: "**Training:** B.Tech Computer Science & Data Science\n\nSupports digitization, coding, and structuring of Montessori observation records into standardized research datasets. Assists in data pipeline development, analytics documentation, and longitudinal data consistency across the 0–18 research archive.",
               image: { src: "/src/assets/placeholders/avatars/vinay-donakanti.webp", alt: "D. Vinay Shyam Donakanti", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/vinay-donakanti" }
+              cta: { label: "View Profile", href: "/governance/team/vinay-shyam-donakanti" }
             }
           ]
         },
@@ -3615,42 +3615,42 @@ const siteContent = {
               tag: "STEM Research Lead | Palaeontology & Earth Sciences",
               body: "PhD, Palaeontology (ISI / University of Calcutta). Leads fossil-based STEM research modules and scientific inquiry frameworks.",
               image: { src: "/src/assets/placeholders/avatars/sreemoyee-chakraborty.webp", alt: "Dr. Sreemoyee Chakraborty", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/sreemoyee-chakraborty" }
+              cta: { label: "View Profile", href: "/governance/team/dr-sreemoyee-chakraborty" }
             },
             {
               headline: "Dr. Shobha Ediga",
               tag: "Microbiological & Biochemical Research Lead",
               body: "PhD, Plant Sciences (University of Hyderabad). Provides research oversight in biological sciences and adolescent-level scientific investigation.",
               image: { src: "/src/assets/placeholders/avatars/shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/shobha-ediga" }
+              cta: { label: "View Profile", href: "/governance/team/dr-shobha-ediga" }
             },
             {
               headline: "Sandhya Rao M",
               tag: "AMI Elementary Guide | Biomimicry Educator",
               body: "AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation. Integrates Montessori pedagogy with structured research documentation.",
               image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/sandhya-rao" }
+              cta: { label: "View Profile", href: "/governance/team/sandhya-rao-m" }
             },
             {
               headline: "Sruthi Matta",
               tag: "Research Team Lead — Pedagogy & Innovation",
               body: "Graduate Diploma in Journalism (Concordia University); B.A. Humanities. Leads research initiatives focused on pedagogy and innovation frameworks.",
               image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/sruthi-matta" }
+              cta: { label: "View Profile", href: "/governance/team/sruthi-matta" }
             },
             {
               headline: "Sreedhar Reddy Boddu",
               tag: "Research & Data Analyst",
               body: "B.Tech Civil Engineering (NIT Goa); Data Science & Analytics Certifications. Supports ETL processes, dashboard development, and structured data visualization.",
               image: { src: "/src/assets/placeholders/avatars/sreedhar-boddu.webp", alt: "Sreedhar Reddy Boddu", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/sreedhar-boddu" }
+              cta: { label: "View Profile", href: "/governance/team/sreedhar-reddy-boddu" }
             },
             {
               headline: "D. Vinay Shyam Donakanti",
               tag: "Research Data Analyst Intern",
               body: "B.Tech Computer Science & Data Science. Supports digitization, coding, and structuring of Montessori observation records into standardized research datasets.",
               image: { src: "/src/assets/placeholders/avatars/vinay-donakanti.webp", alt: "D. Vinay Shyam Donakanti", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/team/vinay-donakanti" }
+              cta: { label: "View Profile", href: "/governance/team/vinay-shyam-donakanti" }
             }
           ]
         },
@@ -5232,7 +5232,667 @@ const siteContent = {
       ]
     },
 
-    "/team/adolescent-research-cohort": {
+    // ==================== GOVERNANCE TEAM PROFILE PAGES ====================
+    "/governance/team/vinay-shyam-donakanti": {
+      title: "Vinay Shyam Donakanti",
+      metaDescription: "Research Data Analyst Intern — Educational Data Analysis, Machine Learning, and Data Pipeline Development.",
+      seo: {
+        title: "Vinay Shyam Donakanti | Governance Team | Blue Blocks Micro Research Institute",
+        canonical: `${SITE_URL}/governance/team/vinay-shyam-donakanti`,
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "profile",
+          url: `${SITE_URL}/governance/team/vinay-shyam-donakanti`,
+          title: "Vinay Shyam Donakanti - Research Data Analyst Intern",
+          description: "Research Data Analyst Intern — Educational Data Analysis, Machine Learning, and Data Pipeline Development."
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Vinay Shyam Donakanti",
+          url: `${SITE_URL}/governance/team/vinay-shyam-donakanti`,
+          jobTitle: "Research Data Analyst Intern",
+          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+            { "@type": "ListItem", position: 2, name: "Governance", item: `${SITE_URL}/governance` },
+            { "@type": "ListItem", position: 3, name: "Vinay Shyam Donakanti", item: `${SITE_URL}/governance/team/vinay-shyam-donakanti` }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "profile-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Vinay Shyam Donakanti",
+          subheadline: "Research Data Analyst Intern. Educational Data Analysis, Machine Learning, and Data Pipeline Development.",
+          primaryCta: { label: "Contact", href: "mailto:research@blueblocks.in" },
+          secondaryCta: { label: "Back to Team", href: "/team" },
+          image: { src: "/src/assets/placeholders/avatars/vinay-donakanti.webp", alt: "Vinay Shyam Donakanti", variant: "hero" }
+        },
+        {
+          id: "profile-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Role", value: "Research Data Analyst Intern" },
+            { label: "Training", value: "B.Tech CS & Data Science" },
+            { label: "Focus", value: "Educational Data Analysis" },
+            { label: "Skills", value: "Python, ML, Data Pipelines" }
+          ]
+        },
+        {
+          id: "profile-card",
+          type: "profile",
+          name: "Vinay Shyam Donakanti",
+          role: "Research Data Analyst Intern",
+          image: { src: "/src/assets/placeholders/avatars/vinay-donakanti.webp", alt: "Vinay Shyam Donakanti", variant: "avatar" },
+          email: "research@blueblocks.in",
+          socials: [],
+          bio: "Builds the data infrastructure that makes child-centered research possible. Transforms raw classroom observations into research-ready datasets — digitizing, cleaning, and structuring Montessori observation records so that patterns in children's learning can be seen, tested, and understood."
+        },
+        {
+          id: "profile-pullquote",
+          type: "textBlock",
+          header: "",
+          body: "> \"Children generate data that tells stories we're only beginning to learn how to read. The future of education lies in learning their language rather than forcing them to speak ours.\""
+        },
+        {
+          id: "profile-content",
+          type: "textBlock",
+          header: "Researcher Profile",
+          body: "Vinay Shyam Donakanti builds the data infrastructure that makes child-centered research possible. As Research Data Analyst at Blue Blocks, he transforms raw classroom observations into research-ready datasets — digitizing, cleaning, and structuring Montessori observation records so that patterns in children's learning can be seen, tested, and understood.\n\nThe work changed how he thinks about data. \"Every time I code a child's activity,\" he observes, \"I'm flattening a rich, multidimensional moment into a single category. The question that haunts me is: what are we missing?\" He's become obsessed with the gap between what we measure and what actually matters — what he calls the difference between \"legible\" and \"illegible\" systems.\n\n> \"How much of a child's learning happens in the spaces between our data points?\""
+        },
+        {
+          id: "profile-lens",
+          type: "textBlock",
+          header: "The Researcher's Lens: The Child as Scientist",
+          body: "While processing classroom video data, he noticed something the original observer had missed. A child spent fifteen minutes repeatedly dropping objects from different heights. The field notes read \"exploratory play.\" But watching the footage, Vinay saw something more systematic: the child was varying one parameter (height) while keeping others constant (object, surface), observing outcomes, forming hypotheses.\n\n\"They were conducting experiments,\" he realized. \"Not because someone taught them the scientific method — but because that's what curiosity looks like when you let it run. Children are natural researchers not because they follow our methods, but because they embody the core of research: systematic curiosity, hypothesis testing, iteration. Our job isn't to teach them to be researchers. It's to not interfere with the researchers they already are.\""
+        },
+        {
+          id: "profile-origin",
+          type: "textBlock",
+          header: "The Origin of Inquiry",
+          body: "The insight came during his first year of engineering, stuck on an algorithm problem. After hours of frustration, he took a walk and found himself watching children in a nearby park.\n\n\"They were solving complex coordination problems — who goes first, how to share limited resources, how to modify rules when they didn't work. They were debugging their play in real-time, iterating on solutions, learning from failures without the paralysis of perfectionism that had kept me stuck.\"\n\nThat moment reframed everything. Learning, he realized, happens naturally when we create the right environment for inquiry."
+        },
+        {
+          id: "profile-truth",
+          type: "textBlock",
+          header: "The Uncomfortable Truth",
+          body: "\"Most of what we call 'learning difficulties' are actually data interpretation problems — we're measuring the wrong things, or measuring the right things in the wrong ways.\"\n\nA child who struggles with traditional math tests might be brilliant at spatial reasoning or pattern recognition, but our measurement systems are too crude to capture it. The problem isn't the child — it's our metrics."
+        },
+        {
+          id: "profile-obsession",
+          type: "textBlock",
+          header: "Current Obsession: Legible vs. Illegible Systems",
+          body: "His intellectual focus is the tension between measurement and meaning. Every dataset requires simplification — but what gets lost in the translation from lived experience to coded category?\n\n\"I'm obsessed with finding ways to preserve the richness while still enabling analysis,\" he explains. \"Maybe through multi-dimensional tagging systems, narrative annotations alongside structured data, or visualization methods that show uncertainty and context. The goal is to build tools that are honest about what they don't capture — not just efficient at capturing what they do.\""
+        },
+        {
+          id: "profile-mystery",
+          type: "textBlock",
+          header: "The Vital Mystery",
+          body: "If given unlimited resources, he would investigate how children develop their internal models of how the world works — and how those models evolve through experience.\n\n\"We have massive datasets on what children learn — test scores, milestones — but remarkably little on how they learn. The actual cognitive processes. The moment-by-moment sense-making. The theories they construct and revise. I'd want to track not just outcomes but the learning process itself, using observational data, think-aloud protocols, maybe even neuroscience.\""
+        },
+        {
+          id: "profile-at-bb",
+          type: "textBlock",
+          header: "At Blue Blocks",
+          body: "He builds the data pipelines that transform classroom observations into research-ready datasets — digitizing records, mapping activities to standardized learning categories, ensuring consistency and reproducibility across the institute's growing archive of child observation data.\n\nBut his ambition extends beyond infrastructure. \"Most educational research happens in universities, far from classrooms, with data that's months or years old. Blue Blocks represents something rare: embedded research where children and researchers learn from each other in real-time. I want to build tools that practitioners can actually use — not just academic papers, but dashboards, visualizations, insights that help educators understand and support children better.\""
+        },
+        {
+          id: "profile-training",
+          type: "textBlock",
+          header: "Training & Technical Skills",
+          body: "• B.Tech in Computer Science & Data Science — Institute of Aeronautical Engineering, Hyderabad (2022-2026)\n• Data Science Certification — Corizo Pvt Ltd / Wipro (2025)\n• Data Analytics Certification — Deloitte Australia / Forage (2025)\n• Technical: Python, pandas, machine learning, data pipeline development, full-stack development\n• Current Project: Educational data analysis and standardized coding schemas for Montessori observation data"
+        },
+        {
+          id: "profile-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "All Team", description: "View profiles.", icon: "team", href: "/team" },
+            { title: "Governance", description: "Leadership structure.", icon: "governance", href: "/governance" },
+            { title: "Research Team", description: "Research colleagues.", icon: "users", href: "/governance#gov-research-team" }
+          ]
+        }
+      ]
+    },
+
+    "/governance/team/sreedhar-reddy-boddu": {
+      title: "Sreedhar Reddy Boddu",
+      metaDescription: "Research & Data Analyst — Data Visualization, ETL Pipelines, Predictive Modeling, KPI Tracking.",
+      seo: {
+        title: "Sreedhar Reddy Boddu | Governance Team | Blue Blocks Micro Research Institute",
+        canonical: `${SITE_URL}/governance/team/sreedhar-reddy-boddu`,
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "profile",
+          url: `${SITE_URL}/governance/team/sreedhar-reddy-boddu`,
+          title: "Sreedhar Reddy Boddu - Research & Data Analyst",
+          description: "Research & Data Analyst — Data Visualization, ETL Pipelines, Predictive Modeling, KPI Tracking."
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Sreedhar Reddy Boddu",
+          url: `${SITE_URL}/governance/team/sreedhar-reddy-boddu`,
+          jobTitle: "Research & Data Analyst",
+          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+            { "@type": "ListItem", position: 2, name: "Governance", item: `${SITE_URL}/governance` },
+            { "@type": "ListItem", position: 3, name: "Sreedhar Reddy Boddu", item: `${SITE_URL}/governance/team/sreedhar-reddy-boddu` }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "profile-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Sreedhar Reddy Boddu",
+          subheadline: "Research & Data Analyst. Data Visualization, ETL Pipelines, Predictive Modeling, KPI Tracking.",
+          primaryCta: { label: "Contact", href: "mailto:research@blueblocks.in" },
+          secondaryCta: { label: "Back to Team", href: "/team" },
+          image: { src: "/src/assets/placeholders/avatars/sreedhar-boddu.webp", alt: "Sreedhar Reddy Boddu", variant: "hero" }
+        },
+        {
+          id: "profile-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Role", value: "Research & Data Analyst" },
+            { label: "Training", value: "B.Tech Civil Eng. (NIT Goa)" },
+            { label: "Focus", value: "Data Visualization & ETL" },
+            { label: "Skills", value: "SQL, Python, Power BI" }
+          ]
+        },
+        {
+          id: "profile-card",
+          type: "profile",
+          name: "Sreedhar Reddy Boddu",
+          role: "Research & Data Analyst",
+          image: { src: "/src/assets/placeholders/avatars/sreedhar-boddu.webp", alt: "Sreedhar Reddy Boddu", variant: "avatar" },
+          email: "research@blueblocks.in",
+          socials: [],
+          bio: "Learned to read structures before he learned to read data. Trained as a civil engineer at NIT Goa, he brings both the engineer's eye for foundational logic and the political analyst's instinct for finding meaning in messy, real-world datasets."
+        },
+        {
+          id: "profile-pullquote",
+          type: "textBlock",
+          header: "",
+          body: "> \"Children are the ultimate data-gatherers, constantly testing variables in their environment to build their own internal models of the world.\""
+        },
+        {
+          id: "profile-content",
+          type: "textBlock",
+          header: "Researcher Profile",
+          body: "Sreedhar Reddy Boddu learned to read structures before he learned to read data. Trained as a civil engineer at NIT Goa, he spent years understanding how buildings distribute stress — how tension and compression work together to hold a structure in equilibrium. That instinct followed him into an unexpected second career: political analysis, where he spent a year at Showtime Consulting decoding voter behavior, demographic patterns, and the hidden \"human story\" behind campaign data.\n\nNow he brings both lenses to Blue Blocks: the engineer's eye for foundational logic, and the political analyst's instinct for finding meaning in messy, real-world datasets. \"I don't just see numbers,\" he explains. \"I see the underlying stresses and supports within a system. Whether it's a building or a dataset, I'm driven to map the logic that holds everything together.\"\n\n> \"How do you know that the data is telling the truth?\"\n> — A question asked during a project walkthrough that reshaped his approach to data integrity"
+        },
+        {
+          id: "profile-lens",
+          type: "textBlock",
+          header: "The Researcher's Lens: The Child as Researcher",
+          body: "During his observations at Blue Blocks, he noticed something that surprised him: profound self-discipline in children who had not been taught to be disciplined. They chose their own work. They returned materials to designated places without prompting. They laid out floor mats to define their workspace, maintaining boundaries they had set for themselves.\n\n\"This level of focus and agency proves that children are not just passive learners,\" he observes. \"They're disciplined researchers. Their self-directed exploration makes them ideal partners for deep inquiry — not just subjects to study, but collaborators in the research itself.\""
+        },
+        {
+          id: "profile-origin",
+          type: "textBlock",
+          header: "The Origin of Inquiry: Stresses and Supports",
+          body: "His engineering background taught him that the strength of a structure isn't just in the concrete — it's in the calculated management of tension and equilibrium. Every beam, every joint, every load-bearing wall exists in relationship to every other element. Remove one, and the system fails.\n\nHe carries this perspective into data science. A dataset isn't just rows and columns — it's a system under stress. Some variables carry weight; others provide support. Some connections are load-bearing; others are decorative. His job is to map the foundational logic: to see which elements are essential and which are noise.\n\n\"Whether it's a building or a dataset,\" he says, \"I'm looking for the same thing: what's actually holding this together?\""
+        },
+        {
+          id: "profile-truth",
+          type: "textBlock",
+          header: "The Uncomfortable Truth",
+          body: "\"Efficiency is not always the goal of learning.\"\n\nIn data analysis, we seek the shortest path to an insight. But in learning, the \"noise\" and the \"outliers\" — the mistakes and tangents — are often where the most valuable data is hidden. A child who takes the long way around a problem isn't inefficient. They're gathering data points that the direct route would have missed."
+        },
+        {
+          id: "profile-obsession",
+          type: "textBlock",
+          header: "Current Obsession: Early Signals",
+          body: "His intellectual focus is trend forecasting and predictive modeling — specifically, how small variations in early data points can signal major shifts in future outcomes. He's interested in the leading indicators that most analysts miss because they're looking at the wrong scale.\n\n\"In political analysis, I learned that the first signs of a shift don't appear in the headline numbers,\" he explains. \"They appear in the outliers, the anomalies, the data points that don't fit the pattern. The same is true in child development. The children who don't fit our models aren't failures of the model — they're signals we haven't learned to read yet.\""
+        },
+        {
+          id: "profile-mystery",
+          type: "textBlock",
+          header: "The Vital Mystery",
+          body: "If given unlimited resources, he would investigate the correlation between early childhood \"inquiry-based play\" patterns and long-term analytical problem-solving skills in adulthood.\n\n\"We often fail to ask,\" he observes, \"how much 'unstructured' time is required to develop a structured mind. We measure outcomes obsessively — test scores, milestones, competencies. But we rarely ask whether the child who spent hours in unstructured exploration develops differently than the child whose time was optimized for efficiency. My hypothesis is that the 'inefficient' path produces minds that can see what the efficient path trains us to miss.\""
+        },
+        {
+          id: "profile-at-bb",
+          type: "textBlock",
+          header: "At Blue Blocks",
+          body: "He transforms messy classroom observations into clear, interactive dashboards — translating children's complex, non-linear behavior into structured insights that educators and researchers can act on. His technical toolkit includes SQL, Python, Power BI, and ETL pipeline development.\n\nBut his ambition extends beyond visualization. \"Children's observations are inherently non-linear,\" he says. \"They don't follow our categories. My job is to build tools that respect that complexity — that make the data legible without flattening what makes it valuable.\""
+        },
+        {
+          id: "profile-training",
+          type: "textBlock",
+          header: "Experience & Training",
+          body: "• B.Tech in Civil Engineering — National Institute of Technology Goa (2019-2023)\n• Political Analyst — Showtime Consulting (Nov 2023 - Aug 2024): Voter trend analysis, demographic pattern identification, campaign strategy optimization\n• Project Coordinator — Design Alley (May 2023 - Nov 2023): Timeline monitoring, resource allocation, trend analysis\n• Python for Data Science Certification — IBM\n• Microsoft Excel Certification — Simplilearn/Microsoft\n• Technical: SQL, Python, Power BI, ETL, Data Cleaning, KPI Tracking, Predictive Modeling"
+        },
+        {
+          id: "profile-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "All Team", description: "View profiles.", icon: "team", href: "/team" },
+            { title: "Governance", description: "Leadership structure.", icon: "governance", href: "/governance" },
+            { title: "Research Team", description: "Research colleagues.", icon: "users", href: "/governance#gov-research-team" }
+          ]
+        }
+      ]
+    },
+
+    "/governance/team/sruthi-matta": {
+      title: "Sruthi Matta",
+      metaDescription: "Research Team Lead — Pedagogy & Innovation — Journalism and Media Strategy background.",
+      seo: {
+        title: "Sruthi Matta | Governance Team | Blue Blocks Micro Research Institute",
+        canonical: `${SITE_URL}/governance/team/sruthi-matta`,
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "profile",
+          url: `${SITE_URL}/governance/team/sruthi-matta`,
+          title: "Sruthi Matta - Research Team Lead",
+          description: "Research Team Lead — Pedagogy & Innovation — Journalism and Media Strategy background."
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Sruthi Matta",
+          url: `${SITE_URL}/governance/team/sruthi-matta`,
+          jobTitle: "Research Team Lead — Pedagogy & Innovation",
+          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+            { "@type": "ListItem", position: 2, name: "Governance", item: `${SITE_URL}/governance` },
+            { "@type": "ListItem", position: 3, name: "Sruthi Matta", item: `${SITE_URL}/governance/team/sruthi-matta` }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "profile-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Sruthi Matta",
+          subheadline: "Research Team Lead — Pedagogy & Innovation. Journalism and Media Strategy background.",
+          primaryCta: { label: "Contact", href: "mailto:research@blueblocks.in" },
+          secondaryCta: { label: "Back to Team", href: "/team" },
+          image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "hero" }
+        },
+        {
+          id: "profile-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Role", value: "Research Team Lead" },
+            { label: "Training", value: "Journalism (Concordia)" },
+            { label: "Focus", value: "Pedagogy & Innovation" },
+            { label: "Skills", value: "Research, Media Strategy" }
+          ]
+        },
+        {
+          id: "profile-card",
+          type: "profile",
+          name: "Sruthi Matta",
+          role: "Research Team Lead — Pedagogy & Innovation",
+          image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "avatar" },
+          email: "research@blueblocks.in",
+          socials: [],
+          bio: "Spent two years as a multimedia journalist in Montreal. Now leads research on pedagogy and innovation, applying the same methodology she developed in journalism: rapid-cycle inquiry that produces actionable findings."
+        },
+        {
+          id: "profile-pullquote",
+          type: "textBlock",
+          header: "",
+          body: "> \"Not every child is a genius, but every child is an innovator.\""
+        },
+        {
+          id: "profile-content",
+          type: "textBlock",
+          header: "Researcher Profile",
+          body: "Sruthi Matta spent two years as a multimedia journalist in Montreal — writing for The Link, The Concordian, CJLO Magazine, and Goalcast. She investigated the Canadian newsroom diversity survey that revealed 90% of journalists across 209 newsrooms came from non-diverse backgrounds. She covered Concordia's Center for Research on Aging when they partnered with Art Hives to set up a study in a shopping mall — measuring how eyesight, hearing, and balance interrelate in elderly subjects. She wrote opinion pieces on culture shock, the Quebec language ordeal, and ambition versus peer pressure.\n\nShe also built something from scratch: Quebec's first Telugu-language radio show on CJLO 1690AM, bringing together young singers, musicians, and filmmakers from across Canada. For that radio station, she developed a Listener Survey using demographic and psychographic analysis — her first formal exercise in research methodology. The experience taught her that the best stories come from sources who don't know they're sources.\n\n> \"How outdated will we be when they're growing up? And how do we catch up to them instead of holding them back?\""
+        },
+        {
+          id: "profile-lens",
+          type: "textBlock",
+          header: "The Researcher's Lens: The Child as Innovator",
+          body: "Sruthi had met intelligent children before. But intelligence wasn't what changed her thinking — innovation was. When she met the student cohort that launched the SBB-1 Satellite, she watched them field questions at a press conference with composure that most adults never achieve.\n\n\"I was blown away,\" she admits. \"My respect for the school reached new heights. It proved something I now consider foundational: not every child is a genius, but every child is an innovator. The distinction matters. Genius is rare. Innovation is universal — if we don't train it out of them.\""
+        },
+        {
+          id: "profile-formative",
+          type: "textBlock",
+          header: "The Formative Assignment: Research in Unexpected Places",
+          body: "One journalism assignment changed her understanding of what research could look like. Covering Concordia's Center for Research on Aging, she watched scientists set up a study inside a shopping mall — choosing a location where seniors naturally gathered, using art workshops (\"Art Hives\") as both incentive and data collection method. The researchers measured balance, hearing, and eyesight — and their interrelation — in a space that felt nothing like a laboratory.\n\nResearch didn't have to happen in universities. It could meet people where they are. This is the principle she now brings to Blue Blocks: rigorous inquiry conducted in natural settings, with participants who don't feel like subjects."
+        },
+        {
+          id: "profile-truth",
+          type: "textBlock",
+          header: "The Uncomfortable Truth",
+          body: "\"Most people are in denial that they are in denial. It's a spiral society lives in — and refuses to name.\"\n\nIf given unlimited resources, the mystery she would investigate is the psychology of denial itself — how it operates as a protective mechanism that prevents people from seeing what they forfeit by refusing to confront reality. \"Education's unspoken failure,\" she argues, \"is teaching children what to think while ignoring the psychological mechanisms that prevent thinking in the first place.\""
+        },
+        {
+          id: "profile-methodology",
+          type: "textBlock",
+          header: "Methodology: The Journalist's Discipline",
+          body: "She approaches research the way she approached a story: find the thread, pull it, don't stop until you see where it leads. She chose media strategy over a master's thesis precisely because she wanted research that drives action — \"quick, deep, and effective within a shorter time frame.\"\n\nAt LaSalle College, her capstone project required developing a comprehensive media strategy from scratch: market research, competitor analysis, campaign design, and performance measurement using Google Analytics and CRM tools. The discipline stuck. \"Tight deadlines force clarity,\" she says. \"Research that takes years to surface often loses relevance. I design studies that deliver insight fast.\""
+        },
+        {
+          id: "profile-inquiry",
+          type: "textBlock",
+          header: "Current Inquiry: Generational Patterns",
+          body: "Her intellectual focus spans two related territories. The first: preparing children for a future that will make today's adults obsolete. The second: the \"DNA\" of generational trauma — how environments imprint on memory even after the toxicity is removed, and whether that inheritance can be interrupted.\n\n\"The trauma DNA is still engraved in their memory,\" she observes. \"Even when people are strongly trying to get out of that cycle, with therapy and professional help, something persists. I want to understand what that something is — and whether children can be protected from inheriting it.\""
+        },
+        {
+          id: "profile-at-bb",
+          type: "textBlock",
+          header: "At Blue Blocks",
+          body: "She leads research on pedagogy and innovation, applying the same methodology she developed in journalism: rapid-cycle inquiry that produces actionable findings. \"We're sitting on a gold mine of research potential,\" she says. \"Access to natural childhood inquiry that Harvard and Stanford can never have. And we're not going to waste it.\"\n\nHer current focus is building a Micro-Research Protocol — a framework for conducting small-scale, high-impact studies on childhood development that deliver insight fast. The model borrows from journalism's discipline: tight deadlines force clarity. Rigorous inquiry and rapid turnaround are not opposites — they are allies."
+        },
+        {
+          id: "profile-training",
+          type: "textBlock",
+          header: "Media & Research Experience",
+          body: "• Radio Show Host — CJLO 1690AM (2022-2024): Created and hosted Quebec's first Telugu-language radio show; developed Listener Survey using demographic and psychographic analysis.\n• Journalist — The Link, The Concordian, CJLO Magazine (2021-2022): Covered aging research, international student issues, art and music festivals; published opinion pieces on culture shock and Quebec language policy.\n• News Writer — Goalcast (2022-2023): Wrote uplifting, evergreen stories for North American audiences; crafted compelling short-form content optimized for engagement.\n• CBC Montreal: Human interest feature on a boutique helping Montreal women regain confidence and independence.\n• Canadian Newsroom Diversity Survey: Contributed to coverage revealing demographic gaps across 209 Canadian newsrooms.\n• Festival Coverage (3 years): St. Theresa Art Festival, Fringe Montreal, Sight+Sound Festival for radio, magazines, and newspapers.\n\n**Credentials:**\n• Graduate Diploma in Journalism — Concordia University, Montreal (2021-2022)\n• AEC in Media Strategies & Advertising — LaSalle College, Montreal (2022-2023)\n• Bachelor of Arts (Humanities: Geography, History, Public Administration) — Hyderabad\n• Technical: Google Analytics, CRM tools, Marketing Automation, Media Buying & Placement, Market Research & Analytics"
+        },
+        {
+          id: "profile-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "All Team", description: "View profiles.", icon: "team", href: "/team" },
+            { title: "Governance", description: "Leadership structure.", icon: "governance", href: "/governance" },
+            { title: "Research Team", description: "Research colleagues.", icon: "users", href: "/governance#gov-research-team" }
+          ]
+        }
+      ]
+    },
+
+    "/governance/team/sandhya-rao-m": {
+      title: "Sandhya Rao M",
+      metaDescription: "AMI Elementary Guide and Biomimicry Educator — Research Team.",
+      seo: {
+        title: "Sandhya Rao M | Governance Team | Blue Blocks Micro Research Institute",
+        canonical: `${SITE_URL}/governance/team/sandhya-rao-m`,
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "profile",
+          url: `${SITE_URL}/governance/team/sandhya-rao-m`,
+          title: "Sandhya Rao M - AMI Elementary Guide",
+          description: "AMI Elementary Guide and Biomimicry Educator — Research Team."
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Sandhya Rao M",
+          url: `${SITE_URL}/governance/team/sandhya-rao-m`,
+          jobTitle: "AMI Elementary Guide; Biomimicry Educator",
+          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+            { "@type": "ListItem", position: 2, name: "Governance", item: `${SITE_URL}/governance` },
+            { "@type": "ListItem", position: 3, name: "Sandhya Rao M", item: `${SITE_URL}/governance/team/sandhya-rao-m` }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "profile-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Sandhya Rao M",
+          subheadline: "AMI Elementary Guide; Biomimicry Educator; Research Team.",
+          primaryCta: { label: "Contact", href: "mailto:research@blueblocks.in" },
+          secondaryCta: { label: "Back to Team", href: "/team" },
+          image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "hero" }
+        },
+        {
+          id: "profile-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Role", value: "AMI Elementary Guide" },
+            { label: "Training", value: "AMI Diploma; M.P.T." },
+            { label: "Focus", value: "Biomimicry Education" },
+            { label: "Specialization", value: "Elementary Environment" }
+          ]
+        },
+        {
+          id: "profile-card",
+          type: "profile",
+          name: "Sandhya Rao M",
+          role: "AMI Elementary Guide; Biomimicry Educator",
+          image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar" },
+          email: "research@blueblocks.in",
+          socials: [],
+          bio: "Integrates Montessori pedagogy with structured research documentation in the Elementary environment. Contributes to interdisciplinary observation protocols, developmental research alignment, and nature-integrated inquiry frameworks."
+        },
+        {
+          id: "profile-pullquote",
+          type: "textBlock",
+          header: "",
+          body: "> \"What is my task then in this world?\""
+        },
+        {
+          id: "profile-content",
+          type: "textBlock",
+          header: "Biography",
+          body: "Sandhya Rao M integrates Montessori pedagogy with structured research documentation in the Elementary environment. With credentials in both AMI Elementary methodology and Community-Based Rehabilitation (M.P.T.), she brings a unique interdisciplinary perspective to the institute's research infrastructure.\n\nHer work focuses on developing observation protocols that capture the richness of child-led inquiry without disrupting the natural flow of the classroom. She contributes to developmental research alignment and nature-integrated inquiry frameworks, ensuring that research and pedagogy reinforce rather than compete with each other."
+        },
+        {
+          id: "profile-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "All Team", description: "View profiles.", icon: "team", href: "/team" },
+            { title: "Governance", description: "Leadership structure.", icon: "governance", href: "/governance" },
+            { title: "Research Team", description: "Research colleagues.", icon: "users", href: "/governance#gov-research-team" }
+          ]
+        }
+      ]
+    },
+
+    "/governance/team/dr-sreemoyee-chakraborty": {
+      title: "Dr. Sreemoyee Chakraborty",
+      metaDescription: "STEM Research, Palaeontology, and Earth Science — PhD (ISI / University of Calcutta).",
+      seo: {
+        title: "Dr. Sreemoyee Chakraborty | Governance Team | Blue Blocks Micro Research Institute",
+        canonical: `${SITE_URL}/governance/team/dr-sreemoyee-chakraborty`,
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "profile",
+          url: `${SITE_URL}/governance/team/dr-sreemoyee-chakraborty`,
+          title: "Dr. Sreemoyee Chakraborty - STEM Research Lead",
+          description: "STEM Research, Palaeontology, and Earth Science — PhD (ISI / University of Calcutta)."
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Dr. Sreemoyee Chakraborty",
+          url: `${SITE_URL}/governance/team/dr-sreemoyee-chakraborty`,
+          jobTitle: "STEM Research Lead — Palaeontology & Earth Sciences",
+          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+            { "@type": "ListItem", position: 2, name: "Governance", item: `${SITE_URL}/governance` },
+            { "@type": "ListItem", position: 3, name: "Dr. Sreemoyee Chakraborty", item: `${SITE_URL}/governance/team/dr-sreemoyee-chakraborty` }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "profile-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Dr. Sreemoyee Chakraborty",
+          subheadline: "STEM Research Lead — Palaeontology & Earth Sciences. PhD (ISI / University of Calcutta).",
+          primaryCta: { label: "Contact", href: "mailto:research@blueblocks.in" },
+          secondaryCta: { label: "Back to Team", href: "/team" },
+          image: { src: "/src/assets/placeholders/avatars/sreemoyee-chakraborty.webp", alt: "Dr. Sreemoyee Chakraborty", variant: "hero" }
+        },
+        {
+          id: "profile-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Role", value: "STEM Research Lead" },
+            { label: "Training", value: "PhD, Palaeontology (ISI)" },
+            { label: "Focus", value: "Earth Sciences & STEM" },
+            { label: "Specialization", value: "Fossil-based Inquiry" }
+          ]
+        },
+        {
+          id: "profile-card",
+          type: "profile",
+          name: "Dr. Sreemoyee Chakraborty",
+          role: "STEM Research Lead — Palaeontology & Earth Sciences",
+          image: { src: "/src/assets/placeholders/avatars/sreemoyee-chakraborty.webp", alt: "Dr. Sreemoyee Chakraborty", variant: "avatar" },
+          email: "research@blueblocks.in",
+          socials: [],
+          bio: "Leads fossil-based STEM research modules and scientific inquiry frameworks within the institute. Contributes domain expertise in paleoclimate interpretation, geological data modeling, and child-led scientific investigation design."
+        },
+        {
+          id: "profile-pullquote",
+          type: "textBlock",
+          header: "",
+          body: "> \"Isn't planet Earth the biggest mystery that remains yet to be solved?\""
+        },
+        {
+          id: "profile-content",
+          type: "textBlock",
+          header: "Biography",
+          body: "Dr. Sreemoyee Chakraborty leads fossil-based STEM research modules and scientific inquiry frameworks at Blue Blocks Micro Research Institute. With a PhD in Palaeontology from ISI / University of Calcutta, she brings deep domain expertise in paleoclimate interpretation, geological data modeling, and the design of child-led scientific investigations.\n\nHer work bridges the gap between advanced earth science research and accessible, inquiry-driven learning experiences. She designs STEM modules that allow students to engage with real geological data, fossil records, and paleoclimate evidence — transforming abstract scientific concepts into tangible research opportunities."
+        },
+        {
+          id: "profile-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "All Team", description: "View profiles.", icon: "team", href: "/team" },
+            { title: "Governance", description: "Leadership structure.", icon: "governance", href: "/governance" },
+            { title: "Research Team", description: "Research colleagues.", icon: "users", href: "/governance#gov-research-team" }
+          ]
+        }
+      ]
+    },
+
+    "/governance/team/dr-shobha-ediga": {
+      title: "Dr. Shobha Ediga",
+      metaDescription: "Microbiological & Biochemical Research Lead; Erdkinder Biology Mentor — PhD Plant Sciences (University of Hyderabad).",
+      seo: {
+        title: "Dr. Shobha Ediga | Governance Team | Blue Blocks Micro Research Institute",
+        canonical: `${SITE_URL}/governance/team/dr-shobha-ediga`,
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "profile",
+          url: `${SITE_URL}/governance/team/dr-shobha-ediga`,
+          title: "Dr. Shobha Ediga - Microbiological & Biochemical Research Lead",
+          description: "Microbiological & Biochemical Research Lead; Erdkinder Biology Mentor — PhD Plant Sciences (University of Hyderabad)."
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Dr. Shobha Ediga",
+          url: `${SITE_URL}/governance/team/dr-shobha-ediga`,
+          jobTitle: "Microbiological & Biochemical Research Lead",
+          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+            { "@type": "ListItem", position: 2, name: "Governance", item: `${SITE_URL}/governance` },
+            { "@type": "ListItem", position: 3, name: "Dr. Shobha Ediga", item: `${SITE_URL}/governance/team/dr-shobha-ediga` }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "profile-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Dr. Shobha Ediga",
+          subheadline: "Microbiological & Biochemical Research Lead; Erdkinder Biology Mentor. PhD Plant Sciences (University of Hyderabad).",
+          primaryCta: { label: "Contact", href: "mailto:research@blueblocks.in" },
+          secondaryCta: { label: "Back to Team", href: "/team" },
+          image: { src: "/src/assets/placeholders/avatars/shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "hero" }
+        },
+        {
+          id: "profile-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Role", value: "Research Lead" },
+            { label: "Training", value: "PhD, Plant Sciences (UoH)" },
+            { label: "Focus", value: "Microbiology & Biochemistry" },
+            { label: "Specialization", value: "Erdkinder Framework" }
+          ]
+        },
+        {
+          id: "profile-card",
+          type: "profile",
+          name: "Dr. Shobha Ediga",
+          role: "Microbiological & Biochemical Research Lead",
+          image: { src: "/src/assets/placeholders/avatars/shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "avatar" },
+          email: "research@blueblocks.in",
+          socials: [],
+          bio: "Provides research oversight in biological sciences, laboratory methodologies, and adolescent-level scientific investigation. Supports integration of microbiology, biochemistry, and environmental inquiry within the Erdkinder research framework."
+        },
+        {
+          id: "profile-pullquote",
+          type: "textBlock",
+          header: "",
+          body: "> \"Why don't humans carry out photosynthesis to make their own food?\""
+        },
+        {
+          id: "profile-content",
+          type: "textBlock",
+          header: "Biography",
+          body: "Dr. Shobha Ediga provides research oversight in biological sciences, laboratory methodologies, and adolescent-level scientific investigation at Blue Blocks Micro Research Institute. With a PhD in Plant Sciences from the University of Hyderabad, she brings deep expertise in microbiology, biochemistry, and environmental inquiry.\n\nHer work focuses on integrating rigorous scientific methodology within the Erdkinder (adolescent) research framework — designing laboratory experiences and investigation protocols that allow students aged 12-18 to engage with real biological research questions. She ensures that the institute's scientific investigations meet academic standards while remaining accessible and meaningful to young researchers."
+        },
+        {
+          id: "profile-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "All Team", description: "View profiles.", icon: "team", href: "/team" },
+            { title: "Governance", description: "Leadership structure.", icon: "governance", href: "/governance" },
+            { title: "Research Team", description: "Research colleagues.", icon: "users", href: "/governance#gov-research-team" }
+          ]
+        }
+      ]
+    },
+
       title: "Adolescent Research Cohort",
       metaDescription: "Information about the Adolescent Research Cohort at Blue Blocks Micro Research Institute.",
       seo: {
@@ -6119,6 +6779,12 @@ const CPT_MAP = {
   '/team/pavan-goyal': 'team-member',
   '/team/munira-hussain': 'team-member',
   '/team/adolescent-research-cohort': 'team-member',
+  '/governance/team/vinay-shyam-donakanti': 'team-member',
+  '/governance/team/sreedhar-reddy-boddu': 'team-member',
+  '/governance/team/sruthi-matta': 'team-member',
+  '/governance/team/sandhya-rao-m': 'team-member',
+  '/governance/team/dr-sreemoyee-chakraborty': 'team-member',
+  '/governance/team/dr-shobha-ediga': 'team-member',
   '/faq': 'page',
   '/sitemap-html': 'page',
 };
