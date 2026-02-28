@@ -5743,7 +5743,6 @@ const siteContent = {
           type: "textBlock",
           header: "Credentials & Experience",
           body: "• AMI Elementary Diploma\n• M.P.T. Community-Based Rehabilitation\n• Biomimicry Education & Ecological Systems Facilitation\n• Montessori Elementary Guide"
-        }
         },
         {
           id: "profile-related",
@@ -5875,7 +5874,6 @@ const siteContent = {
           type: "textBlock",
           header: "Selected Publications & Research",
           body: "• PhD Research — Palaeoclimate Reconstruction and Fossil Assemblages\n• Geological Data Modeling & Sediment Analysis\n• Earth Systems Interpretation"
-        }
         },
         {
           id: "profile-related",
@@ -6007,7 +6005,6 @@ const siteContent = {
           type: "textBlock",
           header: "Research Experience & Expertise",
           body: "• PhD — Plant Sciences, University of Hyderabad\n• Microbiology & Biochemical Systems\n• Laboratory Methodology & Adolescent Mentorship\n• Environmental Inquiry Integration"
-        }
         },
         {
           id: "profile-related",
