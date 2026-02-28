@@ -1,9 +1,9 @@
 import React from 'react';
 
 /**
- * Global auto-bold utility for institutional terms.
+ * Global auto-bold + auto-link utility for institutional terms and emails.
  * Automatically wraps predefined key terms in <strong> tags
- * without breaking sentence flow or heading hierarchy.
+ * and converts email addresses to clickable mailto links.
  */
 
 const BOLD_TERMS = [
@@ -65,8 +65,75 @@ const termPattern = sortedTerms
   .join('|');
 const BOLD_REGEX = new RegExp(`(${termPattern})`, 'g');
 
+// Email regex
+const EMAIL_REGEX = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi;
+
+// Combined regex: emails OR bold terms (emails checked first to avoid partial bold matches)
+const COMBINED_REGEX = new RegExp(
+  `(${EMAIL_REGEX.source})|(${termPattern})`,
+  'gi'
+);
+
 /**
- * Takes a plain string and returns a React fragment with bold terms wrapped in <strong>.
+ * Process a plain string segment: apply email auto-linking + bold term wrapping.
+ */
+function processSegment(text, keyPrefix = '') {
+  if (typeof text !== 'string') return text;
+
+  // Reset regex
+  COMBINED_REGEX.lastIndex = 0;
+
+  // Check if there are any matches at all
+  if (!COMBINED_REGEX.test(text)) return text;
+  COMBINED_REGEX.lastIndex = 0;
+
+  const parts = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = COMBINED_REGEX.exec(text)) !== null) {
+    // Add text before match
+    if (match.index > lastIndex) {
+      parts.push(text.slice(lastIndex, match.index));
+    }
+
+    const matchedText = match[0];
+
+    // Check if it's an email (group 1)
+    if (match[1]) {
+      parts.push(
+        <a
+          key={`${keyPrefix}email-${match.index}`}
+          href={`mailto:${matchedText}`}
+          className="email-link"
+        >
+          {matchedText}
+        </a>
+      );
+    } else {
+      // It's a bold term (group 2)
+      parts.push(
+        <strong key={`${keyPrefix}bold-${match.index}`} className="font-semibold text-inherit">
+          {matchedText}
+        </strong>
+      );
+    }
+
+    lastIndex = match.index + matchedText.length;
+  }
+
+  // Add remaining text
+  if (lastIndex < text.length) {
+    parts.push(text.slice(lastIndex));
+  }
+
+  return parts.length === 1 && typeof parts[0] === 'string' ? parts[0] : parts;
+}
+
+/**
+ * Takes a plain string and returns a React fragment with:
+ * - Bold terms wrapped in <strong>
+ * - Email addresses wrapped in <a href="mailto:...">
  * If input is not a string or contains no matches, returns the input unchanged.
  */
 export function boldifyText(text) {
@@ -78,37 +145,19 @@ export function boldifyText(text) {
   MD_BOLD.lastIndex = 0;
 
   if (hasMarkdown) {
-    // Split by **bold** markers
     const parts = text.split(/\*\*(.+?)\*\*/g);
     return parts.map((part, i) =>
       i % 2 === 1 ? (
         <strong key={`md-${i}`} className="font-semibold text-inherit">
-          {part}
+          {processSegment(part, `md-${i}-`)}
         </strong>
       ) : (
-        <React.Fragment key={`md-${i}`}>{boldifyTerms(part)}</React.Fragment>
+        <React.Fragment key={`md-${i}`}>{processSegment(part, `seg-${i}-`)}</React.Fragment>
       )
     );
   }
 
-  return boldifyTerms(text);
-}
-
-function boldifyTerms(text) {
-  if (typeof text !== 'string' || !BOLD_REGEX.test(text)) return text;
-  BOLD_REGEX.lastIndex = 0;
-
-  const parts = text.split(BOLD_REGEX);
-
-  return parts.map((part, i) =>
-    BOLD_REGEX.test(part) ? (
-      <strong key={i} className="font-semibold text-inherit">
-        {part}
-      </strong>
-    ) : (
-      <React.Fragment key={i}>{part}</React.Fragment>
-    )
-  );
+  return processSegment(text, 'root-');
 }
 
 export default boldifyText;

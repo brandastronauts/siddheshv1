@@ -166,6 +166,17 @@
     @apply py-8 md:py-12 lg:py-14;
   }
 
+  .email-link {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-color: hsl(var(--muted-foreground) / 0.4);
+    transition: text-decoration-color 0.2s;
+  }
+  .email-link:hover {
+    text-decoration-color: hsl(var(--primary));
+  }
+
   .gradient-hero {
     background: var(--gradient-hero);
   }
