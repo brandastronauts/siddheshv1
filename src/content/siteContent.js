@@ -5893,6 +5893,7 @@ const siteContent = {
       ]
     },
 
+    "/team/adolescent-research-cohort": {
       title: "Adolescent Research Cohort",
       metaDescription: "Information about the Adolescent Research Cohort at Blue Blocks Micro Research Institute.",
       seo: {
