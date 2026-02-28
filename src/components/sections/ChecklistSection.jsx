@@ -24,13 +24,13 @@ const ChecklistSection = ({ heading, header, intro, items = [], body }) => {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-muted-foreground text-sm mb-6 max-w-3xl leading-relaxed"
+            className="text-muted-foreground text-sm mb-6 max-w-3xl mx-auto text-center leading-relaxed">
           >
             {boldifyText(body)}
           </motion.p>
         )}
 
-        <div className="max-w-3xl">
+        <div className="max-w-3xl mx-auto">
           <div className="bg-card border border-border rounded-xl p-6 md:p-8">
             <ul className="space-y-3">
               {items.map((item, index) => (
@@ -46,7 +46,7 @@ const ChecklistSection = ({ heading, header, intro, items = [], body }) => {
                     <Check className="w-3 h-3 text-accent-cyan" />
                   </div>
                   <span className="text-sm text-muted-foreground leading-relaxed">
-                    {typeof item === 'string' ? item : item.text || item.label}
+                    {boldifyText(typeof item === 'string' ? item : item.text || item.label)}
                   </span>
                 </motion.li>
               ))}

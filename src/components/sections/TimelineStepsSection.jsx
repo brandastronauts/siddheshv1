@@ -49,7 +49,7 @@ const TimelineStepsSection = ({ heading, header, steps = [] }) => {
                   {step.bullets.map((b, bi) => (
                     <li key={bi} className="flex items-start gap-2 text-sm text-muted-foreground">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan mt-1.5 flex-shrink-0" />
-                      <span>{b}</span>
+                      <span>{boldifyText(b)}</span>
                     </li>
                   ))}
                 </ul>
