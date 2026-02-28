@@ -5898,7 +5898,7 @@ const siteContent = {
 
     "/governance/team/dr-shobha-ediga": {
       title: "Dr. Shobha Ediga",
-      metaDescription: "Microbiological & Biochemical Research Lead; Erdkinder Biology Mentor — PhD Plant Sciences (University of Hyderabad).",
+      metaDescription: "Microbiological & Biochemical Research Lead; Erdkinder Biology Mentor. Plant Sciences, University of Hyderabad (2013).",
       seo: {
         title: "Dr. Shobha Ediga | Governance Team | Blue Blocks Micro Research Institute",
         canonical: `${SITE_URL}/governance/team/dr-shobha-ediga`,
@@ -5907,7 +5907,14 @@ const siteContent = {
           type: "profile",
           url: `${SITE_URL}/governance/team/dr-shobha-ediga`,
           title: "Dr. Shobha Ediga - Microbiological & Biochemical Research Lead",
-          description: "Microbiological & Biochemical Research Lead; Erdkinder Biology Mentor — PhD Plant Sciences (University of Hyderabad)."
+          description: "Microbiological & Biochemical Research Lead; Erdkinder Biology Mentor. Plant Sciences, University of Hyderabad (2013).",
+          image: `${SITE_URL}/team/dr-shobha-ediga.webp`
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Dr. Shobha Ediga - Microbiological & Biochemical Research Lead",
+          description: "Microbiological & Biochemical Research Lead; Erdkinder Biology Mentor. Plant Sciences, University of Hyderabad (2013).",
+          image: `${SITE_URL}/team/dr-shobha-ediga.webp`
         }
       },
       schemas: [
@@ -5917,7 +5924,9 @@ const siteContent = {
           name: "Dr. Shobha Ediga",
           url: `${SITE_URL}/governance/team/dr-shobha-ediga`,
           jobTitle: "Microbiological & Biochemical Research Lead",
-          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
+          image: `${SITE_URL}/team/dr-shobha-ediga.webp`,
+          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          description: "Microbiological & Biochemical Research Lead; Erdkinder Biology Mentor. Plant Sciences, University of Hyderabad (2013)."
         },
         {
           "@context": "https://schema.org",
@@ -5925,7 +5934,8 @@ const siteContent = {
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
             { "@type": "ListItem", position: 2, name: "Governance", item: `${SITE_URL}/governance` },
-            { "@type": "ListItem", position: 3, name: "Dr. Shobha Ediga", item: `${SITE_URL}/governance/team/dr-shobha-ediga` }
+            { "@type": "ListItem", position: 3, name: "Team", item: `${SITE_URL}/team` },
+            { "@type": "ListItem", position: 4, name: "Dr. Shobha Ediga", item: `${SITE_URL}/governance/team/dr-shobha-ediga` }
           ]
         }
       ],
@@ -5935,84 +5945,89 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "Dr. Shobha Ediga",
-          subheadline: "Microbiological & Biochemical Research Lead; Erdkinder Biology Mentor. PhD Plant Sciences (University of Hyderabad).",
+          subheadline: "Microbiological & Biochemical Research Lead; Erdkinder Biology Mentor",
           primaryCta: { label: "Contact", href: "mailto:research@blueblocks.in" },
           secondaryCta: { label: "Back to Team", href: "/team" },
-          image: { src: "/src/assets/placeholders/avatars/shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "hero" }
+          image: { src: "/team/dr-shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "hero" }
         },
         {
           id: "profile-meta",
           type: "metaStrip",
           items: [
-            { label: "Role", value: "Research Lead" },
-            { label: "Training", value: "PhD, Plant Sciences (UoH)" },
-            { label: "Focus", value: "Microbiology & Biochemistry" },
-            { label: "Specialization", value: "Erdkinder Framework" }
+            { label: "Role", value: "Microbiological & Biochemical Research Lead; Erdkinder Biology Mentor" },
+            { label: "PhD", value: "Plant Sciences, University of Hyderabad (2013)" },
+            { label: "Honors", value: "Gold Medalist (M.Sc. Biochemistry); Silver Medalist (B.Sc.)" }
           ]
         },
         {
           id: "profile-card",
           type: "profile",
           name: "Dr. Shobha Ediga",
-          role: "Microbiological & Biochemical Research Lead",
-          image: { src: "/src/assets/placeholders/avatars/shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "avatar" },
+          role: "Microbiological & Biochemical Research Lead; Erdkinder Biology Mentor",
+          image: { src: "/team/dr-shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "avatar" },
           email: "research@blueblocks.in",
           socials: [],
-          bio: "Her scientific inquiry began with a simple childhood question about bread mould. That curiosity matured into doctoral research in plant sciences, focusing on biochemical pathways and microbial systems. At Blue Blocks, she introduces adolescents to the invisible architectures of life."
+          bio: "Dr. Shobha Ediga spent a decade in India's national research laboratories — isolating novel bacterial species, developing food safety standards for FSSAI, and publishing in journals like Scientific Reports and the International Journal of Systematic and Evolutionary Microbiology. Now she brings that rigor to a different laboratory: the classroom."
         },
         {
           id: "profile-pullquote",
           type: "textBlock",
           header: "",
-          body: "> \"Why don't humans carry out photosynthesis to make their own food?\""
+          body: "> \"Why don't humans carry out photosynthesis to make their own food?\"\n\n— A question from a child that she still thinks about"
         },
         {
           id: "profile-content",
           type: "textBlock",
-          header: "About Dr. Shobha Ediga",
-          body: "Dr. Shobha Ediga's scientific inquiry began with a simple childhood question about bread mould — why it appears, how it spreads, and what invisible processes govern visible decay. That curiosity matured into doctoral research in plant sciences, focusing on biochemical pathways and microbial systems.\n\nAt Blue Blocks, she introduces adolescents to the invisible architectures of life."
+          header: "",
+          body: "Dr. Shobha Ediga spent a decade in India's national research laboratories — isolating novel bacterial species, developing food safety standards for FSSAI, and publishing in journals like Scientific Reports and the International Journal of Systematic and Evolutionary Microbiology. Her work on millet quality standards alone involved analyzing 331 samples from agro-climatic regions across India, shaping policy that affects farmer livelihoods and public health.\n\nNow she brings that rigor to a different laboratory: the classroom. As Biology Mentor in Blue Blocks' Erdkinder program, she guides adolescents through the same scientific process she practiced in research institutes — hypothesis, experiment, observation, revision. The difference is the audience. \"Children have not yet learned to fear being wrong,\" she observes. \"That makes them better experimenters than most adults.\"\n\n\"Children don't need constant correction or acceleration. They need intellectual respect.\""
         },
         {
           id: "profile-lens",
           type: "textBlock",
-          header: "The Researcher's Lens: The Invisible as Evidence",
-          body: "In laboratory sessions, she guides students to observe microbial cultures — colonies forming from what appears to be emptiness. The lesson is not merely biological; it is epistemological.\n\n\"Just because you cannot see it does not mean it is not shaping outcomes.\"\n\nChildren quickly grasp that ecosystems extend beyond visible organisms."
-        },
-        {
-          id: "profile-origin",
-          type: "textBlock",
-          header: "The Origin of Inquiry",
-          body: "Her academic training at the University of Hyderabad immersed her in plant biochemistry, molecular processes, and environmental interactions. She studied how microscopic shifts in cellular processes produce macroscopic change.\n\nThat systems awareness informs her mentorship of adolescent researchers."
+          header: "The Researcher's Lens: The Child as Scientist",
+          body: "During a bread mould experiment, an adolescent researcher encountered something puzzling. A single piece of bread, divided into two halves and placed under apparently identical conditions, produced dramatically different results: one half grew mould; the other remained clean.\n\nInstead of accepting this as chance, the student asked the most important research question: Why? She began considering hidden variables — moisture, airflow, handling, exposure to spores, microscopic surface variations. \"This moment,\" Dr. Ediga recalls, \"marked a shift from performing an experiment to thinking like a researcher. She realized that biological systems are highly sensitive, and small, often invisible factors can lead to dramatically different outcomes.\""
         },
         {
           id: "profile-truth",
           type: "textBlock",
           header: "The Uncomfortable Truth",
-          body: "\"Biology is not neat.\"\n\nLaboratory experiments fail. Cultures contaminate. Hypotheses collapse. The romantic narrative of science rarely includes iteration and error. Yet it is precisely through error that biological understanding deepens."
+          body: "\"When we treat children's questions seriously and allow time for exploration, they demonstrate patience, depth, and insight that often surprises adults.\"\n\nMost education systems assume children need to be corrected, accelerated, or kept on track. Dr. Ediga's observation is simpler and more radical: they need intellectual respect. Given that respect — and the time that comes with it — children reveal capacities that adult-centric models systematically underestimate."
         },
         {
-          id: "profile-focus",
+          id: "profile-origin",
           type: "textBlock",
-          header: "Current Focus: Adolescent Scientific Inquiry",
-          body: "She focuses on integrating rigorous biological experimentation into the Erdkinder framework. Adolescents design investigations into microbiology, plant systems, and environmental biochemistry — documenting not just results but method.\n\nScientific literacy becomes experiential rather than theoretical."
+          header: "The Origin of Inquiry: Making the Invisible Visible",
+          body: "Her eureka moment came in a university laboratory during a DNA extraction. Until then, DNA had existed for her as an abstraction — inferred through gels, absorbance values, and textbook diagrams. But in that moment, watching the molecule precipitate into something she could see and touch, the invisible became tangible.\n\n\"That realization reshaped my approach to research,\" she says. \"It taught me to bridge theory with visualization, to value techniques that make the invisible visible, and to question assumptions simply because something cannot be seen.\" This philosophy — that understanding deepens when abstraction becomes concrete — now guides how she teaches children. The molecular level, she learned, is both precise and remarkably tangible. So is a child's capacity for scientific thinking, if you know how to make it visible."
+        },
+        {
+          id: "profile-obsession",
+          type: "textBlock",
+          header: "Current Obsession: A Plastic-Free World",
+          body: "Her intellectual focus has shifted from the laboratory to a global systems problem: imagining and working toward a zero-waste, plastic-free world — one where everyday materials are designed with environmental accountability rather than convenience alone."
         },
         {
           id: "profile-mystery",
           type: "textBlock",
           header: "The Vital Mystery",
-          body: "If granted unlimited resources, she would investigate how early exposure to laboratory experimentation influences long-term scientific resilience.\n\nDoes encountering controlled failure in adolescence build stronger scientific reasoning in adulthood?"
+          body: "If given unlimited resources, the mystery she would investigate is plastic at the molecular and biological level: What happens once it enters living systems? How does it silently reshape life over generations? \"We know plastic persists,\" she says. \"We don't yet understand what it does while it persists — inside cells, across species, through time.\"\n\nIt is, for her, the question society is failing to ask — not because the science is too hard, but because the answer might demand more change than we're prepared to make."
         },
         {
           id: "profile-at-bb",
           type: "textBlock",
           header: "At Blue Blocks",
-          body: "She provides biological research oversight, ensuring laboratory methodology meets academic standards while remaining accessible to adolescent investigators. Her mentorship bridges formal scientific training and Montessori independence."
+          body: "She serves as Biology Mentor for the Erdkinder (adolescent) program and Cambridge Lower/Upper Secondary examinations. Her role is not to deliver answers but to model how a researcher thinks: how to ask better questions, design small experiments, document observations, and reflect on results.\n\n\"A micro-research setting allows children to experience science as a process of exploration rather than performance,\" she explains. \"My job is to protect that experience — to make sure the question stays more interesting than the answer.\""
         },
         {
-          id: "profile-credentials",
+          id: "profile-publications",
           type: "textBlock",
-          header: "Research Experience & Expertise",
-          body: "• PhD — Plant Sciences, University of Hyderabad\n• Microbiology & Biochemical Systems\n• Laboratory Methodology & Adolescent Mentorship\n• Environmental Inquiry Integration"
+          header: "Selected Publications",
+          body: "• Induction of cell wall phenolic monomers as part of direct defense response in maize. Scientific Reports (2021).\n• Seedling stage heat tolerance mechanisms in pearl millet. Russian Journal of Plant Physiology (2022).\n• Natural Products Targeting Clinically Relevant Enzymes of Eicosanoid Biosynthesis. Wiley Book Chapter (2017).\n• Blastochloris gulmargensis sp. nov. — novel bacterial species description. IJSEM (2011).\n• Rhodopseudomonas parapalustris sp. nov., R. harwoodiae sp. nov., R. pseudopalustris sp. nov. IJSEM (2012).\n• Rhodoplanes piscinae sp. nov. — novel bacterial species description. IJSEM (2012).\n• Variability of Polyphenols and Antioxidant Activity in Sorghum Genotypes. Scholars Int. J. Biochemistry (2020).\n• Role of phenolics, tannin and flavonoid in maize resistance to pink stem borer. Maydica (2020)."
+        },
+        {
+          id: "profile-experience",
+          type: "textBlock",
+          header: "Research Experience",
+          body: "• ICAR-IIMR (2017-2020): Senior Research Fellow — Development of fortified millet foods; FSSAI quality standards for millets (331 samples analyzed from across India).\n• University of Hyderabad (2005-2006): Junior Research Fellow — Department of Ocean Development.\n• Assistant Professor (2003-2005): Department of Biotechnology, ALFA College of Engineering & Technology.\n\nTechnical Expertise: UFLC & LCMS, Gas Chromatography, Atomic Absorption Spectrophotometry, Protein Analysis (PAGE), Spectrophotometry, Method Validation & Data Analysis."
         },
         {
           id: "profile-related",
