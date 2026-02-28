@@ -5767,7 +5767,7 @@ const siteContent = {
 
     "/governance/team/dr-sreemoyee-chakraborty": {
       title: "Dr. Sreemoyee Chakraborty",
-      metaDescription: "STEM Research, Palaeontology, and Earth Science — PhD (ISI / University of Calcutta).",
+      metaDescription: "STEM Research, Palaeontology, & Earth Science. PhD: Palaeontology, Indian Statistical Institute / University of Calcutta (2025).",
       seo: {
         title: "Dr. Sreemoyee Chakraborty | Governance Team | Blue Blocks Micro Research Institute",
         canonical: `${SITE_URL}/governance/team/dr-sreemoyee-chakraborty`,
@@ -5775,8 +5775,15 @@ const siteContent = {
         openGraph: {
           type: "profile",
           url: `${SITE_URL}/governance/team/dr-sreemoyee-chakraborty`,
-          title: "Dr. Sreemoyee Chakraborty - STEM Research Lead",
-          description: "STEM Research, Palaeontology, and Earth Science — PhD (ISI / University of Calcutta)."
+          title: "Dr. Sreemoyee Chakraborty - STEM Research, Palaeontology, & Earth Science",
+          description: "STEM Research, Palaeontology, & Earth Science. PhD: Palaeontology, Indian Statistical Institute / University of Calcutta (2025).",
+          image: `${SITE_URL}/team/dr-sreemoyee-chakraborty.webp`
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Dr. Sreemoyee Chakraborty - STEM Research, Palaeontology, & Earth Science",
+          description: "STEM Research, Palaeontology, & Earth Science. PhD: Palaeontology, Indian Statistical Institute / University of Calcutta (2025).",
+          image: `${SITE_URL}/team/dr-sreemoyee-chakraborty.webp`
         }
       },
       schemas: [
@@ -5785,8 +5792,10 @@ const siteContent = {
           "@type": "Person",
           name: "Dr. Sreemoyee Chakraborty",
           url: `${SITE_URL}/governance/team/dr-sreemoyee-chakraborty`,
-          jobTitle: "STEM Research Lead — Palaeontology & Earth Sciences",
-          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
+          jobTitle: "STEM Research, Palaeontology, & Earth Science",
+          image: `${SITE_URL}/team/dr-sreemoyee-chakraborty.webp`,
+          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          description: "STEM Research, Palaeontology, & Earth Science. PhD: Palaeontology, Indian Statistical Institute / University of Calcutta (2025)."
         },
         {
           "@context": "https://schema.org",
@@ -5794,7 +5803,8 @@ const siteContent = {
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
             { "@type": "ListItem", position: 2, name: "Governance", item: `${SITE_URL}/governance` },
-            { "@type": "ListItem", position: 3, name: "Dr. Sreemoyee Chakraborty", item: `${SITE_URL}/governance/team/dr-sreemoyee-chakraborty` }
+            { "@type": "ListItem", position: 3, name: "Team", item: `${SITE_URL}/team` },
+            { "@type": "ListItem", position: 4, name: "Dr. Sreemoyee Chakraborty", item: `${SITE_URL}/governance/team/dr-sreemoyee-chakraborty` }
           ]
         }
       ],
@@ -5804,7 +5814,7 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "Dr. Sreemoyee Chakraborty",
-          subheadline: "STEM Research Lead — Palaeontology & Earth Sciences. PhD (ISI / University of Calcutta).",
+          subheadline: "STEM Research, Palaeontology, & Earth Science",
           primaryCta: { label: "Contact", href: "mailto:research@blueblocks.in" },
           secondaryCta: { label: "Back to Team", href: "/team" },
           image: { src: "/src/assets/placeholders/avatars/sreemoyee-chakraborty.webp", alt: "Dr. Sreemoyee Chakraborty", variant: "hero" }
@@ -5813,21 +5823,19 @@ const siteContent = {
           id: "profile-meta",
           type: "metaStrip",
           items: [
-            { label: "Role", value: "STEM Research Lead" },
-            { label: "Training", value: "PhD, Palaeontology (ISI)" },
-            { label: "Focus", value: "Earth Sciences & STEM" },
-            { label: "Specialization", value: "Fossil-based Inquiry" }
+            { label: "Role", value: "STEM Research, Palaeontology, & Earth Science" },
+            { label: "PhD", value: "Palaeontology, Indian Statistical Institute / University of Calcutta (2025)" }
           ]
         },
         {
           id: "profile-card",
           type: "profile",
           name: "Dr. Sreemoyee Chakraborty",
-          role: "STEM Research Lead — Palaeontology & Earth Sciences",
-          image: { src: "/src/assets/placeholders/avatars/sreemoyee-chakraborty.webp", alt: "Dr. Sreemoyee Chakraborty", variant: "avatar" },
+          role: "STEM Research, Palaeontology, & Earth Science",
+          image: { src: "/team/dr-sreemoyee-chakraborty.webp", alt: "Dr. Sreemoyee Chakraborty", variant: "avatar" },
           email: "research@blueblocks.in",
           socials: [],
-          bio: "Her doctoral work in palaeontology examined ancient climatic shifts and evolutionary transitions, decoding patterns written millions of years before human memory. At Blue Blocks, she translates deep time into living inquiry."
+          bio: "Dr. Sreemoyee Chakraborty has spent seven years reading the Earth's autobiography — decoding 50-million-year-old whale skulls, reconstructing ancient climates from fossil beds, and asking what the deep past can teach us about survival. At Blue Blocks, she transitions from purely academic inquiry to what she calls a \"pedagogy of research.\""
         },
         {
           id: "profile-pullquote",
@@ -5838,50 +5846,50 @@ const siteContent = {
         {
           id: "profile-content",
           type: "textBlock",
-          header: "About Dr. Sreemoyee Chakraborty",
-          body: "Dr. Sreemoyee Chakraborty's research journey began with fossils — fragments of life embedded in rock, silent witnesses to planetary transformation. Her doctoral work in palaeontology examined ancient climatic shifts and evolutionary transitions, decoding patterns written millions of years before human memory.\n\nAt Blue Blocks, she translates deep time into living inquiry."
+          header: "",
+          body: "Dr. Sreemoyee Chakraborty has spent seven years reading the Earth's autobiography — decoding 50-million-year-old whale skulls, reconstructing ancient climates from fossil beds, and asking what the deep past can teach us about survival. A former Research Fellow at the Indian Statistical Institute and exchange delegate to Kanazawa University in Japan, she has designed scientific models, analyzed complex paleo-data, and mentored early-career researchers.\n\nAt Blue Blocks, she transitions from purely academic inquiry to what she calls a \"pedagogy of research\" — an approach where children act as co-contributors, not subjects. She believes this builds the kind of thinking that traditional systems accidentally train out of children.\n\n\"I believe children possess an uninhibited cognitive liberty that most adult researchers have lost.\""
         },
         {
           id: "profile-lens",
           type: "textBlock",
-          header: "The Researcher's Lens: Time as Teacher",
-          body: "While guiding children through fossil studies, she noticed something profound: children intuitively grasp geological scale when given tangible artifacts. A fossil shell in their hand becomes evidence of transformation, extinction, adaptation.\n\n\"They understand change,\" she reflects. \"They just need evidence.\"\n\nShe sees children as natural temporal thinkers. When exposed to Earth's history, they ask larger questions about resilience and fragility."
-        },
-        {
-          id: "profile-origin",
-          type: "textBlock",
-          header: "The Origin of Inquiry",
-          body: "Her fascination with Earth systems began in childhood, collecting rocks without knowing their names. That curiosity matured into formal research on paleoclimate reconstruction — studying sediment layers, isotopic signatures, fossil assemblages.\n\nThe deeper she studied, the more she recognized that Earth's history is a record of adaptation under stress."
+          header: "The Researcher's Lens: The Child as Scientist",
+          body: "Dr. Chakraborty challenges the common wisdom that children are \"too young\" for complex STEM research. Her counter-intuitive insight is that adult researchers are often bound by social and academic conditioning, whereas children possess a unique capacity to see what is actually there — not what they've been trained to expect."
         },
         {
           id: "profile-truth",
           type: "textBlock",
           header: "The Uncomfortable Truth",
-          body: "\"Climate narratives are often abstract. But extinction is not abstract.\"\n\nWhen children learn about mass extinction events, they confront consequence. Not as fear — but as evidence. The planet has shifted before. Species have vanished. Systems have collapsed and reformed.\n\nThe uncomfortable truth is that systems respond to imbalance — eventually."
+          body: "\"Adult researchers are often worse observers than children. Our training conditions us to see what we expect. Children see what's actually there.\"\n\nDuring a classroom session, an 11-year-old asked why two fossil categories were being treated as separate when they seemed to describe the same thing. She was right. It was a redundancy that had persisted in the literature for years, unquestioned by experts."
         },
         {
-          id: "profile-focus",
+          id: "profile-obsession",
           type: "textBlock",
-          header: "Current Inquiry: Earth Systems Thinking",
-          body: "Her focus is integrating Earth system science into early STEM education. She explores how geological inquiry can build systems awareness, climate literacy, and scientific reasoning.\n\nChildren who understand sedimentation understand accumulation. Children who understand extinction understand interdependence."
+          header: "Current Obsession: The Climate Marriage",
+          body: "She is currently focused on \"bringing in a marriage\" between paleoclimate (past climate data) and current climate science. Her goal is to use the Earth's geological history to decode and solve the present and future climate crisis — treating fossils not as relics, but as data points for planetary survival."
+        },
+        {
+          id: "profile-origin",
+          type: "textBlock",
+          header: "The Origin of Inquiry",
+          body: "Unlike many who find inspiration in the lab, Dr. Chakraborty's \"Eureka!\" moments often strike in the quiet spaces of life — whether swimming in the Great Barrier Reef, exploring Thai food markets, or simply watching particles move while cooking. She believes deep insight arrives when the mind is most at ease, not when it is most focused."
         },
         {
           id: "profile-mystery",
           type: "textBlock",
           header: "The Vital Mystery",
-          body: "If given unlimited resources, she would study how early exposure to deep-time thinking influences environmental decision-making in adulthood.\n\nDoes geological literacy produce ecological responsibility? Can early fossil study cultivate long-term stewardship?"
+          body: "If given unlimited resources, the mystery she would solve is the origin of life itself: identifying the precise \"tipping point\" that sparked life from a mass of proteins and fats — a phenomenon science has yet to replicate artificially. It remains, for her, the ultimate question."
         },
         {
           id: "profile-at-bb",
           type: "textBlock",
           header: "At Blue Blocks",
-          body: "She leads fossil-based STEM modules and Earth science inquiry, ensuring scientific rigor while preserving child-led exploration. Her work bridges academic geology and Montessori pedagogy — transforming ancient evidence into living investigation."
+          body: "She is designing a fossil investigation module where children analyze real specimens and publish their findings — treated as junior colleagues, not students. The goal is to prove that children, given authentic scientific responsibility, can contribute to the field rather than merely learn about it."
         },
         {
-          id: "profile-credentials",
+          id: "profile-publications",
           type: "textBlock",
-          header: "Selected Publications & Research",
-          body: "• PhD Research — Palaeoclimate Reconstruction and Fossil Assemblages\n• Geological Data Modeling & Sediment Analysis\n• Earth Systems Interpretation"
+          header: "Selected Publications & Credentials",
+          body: "• 2025: Taphofacies from the lower Eocene Naredi Formation of Kutch Basin, western India (Facies).\n• 2025: Evaluating Algorithmic Approaches to Paleoenvironmental Interpretation in the Eocene of Kutch Basin, India (Preprint).\n• 2023: A new skull of early cetacean Remingtonocetus harudiensis from the Eocene of Kutch Basin, India (Palaeoworld).\n• 2017: Sakura Science Programme Delegate, Kanazawa University, Japan."
         },
         {
           id: "profile-related",
