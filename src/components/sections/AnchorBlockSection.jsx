@@ -19,7 +19,7 @@ const AnchorBlockSection = ({ id, heading, header, body }) => {
           </div>
 
           {title && (
-            <h2 className="text-2xl md:text-3xl font-bold text-deep-ink mb-4">{title}</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-center text-deep-ink mb-4">{title}</h2>
           )}
 
           {body && (

@@ -12,7 +12,7 @@ const TimelineStepsSection = ({ heading, header, steps = [] }) => {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-deep-ink mb-10"
+            className="text-3xl md:text-4xl font-bold text-center text-deep-ink mb-10"
           >
             {title}
           </motion.h2>
