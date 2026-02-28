@@ -23,6 +23,7 @@ export const nav = [
     { label: "Research Standards", path: "/governance/standards", icon: "clipboardList" },
     { label: "Regulatory Compliance", path: "/governance/compliance", icon: "scale" },
     { label: "Our Standards", path: "/governance/our-standards", icon: "badgeCheck" },
+    { label: "Team", path: "/team", icon: "team" },
   ]},
   { label: "Collaborate", path: "/collaborate", icon: "collaborate" },
   { label: "Newsroom", path: "/newsroom", icon: "newsroom" },
