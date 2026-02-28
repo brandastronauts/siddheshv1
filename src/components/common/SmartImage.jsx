@@ -38,6 +38,12 @@ import logoPlaceholder from '@/assets/placeholders/logos/logo-placeholder.png';
 import pavanImg from '@/assets/placeholders/avatars/pavan.webp';
 import muniraImg from '@/assets/placeholders/avatars/munira.jpg';
 import directorPlaceholderImg from '@/assets/placeholders/avatars/director-placeholder.jpg';
+import srikarImg from '@/assets/placeholders/avatars/srikar-avr.webp';
+import apoorvImg from '@/assets/placeholders/avatars/apoorv-gogar.webp';
+import rahulImg from '@/assets/placeholders/avatars/rahul-jindal.webp';
+import suchethImg from '@/assets/placeholders/avatars/sucheth-davaluri.webp';
+import manishImg from '@/assets/placeholders/avatars/manish-gupta.webp';
+import ronakImg from '@/assets/placeholders/avatars/ronak-kumar.webp';
 import vinayImg from '@/assets/placeholders/avatars/vinay-donakanti.webp';
 import sreedharImg from '@/assets/placeholders/avatars/sreedhar-boddu.webp';
 import sandhyaImg from '@/assets/placeholders/avatars/sandhya-rao.webp';
@@ -71,6 +77,12 @@ const imageMap = {
   '/src/assets/placeholders/avatars/munira.jpg': muniraImg,
   '/src/assets/placeholders/avatars/director-placeholder.jpg': directorPlaceholderImg,
   '/src/assets/placeholders/avatars/advisor-placeholder.jpg': advisorPlaceholder,
+  '/src/assets/placeholders/avatars/srikar-avr.webp': srikarImg,
+  '/src/assets/placeholders/avatars/apoorv-gogar.webp': apoorvImg,
+  '/src/assets/placeholders/avatars/rahul-jindal.webp': rahulImg,
+  '/src/assets/placeholders/avatars/sucheth-davaluri.webp': suchethImg,
+  '/src/assets/placeholders/avatars/manish-gupta.webp': manishImg,
+  '/src/assets/placeholders/avatars/ronak-kumar.webp': ronakImg,
   '/src/assets/placeholders/avatars/vinay-donakanti.webp': vinayImg,
   '/src/assets/placeholders/avatars/sreedhar-boddu.webp': sreedharImg,
   '/src/assets/placeholders/avatars/sandhya-rao.webp': sandhyaImg,
