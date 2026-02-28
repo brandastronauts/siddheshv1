@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { nav, brand } from '../../content/siteCore';
-import logo from '../../assets/logo-small.webp';
+import logo from '../../assets/logo-88.webp';
 import { getIcon } from '../../lib/iconMap';
 
 /* ─── Desktop Dropdown ─────────────────────────────────────────────── */
