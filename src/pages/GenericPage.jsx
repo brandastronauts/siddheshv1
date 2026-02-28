@@ -1,8 +1,11 @@
+import { lazy, Suspense } from 'react';
 import { useLocation } from 'react-router-dom';
 import PageShell from '../components/layout/PageShell';
 import SectionRenderer from '../components/SectionRenderer';
 import StickyDetailBar from '../components/common/StickyDetailBar';
 import siteContent from '../content/siteContent';
+
+const ProfilePageWrapper = lazy(() => import('../components/profile/ProfilePageWrapper'));
 
 // Routes that warrant a sticky detail bar (publication/patent/book detail pages)
 const DETAIL_PATTERNS = [
@@ -14,11 +17,18 @@ const DETAIL_PATTERNS = [
   /^\/proceedings\/.+/,
 ];
 
+// Routes that use the premium profile layout
+const PROFILE_PATTERNS = [
+  /^\/governance\/team\/.+/,
+  /^\/team\/(pavan-kumar-yekabote|munira-hussain)$/,
+];
+
 const GenericPage = () => {
   const location = useLocation();
   const page = siteContent.pages[location.pathname];
 
   const isDetailPage = DETAIL_PATTERNS.some(p => p.test(location.pathname));
+  const isProfilePage = PROFILE_PATTERNS.some(p => p.test(location.pathname));
 
   // Extract primary CTA from page config if available
   const stickyCta = page?.stickyCta; // { label, href, type }
@@ -36,7 +46,13 @@ const GenericPage = () => {
 
   return (
     <PageShell>
-      <SectionRenderer sections={page?.sections} />
+      {isProfilePage ? (
+        <Suspense fallback={<div className="min-h-screen" />}>
+          <ProfilePageWrapper sections={page?.sections} />
+        </Suspense>
+      ) : (
+        <SectionRenderer sections={page?.sections} />
+      )}
 
       {/* Sticky bottom CTA on mobile for detail pages */}
       {isDetailPage && stickyCta && (
