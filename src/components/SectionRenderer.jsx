@@ -32,6 +32,14 @@ const TwoColumnSection = lazy(() => import('./sections/TwoColumnSection'));
 const RelatedCardsSection = lazy(() => import('./sections/RelatedCardsSection'));
 const PatentGridSection = lazy(() => import('./sections/PatentGridSection'));
 const ProfileSection = lazy(() => import('./sections/ProfileSection'));
+const GlossaryAccordionSection = lazy(() => import('./sections/GlossaryAccordionSection'));
+const NumberedCardsSection = lazy(() => import('./sections/NumberedCardsSection'));
+const TierCardsSection = lazy(() => import('./sections/TierCardsSection'));
+const ToolCardsSection = lazy(() => import('./sections/ToolCardsSection'));
+const ChecklistSection = lazy(() => import('./sections/ChecklistSection'));
+const TableBlockSection = lazy(() => import('./sections/TableBlockSection'));
+const AnchorBlockSection = lazy(() => import('./sections/AnchorBlockSection'));
+const TimelineStepsSection = lazy(() => import('./sections/TimelineStepsSection'));
 
 const LazyDossier = {
   DossierHeaderSection: lazy(() => import('./sections/DossierSections').then(m => ({ default: m.DossierHeaderSection }))),
@@ -80,6 +88,14 @@ const components = {
   relatedCards: RelatedCardsSection,
   patentGrid: PatentGridSection,
   profile: ProfileSection,
+  glossaryAccordion: GlossaryAccordionSection,
+  numberedCards: NumberedCardsSection,
+  tierCards: TierCardsSection,
+  toolCards: ToolCardsSection,
+  checklist: ChecklistSection,
+  tableBlock: TableBlockSection,
+  anchorBlock: AnchorBlockSection,
+  timelineSteps: TimelineStepsSection,
   dossierHeader: LazyDossier.DossierHeaderSection,
   dossierSection: LazyDossier.DossierSectionBlock,
   dossierQuoteStrip: LazyDossier.DossierQuoteStripSection,

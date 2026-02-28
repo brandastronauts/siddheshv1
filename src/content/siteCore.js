@@ -16,8 +16,12 @@ export const nav = [
   { label: "The Institute", path: "/the-institute", icon: "institute" },
   { label: "Methodology", path: "/methodology", icon: "methodology", children: [
     { label: "Innovation", path: "/methodology/innovation", icon: "lightbulb" },
+    { label: "Limitations", path: "/methodology/limitations", icon: "alert" },
+    { label: "Tools for Researchers", path: "/methodology/tools", icon: "download" },
   ]},
-  { label: "Publications", path: "/publications", icon: "publication" },
+  { label: "Publications", path: "/publications", icon: "publication", children: [
+    { label: "Open Data Access", path: "/publications/data", icon: "database" },
+  ]},
   { label: "Governance", path: "/governance", icon: "governance", children: [
     { label: "Ethics & Privacy", path: "/governance/ethics", icon: "lock" },
     { label: "Research Standards", path: "/governance/standards", icon: "clipboardList" },

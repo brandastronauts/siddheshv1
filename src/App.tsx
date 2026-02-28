@@ -74,6 +74,10 @@ const App = () => (
             
             <Route path="/publications/citation-standards" element={<CitationStandardsPage />} />
             <Route path="/faq" element={<FAQPage />} />
+            <Route path="/glossary" element={<GenericPage />} />
+            <Route path="/methodology/limitations" element={<GenericPage />} />
+            <Route path="/methodology/tools" element={<GenericPage />} />
+            <Route path="/publications/data" element={<GenericPage />} />
             <Route path="/publications/:slug" element={<GenericPage />} />
             
             <Route path="/patents" element={<GenericPage />} />

@@ -19,8 +19,12 @@ const siteContent = {
     { label: "The Institute", path: "/the-institute", icon: "institute" },
     { label: "Methodology", path: "/methodology", icon: "methodology", children: [
       { label: "Innovation", path: "/methodology/innovation", icon: "lightbulb" },
+      { label: "Limitations", path: "/methodology/limitations", icon: "alert" },
+      { label: "Tools for Researchers", path: "/methodology/tools", icon: "download" },
     ]},
-    { label: "Publications", path: "/publications", icon: "publication" },
+    { label: "Publications", path: "/publications", icon: "publication", children: [
+      { label: "Open Data Access", path: "/publications/data", icon: "database" },
+    ]},
     { label: "Governance", path: "/governance", icon: "governance", children: [
       { label: "Ethics & Privacy", path: "/governance/ethics", icon: "lock" },
       { label: "Research Standards", path: "/governance/standards", icon: "clipboardList" },
@@ -6892,6 +6896,547 @@ const siteContent = {
         },
       ],
     },
+
+  // ═══════════════════════════════════════════════════════════════
+  // PAGE: LIMITATIONS
+  // ═══════════════════════════════════════════════════════════════
+  "/methodology/limitations": {
+    title: "Limitations | Blue Blocks Micro Research Institute",
+    metaDescription: "What Micro Research cannot do — explicit boundaries, context limits, and bias mitigation.",
+    seo: {
+      title: "Limitations | Blue Blocks Micro Research Institute",
+      description: "What Micro Research cannot do — explicit boundaries, context limits, and bias mitigation.",
+      robots: "noindex,nofollow,noarchive,nosnippet",
+      openGraph: {
+        type: "article",
+        title: "Limitations | Blue Blocks Micro Research Institute",
+        description: "What Micro Research cannot do — explicit boundaries, context limits, and bias mitigation.",
+      },
+    },
+    sections: [
+      {
+        type: "hero",
+        headline: "What Micro Research Cannot Do",
+        subheadline: "LIMITATIONS",
+        breadcrumb: [
+          { label: "Home", path: "/" },
+          { label: "Methodology", path: "/methodology" },
+          { label: "Limitations" },
+        ],
+        image: {
+          src: "/src/assets/banners/methodology-framework.webp",
+          alt: "Limitations",
+          variant: "hero",
+        },
+      },
+      {
+        type: "textBlock",
+        header: "WHY WE PUBLISH LIMITATIONS",
+        body: "Honest research acknowledges what it cannot do. We publish our limitations not to undermine our work, but to define its appropriate scope. If you understand what Micro Research is not, you can better understand what it is.",
+      },
+      {
+        type: "numberedCards",
+        header: "EXPLICIT LIMITATIONS",
+        items: [
+          {
+            number: 1,
+            title: "We Cannot Establish Causation",
+            body: "Micro Research is observational. We document patterns, sequences, and associations. We do not establish causation in the experimental sense.\n\nWhen we say 'children who experienced X showed Y,' we are reporting an association, not a causal claim. Causal inference requires experimental design with controlled manipulation of variables. That is not what we do.\n\nOur longitudinal data can support causal hypotheses — but proving them requires different methods.",
+          },
+          {
+            number: 2,
+            title: "Our Findings Are Context-Specific",
+            body: "All our data comes from one context: a Montessori school in Hyderabad, India, with specific demographic, cultural, and pedagogical characteristics.\n\nFindings may not generalize to:",
+            bullets: [
+              "Non-Montessori settings",
+              "Different cultural contexts",
+              "Different socioeconomic populations",
+              "Different age ranges than those we study",
+            ],
+            subsections: [
+              {
+                label: "",
+                items: ["Generalization requires replication. We publish our methods specifically to enable others to test our findings in their contexts."],
+              },
+            ],
+          },
+          {
+            number: 3,
+            title: "We Cannot Eliminate Bias",
+            body: "Embedded observation has advantages (zero observer effect) but also risks (observer bias). Our observers know the children. They have expectations. They have theoretical commitments.\n\nWe mitigate bias through:",
+            bullets: [
+              "Rigorous training",
+              "Inter-rater reliability testing",
+              "Behavioral-only recording rules",
+              "Multiple observers where feasible",
+            ],
+            subsections: [
+              {
+                label: "",
+                items: ["But we do not claim bias elimination. We claim bias awareness and mitigation."],
+              },
+            ],
+          },
+          {
+            number: 4,
+            title: "We Do Not Replace Experimental Research",
+            body: "Micro Research complements experimental research — it does not replace it. Different questions require different methods.",
+            subsections: [
+              {
+                label: "Use experimental methods when you need:",
+                items: [
+                  "Causal proof",
+                  "Variable isolation",
+                  "Controlled conditions",
+                ],
+              },
+              {
+                label: "Use Micro Research when you need:",
+                items: [
+                  "Naturalistic behavior",
+                  "Longitudinal continuity",
+                  "Mechanism-level detail",
+                  "Context-rich observation",
+                ],
+              },
+            ],
+          },
+          {
+            number: 5,
+            title: "Implementation Cannot Be Fully Controlled",
+            body: "While our cyclical model enables rapid implementation of findings, we cannot control implementation with laboratory precision. Guides interpret and adapt findings to their context.\n\nThis is a feature (practice-relevant implementation) but also a limitation (implementation varies). We document implementation approaches but do not claim experimental control over them.",
+          },
+          {
+            number: 6,
+            title: "Design-Research Entanglement",
+            body: "In our Innovation domain, curriculum and environment were co-designed. We cannot fully separate 'curriculum effect' from 'space effect' — this is by design (they are meant to work together), but it is a methodological limitation.\n\nFindings apply to the integrated system, not necessarily to curriculum or space in isolation.",
+          },
+          {
+            number: 7,
+            title: "Sample Characteristics",
+            body: "Our longitudinal panel, while large (847 children), represents families who chose Montessori education and can afford private school fees in an Indian urban context. This is not a representative sample of all children.",
+          },
+          {
+            number: 8,
+            title: "Observer Training Variability",
+            body: "While we enforce minimum reliability standards (≥80% inter-rater agreement), observer skill varies. Some observations may be more reliable than others. We document observer IDs to enable analysis of observer effects.",
+          },
+        ],
+      },
+      {
+        type: "checklist",
+        header: "HOW WE ADDRESS LIMITATIONS",
+        items: [
+          "Every publication includes a limitations section",
+          "We invite replication in other contexts",
+          "We publish null and negative results",
+          "We maintain a Failure Archive for internal learning",
+          "We welcome critique and respond publicly",
+        ],
+      },
+      {
+        type: "relatedCards",
+        cards: [
+          { title: "Methodology", body: "Our full research methodology.", action: { label: "Read More", href: "/methodology" } },
+          { title: "Research Standards", body: "Our governance standards.", action: { label: "Read More", href: "/governance/standards" } },
+          { title: "Tools for Researchers", body: "Downloadable templates and forms.", action: { label: "View Tools", href: "/methodology/tools" } },
+        ],
+      },
+    ],
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // PAGE: TOOLS FOR RESEARCHERS
+  // ═══════════════════════════════════════════════════════════════
+  "/methodology/tools": {
+    title: "Tools for Researchers | Blue Blocks Micro Research Institute",
+    metaDescription: "Downloadable research tools — observation forms, consent templates, protocol templates. Open access for replication and adoption.",
+    seo: {
+      title: "Tools for Researchers | Blue Blocks Micro Research Institute",
+      description: "Downloadable research tools — observation forms, consent templates, protocol templates. Open access for replication and adoption.",
+      robots: "noindex,nofollow,noarchive,nosnippet",
+      openGraph: {
+        type: "article",
+        title: "Tools for Researchers | Blue Blocks Micro Research Institute",
+        description: "Downloadable research tools — observation forms, consent templates, protocol templates. Open access for replication and adoption.",
+      },
+    },
+    sections: [
+      {
+        type: "hero",
+        headline: "Tools for Researchers",
+        subheadline: "Downloadable templates and forms. Free to use with attribution.",
+        breadcrumb: [
+          { label: "Home", path: "/" },
+          { label: "Methodology", path: "/methodology" },
+          { label: "Tools for Researchers" },
+        ],
+        image: {
+          src: "/src/assets/banners/methodology-framework.webp",
+          alt: "Tools for Researchers",
+          variant: "hero",
+        },
+      },
+      {
+        type: "textBlock",
+        header: "WHY WE SHARE TOOLS",
+        body: "We want Micro Research to spread. Sharing tools removes friction for institutions wanting to replicate or adopt our methodology.\n\nAll tools are CC-BY-4.0: free to use, adapt, and build upon with attribution.",
+      },
+      {
+        type: "toolCards",
+        header: "OBSERVATION TOOLS",
+        tools: [
+          {
+            title: "BEOP Observation Form",
+            subtitle: "Standard observation recording form",
+            body: "The template used by our Embedded Research Fellows for recording observations per BEOP protocol.",
+            details: [
+              "Format: PDF (printable), Excel (digital)",
+              "Includes: Observer ID, Subject ID, Date/Time, Environment, Behavior fields",
+            ],
+            downloads: [
+              { label: "Download PDF", href: "/downloads/beop-observation-form.pdf" },
+              { label: "Download Excel", href: "/downloads/beop-observation-form.xlsx" },
+            ],
+          },
+          {
+            title: "Inter-rater Reliability Assessment",
+            subtitle: "Tool for testing observer agreement",
+            body: "Template for conducting reliability assessments between observers. BEOP requires ≥80% agreement.",
+            downloads: [
+              { label: "Download", href: "/downloads/reliability-assessment.xlsx" },
+            ],
+          },
+        ],
+      },
+      {
+        type: "toolCards",
+        header: "ETHICS TOOLS",
+        tools: [
+          {
+            title: "Consent Template",
+            subtitle: "Model consent form for longitudinal observation research",
+            body: "Template based on our Longitudinal Consent Architecture. Adapt for your context and jurisdiction.",
+            details: [
+              "Covers: Purpose, procedures, data use, rights, withdrawal",
+            ],
+            note: "This is a template. Consult legal/ethics advisors for your context.",
+            downloads: [
+              { label: "Download", href: "/downloads/consent-template.docx" },
+            ],
+          },
+          {
+            title: "Child Assent Template",
+            subtitle: "Age-appropriate assent form",
+            body: "Template for obtaining assent from children capable of understanding (typically 7+).",
+            downloads: [
+              { label: "Download", href: "/downloads/child-assent-template.docx" },
+            ],
+          },
+        ],
+      },
+      {
+        type: "toolCards",
+        header: "RESEARCH DESIGN TOOLS",
+        tools: [
+          {
+            title: "Four Gates Checklist",
+            subtitle: "Pre-study quality check",
+            body: "Simple checklist for verifying a study passes all four gates before data collection.",
+            downloads: [
+              { label: "Download", href: "/downloads/four-gates-checklist.pdf" },
+            ],
+          },
+          {
+            title: "Micro-Study Protocol Template",
+            subtitle: "Standard format for study protocols",
+            body: "Template for documenting: research question, method, observers, timeline, data handling.",
+            downloads: [
+              { label: "Download", href: "/downloads/protocol-template.docx" },
+            ],
+          },
+        ],
+      },
+      {
+        type: "toolCards",
+        header: "PUBLICATION TOOLS",
+        tools: [
+          {
+            title: "Micro-Study Report Template",
+            subtitle: "Standard format for publications",
+            body: "Template matching our publication format: question, method, findings, limitations.",
+            downloads: [
+              { label: "Download", href: "/downloads/report-template.docx" },
+            ],
+          },
+          {
+            title: "Citation Templates",
+            subtitle: "Formats for citing Blue Blocks publications",
+            body: "APA, BibTeX, and other formats for our core documents.",
+            downloads: [
+              { label: "Download", href: "/downloads/citation-templates.txt" },
+            ],
+          },
+        ],
+      },
+      {
+        type: "textBlock",
+        header: "USAGE",
+        body: "7.1 License\nAll tools are CC-BY-4.0: free to use, adapt, share with attribution.\n\n7.2 Attribution\nWhen using or adapting, please cite:\nAdapted from Blue Blocks Micro Research Institute. [Tool Name]. research.blueblocks.in\n\n7.3 Questions\nresearch@blueblocks.in (subject: Tools Question)",
+      },
+      {
+        type: "relatedCards",
+        cards: [
+          { title: "Methodology", body: "Our full research methodology.", action: { label: "Read More", href: "/methodology" } },
+          { title: "Limitations", body: "What Micro Research cannot do.", action: { label: "Read More", href: "/methodology/limitations" } },
+          { title: "Open Data Access", body: "Request access to anonymized datasets.", action: { label: "Learn More", href: "/publications/data" } },
+        ],
+      },
+    ],
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // PAGE: OPEN DATA ACCESS
+  // ═══════════════════════════════════════════════════════════════
+  "/publications/data": {
+    title: "Open Data Access | Blue Blocks Micro Research Institute",
+    metaDescription: "Request access to anonymized child development research datasets. Data access for qualified researchers with institutional affiliation.",
+    seo: {
+      title: "Open Data Access | Blue Blocks Micro Research Institute",
+      description: "Request access to anonymized child development research datasets. Data access for qualified researchers with institutional affiliation.",
+      robots: "noindex,nofollow,noarchive,nosnippet",
+      openGraph: {
+        type: "article",
+        title: "Open Data Access | Blue Blocks Micro Research Institute",
+        description: "Request access to anonymized child development research datasets.",
+      },
+    },
+    sections: [
+      {
+        type: "hero",
+        headline: "Open Data Access",
+        subheadline: "We believe in open science. Qualified researchers can access our anonymized datasets.",
+        breadcrumb: [
+          { label: "Home", path: "/" },
+          { label: "Publications", path: "/publications" },
+          { label: "Open Data Access" },
+        ],
+        image: {
+          src: "/src/assets/banners/publications-doi.webp",
+          alt: "Open Data Access",
+          variant: "hero",
+        },
+      },
+      {
+        type: "textBlock",
+        header: "OUR COMMITMENT",
+        body: "Research data should serve science, not sit locked away. We make data available while protecting children's privacy absolutely.",
+      },
+      {
+        type: "tierCards",
+        header: "DATA TIERS",
+        tiers: [
+          {
+            label: "Tier 1: Open",
+            title: "Public Access",
+            subtitle: "No Request Required",
+            body: "Published findings and aggregate statistics. Methodology documents.",
+            note: "Access: Anyone, via Zenodo",
+            cta: { label: "Browse publications", href: "/publications" },
+          },
+          {
+            label: "Tier 2: Researcher",
+            title: "Qualified Researchers",
+            subtitle: "Request Required",
+            body: "Anonymized individual-level observation records.",
+            bullets: [
+              "Institutional affiliation",
+              "Ethics approval",
+              "Data Use Agreement",
+            ],
+            note: "Response time: 10 business days",
+            cta: { label: "Request Access", href: "#request" },
+          },
+          {
+            label: "Tier 3: Internal",
+            title: "Staff Only",
+            subtitle: "Not Available Externally",
+            body: "Coded records where we hold the key. Never shared outside Blue Blocks.",
+          },
+          {
+            label: "Tier 4: Restricted",
+            title: "PI Only",
+            subtitle: "Never Shared",
+            body: "Identity keys, consent forms, identifiable data. Never shared under any circumstances.",
+          },
+        ],
+      },
+      {
+        type: "tableBlock",
+        header: "DATA DICTIONARY PREVIEW",
+        intro: "Example variables available in Tier 2 datasets:",
+        headers: ["Variable", "Type", "Description"],
+        rows: [
+          ["subject_id", "String", "Anonymized identifier (e.g., CH-047)"],
+          ["age_range", "Category", "Age band (e.g., 3-4, 4-5, 5-6)"],
+          ["environment", "Category", "Setting (e.g., Children's House, Elementary)"],
+          ["behavior_code", "Category", "Observed behavior type"],
+          ["duration_seconds", "Integer", "Duration of observed behavior"],
+          ["observer_id", "String", "Anonymized observer identifier"],
+        ],
+      },
+      {
+        type: "textBlock",
+        variant: "muted",
+        body: "Full data dictionary provided with approved access.",
+      },
+      {
+        type: "timelineSteps",
+        header: "REQUEST PROCESS",
+        steps: [
+          {
+            title: "Check Eligibility",
+            bullets: [
+              "Affiliated with accredited research institution",
+              "Ethics approval from your IRB/ethics committee",
+              "Clear research purpose aligned with original consent",
+            ],
+          },
+          {
+            title: "Submit Request",
+            body: "Email: research@blueblocks.in\nSubject: Data Access Request",
+            bullets: [
+              "Your name, institution, role",
+              "Research purpose and methodology",
+              "Specific data requested",
+              "Ethics approval documentation",
+              "Timeline for data use",
+            ],
+          },
+          {
+            title: "Review",
+            body: "Ethics Advisory Committee reviews within 10 business days. We may request clarification.",
+          },
+          {
+            title: "Data Use Agreement",
+            body: "If approved, sign DUA covering:",
+            bullets: [
+              "Purpose limitation",
+              "No re-identification attempts",
+              "No redistribution",
+              "Security requirements",
+              "Destruction upon completion",
+              "Publication review",
+            ],
+          },
+          {
+            title: "Secure Transfer",
+            body: "Data transferred via secure channel upon signed agreement.",
+          },
+        ],
+      },
+      {
+        type: "checklist",
+        header: "ANONYMIZATION STANDARDS",
+        body: "All Tier 2 data is anonymized per CDCS v1.0:",
+        items: [
+          "Names removed — replaced with codes",
+          "Ages generalized — ranges, not exact dates",
+          "Locations generalized — environment type only",
+          "Unique identifiers removed",
+          "Small subgroups suppressed (n<5)",
+          "Re-identification is impossible from Tier 2 data.",
+        ],
+      },
+      {
+        type: "textBlock",
+        header: "BI-DIRECTIONAL LINKING",
+        body: "Our data architecture:\n\nZenodo hosts the data files (high authority repository)\nOur website provides context, documentation, request process\nZenodo metadata links to our website\nOur website links to Zenodo\n\nThis creates verified circular authority — CERN points to us, we point to CERN.",
+      },
+      {
+        type: "anchorBlock",
+        id: "request",
+        header: "SUBMIT REQUEST",
+        body: "Email: research@blueblocks.in\nSubject: Data Access Request\nInclude: Name, Institution, Role, Research Purpose, Specific Data, Ethics Status",
+      },
+      {
+        type: "relatedCards",
+        cards: [
+          { title: "Publications", body: "Browse our published research.", action: { label: "View Publications", href: "/publications" } },
+          { title: "Ethics & Privacy", body: "Our ethics framework.", action: { label: "Read More", href: "/governance/ethics" } },
+          { title: "Tools for Researchers", body: "Downloadable templates and forms.", action: { label: "View Tools", href: "/methodology/tools" } },
+        ],
+      },
+    ],
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // PAGE: GLOSSARY
+  // ═══════════════════════════════════════════════════════════════
+  "/glossary": {
+    title: "Glossary | Blue Blocks Micro Research Institute",
+    metaDescription: "Key terms used across Blue Blocks Micro Research Institute.",
+    seo: {
+      title: "Glossary | Blue Blocks Micro Research Institute",
+      description: "Key terms used across Blue Blocks Micro Research Institute.",
+      robots: "noindex,nofollow,noarchive,nosnippet",
+      openGraph: {
+        type: "article",
+        title: "Glossary | Blue Blocks Micro Research Institute",
+        description: "Key terms used across Blue Blocks Micro Research Institute.",
+      },
+    },
+    sections: [
+      {
+        type: "hero",
+        headline: "Glossary",
+        subheadline: "Key terms used across Blue Blocks Micro Research Institute",
+        breadcrumb: [
+          { label: "Home", path: "/" },
+          { label: "Glossary" },
+        ],
+        image: {
+          src: "/src/assets/banners/methodology-framework.webp",
+          alt: "Glossary",
+          variant: "hero",
+        },
+      },
+      {
+        type: "glossaryAccordion",
+        header: "Terms & Definitions",
+        items: [
+          { term: "Activity Classification", definition: "System for categorizing observed behaviors: DA (Designed Activity), SE (Spontaneous Emergence), AM (Activity Modification), CT (Cross-Domain Transfer)." },
+          { term: "Analytical Responsibility", definition: "The principle that data interpretation and theoretical framing remain the responsibility of adult researchers, even when children contribute to data generation. (DOI-001a)" },
+          { term: "BEOP (Blue Blocks Embedded Observation Protocol)", definition: "Our standard for conducting and documenting behavioral observations, including the 4K Video Test for documentation quality." },
+          { term: "Bounded Study", definition: "A research study with explicitly defined scope, duration, and limitations — the core unit of Micro Research." },
+          { term: "CDCS (Classified Data and Consent Standards)", definition: "Our tiered system for data classification (Tiers 1-4) and consent management." },
+          { term: "Co-authorship Criteria", definition: "Formal standards for when children qualify as co-authors of research publications based on documented contribution to data generation. (DOI-001a)" },
+          { term: "Compound Evidence", definition: "The accumulated body of evidence built from many small studies linked through the longitudinal panel." },
+          { term: "Conscience Check", definition: "Structured reflection on ethical implications before, during, and after innovation activities in DIEP Labs." },
+          { term: "Continuity Advantage", definition: "The structural research capability enabled by continuous longitudinal access to the same children over many years." },
+          { term: "Custodian Consciousness", definition: "The mindset of responsibility toward materials, environment, and community cultivated in DIEP Labs." },
+          { term: "Cyclical Embedded Research", definition: "The observe-publish-implement-observe loop where research findings return immediately to practice." },
+          { term: "DIEP (Didactic Innovation Environment Principles)", definition: "Framework for designing learning environments that support innovation emergence. Guides the design of DIEP Labs." },
+          { term: "DIEP Labs", definition: "Four specialized environments for innovation research: Innovation Lab, Biomimicry Hive, Drone Lab, Space Lab." },
+          { term: "DIP (Developmental Innovation Protocol)", definition: "The 18-year pedagogical curriculum integrating capability development with ethical sensibility across all developmental planes." },
+          { term: "DOI-001", definition: "The foundational Micro Research methodology paper governing embedded observation OF children." },
+          { term: "DOI-001a", definition: "The Participatory Micro Research methodology paper governing research WITH children as co-contributors." },
+          { term: "Embedded Observer", definition: "A researcher who is already part of children's daily environment (typically an educator), whose presence does not alter natural behavior." },
+          { term: "Epistemic Boundaries", definition: "The distinction between data generation (which children can contribute to) and data interpretation (which researchers perform). (DOI-001a)" },
+          { term: "Five Gates", definition: "The five review checkpoints every micro-study must pass before publication: Scope, Ethics, Method, Evidence, Limitations." },
+          { term: "4K Video Test", definition: "The documentation standard requiring observation records detailed enough that an independent researcher could reconstruct the behavioral sequence." },
+          { term: "Integrated Design-Research", definition: "The construct describing how the same entity that designs learning environments also researches them, enabling capture of innovation emergence." },
+          { term: "Longitudinal Panel", definition: "The 847 children tracked continuously since 2009, forming the foundation for compound evidence." },
+          { term: "Micro Research", definition: "Practitioner-led, longitudinal methodology for embedded, naturalistic observation studies. (DOI-001)" },
+          { term: "Micro-Study", definition: "A single bounded research study following Micro Research methodology, published with a DOI." },
+          { term: "MREF (Micro Research Ethics Framework)", definition: "Comprehensive ethics governance for research involving children in educational settings." },
+          { term: "Participatory Micro Research", definition: "Methodology for research WITH children as co-contributors to STEM studies, with formal co-authorship criteria. (DOI-001a)" },
+          { term: "Role Differentiation", definition: "The explicit separation of child contributor roles from adult researcher roles in participatory research. (DOI-001a)" },
+          { term: "Tiered Data Classification", definition: "The four-tier system (Tier 1-4) for classifying research data by identifiability and access restrictions." },
+        ],
+      },
+    ],
+  },
   },
 };
 
