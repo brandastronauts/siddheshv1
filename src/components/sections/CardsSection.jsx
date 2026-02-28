@@ -57,14 +57,9 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
     <section className="section-spacing bg-background relative">
       <div className="container-grid">
         {title && (
-          <motion.h2 
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center text-deep-ink mb-6"
-          >
+          <h2 className="hero-fade-in text-3xl md:text-4xl font-bold text-center text-deep-ink mb-6">
             {title}
-          </motion.h2>
+          </h2>
         )}
 
         {intro && (

@@ -168,9 +168,10 @@ const Header = () => {
                 src={logo}
                 alt={brand.siteName}
                 className="h-11 md:h-12 w-11 md:w-12 object-contain"
-                width={48}
-                height={48}
-                loading="eager"
+                width={44}
+                height={44}
+                fetchPriority="low"
+                loading="lazy"
                 decoding="async"
               />
             </div>
