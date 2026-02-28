@@ -5,19 +5,19 @@ import { getIcon } from '../../lib/iconMap';
 import { FileText } from 'lucide-react';
 
 const RelatedCardsSection = ({ header, cards = [] }) => {
+  const displayHeader = header || 'Related';
+
   return (
     <section className="section-spacing bg-surface">
       <div className="container-grid">
-        {header && (
-          <motion.h2
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center text-deep-ink mb-6"
-          >
-            {header}
-          </motion.h2>
-        )}
+        <motion.h2
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl font-bold text-center text-deep-ink mb-6"
+        >
+          {displayHeader}
+        </motion.h2>
 
         <div className={`grid grid-cols-1 gap-6 mx-auto ${
           cards.length === 1 ? 'max-w-sm' 

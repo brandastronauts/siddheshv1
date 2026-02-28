@@ -45,7 +45,7 @@ const LibraryCardsSection = ({ heading, header, sectionName, intro, items, cards
           </motion.p>
         )}
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {cardData.map((item, index) => {
             const isNewFormat = item.status !== undefined || item.body !== undefined;
             const bodyText = item.body || '';
