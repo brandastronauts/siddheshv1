@@ -5244,7 +5244,14 @@ const siteContent = {
           type: "profile",
           url: `${SITE_URL}/governance/team/vinay-shyam-donakanti`,
           title: "Vinay Shyam Donakanti - Research Data Analyst Intern",
-          description: "Research Data Analyst Intern — Educational Data Analysis, Machine Learning, and Data Pipeline Development."
+          description: "Research Data Analyst Intern — Educational Data Analysis, Machine Learning, and Data Pipeline Development.",
+          image: `${SITE_URL}/src/assets/placeholders/avatars/vinay-donakanti.webp`
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Vinay Shyam Donakanti - Research Data Analyst Intern",
+          description: "Research Data Analyst Intern — Educational Data Analysis, Machine Learning, and Data Pipeline Development.",
+          image: `${SITE_URL}/src/assets/placeholders/avatars/vinay-donakanti.webp`
         }
       },
       schemas: [
@@ -5262,7 +5269,8 @@ const siteContent = {
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
             { "@type": "ListItem", position: 2, name: "Governance", item: `${SITE_URL}/governance` },
-            { "@type": "ListItem", position: 3, name: "Vinay Shyam Donakanti", item: `${SITE_URL}/governance/team/vinay-shyam-donakanti` }
+            { "@type": "ListItem", position: 3, name: "Team", item: `${SITE_URL}/team` },
+            { "@type": "ListItem", position: 4, name: "Vinay Shyam Donakanti", item: `${SITE_URL}/governance/team/vinay-shyam-donakanti` }
           ]
         }
       ],
@@ -5319,13 +5327,13 @@ const siteContent = {
           id: "profile-origin",
           type: "textBlock",
           header: "The Origin of Inquiry",
-          body: "The insight came during his first year of engineering, stuck on an algorithm problem. After hours of frustration, he took a walk and found himself watching children in a nearby park.\n\n\"They were solving complex coordination problems — who goes first, how to share limited resources, how to modify rules when they didn't work. They were debugging their play in real-time, iterating on solutions, learning from failures without the paralysis of perfectionism that had kept me stuck.\"\n\nThat moment reframed everything. Learning, he realized, happens naturally when we create the right environment for inquiry."
+          body: "The insight came during his first year of engineering, stuck on an algorithm problem. After hours of frustration, he took a walk and found himself watching children in a nearby park.\n\n\"They were solving complex coordination problems — who goes first, how to share limited resources, how to modify rules when they didn't work. They were debugging their play in real-time, iterating on solutions, learning from failures without the paralysis of perfectionism that had kept me stuck.\"\n\nThat moment reframed everything. Learning, he realized, happens naturally when we create the right environment for inquiry. The children weren't following a curriculum. They were doing what humans do when not constrained by formal structures: experimenting, failing, adjusting, trying again."
         },
         {
           id: "profile-truth",
           type: "textBlock",
           header: "The Uncomfortable Truth",
-          body: "\"Most of what we call 'learning difficulties' are actually data interpretation problems — we're measuring the wrong things, or measuring the right things in the wrong ways.\"\n\nA child who struggles with traditional math tests might be brilliant at spatial reasoning or pattern recognition, but our measurement systems are too crude to capture it. The problem isn't the child — it's our metrics."
+          body: "\"Most of what we call 'learning difficulties' are actually data interpretation problems — we're measuring the wrong things, or measuring the right things in the wrong ways.\"\n\nA child who struggles with traditional math tests might be brilliant at spatial reasoning or pattern recognition, but our measurement systems are too crude to capture it. The problem isn't the child — it's our metrics. If we spent half the energy we put into standardizing assessments into developing richer, multi-dimensional measurement tools, we'd discover that far more children are \"gifted\" than we currently recognize — just not in the ways our systems are designed to see."
         },
         {
           id: "profile-obsession",
@@ -5337,7 +5345,7 @@ const siteContent = {
           id: "profile-mystery",
           type: "textBlock",
           header: "The Vital Mystery",
-          body: "If given unlimited resources, he would investigate how children develop their internal models of how the world works — and how those models evolve through experience.\n\n\"We have massive datasets on what children learn — test scores, milestones — but remarkably little on how they learn. The actual cognitive processes. The moment-by-moment sense-making. The theories they construct and revise. I'd want to track not just outcomes but the learning process itself, using observational data, think-aloud protocols, maybe even neuroscience.\""
+          body: "If given unlimited resources, he would investigate how children develop their internal models of how the world works — and how those models evolve through experience.\n\n\"We have massive datasets on what children learn — test scores, milestones — but remarkably little on how they learn. The actual cognitive processes. The moment-by-moment sense-making. The theories they construct and revise. I'd want to track not just outcomes but the learning process itself, using observational data, think-aloud protocols, maybe even neuroscience. The goal would be to understand learning as it actually happens — not just as we've designed our systems to measure it.\""
         },
         {
           id: "profile-at-bb",
