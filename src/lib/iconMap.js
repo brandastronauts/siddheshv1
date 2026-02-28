@@ -46,6 +46,7 @@ const iconMap = {
   // People / Teams
   users: Users,
   user: Users,
+  team: Users,
   userCheck: UserCheck,
   graduation: GraduationCap,
   briefcase: Briefcase,
