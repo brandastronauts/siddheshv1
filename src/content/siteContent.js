@@ -5688,7 +5688,7 @@ const siteContent = {
           image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar" },
           email: "research@blueblocks.in",
           socials: [],
-          bio: "Integrates Montessori pedagogy with structured research documentation in the Elementary environment. Contributes to interdisciplinary observation protocols, developmental research alignment, and nature-integrated inquiry frameworks."
+          bio: "Integrates Montessori pedagogy with ecological inquiry, asking children not merely to learn about the world but to learn from it. AMI-trained Elementary Guide and biomimicry educator embedding ecological inquiry within the Montessori environment."
         },
         {
           id: "profile-pullquote",
@@ -5699,8 +5699,51 @@ const siteContent = {
         {
           id: "profile-content",
           type: "textBlock",
-          header: "Biography",
-          body: "Sandhya Rao M integrates Montessori pedagogy with structured research documentation in the Elementary environment. With credentials in both AMI Elementary methodology and Community-Based Rehabilitation (M.P.T.), she brings a unique interdisciplinary perspective to the institute's research infrastructure.\n\nHer work focuses on developing observation protocols that capture the richness of child-led inquiry without disrupting the natural flow of the classroom. She contributes to developmental research alignment and nature-integrated inquiry frameworks, ensuring that research and pedagogy reinforce rather than compete with each other."
+          header: "About Sandhya Rao M",
+          body: "Sandhya Rao's research begins not in laboratories but in landscapes — in the geometry of leaves, the resilience of termite mounds, and the quiet intelligence embedded in natural systems. As an AMI-trained Elementary Guide and biomimicry educator, she integrates Montessori pedagogy with ecological inquiry, asking children not merely to learn about the world but to learn from it.\n\nHer work is grounded in a simple but profound shift: the child is not a passive recipient of information but an active ecological observer. Nature becomes both classroom and co-teacher."
+        },
+        {
+          id: "profile-lens",
+          type: "textBlock",
+          header: "The Researcher's Lens: The Child as Ecological Observer",
+          body: "During a biomimicry session, she watched a group of children studying a beehive structure. What began as fascination with symmetry evolved into questions about labor distribution, collective intelligence, and environmental adaptation. No worksheet prompted these inquiries. They emerged naturally.\n\n\"Children don't need to be told that nature holds answers,\" she reflects. \"They sense it. Our task is to protect that instinct.\"\n\nShe views children as pattern-recognizers long before formal scientific language is introduced. When allowed extended observation, they detect efficiencies, redundancies, and feedback loops within natural systems."
+        },
+        {
+          id: "profile-origin",
+          type: "textBlock",
+          header: "The Origin of Inquiry: Rehabilitation and Systems Thinking",
+          body: "Her background in community-based rehabilitation shaped her understanding of systems — human systems, environmental systems, adaptive systems. She saw how small environmental shifts could dramatically alter human outcomes. Accessibility was not only physical but relational and ecological.\n\nThat insight translated into education. The classroom, like an ecosystem, either supports growth or inhibits it. Observation must therefore include environmental design, social interaction, and emotional climate."
+        },
+        {
+          id: "profile-truth",
+          type: "textBlock",
+          header: "The Uncomfortable Truth",
+          body: "\"Education often separates children from the very systems that sustain them.\"\n\nBy isolating knowledge into subjects and assessments, we risk producing learners who understand theories but not interdependence. True understanding requires immersion — slow observation, failure, iteration.\n\nChildren who spend hours observing ants or sketching leaf veins are not \"off task.\" They are building systems literacy."
+        },
+        {
+          id: "profile-focus",
+          type: "textBlock",
+          header: "Current Focus: Biomimetic Thinking",
+          body: "Her current inquiry explores how biomimicry can serve as a foundational thinking framework in elementary years. Rather than teaching isolated scientific facts, she introduces children to principles: adaptation, resilience, feedback loops, energy efficiency.\n\nThe goal is not to memorize biological structures but to internalize systems logic."
+        },
+        {
+          id: "profile-mystery",
+          type: "textBlock",
+          header: "The Vital Mystery",
+          body: "If given unlimited resources, she would investigate how early ecological immersion influences long-term systems thinking in adulthood.\n\nDoes a child who studies natural patterns deeply become an adult who designs more sustainably? Can systems literacy interrupt extractive mental models?"
+        },
+        {
+          id: "profile-at-bb",
+          type: "textBlock",
+          header: "At Blue Blocks",
+          body: "She embeds ecological inquiry within the Montessori elementary environment, ensuring that research documentation does not disrupt authentic exploration. Observation records capture not just outcomes but processes — how children form hypotheses, revise them, and collaborate.\n\nHer work strengthens the bridge between pedagogy and research, ensuring that inquiry remains child-led and ecologically grounded."
+        },
+        {
+          id: "profile-credentials",
+          type: "textBlock",
+          header: "Credentials & Experience",
+          body: "• AMI Elementary Diploma\n• M.P.T. Community-Based Rehabilitation\n• Biomimicry Education & Ecological Systems Facilitation\n• Montessori Elementary Guide"
+        }
         },
         {
           id: "profile-related",
@@ -5777,7 +5820,7 @@ const siteContent = {
           image: { src: "/src/assets/placeholders/avatars/sreemoyee-chakraborty.webp", alt: "Dr. Sreemoyee Chakraborty", variant: "avatar" },
           email: "research@blueblocks.in",
           socials: [],
-          bio: "Leads fossil-based STEM research modules and scientific inquiry frameworks within the institute. Contributes domain expertise in paleoclimate interpretation, geological data modeling, and child-led scientific investigation design."
+          bio: "Her doctoral work in palaeontology examined ancient climatic shifts and evolutionary transitions, decoding patterns written millions of years before human memory. At Blue Blocks, she translates deep time into living inquiry."
         },
         {
           id: "profile-pullquote",
@@ -5788,8 +5831,51 @@ const siteContent = {
         {
           id: "profile-content",
           type: "textBlock",
-          header: "Biography",
-          body: "Dr. Sreemoyee Chakraborty leads fossil-based STEM research modules and scientific inquiry frameworks at Blue Blocks Micro Research Institute. With a PhD in Palaeontology from ISI / University of Calcutta, she brings deep domain expertise in paleoclimate interpretation, geological data modeling, and the design of child-led scientific investigations.\n\nHer work bridges the gap between advanced earth science research and accessible, inquiry-driven learning experiences. She designs STEM modules that allow students to engage with real geological data, fossil records, and paleoclimate evidence — transforming abstract scientific concepts into tangible research opportunities."
+          header: "About Dr. Sreemoyee Chakraborty",
+          body: "Dr. Sreemoyee Chakraborty's research journey began with fossils — fragments of life embedded in rock, silent witnesses to planetary transformation. Her doctoral work in palaeontology examined ancient climatic shifts and evolutionary transitions, decoding patterns written millions of years before human memory.\n\nAt Blue Blocks, she translates deep time into living inquiry."
+        },
+        {
+          id: "profile-lens",
+          type: "textBlock",
+          header: "The Researcher's Lens: Time as Teacher",
+          body: "While guiding children through fossil studies, she noticed something profound: children intuitively grasp geological scale when given tangible artifacts. A fossil shell in their hand becomes evidence of transformation, extinction, adaptation.\n\n\"They understand change,\" she reflects. \"They just need evidence.\"\n\nShe sees children as natural temporal thinkers. When exposed to Earth's history, they ask larger questions about resilience and fragility."
+        },
+        {
+          id: "profile-origin",
+          type: "textBlock",
+          header: "The Origin of Inquiry",
+          body: "Her fascination with Earth systems began in childhood, collecting rocks without knowing their names. That curiosity matured into formal research on paleoclimate reconstruction — studying sediment layers, isotopic signatures, fossil assemblages.\n\nThe deeper she studied, the more she recognized that Earth's history is a record of adaptation under stress."
+        },
+        {
+          id: "profile-truth",
+          type: "textBlock",
+          header: "The Uncomfortable Truth",
+          body: "\"Climate narratives are often abstract. But extinction is not abstract.\"\n\nWhen children learn about mass extinction events, they confront consequence. Not as fear — but as evidence. The planet has shifted before. Species have vanished. Systems have collapsed and reformed.\n\nThe uncomfortable truth is that systems respond to imbalance — eventually."
+        },
+        {
+          id: "profile-focus",
+          type: "textBlock",
+          header: "Current Inquiry: Earth Systems Thinking",
+          body: "Her focus is integrating Earth system science into early STEM education. She explores how geological inquiry can build systems awareness, climate literacy, and scientific reasoning.\n\nChildren who understand sedimentation understand accumulation. Children who understand extinction understand interdependence."
+        },
+        {
+          id: "profile-mystery",
+          type: "textBlock",
+          header: "The Vital Mystery",
+          body: "If given unlimited resources, she would study how early exposure to deep-time thinking influences environmental decision-making in adulthood.\n\nDoes geological literacy produce ecological responsibility? Can early fossil study cultivate long-term stewardship?"
+        },
+        {
+          id: "profile-at-bb",
+          type: "textBlock",
+          header: "At Blue Blocks",
+          body: "She leads fossil-based STEM modules and Earth science inquiry, ensuring scientific rigor while preserving child-led exploration. Her work bridges academic geology and Montessori pedagogy — transforming ancient evidence into living investigation."
+        },
+        {
+          id: "profile-credentials",
+          type: "textBlock",
+          header: "Selected Publications & Research",
+          body: "• PhD Research — Palaeoclimate Reconstruction and Fossil Assemblages\n• Geological Data Modeling & Sediment Analysis\n• Earth Systems Interpretation"
+        }
         },
         {
           id: "profile-related",
@@ -5866,7 +5952,7 @@ const siteContent = {
           image: { src: "/src/assets/placeholders/avatars/shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "avatar" },
           email: "research@blueblocks.in",
           socials: [],
-          bio: "Provides research oversight in biological sciences, laboratory methodologies, and adolescent-level scientific investigation. Supports integration of microbiology, biochemistry, and environmental inquiry within the Erdkinder research framework."
+          bio: "Her scientific inquiry began with a simple childhood question about bread mould. That curiosity matured into doctoral research in plant sciences, focusing on biochemical pathways and microbial systems. At Blue Blocks, she introduces adolescents to the invisible architectures of life."
         },
         {
           id: "profile-pullquote",
@@ -5877,8 +5963,51 @@ const siteContent = {
         {
           id: "profile-content",
           type: "textBlock",
-          header: "Biography",
-          body: "Dr. Shobha Ediga provides research oversight in biological sciences, laboratory methodologies, and adolescent-level scientific investigation at Blue Blocks Micro Research Institute. With a PhD in Plant Sciences from the University of Hyderabad, she brings deep expertise in microbiology, biochemistry, and environmental inquiry.\n\nHer work focuses on integrating rigorous scientific methodology within the Erdkinder (adolescent) research framework — designing laboratory experiences and investigation protocols that allow students aged 12-18 to engage with real biological research questions. She ensures that the institute's scientific investigations meet academic standards while remaining accessible and meaningful to young researchers."
+          header: "About Dr. Shobha Ediga",
+          body: "Dr. Shobha Ediga's scientific inquiry began with a simple childhood question about bread mould — why it appears, how it spreads, and what invisible processes govern visible decay. That curiosity matured into doctoral research in plant sciences, focusing on biochemical pathways and microbial systems.\n\nAt Blue Blocks, she introduces adolescents to the invisible architectures of life."
+        },
+        {
+          id: "profile-lens",
+          type: "textBlock",
+          header: "The Researcher's Lens: The Invisible as Evidence",
+          body: "In laboratory sessions, she guides students to observe microbial cultures — colonies forming from what appears to be emptiness. The lesson is not merely biological; it is epistemological.\n\n\"Just because you cannot see it does not mean it is not shaping outcomes.\"\n\nChildren quickly grasp that ecosystems extend beyond visible organisms."
+        },
+        {
+          id: "profile-origin",
+          type: "textBlock",
+          header: "The Origin of Inquiry",
+          body: "Her academic training at the University of Hyderabad immersed her in plant biochemistry, molecular processes, and environmental interactions. She studied how microscopic shifts in cellular processes produce macroscopic change.\n\nThat systems awareness informs her mentorship of adolescent researchers."
+        },
+        {
+          id: "profile-truth",
+          type: "textBlock",
+          header: "The Uncomfortable Truth",
+          body: "\"Biology is not neat.\"\n\nLaboratory experiments fail. Cultures contaminate. Hypotheses collapse. The romantic narrative of science rarely includes iteration and error. Yet it is precisely through error that biological understanding deepens."
+        },
+        {
+          id: "profile-focus",
+          type: "textBlock",
+          header: "Current Focus: Adolescent Scientific Inquiry",
+          body: "She focuses on integrating rigorous biological experimentation into the Erdkinder framework. Adolescents design investigations into microbiology, plant systems, and environmental biochemistry — documenting not just results but method.\n\nScientific literacy becomes experiential rather than theoretical."
+        },
+        {
+          id: "profile-mystery",
+          type: "textBlock",
+          header: "The Vital Mystery",
+          body: "If granted unlimited resources, she would investigate how early exposure to laboratory experimentation influences long-term scientific resilience.\n\nDoes encountering controlled failure in adolescence build stronger scientific reasoning in adulthood?"
+        },
+        {
+          id: "profile-at-bb",
+          type: "textBlock",
+          header: "At Blue Blocks",
+          body: "She provides biological research oversight, ensuring laboratory methodology meets academic standards while remaining accessible to adolescent investigators. Her mentorship bridges formal scientific training and Montessori independence."
+        },
+        {
+          id: "profile-credentials",
+          type: "textBlock",
+          header: "Research Experience & Expertise",
+          body: "• PhD — Plant Sciences, University of Hyderabad\n• Microbiology & Biochemical Systems\n• Laboratory Methodology & Adolescent Mentorship\n• Environmental Inquiry Integration"
+        }
         },
         {
           id: "profile-related",
