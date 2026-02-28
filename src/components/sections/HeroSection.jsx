@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom';
-import { motion, LazyMotion, domAnimation } from 'framer-motion';
-import HeroBackground from '../common/HeroBackground';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { boldifyText } from '../../lib/boldifyText';
 
@@ -97,33 +95,31 @@ const HeroSection = ({
 
       <div className={`container-grid relative z-10 ${isCompact ? 'pt-20 pb-6 md:py-8' : 'pt-24 pb-12 md:py-16'}`}>
         <div className={`${isCompact ? 'max-w-5xl' : 'max-w-4xl'} mx-auto text-center`}>
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}
-            className={`font-bold mb-4 text-balance leading-[1.1] text-white ${
+          <h1
+            className={`hero-fade-in font-bold mb-4 text-balance leading-[1.1] text-white ${
               isCompact ? 'text-[22px] md:text-[32px]' : 'text-[34px] md:text-[52px]'
             }`}
-            style={{ textShadow: '0 2px 14px rgba(0,0,0,0.55)' }}
+            style={{ textShadow: '0 2px 14px rgba(0,0,0,0.55)', animationDelay: '0.05s' }}
           >
             {title}
-          </motion.h1>
+          </h1>
           
           {subtitle && (
-            <motion.p
-              initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
-              className={`mb-6 max-w-3xl mx-auto leading-relaxed whitespace-pre-line ${
+            <p
+              className={`hero-fade-in mb-6 max-w-3xl mx-auto leading-relaxed whitespace-pre-line ${
                 isCompact ? 'text-sm md:text-base text-white/75' : 'text-base md:text-lg text-white/85'
               }`}
-              style={{ textShadow: '0 2px 14px rgba(0,0,0,0.55)' }}
+              style={{ textShadow: '0 2px 14px rgba(0,0,0,0.55)', animationDelay: '0.15s' }}
             >
               {boldifyText(subtitle)}
-            </motion.p>
+            </p>
           )}
           
           {(mainCta || altCta) && (
-            <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.3 }} className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="hero-fade-in flex flex-col sm:flex-row gap-4 justify-center" style={{ animationDelay: '0.25s' }}>
               <HeroCta ctaData={mainCta} isPrimary={true} />
               <HeroCta ctaData={altCta} isPrimary={false} />
-            </motion.div>
+            </div>
           )}
         </div>
       </div>
