@@ -38,6 +38,12 @@ import logoPlaceholder from '@/assets/placeholders/logos/logo-placeholder.png';
 import pavanImg from '@/assets/placeholders/avatars/pavan.webp';
 import muniraImg from '@/assets/placeholders/avatars/munira.jpg';
 import directorPlaceholderImg from '@/assets/placeholders/avatars/director-placeholder.jpg';
+import vinayImg from '@/assets/placeholders/avatars/vinay-donakanti.webp';
+import sreedharImg from '@/assets/placeholders/avatars/sreedhar-boddu.webp';
+import sandhyaImg from '@/assets/placeholders/avatars/sandhya-rao.webp';
+import sreemoyeeImg from '@/assets/placeholders/avatars/sreemoyee-chakraborty.webp';
+import shobhaImg from '@/assets/placeholders/avatars/shobha-ediga.webp';
+import sruthiImg from '@/assets/placeholders/avatars/sruthi-matta.webp';
 
 // Import visual evidence images
 import avionicsRig1 from '@/assets/placeholders/visual-evidence/avionics-rig-1.jpg';
@@ -65,6 +71,12 @@ const imageMap = {
   '/src/assets/placeholders/avatars/munira.jpg': muniraImg,
   '/src/assets/placeholders/avatars/director-placeholder.jpg': directorPlaceholderImg,
   '/src/assets/placeholders/avatars/advisor-placeholder.jpg': advisorPlaceholder,
+  '/src/assets/placeholders/avatars/vinay-donakanti.webp': vinayImg,
+  '/src/assets/placeholders/avatars/sreedhar-boddu.webp': sreedharImg,
+  '/src/assets/placeholders/avatars/sandhya-rao.webp': sandhyaImg,
+  '/src/assets/placeholders/avatars/sreemoyee-chakraborty.webp': sreemoyeeImg,
+  '/src/assets/placeholders/avatars/shobha-ediga.webp': shobhaImg,
+  '/src/assets/placeholders/avatars/sruthi-matta.webp': sruthiImg,
   '/src/assets/placeholders/avatars/headshot-1.jpg': headshot1,
   '/src/assets/placeholders/avatars/headshot-2.jpg': headshot2,
   '/src/assets/placeholders/avatars/headshot-3.jpg': headshot3,
