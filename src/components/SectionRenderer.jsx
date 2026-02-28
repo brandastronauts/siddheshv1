@@ -108,6 +108,64 @@ const components = {
   dossierRelated: LazyDossier.DossierRelatedSection,
 };
 
+// ── Section prop defaults (prevent blank renders from missing optional props) ──
+const sectionDefaults = {
+  cards:        { items: [], cards: [] },
+  grid3:        { items: [] },
+  list:         { items: [] },
+  libraryCards: { items: [], cards: [] },
+  buttonCards:  { items: [], cards: [] },
+  relatedCards: { header: 'Related', cards: [] },
+  toolCards:    { tools: [] },
+  tierCards:    { tiers: [] },
+  numberedCards:{ items: [] },
+  checklist:    { items: [] },
+  tableBlock:   { headers: [], rows: [] },
+  timelineSteps:{ steps: [] },
+  patentGrid:   { cards: [], patents: [] },
+  accordion:    { items: [] },
+  glossaryAccordion: { groups: [] },
+  statsBar:     { stats: [] },
+  timeline:     { items: [] },
+  downloadList: { items: [] },
+  galleryGrid:  { images: [] },
+  pricing:      { columns: [] },
+  logoStrip:    { logos: [] },
+  metaStrip:    { items: [] },
+};
+
+// ── Dev-only section prop validation ──
+const sectionRequiredProps = {
+  hero:         ['headline'],
+  textBlock:    ['body'],
+  cards:        ['items|cards'],
+  grid3:        ['items'],
+  numberedCards:['items'],
+  tierCards:    ['tiers'],
+  toolCards:    ['tools'],
+  tableBlock:   ['headers', 'rows'],
+  timelineSteps:['steps'],
+};
+
+const validateSection = (type, props, index) => {
+  if (import.meta.env.PROD) return;
+  const required = sectionRequiredProps[type];
+  if (!required) return;
+
+  required.forEach(key => {
+    const keys = key.split('|'); // Support "items|cards" alternatives
+    const hasAny = keys.some(k => {
+      const val = props[k];
+      return val !== undefined && val !== null && val !== '' && (!Array.isArray(val) || val.length > 0);
+    });
+    if (!hasAny) {
+      console.warn(
+        `⚠️ [SectionRenderer] Section #${index} (type="${type}") is missing required prop: "${key}". This may render blank.`
+      );
+    }
+  });
+};
+
 const SectionRenderer = ({ sections }) => {
   if (!sections || !Array.isArray(sections)) {
     return null;
@@ -129,9 +187,16 @@ const SectionRenderer = ({ sections }) => {
       );
     }
 
+    // Apply defaults for missing optional props
+    const defaults = sectionDefaults[type] || {};
+    const mergedProps = { ...defaults, ...props };
+
+    // Dev-only validation
+    validateSection(type, mergedProps, index);
+
     // Hero renders eagerly (no Suspense wrapper, no motion delay)
     if (type === 'hero') {
-      return <Component key={index} {...props} />;
+      return <Component key={index} {...mergedProps} />;
     }
 
     return (
@@ -143,7 +208,7 @@ const SectionRenderer = ({ sections }) => {
           transition={{ duration: 0.5, delay: Math.min(index * 0.05, 0.3) }}
           variants={sectionVariants}
         >
-          <Component {...props} />
+          <Component {...mergedProps} />
         </motion.div>
       </Suspense>
     );
