@@ -5636,7 +5636,7 @@ const siteContent = {
 
     "/governance/team/sandhya-rao-m": {
       title: "Sandhya Rao M",
-      metaDescription: "AMI Elementary Guide and Biomimicry Educator — Research Team.",
+      metaDescription: "AMI Elementary Guide; Biomimicry Educator; Research Team. AMI Elementary Diploma; Biomimicry Foundation (Biomimicry Institute); M.P.T. in Community-Based Rehabilitation.",
       seo: {
         title: "Sandhya Rao M | Governance Team | Blue Blocks Micro Research Institute",
         canonical: `${SITE_URL}/governance/team/sandhya-rao-m`,
@@ -5644,8 +5644,8 @@ const siteContent = {
         openGraph: {
           type: "profile",
           url: `${SITE_URL}/governance/team/sandhya-rao-m`,
-          title: "Sandhya Rao M - AMI Elementary Guide",
-          description: "AMI Elementary Guide and Biomimicry Educator — Research Team."
+          title: "Sandhya Rao M - AMI Elementary Guide; Biomimicry Educator",
+          description: "AMI Elementary Guide; Biomimicry Educator; Research Team. AMI Elementary Diploma; Biomimicry Foundation (Biomimicry Institute); M.P.T. in Community-Based Rehabilitation."
         }
       },
       schemas: [
@@ -5655,7 +5655,8 @@ const siteContent = {
           name: "Sandhya Rao M",
           url: `${SITE_URL}/governance/team/sandhya-rao-m`,
           jobTitle: "AMI Elementary Guide; Biomimicry Educator",
-          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
+          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          description: "AMI Elementary Guide; Biomimicry Educator; Research Team. AMI Elementary Diploma; Biomimicry Foundation (Biomimicry Institute); M.P.T. in Community-Based Rehabilitation."
         },
         {
           "@context": "https://schema.org",
@@ -5663,7 +5664,8 @@ const siteContent = {
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
             { "@type": "ListItem", position: 2, name: "Governance", item: `${SITE_URL}/governance` },
-            { "@type": "ListItem", position: 3, name: "Sandhya Rao M", item: `${SITE_URL}/governance/team/sandhya-rao-m` }
+            { "@type": "ListItem", position: 3, name: "Team", item: `${SITE_URL}/team` },
+            { "@type": "ListItem", position: 4, name: "Sandhya Rao M", item: `${SITE_URL}/governance/team/sandhya-rao-m` }
           ]
         }
       ],
@@ -5673,7 +5675,7 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "Sandhya Rao M",
-          subheadline: "AMI Elementary Guide; Biomimicry Educator; Research Team.",
+          subheadline: "AMI Elementary Guide; Biomimicry Educator; Research Team",
           primaryCta: { label: "Contact", href: "mailto:research@blueblocks.in" },
           secondaryCta: { label: "Back to Team", href: "/team" },
           image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "hero" }
@@ -5682,75 +5684,80 @@ const siteContent = {
           id: "profile-meta",
           type: "metaStrip",
           items: [
-            { label: "Role", value: "AMI Elementary Guide" },
-            { label: "Training", value: "AMI Diploma; M.P.T." },
-            { label: "Focus", value: "Biomimicry Education" },
-            { label: "Specialization", value: "Elementary Environment" }
+            { label: "Role", value: "AMI Elementary Guide; Biomimicry Educator; Research Team" },
+            { label: "Training", value: "AMI Elementary Diploma; AMI Core Principles; AMI School Leadership; Biomimicry Foundation (Biomimicry Institute)" },
+            { label: "Prior Field", value: "M.P.T. in Community-Based Rehabilitation; B.P.T. in Physiotherapy" }
           ]
         },
         {
           id: "profile-card",
           type: "profile",
           name: "Sandhya Rao M",
-          role: "AMI Elementary Guide; Biomimicry Educator",
+          role: "AMI Elementary Guide; Biomimicry Educator; Research Team",
           image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar" },
           email: "research@blueblocks.in",
           socials: [],
-          bio: "Integrates Montessori pedagogy with ecological inquiry, asking children not merely to learn about the world but to learn from it. AMI-trained Elementary Guide and biomimicry educator embedding ecological inquiry within the Montessori environment."
+          bio: "Sandhya Rao's path to education began in an unexpected place: community health. As a physiotherapist researching quality of life among HIV/AIDS patients in Karnataka, she learned to listen — to enter difficult spaces, ask sensitive questions, and document what others overlooked. Now an AMI-trained Elementary guide and certified Biomimicry educator, she works at the intersection of two disciplines that share a common premise: the world is already full of solutions."
         },
         {
           id: "profile-pullquote",
           type: "textBlock",
           header: "",
-          body: "> \"What is my task then in this world?\""
+          body: "> \"What is my task then in this world?\"\n\n— A 12-year-old's response to a story about cosmic purpose"
         },
         {
           id: "profile-content",
           type: "textBlock",
-          header: "About Sandhya Rao M",
-          body: "Sandhya Rao's research begins not in laboratories but in landscapes — in the geometry of leaves, the resilience of termite mounds, and the quiet intelligence embedded in natural systems. As an AMI-trained Elementary Guide and biomimicry educator, she integrates Montessori pedagogy with ecological inquiry, asking children not merely to learn about the world but to learn from it.\n\nHer work is grounded in a simple but profound shift: the child is not a passive recipient of information but an active ecological observer. Nature becomes both classroom and co-teacher."
+          header: "",
+          body: "Sandhya Rao's path to education began in an unexpected place: community health. As a physiotherapist researching quality of life among HIV/AIDS patients in Karnataka, she learned to listen — to enter difficult spaces, ask sensitive questions, and document what others overlooked. That early research, conducted through NGOs and community surveys in English and Kannada, taught her that the most important data often comes from those society underestimates.\n\nShe carried that instinct into the classroom. Now an AMI-trained Elementary guide and certified Biomimicry educator, she works at the intersection of two disciplines that share a common premise: the world is already full of solutions — in nature's designs, and in children's questions. \"Research in Montessori,\" she observes, \"is cosmic. Botany meets geometry. Math meets biology. Data becomes interconnected, not siloed.\"\n\n\"Adults don't believe children can research. Their imagination can be nurtured to think beyond worldly constraints — but we have to stop imposing adult-centric limits first.\""
         },
         {
           id: "profile-lens",
           type: "textBlock",
-          header: "The Researcher's Lens: The Child as Ecological Observer",
-          body: "During a biomimicry session, she watched a group of children studying a beehive structure. What began as fascination with symmetry evolved into questions about labor distribution, collective intelligence, and environmental adaptation. No worksheet prompted these inquiries. They emerged naturally.\n\n\"Children don't need to be told that nature holds answers,\" she reflects. \"They sense it. Our task is to protect that instinct.\"\n\nShe views children as pattern-recognizers long before formal scientific language is introduced. When allowed extended observation, they detect efficiencies, redundancies, and feedback loops within natural systems."
+          header: "The Researcher's Lens: The Child as Scientist",
+          body: "She tells a story about six-year-olds. She had just narrated the Montessori \"Leaf as Food Factory\" lesson — describing photosynthesis as tiny workers inside the leaf, mixing water and air, baking them in sunlight to make food for the plant.\n\nThe moment the session ended, the children scattered across the elementary environment with magnifying glasses, peering at every plant they could find. They were looking for the workers.\n\n\"That blew my mind,\" she recalls. \"I never thought to check. I never thought to pretend. But they did — immediately, instinctively. That's research. That's the scientific impulse before we train it out of them.\""
         },
         {
-          id: "profile-origin",
+          id: "profile-question",
           type: "textBlock",
-          header: "The Origin of Inquiry: Rehabilitation and Systems Thinking",
-          body: "Her background in community-based rehabilitation shaped her understanding of systems — human systems, environmental systems, adaptive systems. She saw how small environmental shifts could dramatically alter human outcomes. Accessibility was not only physical but relational and ecological.\n\nThat insight translated into education. The classroom, like an ecosystem, either supports growth or inhibits it. Observation must therefore include environmental design, social interaction, and emotional climate."
+          header: "The Question That Stayed",
+          body: "During another lesson — the Great Story of the Fruit and the Seed — she told a group of 12-year-olds about the fruit's \"cosmic task\": to protect the seed until it can become a new plant. The fruit exists to serve something beyond itself.\n\nOne child looked up and asked: \"What is my task then in this world?\"\n\n\"I couldn't imagine,\" she says, \"that this story could spark that question. But this is what every child should be asking. This is what a school — a guide — should aim at. Not answers. The right questions.\""
         },
         {
           id: "profile-truth",
           type: "textBlock",
           header: "The Uncomfortable Truth",
-          body: "\"Education often separates children from the very systems that sustain them.\"\n\nBy isolating knowledge into subjects and assessments, we risk producing learners who understand theories but not interdependence. True understanding requires immersion — slow observation, failure, iteration.\n\nChildren who spend hours observing ants or sketching leaf veins are not \"off task.\" They are building systems literacy."
+          body: "\"Adults don't believe that children can research. We underestimate them — and then we're surprised when they exceed our expectations.\"\n\nHer observation is simple but radical: children's imagination can be nurtured to think beyond worldly constraints — but only if adults stop imposing adult-centric limits first. The barrier to child-led research is not children's capacity. It's adult belief."
         },
         {
-          id: "profile-focus",
+          id: "profile-biomimicry",
           type: "textBlock",
-          header: "Current Focus: Biomimetic Thinking",
-          body: "Her current inquiry explores how biomimicry can serve as a foundational thinking framework in elementary years. Rather than teaching isolated scientific facts, she introduces children to principles: adaptation, resilience, feedback loops, energy efficiency.\n\nThe goal is not to memorize biological structures but to internalize systems logic."
+          header: "The Biomimicry Lens",
+          body: "As a certified Biomimicry educator, Sandhya sees the natural world as a library of solved problems. Every form, shape, and structure in nature is an answer to a design question that evolution has been refining for millions of years. This lens shapes how she observes both ecosystems and children.\n\n\"The way children think and respond during stories and in-depth work is very interesting for me,\" she says. \"Nature doesn't separate disciplines — and neither do children, until we teach them to. In Montessori, botany meets geometry. Math meets zoology. That integration isn't artificial. It's how the world actually works.\""
+        },
+        {
+          id: "profile-obsession",
+          type: "textBlock",
+          header: "Current Obsession: Leadership and Parenting in Nature",
+          body: "Her intellectual focus spans two related territories: how leadership and parenting manifest in the natural world, and what parents actually want from schooling. She's interested in the gap between what families say they value and what educational systems deliver — and whether nature offers models we've overlooked."
         },
         {
           id: "profile-mystery",
           type: "textBlock",
           header: "The Vital Mystery",
-          body: "If given unlimited resources, she would investigate how early ecological immersion influences long-term systems thinking in adulthood.\n\nDoes a child who studies natural patterns deeply become an adult who designs more sustainably? Can systems literacy interrupt extractive mental models?"
+          body: "If given unlimited resources, she would investigate the human capacities that matter most for future generations: attention span, empathy, tolerance. How are these changing? How connected are parents and children to nature — and does that connection predict anything about resilience, creativity, or wellbeing?\n\n\"We measure academic outcomes obsessively,\" she observes. \"But we rarely ask: Are children becoming more attentive? More empathetic? More tolerant? These are the capacities that will determine whether the next generation can solve problems we can't even name yet.\""
         },
         {
           id: "profile-at-bb",
           type: "textBlock",
           header: "At Blue Blocks",
-          body: "She embeds ecological inquiry within the Montessori elementary environment, ensuring that research documentation does not disrupt authentic exploration. Observation records capture not just outcomes but processes — how children form hypotheses, revise them, and collaborate.\n\nHer work strengthens the bridge between pedagogy and research, ensuring that inquiry remains child-led and ecologically grounded."
+          body: "She serves as an AMI Elementary guide, bringing Montessori's integrated, \"cosmic\" approach to research alongside her Biomimicry training. Her role is to create conditions where children's questions lead — where a story about seeds can become an inquiry into purpose, and a lesson about leaves can send six-year-olds hunting for invisible workers with magnifying glasses.\n\n\"All the knowledge and insights I have from working with children,\" she says, \"help me see this data as a rich resource for learning. Not data about children. Data from children — which is a different thing entirely.\""
         },
         {
           id: "profile-credentials",
           type: "textBlock",
-          header: "Credentials & Experience",
-          body: "• AMI Elementary Diploma\n• M.P.T. Community-Based Rehabilitation\n• Biomimicry Education & Ecological Systems Facilitation\n• Montessori Elementary Guide"
+          header: "Credentials & Training",
+          body: "• AMI Elementary Diploma — Association Montessori Internationale\n• AMI Montessori Core Principles Certification\n• AMI School Leadership Course\n• Biomimicry Foundation Course — Biomimicry Institute\n• Master of Physiotherapy (M.P.T.) — Community-Based Rehabilitation\n• Bachelor of Physiotherapy (B.P.T.)\n• Master's Thesis: Impact on Quality of Life among HIV/AIDS Individuals (Karnataka, India)"
         },
         {
           id: "profile-related",
