@@ -5948,7 +5948,7 @@ const siteContent = {
           subheadline: "Microbiological & Biochemical Research Lead; Erdkinder Biology Mentor",
           primaryCta: { label: "Contact", href: "mailto:research@blueblocks.in" },
           secondaryCta: { label: "Back to Team", href: "/team" },
-          image: { src: "/team/dr-shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "hero" }
+          image: { src: "/src/assets/placeholders/avatars/shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "hero" }
         },
         {
           id: "profile-meta",
@@ -5964,7 +5964,7 @@ const siteContent = {
           type: "profile",
           name: "Dr. Shobha Ediga",
           role: "Microbiological & Biochemical Research Lead; Erdkinder Biology Mentor",
-          image: { src: "/team/dr-shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "avatar" },
+          image: { src: "/src/assets/placeholders/avatars/shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "avatar" },
           email: "research@blueblocks.in",
           socials: [],
           bio: "Dr. Shobha Ediga spent a decade in India's national research laboratories — isolating novel bacterial species, developing food safety standards for FSSAI, and publishing in journals like Scientific Reports and the International Journal of Systematic and Evolutionary Microbiology. Now she brings that rigor to a different laboratory: the classroom."
