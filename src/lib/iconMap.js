@@ -74,6 +74,7 @@ const iconMap = {
   // Downloads / Documents
   download: Download,
   book: BookOpen,
+  bookOpen: BookOpen,
   presentation: Presentation,
   image: Image,
   fileArchive: FileArchive,
