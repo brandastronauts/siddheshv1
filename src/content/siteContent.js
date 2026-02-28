@@ -26,6 +26,7 @@ const siteContent = {
       { label: "Research Standards", path: "/governance/standards", icon: "clipboardList" },
       { label: "Regulatory Compliance", path: "/governance/compliance", icon: "scale" },
       { label: "Our Standards", path: "/governance/our-standards", icon: "badgeCheck" },
+      { label: "Team", path: "/team", icon: "team" },
     ]},
     { label: "Collaborate", path: "/collaborate", icon: "collaborate" },
     { label: "Newsroom", path: "/newsroom", icon: "newsroom" },
@@ -1671,6 +1672,58 @@ const siteContent = {
               body:
                 "**Affiliation:** Founder, TakeMe2Space\n\nProvides technical mentorship and validation for Space Lab projects including satellite and propulsion initiatives.",
               image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Ronak Kumar", variant: "avatar", privacyBlur: false }
+            }
+          ]
+        },
+
+        {
+          id: "gov-research-team",
+          type: "cards",
+          variant: "profiles",
+          header: "Research Team",
+          intro: "Academic and operational researchers supporting longitudinal data integrity, STEM research modules, classroom-based documentation, and institutional research infrastructure across the 0–18 continuum.",
+          cards: [
+            {
+              headline: "D. Vinay Shyam Donakanti",
+              tag: "Research Data Analyst Intern",
+              body: "**Training:** B.Tech Computer Science & Data Science\n\nSupports digitization, coding, and structuring of Montessori observation records into standardized research datasets. Assists in data pipeline development, analytics documentation, and longitudinal data consistency across the 0–18 research archive.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "D. Vinay Shyam Donakanti", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/vinay-donakanti" }
+            },
+            {
+              headline: "Sreedhar Reddy Boddu",
+              tag: "Research & Data Analyst",
+              body: "**Training:** B.Tech Civil Engineering (NIT Goa); Data Science & Analytics Certifications\n\nSupports ETL processes, dashboard development, and structured data visualization for classroom observation records. Contributes to predictive modeling frameworks and KPI tracking within the institute's longitudinal dataset architecture.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Sreedhar Reddy Boddu", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/sreedhar-boddu" }
+            },
+            {
+              headline: "Sandhya Rao M",
+              tag: "AMI Elementary Guide | Biomimicry Educator",
+              body: "**Training:** AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation\n\nIntegrates Montessori pedagogy with structured research documentation in the Elementary environment. Contributes to interdisciplinary observation protocols, developmental research alignment, and nature-integrated inquiry frameworks.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/sandhya-rao" }
+            },
+            {
+              headline: "Dr. Sreemoyee Chakraborty",
+              tag: "STEM Research Lead | Palaeontology & Earth Sciences",
+              body: "**Training:** PhD, Palaeontology (ISI / University of Calcutta)\n\nLeads fossil-based STEM research modules and scientific inquiry frameworks within the institute. Contributes domain expertise in paleoclimate interpretation, geological data modeling, and child-led scientific investigation design.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Dr. Sreemoyee Chakraborty", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/sreemoyee-chakraborty" }
+            },
+            {
+              headline: "Dr. Shobha Ediga",
+              tag: "Microbiological & Biochemical Research Lead",
+              body: "**Training:** PhD, Plant Sciences (University of Hyderabad)\n\nProvides research oversight in biological sciences, laboratory methodologies, and adolescent-level scientific investigation. Supports integration of microbiology, biochemistry, and environmental inquiry within the Erdkinder research framework.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Dr. Shobha Ediga", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/shobha-ediga" }
+            },
+            {
+              headline: "Sruthi Matta",
+              tag: "Research Team Lead — Pedagogy & Innovation",
+              body: "**Training:** Graduate Diploma in Journalism (Concordia University); AEC Media Strategies & Advertising; B.A. Humanities\n\nLeads research initiatives focused on pedagogy and innovation frameworks. Develops rapid-cycle micro-research protocols, interdisciplinary documentation models, and inquiry systems embedded within natural classroom environments.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Sruthi Matta", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/sruthi-matta" }
             }
           ]
         },
@@ -3483,6 +3536,123 @@ const siteContent = {
             privacyBlur: false,
             caption: ""
           }
+        },
+        {
+          id: "team-governance-leadership",
+          type: "cards",
+          variant: "profiles",
+          header: "Governance Leadership",
+          cards: [
+            {
+              headline: "Pavan Goyal",
+              tag: "Principal Investigator & Founder",
+              body: "Oversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes (AMI Diploma 0-18).",
+              image: { src: "/src/assets/placeholders/avatars/pavan.webp", alt: "Pavan Goyal", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/pavan-goyal" }
+            },
+            {
+              headline: "Munira Hussain",
+              tag: "Director of Pedagogy",
+              body: "Ensures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the \"Children's House.\" Credentials: AMI Diploma / M.Ed.",
+              image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/munira-hussain" }
+            }
+          ]
+        },
+        {
+          id: "team-advisory-board",
+          type: "cards",
+          variant: "profiles",
+          header: "Research Council & Advisory Board",
+          cards: [
+            {
+              headline: "Prof. AVR Srikar",
+              tag: "Technical Validation Advisor",
+              body: "IIT Hyderabad (Dept of Design). Reviews TRL claims and engineering prototypes for the Space & Drone Labs.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Prof. AVR Srikar", variant: "avatar", privacyBlur: false }
+            },
+            {
+              headline: "Prof. Apoorv Gogar",
+              tag: "Methodological Oversight Advisor",
+              body: "Indian School of Business. Reviews research design and business application frameworks for student innovation projects.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Prof. Apoorv Gogar", variant: "avatar", privacyBlur: false }
+            },
+            {
+              headline: "Rahul Jindal",
+              tag: "Technology Validation Advisor",
+              body: "Director, Google. Provides technical review for software and systems architecture in student technology projects.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Rahul Jindal", variant: "avatar", privacyBlur: false }
+            },
+            {
+              headline: "Sucheth Davaluri",
+              tag: "Industry Validation Advisor",
+              body: "Vice-Chairman & CEO, Neuland Laboratories. Reviews commercialization pathways and industry-readiness of student innovations.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Sucheth Davaluri", variant: "avatar", privacyBlur: false }
+            },
+            {
+              headline: "Manish Gupta",
+              tag: "Enterprise Technology Advisor",
+              body: "Director, SAP. Evaluates scalability and enterprise integration potential of student technology solutions.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Manish Gupta", variant: "avatar", privacyBlur: false }
+            },
+            {
+              headline: "Ronak Kumar",
+              tag: "Aerospace Domain Advisor",
+              body: "Founder, TakeMe2Space. Provides technical mentorship and validation for Space Lab projects including satellite and propulsion initiatives.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Ronak Kumar", variant: "avatar", privacyBlur: false }
+            }
+          ]
+        },
+        {
+          id: "team-research-team",
+          type: "cards",
+          variant: "profiles",
+          header: "Research Team",
+          intro: "Academic and operational researchers supporting longitudinal data integrity, STEM research modules, classroom-based documentation, and institutional research infrastructure across the 0–18 continuum.",
+          cards: [
+            {
+              headline: "D. Vinay Shyam Donakanti",
+              tag: "Research Data Analyst Intern",
+              body: "B.Tech Computer Science & Data Science. Supports digitization, coding, and structuring of Montessori observation records into standardized research datasets.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "D. Vinay Shyam Donakanti", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/vinay-donakanti" }
+            },
+            {
+              headline: "Sreedhar Reddy Boddu",
+              tag: "Research & Data Analyst",
+              body: "B.Tech Civil Engineering (NIT Goa); Data Science & Analytics Certifications. Supports ETL processes, dashboard development, and structured data visualization.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Sreedhar Reddy Boddu", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/sreedhar-boddu" }
+            },
+            {
+              headline: "Sandhya Rao M",
+              tag: "AMI Elementary Guide | Biomimicry Educator",
+              body: "AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation. Integrates Montessori pedagogy with structured research documentation.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/sandhya-rao" }
+            },
+            {
+              headline: "Dr. Sreemoyee Chakraborty",
+              tag: "STEM Research Lead | Palaeontology & Earth Sciences",
+              body: "PhD, Palaeontology (ISI / University of Calcutta). Leads fossil-based STEM research modules and scientific inquiry frameworks.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Dr. Sreemoyee Chakraborty", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/sreemoyee-chakraborty" }
+            },
+            {
+              headline: "Dr. Shobha Ediga",
+              tag: "Microbiological & Biochemical Research Lead",
+              body: "PhD, Plant Sciences (University of Hyderabad). Provides research oversight in biological sciences and adolescent-level scientific investigation.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Dr. Shobha Ediga", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/shobha-ediga" }
+            },
+            {
+              headline: "Sruthi Matta",
+              tag: "Research Team Lead — Pedagogy & Innovation",
+              body: "Graduate Diploma in Journalism (Concordia University); B.A. Humanities. Leads research initiatives focused on pedagogy and innovation frameworks.",
+              image: { src: "/src/assets/placeholders/avatars/advisor-placeholder.jpg", alt: "Sruthi Matta", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/team/sruthi-matta" }
+            }
+          ]
         },
         {
           id: "team-fellows",
