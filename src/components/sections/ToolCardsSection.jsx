@@ -24,13 +24,13 @@ const ToolCardsSection = ({ heading, header, intro, tools = [] }) => {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-muted-foreground text-sm mb-8 max-w-3xl"
+            className="text-muted-foreground text-sm mb-8 max-w-3xl mx-auto text-center"
           >
             {intro}
           </motion.p>
         )}
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {tools.map((tool, index) => (
             <motion.div
               key={index}

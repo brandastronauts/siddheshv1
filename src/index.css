@@ -159,11 +159,11 @@
   }
 
   .section-spacing {
-    @apply py-20 md:py-28 lg:py-32;
+    @apply py-12 md:py-16 lg:py-20;
   }
 
   .section-spacing-sm {
-    @apply py-12 md:py-16 lg:py-20;
+    @apply py-8 md:py-12 lg:py-14;
   }
 
   .gradient-hero {
@@ -276,21 +276,21 @@
   }
 
   .dossier-section-spacing {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
   @media (min-width: 768px) {
     .dossier-section-spacing {
-      padding-top: 100px;
-      padding-bottom: 100px;
+      padding-top: 64px;
+      padding-bottom: 64px;
     }
   }
 
   @media (min-width: 1024px) {
     .dossier-section-spacing {
-      padding-top: 120px;
-      padding-bottom: 120px;
+      padding-top: 80px;
+      padding-bottom: 80px;
     }
   }
 
