@@ -84,6 +84,7 @@ const App = () => (
             
             <Route path="/team" element={<GenericPage />} />
             <Route path="/team/:slug" element={<GenericPage />} />
+            <Route path="/governance/team/:slug" element={<GenericPage />} />
             
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
