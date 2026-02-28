@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => ({
       png: { quality: 70 },
       jpeg: { quality: 65 },
       jpg: { quality: 65 },
-      webp: { quality: 50, effort: 6 },
+      webp: { quality: 30, effort: 6 },
     }),
   ].filter(Boolean),
   resolve: {

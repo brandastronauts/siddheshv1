@@ -37,14 +37,9 @@ const FeaturedStoriesSection = ({ header, layout, main, side }) => {
     <section className="section-spacing">
       <div className="container-grid">
         {header && (
-          <motion.h2 
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-center text-deep-ink mb-6"
-          >
+          <h2 className="hero-fade-in text-3xl md:text-4xl font-bold text-center text-deep-ink mb-6">
             {header}
-          </motion.h2>
+          </h2>
         )}
 
         <div className={`grid gap-8 ${layout === 'asymmetric' ? 'lg:grid-cols-5' : 'lg:grid-cols-2'}`}>

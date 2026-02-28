@@ -510,14 +510,9 @@ const CtaGridSection = ({ id, header, items }) => (
     <div className="container-grid relative z-10">
       <div className="max-w-[960px] mx-auto">
         {header && (
-          <motion.h2
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-h2 md:text-display-2 text-deep-ink mb-10 text-center"
-          >
+          <h2 className="hero-fade-in text-h2 md:text-display-2 text-deep-ink mb-10 text-center">
             {header}
-          </motion.h2>
+          </h2>
         )}
         <div className={`grid grid-cols-1 gap-6 lg:gap-8 ${items?.length === 2 ? 'md:grid-cols-2 max-w-3xl mx-auto' : 'md:grid-cols-3'}`}>
           {(items || []).map((item, i) => {
