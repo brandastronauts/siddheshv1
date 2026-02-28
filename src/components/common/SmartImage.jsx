@@ -189,6 +189,7 @@ const SmartImage = ({
             src={effectiveSrc}
             alt={alt}
             loading="lazy"
+            decoding="async"
             width={dims.width}
             height={dims.height}
             onLoad={() => setIsLoaded(true)}

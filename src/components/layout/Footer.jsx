@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Mail, ArrowUpRight, FileText, Lightbulb, BookOpen, Users, Download, Lock, ScrollText, MapPin } from 'lucide-react';
 import { nav, brand } from '../../content/siteCore';
-import logo from '../../assets/logo.webp';
+import logo from '../../assets/logo-small.webp';
 import FooterNewsletter from '../FooterNewsletter';
 
 const Footer = () => {
