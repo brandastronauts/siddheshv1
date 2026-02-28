@@ -35,7 +35,7 @@ import headshot3 from '@/assets/placeholders/avatars/headshot-3.jpg';
 import logoPlaceholder from '@/assets/placeholders/logos/logo-placeholder.png';
 
 // Import avatar images
-import pavanImg from '@/assets/placeholders/avatars/pavan.jpg';
+import pavanImg from '@/assets/placeholders/avatars/pavan.webp';
 import muniraImg from '@/assets/placeholders/avatars/munira.jpg';
 import directorPlaceholderImg from '@/assets/placeholders/avatars/director-placeholder.jpg';
 
@@ -61,7 +61,7 @@ const imageMap = {
   '/src/assets/placeholders/labs/lunar-sim.jpg': lunarSimImg,
   
   // Avatars
-  '/src/assets/placeholders/avatars/pavan.jpg': pavanImg,
+  '/src/assets/placeholders/avatars/pavan.webp': pavanImg,
   '/src/assets/placeholders/avatars/munira.jpg': muniraImg,
   '/src/assets/placeholders/avatars/director-placeholder.jpg': directorPlaceholderImg,
   '/src/assets/placeholders/avatars/advisor-placeholder.jpg': advisorPlaceholder,
