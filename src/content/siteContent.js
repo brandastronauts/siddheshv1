@@ -24,6 +24,7 @@ const siteContent = {
     ]},
     { label: "Publications", path: "/publications", icon: "publication", children: [
       { label: "Open Data Access", path: "/publications/data", icon: "database" },
+      { label: "Glossary", path: "/publications/glossary", icon: "bookOpen" },
     ]},
     { label: "Governance", path: "/governance", icon: "governance", children: [
       { label: "Ethics & Privacy", path: "/governance/ethics", icon: "lock" },
@@ -7373,17 +7374,17 @@ const siteContent = {
   // ═══════════════════════════════════════════════════════════════
   // PAGE: GLOSSARY
   // ═══════════════════════════════════════════════════════════════
-  "/glossary": {
+  "/publications/glossary": {
     title: "Glossary | Blue Blocks Micro Research Institute",
-    metaDescription: "Key terms used across Blue Blocks Micro Research Institute.",
+    metaDescription: "Key terms used across Blue Blocks Micro Research Institute publications and methodology.",
     seo: {
       title: "Glossary | Blue Blocks Micro Research Institute",
-      description: "Key terms used across Blue Blocks Micro Research Institute.",
+      description: "Key terms used across Blue Blocks Micro Research Institute publications and methodology.",
       robots: "noindex,nofollow,noarchive,nosnippet",
       openGraph: {
         type: "article",
         title: "Glossary | Blue Blocks Micro Research Institute",
-        description: "Key terms used across Blue Blocks Micro Research Institute.",
+        description: "Key terms used across Blue Blocks Micro Research Institute publications and methodology.",
       },
     },
     sections: [
@@ -7393,6 +7394,7 @@ const siteContent = {
         subheadline: "Key terms used across Blue Blocks Micro Research Institute",
         breadcrumb: [
           { label: "Home", path: "/" },
+          { label: "Publications", path: "/publications" },
           { label: "Glossary" },
         ],
         image: {

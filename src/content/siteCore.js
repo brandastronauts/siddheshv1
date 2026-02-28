@@ -21,6 +21,7 @@ export const nav = [
   ]},
   { label: "Publications", path: "/publications", icon: "publication", children: [
     { label: "Open Data Access", path: "/publications/data", icon: "database" },
+    { label: "Glossary", path: "/publications/glossary", icon: "bookOpen" },
   ]},
   { label: "Governance", path: "/governance", icon: "governance", children: [
     { label: "Ethics & Privacy", path: "/governance/ethics", icon: "lock" },
