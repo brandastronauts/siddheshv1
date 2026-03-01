@@ -82,15 +82,14 @@ const HeroSection = ({
       {/* CSS-only gradient background for all pages */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0" style={{
-          background: 'linear-gradient(135deg, hsl(240 93% 10%) 0%, hsl(240 93% 18%) 30%, hsl(210 80% 22%) 60%, hsl(195 85% 25%) 100%)'
+          backgroundImage: 'url(/ui/site-banner.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }} />
         <div className="absolute inset-0" style={{
-          background: 'radial-gradient(ellipse at 20% 20%, hsl(195 100% 46% / 0.15) 0%, transparent 50%)'
+          background: 'linear-gradient(to bottom, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.35) 100%)'
         }} />
-        <div className="absolute inset-0" style={{
-          background: 'radial-gradient(ellipse at 80% 80%, hsl(240 93% 25% / 0.2) 0%, transparent 50%)'
-        }} />
-        <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNhKSIvPjwvc3ZnPg==')]" />
       </div>
 
       <div className={`container-grid relative z-10 ${isCompact ? 'pt-20 pb-6 md:py-8' : 'pt-24 pb-12 md:py-16'}`}>
