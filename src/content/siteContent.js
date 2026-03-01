@@ -5307,7 +5307,9 @@ const siteContent = {
           role: "Research Data Analyst Intern",
           image: { src: "/src/assets/placeholders/avatars/vinay-donakanti.webp", alt: "Vinay Shyam Donakanti", variant: "avatar" },
           email: "research@blueblocks.in",
-          socials: [],
+          socials: [
+            { type: "linkedin", href: "https://www.linkedin.com/in/vinay-shyam-donakanti-1b7724379/", label: "LinkedIn" }
+          ],
           bio: "Builds the data infrastructure that makes child-centered research possible. Transforms raw classroom observations into research-ready datasets — digitizing, cleaning, and structuring Montessori observation records so that patterns in children's learning can be seen, tested, and understood."
         },
         {
@@ -5569,7 +5571,9 @@ const siteContent = {
           role: "Research Team Lead — Pedagogy & Innovation",
           image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "avatar" },
           email: "research@blueblocks.in",
-          socials: [],
+          socials: [
+            { type: "linkedin", href: "https://www.linkedin.com/in/sruthi-m-writer-freelance-journalist/", label: "LinkedIn" }
+          ],
           bio: "Spent two years as a multimedia journalist in Montreal. Now leads research on pedagogy and innovation, applying the same methodology she developed in journalism: rapid-cycle inquiry that produces actionable findings."
         },
         {
@@ -5701,7 +5705,9 @@ const siteContent = {
           role: "AMI Elementary Guide; Biomimicry Educator; Research Team",
           image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar" },
           email: "research@blueblocks.in",
-          socials: [],
+          socials: [
+            { type: "linkedin", href: "https://www.linkedin.com/in/sandhya-rao-98572116b/", label: "LinkedIn" }
+          ],
           bio: "Sandhya Rao's path to education began in an unexpected place: community health. As a physiotherapist researching quality of life among HIV/AIDS patients in Karnataka, she learned to listen — to enter difficult spaces, ask sensitive questions, and document what others overlooked. Now an AMI-trained Elementary guide and certified Biomimicry educator, she works at the intersection of two disciplines that share a common premise: the world is already full of solutions."
         },
         {
@@ -5846,7 +5852,9 @@ const siteContent = {
           role: "STEM Research, Palaeontology, & Earth Science",
           image: { src: "/team/dr-sreemoyee-chakraborty.webp", alt: "Dr. Sreemoyee Chakraborty", variant: "avatar" },
           email: "research@blueblocks.in",
-          socials: [],
+          socials: [
+            { type: "linkedin", href: "https://www.linkedin.com/in/dr-sreemoyee-chakraborti-238490b6/", label: "LinkedIn" }
+          ],
           bio: "Dr. Sreemoyee Chakraborty has spent seven years reading the Earth's autobiography — decoding 50-million-year-old whale skulls, reconstructing ancient climates from fossil beds, and asking what the deep past can teach us about survival. At Blue Blocks, she transitions from purely academic inquiry to what she calls a \"pedagogy of research.\""
         },
         {
@@ -5986,7 +5994,9 @@ const siteContent = {
           role: "Microbiological & Biochemical Research Lead; Erdkinder Biology Mentor",
           image: { src: "/src/assets/placeholders/avatars/shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "avatar" },
           email: "research@blueblocks.in",
-          socials: [],
+          socials: [
+            { type: "linkedin", href: "https://www.linkedin.com/in/dr-shobha-ediga-578b6644/", label: "LinkedIn" }
+          ],
           bio: "Dr. Shobha Ediga spent a decade in India's national research laboratories — isolating novel bacterial species, developing food safety standards for FSSAI, and publishing in journals like Scientific Reports and the International Journal of Systematic and Evolutionary Microbiology. Now she brings that rigor to a different laboratory: the classroom."
         },
         {
