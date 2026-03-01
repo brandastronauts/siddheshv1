@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { nav, brand } from '../../content/siteCore';
-import logo from '../../assets/logo-96.webp';
+// Logo served from /public as static assets for optimal LCP discovery
 import { getIcon } from '../../lib/iconMap';
 
 /* ─── Desktop Dropdown ─────────────────────────────────────────────── */
@@ -165,13 +165,14 @@ const Header = () => {
           <Link to="/" className="flex items-center gap-2.5 group">
             <div className="h-12 md:h-14 w-12 md:w-14 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-border/20">
               <img
-                src={logo}
+                src="/logo.png"
                 alt={brand.siteName}
                 className="h-11 md:h-12 w-11 md:w-12 object-contain"
-                width={44}
-                height={44}
+                width={48}
+                height={48}
                 fetchPriority="high"
                 decoding="async"
+                loading="eager"
               />
             </div>
             <div className="flex flex-col leading-none">

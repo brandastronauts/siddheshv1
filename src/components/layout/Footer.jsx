@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Mail, ArrowUpRight, FileText, Lightbulb, BookOpen, Users, Download, Lock, ScrollText, MapPin } from 'lucide-react';
 import { nav, brand } from '../../content/siteCore';
-import logo from '../../assets/logo-96.webp';
+// Logo served from /public as static asset
 import FooterNewsletter from '../FooterNewsletter';
 
 const Footer = () => {
@@ -18,7 +18,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <Link to="/" className="inline-flex items-center gap-2.5 mb-5">
               <div className="h-12 w-12 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-white/20">
-                <img src={logo} alt={brand.siteName} className="h-11 w-11 object-contain" width={44} height={44} loading="lazy" decoding="async" />
+                <img src="/logo.png" alt={brand.siteName} className="h-11 w-11 object-contain" width={44} height={44} loading="lazy" decoding="async" />
               </div>
               <div className="flex flex-col leading-none">
                 <span className="text-sm font-bold text-white/95">Blue Blocks</span>
