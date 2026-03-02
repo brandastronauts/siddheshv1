@@ -212,6 +212,44 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- Research Team Profiles -->
+  <url>
+    <loc>https://research.blueblocks.in/governance/team/dr-sreemoyee-chakraborty</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://research.blueblocks.in/governance/team/dr-shobha-ediga</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://research.blueblocks.in/governance/team/sandhya-rao-m</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://research.blueblocks.in/governance/team/sruthi-matta</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://research.blueblocks.in/governance/team/sreedhar-reddy-boddu</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://research.blueblocks.in/governance/team/vinay-shyam-donakanti</loc>
+    <lastmod>2026-03-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
   <!-- Downloads -->
   <url>
     <loc>https://research.blueblocks.in/downloads</loc>
