@@ -5129,6 +5129,7 @@ const siteContent = {
           email: "research@blueblocks.in",
           socials: [
             { type: "linkedin", href: "https://www.linkedin.com/in/pavangoyal/", label: "LinkedIn" },
+            { type: "orcid", href: "https://orcid.org/0009-0009-8840-8505", label: "ORCID" },
             { type: "website", href: "https://blueblocks.in", label: "Website" }
           ],
           bio: "Oversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes (AMI Diploma 0-18). 15+ years of embedded observation experience."
@@ -5214,7 +5215,8 @@ const siteContent = {
           image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar" },
           email: "research@blueblocks.in",
           socials: [
-            { type: "linkedin", href: "https://www.linkedin.com/in/munirahussain/", label: "LinkedIn" }
+            { type: "linkedin", href: "https://www.linkedin.com/in/munirahussain/", label: "LinkedIn" },
+            { type: "orcid", href: "https://orcid.org/0009-0003-5904-6206", label: "ORCID" }
           ],
           bio: "Ensures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the Children's House. Credentials: AMI Diploma / M.Ed."
         },
@@ -5572,7 +5574,8 @@ const siteContent = {
           image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "avatar" },
           email: "research@blueblocks.in",
           socials: [
-            { type: "linkedin", href: "https://www.linkedin.com/in/sruthi-m-writer-freelance-journalist/", label: "LinkedIn" }
+            { type: "linkedin", href: "https://www.linkedin.com/in/sruthi-m-writer-freelance-journalist/", label: "LinkedIn" },
+            { type: "orcid", href: "https://orcid.org/0009-0008-2791-1273", label: "ORCID" }
           ],
           bio: "Spent two years as a multimedia journalist in Montreal. Now leads research on pedagogy and innovation, applying the same methodology she developed in journalism: rapid-cycle inquiry that produces actionable findings."
         },
@@ -5706,7 +5709,8 @@ const siteContent = {
           image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar" },
           email: "research@blueblocks.in",
           socials: [
-            { type: "linkedin", href: "https://www.linkedin.com/in/sandhya-rao-98572116b/", label: "LinkedIn" }
+            { type: "linkedin", href: "https://www.linkedin.com/in/sandhya-rao-98572116b/", label: "LinkedIn" },
+            { type: "orcid", href: "https://orcid.org/0009-0003-7368-2604", label: "ORCID" }
           ],
           bio: "Sandhya Rao's path to education began in an unexpected place: community health. As a physiotherapist researching quality of life among HIV/AIDS patients in Karnataka, she learned to listen — to enter difficult spaces, ask sensitive questions, and document what others overlooked. Now an AMI-trained Elementary guide and certified Biomimicry educator, she works at the intersection of two disciplines that share a common premise: the world is already full of solutions."
         },
@@ -5853,7 +5857,8 @@ const siteContent = {
           image: { src: "/team/dr-sreemoyee-chakraborty.webp", alt: "Dr. Sreemoyee Chakraborty", variant: "avatar" },
           email: "research@blueblocks.in",
           socials: [
-            { type: "linkedin", href: "https://www.linkedin.com/in/dr-sreemoyee-chakraborti-238490b6/", label: "LinkedIn" }
+            { type: "linkedin", href: "https://www.linkedin.com/in/dr-sreemoyee-chakraborti-238490b6/", label: "LinkedIn" },
+            { type: "orcid", href: "https://orcid.org/0000-0001-5180-156X", label: "ORCID" }
           ],
           bio: "Dr. Sreemoyee Chakraborty has spent seven years reading the Earth's autobiography — decoding 50-million-year-old whale skulls, reconstructing ancient climates from fossil beds, and asking what the deep past can teach us about survival. At Blue Blocks, she transitions from purely academic inquiry to what she calls a \"pedagogy of research.\""
         },
