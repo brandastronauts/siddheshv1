@@ -1,6 +1,13 @@
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Globe, ArrowRight } from 'lucide-react';
+import { Mail, Linkedin, Globe } from 'lucide-react';
 import SmartImage from '../common/SmartImage';
+
+// ORCID icon (not in Lucide)
+const OrcidIcon = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" {...props}>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zM7.5 5.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2zM6.9 8.6h1.2v7.8H6.9V8.6zm3.6 0h3.3c3.2 0 4.7 2 4.7 3.9 0 2-1.5 3.9-4.7 3.9h-3.3V8.6zm1.2 1.1v5.6h2.1c2.5 0 3.4-1.5 3.4-2.8 0-1.3-.9-2.8-3.4-2.8h-2.1z"/>
+  </svg>
+);
 
 const ProfileSection = ({ name, role, image, email, socials = [], bio }) => {
   return (
@@ -62,6 +69,7 @@ const ProfileSection = ({ name, role, image, email, socials = [], bio }) => {
                   const iconMap = {
                     linkedin: Linkedin,
                     website: Globe,
+                    orcid: OrcidIcon,
                   };
                   const Icon = iconMap[social.type] || Globe;
 
