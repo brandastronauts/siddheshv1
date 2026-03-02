@@ -161,6 +161,12 @@ const seoSchemaConfig = {
           },
           email: 'research@blueblocks.in',
           telephone: '+919000955050',
+          sameAs: [
+            'https://www.facebook.com/blueblocksmontessorischool',
+            'https://www.instagram.com/blueblocksmontessorischool/',
+            'https://www.youtube.com/channel/UCnJ6uX3B-uwAg63PgTK0LhQ',
+            'https://www.linkedin.com/school/blue-blocks-school',
+          ],
         },
         {
           '@type': 'Person',
