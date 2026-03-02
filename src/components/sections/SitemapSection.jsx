@@ -20,10 +20,15 @@ const sitemapData = {
   ],
   methodology: [
     { name: "Innovation", url: "/methodology/innovation", status: "complete" },
+    { name: "Limitations", url: "/methodology/limitations", status: "complete" },
+    { name: "Tools for Researchers", url: "/methodology/tools", status: "complete" },
   ],
   publications: [
     { name: "IN-SPACe Authorization Letter", url: "/publications/in-space-authorization-letter", status: "complete" },
     { name: "SAPARYA / IMF Case Study", url: "/publications/saparya-imf-case-study", status: "complete" },
+    { name: "Citation Standards", url: "/publications/citation-standards", status: "complete" },
+    { name: "Open Data Access", url: "/publications/data", status: "complete" },
+    { name: "Glossary", url: "/publications/glossary", status: "complete" },
   ],
   patents: [
     { name: "Patents Registry", url: "/patents", status: "complete" },
@@ -42,6 +47,12 @@ const sitemapData = {
     { name: "Pavan Goyal", url: "/team/pavan-goyal", status: "complete" },
     { name: "Munira Hussain", url: "/team/munira-hussain", status: "complete" },
     { name: "Adolescent Research Cohort", url: "/team/adolescent-research-cohort", status: "complete" },
+    { name: "Dr. Sreemoyee Chakraborty", url: "/governance/team/dr-sreemoyee-chakraborty", status: "complete" },
+    { name: "Dr. Shobha Ediga", url: "/governance/team/dr-shobha-ediga", status: "complete" },
+    { name: "Sandhya Rao M", url: "/governance/team/sandhya-rao-m", status: "complete" },
+    { name: "Sruthi Matta", url: "/governance/team/sruthi-matta", status: "complete" },
+    { name: "Sreedhar Reddy Boddu", url: "/governance/team/sreedhar-reddy-boddu", status: "complete" },
+    { name: "Vinay Shyam Donakanti", url: "/governance/team/vinay-shyam-donakanti", status: "complete" },
   ],
   downloads: [
     { name: "Downloads Hub", url: "/downloads", status: "complete" },
