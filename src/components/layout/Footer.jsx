@@ -74,10 +74,10 @@ const Footer = () => {
               href="https://www.blueblocks.in/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors group mt-4"
+              className="inline-flex items-center gap-2 text-sm text-white/80 hover:text-white transition-all group mt-4 border border-white/20 hover:border-white/40 rounded-md px-3 py-1.5 bg-white/5 hover:bg-white/10"
             >
               <span>Blue Blocks Montessori School</span>
-              <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+              <ArrowUpRight className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity" />
             </a>
 
             {/* Social Icons */}
