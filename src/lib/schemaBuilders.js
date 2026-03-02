@@ -8,7 +8,7 @@
 
 const SITE_URL = 'https://research.blueblocks.in';
 const ORG_NAME = 'Blue Blocks Micro Research Institute';
-const ORG_ALT_NAME = 'BBMRI';
+const ORG_ALT_NAME = 'Blue Blocks Research';
 const ORG_URL = SITE_URL;
 
 // ─── Global Schemas (injected on every page via PageShell) ───────────────────

@@ -68,9 +68,13 @@ const BOLD_REGEX = new RegExp(`(${termPattern})`, 'g');
 // Email regex
 const EMAIL_REGEX = /\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b/gi;
 
-// Combined regex: emails OR bold terms (emails checked first to avoid partial bold matches)
+// Markdown link regex [text](url)
+const MD_LINK_PATTERN = /\[([^\]]+)\]\((https?:\/\/[^)]+)\)/;
+const MD_LINK_SOURCE = MD_LINK_PATTERN.source;
+
+// Combined regex: markdown links OR emails OR bold terms
 const COMBINED_REGEX = new RegExp(
-  `(${EMAIL_REGEX.source})|(${termPattern})`,
+  `(${MD_LINK_SOURCE})|(${EMAIL_REGEX.source})|(${termPattern})`,
   'gi'
 );
 
@@ -99,8 +103,21 @@ function processSegment(text, keyPrefix = '') {
 
     const matchedText = match[0];
 
-    // Check if it's an email (group 1)
-    if (match[1]) {
+    // Check if it's a markdown link [text](url) — groups 1(full), 2(text), 3(url)
+    if (match[1] && match[2] && match[3]) {
+      parts.push(
+        <a
+          key={`${keyPrefix}link-${match.index}`}
+          href={match[3]}
+          className="text-primary underline hover:text-primary/80 transition-colors"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {match[2]}
+        </a>
+      );
+    // Check if it's an email (group 4)
+    } else if (match[4]) {
       parts.push(
         <a
           key={`${keyPrefix}email-${match.index}`}
@@ -111,7 +128,7 @@ function processSegment(text, keyPrefix = '') {
         </a>
       );
     } else {
-      // It's a bold term (group 2)
+      // It's a bold term
       parts.push(
         <strong key={`${keyPrefix}bold-${match.index}`} className="font-semibold text-inherit">
           {matchedText}

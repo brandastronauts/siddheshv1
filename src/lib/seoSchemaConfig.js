@@ -1,14 +1,14 @@
 /**
  * seoSchemaConfig.js
  * Centralized SEO meta tags + JSON-LD @graph configuration.
- * Single source of truth — matches client BB-BBMRI-Meta-Tags-JSON-LD-Schema.docx exactly.
+ * Single source of truth — matches client Meta-Tags-JSON-LD-Schema.docx exactly.
  *
  * Route-keyed map. Each entry has: meta, openGraph, twitter, jsonLd (@graph array).
  */
 
 // ─── Permanent @id URIs (MUST NEVER CHANGE) ──────────────────────────────────
 export const PERMANENT_IDS = Object.freeze({
-  BBMRI:        'https://research.blueblocks.in/#microresearch',
+  INSTITUTE:    'https://research.blueblocks.in/#microresearch',
   WEBSITE:      'https://research.blueblocks.in/#website',
   SPACE_LAB:    'https://research.blueblocks.in/#spacelab',
   DRONE_LAB:    'https://research.blueblocks.in/#dronelab',
@@ -36,9 +36,9 @@ export const validatePermanentIds = (graph) => {
 };
 
 // ─── Shared ResearchOrganization node (included in every page graph) ─────────
-const bbmriNode = {
+const instituteNode = {
   '@type': 'ResearchOrganization',
-  '@id': PERMANENT_IDS.BBMRI,
+  '@id': PERMANENT_IDS.INSTITUTE,
   name: 'Blue Blocks Micro Research Institute',
   parentOrganization: { '@id': PERMANENT_IDS.PARENT_ORG },
 };
@@ -65,7 +65,7 @@ const seoSchemaConfig = {
     meta: {
       title: "Blue Blocks Micro Research Institute | The World's First Micro Research Institute",
       description: "The world's first Micro Research Institute. 15-year longitudinal dataset tracking innovation capacity in 847 children from birth to age 18, embedded within an AMI Montessori environment in Hyderabad, India.",
-      keywords: 'micro research institute, child development research, longitudinal study, Montessori research, innovation pedagogy, BBMRI, Blue Blocks, Hyderabad, CubeSat education, ISRO, student patents',
+      keywords: 'micro research institute, child development research, longitudinal study, Montessori research, innovation pedagogy, Blue Blocks Micro Research Institute, Blue Blocks, Hyderabad, CubeSat education, ISRO, student patents',
       robots: 'index, follow',
       canonical: `${SITE_URL}/`,
     },
@@ -92,7 +92,7 @@ const seoSchemaConfig = {
           '@id': PERMANENT_IDS.WEBSITE,
           url: SITE_URL,
           name: 'Blue Blocks Micro Research Institute',
-          publisher: { '@id': PERMANENT_IDS.BBMRI },
+          publisher: { '@id': PERMANENT_IDS.INSTITUTE },
         },
         {
           '@type': 'WebPage',
@@ -101,19 +101,19 @@ const seoSchemaConfig = {
           name: "Blue Blocks Micro Research Institute | The World's First Micro Research Institute",
           description: "The world's first Micro Research Institute. 15-year longitudinal dataset tracking innovation capacity in 847 children from birth to age 18.",
           isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
-          about: { '@id': PERMANENT_IDS.BBMRI },
+          about: { '@id': PERMANENT_IDS.INSTITUTE },
         },
         {
           '@type': 'ResearchOrganization',
-          '@id': PERMANENT_IDS.BBMRI,
+          '@id': PERMANENT_IDS.INSTITUTE,
           name: 'Blue Blocks Micro Research Institute',
-          alternateName: ['BBMRI', 'Blue Blocks Research'],
+          alternateName: ['Blue Blocks Research'],
           disambiguatingDescription: 'The research arm of Blue Blocks Montessori School in Hyderabad, conducting longitudinal observational research on child development within authentic AMI Montessori environments since 2009.',
           description: 'Blue Blocks Micro Research Institute conducts longitudinal observational research on child development across a 15-year dataset of 847 children within authentic AMI Montessori environments. Research domains include executive function development, autonomy-supportive parenting, resilience formation, and the cognitive architecture of innovation pedagogy. The institute operates as a department of Blue Blocks Montessori School and is led by Principal Investigator Pavan Goyal.',
           url: SITE_URL,
           logo: {
             '@type': 'ImageObject',
-            url: `${SITE_URL}/images/bbmri-logo.svg`,
+            url: `${SITE_URL}/images/blueblocks-logo.svg`,
           },
           parentOrganization: {
             '@type': 'EducationalOrganization',
@@ -167,7 +167,7 @@ const seoSchemaConfig = {
           '@id': PERMANENT_IDS.PAVAN,
           name: 'Pavan Goyal',
           jobTitle: 'Principal Investigator & Founder',
-          worksFor: { '@id': PERMANENT_IDS.BBMRI },
+          worksFor: { '@id': PERMANENT_IDS.INSTITUTE },
           hasCredential: {
             '@type': 'EducationalOccupationalCredential',
             credentialCategory: 'AMI Diploma (0-18)',
@@ -178,7 +178,7 @@ const seoSchemaConfig = {
           '@id': PERMANENT_IDS.MUNIRA,
           name: 'Munira Hussain',
           jobTitle: 'Director of Pedagogy',
-          worksFor: { '@id': PERMANENT_IDS.BBMRI },
+          worksFor: { '@id': PERMANENT_IDS.INSTITUTE },
           hasCredential: {
             '@type': 'EducationalOccupationalCredential',
             credentialCategory: 'AMI Diploma / M.Ed',
@@ -196,7 +196,7 @@ const seoSchemaConfig = {
     meta: {
       title: 'The 0-18 Continuum | Blue Blocks Micro Research Institute',
       description: "Blue Blocks Micro Research Institute: 15 years of continuous embedded observation across 847 children. The world's longest record of human innovation capacity within an AMI Montessori environment.",
-      keywords: 'micro research institute, longitudinal child development, embedded observation, Montessori research, innovation capacity, ecological validity, BBMRI, Blue Blocks Micro Research Institute',
+      keywords: 'micro research institute, longitudinal child development, embedded observation, Montessori research, innovation capacity, ecological validity, Blue Blocks Micro Research Institute',
       robots: 'index, follow',
       canonical: `${SITE_URL}/institute`,
     },
@@ -210,7 +210,7 @@ const seoSchemaConfig = {
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'The 0-18 Continuum | BBMRI',
+      title: 'The 0-18 Continuum | Blue Blocks Micro Research Institute',
       description: '15 years of continuous observation. 847 children. 35,000+ hours per child. Embedded research within AMI Montessori environments.',
     },
     jsonLd: {
@@ -223,9 +223,9 @@ const seoSchemaConfig = {
           name: 'The 0-18 Continuum | Blue Blocks Micro Research Institute',
           description: '15 years of continuous embedded observation across 847 children within an AMI Montessori environment.',
           isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
-          about: { '@id': PERMANENT_IDS.BBMRI },
+          about: { '@id': PERMANENT_IDS.INSTITUTE },
         },
-        { ...bbmriNode },
+        { ...instituteNode },
         {
           '@type': 'Place',
           '@id': PERMANENT_IDS.SPACE_LAB,
@@ -252,7 +252,7 @@ const seoSchemaConfig = {
           '@id': `${SITE_URL}/data/longitudinal-847/#dataset`,
           name: 'Blue Blocks Longitudinal Child Development Dataset (2009-2025)',
           description: '15-year observational dataset tracking developmental milestones, executive function indicators, and autonomy-supportive behaviour patterns across 847 children in AMI-certified Montessori environments.',
-          creator: { '@id': PERMANENT_IDS.BBMRI },
+          creator: { '@id': PERMANENT_IDS.INSTITUTE },
           dateCreated: '2009',
           dateModified: '2025',
           temporalCoverage: '2009/2025',
@@ -280,7 +280,7 @@ const seoSchemaConfig = {
     meta: {
       title: 'Governance & Oversight | Blue Blocks Micro Research Institute',
       description: 'Research governance, ethics advisory committee, IRB-equivalent oversight, student IP rights, and data security protocols at Blue Blocks Micro Research Institute, Hyderabad.',
-      keywords: 'research governance, ethics oversight, IRB equivalent, child research ethics, data anonymization, student IP rights, Montessori research, BBMRI, Blue Blocks Micro Research Institute',
+      keywords: 'research governance, ethics oversight, IRB equivalent, child research ethics, data anonymization, student IP rights, Montessori research, Blue Blocks Micro Research Institute',
       robots: 'index, follow',
       canonical: `${SITE_URL}/governance`,
     },
@@ -294,7 +294,7 @@ const seoSchemaConfig = {
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Governance & Oversight | BBMRI',
+      title: 'Governance & Oversight | Blue Blocks Micro Research Institute',
     },
     jsonLd: {
       '@context': 'https://schema.org',
@@ -306,9 +306,9 @@ const seoSchemaConfig = {
           name: 'Governance & Oversight | Blue Blocks Micro Research Institute',
           description: 'Research governance, ethics advisory committee, IRB-equivalent oversight, student IP rights, and data security protocols.',
           isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
-          about: { '@id': PERMANENT_IDS.BBMRI },
+          about: { '@id': PERMANENT_IDS.INSTITUTE },
         },
-        { ...bbmriNode },
+        { ...instituteNode },
         breadcrumb(`${SITE_URL}/governance/#breadcrumb`, [
           { name: 'Home', item: `${SITE_URL}/` },
           { name: 'Governance', item: `${SITE_URL}/governance` },
@@ -322,7 +322,7 @@ const seoSchemaConfig = {
     meta: {
       title: 'The Micro-Research Framework | Blue Blocks Micro Research Institute',
       description: 'The Micro-Research methodology: high-frequency, embedded observation protocols designed for practitioner execution. Four pillars, 4-week cycles, and publication-ready design. Research by Blue Blocks Micro Research Institute, Hyderabad.',
-      keywords: 'micro research methodology, embedded observation, ecological validity, longitudinal research protocol, practitioner research, Montessori research methods, BBMRI, Blue Blocks Micro Research Institute',
+      keywords: 'micro research methodology, embedded observation, ecological validity, longitudinal research protocol, practitioner research, Montessori research methods, Blue Blocks Micro Research Institute',
       robots: 'index, follow',
       canonical: `${SITE_URL}/methodology`,
     },
@@ -336,7 +336,7 @@ const seoSchemaConfig = {
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'The Micro-Research Framework | BBMRI',
+      title: 'The Micro-Research Framework | Blue Blocks Micro Research Institute',
     },
     jsonLd: {
       '@context': 'https://schema.org',
@@ -348,9 +348,9 @@ const seoSchemaConfig = {
           name: 'The Micro-Research Framework | Blue Blocks Micro Research Institute',
           description: 'The Micro-Research methodology: high-frequency, embedded observation protocols designed for practitioner execution within AMI Montessori environments.',
           isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
-          about: { '@id': PERMANENT_IDS.BBMRI },
+          about: { '@id': PERMANENT_IDS.INSTITUTE },
         },
-        { ...bbmriNode },
+        { ...instituteNode },
         {
           '@type': 'HowTo',
           '@id': `${SITE_URL}/methodology/#framework`,
@@ -412,7 +412,7 @@ const seoSchemaConfig = {
     meta: {
       title: 'Innovation Research | Blue Blocks Micro Research Institute',
       description: 'Integrated design-research on innovation development across the 0-18 continuum. Didactic Innovation Principles (DIP), purpose-designed DIP Labs, and the design-research loop. Research by Blue Blocks Micro Research Institute, Hyderabad.',
-      keywords: 'innovation research, innovation pedagogy, Didactic Innovation Principles, DIP Labs, design-research loop, Montessori innovation, child innovation capacity, 0-18 curriculum, BBMRI, Blue Blocks Micro Research Institute',
+      keywords: 'innovation research, innovation pedagogy, Didactic Innovation Principles, DIP Labs, design-research loop, Montessori innovation, child innovation capacity, 0-18 curriculum, Blue Blocks Micro Research Institute',
       robots: 'index, follow',
       canonical: `${SITE_URL}/innovation`,
     },
@@ -426,7 +426,7 @@ const seoSchemaConfig = {
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Innovation Research | BBMRI',
+      title: 'Innovation Research | Blue Blocks Micro Research Institute',
     },
     jsonLd: {
       '@context': 'https://schema.org',
@@ -438,15 +438,15 @@ const seoSchemaConfig = {
           name: 'Innovation Research | Blue Blocks Micro Research Institute',
           description: 'Integrated design-research on innovation development across the 0-18 continuum.',
           isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
-          about: { '@id': PERMANENT_IDS.BBMRI },
+          about: { '@id': PERMANENT_IDS.INSTITUTE },
         },
-        { ...bbmriNode },
+        { ...instituteNode },
         {
           '@type': 'ResearchProject',
           '@id': `${SITE_URL}/innovation/#project`,
           name: 'Innovation Research: The 0-18 Innovation Continuum',
           description: 'Longitudinal integrated design-research studying how innovation capacity develops from infancy through adolescence within purpose-designed Didactic Innovation Principles (DIP) Labs and a 0-18 innovation curriculum.',
-          parentOrganization: { '@id': PERMANENT_IDS.BBMRI },
+          parentOrganization: { '@id': PERMANENT_IDS.INSTITUTE },
           foundingDate: '2009',
           member: [
             { '@id': PERMANENT_IDS.PAVAN },
@@ -472,7 +472,7 @@ const seoSchemaConfig = {
     meta: {
       title: 'Our Standards | Blue Blocks Micro Research Institute',
       description: 'Three open research standards published with DOIs under CC-BY-4.0: BEOP v1.0 (Embedded Observation Protocol), MREF v1.0 (Micro Research Ethics Framework), CDCS v1.0 (Child Data Classification Standard). Research by Blue Blocks Micro Research Institute, Hyderabad.',
-      keywords: 'research standards, embedded observation protocol, BEOP, micro research ethics, MREF, child data classification, CDCS, open science, CC-BY-4.0, BBMRI, Blue Blocks Micro Research Institute',
+      keywords: 'research standards, embedded observation protocol, BEOP, micro research ethics, MREF, child data classification, CDCS, open science, CC-BY-4.0, Blue Blocks Micro Research Institute',
       robots: 'index, follow',
       canonical: `${SITE_URL}/governance/our-standards`,
     },
@@ -486,7 +486,7 @@ const seoSchemaConfig = {
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Our Standards | BBMRI',
+      title: 'Our Standards | Blue Blocks Micro Research Institute',
     },
     jsonLd: {
       '@context': 'https://schema.org',
@@ -498,15 +498,15 @@ const seoSchemaConfig = {
           name: 'Our Standards | Blue Blocks Micro Research Institute',
           description: 'Three open research standards published with DOIs under CC-BY-4.0.',
           isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
-          about: { '@id': PERMANENT_IDS.BBMRI },
+          about: { '@id': PERMANENT_IDS.INSTITUTE },
         },
-        { ...bbmriNode },
+        { ...instituteNode },
         {
           '@type': 'CreativeWork',
           '@id': `${SITE_URL}/governance/our-standards/#beop`,
           name: 'Blue Blocks Embedded Observation Protocol (BEOP v1.0)',
           description: 'Standard defining observer qualifications, inter-rater reliability thresholds (>=80%), recording format, and quality assurance for embedded observational research in educational settings.',
-          author: { '@id': PERMANENT_IDS.BBMRI },
+          author: { '@id': PERMANENT_IDS.INSTITUTE },
           license: 'https://creativecommons.org/licenses/by/4.0/',
           version: '1.0',
         },
@@ -515,7 +515,7 @@ const seoSchemaConfig = {
           '@id': `${SITE_URL}/governance/our-standards/#mref`,
           name: 'Micro Research Ethics Framework (MREF v1.0)',
           description: 'Standard defining longitudinal consent architecture, child protection protocols, IRB-equivalent committee structure, and publication ethics for practitioner-led research with minors.',
-          author: { '@id': PERMANENT_IDS.BBMRI },
+          author: { '@id': PERMANENT_IDS.INSTITUTE },
           license: 'https://creativecommons.org/licenses/by/4.0/',
           version: '1.0',
         },
@@ -524,7 +524,7 @@ const seoSchemaConfig = {
           '@id': `${SITE_URL}/governance/our-standards/#cdcs`,
           name: 'Child Data Classification Standard (CDCS v1.0)',
           description: 'Standard defining a 4-tier data classification system with handling requirements, security standards, and retention/destruction policies for research data involving children.',
-          author: { '@id': PERMANENT_IDS.BBMRI },
+          author: { '@id': PERMANENT_IDS.INSTITUTE },
           license: 'https://creativecommons.org/licenses/by/4.0/',
           version: '1.0',
         },
@@ -542,7 +542,7 @@ const seoSchemaConfig = {
     meta: {
       title: 'Research Standards | Blue Blocks Micro Research Institute',
       description: 'Study design standards, observer qualification requirements, data specifications, and publication protocols governing all research at Blue Blocks Micro Research Institute, Hyderabad.',
-      keywords: 'research standards, study design, observer qualifications, data standards, publication protocol, inter-rater reliability, AMI diploma, micro research, BBMRI, Blue Blocks Micro Research Institute',
+      keywords: 'research standards, study design, observer qualifications, data standards, publication protocol, inter-rater reliability, AMI diploma, micro research, Blue Blocks Micro Research Institute',
       robots: 'index, follow',
       canonical: `${SITE_URL}/governance/standards`,
     },
@@ -556,7 +556,7 @@ const seoSchemaConfig = {
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Research Standards | BBMRI',
+      title: 'Research Standards | Blue Blocks Micro Research Institute',
     },
     jsonLd: {
       '@context': 'https://schema.org',
@@ -568,9 +568,9 @@ const seoSchemaConfig = {
           name: 'Research Standards | Blue Blocks Micro Research Institute',
           description: 'Study design standards, observer qualifications, data specifications, and publication protocols.',
           isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
-          about: { '@id': PERMANENT_IDS.BBMRI },
+          about: { '@id': PERMANENT_IDS.INSTITUTE },
         },
-        { ...bbmriNode },
+        { ...instituteNode },
         breadcrumb(`${SITE_URL}/governance/standards/#breadcrumb`, [
           { name: 'Home', item: `${SITE_URL}/` },
           { name: 'Governance', item: `${SITE_URL}/governance` },
@@ -585,7 +585,7 @@ const seoSchemaConfig = {
     meta: {
       title: 'Ethics & Privacy | Blue Blocks Micro Research Institute',
       description: "Ethics and privacy framework for child development research: longitudinal consent architecture, child assent protocols, Ethics Advisory Committee oversight, and children's rights protections. Research by Blue Blocks Micro Research Institute, Hyderabad.",
-      keywords: "research ethics, child privacy, informed consent, child assent, ethics advisory committee, children's rights, data protection, longitudinal consent, MREF, BBMRI, Blue Blocks Micro Research Institute",
+      keywords: "research ethics, child privacy, informed consent, child assent, ethics advisory committee, children's rights, data protection, longitudinal consent, MREF, Blue Blocks Micro Research Institute",
       robots: 'index, follow',
       canonical: `${SITE_URL}/governance/ethics`,
     },
@@ -599,7 +599,7 @@ const seoSchemaConfig = {
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Ethics & Privacy | BBMRI',
+      title: 'Ethics & Privacy | Blue Blocks Micro Research Institute',
     },
     jsonLd: {
       '@context': 'https://schema.org',
@@ -611,9 +611,9 @@ const seoSchemaConfig = {
           name: 'Ethics & Privacy | Blue Blocks Micro Research Institute',
           description: 'Ethics and privacy framework: longitudinal consent architecture, child assent protocols, Ethics Advisory Committee oversight.',
           isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
-          about: { '@id': PERMANENT_IDS.BBMRI },
+          about: { '@id': PERMANENT_IDS.INSTITUTE },
         },
-        { ...bbmriNode },
+        { ...instituteNode },
         breadcrumb(`${SITE_URL}/governance/ethics/#breadcrumb`, [
           { name: 'Home', item: `${SITE_URL}/` },
           { name: 'Governance', item: `${SITE_URL}/governance` },
@@ -628,7 +628,7 @@ const seoSchemaConfig = {
     meta: {
       title: 'Regulatory Compliance | Blue Blocks Micro Research Institute',
       description: "Compliance with international research ethics standards, India's DPDP Act 2023, GDPR alignment, POCSO Act, ICMR Guidelines, and IRB-equivalent Ethics Advisory Committee oversight. Research by Blue Blocks Micro Research Institute, Hyderabad.",
-      keywords: 'regulatory compliance, DPDP Act, GDPR, Declaration of Helsinki, Belmont Report, POCSO Act, ICMR guidelines, IRB equivalent, ethics advisory committee, child research compliance, BBMRI, Blue Blocks Micro Research Institute',
+      keywords: 'regulatory compliance, DPDP Act, GDPR, Declaration of Helsinki, Belmont Report, POCSO Act, ICMR guidelines, IRB equivalent, ethics advisory committee, child research compliance, Blue Blocks Micro Research Institute',
       robots: 'index, follow',
       canonical: `${SITE_URL}/governance/compliance`,
     },
@@ -642,7 +642,7 @@ const seoSchemaConfig = {
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Regulatory Compliance | BBMRI',
+      title: 'Regulatory Compliance | Blue Blocks Micro Research Institute',
     },
     jsonLd: {
       '@context': 'https://schema.org',
@@ -654,9 +654,9 @@ const seoSchemaConfig = {
           name: 'Regulatory Compliance | Blue Blocks Micro Research Institute',
           description: 'Compliance with international research ethics standards, DPDP Act 2023, GDPR alignment, and IRB-equivalent oversight.',
           isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
-          about: { '@id': PERMANENT_IDS.BBMRI },
+          about: { '@id': PERMANENT_IDS.INSTITUTE },
         },
-        { ...bbmriNode },
+        { ...instituteNode },
         breadcrumb(`${SITE_URL}/governance/compliance/#breadcrumb`, [
           { name: 'Home', item: `${SITE_URL}/` },
           { name: 'Governance', item: `${SITE_URL}/governance` },

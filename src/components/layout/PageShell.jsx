@@ -12,11 +12,11 @@ const GLOBAL_GRAPH_NODES = [
     '@id': PERMANENT_IDS.WEBSITE,
     url: SITE_URL,
     name: 'Blue Blocks Micro Research Institute',
-    publisher: { '@id': PERMANENT_IDS.BBMRI },
+    publisher: { '@id': PERMANENT_IDS.INSTITUTE },
   },
   {
     '@type': 'ResearchOrganization',
-    '@id': PERMANENT_IDS.BBMRI,
+    '@id': PERMANENT_IDS.INSTITUTE,
     name: 'Blue Blocks Micro Research Institute',
     url: SITE_URL,
     parentOrganization: { '@id': PERMANENT_IDS.PARENT_ORG },
@@ -183,7 +183,7 @@ const PageShell = ({ children }) => {
             description,
             url: `${SITE_URL}${location.pathname}`,
             isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
-            about: { '@id': PERMANENT_IDS.BBMRI },
+            about: { '@id': PERMANENT_IDS.INSTITUTE },
           },
         ];
 
