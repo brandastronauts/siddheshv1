@@ -39,6 +39,10 @@ export const buildGlobalSchemas = ({ pageName = '', pagePath = '/', breadcrumbs 
     },
     sameAs: [
       'https://zenodo.org/communities/blueblocksmicroresearchinstitute/records?q=&l=list&p=1&s=10&sort=newest',
+      'https://www.facebook.com/blueblocksmontessorischool',
+      'https://www.instagram.com/blueblocksmontessorischool/',
+      'https://www.youtube.com/channel/UCnJ6uX3B-uwAg63PgTK0LhQ',
+      'https://www.linkedin.com/school/blue-blocks-school',
     ],
   });
 
