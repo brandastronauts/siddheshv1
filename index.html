@@ -42,127 +42,115 @@
     <link rel="preload" href="/fonts/manrope-400.woff2" as="font" type="font/woff2" crossorigin />
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebSite",
+      "@id": "https://research.blueblocks.in/#website",
+      "url": "https://research.blueblocks.in",
+      "name": "Blue Blocks Micro Research Institute",
+      "publisher": { "@id": "https://research.blueblocks.in/#microresearch" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://research.blueblocks.in/#webpage",
+      "url": "https://research.blueblocks.in/",
+      "name": "Blue Blocks Micro Research Institute | The World's First Micro Research Institute",
+      "description": "The world's first Micro Research Institute. 15-year longitudinal dataset tracking innovation capacity in 847 children from birth to age 18.",
+      "isPartOf": { "@id": "https://research.blueblocks.in/#website" },
+      "about": { "@id": "https://research.blueblocks.in/#microresearch" }
+    },
+    {
+      "@type": "ResearchOrganization",
+      "@id": "https://research.blueblocks.in/#microresearch",
+      "name": "Blue Blocks Micro Research Institute",
+      "alternateName": ["BBMRI", "Blue Blocks Research"],
+      "disambiguatingDescription": "The research arm of Blue Blocks Montessori School in Hyderabad, conducting longitudinal observational research on child development within authentic AMI Montessori environments since 2009.",
+      "description": "Blue Blocks Micro Research Institute conducts longitudinal observational research on child development across a 15-year dataset of 847 children within authentic AMI Montessori environments. Research domains include executive function development, autonomy-supportive parenting, resilience formation, and the cognitive architecture of innovation pedagogy. The institute operates as a department of Blue Blocks Montessori School and is led by Principal Investigator Pavan Goyal.",
+      "url": "https://research.blueblocks.in",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://research.blueblocks.in/images/bbmri-logo.svg"
+      },
+      "parentOrganization": {
+        "@type": "EducationalOrganization",
+        "@id": "https://www.blueblocks.in/#organization",
+        "name": "Blue Blocks Montessori School",
+        "url": "https://www.blueblocks.in"
+      },
+      "foundingDate": "2009",
+      "member": [
         {
-          "@type": "WebSite",
-          "@id": "https://research.blueblocks.in/#website",
-          "url": "https://research.blueblocks.in",
-          "name": "Blue Blocks Micro Research Institute",
-          "publisher": { "@id": "https://research.blueblocks.in/#microresearch" }
+          "@type": "OrganizationRole",
+          "member": { "@id": "https://www.blueblocks.in/#pavan" },
+          "roleName": "Principal Investigator"
         },
         {
-          "@type": "WebPage",
-          "@id": "https://research.blueblocks.in/#webpage",
-          "url": "https://research.blueblocks.in/",
-          "name": "Blue Blocks Micro Research Institute | The World's First Micro Research Institute",
-          "description": "The world's first Micro Research Institute. 17-year longitudinal dataset tracking innovation capacity in 1045 children from birth to age 18.",
-          "isPartOf": { "@id": "https://research.blueblocks.in/#website" },
-          "about": { "@id": "https://research.blueblocks.in/#microresearch" }
-        },
-        {
-          "@type": "ResearchOrganization",
-          "@id": "https://research.blueblocks.in/#microresearch",
-          "name": "Blue Blocks Micro Research Institute",
-          "alternateName": ["Blue Blocks Research"],
-          "disambiguatingDescription": "The research arm of Blue Blocks Montessori School in Hyderabad, conducting longitudinal observational research on child development within authentic AMI Montessori environments since 2009.",
-          "description": "Blue Blocks Micro Research Institute conducts longitudinal observational research on child development across a 17-year dataset of 1045 children within authentic AMI Montessori environments. Research domains include executive function development, autonomy-supportive parenting, resilience formation, and the cognitive architecture of innovation pedagogy. The institute operates as a department of Blue Blocks Montessori School and is led by Principal Investigator Pavan Goyal.",
-          "url": "https://research.blueblocks.in",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://research.blueblocks.in/images/blueblocks-logo.svg"
-          },
-          "parentOrganization": {
-            "@type": "EducationalOrganization",
-            "@id": "https://www.blueblocks.in/#organization",
-            "name": "Blue Blocks Montessori School",
-            "url": "https://www.blueblocks.in"
-          },
-          "foundingDate": "2009",
-          "member": [
-            {
-              "@type": "OrganizationRole",
-              "member": { "@id": "https://www.blueblocks.in/#pavan" },
-              "roleName": "Principal Investigator"
-            },
-            {
-              "@type": "OrganizationRole",
-              "member": { "@id": "https://www.blueblocks.in/#munira" },
-              "roleName": "Director of Observational Research"
-            }
-          ],
-          "numberOfEmployees": {
-            "@type": "QuantitativeValue",
-            "value": 25,
-            "unitText": "Embedded Research Fellows"
-          },
-          "knowsAbout": [
-            { "@type": "Thing", "name": "Longitudinal panel", "sameAs": "https://en.wikipedia.org/wiki/Longitudinal_study" },
-            { "@type": "Thing", "name": "Child development", "sameAs": "https://en.wikipedia.org/wiki/Child_development" },
-            { "@type": "Thing", "name": "Observational study", "sameAs": "https://en.wikipedia.org/wiki/Observational_study" },
-            { "@type": "Thing", "name": "Executive functions", "sameAs": "https://en.wikipedia.org/wiki/Executive_functions" },
-            { "@type": "Thing", "name": "Montessori education", "sameAs": "https://en.wikipedia.org/wiki/Montessori_education" },
-            { "@type": "Thing", "name": "Parenting styles", "sameAs": "https://en.wikipedia.org/wiki/Parenting_styles" },
-            { "@type": "Thing", "name": "Psychological resilience", "sameAs": "https://en.wikipedia.org/wiki/Psychological_resilience" },
-            { "@type": "Thing", "name": "Self-determination theory", "sameAs": "https://en.wikipedia.org/wiki/Self-determination_theory" },
-            { "@type": "Thing", "name": "Innovation", "sameAs": "https://en.wikipedia.org/wiki/Innovation" },
-            { "@type": "Thing", "name": "CubeSat", "sameAs": "https://en.wikipedia.org/wiki/CubeSat" }
-          ],
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Osman Nagar Road, Tellapur",
-            "addressLocality": "Hyderabad",
-            "addressRegion": "Telangana",
-            "postalCode": "502032",
-            "addressCountry": "IN"
-          },
-          "email": "research@blueblocks.in",
-          "telephone": "+919000955050",
-          "sameAs": [
-            "https://www.facebook.com/blueblocksmontessorischool",
-            "https://www.instagram.com/blueblocksmontessorischool/",
-            "https://www.youtube.com/channel/UCnJ6uX3B-uwAg63PgTK0LhQ",
-            "https://www.linkedin.com/school/blue-blocks-school",
-            "https://zenodo.org/communities/blueblocksmicroresearchinstitute"
-          ]
-        },
-        {
-          "@type": "Person",
-          "@id": "https://www.blueblocks.in/#pavan",
-          "name": "Pavan Goyal",
-          "jobTitle": "Principal Investigator & Founder",
-          "worksFor": { "@id": "https://research.blueblocks.in/#microresearch" },
-          "hasCredential": {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "AMI Diploma (0-18)"
-          }
-        },
-        {
-          "@type": "Person",
-          "@id": "https://www.blueblocks.in/#munira",
-          "name": "Munira Hussain",
-          "jobTitle": "Director of Pedagogy",
-          "worksFor": { "@id": "https://research.blueblocks.in/#microresearch" },
-          "hasCredential": {
-            "@type": "EducationalOccupationalCredential",
-            "credentialCategory": "AMI Diploma / M.Ed"
-          }
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://research.blueblocks.in/#breadcrumb",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://research.blueblocks.in/"
-            }
-          ]
+          "@type": "OrganizationRole",
+          "member": { "@id": "https://www.blueblocks.in/#munira" },
+          "roleName": "Director of Observational Research"
         }
+      ],
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 25,
+        "unitText": "Embedded Research Fellows"
+      },
+      "knowsAbout": [
+        { "@type": "Thing", "name": "Longitudinal study", "sameAs": "https://en.wikipedia.org/wiki/Longitudinal_study" },
+        { "@type": "Thing", "name": "Child development", "sameAs": "https://en.wikipedia.org/wiki/Child_development" },
+        { "@type": "Thing", "name": "Observational study", "sameAs": "https://en.wikipedia.org/wiki/Observational_study" },
+        { "@type": "Thing", "name": "Executive functions", "sameAs": "https://en.wikipedia.org/wiki/Executive_functions" },
+        { "@type": "Thing", "name": "Montessori education", "sameAs": "https://en.wikipedia.org/wiki/Montessori_education" },
+        { "@type": "Thing", "name": "Parenting styles", "sameAs": "https://en.wikipedia.org/wiki/Parenting_styles" },
+        { "@type": "Thing", "name": "Psychological resilience", "sameAs": "https://en.wikipedia.org/wiki/Psychological_resilience" },
+        { "@type": "Thing", "name": "Self-determination theory", "sameAs": "https://en.wikipedia.org/wiki/Self-determination_theory" },
+        { "@type": "Thing", "name": "Innovation", "sameAs": "https://en.wikipedia.org/wiki/Innovation" },
+        { "@type": "Thing", "name": "CubeSat", "sameAs": "https://en.wikipedia.org/wiki/CubeSat" }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Osman Nagar Road, Tellapur",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "502032",
+        "addressCountry": "IN"
+      },
+      "email": "research@blueblocks.in",
+      "telephone": "+919000955050"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.blueblocks.in/#pavan",
+      "name": "Pavan Goyal",
+      "jobTitle": "Principal Investigator & Founder",
+      "worksFor": { "@id": "https://research.blueblocks.in/#microresearch" },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "AMI Diploma (0-18)"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.blueblocks.in/#munira",
+      "name": "Munira Hussain",
+      "jobTitle": "Director of Pedagogy",
+      "worksFor": { "@id": "https://research.blueblocks.in/#microresearch" },
+      "hasCredential": {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "AMI Diploma / M.Ed"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://research.blueblocks.in/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://research.blueblocks.in/" }
       ]
     }
+  ]
+}
     </script>
   </head>
 

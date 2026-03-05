@@ -54,6 +54,12 @@ function prerenderSchemasPlugin() {
         return;
       }
 
+      // Map app routes to canonical output paths where they differ
+      const OUTPUT_PATH_MAP: Record<string, string> = {
+        '/the-institute': '/institute',
+        '/methodology/innovation': '/innovation',
+      };
+
       let count = 0;
       for (const [route, pageConfig] of Object.entries(config)) {
         if (route === '/') continue; // Home page is already in index.html
@@ -131,12 +137,10 @@ function prerenderSchemasPlugin() {
 
         // ── Replace JSON-LD block ──
         if (jsonLd) {
-          // Remove existing JSON-LD blocks from base HTML
           html = html.replace(
             /\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/g,
             ''
           );
-          // Inject route-specific JSON-LD
           const jsonStr = JSON.stringify(
             jsonLd,
             (_k, v) => (v === undefined || v === null || v === '') ? undefined : v
@@ -147,12 +151,22 @@ function prerenderSchemasPlugin() {
           );
         }
 
-        // Write to dist/<route>/index.html
-        const cleanRoute = route.replace(/^\//, '');
+        // Write to canonical output path (may differ from app route)
+        const outputRoute = OUTPUT_PATH_MAP[route] || route;
+        const cleanRoute = outputRoute.replace(/^\//, '');
         const dir = pathMod.join(distDir, cleanRoute);
         await fs.mkdir(dir, { recursive: true });
         await fs.writeFile(pathMod.join(dir, 'index.html'), html, 'utf-8');
         count++;
+
+        // Also write to app route path if different from canonical
+        if (OUTPUT_PATH_MAP[route]) {
+          const appCleanRoute = route.replace(/^\//, '');
+          const appDir = pathMod.join(distDir, appCleanRoute);
+          await fs.mkdir(appDir, { recursive: true });
+          await fs.writeFile(pathMod.join(appDir, 'index.html'), html, 'utf-8');
+          count++;
+        }
       }
 
       if (count > 0) {
