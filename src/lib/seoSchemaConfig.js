@@ -63,16 +63,16 @@ const seoSchemaConfig = {
   // ═══ PAGE 1: HOME ═══════════════════════════════════════════════════════════
   '/': {
     meta: {
-      title: "Blue Blocks Micro Research Institute | The World's First Micro Research Institute",
-      description: "The world's first Micro Research Institute. 17-year longitudinal dataset tracking innovation capacity in 1045 children from birth to age 18, embedded within an AMI Montessori environment in Hyderabad, India.",
+      title: "Children are the Data",
+      description: "17-year longitudinal panel of 1045 children tracking human innovation capacity from birth to age 18. Embedded observation within an AMI Montessori environment in Hyderabad, India.",
       keywords: 'micro research institute, child development research, longitudinal panel, Montessori research, innovation pedagogy, Blue Blocks Micro Research Institute, Blue Blocks, Hyderabad, CubeSat education, ISRO, student patents',
       robots: 'index, follow',
       canonical: `${SITE_URL}/`,
     },
     openGraph: {
       type: 'website',
-      title: "Blue Blocks Micro Research Institute | The World's First Micro Research Institute",
-      description: '17-year longitudinal dataset tracking innovation capacity in 1045 children from birth to age 18. Embedded observation within an AMI Montessori environment.',
+      title: "Children are the Data",
+      description: '17-year longitudinal panel of 1045 children tracking human innovation capacity from birth to age 18. Embedded observation within an AMI Montessori environment in Hyderabad, India.',
       url: `${SITE_URL}/`,
       site_name: OG_SITE_NAME,
       image: `${SITE_URL}/images/og-home.jpg`,
@@ -80,8 +80,8 @@ const seoSchemaConfig = {
     },
     twitter: {
       card: 'summary_large_image',
-      title: "Blue Blocks Micro Research Institute | The World's First Micro Research Institute",
-      description: '17-year longitudinal dataset tracking innovation capacity in 1045 children (0–18). Embedded observation in AMI Montessori environments.',
+      title: "Children are the Data",
+      description: '17-year longitudinal panel of 1045 children tracking human innovation capacity from birth to age 18. Embedded observation within an AMI Montessori environment in Hyderabad, India.',
       image: `${SITE_URL}/images/og-home.jpg`,
     },
     jsonLd: {
@@ -98,8 +98,8 @@ const seoSchemaConfig = {
           '@type': 'WebPage',
           '@id': `${SITE_URL}/#webpage`,
           url: `${SITE_URL}/`,
-          name: "Blue Blocks Micro Research Institute | The World's First Micro Research Institute",
-          description: "The world's first Micro Research Institute. 15-year longitudinal dataset tracking innovation capacity in 847 children from birth to age 18.",
+          name: "Children are the Data",
+          description: "17-year longitudinal panel of 1045 children tracking human innovation capacity from birth to age 18. Embedded observation within an AMI Montessori environment in Hyderabad, India.",
           isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
           about: { '@id': PERMANENT_IDS.INSTITUTE },
         },
