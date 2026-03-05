@@ -1,16 +1,53 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import SEO from '../SEO';
-import seoSchemaConfig, { SITE_URL, PERMANENT_IDS } from '../../lib/seoSchemaConfig';
+import seoSchemaConfig from '../../lib/seoSchemaConfig';
 import {
   buildGlobalGraphNodes,
   buildWebPageSchema,
   buildBreadcrumbsFromPath,
   buildBreadcrumbSchema,
+  buildFaqPageSchema,
+  extractFaqsFromSections,
 } from '../../lib/schemaBuilders';
-import { brand } from '../../content/siteCore';
+import { brand, nav } from '../../content/siteCore';
+
+const BASE_URL = 'https://research.blueblocks.in';
+const LEGACY_URL_RE = /https:\/\/siddheshv1\.lovable\.app/g;
+const SCRIPT_ID = 'bb-jsonld-graph';
+
+function buildJsonLdPayload(nodes) {
+  if (!nodes || nodes.length === 0) return null;
+  const cleaned = nodes
+    .filter(n => n != null && typeof n === 'object')
+    .map(node => {
+      const { '@context': _ctx, ...rest } = node;
+      return rest;
+    });
+  if (cleaned.length === 0) return null;
+  const raw = JSON.stringify(
+    { '@context': 'https://schema.org', '@graph': cleaned },
+    (key, value) => (value === undefined || value === null || value === '') ? undefined : value
+  );
+  return raw.replace(LEGACY_URL_RE, BASE_URL);
+}
+
+function injectJsonLd(payload) {
+  let el = document.getElementById(SCRIPT_ID);
+  if (!payload) {
+    if (el) el.remove();
+    return;
+  }
+  if (!el) {
+    el = document.createElement('script');
+    el.id = SCRIPT_ID;
+    el.setAttribute('type', 'application/ld+json');
+    document.head.appendChild(el);
+  }
+  el.textContent = payload;
+}
 
 const PageShell = ({ children }) => {
   const location = useLocation();
@@ -23,16 +60,11 @@ const PageShell = ({ children }) => {
     });
   }, [location.pathname]);
 
-  // ── Build SEO props ──
-
   const buildSeoProps = () => {
-    const globalNodes = buildGlobalGraphNodes();
+    const globalNodes = buildGlobalGraphNodes(nav);
 
-    // --- Source 1: seoSchemaConfig (highest priority) ---
     if (seoConfig) {
       const { meta, openGraph, twitter, jsonLd } = seoConfig;
-      // seoSchemaConfig already has complete graphs with full org/website nodes;
-      // use those directly to avoid duplicates with the simpler globalNodes
       const pageNodes = jsonLd?.['@graph'] || (jsonLd ? [jsonLd] : []);
       return {
         title: meta.title
@@ -42,11 +74,10 @@ const PageShell = ({ children }) => {
         canonicalUrl: meta.canonical,
         ogImage: openGraph?.image || twitter?.image,
         ogType: openGraph?.type || 'website',
-        jsonLd: pageNodes,
+        jsonLdNodes: pageNodes,
       };
     }
 
-    // --- Source 2: page content from siteContent ---
     if (page) {
       const heroFallback = extractHeroFallback(page.sections);
       const pageTitle = page.seo?.title || page.title || heroFallback.title || '';
@@ -58,7 +89,6 @@ const PageShell = ({ children }) => {
         heroFallback.description;
       const og = page.seo?.openGraph || {};
 
-      // Build page-level schemas
       const pageSchemaNodes = page.schemas?.length
         ? page.schemas
         : [
@@ -71,33 +101,55 @@ const PageShell = ({ children }) => {
             ]),
           ];
 
+      const allNodes = [...globalNodes, ...pageSchemaNodes];
+      if (page.sections) {
+        const faqs = extractFaqsFromSections(page.sections);
+        const faqSchema = buildFaqPageSchema(faqs);
+        if (faqSchema && !allNodes.some(n => n?.['@type'] === 'FAQPage')) {
+          allNodes.push(faqSchema);
+        }
+      }
+
       return {
         title: pageTitle.replace(` | ${brand.siteName}`, ''),
         description,
         canonicalUrl: page.seo?.canonical,
         ogImage: og.image?.url || og.image,
         ogType: og.type || 'website',
-        jsonLd: [...globalNodes, ...pageSchemaNodes],
+        jsonLdNodes: allNodes,
       };
     }
 
-    // --- Fallback: just global schemas ---
-    return { jsonLd: globalNodes };
+    return { jsonLdNodes: globalNodes };
   };
 
   const seoProps = buildSeoProps();
+  const { jsonLdNodes, ...metaProps } = seoProps;
+
+  // Inject JSON-LD into document.head via DOM API
+  // React cannot reliably render <script> tags via JSX
+  useEffect(() => {
+    const payload = buildJsonLdPayload(jsonLdNodes);
+    injectJsonLd(payload);
+  }, [jsonLdNodes]);
+
+  // Cleanup on unmount
+  useEffect(() => {
+    return () => {
+      const el = document.getElementById(SCRIPT_ID);
+      if (el) el.remove();
+    };
+  }, []);
 
   return (
     <div className="min-h-screen flex flex-col">
-      <SEO {...seoProps} />
+      <SEO {...metaProps} />
       <Header />
       <main className="flex-1">{children}</main>
       <Footer />
     </div>
   );
 };
-
-// ── Helpers ──
 
 function extractHeroFallback(sections) {
   if (!sections || !Array.isArray(sections)) return {};
