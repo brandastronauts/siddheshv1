@@ -1,6 +1,7 @@
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, memo } from 'react';
 import { motion } from 'framer-motion';
 import HeroSection from './sections/HeroSection';
+import LazySection from './LazySection';
 
 // Eagerly loaded: hero (LCP-critical)
 // Everything else lazy-loaded to reduce initial JS bundle
@@ -203,17 +204,19 @@ const SectionRenderer = ({ sections }) => {
     }
 
     return (
-      <Suspense key={index} fallback={<div className="min-h-[100px]" />}>
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.5, delay: Math.min(index * 0.05, 0.3) }}
-          variants={sectionVariants}
-        >
-          <Component {...mergedProps} />
-        </motion.div>
-      </Suspense>
+      <LazySection key={index} index={index} threshold={3}>
+        <Suspense fallback={<div className="min-h-[100px]" />}>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: Math.min(index * 0.05, 0.3) }}
+            variants={sectionVariants}
+          >
+            <Component {...mergedProps} />
+          </motion.div>
+        </Suspense>
+      </LazySection>
     );
   };
 

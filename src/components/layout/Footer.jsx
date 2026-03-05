@@ -40,7 +40,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <Link to="/" className="inline-flex items-center gap-2.5 mb-5">
               <div className="h-12 w-12 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-white/20">
-                <img src="/logo.png" alt={brand.siteName} className="h-11 w-11 object-contain" width={44} height={44} loading="lazy" decoding="async" />
+                <img src="/logo-88.webp" alt={brand.siteName} className="h-11 w-11 object-contain" width={44} height={44} loading="lazy" decoding="async" />
               </div>
               <div className="flex flex-col leading-none">
                 <span className="text-sm font-bold text-white/95">Blue Blocks</span>
