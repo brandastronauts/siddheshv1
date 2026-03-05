@@ -1,10 +1,10 @@
 /**
  * schemaBuilders.js
  * Centralized JSON-LD schema builder helpers for Blue Blocks Micro Research Institute.
- * Each function returns a plain object ready for @graph injection via Helmet.
+ * Each function returns a plain object ready for @graph injection.
  *
  * Follows schema.org vocabulary. All schemas omit @context — the wrapping
- * @graph object in SEO.jsx adds it once.
+ * @graph object in JsonLd.jsx adds it once.
  */
 
 const SITE_URL = 'https://research.blueblocks.in';
@@ -36,7 +36,10 @@ export const buildOrganizationSchema = () => ({
   name: ORG_NAME,
   alternateName: ORG_ALT_NAME,
   url: ORG_URL,
-  logo: `${SITE_URL}/logo.png`,
+  logo: {
+    '@type': 'ImageObject',
+    url: `${SITE_URL}/logo.png`,
+  },
   description:
     'A longitudinal research institute studying human innovation capacity through Montessori observation protocols from birth to adulthood.',
   email: 'research@blueblocks.in',
@@ -69,21 +72,75 @@ export const buildWebSiteSchema = () => ({
   publisher: { '@id': `${SITE_URL}/#organization` },
 });
 
+// ─── SiteNavigationElement ───────────────────────────────────────────────────
+export const buildSiteNavigationSchema = (navItems = []) => {
+  // Flatten nav into top-level items
+  const flatItems = [];
+  navItems.forEach(item => {
+    if (item.path) flatItems.push({ name: item.label, url: `${SITE_URL}${item.path}` });
+  });
+  return {
+    '@type': 'SiteNavigationElement',
+    '@id': `${SITE_URL}/#navigation`,
+    name: 'Main Navigation',
+    hasPart: flatItems.map(i => ({
+      '@type': 'WebPage',
+      name: i.name,
+      url: i.url,
+    })),
+  };
+};
+
 // ─── Global schemas array (for every page) ───────────────────────────────────
-export const buildGlobalGraphNodes = () => [
-  buildOrganizationSchema(),
-  buildWebSiteSchema(),
-];
+export const buildGlobalGraphNodes = (navItems = []) => {
+  const nodes = [
+    buildOrganizationSchema(),
+    buildWebSiteSchema(),
+  ];
+  if (navItems.length > 0) {
+    nodes.push(buildSiteNavigationSchema(navItems));
+  }
+  return nodes;
+};
 
 // ─── WebPage ─────────────────────────────────────────────────────────────────
-export const buildWebPageSchema = ({ name, description, path = '/' }) => ({
-  '@type': 'WebPage',
-  '@id': `${SITE_URL}${path}#webpage`,
+export const buildWebPageSchema = ({ name, description, path = '/', ogImage }) => {
+  const schema = {
+    '@type': 'WebPage',
+    '@id': `${SITE_URL}${path}#webpage`,
+    url: `${SITE_URL}${path}`,
+    name,
+    description,
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    about: { '@id': `${SITE_URL}/#organization` },
+  };
+  if (ogImage) {
+    schema.primaryImageOfPage = {
+      '@type': 'ImageObject',
+      url: ogImage.startsWith('http') ? ogImage : `${SITE_URL}${ogImage}`,
+    };
+  }
+  return schema;
+};
+
+// ─── CollectionPage ──────────────────────────────────────────────────────────
+export const buildCollectionPageSchema = ({ name, description, path, items = [] }) => ({
+  '@type': 'CollectionPage',
+  '@id': `${SITE_URL}${path}#collection`,
   url: `${SITE_URL}${path}`,
   name,
   description,
   isPartOf: { '@id': `${SITE_URL}/#website` },
-  about: { '@id': `${SITE_URL}/#organization` },
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: items.length,
+    itemListElement: items.slice(0, 10).map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name || item.title,
+      url: item.url ? (item.url.startsWith('http') ? item.url : `${SITE_URL}${item.url}`) : undefined,
+    })),
+  },
 });
 
 // ─── BreadcrumbList ──────────────────────────────────────────────────────────
@@ -119,12 +176,62 @@ export const buildBreadcrumbsFromPath = (pathname) => {
   return crumbs;
 };
 
+// ─── FAQPage ─────────────────────────────────────────────────────────────────
+export const buildFaqPageSchema = (faqs = []) => {
+  if (!faqs || faqs.length < 2) return null;
+  return {
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question || faq.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: stripHtml(faq.answer || faq.a || ''),
+      },
+    })),
+  };
+};
+
+/** Strip HTML tags from a string */
+function stripHtml(str) {
+  return str.replace(/<[^>]*>/g, '').trim();
+}
+
+/**
+ * Extract FAQ items from page sections (accordion/faq sections).
+ */
+export const extractFaqsFromSections = (sections = []) => {
+  const faqs = [];
+  sections.forEach(section => {
+    if (section.type === 'accordion' || section.type === 'glossary-accordion') {
+      (section.items || []).forEach(item => {
+        if (item.question || item.title || item.heading) {
+          faqs.push({
+            question: item.question || item.title || item.heading,
+            answer: item.answer || item.body || item.content || item.text || '',
+          });
+        }
+      });
+    }
+    // FAQ-style sections with mainEntity
+    if (section.faqs) {
+      section.faqs.forEach(faq => {
+        faqs.push({
+          question: faq.question || faq.q,
+          answer: faq.answer || faq.a || '',
+        });
+      });
+    }
+  });
+  return faqs;
+};
+
 /**
  * Convenience: builds global + page-level schemas in a single @graph-ready array.
  */
-export const buildGlobalSchemas = ({ pageName = '', pagePath = '/', breadcrumbs = [] } = {}) => {
+export const buildGlobalSchemas = ({ pageName = '', pagePath = '/', breadcrumbs = [], navItems = [] } = {}) => {
   const nodes = [
-    ...buildGlobalGraphNodes(),
+    ...buildGlobalGraphNodes(navItems),
     buildWebPageSchema({ name: pageName, path: pagePath }),
   ];
 
@@ -155,7 +262,6 @@ export const buildPersonSchema = ({
   orcid = '',
   sameAs = [],
 }) => {
-  // Resolve ORCID from map if not explicitly provided
   const resolvedOrcid = orcid || ORCID_MAP[name] || '';
   const allSameAs = [...sameAs];
   if (resolvedOrcid && !allSameAs.includes(resolvedOrcid)) {
@@ -165,8 +271,8 @@ export const buildPersonSchema = ({
   return {
     '@type': 'Person',
     name,
-    jobTitle,
-    description,
+    ...(jobTitle && { jobTitle }),
+    ...(description && { description }),
     url: url.startsWith('http') ? url : `${SITE_URL}${url}`,
     affiliation: AFFILIATION_NODE,
     ...(imageUrl && { image: imageUrl.startsWith('http') ? imageUrl : `${SITE_URL}${imageUrl}` }),
@@ -186,12 +292,14 @@ export const buildScholarlyArticleSchema = ({
   url = '',
   keywords = [],
   pdfUrl = '',
+  doi = '',
+  zenodoUrl = '',
 }) => {
   const schema = {
     '@type': 'ScholarlyArticle',
     headline: title,
-    description: abstract,
-    datePublished,
+    ...(abstract && { description: abstract }),
+    ...(datePublished && { datePublished }),
     ...(dateModified && { dateModified }),
     url: url.startsWith('http') ? url : `${SITE_URL}${url}`,
     author: authors.map(name => {
@@ -212,6 +320,18 @@ export const buildScholarlyArticleSchema = ({
     schema.keywords = keywords.join(', ');
   }
 
+  if (doi) {
+    schema.identifier = {
+      '@type': 'PropertyValue',
+      propertyID: 'DOI',
+      value: doi,
+    };
+  }
+
+  if (zenodoUrl) {
+    schema.sameAs = zenodoUrl;
+  }
+
   if (pdfUrl) {
     schema.encoding = {
       '@type': 'MediaObject',
@@ -224,7 +344,37 @@ export const buildScholarlyArticleSchema = ({
 };
 
 /**
- * Patent — for /patents/* detail pages (schema.org Patent type).
+ * Article — for insight/news detail pages.
+ */
+export const buildArticleSchema = ({
+  title = '',
+  description = '',
+  datePublished = '',
+  dateModified = '',
+  authors = [],
+  url = '',
+  imageUrl = '',
+}) => ({
+  '@type': 'Article',
+  headline: title,
+  ...(description && { description }),
+  ...(datePublished && { datePublished }),
+  ...(dateModified && { dateModified }),
+  url: url.startsWith('http') ? url : `${SITE_URL}${url}`,
+  author: authors.length > 0
+    ? authors.map(name => ({ '@type': 'Person', name, affiliation: AFFILIATION_NODE }))
+    : AFFILIATION_NODE,
+  publisher: {
+    ...AFFILIATION_NODE,
+    logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo.png` },
+  },
+  ...(imageUrl && {
+    image: { '@type': 'ImageObject', url: imageUrl.startsWith('http') ? imageUrl : `${SITE_URL}${imageUrl}` },
+  }),
+});
+
+/**
+ * Patent — for /patents/* detail pages.
  */
 export const buildPatentSchema = ({
   name = '',
@@ -236,9 +386,9 @@ export const buildPatentSchema = ({
   pdfUrl = '',
 }) => {
   const schema = {
-    '@type': 'Patent',   // schema.org pending type — widely recognized by Google
+    '@type': 'Patent',
     name,
-    description,
+    ...(description && { description }),
     url: url.startsWith('http') ? url : `${SITE_URL}${url}`,
     ...(applicationNo && { identifier: applicationNo }),
     ...(datePublished && { datePublished }),
@@ -262,24 +412,24 @@ export const buildPatentSchema = ({
 };
 
 /**
- * CreativeWork — legacy alias for patents (kept for backward compat).
+ * CreativeWork — for innovation detail or legacy patent pages.
  */
 export const buildCreativeWorkSchema = ({
   title = '',
-  abstract = '',
+  description = '',
   datePublished = '',
-  inventors = [],
-  applicationNo = '',
+  creators = [],
   url = '',
-  pdfUrl = '',
-}) => buildPatentSchema({
+}) => ({
+  '@type': 'CreativeWork',
   name: title,
-  description: abstract,
-  datePublished,
-  inventors,
-  applicationNo,
-  url,
-  pdfUrl,
+  ...(description && { description }),
+  ...(datePublished && { datePublished }),
+  url: url.startsWith('http') ? url : `${SITE_URL}${url}`,
+  creator: creators.length > 0
+    ? creators.map(c => ({ '@type': 'Person', name: c, affiliation: AFFILIATION_NODE }))
+    : AFFILIATION_NODE,
+  publisher: AFFILIATION_NODE,
 });
 
 /**
@@ -297,8 +447,8 @@ export const buildDatasetSchema = ({
 }) => ({
   '@type': 'Dataset',
   name,
-  description,
-  datePublished,
+  ...(description && { description }),
+  ...(datePublished && { datePublished }),
   url: url.startsWith('http') ? url : `${SITE_URL}${url}`,
   creator: creators.map(c => ({
     '@type': 'Person',
@@ -325,9 +475,9 @@ export const buildBookSchema = ({
 }) => ({
   '@type': 'Book',
   name: title,
-  description,
-  datePublished,
-  isbn,
+  ...(description && { description }),
+  ...(datePublished && { datePublished }),
+  ...(isbn && { isbn }),
   url: url.startsWith('http') ? url : `${SITE_URL}${url}`,
   author: authors.map(name => ({
     '@type': 'Person',
@@ -353,8 +503,8 @@ export const buildNewsArticleSchema = ({
 }) => ({
   '@type': 'NewsArticle',
   headline: title,
-  description,
-  datePublished,
+  ...(description && { description }),
+  ...(datePublished && { datePublished }),
   url: url.startsWith('http') ? url : `${SITE_URL}${url}`,
   author: authors.map(name => ({
     '@type': 'Person',
@@ -401,4 +551,4 @@ export const buildGovernanceSchemas = ({
 ];
 
 // Export constants for use elsewhere
-export { SITE_URL, ORG_NAME };
+export { SITE_URL, ORG_NAME, ORCID_MAP };
