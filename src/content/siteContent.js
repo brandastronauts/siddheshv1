@@ -5128,7 +5128,7 @@ const siteContent = {
           image: { src: "/src/assets/placeholders/avatars/pavan.webp", alt: "Pavan Goyal", variant: "avatar" },
           email: "research@blueblocks.in",
           socials: [
-            { type: "linkedin", href: "https://www.linkedin.com/in/pavangoyal/", label: "LinkedIn" },
+            { type: "linkedin", href: "https://www.linkedin.com/in/pavangoel", label: "LinkedIn" },
             { type: "orcid", href: "https://orcid.org/0009-0009-8840-8505", label: "ORCID" },
             { type: "website", href: "https://blueblocks.in", label: "Website" }
           ],
@@ -5215,7 +5215,7 @@ const siteContent = {
           image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar" },
           email: "research@blueblocks.in",
           socials: [
-            { type: "linkedin", href: "https://www.linkedin.com/in/munirahussain/", label: "LinkedIn" },
+            { type: "linkedin", href: "https://www.linkedin.com/in/munira-hussain-b515bb14", label: "LinkedIn" },
             { type: "orcid", href: "https://orcid.org/0009-0003-5904-6206", label: "ORCID" }
           ],
           bio: "Ensures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the Children's House. Credentials: AMI Diploma / M.Ed."
