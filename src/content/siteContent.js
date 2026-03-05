@@ -42,31 +42,31 @@ const siteContent = {
     "/": {
       title: "Home",
       metaDescription:
-        "The Blue Blocks Micro Research Institute compiles a longitudinal dataset on human innovation capacity from birth to age 18. 17 years completed; Year 18 ongoing.",
+        "17-year longitudinal panel of 1045 children tracking human innovation capacity from birth to age 18. Embedded observation within an AMI Montessori environment in Hyderabad, India.",
       
       seo: {
-        title: "The World's First Micro Research Institute | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/",
+        title: "Children are the Data",
+        canonical: "https://research.blueblocks.in/",
         robots: "noindex,nofollow,noarchive,nosnippet",
         openGraph: {
           type: "website",
-          url: "https://siddheshv1.lovable.app/",
-          title: "The World's First Micro Research Institute",
+          url: "https://research.blueblocks.in/",
+          title: "Children are the Data",
           description:
-            "A longitudinal dataset on human innovation capacity from birth to age 18. 17 years completed; Year 18 ongoing.",
+            "17-year longitudinal panel of 1045 children tracking human innovation capacity from birth to age 18. Embedded observation within an AMI Montessori environment in Hyderabad, India.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/home.jpg",
+            url: "https://research.blueblocks.in/images/og-home.jpg",
             width: 1200,
             height: 630,
-            alt: "Precision research environment"
+            alt: "Children are the Data"
           }
         },
         twitter: {
           card: "summary_large_image",
-          title: "The World's First Micro Research Institute",
+          title: "Children are the Data",
           description:
-            "High-frequency embedded observation from birth to 18 — ecological truth over lab isolation.",
-          image: "https://siddheshv1.lovable.app/og/home.jpg"
+            "17-year longitudinal panel of 1045 children tracking human innovation capacity from birth to age 18. Embedded observation within an AMI Montessori environment in Hyderabad, India.",
+          image: "https://research.blueblocks.in/images/og-home.jpg"
         }
       },
 
