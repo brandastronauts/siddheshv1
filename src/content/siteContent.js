@@ -982,7 +982,7 @@ const siteContent = {
             },
             {
               title: "Minimal Footprint",
-              icon: "minimize",
+              icon: "feather",
               body:
                 "Protocols must be completable in under five minutes by observers already present in the environment. No clipboards. No strangers. No disruption. We've learned — through failure — that consistency beats comprehensiveness. Five-minute protocols run for years. Twenty-minute protocols die in six weeks."
             },
