@@ -972,25 +972,25 @@ const siteContent = {
               title: "Single Bounded Question",
               icon: "target",
               body:
-                "We ask one thing at a time. Not \"How does age, gender, and material type affect work duration?\" but \"How long do 4-year-olds work with the pink tower?\" Compound questions get split. One question, one protocol, one dataset."
+                "Each protocol investigates exactly one question. \"How long does a three-year-old persist on the Pink Tower after initial mastery?\" — not \"How does persistence develop across sensorial materials?\" Compound questions get split into separate studies. This constraint forces clarity and enables replication."
             },
             {
               title: "Observable Behavior",
               icon: "eye",
               body:
-                "\"Child concentrated deeply\" is inference. \"Child repeated stacking sequence 7 times without interruption\" is observation. We capture actions, gestures, exact words spoken. Analysis comes later. The observation record stays behavioral."
+                "We record actions, not inferences. \"Child returned to material three times\" — not \"Child showed interest.\" The observation record contains only behavior. Analysis comes later, separately, by different eyes. This discipline protects the data from the observer's expectations."
             },
             {
               title: "Minimal Footprint",
               icon: "minimize",
               body:
-                "Our Fellows observe while teaching. They're not clipboard-wielding strangers disrupting routines. A protocol that takes 12 minutes won't get done. We've learned through failure that consistency beats comprehensiveness. Five-minute protocols run for years. Twenty-minute protocols die in six weeks."
+                "Protocols must be completable in under five minutes by observers already present in the environment. No clipboards. No strangers. No disruption. We've learned — through failure — that consistency beats comprehensiveness. Five-minute protocols run for years. Twenty-minute protocols die in six weeks."
             },
             {
               title: "Publication-Ready",
               icon: "file",
               body:
-                "If a protocol won't eventually get a DOI and land in Zenodo, we don't run it. This forces clarity. \"Interesting to track\" becomes \"worth publishing\" or gets dropped. The discipline of publication-intent changes what we're willing to measure."
+                "Every protocol is designed as if it will be submitted for peer review. Not \"interesting to track\" — but \"worth publishing.\" This means pre-registered hypotheses, defined sample sizes, and DOI-ready data structures from day one. The discipline of designing for publication changes what we measure."
             }
           ]
         },
