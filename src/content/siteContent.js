@@ -222,7 +222,7 @@ const siteContent = {
           variant: "precision",
           headline: "Children Are the Data",
           subheadline:
-            "We are compiling the most granular dataset on human innovation capacity from birth to age 18. 15 years completed; Year 16 ongoing. \nEmbedded observation across toddlers, elementary students, and adolescents. Not lab experiments. Not surveys. Daily records of what children actually do when given real engineering challenges.",
+            "**17 years - 1045 children - Continuous Observation - Real Evidence**",
           primaryCta: { label: "Read the Methodology Paper", href: "/methodology" },
           secondaryCta: { label: "Zenodo Community", href: "https://zenodo.org/communities/blueblocksmicroresearchinstitute/records?q=&l=list&p=1&s=10&sort=newest", external: true },
           image: {
@@ -237,9 +237,9 @@ const siteContent = {
         {
           id: "home-purpose",
           type: "grid3",
-          header: "Why Schools Can't Usually Do Research",
+          header: "What Makes Us Different",
           intro:
-            "Universities have research funding and the PhDs, but lack long-term access to developing children. Schools have children for 15 years, but no research infrastructure. Blue Blocks Micro Research Institute runs both. By embedding a Micro Research Institute within [Blue Blocks Montessori School](https://www.blueblocks.in) environment, we capture the data universities miss, the granular, day-by-day evolution of innovation capacity.\n\nThis depth requires us to reject the sporadic nature of clinical studies. Instead, we deploy Micro-Research: a continuous protocol of high-frequency, embedded data capture. We consciously sacrifice the sterile control of the laboratory for the 'Ecological Truth' of the living environment, prioritizing authentic behavior over artificial isolation.",
+            "Blue Blocks Micro Research Institute lives inside [Blue Blocks Montessori School](https://www.blueblocks.in). Our educators are our researchers. Our data never leaves context.\n\nMost institutions study children from the outside. We observe from within the same daily environment, across years, tracking how innovation capacity forms — not in snapshots, but across a full developmental arc.\n\nFindings re-enter the classroom within weeks. Observation generates research. Research changes practice. Practice generates new questions. The cycle never stops.\n\nThe classroom and the research are intertwined and work in harmony.",
           items: [
             {
               title: "Longitudinal Continuity (0-18)",
