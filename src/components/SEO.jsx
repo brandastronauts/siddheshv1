@@ -3,7 +3,8 @@ import { useLocation } from 'react-router-dom';
 
 const BASE_URL = 'https://research.blueblocks.in';
 const SITE_NAME = 'Blue Blocks Micro Research Institute';
-const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.jpg`;
+const OG_SITE_NAME = 'Blue Blocks Montessori School';
+const DEFAULT_OG_IMAGE = `${BASE_URL}/images/og-home.jpg`;
 const DEFAULT_DESCRIPTION =
   'A longitudinal research institute studying innovation, Montessori development, and human potential through continuous observation from birth to adulthood.';
 
@@ -36,7 +37,7 @@ const SEO = ({
       )}
 
       <meta property="og:type" content={ogType} />
-      <meta property="og:site_name" content={SITE_NAME} />
+      <meta property="og:site_name" content={OG_SITE_NAME} />
       <meta property="og:url" content={canonical} />
       <meta property="og:title" content={title || SITE_NAME} />
       <meta property="og:description" content={description} />
