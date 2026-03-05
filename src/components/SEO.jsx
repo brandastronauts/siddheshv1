@@ -33,10 +33,18 @@ const SEO = ({
   const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
 
   // Build a single @graph object from all schema nodes (avoids duplicate <script> tags)
-  const graphPayload =
-    jsonLd && jsonLd.length > 0
-      ? JSON.stringify({ '@context': 'https://schema.org', '@graph': jsonLd })
-      : null;
+  const graphPayload = (() => {
+    if (!jsonLd || jsonLd.length === 0) return null;
+    // Strip per-node @context (only the wrapper gets @context)
+    const cleaned = jsonLd.map(node => {
+      if (!node || typeof node !== 'object') return node;
+      const { '@context': _ctx, ...rest } = node;
+      return rest;
+    });
+    // Stringify then fix any legacy dev URLs to production canonical
+    return JSON.stringify({ '@context': 'https://schema.org', '@graph': cleaned })
+      .replace(/https:\/\/siddheshv1\.lovable\.app/g, BASE_URL);
+  })();
 
   return (
     <Helmet>
