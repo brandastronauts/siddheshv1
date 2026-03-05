@@ -40,6 +40,7 @@ const ChecklistSection = lazy(() => import('./sections/ChecklistSection'));
 const TableBlockSection = lazy(() => import('./sections/TableBlockSection'));
 const AnchorBlockSection = lazy(() => import('./sections/AnchorBlockSection'));
 const TimelineStepsSection = lazy(() => import('./sections/TimelineStepsSection'));
+const PillarsSection = lazy(() => import('./sections/PillarsSection'));
 
 const LazyDossier = {
   DossierHeaderSection: lazy(() => import('./sections/DossierSections').then(m => ({ default: m.DossierHeaderSection }))),
@@ -96,6 +97,7 @@ const components = {
   tableBlock: TableBlockSection,
   anchorBlock: AnchorBlockSection,
   timelineSteps: TimelineStepsSection,
+  pillars: PillarsSection,
   dossierHeader: LazyDossier.DossierHeaderSection,
   dossierSection: LazyDossier.DossierSectionBlock,
   dossierQuoteStrip: LazyDossier.DossierQuoteStripSection,
@@ -122,6 +124,7 @@ const sectionDefaults = {
   checklist:    { items: [] },
   tableBlock:   { headers: [], rows: [] },
   timelineSteps:{ steps: [] },
+  pillars:      { items: [] },
   patentGrid:   { cards: [], patents: [] },
   accordion:    { items: [] },
   glossaryAccordion: { groups: [] },

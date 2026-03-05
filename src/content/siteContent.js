@@ -965,7 +965,7 @@ const siteContent = {
 
         {
           id: "meth-pillars",
-          type: "cards",
+          type: "pillars",
           header: "The Four Pillars of Micro-Research — What makes a study \"Micro\"?",
           items: [
             {
