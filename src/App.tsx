@@ -28,6 +28,7 @@ const GenericPage = lazy(() => import("./pages/GenericPage"));
 const CitationStandardsPage = lazy(() => import("./pages/CitationStandardsPage"));
 const FAQPage = lazy(() => import("./pages/FAQPage"));
 const SchemaDebugPage = lazy(() => import("./pages/SchemaDebugPage"));
+const SchoolHomePreview = lazy(() => import("./pages/SchoolHomePreview"));
 
 const queryClient = new QueryClient();
 
@@ -93,6 +94,7 @@ const App = () => (
               <Route path="/team/:slug" element={<GenericPage />} />
               <Route path="/governance/team/:slug" element={<GenericPage />} />
               <Route path="/debug/schema" element={<SchemaDebugPage />} />
+              <Route path="/__preview/school-home" element={<SchoolHomePreview />} />
               
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
