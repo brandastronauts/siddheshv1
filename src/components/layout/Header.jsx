@@ -165,7 +165,9 @@ const Header = () => {
           <Link to="/" className="flex items-center gap-2.5 group">
             <div className="h-12 md:h-14 w-12 md:w-14 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-border/20">
               <img
-                src="/logo.png"
+                src="/logo-88.webp"
+                srcSet="/assets/logo-88.webp 88w, /logo-132.webp 132w"
+                sizes="(min-width: 768px) 48px, 44px"
                 alt={brand.siteName}
                 className="h-11 md:h-12 w-11 md:w-12 object-contain"
                 width={48}
