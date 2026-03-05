@@ -17,7 +17,7 @@ const DEFAULT_DESCRIPTION =
  * @param {string}  [props.ogImage]     – Full URL for OG/Twitter image
  * @param {string}  [props.ogType]      – OpenGraph type (default "website")
  * @param {boolean} [props.noIndex]     – Force noindex (default true during pre-launch)
- * @param {object[]} [props.jsonLd]     – Array of JSON-LD objects to inject
+ * @param {object[]} [props.jsonLd]     – Array of JSON-LD nodes injected as a single @graph
  */
 const SEO = ({
   title,
@@ -32,6 +32,12 @@ const SEO = ({
   const canonical = canonicalUrl || `${BASE_URL}${location.pathname}`;
   const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
 
+  // Build a single @graph object from all schema nodes (avoids duplicate <script> tags)
+  const graphPayload =
+    jsonLd && jsonLd.length > 0
+      ? JSON.stringify({ '@context': 'https://schema.org', '@graph': jsonLd })
+      : null;
+
   return (
     <Helmet>
       {/* Core */}
@@ -41,13 +47,13 @@ const SEO = ({
 
       {/* Robots — pre-launch lockdown */}
       {noIndex && (
-        <>
-          <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
-          <meta
-            name="googlebot"
-            content="noindex, nofollow, noarchive, nosnippet, noimageindex"
-          />
-        </>
+        <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+      )}
+      {noIndex && (
+        <meta
+          name="googlebot"
+          content="noindex, nofollow, noarchive, nosnippet, noimageindex"
+        />
       )}
 
       {/* OpenGraph */}
@@ -68,13 +74,10 @@ const SEO = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
 
-      {/* JSON-LD */}
-      {jsonLd &&
-        jsonLd.map((schema, i) => (
-          <script key={i} type="application/ld+json">
-            {JSON.stringify(schema)}
-          </script>
-        ))}
+      {/* JSON-LD — single @graph script, no duplicates on re-render */}
+      {graphPayload && (
+        <script type="application/ld+json">{graphPayload}</script>
+      )}
     </Helmet>
   );
 };
