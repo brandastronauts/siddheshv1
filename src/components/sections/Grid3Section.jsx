@@ -37,6 +37,7 @@ const Grid3Section = ({ heading, header, intro, items }) => {
         <div className={`grid grid-cols-1 gap-6 lg:gap-8 mx-auto ${
           items.length === 1 ? 'max-w-lg' 
           : items.length === 2 ? 'md:grid-cols-2 max-w-3xl' 
+          : items.length === 4 ? 'md:grid-cols-2 lg:grid-cols-4'
           : 'md:grid-cols-2 lg:grid-cols-3'
         }`}>
           {items.map((item, index) => {
