@@ -11,6 +11,14 @@ const SITE_URL = 'https://research.blueblocks.in';
 const ORG_NAME = 'Blue Blocks Micro Research Institute';
 const ORG_ALT_NAME = 'Blue Blocks Research';
 const ORG_URL = SITE_URL;
+const PARENT_ORG_ID = 'https://www.blueblocks.in/#organization';
+
+// ─── Permanent @id URIs (must match seoSchemaConfig.js) ─────────────────────
+const PERMANENT_IDS = {
+  INSTITUTE:    `${SITE_URL}/#microresearch`,
+  WEBSITE:      `${SITE_URL}/#website`,
+  PARENT_ORG:   PARENT_ORG_ID,
+};
 
 // ─── ORCID registry for known researchers ────────────────────────────────────
 const ORCID_MAP = {
@@ -24,7 +32,7 @@ const ORCID_MAP = {
 // ─── Affiliation node (reused across builders) ───────────────────────────────
 const AFFILIATION_NODE = {
   '@type': 'ResearchOrganization',
-  '@id': `${SITE_URL}/#organization`,
+  '@id': PERMANENT_IDS.INSTITUTE,
   name: ORG_NAME,
   url: ORG_URL,
 };
@@ -32,13 +40,13 @@ const AFFILIATION_NODE = {
 // ─── Global: ResearchOrganization ────────────────────────────────────────────
 export const buildOrganizationSchema = () => ({
   '@type': 'ResearchOrganization',
-  '@id': `${SITE_URL}/#organization`,
+  '@id': PERMANENT_IDS.INSTITUTE,
   name: ORG_NAME,
   alternateName: ORG_ALT_NAME,
   url: ORG_URL,
   logo: {
     '@type': 'ImageObject',
-    url: `${SITE_URL}/logo.png`,
+    url: `${SITE_URL}/images/blueblocks-logo.svg`,
   },
   description:
     'A longitudinal research institute studying human innovation capacity through Montessori observation protocols from birth to adulthood.',
@@ -49,8 +57,8 @@ export const buildOrganizationSchema = () => ({
     contactType: 'research inquiries',
   },
   parentOrganization: {
-    '@type': 'Organization',
-    '@id': 'https://www.blueblocks.in/#organization',
+    '@type': 'EducationalOrganization',
+    '@id': PERMANENT_IDS.PARENT_ORG,
     name: 'Blue Blocks Montessori School',
     url: 'https://www.blueblocks.in',
   },
@@ -66,10 +74,10 @@ export const buildOrganizationSchema = () => ({
 // ─── Global: WebSite ─────────────────────────────────────────────────────────
 export const buildWebSiteSchema = () => ({
   '@type': 'WebSite',
-  '@id': `${SITE_URL}/#website`,
+  '@id': PERMANENT_IDS.WEBSITE,
   name: ORG_NAME,
   url: ORG_URL,
-  publisher: { '@id': `${SITE_URL}/#organization` },
+  publisher: { '@id': PERMANENT_IDS.INSTITUTE },
 });
 
 // ─── SiteNavigationElement ───────────────────────────────────────────────────
@@ -79,7 +87,7 @@ export const buildSiteNavigationSchema = (navItems = []) => {
   navItems.forEach(item => {
     if (item.path) flatItems.push({ name: item.label, url: `${SITE_URL}${item.path}` });
   });
-  return {
+  const schema = {
     '@type': 'SiteNavigationElement',
     '@id': `${SITE_URL}/#navigation`,
     name: 'Main Navigation',
@@ -111,8 +119,8 @@ export const buildWebPageSchema = ({ name, description, path = '/', ogImage }) =
     url: `${SITE_URL}${path}`,
     name,
     description,
-    isPartOf: { '@id': `${SITE_URL}/#website` },
-    about: { '@id': `${SITE_URL}/#organization` },
+    isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
+    about: { '@id': PERMANENT_IDS.INSTITUTE },
   };
   if (ogImage) {
     schema.primaryImageOfPage = {
@@ -130,7 +138,7 @@ export const buildCollectionPageSchema = ({ name, description, path, items = [] 
   url: `${SITE_URL}${path}`,
   name,
   description,
-  isPartOf: { '@id': `${SITE_URL}/#website` },
+   isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
   mainEntity: {
     '@type': 'ItemList',
     numberOfItems: items.length,
@@ -313,7 +321,7 @@ export const buildScholarlyArticleSchema = ({
       return person;
     }),
     publisher: AFFILIATION_NODE,
-    isPartOf: { '@id': `${SITE_URL}/#website` },
+    isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
   };
 
   if (keywords.length > 0) {
@@ -532,7 +540,7 @@ export const buildGovernanceSchemas = ({
     name: 'Governance & Ethics — Blue Blocks Micro Research Institute',
     description,
     url: `${SITE_URL}/governance`,
-    isPartOf: { '@id': `${SITE_URL}/#website` },
+    isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
   },
   {
     '@type': 'ItemList',
