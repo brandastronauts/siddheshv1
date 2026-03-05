@@ -4,7 +4,7 @@
 export const brand = {
   siteName: "Blue Blocks Micro Research Institute",
   headerTagline: "Micro Research Institute",
-  ethicsTagline: "Compiling the world's first longitudinal dataset on human innovation capacity from birth to age 18. 15 years completed; Year 16 ongoing.",
+  ethicsTagline: "Compiling the world's first longitudinal dataset on human innovation capacity from birth to age 18. 17 years completed; Year 18 ongoing.",
   contact: {
     research: "research@blueblocks.in",
     press: "press@blueblocks.in",

@@ -95,7 +95,7 @@ const CitationStandardsPage = () => {
                 Policy requirements for all affiliated publications and datasets.
               </h2>
               <p className="text-[15px] text-muted-foreground leading-[1.7] mb-8">
-                To maintain methodological consistency across our 15-year longitudinal research program, all affiliated publications and datasets must cite the Institute's foundational methodology and dataset specifications.
+                To maintain methodological consistency across our 17-year longitudinal research program, all affiliated publications and datasets must cite the Institute's foundational methodology and dataset specifications.
               </p>
 
               {/* Subsections */}

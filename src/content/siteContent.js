@@ -7,7 +7,7 @@ const siteContent = {
   brand: {
     siteName: "Blue Blocks Micro Research Institute",
     headerTagline: "Micro Research Institute",
-    ethicsTagline: "Compiling the world's first longitudinal dataset on human innovation capacity from birth to age 18. 15 years completed; Year 16 ongoing.",
+    ethicsTagline: "Compiling the world's first longitudinal dataset on human innovation capacity from birth to age 18. 17 years completed; Year 18 ongoing.",
     contact: {
       research: "research@blueblocks.in",
       press: "press@blueblocks.in",
@@ -42,7 +42,7 @@ const siteContent = {
     "/": {
       title: "Home",
       metaDescription:
-        "The Blue Blocks Micro Research Institute compiles a longitudinal dataset on human innovation capacity from birth to age 18. 15 years completed; Year 16 ongoing.",
+        "The Blue Blocks Micro Research Institute compiles a longitudinal dataset on human innovation capacity from birth to age 18. 17 years completed; Year 18 ongoing.",
       
       seo: {
         title: "The World's First Micro Research Institute | Blue Blocks Micro Research Institute",
@@ -53,7 +53,7 @@ const siteContent = {
           url: "https://siddheshv1.lovable.app/",
           title: "The World's First Micro Research Institute",
           description:
-            "A longitudinal dataset on human innovation capacity from birth to age 18. 15 years completed; Year 16 ongoing.",
+            "A longitudinal dataset on human innovation capacity from birth to age 18. 17 years completed; Year 18 ongoing.",
           image: {
             url: "https://siddheshv1.lovable.app/og/home.jpg",
             width: 1200,
@@ -165,7 +165,7 @@ const siteContent = {
             url: "https://siddheshv1.lovable.app/"
           },
           keywords: [
-            "longitudinal study",
+            "longitudinal panel",
             "innovation capacity",
             "micro-research",
             "education research",
@@ -245,7 +245,7 @@ const siteContent = {
               title: "Longitudinal Continuity (0-18)",
               icon: "calendar",
               body:
-                "Most child development studies observe children once or twice. We've tracked the same children continuously through our Embedded Research Fellows from age 3 to 18. 15 years completed; Year 16 ongoing. This continuity shows us the trajectory of how capabilities develop not just what children can do at one moment, but proving that the engineer of 18 is built by the sensorial explorer of 3."
+                "Most child development studies observe children once or twice. We've tracked the same children continuously through our Embedded Research Fellows from age 3 to 18. 17 years completed; Year 18 ongoing. This continuity shows us the trajectory of how capabilities develop not just what children can do at one moment, but proving that the engineer of 18 is built by the sensorial explorer of 3."
             },
             {
               title: "Ecological Validity - Real Projects, Not Lab Tasks",
@@ -368,7 +368,7 @@ const siteContent = {
             {
               q: "What does \"Micro Research\" mean?",
               a:
-                "It is a protocol of small-scale, high-frequency observation studies that run continuously for years. Rather than conducting one large study on 'how children learn math,' we execute 20+ micro-studies per year—each addressing one specific variable, recordable in under 5 minutes, sustained over time. The power of 'Micro' lies in accumulation; over 15 years, 200+ studies, 847 children generating a granular dataset becomes significant."
+                "It is a protocol of small-scale, high-frequency observation studies that run continuously for years. Rather than conducting one large study on 'how children learn math,' we execute 20+ micro-studies per year—each addressing one specific variable, recordable in under 5 minutes, sustained over time. The power of 'Micro' lies in accumulation; over 17 years, 200+ studies, 1045 children generating a granular dataset becomes significant."
             },
             {
               q: "Are the student projects simulations or real-world applications?",
@@ -515,7 +515,7 @@ const siteContent = {
     "/the-institute": {
       title: "The Institute",
       metaDescription:
-        "The 0–18 Continuum: a longitudinal, embedded micro-research institution tracking human innovation capacity. 15 years completed; Year 16 ongoing.",
+        "The 0–18 Continuum: a longitudinal, embedded micro-research institution tracking human innovation capacity. 17 years completed; Year 18 ongoing.",
       seo: {
         title: "The 0–18 Continuum | The Institute | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/the-institute",
@@ -582,7 +582,7 @@ const siteContent = {
               acceptedAnswer: {
                 "@type": "Answer",
                 text:
-                  "Published datasets use codes instead of names (Subject-847-A, not personal identities). Photos are blurred/cropped. No combination of data points allows re-identification."
+                  "Published datasets use codes instead of names (Subject-1045-A, not personal identities). Photos are blurred/cropped. No combination of data points allows re-identification."
               }
             }
           ]
@@ -595,7 +595,7 @@ const siteContent = {
           variant: "stark",
           headline: "The 0-18 Continuum.",
           subheadline:
-            "We are a new category of research institution—built for questions that require decades, not semesters. By embedding rigorous observation protocols into a living Montessori environment, we have created the world's longest continuous record of human innovation capacity. Most child development studies observe children once or twice. We've been watching the same children for fifteen years. 15 years completed; Year 16 ongoing. Not surveys. Not lab visits. Daily observation records from their actual teachers, in their actual classrooms, working on actual problems.",
+            "We are a new category of research institution—built for questions that require decades, not semesters. By embedding rigorous observation protocols into a living Montessori environment, we have created the world's longest continuous record of human innovation capacity. Most child development studies observe children once or twice. We've been watching the same children for seventeen years. 17 years completed; Year 18 ongoing. Not surveys. Not lab visits. Daily observation records from their actual teachers, in their actual classrooms, working on actual problems.",
           primaryCta: { label: "Institute Prospectus Available Soon", href: "#", disabled: true },
           image: {
             src: "/src/assets/banners/institute-stark.jpg",
@@ -610,7 +610,7 @@ const siteContent = {
           id: "inst-live-ticker",
           type: "ticker",
           text:
-            "PROTOCOL STATUS: Active Observation Cycle (Year 16) /// COHORT: N=847 Subjects (0-18) /// DATA INTEGRITY: Longitudinal Continuity [100%] /// CURRENT PHASE: TRL-9 Outcome Correlation"
+            "PROTOCOL STATUS: Active Observation Cycle (Year 18) /// COHORT: N=1045 Subjects (0-18) /// DATA INTEGRITY: Longitudinal Continuity [100%] /// CURRENT PHASE: TRL-9 Outcome Correlation"
         },
 
         {
@@ -626,7 +626,7 @@ const siteContent = {
           type: "highlightBox",
           title: "The Embedded Solution - How We Solved It:",
           body:
-            "We built an institution where research never ends because the environment never changes. By integrating the 'School' and the 'Lab,' we maintain zero-attrition contact with our subjects. We do not just measure capacity; we document its entire developmental trajectory. Same children, same teachers, fifteen years. 15 years completed; Year 16 ongoing. When children graduate at 18, we have complete records from their first day to their last. No grant deadlines. No funding cycles. The research continues as long as the school operates."
+            "We built an institution where research never ends because the environment never changes. By integrating the 'School' and the 'Lab,' we maintain zero-attrition contact with our subjects. We do not just measure capacity; we document its entire developmental trajectory. Same children, same teachers, seventeen years. 17 years completed; Year 18 ongoing. When children graduate at 18, we have complete records from their first day to their last. No grant deadlines. No funding cycles. The research continues as long as the school operates."
         },
 
         {
@@ -673,7 +673,7 @@ const siteContent = {
               tag: "Prototyping Wing",
               headline: "Drone Research Centre",
               body:
-                "Dedicated to the longitudinal study of 'Iterative Failure.' Tracks the engineering lifecycle from initial aerodynamic testing to Patent-Ready flight stability.",
+                "Dedicated to the Longitudinal Panel on 'Iterative Failure.' Tracks the engineering lifecycle from initial aerodynamic testing to Patent-Ready flight stability.",
               image: { src: "/src/assets/placeholders/labs/drone-centre.jpg", alt: "Drone research environment", variant: "card", privacyBlur: true }
             },
             {
@@ -700,8 +700,8 @@ const siteContent = {
           type: "statsBar",
           header: "The Blue Blocks Advantage",
           stats: [
-            { value: "15 Years", label: "Completed Observation" },
-            { value: "847", label: "Subjects Tracked (0-18)" },
+            { value: "17 Years", label: "Completed Observation" },
+            { value: "1045", label: "Subjects Tracked (0-18)" },
             { value: "35,000+", label: "Hours of Data Per Child" },
             { value: "5", label: "Innovation Labs" }
           ]
@@ -734,7 +734,7 @@ const siteContent = {
             {
               q: "How do you protect children's privacy?",
               a:
-                "Published datasets use codes instead of names (Subject-847-A, not 'Rahul Kumar'). Specific school location becomes 'urban Montessori school, Hyderabad, India.' Photos: faces blurred or cropped out. No combination of data points allows re-identification."
+                "Published datasets use codes instead of names (Subject-1045-A, not 'Rahul Kumar'). Specific school location becomes 'urban Montessori school, Hyderabad, India.' Photos: faces blurred or cropped out. No combination of data points allows re-identification."
             },
             {
               q: "Do parents consent?",
@@ -754,7 +754,7 @@ const siteContent = {
             {
               q: "What datasets are you building?",
               a:
-                "We are building: (1) Longitudinal Behavioral Data from 847 subjects, (2) Biometric & Sensory Log, (3) Academic Performance Correlation, (4) Patent & TRL Outcomes."
+                "We are building: (1) Longitudinal Behavioral Data from 1045 subjects, (2) Biometric & Sensory Log, (3) Academic Performance Correlation, (4) Patent & TRL Outcomes."
             },
             {
               q: "Can I visit the Innovation Labs?",
@@ -1000,7 +1000,7 @@ const siteContent = {
           type: "comparisonTable",
           header: "The Compound Effect — Why Twenty Small Studies Beat One Large Study?",
           intro:
-            "Running one micro-study tells you almost nothing. Running two hundred over fifteen years builds a dataset that shows developmental patterns nobody else can see.",
+            "Running one micro-study tells you almost nothing. Running two hundred over seventeen years builds a dataset that shows developmental patterns nobody else can see.",
           columns: ["Traditional Academic Study", "Blue Blocks Micro-Research"],
           rows: [
             { label: "Frequency", values: ["1 Study every 3 Years", "20+ Studies Annually"] },
@@ -1300,7 +1300,7 @@ const siteContent = {
             },
             {
               tag: "Drafting",
-              headline: "Academic Performance vs. Project Completion: 15-Year Montessori Cohort Analysis",
+              headline: "Academic Performance vs. Project Completion: 17-Year Montessori Cohort Analysis",
               meta: "Domain: Education Research | Est: Q4 2026",
               body:
                 "Mapping standardized test scores against open-ended engineering project completion rates across the 6-12 continuum.",
@@ -1365,7 +1365,7 @@ const siteContent = {
           type: "accordion",
           header: "Longitudinal Data Dictionaries",
           intro:
-            "We are currently k-anonymizing 15 years of student records. The Variable Schemas are available for external review.",
+            "We are currently k-anonymizing 17 years of student records. The Variable Schemas are available for external review.",
           items: [
             {
               q: "Schema: The Innovation Index (Variable Set A)",
@@ -1748,7 +1748,7 @@ const siteContent = {
             {
               q: "Privacy & Informed Consent",
               a:
-                "Enrollment Consent: All families sign comprehensive research waivers upon school entry.\n\nChild Assent: Students aged 7+ are granted the \"Right to Decline\" participation without consequence.\n\nWithdrawal: Parents maintain the right to withdraw data access at any time.\n\nData Anonymization: All published records use alphanumeric codes (Subject-847-A, not names). Photos published only with separate photo consent and face obscuration. No re-identification pathway exists in public datasets."
+                "Enrollment Consent: All families sign comprehensive research waivers upon school entry.\n\nChild Assent: Students aged 7+ are granted the \"Right to Decline\" participation without consequence.\n\nWithdrawal: Parents maintain the right to withdraw data access at any time.\n\nData Anonymization: All published records use alphanumeric codes (Subject-1045-A, not names). Photos published only with separate photo consent and face obscuration. No re-identification pathway exists in public datasets."
             },
             {
               q: "Observer Standards & Reliability",
@@ -1782,7 +1782,7 @@ const siteContent = {
             heading: "Data Security & Anonymization",
             icon: "shieldCheck",
             items: [
-              { label: "K-Anonymity", text: "All datasets are scrubbed of PII (Personally Identifiable Information). Names are replaced with alphanumeric codes (e.g., Subject-847-A)." },
+              { label: "K-Anonymity", text: "All datasets are scrubbed of PII (Personally Identifiable Information). Names are replaced with alphanumeric codes (e.g., Subject-1045-A)." },
               { label: "Visual Privacy", text: "Faces in published documentation are obscured or digitized." },
               { label: "Storage", text: "Longitudinal records are stored in an air-gapped internal server (The Data Wing), accessible only to the Principal Investigator and Lead Fellows." }
             ]
@@ -1870,7 +1870,7 @@ const siteContent = {
           variant: "stark",
           headline: "Collaborative Science.",
           subheadline:
-            "Scientific breakthrough rarely happens in isolation. The Blue Blocks Micro Research Institute opens its longitudinal infrastructure to external partners who share our commitment to rigorous, non-intrusive inquiry. We offer a 15-year continuous dataset (0-18) that simply does not exist elsewhere. No other institution in India has comparable longitudinal density. If you're studying child development and need real data, not theory, we can work together.",
+            "Scientific breakthrough rarely happens in isolation. The Blue Blocks Micro Research Institute opens its longitudinal infrastructure to external partners who share our commitment to rigorous, non-intrusive inquiry. We offer a 17-year continuous dataset (0-18) that simply does not exist elsewhere. No other institution in India has comparable longitudinal density. If you're studying child development and need real data, not theory, we can work together.",
           primaryCta: { label: "Submit Research Proposal", href: "/contact" },
           secondaryCta: { label: "Our Data is Open Access", href: "/publications" },
           image: {
@@ -1892,7 +1892,7 @@ const siteContent = {
             icon: "graduation",
             lead: "Designed for PhD Candidates, Post-Docs, and Faculty.",
             items: [
-              { label: "Visiting Fellowships", text: "We host 2-3 visiting scholars annually for intensive 2-8 week residencies. You work alongside our research fellows, access the 15-year dataset, and publish collaboratively." },
+              { label: "Visiting Fellowships", text: "We host 2-3 visiting scholars annually for intensive 2-8 week residencies. You work alongside our research fellows, access the 17-year dataset, and publish collaboratively." },
               { label: "Data Access", text: "Apply for credentialed access to our anonymized longitudinal datasets (Tier 2 access under our data classification standard). Requires IRB approval from your institution and signed data use agreement." },
               { label: "Joint Authorship", text: "Join specific micro-studies as co-investigator. We provide the observational infrastructure; you bring analytical frameworks or comparative data." }
             ]
@@ -2091,7 +2091,7 @@ const siteContent = {
           variant: "stark",
           headline: "The Institutional Record.",
           subheadline:
-            "This newsroom documents what we've learned, what we've built, and what went wrong. Satellite launches, patent filings, scientific breakthroughs, methodological dead-ends—all of it matters. 15 years completed; Year 16 ongoing. Five utility patents filed to date.",
+            "This newsroom documents what we've learned, what we've built, and what went wrong. Satellite launches, patent filings, scientific breakthroughs, methodological dead-ends—all of it matters. 17 years completed; Year 18 ongoing. Five utility patents filed to date.",
           primaryCta: { label: "Monthly Digest – Available Shortly", disabled: true },
           secondaryCta: { label: "Currently CubeSat Press Kit Available", href: "https://drive.google.com/drive/folders/1qAxUfbSOFcN3TYDPlX_7tHrYXFU39fxY?usp=sharing", external: true },
           image: {
@@ -2260,7 +2260,7 @@ const siteContent = {
           items: [
             {
               q: "Can journalists visit the campus?",
-              a: "Yes, by appointment only. Media visits are scheduled outside of core observational hours to ensure zero interference with the longitudinal study. Please contact media@blueblocks.in at least 5 business days in advance."
+              a: "Yes, by appointment only. Media visits are scheduled outside of core observational hours to ensure zero interference with the Longitudinal Panel. Please contact media@blueblocks.in at least 5 business days in advance."
             },
             {
               q: "How should I refer to the school vs. the institute?",
@@ -2733,7 +2733,7 @@ const siteContent = {
           number: "02",
           label: "Key Finding",
           header: "Valorization Through Failure",
-          body: "The Stage 4 anomaly provided an unscripted, high-stakes lesson in aerospace engineering reality. Students confronted genuine mission failure — not a simulated exercise — and were required to process the technical, emotional, and professional dimensions of an outcome beyond their control. This experience is now documented as the single most significant pedagogical event in the Institute's longitudinal study.\n\nThe SBB-1 mission conclusively demonstrates that adolescent-led teams, guided by Montessori principles of self-directed learning and intrinsic motivation, can meet the rigorous technical and regulatory standards required for deployment on national space platforms."
+          body: "The Stage 4 anomaly provided an unscripted, high-stakes lesson in aerospace engineering reality. Students confronted genuine mission failure — not a simulated exercise — and were required to process the technical, emotional, and professional dimensions of an outcome beyond their control. This experience is now documented as the single most significant pedagogical event in the Institute's Longitudinal Panel.\n\nThe SBB-1 mission conclusively demonstrates that adolescent-led teams, guided by Montessori principles of self-directed learning and intrinsic motivation, can meet the rigorous technical and regulatory standards required for deployment on national space platforms."
         },
         {
           id: "sbb1-specs",
@@ -3532,7 +3532,7 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "Team",
-          subheadline: "Meet the researchers, embedded fellows, and domain specialists who drive the Blue Blocks Micro Research Institute's mission. 15 years of longitudinal research requires institutional stability and deep domain expertise.",
+          subheadline: "Meet the researchers, embedded fellows, and domain specialists who drive the Blue Blocks Micro Research Institute's mission. 17 years of longitudinal research requires institutional stability and deep domain expertise.",
           primaryCta: { label: "Contact", href: "/contact" },
           image: {
             src: "/src/assets/banners/team.jpg",
@@ -4333,7 +4333,7 @@ const siteContent = {
           id: "citation-standards",
           type: "textBlock",
           header: "Citation Standards",
-          body: "To maintain methodological consistency across our 15-year longitudinal research program, all affiliated publications and datasets must cite the Institute's foundational methodology and dataset specifications."
+          body: "To maintain methodological consistency across our 17-year longitudinal research program, all affiliated publications and datasets must cite the Institute's foundational methodology and dataset specifications."
         },
         {
           id: "citation-requirements",
@@ -4387,7 +4387,7 @@ const siteContent = {
               },
               {
                 title: "Why This Matters",
-                citation: "Consistent citation builds an interconnected evidence base. Proper attribution ensures every contribution maps accurately to the Blue Blocks research legacy and supports longitudinal traceability across the 15-year dataset."
+                citation: "Consistent citation builds an interconnected evidence base. Proper attribution ensures every contribution maps accurately to the Blue Blocks research legacy and supports longitudinal traceability across the 17-year dataset."
               }
             ]
           }
@@ -4955,7 +4955,7 @@ const siteContent = {
           type: "hero",
           variant: "stark",
           headline: "Lining The Nest",
-          subheadline: "A comprehensive guide for families and educators on building structured learning environments that foster innovation capacity from early childhood through adolescence. Drawing on 15 years of longitudinal observation at Blue Blocks Micro Research Institute.",
+          subheadline: "A comprehensive guide for families and educators on building structured learning environments that foster innovation capacity from early childhood through adolescence. Drawing on 17 years of longitudinal observation at Blue Blocks Micro Research Institute.",
           primaryCta: { label: "Buy on Amazon", href: "https://amzn.in/d/09xLf6FE", external: true },
           secondaryCta: { label: "Download Sample Chapter", href: "/downloads/lining-the-nest-sample-chapter.pdf" },
           image: { src: "/src/assets/placeholders/card-default.jpg", alt: "Lining The Nest book cover", variant: "hero" }
@@ -5116,8 +5116,8 @@ const siteContent = {
           items: [
             { label: "Role", value: "Principal Investigator & Founder" },
             { label: "Credentials", value: "AMI Diploma (0-18)" },
-            { label: "Focus", value: "Longitudinal Study Integrity" },
-            { label: "Tenure", value: "15+ years" }
+            { label: "Focus", value: "Longitudinal Panel Integrity" },
+            { label: "Tenure", value: "17+ years" }
           ]
         },
         {
@@ -5138,7 +5138,7 @@ const siteContent = {
           id: "profile-content",
           type: "textBlock",
           header: "Biography",
-          body: "Pavan Goyal is the Principal Investigator and Founder of Blue Blocks Micro Research Institute. He oversees the longitudinal integrity of the 0-18 study and holds the rare distinction of complete AMI certification across all developmental planes.\n\nWith over 15 years of embedded observation experience, Pavan has pioneered the Micro Research methodology that enables continuous, high-frequency data capture without disrupting the educational environment. His work bridges the gap between traditional academic research and the living laboratory of the Montessori environment.\n\nPavan is the author of 'Lining The Nest' and has presented the Institute's findings at international forums including the IMF Annual Meetings and the Nobel Peace Center."
+          body: "Pavan Goyal is the Principal Investigator and Founder of Blue Blocks Micro Research Institute. He oversees the longitudinal integrity of the 0-18 panel and holds the rare distinction of complete AMI certification across all developmental planes.\n\nWith over 17 years of embedded observation experience, Pavan has pioneered the Micro Research methodology that enables continuous, high-frequency data capture without disrupting the educational environment. His work bridges the gap between traditional academic research and the living laboratory of the Montessori environment.\n\nPavan is the author of 'Lining The Nest' and has presented the Institute's findings at international forums including the IMF Annual Meetings and the Nobel Peace Center."
         },
         {
           id: "profile-related",
@@ -6353,7 +6353,7 @@ const siteContent = {
           id: "update-content",
           type: "textBlock",
           header: "Milestone Achievement",
-          body: "The Drone Research Centre has filed its fifth utility patent, marking a significant milestone in our longitudinal study of 'Innovation Agency' in the 9-11 age group.\n\nThe 'Guardian' drone represents an autonomous health monitoring system designed by some of the youngest patent holders in the Institute's registry. This filing demonstrates that children as young as 9 can contribute meaningfully to the global innovation economy when given appropriate scaffolding and real-world problems to solve.\n\nFive utility patents have now been filed to date by Blue Blocks Micro Research Institute students."
+          body: "The Drone Research Centre has filed its fifth utility patent, marking a significant milestone in our Longitudinal Panel on 'Innovation Agency' in the 9-11 age group.\n\nThe 'Guardian' drone represents an autonomous health monitoring system designed by some of the youngest patent holders in the Institute's registry. This filing demonstrates that children as young as 9 can contribute meaningfully to the global innovation economy when given appropriate scaffolding and real-world problems to solve.\n\nFive utility patents have now been filed to date by Blue Blocks Micro Research Institute students."
         },
         {
           id: "update-related",
@@ -6477,7 +6477,7 @@ const siteContent = {
           id: "innov-dip",
           type: "textBlock",
           heading: "Our Framework",
-          body: "Didactic Innovation Principles (DIP) is our proprietary framework for designing environments where innovation emerges naturally.\n\nDIP draws on:\n• Montessori prepared environment theory\n• Developmental psychology across four planes (0-6, 6-12, 12-18)\n• 15 years of iterative refinement based on embedded observation\n\nDIP is not a teaching method. It's an environment design philosophy — principles for creating spaces where children naturally explore, construct, fail, iterate, and innovate.",
+          body: "Didactic Innovation Principles (DIP) is our proprietary framework for designing environments where innovation emerges naturally.\n\nDIP draws on:\n• Montessori prepared environment theory\n• Developmental psychology across four planes (0-6, 6-12, 12-18)\n• 17 years of iterative refinement based on embedded observation\n\nDIP is not a teaching method. It's an environment design philosophy — principles for creating spaces where children naturally explore, construct, fail, iterate, and innovate.",
         },
         {
           id: "innov-dip-principles",
@@ -6525,19 +6525,19 @@ const siteContent = {
           id: "innov-loop-steps",
           type: "textBlock",
           sectionName: "The Loop",
-          body: "1. We design a space/curriculum element based on developmental principles\n2. We observe how children actually use it\n3. We publish findings\n4. We refine the design based on observation\n5. We observe again\n\nThis has been running for 15 years. The DIP Labs and curriculum you see today are the result of hundreds of iterations — each informed by embedded observation.\n\nExample: Our construction collapse research revealed specific latency patterns. This informed how we position materials and when guides intervene (or don't). The space was adjusted. We observed the change. The findings were published. The loop continues.",
+          body: "1. We design a space/curriculum element based on developmental principles\n2. We observe how children actually use it\n3. We publish findings\n4. We refine the design based on observation\n5. We observe again\n\nThis has been running for 17 years. The DIP Labs and curriculum you see today are the result of hundreds of iterations — each informed by embedded observation.\n\nExample: Our construction collapse research revealed specific latency patterns. This informed how we position materials and when guides intervene (or don't). The space was adjusted. We observed the change. The findings were published. The loop continues.",
         },
         {
           id: "innov-context",
           type: "textBlock",
           heading: "Context That Others Lack",
-          body: "When we publish findings on innovation development, the context is unique:\n• The space was designed by us — we know every design decision\n• The curriculum was designed by us — we know every pedagogical choice\n• The observation is embedded — zero observer effect\n• The refinement loop is continuous — we act on what we learn\n\nThis is Integrated Design-Research applied to innovation. It means our data has context that external researchers cannot provide.\n\nFor researchers:\nIf you use our innovation data, you're not just getting observations. You're getting observations from an environment we designed, using a curriculum we created, refined over 15 years. The design rationale is documented. The context is known.",
+          body: "When we publish findings on innovation development, the context is unique:\n• The space was designed by us — we know every design decision\n• The curriculum was designed by us — we know every pedagogical choice\n• The observation is embedded — zero observer effect\n• The refinement loop is continuous — we act on what we learn\n\nThis is Integrated Design-Research applied to innovation. It means our data has context that external researchers cannot provide.\n\nFor researchers:\nIf you use our innovation data, you're not just getting observations. You're getting observations from an environment we designed, using a curriculum we created, refined over 17 years. The design rationale is documented. The context is known.",
         },
         {
           id: "innov-canon",
           type: "highlightBox",
           heading: "The Full Story — Innovation Canon (Coming Soon)",
-          body: "We are preparing a comprehensive Innovation Canon Paper documenting:\n• The complete design rationale for DIP\n• 15 years of environment iteration\n• The full 0-18 curriculum framework\n• How observation shaped every design decision\n\nThis will be published with a DOI and linked here — the definitive reference for understanding how our innovation research environment came to be.\n\nFor early access or collaboration inquiries: research@blueblocks.in",
+          body: "We are preparing a comprehensive Innovation Canon Paper documenting:\n• The complete design rationale for DIP\n• 17 years of environment iteration\n• The full 0-18 curriculum framework\n• How observation shaped every design decision\n\nThis will be published with a DOI and linked here — the definitive reference for understanding how our innovation research environment came to be.\n\nFor early access or collaboration inquiries: research@blueblocks.in",
         },
         {
           id: "innov-cta",
@@ -6553,7 +6553,7 @@ const siteContent = {
             {
               title: "For Institutions",
               icon: "building",
-              body: "Partner on innovation environment design. Learn from 15 years of iteration.",
+              body: "Partner on innovation environment design. Learn from 17 years of iteration.",
               email: "research@blueblocks.in",
             },
             {
@@ -6874,8 +6874,8 @@ const siteContent = {
           title: "About Our Research",
           items: [
             { q: "What do you study?", a: "Three domains: Innovation (0–18), Montessori (0–18), Parenting (0–18)." },
-            { q: "How many children have you observed?", a: "847 children since 2009." },
-            { q: "How long have you been doing this?", a: "Since 2009 — 15 years of continuous observation." },
+            { q: "How many children have you observed?", a: "1045 children since 2009." },
+            { q: "How long have you been doing this?", a: "Since 2009 — 17 years of continuous observation." },
             { q: "Who does the observation?", a: "25 Embedded Research Fellows — AMI-certified practitioners." },
           ],
         },
@@ -7030,7 +7030,7 @@ const siteContent = {
           {
             number: 7,
             title: "Sample Characteristics",
-            body: "Our longitudinal panel, while large (847 children), represents families who chose Montessori education and can afford private school fees in an Indian urban context. This is not a representative sample of all children.",
+            body: "Our longitudinal panel, while large (1045 children), represents families who chose Montessori education and can afford private school fees in an Indian urban context. This is not a representative sample of all children.",
           },
           {
             number: 8,
@@ -7443,7 +7443,7 @@ const siteContent = {
           { term: "Five Gates", definition: "The five review checkpoints every micro-study must pass before publication: Scope, Ethics, Method, Evidence, Limitations." },
           { term: "4K Video Test", definition: "The documentation standard requiring observation records detailed enough that an independent researcher could reconstruct the behavioral sequence." },
           { term: "Integrated Design-Research", definition: "The construct describing how the same entity that designs learning environments also researches them, enabling capture of innovation emergence." },
-          { term: "Longitudinal Panel", definition: "The 847 children tracked continuously since 2009, forming the foundation for compound evidence." },
+          { term: "Longitudinal Panel", definition: "The 1045 children tracked continuously since 2009, forming the foundation for compound evidence." },
           { term: "Micro Research", definition: "Practitioner-led, longitudinal methodology for embedded, naturalistic observation studies. (DOI-001)" },
           { term: "Micro-Study", definition: "A single bounded research study following Micro Research methodology, published with a DOI." },
           { term: "MREF (Micro Research Ethics Framework)", definition: "Comprehensive ethics governance for research involving children in educational settings." },
