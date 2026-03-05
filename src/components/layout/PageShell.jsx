@@ -3,28 +3,14 @@ import { useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import SEO from '../SEO';
-import seoSchemaConfig, { OG_SITE_NAME, SITE_URL, PERMANENT_IDS } from '../../lib/seoSchemaConfig';
+import seoSchemaConfig, { SITE_URL, PERMANENT_IDS } from '../../lib/seoSchemaConfig';
+import {
+  buildGlobalGraphNodes,
+  buildWebPageSchema,
+  buildBreadcrumbsFromPath,
+  buildBreadcrumbSchema,
+} from '../../lib/schemaBuilders';
 import { brand } from '../../content/siteCore';
-
-// Global schemas injected once per page (WebSite + Organization)
-const GLOBAL_GRAPH_NODES = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    '@id': PERMANENT_IDS.WEBSITE,
-    url: SITE_URL,
-    name: 'Blue Blocks Micro Research Institute',
-    publisher: { '@id': PERMANENT_IDS.INSTITUTE },
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'ResearchOrganization',
-    '@id': PERMANENT_IDS.INSTITUTE,
-    name: 'Blue Blocks Micro Research Institute',
-    url: SITE_URL,
-    parentOrganization: { '@id': PERMANENT_IDS.PARENT_ORG },
-  },
-];
 
 const PageShell = ({ children }) => {
   const location = useLocation();
@@ -37,19 +23,25 @@ const PageShell = ({ children }) => {
     });
   }, [location.pathname]);
 
-  // ── Build SEO props from either seoSchemaConfig or page content ──
+  // ── Build SEO props ──
 
   const buildSeoProps = () => {
+    const globalNodes = buildGlobalGraphNodes();
+
     // --- Source 1: seoSchemaConfig (highest priority) ---
     if (seoConfig) {
       const { meta, openGraph, twitter, jsonLd } = seoConfig;
+      // Merge global org/website nodes with page-specific jsonLd graph
+      const pageNodes = jsonLd?.['@graph'] || (jsonLd ? [jsonLd] : []);
       return {
-        title: meta.title?.replace(` | ${brand.siteName}`, '').replace(` | Blue Blocks Micro Research Institute`, ''),
+        title: meta.title
+          ?.replace(` | ${brand.siteName}`, '')
+          .replace(` | Blue Blocks Micro Research Institute`, ''),
         description: meta.description,
         canonicalUrl: meta.canonical,
         ogImage: openGraph?.image || twitter?.image,
         ogType: openGraph?.type || 'website',
-        jsonLd: jsonLd ? [jsonLd] : GLOBAL_GRAPH_NODES,
+        jsonLd: [...globalNodes, ...pageNodes],
       };
     }
 
@@ -65,10 +57,18 @@ const PageShell = ({ children }) => {
         heroFallback.description;
       const og = page.seo?.openGraph || {};
 
-      // Build JSON-LD
-      const schemas = page.schemas?.length
+      // Build page-level schemas
+      const pageSchemaNodes = page.schemas?.length
         ? page.schemas
-        : buildAutoSchemas(pageTitle, description, location.pathname);
+        : [
+            buildWebPageSchema({ name: pageTitle, description, path: location.pathname }),
+            buildBreadcrumbSchema([
+              ...buildBreadcrumbsFromPath(location.pathname),
+              ...(location.pathname !== '/'
+                ? [{ name: pageTitle, path: location.pathname }]
+                : []),
+            ]),
+          ];
 
       return {
         title: pageTitle.replace(` | ${brand.siteName}`, ''),
@@ -76,12 +76,12 @@ const PageShell = ({ children }) => {
         canonicalUrl: page.seo?.canonical,
         ogImage: og.image?.url || og.image,
         ogType: og.type || 'website',
-        jsonLd: [...GLOBAL_GRAPH_NODES, ...schemas],
+        jsonLd: [...globalNodes, ...pageSchemaNodes],
       };
     }
 
-    // --- Fallback ---
-    return {};
+    // --- Fallback: just global schemas ---
+    return { jsonLd: globalNodes };
   };
 
   const seoProps = buildSeoProps();
@@ -106,40 +106,6 @@ function extractHeroFallback(sections) {
     title: hero.headline || hero.title || '',
     description: hero.subtitle || hero.intro || '',
   };
-}
-
-function buildAutoSchemas(title, description, pathname) {
-  const schemas = [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: title,
-      description,
-      url: `${SITE_URL}${pathname}`,
-      isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
-      about: { '@id': PERMANENT_IDS.INSTITUTE },
-    },
-  ];
-
-  const segments = pathname.split('/').filter(Boolean);
-  if (segments.length > 0) {
-    const crumbs = [{ '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL }];
-    segments.forEach((seg, i) => {
-      const path = '/' + segments.slice(0, i + 1).join('/');
-      const name = seg
-        .split('-')
-        .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-        .join(' ');
-      crumbs.push({ '@type': 'ListItem', position: i + 2, name, item: `${SITE_URL}${path}` });
-    });
-    schemas.push({
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: crumbs,
-    });
-  }
-
-  return schemas;
 }
 
 export default PageShell;
