@@ -31,7 +31,8 @@ const PageShell = ({ children }) => {
     // --- Source 1: seoSchemaConfig (highest priority) ---
     if (seoConfig) {
       const { meta, openGraph, twitter, jsonLd } = seoConfig;
-      // Merge global org/website nodes with page-specific jsonLd graph
+      // seoSchemaConfig already has complete graphs with full org/website nodes;
+      // use those directly to avoid duplicates with the simpler globalNodes
       const pageNodes = jsonLd?.['@graph'] || (jsonLd ? [jsonLd] : []);
       return {
         title: meta.title
@@ -41,7 +42,7 @@ const PageShell = ({ children }) => {
         canonicalUrl: meta.canonical,
         ogImage: openGraph?.image || twitter?.image,
         ogType: openGraph?.type || 'website',
-        jsonLd: [...globalNodes, ...pageNodes],
+        jsonLd: pageNodes,
       };
     }
 
