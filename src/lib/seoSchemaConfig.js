@@ -109,7 +109,7 @@ const seoSchemaConfig = {
           name: 'Blue Blocks Micro Research Institute',
           alternateName: ['BBMRI', 'Blue Blocks Research'],
           disambiguatingDescription: 'The research arm of Blue Blocks Montessori School in Hyderabad, conducting longitudinal observational research on child development within authentic AMI Montessori environments since 2009.',
-          description: 'Blue Blocks Micro Research Institute conducts longitudinal observational research on child development across a 15-year dataset of 847 children within authentic AMI Montessori environments. Research domains include executive function development, autonomy-supportive parenting, resilience formation, and the cognitive architecture of innovation pedagogy. The institute operates as a department of Blue Blocks Montessori School and is led by Principal Investigator Pavan Goyal.',
+          description: 'Blue Blocks Micro Research Institute conducts longitudinal observational research on child development across a 17-year dataset of 1045 children within authentic AMI Montessori environments. Research domains include executive function development, autonomy-supportive parenting, resilience formation, and the cognitive architecture of innovation pedagogy. The institute operates as a department of Blue Blocks Montessori School and is led by Principal Investigator Pavan Goyal.',
           url: SITE_URL,
           logo: {
             '@type': 'ImageObject',
@@ -140,7 +140,7 @@ const seoSchemaConfig = {
             unitText: 'Embedded Research Fellows',
           },
           knowsAbout: [
-            { '@type': 'Thing', name: 'Longitudinal study', sameAs: 'https://en.wikipedia.org/wiki/Longitudinal_study' },
+            { '@type': 'Thing', name: 'Longitudinal panel', sameAs: 'https://en.wikipedia.org/wiki/Longitudinal_study' },
             { '@type': 'Thing', name: 'Child development', sameAs: 'https://en.wikipedia.org/wiki/Child_development' },
             { '@type': 'Thing', name: 'Observational study', sameAs: 'https://en.wikipedia.org/wiki/Observational_study' },
             { '@type': 'Thing', name: 'Executive functions', sameAs: 'https://en.wikipedia.org/wiki/Executive_functions' },
@@ -195,7 +195,7 @@ const seoSchemaConfig = {
   '/the-institute': {
     meta: {
       title: 'The 0-18 Continuum | Blue Blocks Micro Research Institute',
-      description: "Blue Blocks Micro Research Institute: 15 years of continuous embedded observation across 847 children. The world's longest record of human innovation capacity within an AMI Montessori environment.",
+      description: "Blue Blocks Micro Research Institute: 17 years of continuous embedded observation across 1045 children. The world's longest record of human innovation capacity within an AMI Montessori environment.",
       keywords: 'micro research institute, longitudinal child development, embedded observation, Montessori research, innovation capacity, ecological validity, Blue Blocks Micro Research Institute',
       robots: 'index, follow',
       canonical: `${SITE_URL}/institute`,
@@ -203,7 +203,7 @@ const seoSchemaConfig = {
     openGraph: {
       type: 'article',
       title: 'The 0-18 Continuum | Blue Blocks Micro Research Institute',
-      description: "15 years of continuous observation. 847 children. 35,000+ hours of data per child. The world's longest record of human innovation capacity.",
+      description: "17 years of continuous observation. 1045 children. 35,000+ hours of data per child. The world's longest record of human innovation capacity.",
       url: `${SITE_URL}/institute`,
       site_name: OG_SITE_NAME,
       image: `${SITE_URL}/images/og-institute.jpg`,
@@ -211,7 +211,7 @@ const seoSchemaConfig = {
     twitter: {
       card: 'summary_large_image',
       title: 'The 0-18 Continuum | Blue Blocks Micro Research Institute',
-      description: '15 years of continuous observation. 847 children. 35,000+ hours per child. Embedded research within AMI Montessori environments.',
+      description: '17 years of continuous observation. 1045 children. 35,000+ hours per child. Embedded research within AMI Montessori environments.',
     },
     jsonLd: {
       '@context': 'https://schema.org',
@@ -221,7 +221,7 @@ const seoSchemaConfig = {
           '@id': `${SITE_URL}/institute/#webpage`,
           url: `${SITE_URL}/institute`,
           name: 'The 0-18 Continuum | Blue Blocks Micro Research Institute',
-          description: '15 years of continuous embedded observation across 847 children within an AMI Montessori environment.',
+          description: '17 years of continuous embedded observation across 1045 children within an AMI Montessori environment.',
           isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
           about: { '@id': PERMANENT_IDS.INSTITUTE },
         },
@@ -237,7 +237,7 @@ const seoSchemaConfig = {
           '@type': 'Place',
           '@id': PERMANENT_IDS.DRONE_LAB,
           name: 'Blue Blocks Drone Research Centre',
-          description: 'Dedicated to the longitudinal study of iterative failure. Tracks the engineering lifecycle from initial aerodynamic testing to patent-ready flight stability.',
+          description: 'Dedicated to the longitudinal panel of iterative failure. Tracks the engineering lifecycle from initial aerodynamic testing to patent-ready flight stability.',
           containedInPlace: { '@id': PERMANENT_IDS.PARENT_ORG },
         },
         {
@@ -249,9 +249,9 @@ const seoSchemaConfig = {
         },
         {
           '@type': 'Dataset',
-          '@id': `${SITE_URL}/data/longitudinal-847/#dataset`,
-          name: 'Blue Blocks Longitudinal Child Development Dataset (2009-2025)',
-          description: '15-year observational dataset tracking developmental milestones, executive function indicators, and autonomy-supportive behaviour patterns across 847 children in AMI-certified Montessori environments.',
+          '@id': `${SITE_URL}/data/longitudinal-1045/#dataset`,
+          name: 'Blue Blocks Longitudinal Child Development Dataset (2009-2026)',
+          description: '17-year observational dataset tracking developmental milestones, executive function indicators, and autonomy-supportive behaviour patterns across 1045 children in AMI-certified Montessori environments.',
           creator: { '@id': PERMANENT_IDS.INSTITUTE },
           dateCreated: '2009',
           dateModified: '2025',
