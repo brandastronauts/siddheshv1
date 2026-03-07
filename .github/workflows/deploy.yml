@@ -1,4 +1,4 @@
-name: Deploy to cPanel dev65 (staging)
+name: Deploy research site to cPanel
 
 on:
   push:
@@ -13,20 +13,37 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node 20 + npm cache
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: "20"
+          cache: "npm"
 
       - name: Install dependencies
         run: npm ci
 
-      # If next.config.js uses output: "export", next build generates /out
-      - name: Build (Static Export)
+      - name: Build (Vite)
         run: npm run build
 
-      - name: Deploy to cPanel via FTP (dev65)
-        uses: samkirkland/ftp-deploy-action@v4.3.5
+      - name: Verify dist exists
+        run: |
+          test -d dist || (echo "❌ dist/ not found. Check Vite build output." && exit 1)
+          echo "✅ dist/ found"
+
+      - name: Add SPA .htaccess (React Router)
+        run: |
+          cat > dist/.htaccess <<'EOF'
+          RewriteEngine On
+          RewriteBase /
+          RewriteRule ^index\.html$ - [L]
+          RewriteCond %{REQUEST_FILENAME} !-f
+          RewriteCond %{REQUEST_FILENAME} !-d
+          RewriteRule . /index.html [L]
+          EOF
+          echo "✅ .htaccess added to dist/"
+
+      - name: Deploy to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.CPANEL_FTP_SERVER }}
           username: ${{ secrets.CPANEL_FTP_USERNAME }}
