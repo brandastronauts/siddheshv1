@@ -952,7 +952,7 @@ const siteContent = {
           headline: "The Micro-Research Framework.",
           subheadline:
             "We built Blue Blocks to generate research, not accommodate it. Since 2009, we've run high-frequency observation directly inside learning environments—recording what actually happens rather than staging what we hope to measure. This isn't retrofitted academic study. It's methodology embedded in practice from day one.",
-          primaryCta: { label: "View Framework Paper", disabled: true },
+          primaryCta: { label: "View Framework Paper", href: "https://doi.org/10.5281/zenodo.18584816", external: true },
           secondaryCta: { label: "Zenodo Upload in Process", disabled: true },
           image: {
             src: "/src/assets/banners/methodology-framework.jpg",
