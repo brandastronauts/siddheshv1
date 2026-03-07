@@ -7653,10 +7653,12 @@ const FIELDS_MAP = {
 };
 
 // Post-process: replace all legacy domain references with canonical SITE_URL
+// and ensure all robots directives allow indexing
 const processed = JSON.parse(
   JSON.stringify(siteContent)
     .replace(/https:\/\/siddheshv1\.lovable\.app/g, SITE_URL)
     .replace(/https:\/\/bb-researchv2\.vercel\.app/g, SITE_URL)
+    .replace(/"robots"\s*:\s*"noindex[^"]*"/g, '"robots":"index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"')
 );
 
 // Enrich every page with _cpt, _status, and fields
