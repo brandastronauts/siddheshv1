@@ -8,17 +8,30 @@ const DEFAULT_OG_IMAGE = `${BASE_URL}/images/og-home.jpg`;
 const DEFAULT_DESCRIPTION =
   'A longitudinal research institute studying innovation, Montessori development, and human potential through continuous observation from birth to adulthood.';
 
+const PRODUCTION_HOSTNAME = 'research.blueblocks.in';
+
+function isProduction() {
+  if (typeof window === 'undefined') return true;
+  return window.location.hostname === PRODUCTION_HOSTNAME;
+}
+
 const SEO = ({
   title,
   description = DEFAULT_DESCRIPTION,
   canonicalUrl,
   ogImage = DEFAULT_OG_IMAGE,
   ogType = 'website',
-  noIndex = true,
+  noIndex,
 }) => {
   const location = useLocation();
   const canonical = canonicalUrl || `${BASE_URL}${location.pathname}`;
   const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
+
+  const shouldNoIndex = noIndex !== undefined ? noIndex : !isProduction();
+
+  const robotsContent = shouldNoIndex
+    ? 'noindex, nofollow, noarchive, nosnippet'
+    : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 
   return (
     <Helmet>
@@ -26,10 +39,8 @@ const SEO = ({
       <meta name="description" content={description} />
       <link rel="canonical" href={canonical} />
 
-      {noIndex && (
-        <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
-      )}
-      {noIndex && (
+      <meta name="robots" content={robotsContent} />
+      {shouldNoIndex && (
         <meta
           name="googlebot"
           content="noindex, nofollow, noarchive, nosnippet, noimageindex"
