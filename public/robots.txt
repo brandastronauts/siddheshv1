@@ -1,4 +1,4 @@
 User-agent: *
-Disallow:
+allow:
 
 Sitemap: https://research.blueblocks.in/sitemap.xml
