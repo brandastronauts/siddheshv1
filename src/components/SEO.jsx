@@ -8,12 +8,6 @@ const DEFAULT_OG_IMAGE = `${BASE_URL}/images/og-home.jpg`;
 const DEFAULT_DESCRIPTION =
   'A longitudinal research institute studying innovation, Montessori development, and human potential through continuous observation from birth to adulthood.';
 
-const PRODUCTION_HOSTNAME = 'research.blueblocks.in';
-
-function isProduction() {
-  if (typeof window === 'undefined') return true;
-  return window.location.hostname === PRODUCTION_HOSTNAME;
-}
 
 const SEO = ({
   title,
