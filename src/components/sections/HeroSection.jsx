@@ -63,21 +63,7 @@ const HeroCta = ({ ctaData, isPrimary }) => {
       return <a href={href} target="_blank" rel="noopener noreferrer" className={className}>{content}</a>;
     }
     if (isAnchor) {
-      const handleAnchorClick = (e) => {
-        e.preventDefault();
-        let attempts = 0;
-        const tryScroll = () => {
-          const el = document.querySelector(href);
-          if (el) {
-            el.scrollIntoView({ behavior: 'smooth' });
-          } else if (attempts < 15) {
-            attempts++;
-            setTimeout(tryScroll, 200);
-          }
-        };
-        tryScroll();
-      };
-      return <a href={href} onClick={handleAnchorClick} className={className}>{content}</a>;
+      return <a href={href} onClick={createAnchorClickHandler(href)} className={className}>{content}</a>;
     }
     return <Link to={href} className={className}>{content}</Link>;
   }
