@@ -4,6 +4,33 @@ import { boldifyText } from '../../lib/boldifyText';
 
 // --- Sub-components ---
 
+const createAnchorClickHandler = (targetHash) => (e) => {
+  e.preventDefault();
+  if (!targetHash) return;
+
+  if (window.location.hash !== targetHash) {
+    window.location.hash = targetHash;
+  } else {
+    window.dispatchEvent(new Event('hashchange'));
+  }
+
+  let attempts = 0;
+  const tryScroll = () => {
+    const el = document.querySelector(targetHash);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+
+    if (attempts < 15) {
+      attempts += 1;
+      setTimeout(tryScroll, 200);
+    }
+  };
+
+  setTimeout(tryScroll, 80);
+};
+
 const HeroCta = ({ ctaData, isPrimary }) => {
   if (!ctaData) return null;
 
