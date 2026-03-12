@@ -1043,6 +1043,26 @@ const siteContent = {
         },
 
         {
+          id: "meth-framework-papers",
+          type: "frameworkPapers",
+          header: "Our Framework Papers",
+          papers: [
+            {
+              title: "Micro-Research Methodology Framework Paper-01",
+              doi: "10.5281/zenodo.18584816",
+              link: "https://doi.org/10.5281/zenodo.18584816",
+              body: "Most schools produce student projects. Blue Blocks produces student research. The Micro-Research Methodology is how.\n\nDeveloped over seventeen years of classroom practice, this framework turns everyday school activities — a workshop, a field trip, a child's unexpected question — into tightly scoped research cycles with defined observation protocols, compact datasets, and publication-ready outputs. Studies run two to six weeks. Data stays small and manageable. The educational environment stays undisturbed.\n\nThe methodology was designed for one specific problem: schools generate thousands of hours of rich observational data every year, and almost all of it is lost. Micro-Research captures it — rigorously, ethically, and at a scale that teachers and students can sustain without disrupting the work that matters most.\n\nEvery Blue Blocks Micro Research Institute's publication uses this framework. It is the methodological foundation for our work across child development, STEM innovation, developmental psychology, and Montessori implementation research."
+            },
+            {
+              title: "Participatory Scientist-Child Co-Authorship Framework — Paper 02",
+              doi: "10.5281/zenodo.18584890",
+              link: "https://doi.org/10.5281/zenodo.18584890",
+              body: "When a thirteen-year-old designs a flight-grade avionics board, or a six-year-old's question reshapes an architectural investigation, who gets credit?\n\nThis paper answers that question with a formal framework. It defines explicit contribution thresholds that children must meet to qualify as co-authors on scientific publications — original ideas, design contributions, data generation — while reserving analytical interpretation and statistical responsibilities for adult researchers. The framework includes ethics and safeguarding protocols for consent, anonymization, and protection against researcher bias when working with minors.\n\nThe result is a replicable pathway from classroom innovation to peer-reviewed authorship. Not a token \"student project showcase.\" Actual co-authorship, with defined criteria, on published research.\n\nThis is the first full application of this framework — seventeen adolescents listed as co-authors because they met every threshold the framework defines."
+            }
+          ]
+        },
+
+        {
           id: "meth-examples",
           type: "accordion",
           header: "Examples of Protocols We Have Run",

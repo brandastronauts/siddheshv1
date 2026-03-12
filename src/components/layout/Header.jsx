@@ -186,7 +186,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+          <nav className="hidden xl:flex items-center gap-1" aria-label="Main navigation">
             {nav.map((item) => {
               const isActive = location.pathname === item.path;
 
@@ -214,7 +214,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-xl hover:bg-surface transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+            className="xl:hidden p-2 rounded-xl hover:bg-surface transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
             aria-label="Toggle menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -235,7 +235,7 @@ const Header = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden border-t border-border/50 bg-background/95 backdrop-blur-xl"
+            className="xl:hidden border-t border-border/50 bg-background/95 backdrop-blur-xl"
           >
             <nav className="container-grid py-4" aria-label="Mobile navigation">
               <div className="flex flex-col gap-1">
