@@ -2,11 +2,11 @@ import { motion } from 'framer-motion';
 import { FileText, ExternalLink } from 'lucide-react';
 import { boldifyText } from '../../lib/boldifyText';
 
-const FrameworkPapersSection = ({ heading, header, papers = [] }) => {
+const FrameworkPapersSection = ({ id, heading, header, papers = [] }) => {
   const title = header || heading;
 
   return (
-    <section className="section-spacing bg-surface">
+    <section id={id} className="section-spacing bg-surface scroll-mt-24">
       <div className="container-grid">
         {title && (
           <h2 className="hero-fade-in text-3xl md:text-4xl font-bold text-center text-deep-ink mb-12">
