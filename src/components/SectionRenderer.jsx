@@ -128,6 +128,7 @@ const sectionDefaults = {
   tableBlock:   { headers: [], rows: [] },
   timelineSteps:{ steps: [] },
   pillars:      { items: [] },
+  frameworkPapers: { papers: [] },
   patentGrid:   { cards: [], patents: [] },
   accordion:    { items: [] },
   glossaryAccordion: { groups: [] },
