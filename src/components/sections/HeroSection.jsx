@@ -4,6 +4,33 @@ import { boldifyText } from '../../lib/boldifyText';
 
 // --- Sub-components ---
 
+const createAnchorClickHandler = (targetHash) => (e) => {
+  e.preventDefault();
+  if (!targetHash) return;
+
+  if (window.location.hash !== targetHash) {
+    window.location.hash = targetHash;
+  } else {
+    window.dispatchEvent(new Event('hashchange'));
+  }
+
+  let attempts = 0;
+  const tryScroll = () => {
+    const el = document.querySelector(targetHash);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+
+    if (attempts < 15) {
+      attempts += 1;
+      setTimeout(tryScroll, 200);
+    }
+  };
+
+  setTimeout(tryScroll, 80);
+};
+
 const HeroCta = ({ ctaData, isPrimary }) => {
   if (!ctaData) return null;
 
@@ -36,21 +63,7 @@ const HeroCta = ({ ctaData, isPrimary }) => {
       return <a href={href} target="_blank" rel="noopener noreferrer" className={className}>{content}</a>;
     }
     if (isAnchor) {
-      const handleAnchorClick = (e) => {
-        e.preventDefault();
-        let attempts = 0;
-        const tryScroll = () => {
-          const el = document.querySelector(href);
-          if (el) {
-            el.scrollIntoView({ behavior: 'smooth' });
-          } else if (attempts < 15) {
-            attempts++;
-            setTimeout(tryScroll, 200);
-          }
-        };
-        tryScroll();
-      };
-      return <a href={href} onClick={handleAnchorClick} className={className}>{content}</a>;
+      return <a href={href} onClick={createAnchorClickHandler(href)} className={className}>{content}</a>;
     }
     return <Link to={href} className={className}>{content}</Link>;
   }
@@ -76,7 +89,7 @@ const HeroCta = ({ ctaData, isPrimary }) => {
     return <a href={href} target="_blank" rel="noopener noreferrer" className={className}>{content}</a>;
   }
   if (isAnchor) {
-    return <a href={href} className={className}>{content}</a>;
+    return <a href={href} onClick={createAnchorClickHandler(href)} className={className}>{content}</a>;
   }
   return <Link to={href} className={className}>{content}</Link>;
 };

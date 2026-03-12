@@ -28,6 +28,19 @@ const LazySection = ({ children, index, threshold = 2 }) => {
     return () => observer.disconnect();
   }, [mounted]);
 
+  useEffect(() => {
+    const mountOnHashNavigation = () => {
+      if (window.location.hash) {
+        setMounted(true);
+      }
+    };
+
+    mountOnHashNavigation();
+    window.addEventListener('hashchange', mountOnHashNavigation);
+
+    return () => window.removeEventListener('hashchange', mountOnHashNavigation);
+  }, []);
+
   if (mounted) return children;
 
   // Placeholder preserves layout space
