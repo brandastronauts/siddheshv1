@@ -223,7 +223,7 @@ const siteContent = {
           headline: "Children Are the Data",
           subheadline:
             "**17 years - 1045 children - Continuous Observation - Real Evidence**",
-          primaryCta: { label: "Read the Methodology Paper", href: "/methodology" },
+          primaryCta: { label: "Read the Methodology Paper", href: "/methodology#meth-framework-papers" },
           secondaryCta: { label: "Zenodo Community", href: "https://zenodo.org/communities/blueblocksmicroresearchinstitute/records?q=&l=list&p=1&s=10&sort=newest", external: true },
           image: {
             src: "/src/assets/banners/home-precision.jpg",
