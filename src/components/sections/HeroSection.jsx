@@ -89,7 +89,7 @@ const HeroCta = ({ ctaData, isPrimary }) => {
     return <a href={href} target="_blank" rel="noopener noreferrer" className={className}>{content}</a>;
   }
   if (isAnchor) {
-    return <a href={href} className={className}>{content}</a>;
+    return <a href={href} onClick={createAnchorClickHandler(href)} className={className}>{content}</a>;
   }
   return <Link to={href} className={className}>{content}</Link>;
 };
