@@ -100,6 +100,7 @@ const components = {
   anchorBlock: AnchorBlockSection,
   timelineSteps: TimelineStepsSection,
   pillars: PillarsSection,
+  frameworkPapers: FrameworkPapersSection,
   dossierHeader: LazyDossier.DossierHeaderSection,
   dossierSection: LazyDossier.DossierSectionBlock,
   dossierQuoteStrip: LazyDossier.DossierQuoteStripSection,
