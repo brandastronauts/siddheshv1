@@ -42,6 +42,7 @@ const TableBlockSection = lazy(() => import('./sections/TableBlockSection'));
 const AnchorBlockSection = lazy(() => import('./sections/AnchorBlockSection'));
 const TimelineStepsSection = lazy(() => import('./sections/TimelineStepsSection'));
 const PillarsSection = lazy(() => import('./sections/PillarsSection'));
+const FrameworkPapersSection = lazy(() => import('./sections/FrameworkPapersSection'));
 
 const LazyDossier = {
   DossierHeaderSection: lazy(() => import('./sections/DossierSections').then(m => ({ default: m.DossierHeaderSection }))),
