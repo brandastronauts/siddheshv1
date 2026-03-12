@@ -235,7 +235,7 @@ const Header = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden border-t border-border/50 bg-background/95 backdrop-blur-xl"
+            className="xl:hidden border-t border-border/50 bg-background/95 backdrop-blur-xl"
           >
             <nav className="container-grid py-4" aria-label="Mobile navigation">
               <div className="flex flex-col gap-1">
