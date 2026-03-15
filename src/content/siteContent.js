@@ -7799,6 +7799,18 @@ const FIELDS_MAP = {
     publicationStatus: 'Published',
     publicationType: 'Conference Presentation',
   },
+  '/publications/iran-war-case-study': {
+    doi: '10.5281/zenodo.18996507',
+    zenodoUrl: 'https://doi.org/10.5281/zenodo.18996507',
+    publishedDate: '2026-03-15',
+    authors: [
+      { name: 'Chakraborty, S.' }, { name: 'Goyal, P.' }, { name: 'Matta, S.' },
+      { name: 'Donakanti, V. S.' }, { name: 'Boddu, S. R.' },
+    ],
+    researchDomains: ['Education', 'Psychology', 'Geopolitics'],
+    publicationStatus: 'Published',
+    publicationType: 'Case Study',
+  },
   '/technical-briefs/sbb-1': {
     doi: '',
     publishedDate: '2024-12-30',
