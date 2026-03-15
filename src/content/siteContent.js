@@ -1297,6 +1297,14 @@ const siteContent = {
               body: "A documented adolescent engineering mission presented as an institutional case study in responsibility, professional constraints, and authentic engineering stakes.",
               cta: { label: "View Publication", href: "/publications/saparya-imf-case-study" },
               image: { src: "/src/assets/placeholders/labs/conference-presentation.jpg", alt: "Conference presentation", variant: "card" }
+            },
+            {
+              tag: "Published Case Study",
+              headline: "Age-Differentiated Responses to Geopolitical Violence: Iran Crisis 2026",
+              meta: "DOI: 10.5281/zenodo.18996507",
+              body: "This record archives a qualitative case study documenting how children aged 6–16 at an AMI-guided Montessori school in Hyderabad, India, responded emotionally, cognitively, and morally to the Iran crisis following the assassination of Supreme Leader Ayatollah Ali Khamenei on 28 February 2026. The study was conducted by the Blue Blocks Micro Research Institute between 5 and 10 March 2026 — within days of the conflict's escalation — making it a real-time documentation of children's responses to a live geopolitical event.",
+              cta: { label: "View Publication", href: "/publications/iran-war-case-study" },
+              image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Iran crisis case study", variant: "card" }
             }
           ]
         },
