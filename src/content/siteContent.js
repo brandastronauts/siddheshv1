@@ -4312,6 +4312,231 @@ const siteContent = {
       ]
     },
 
+    "/publications/iran-war-case-study": {
+      title: "Age-Differentiated Responses to Geopolitical Violence: A Qualitative Case Study on the Iran Crisis in 2026 Among School Children of Blue Blocks, Hyderabad, India",
+      metaDescription: "Qualitative case study documenting how children aged 6–16 at an AMI-guided Montessori school in Hyderabad responded emotionally, cognitively, and morally to the Iran crisis following the assassination of Ayatollah Ali Khamenei in February 2026.",
+      seo: {
+        title: "Age-Differentiated Responses to Geopolitical Violence: Iran Crisis 2026 | Blue Blocks Micro Research Institute",
+        canonical: "https://siddheshv1.lovable.app/publications/iran-war-case-study",
+        robots: "noindex,nofollow,noarchive,nosnippet",
+        openGraph: {
+          type: "article",
+          url: "https://siddheshv1.lovable.app/publications/iran-war-case-study",
+          title: "Age-Differentiated Responses to Geopolitical Violence: Iran Crisis 2026",
+          description: "Qualitative case study on children's emotional, cognitive, and moral responses to the Iran crisis in 2026.",
+          image: {
+            url: "https://siddheshv1.lovable.app/og/publications/iran-war-case-study.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Iran Crisis Case Study"
+          }
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "ScholarlyArticle",
+          headline: "Age-Differentiated Responses to Geopolitical Violence: A Qualitative Case Study on the Iran Crisis in 2026 Among School Children of Blue Blocks, Hyderabad, India",
+          description: "Qualitative case study documenting how children aged 6–16 responded emotionally, cognitively, and morally to the Iran crisis in 2026.",
+          identifier: "10.5281/zenodo.18996507",
+          sameAs: "https://doi.org/10.5281/zenodo.18996507",
+          datePublished: "2026-03-15",
+          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
+        }
+      ],
+      sections: [
+        {
+          id: "iran-hero",
+          type: "hero",
+          variant: "publication",
+          headline: "Age-Differentiated Responses to Geopolitical Violence",
+          subheadline: "A Qualitative Case Study on the Iran Crisis in 2026 Among School Children of Blue Blocks, Hyderabad, India",
+          image: { src: "/src/assets/banners/publications-doi.jpg", alt: "Iran Crisis Case Study", variant: "hero", privacyBlur: false }
+        },
+        {
+          id: "iran-meta",
+          type: "metaStrip",
+          items: [
+            { label: "DOI", value: "10.5281/zenodo.18996507", href: "https://doi.org/10.5281/zenodo.18996507", external: true },
+            { label: "Type", value: "Qualitative Case Study" },
+            { label: "Status", value: "Published" },
+            { label: "Data Collection", value: "5–10 March 2026" },
+            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" },
+            { label: "Access", value: "Open Access" }
+          ]
+        },
+        {
+          id: "iran-introduction",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Introduction",
+                body: "This record archives a qualitative case study documenting how children aged 6–16 at an AMI-guided Montessori school in Hyderabad, India, responded emotionally, cognitively, and morally to the Iran crisis following the assassination of Supreme Leader Ayatollah Ali Khamenei on 28 February 2026. The study was conducted by the Blue Blocks Micro Research Institute between 5 and 10 March 2026 — within days of the conflict's escalation — making it a real-time documentation of children's responses to a live geopolitical event\n\nA distinctive feature of this sample is that the school actively discourages screen time and social media exposure. The children's awareness of the conflict was mediated almost entirely through family conversation, peer discussion, and print newspapers rather than through algorithmic digital feeds. This makes the study a rare examination of how children process geopolitical violence in the absence of the media environments that characterise most contemporary childhoods."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Repository & Access",
+                links: [
+                  { label: "View on Zenodo (DOI)", href: "https://doi.org/10.5281/zenodo.18996507", external: true },
+                  { label: "Methodology Framework (DOI)", href: "https://doi.org/10.5281/zenodo.18584816", external: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "iran-abstract",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Abstract",
+                body: "Official Record Summary:\n\nFive semi-structured group discussions were conducted across three age cohorts (6–10, 10–13, and 13–16) with approximately 28 participating children. The study addresses four research questions spanning awareness, emotional response, cognitive complexity, and moral reasoning. The central hypothesis posits that children's responses to an acute geopolitical conflict will vary systematically by developmental age, with factual awareness present across all age groups, cognitive complexity and moral abstraction increasing with age, and emotional responses in younger children anchored to concrete personal proximity rather than empathy for distant others. Thematic analysis of verbatim transcripts was used, mapped against a priori developmental frameworks (Piaget, Kohlberg). Findings are reported across the four domains with developmental comparisons. Implications are discussed for educators, parents, and media literacy researchers.\n\nAll participants were minors up to age 16. Parental consent was obtained for all sessions. Participant identities have been fully anonymised, and no linkage file has been created or retained due to the sensitive nature of the topic."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Related Publications",
+                links: [
+                  { label: "Practitioner-led Methodology Framework", href: "https://doi.org/10.5281/zenodo.18584816", external: true },
+                  { label: "Publications Index", href: "/publications" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "iran-methodology",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Methodology",
+                body: "The study is a qualitative case study using semi-structured group discussions as the primary data collection method, consistent with rapid communication case study methodology appropriate for documenting responses to novel, time-sensitive events (Yin, 2018). The design is descriptive and exploratory; no experimental manipulation or comparison condition was used. The unit of analysis is the age cohort group discussion.\n\nSessions were facilitated by members of the Blue Blocks Micro Research Institute team using an age-adapted question guide covering four domains: awareness, emotion, cognition, and moral reasoning. Sessions were audio-recorded with consent and transcribed verbatim. Where children had significant factual gaps, facilitators provided brief contextual information — a methodological feature noted throughout the paper, as responses offered after facilitator framing cannot be treated as fully independent prior knowledge.\n\nThematic analysis (Braun & Clarke, 2006) was used, with themes inductively identified from the data and mapped against the developmental framework. The study makes no quantitative claims; the analysis is solely interpretive."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Analytical Framework",
+                citation: "Piaget (cognitive development), Kohlberg (moral development), Braun & Clarke (thematic analysis) — mapped against four domains: Awareness, Emotion, Cognition, Moral Reasoning."
+              }
+            ]
+          }
+        },
+        {
+          id: "iran-parameters",
+          type: "tableBlock",
+          header: "Study Parameters",
+          headers: ["Parameter", "Detail"],
+          rows: [
+            ["Participants", "Approximately 28 children across five sessions"],
+            ["Age Cohorts", "6–10 (three sessions), 10–13 (one session), 13–16 (one session)"],
+            ["Data Collection Window", "5–10 March 2026"],
+            ["Session Duration", "15–30 minutes per session"],
+            ["Data Type", "Verbatim audio transcripts, thematically coded"],
+            ["Analytical Framework", "Piaget (cognitive development), Kohlberg (moral development), Braun & Clarke (thematic analysis)"],
+            ["Domains Examined", "Awareness, Emotion, Cognition, Moral Reasoning"],
+            ["Anonymisation", "Full anonymisation; no linkage file created or retained"]
+          ]
+        },
+        {
+          id: "iran-discussion",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Discussion",
+                body: "The study contributes to a significant gap in the existing literature. While a substantial body of research documents the psychological effects of direct war exposure on children, far less attention has been paid to how children in non-conflict countries process and respond to geopolitical violence they encounter through family conversation and newspapers rather than through direct media immersion.\n\nThe study setting — an AMI-guided Montessori school that actively limits screen time — provides a rare analytical environment. The Montessori philosophy of open inquiry, child-led discussion, and multi-age grouping made it a particularly suitable context for semi-structured group conversations on complex topics. Students at the school come predominantly from urban, educated, upper-middle-class families in Hyderabad, Telangana.\n\nThe paper discusses implications across three domains: for educators (the role of honest, age-calibrated conversation in supporting factual calibration and moral development); for parents (the finding that children with restricted screen time are not shielded from awareness of major events — they simply lack the framework to understand personal relevance); and for media literacy researchers (the consistent gap between geopolitical reasoning sophistication and source criticism across all age groups). Limitations including sample size, single-school setting, and the methodological effects of in-session facilitation are acknowledged and discussed."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Cross-References",
+                links: [
+                  { label: "Methodology", href: "/methodology" },
+                  { label: "Governance", href: "/governance" },
+                  { label: "Ethics & Privacy", href: "/governance/ethics" },
+                  { label: "Publications Index", href: "/publications" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "iran-supplementary",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Supplementary Materials",
+                body: "Data & Ethics:\n\nAnonymised transcripts are retained in secure storage at Blue Blocks Micro Research Institute, Hyderabad, and are available to qualified researchers upon reasonable request, subject to an appropriate data-sharing agreement. No personal identification markers appear anywhere in the publication. The voluntary nature of participation is documented in the paper's ethics note."
+              },
+              {
+                title: "Related Publications",
+                body: "",
+                bullets: [
+                  "DOI — Iran War Case Study Publication: https://doi.org/10.5281/zenodo.18996507",
+                  "DOI — Practitioner-led Methodology Framework: https://doi.org/10.5281/zenodo.18584816"
+                ]
+              },
+              {
+                title: "Media Coverage",
+                body: "This section will be updated as coverage is published."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "How to Cite (APA)",
+                citation: "Chakraborty, S., Goyal, P., Matta, S., Donakanti, V. S., & Boddu, S. R. (2026). Age-differentiated responses to geopolitical violence: A qualitative case study on the reactions pertaining to emotional, cognitive, and moral reactions to the Iran crisis in 2026 among school children of Blue Blocks, Hyderabad, India. Blue Blocks Micro Research Institute. https://research.blueblocks.in/publications/iran-war-case-study"
+              }
+            ]
+          }
+        },
+        {
+          id: "iran-zenodo-cta",
+          type: "highlightBox",
+          header: "Read the Full Paper on Zenodo",
+          body: "The complete paper is available as an open-access record on Zenodo.",
+          cta: { label: "Read the Full Paper on Zenodo", href: "https://doi.org/10.5281/zenodo.18996507", external: true }
+        },
+        {
+          id: "iran-archival-note",
+          type: "textBlock",
+          variant: "muted",
+          body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
+        },
+        {
+          id: "iran-related",
+          type: "relatedCards",
+          header: "Related Registry",
+          cards: [
+            { title: "Methodology", description: "Research framework.", icon: "publication", href: "/methodology" },
+            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" },
+            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
+            { title: "Downloads", description: "All documents.", icon: "default", href: "/downloads" }
+          ]
+        }
+      ]
+    },
+
     "/publications/citation-standards": {
       title: "Citation Standards & Guide",
       metaDescription: "Blue Blocks Micro Research Institute citation standards and guide for affiliated publications and datasets.",
