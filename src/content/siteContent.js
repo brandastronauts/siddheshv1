@@ -1239,7 +1239,8 @@ const siteContent = {
           isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" },
           hasPart: [
             { "@type": "WebPage", url: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter" },
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study" }
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study" },
+            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/publications/iran-war-case-study" }
           ]
         },
         {
