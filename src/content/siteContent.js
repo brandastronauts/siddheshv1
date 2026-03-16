@@ -4889,13 +4889,23 @@ const siteContent = {
           { "@type": "ListItem", position: 3, name: "Borehole Rescue System", item: "https://siddheshv1.lovable.app/patents/borehole-rescue-system" }
         ]}
       ],
-      stickyCta: { label: "Download Patent PDF", href: "/downloads/borehole-rescue-patent.pdf", type: "download" },
+      stickyCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18610200", type: "external" },
       sections: [
         {
           id: "patent-hero", type: "hero", variant: "publication",
           headline: "Patent Portfolio : Borehole Rescue System (BRS)",
           subheadline: "Patent Pending · Application No. 202041027026 · Robotics / Subterranean Rescue Systems",
           image: { src: "/src/assets/placeholders/labs/avionics.jpg", alt: "Borehole Rescue System", variant: "hero" }
+        },
+        {
+          id: "patent-zenodo", type: "metaStrip",
+          items: [
+            { label: "Archival Repository", value: "Zenodo (CERN)" },
+            { label: "DOI", value: "10.5281/zenodo.18610200", href: "https://doi.org/10.5281/zenodo.18610200", external: true },
+            { label: "Status", value: "Active" },
+            { label: "Access", value: "Open Access" },
+            { label: "License", value: "CC BY 4.0" }
+          ]
         },
         {
           id: "patent-meta", type: "metaStrip",
@@ -4914,6 +4924,9 @@ const siteContent = {
             { title: "Application Number", body: "202041027026" }
           ]},
           right: { panels: [
+            { title: "Zenodo Record", links: [
+              { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18610200", external: true }
+            ]},
             { title: "Registry Links", links: [
               { label: "Patent Registry", href: "/patents" },
               { label: "Publications", href: "/publications" },
