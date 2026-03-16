@@ -116,6 +116,10 @@ const PageShell = ({ children }) => {
         canonicalUrl: page.seo?.canonical,
         ogImage: og.image?.url || og.image,
         ogType: og.type || 'website',
+        keywords: page.seo?.keywords,
+        twitter: page.seo?.twitter,
+        article: og.article,
+        citation: page.seo?.citation,
         jsonLdNodes: allNodes,
       };
     }

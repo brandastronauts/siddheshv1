@@ -15,12 +15,21 @@ const SEO = ({
   canonicalUrl,
   ogImage = DEFAULT_OG_IMAGE,
   ogType = 'website',
+  keywords,
+  twitter,
+  article,
+  citation,
 }) => {
   const location = useLocation();
   const canonical = canonicalUrl || `${BASE_URL}${location.pathname}`;
   const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
 
   const robotsContent = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+
+  const twitterCard = twitter?.card || 'summary_large_image';
+  const twitterTitle = twitter?.title || title || SITE_NAME;
+  const twitterDescription = twitter?.description || description;
+  const twitterImage = twitter?.image || ogImage;
 
   return (
     <Helmet>
@@ -29,6 +38,7 @@ const SEO = ({
       <link rel="canonical" href={canonical} />
 
       <meta name="robots" content={robotsContent} />
+      {keywords && <meta name="keywords" content={keywords} />}
 
       <meta property="og:type" content={ogType} />
       <meta property="og:site_name" content={OG_SITE_NAME} />
@@ -41,10 +51,22 @@ const SEO = ({
       <meta property="og:image:alt" content={title || SITE_NAME} />
       <meta property="og:locale" content="en_IN" />
 
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title || SITE_NAME} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      {article?.published_time && <meta property="article:published_time" content={article.published_time} />}
+      {article?.author && <meta property="article:author" content={article.author} />}
+      {article?.section && <meta property="article:section" content={article.section} />}
+
+      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={twitterTitle} />
+      <meta name="twitter:description" content={twitterDescription} />
+      <meta name="twitter:image" content={twitterImage} />
+
+      {citation?.citation_title && <meta name="citation_title" content={citation.citation_title} />}
+      {citation?.citation_authors?.map((author, i) => (
+        <meta key={`citation-author-${i}`} name="citation_author" content={author} />
+      ))}
+      {citation?.citation_publication_date && <meta name="citation_publication_date" content={citation.citation_publication_date} />}
+      {citation?.citation_publisher && <meta name="citation_publisher" content={citation.citation_publisher} />}
+      {citation?.citation_doi && <meta name="citation_doi" content={citation.citation_doi} />}
     </Helmet>
   );
 };

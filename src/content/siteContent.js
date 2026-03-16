@@ -4314,35 +4314,130 @@ const siteContent = {
 
     "/publications/iran-war-case-study": {
       title: "Age-Differentiated Responses to Geopolitical Violence: A Qualitative Case Study on the Iran Crisis in 2026 Among School Children of Blue Blocks, Hyderabad, India",
-      metaDescription: "Qualitative case study documenting how children aged 6–16 at an AMI-guided Montessori school in Hyderabad responded emotionally, cognitively, and morally to the Iran crisis following the assassination of Ayatollah Ali Khamenei in February 2026.",
+      metaDescription: "Qualitative case study documenting how children aged 6–16 responded emotionally, cognitively, and morally to the Iran crisis (2026). 28 participants across three age cohorts. Semi-structured group discussions conducted 5–10 March 2026 at Blue Blocks Montessori School, Hyderabad. Published by Blue Blocks Micro Research Institute.",
       seo: {
-        title: "Age-Differentiated Responses to Geopolitical Violence: Iran Crisis 2026 | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/publications/iran-war-case-study",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        title: "Age-Differentiated Responses to Geopolitical Violence: Iran Crisis Case Study | Blue Blocks Micro Research Institute",
+        canonical: "https://research.blueblocks.in/publications/iran-war-case-study",
+        robots: "index, follow",
+        keywords: "Iran crisis 2026, children and war, geopolitical violence, child development, age-differentiated responses, moral reasoning children, cognitive development, Piaget, Kohlberg, qualitative case study, Montessori education, screen time research, media literacy, Blue Blocks Micro Research Institute, Blue Blocks Montessori School, BlueBlocks, Blue Blocks Education Society, Blue Blocks Research Institute Foundation",
         openGraph: {
           type: "article",
-          url: "https://siddheshv1.lovable.app/publications/iran-war-case-study",
-          title: "Age-Differentiated Responses to Geopolitical Violence: Iran Crisis 2026",
-          description: "Qualitative case study on children's emotional, cognitive, and moral responses to the Iran crisis in 2026.",
+          url: "https://research.blueblocks.in/publications/iran-war-case-study",
+          title: "Age-Differentiated Responses to Geopolitical Violence: Iran Crisis Case Study | Blue Blocks Micro Research Institute",
+          description: "How do children process geopolitical violence without social media? Qualitative case study of 28 children (ages 6–16) responding to the Iran crisis, conducted within days of the event. Published with DOI.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/publications/iran-war-case-study.jpg",
+            url: "https://research.blueblocks.in/images/og-iran-case-study.jpg",
             width: 1200,
             height: 630,
             alt: "Iran Crisis Case Study"
+          },
+          locale: "en_IN",
+          article: {
+            published_time: "2026-03-10",
+            author: "Chakraborty, S., Goyal, P., Matta, S., Donakanti, V. S., Boddu, S. R.",
+            section: "Publications"
           }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Iran Crisis Case Study: Children's Responses to Geopolitical Violence | Blue Blocks Micro Research Institute",
+          description: "28 children, 3 age cohorts, 5 days after the event. How children in a screen-limited Montessori environment process war. DOI: 10.5281/zenodo.18996507",
+          image: "https://research.blueblocks.in/images/og-iran-case-study.jpg"
+        },
+        citation: {
+          citation_title: "Age-Differentiated Responses to Geopolitical Violence: A Qualitative Case Study on the Iran Crisis in 2026 Among School Children of Blue Blocks, Hyderabad, India",
+          citation_authors: ["Chakraborty, S.", "Goyal, P.", "Matta, S.", "Donakanti, V. S.", "Boddu, S. R."],
+          citation_publication_date: "2026",
+          citation_publisher: "Blue Blocks Micro Research Institute",
+          citation_doi: "10.5281/zenodo.18996507"
         }
       },
       schemas: [
         {
-          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://research.blueblocks.in/publications/iran-war-case-study/#webpage",
+          url: "https://research.blueblocks.in/publications/iran-war-case-study",
+          name: "Age-Differentiated Responses to Geopolitical Violence: Iran Crisis Case Study | Blue Blocks Micro Research Institute",
+          description: "Qualitative case study documenting how children aged 6-16 responded emotionally, cognitively, and morally to the Iran crisis (2026). 28 participants, three age cohorts, conducted 5-10 March 2026.",
+          isPartOf: { "@id": "https://research.blueblocks.in/#website" },
+          about: { "@id": "https://research.blueblocks.in/publications/iran-war-case-study/#article" }
+        },
+        {
           "@type": "ScholarlyArticle",
+          "@id": "https://research.blueblocks.in/publications/iran-war-case-study/#article",
           headline: "Age-Differentiated Responses to Geopolitical Violence: A Qualitative Case Study on the Iran Crisis in 2026 Among School Children of Blue Blocks, Hyderabad, India",
-          description: "Qualitative case study documenting how children aged 6–16 responded emotionally, cognitively, and morally to the Iran crisis in 2026.",
-          identifier: "10.5281/zenodo.18996507",
+          description: "Qualitative case study documenting age-differentiated emotional, cognitive, and moral responses of 28 children (aged 6-16) to the Iran crisis following the assassination of Supreme Leader Ayatollah Ali Khamenei on 28 February 2026. Data collected 5-10 March 2026 via semi-structured group discussions across three developmental cohorts at an AMI-guided Montessori school that actively limits screen time. Analysis uses Piaget (cognitive development), Kohlberg (moral development), and Braun & Clarke (thematic analysis) frameworks.",
+          abstract: "Five semi-structured group discussions were conducted across three age cohorts (6-10, 10-13, and 13-16) with approximately 28 participating children. The study addresses four research questions spanning awareness, emotional response, cognitive complexity, and moral reasoning. The central hypothesis posits that children's responses to an acute geopolitical conflict will vary systematically by developmental age. Thematic analysis of verbatim transcripts was mapped against a priori developmental frameworks (Piaget, Kohlberg). A distinctive feature of this sample is that the school actively discourages screen time and social media exposure, making this a rare examination of how children process geopolitical violence in the absence of algorithmic digital feeds.",
+          author: [
+            { "@type": "Person", name: "Sumedha Chakraborty", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } },
+            { "@type": "Person", "@id": "https://www.blueblocks.in/#pavan", name: "Pavan Goyal", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } },
+            { "@type": "Person", name: "Soumya Matta", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } },
+            { "@type": "Person", name: "V. S. Donakanti", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } },
+            { "@type": "Person", name: "S. R. Boddu", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } }
+          ],
+          sourceOrganization: { "@id": "https://research.blueblocks.in/#microresearch" },
+          publisher: { "@id": "https://research.blueblocks.in/#microresearch" },
+          datePublished: "2026-03-10",
+          dateCreated: "2026-03-10",
+          url: "https://research.blueblocks.in/publications/iran-war-case-study",
+          identifier: "https://doi.org/10.5281/zenodo.18996507",
           sameAs: "https://doi.org/10.5281/zenodo.18996507",
-          datePublished: "2026-03-15",
-          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
+          inLanguage: "en",
+          about: [
+            { "@type": "Thing", name: "Geopolitical violence", sameAs: "https://en.wikipedia.org/wiki/Political_violence" },
+            { "@type": "Thing", name: "Child development", sameAs: "https://en.wikipedia.org/wiki/Child_development" },
+            { "@type": "Thing", name: "Moral development", sameAs: "https://en.wikipedia.org/wiki/Lawrence_Kohlberg%27s_stages_of_moral_development" },
+            { "@type": "Thing", name: "Cognitive development", sameAs: "https://en.wikipedia.org/wiki/Piaget%27s_theory_of_cognitive_development" },
+            { "@type": "Thing", name: "Qualitative research", sameAs: "https://en.wikipedia.org/wiki/Qualitative_research" },
+            { "@type": "Thing", name: "Media literacy", sameAs: "https://en.wikipedia.org/wiki/Media_literacy" },
+            { "@type": "Thing", name: "Montessori education", sameAs: "https://en.wikipedia.org/wiki/Montessori_education" }
+          ],
+          keywords: [
+            "Iran crisis 2026", "children and geopolitical violence", "age-differentiated responses",
+            "moral reasoning", "cognitive development", "qualitative case study",
+            "Montessori education", "screen time", "media literacy"
+          ],
+          isPartOf: {
+            "@type": "Periodical",
+            name: "Blue Blocks Research Papers",
+            publisher: { "@id": "https://research.blueblocks.in/#microresearch" }
+          },
+          citation: [
+            {
+              "@type": "ScholarlyArticle",
+              name: "Practitioner-Led Methodology Framework",
+              identifier: "https://doi.org/10.5281/zenodo.18584816",
+              sameAs: "https://doi.org/10.5281/zenodo.18584816"
+            }
+          ],
+          spatialCoverage: { "@type": "Place", name: "Hyderabad, Telangana, India" },
+          temporalCoverage: "2026-03-05/2026-03-10",
+          educationalLevel: "Primary and Secondary (Ages 6-16)",
+          countryOfOrigin: { "@type": "Country", name: "India" }
+        },
+        {
+          "@type": "ResearchProject",
+          "@id": "https://research.blueblocks.in/publications/iran-war-case-study/#project",
+          name: "Age-Differentiated Responses to Geopolitical Violence: Iran Crisis Case Study",
+          description: "Rapid communication case study documenting children's emotional, cognitive, and moral responses to the Iran crisis (February-March 2026) across three developmental age cohorts in a screen-limited AMI Montessori environment.",
+          parentOrganization: { "@id": "https://research.blueblocks.in/#microresearch" },
+          foundingDate: "2026-03-05",
+          member: [{ "@id": "https://www.blueblocks.in/#pavan" }],
+          result: { "@id": "https://research.blueblocks.in/publications/iran-war-case-study/#article" },
+          knowsAbout: [
+            { "@type": "Thing", name: "Geopolitical violence", sameAs: "https://en.wikipedia.org/wiki/Political_violence" },
+            { "@type": "Thing", name: "Child development", sameAs: "https://en.wikipedia.org/wiki/Child_development" },
+            { "@type": "Thing", name: "Moral development", sameAs: "https://en.wikipedia.org/wiki/Lawrence_Kohlberg%27s_stages_of_moral_development" }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://research.blueblocks.in/publications/iran-war-case-study/#breadcrumb",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications" },
+            { "@type": "ListItem", position: 3, name: "Iran War Case Study", item: "https://research.blueblocks.in/publications/iran-war-case-study" }
+          ]
         }
       ],
       sections: [
@@ -7802,7 +7897,7 @@ const FIELDS_MAP = {
   '/publications/iran-war-case-study': {
     doi: '10.5281/zenodo.18996507',
     zenodoUrl: 'https://doi.org/10.5281/zenodo.18996507',
-    publishedDate: '2026-03-15',
+    publishedDate: '2026-03-10',
     authors: [
       { name: 'Chakraborty, S.' }, { name: 'Goyal, P.' }, { name: 'Matta, S.' },
       { name: 'Donakanti, V. S.' }, { name: 'Boddu, S. R.' },
