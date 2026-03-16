@@ -91,6 +91,11 @@
       "source": "/publications-open-science",
       "destination": "/publications",
       "permanent": true
+    },
+    {
+      "source": "/(.*)/",
+      "destination": "/$1",
+      "permanent": true
     }
   ],
 

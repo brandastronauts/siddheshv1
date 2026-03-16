@@ -55,7 +55,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTopOnRouteChange />
-          <Suspense fallback={<LazyFallback />}>
+          <TrailingSlashRedirect />
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/the-institute" element={<TheInstitutePage />} />
