@@ -56,6 +56,7 @@ const App = () => (
         <BrowserRouter>
           <ScrollToTopOnRouteChange />
           <TrailingSlashRedirect />
+          <Suspense fallback={<LazyFallback />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/the-institute" element={<TheInstitutePage />} />
