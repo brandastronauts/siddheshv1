@@ -3428,6 +3428,14 @@ const siteContent = {
           }
         },
         {
+          id: "patents-zenodo", type: "metaStrip",
+          items: [
+            { label: "Archival Repository", value: "Zenodo (CERN)" },
+            { label: "DOI", value: "10.5281/zenodo.18610003", href: "https://doi.org/10.5281/zenodo.18610003" },
+            { label: "Access", value: "Open Access" },
+            { label: "License", value: "CC BY 4.0" }
+          ]
+        },
           id: "patents-grid",
           type: "patentGrid",
           header: "Filed Patents",
