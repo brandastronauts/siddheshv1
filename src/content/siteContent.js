@@ -7897,7 +7897,7 @@ const FIELDS_MAP = {
   '/publications/iran-war-case-study': {
     doi: '10.5281/zenodo.18996507',
     zenodoUrl: 'https://doi.org/10.5281/zenodo.18996507',
-    publishedDate: '2026-03-15',
+    publishedDate: '2026-03-10',
     authors: [
       { name: 'Chakraborty, S.' }, { name: 'Goyal, P.' }, { name: 'Matta, S.' },
       { name: 'Donakanti, V. S.' }, { name: 'Boddu, S. R.' },
