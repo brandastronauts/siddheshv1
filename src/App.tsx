@@ -3,11 +3,20 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { LazyMotion, domAnimation } from "framer-motion";
 
 import HomePage from "./pages/HomePage";
 import ScrollToTopOnRouteChange from "./components/ui/ScrollToTopOnRouteChange";
+
+/** Strip trailing slashes (except root "/") so /foo/ → /foo */
+const TrailingSlashRedirect = () => {
+  const { pathname, search, hash } = useLocation();
+  if (pathname !== '/' && pathname.endsWith('/')) {
+    return <Navigate to={pathname.slice(0, -1) + search + hash} replace />;
+  }
+  return null;
+};
 
 // Lazy-loaded routes (all except homepage)
 const TheInstitutePage = lazy(() => import("./pages/TheInstitutePage"));
