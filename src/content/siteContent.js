@@ -4924,6 +4924,9 @@ const siteContent = {
             { title: "Application Number", body: "202041027026" }
           ]},
           right: { panels: [
+            { title: "Zenodo Record", links: [
+              { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18610200", external: true }
+            ]},
             { title: "Registry Links", links: [
               { label: "Patent Registry", href: "/patents" },
               { label: "Publications", href: "/publications" },
