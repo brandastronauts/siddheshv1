@@ -3431,12 +3431,13 @@ const siteContent = {
           id: "patents-zenodo", type: "metaStrip",
           items: [
             { label: "Archival Repository", value: "Zenodo (CERN)" },
-            { label: "DOI", value: "10.5281/zenodo.18610003", href: "https://doi.org/10.5281/zenodo.18610003" },
+            { label: "DOI", value: "10.5281/zenodo.18610003", href: "https://doi.org/10.5281/zenodo.18610003", external: true },
+            { label: "Status", value: "Active" },
             { label: "Access", value: "Open Access" },
             { label: "License", value: "CC BY 4.0" }
           ]
         },
-          id: "patents-grid",
+        {
           type: "patentGrid",
           header: "Filed Patents",
           intro: "Registry of utility patents filed by student inventors. Application numbers are assigned upon filing; some entries show 'TBD' where filing is in preparation.",
