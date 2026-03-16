@@ -4809,8 +4809,8 @@ const siteContent = {
               { label: "Publications", href: "/publications" },
               { label: "Downloads", href: "/downloads" }
             ]},
-            { title: "Download", links: [
-              { label: "Download PDF", href: "/downloads/security-uav-patent.pdf", external: true }
+            { title: "Zenodo Record", links: [
+              { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18610003", external: true }
             ]}
           ]}
         },
