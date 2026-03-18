@@ -6709,7 +6709,7 @@ const siteContent = {
           type: "textBlock",
           variant: "compact",
           header: "About Blue Blocks Micro Research Institute",
-          body: "Blue Blocks Micro Research Institute is the research division of Blue Blocks Montessori Educational Society, Hyderabad, India, an AMI-guided Montessori school serving children aged 1–18, in collaboration with IIT Hyderabad. The institute publishes open-access research in child development, education methodology, and participatory science on Zenodo. The same students whose satellite payload (SBB-1) received ISRO/IN-SPACe flight authorization in 2026 are among the children whose responses to the Iran crisis are documented in this study."
+          body: "Blue Blocks Micro Research Institute is the research division of Blue Blocks Montessori Educational Society, Hyderabad, India, an [AMI-guided Montessori school](https://montessori-ami.org/events/ami-talks-absorbent-mind-innovative-mind) serving children aged 1–18, in collaboration with [IIT Hyderabad](https://www.prnewswire.com/in/news-releases/students-reach-stratospheric-heights-blue-blocks-school-collaborates-with-iit-hyderabad-to-launch-space-lab-829621956.html). The institute publishes open-access research in child development, education methodology, and participatory science on [Zenodo](https://zenodo.org/communities/blueblocksmicroresearchinstitute/records?q=&l=list&p=1&s=10&sort=newest). The same students whose satellite payload (SBB-1) received [ISRO/IN-SPACe flight authorization](https://www.inspace.gov.in/inspace?id=inspace_authorizations) in 2026 are among the children whose responses to the Iran crisis are documented in this study."
         },
         {
           id: "pr-media-contact",
