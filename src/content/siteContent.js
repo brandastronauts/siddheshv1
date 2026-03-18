@@ -2147,12 +2147,12 @@ const siteContent = {
           },
           side: [
             {
-              tag: "Publication Event",
-              headline: "Publishing in Progress",
+              tag: "Research Publication",
+              headline: "Children Develop Geopolitical Reasoning Without Screens",
               excerpt:
-                "We are currently finalizing our architectural blueprint for embedded longitudinal observation and will be publishing it shortly. This upcoming framework will allow other institutions to replicate our approach without external funding. We spent three years figuring out what doesn't work before getting to this point.",
-              cta: { label: "View Press Release", disabled: true },
-              image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Methodology framework", variant: "card", privacyBlur: false }
+                "A new case study documents how 28 children aged 6–16, raised with restricted screen time, independently developed sophisticated reasoning about the Iran crisis through family conversation and newspapers alone. Teenagers articulated nuclear deterrence logic; six-year-olds defaulted to legal process over violence.",
+              cta: { label: "Read Press Release", href: "/newsroom/dispatch/iran-crisis-study-press-release" },
+              image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Iran crisis case study press release", variant: "card", privacyBlur: false }
             },
             {
               tag: "International",
