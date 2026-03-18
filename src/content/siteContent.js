@@ -2172,6 +2172,15 @@ const siteContent = {
           variant: "newsGrid",
           cards: [
             {
+              tag: "Press Release",
+              headline: "Hyderabad Study: Children Develop Geopolitical Reasoning Without Algorithms",
+              meta: "March 16, 2026",
+              body:
+                "28 children aged 6–16 with restricted screen time independently developed sophisticated reasoning about the Iran crisis. Teenagers articulated nuclear deterrence logic from scratch; six-year-olds across three independent groups defaulted to legal process over violence.",
+              cta: { label: "Read Full Press Release", href: "/newsroom/dispatch/iran-crisis-study-press-release" },
+              image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Iran crisis case study", variant: "card", privacyBlur: false }
+            },
+            {
               tag: "Institutional Alliance",
               headline: "IIT Hyderabad Design Dept. Formalizes Advisory Role",
               meta: "October 15, 2025",
