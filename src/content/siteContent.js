@@ -289,6 +289,13 @@ const siteContent = {
                 "On January 28, 2026, at the Nobel Peace Center, Founder Pavan Goyal delivered the \"World Premiere\" of the Blue Blocks Innovation Pedagogy (0–18). Selected by the Monisc Committee (supported by the Norwegian UNESCO Commission) as a \"global benchmark\" for integrating space science, this session formally releases our student-generated datasets to the international network. The Zenodo archive preserves the complete administrative context: the Official Invitation, the Pedagogical Framework presentation, and the open-data release protocols.",
               action: { label: "Access Proceedings Archive", href: "/proceedings/oslo-2026" },
               secondaryAction: { label: "Proceedings in Progress", disabled: true }
+            },
+            {
+              tag: "Press Release / Child Development",
+              headline: "Children With Restricted Screen Time Develop Sophisticated Geopolitical Reasoning",
+              body:
+                "A new case study documents how 28 school children aged 6–16, raised in households with restricted screen time, processed the Iran crisis of 2026 through family conversation, peer discussion, and newspapers alone. Teenagers independently constructed nuclear deterrence logic; six-year-olds across three independent groups defaulted to legal process over violence — without coordination.",
+              action: { label: "Read Press Release →", href: "/newsroom/dispatch/iran-crisis-study-press-release" }
             }
           ]
         },
