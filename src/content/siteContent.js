@@ -8219,6 +8219,14 @@ const FIELDS_MAP = {
     author: 'Blue Blocks Micro Research Institute',
     researchDomains: ['International', 'Innovation'],
   },
+  '/newsroom/dispatch/iran-crisis-study-press-release': {
+    publishedDate: '2026-03-16',
+    newsType: 'dispatch',
+    author: 'Blue Blocks Micro Research Institute',
+    doi: '10.5281/zenodo.18996507',
+    zenodoUrl: 'https://doi.org/10.5281/zenodo.18996507',
+    researchDomains: ['Child Development', 'Peace Education', 'Geopolitical Reasoning'],
+  },
   '/newsroom/updates/iit-hyderabad-advisory': {
     publishedDate: '2025-10-15',
     newsType: 'update',
