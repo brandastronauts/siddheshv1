@@ -289,6 +289,13 @@ const siteContent = {
                 "On January 28, 2026, at the Nobel Peace Center, Founder Pavan Goyal delivered the \"World Premiere\" of the Blue Blocks Innovation Pedagogy (0–18). Selected by the Monisc Committee (supported by the Norwegian UNESCO Commission) as a \"global benchmark\" for integrating space science, this session formally releases our student-generated datasets to the international network. The Zenodo archive preserves the complete administrative context: the Official Invitation, the Pedagogical Framework presentation, and the open-data release protocols.",
               action: { label: "Access Proceedings Archive", href: "/proceedings/oslo-2026" },
               secondaryAction: { label: "Proceedings in Progress", disabled: true }
+            },
+            {
+              tag: "Press Release / Child Development",
+              headline: "Children With Restricted Screen Time Develop Sophisticated Geopolitical Reasoning",
+              body:
+                "A new case study documents how 28 school children aged 6–16, raised in households with restricted screen time, processed the Iran crisis of 2026 through family conversation, peer discussion, and newspapers alone. Teenagers independently constructed nuclear deterrence logic; six-year-olds across three independent groups defaulted to legal process over violence — without coordination.",
+              action: { label: "Read Press Release →", href: "/newsroom/dispatch/iran-crisis-study-press-release" }
             }
           ]
         },
@@ -2147,12 +2154,12 @@ const siteContent = {
           },
           side: [
             {
-              tag: "Publication Event",
-              headline: "Publishing in Progress",
+              tag: "Research Publication",
+              headline: "Children Develop Geopolitical Reasoning Without Screens",
               excerpt:
-                "We are currently finalizing our architectural blueprint for embedded longitudinal observation and will be publishing it shortly. This upcoming framework will allow other institutions to replicate our approach without external funding. We spent three years figuring out what doesn't work before getting to this point.",
-              cta: { label: "View Press Release", disabled: true },
-              image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Methodology framework", variant: "card", privacyBlur: false }
+                "A new case study documents how 28 children aged 6–16, raised with restricted screen time, independently developed sophisticated reasoning about the Iran crisis through family conversation and newspapers alone. Teenagers articulated nuclear deterrence logic; six-year-olds defaulted to legal process over violence.",
+              cta: { label: "Read Press Release", href: "/newsroom/dispatch/iran-crisis-study-press-release" },
+              image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Iran crisis case study press release", variant: "card", privacyBlur: false }
             },
             {
               tag: "International",
@@ -2171,6 +2178,15 @@ const siteContent = {
           header: "What Has Happened Recently",
           variant: "newsGrid",
           cards: [
+            {
+              tag: "Press Release",
+              headline: "Hyderabad Study: Children Develop Geopolitical Reasoning Without Algorithms",
+              meta: "March 16, 2026",
+              body:
+                "28 children aged 6–16 with restricted screen time independently developed sophisticated reasoning about the Iran crisis. Teenagers articulated nuclear deterrence logic from scratch; six-year-olds across three independent groups defaulted to legal process over violence.",
+              cta: { label: "Read Full Press Release", href: "/newsroom/dispatch/iran-crisis-study-press-release" },
+              image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Iran crisis case study", variant: "card", privacyBlur: false }
+            },
             {
               tag: "Institutional Alliance",
               headline: "IIT Hyderabad Design Dept. Formalizes Advisory Role",
@@ -6553,6 +6569,215 @@ const siteContent = {
       ]
     },
 
+    "/newsroom/dispatch/iran-crisis-study-press-release": {
+      title: "Press Release: Children Develop Geopolitical Reasoning Without Screens",
+      metaDescription: "Hyderabad study reveals children with restricted screen time independently develop sophisticated geopolitical reasoning about the Iran crisis. 28 children aged 6–16 studied across three age cohorts.",
+      _cpt: "news-item",
+      _status: "published",
+      seo: {
+        title: "Children Develop Geopolitical Reasoning Without Screens | Press Release | Blue Blocks Micro Research Institute",
+        canonical: "https://research.blueblocks.in/newsroom/dispatch/iran-crisis-study-press-release",
+        description: "Hyderabad study reveals children with restricted screen time independently develop sophisticated geopolitical reasoning about the Iran crisis through family conversation and newspapers alone.",
+        keywords: "child development, geopolitical reasoning, screen time, Iran crisis, case study, Montessori, longitudinal research, peace education, Hyderabad",
+        openGraph: {
+          type: "article",
+          title: "Children With Restricted Screen Time Develop Sophisticated Geopolitical Reasoning",
+          description: "28 school children aged 6–16 processed the Iran crisis through family conversation, peer discussion, and newspapers alone. Teenagers articulated nuclear deterrence logic from scratch.",
+          image: { url: "https://research.blueblocks.in/images/og-home.jpg", width: 1200, height: 630 },
+          article: {
+            published_time: "2026-03-16T00:00:00+05:30",
+            author: "Blue Blocks Micro Research Institute",
+            section: "Press Release"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Children Develop Geopolitical Reasoning Without Screens",
+          description: "Teenagers articulated nuclear deterrence logic from scratch; six-year-olds defaulted to legal process over violence — in a school where children learn about world events through conversation, not algorithms.",
+          image: "https://research.blueblocks.in/images/og-home.jpg"
+        },
+        citation: {
+          citation_title: "Age-Differentiated Geopolitical Reasoning in Screen-Time-Restricted Children: A Qualitative Case Study of the 2026 Iran Crisis",
+          citation_authors: ["Pavan Goyal", "Sreemoyee Chakraborty"],
+          citation_publication_date: "2026/03/16",
+          citation_publisher: "Blue Blocks Micro Research Institute",
+          citation_doi: "10.5281/zenodo.18996507"
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "NewsArticle",
+          "@id": "https://research.blueblocks.in/newsroom/dispatch/iran-crisis-study-press-release#article",
+          "headline": "Hyderabad study reveals children with restricted screen time independently develop sophisticated geopolitical reasoning about the Iran crisis",
+          "alternativeHeadline": "Children With Restricted Screen Time Develop Sophisticated Geopolitical Reasoning",
+          "datePublished": "2026-03-16T00:00:00+05:30",
+          "dateModified": "2026-03-16T00:00:00+05:30",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Pavan Goyal",
+              "jobTitle": "Founder & Principal Investigator",
+              "affiliation": { "@type": "ResearchOrganization", "name": "Blue Blocks Micro Research Institute" }
+            },
+            {
+              "@type": "Person",
+              "name": "Sreemoyee Chakraborty",
+              "jobTitle": "STEM Research Head",
+              "affiliation": { "@type": "ResearchOrganization", "name": "Blue Blocks Micro Research Institute" }
+            }
+          ],
+          "publisher": {
+            "@type": "ResearchOrganization",
+            "@id": "https://research.blueblocks.in/#microresearch",
+            "name": "Blue Blocks Micro Research Institute"
+          },
+          "about": [
+            { "@type": "Thing", "name": "Child Development" },
+            { "@type": "Thing", "name": "Geopolitical Reasoning" },
+            { "@type": "Thing", "name": "Screen Time Research" },
+            { "@type": "Thing", "name": "Peace Education" },
+            { "@type": "Thing", "name": "Montessori Education" }
+          ],
+          "description": "A new case study documents how 28 school children aged 6–16, raised in households with restricted screen time, processed the Iran crisis of 2026 through family conversation, peer discussion, and newspapers alone.",
+          "url": "https://research.blueblocks.in/newsroom/dispatch/iran-crisis-study-press-release",
+          "mainEntityOfPage": "https://research.blueblocks.in/newsroom/dispatch/iran-crisis-study-press-release",
+          "isPartOf": { "@type": "WebSite", "@id": "https://research.blueblocks.in/#website" },
+          "citation": {
+            "@type": "ScholarlyArticle",
+            "name": "Age-Differentiated Geopolitical Reasoning in Screen-Time-Restricted Children: A Qualitative Case Study of the 2026 Iran Crisis",
+            "url": "https://doi.org/10.5281/zenodo.18996507",
+            "sameAs": "https://doi.org/10.5281/zenodo.18996507"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://research.blueblocks.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Newsroom", "item": "https://research.blueblocks.in/newsroom" },
+            { "@type": "ListItem", "position": 3, "name": "Iran Crisis Study Press Release", "item": "https://research.blueblocks.in/newsroom/dispatch/iran-crisis-study-press-release" }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "ScholarlyArticle",
+          "@id": "https://doi.org/10.5281/zenodo.18996507",
+          "name": "Age-Differentiated Geopolitical Reasoning in Screen-Time-Restricted Children",
+          "author": [
+            { "@type": "Person", "name": "Pavan Goyal" },
+            { "@type": "Person", "name": "Sreemoyee Chakraborty" }
+          ],
+          "publisher": { "@type": "ResearchOrganization", "name": "Blue Blocks Micro Research Institute" },
+          "datePublished": "2026-03-16",
+          "url": "https://doi.org/10.5281/zenodo.18996507",
+          "isAccessibleForFree": true,
+          "inLanguage": "en"
+        }
+      ],
+      sections: [
+        {
+          id: "pr-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Children With Restricted Screen Time Develop Sophisticated Geopolitical Reasoning About the Iran Crisis",
+          subheadline: "Teenagers articulated nuclear deterrence logic from scratch; six-year-olds across three independent groups defaulted to legal process over violence — in a school where children learn about world events through family conversation and newspapers, not algorithms",
+          primaryCta: { label: "Read Full Case Study", href: "https://doi.org/10.5281/zenodo.18996507", external: true },
+          secondaryCta: { label: "Back to Newsroom", href: "/newsroom" },
+          image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Iran crisis case study press release", variant: "hero" }
+        },
+        {
+          id: "pr-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Date", value: "March 16, 2026" },
+            { label: "Location", value: "Hyderabad, India" },
+            { label: "DOI", value: "10.5281/zenodo.18996507", href: "https://doi.org/10.5281/zenodo.18996507", external: true },
+            { label: "Status", value: "Published — Open Access" },
+            { label: "Type", value: "Press Release" }
+          ]
+        },
+        {
+          id: "pr-lede",
+          type: "textBlock",
+          header: "Press Release",
+          body: "**HYDERABAD, March 16, 2026** — A new case study from the Blue Blocks Micro Research Institute documents how 28 school children aged 6–16, raised in households with restricted screen time, processed the Iran crisis of 2026 through family conversation, peer discussion, and newspapers alone. The findings challenge prevailing assumptions about what children know, feel, and reason about geopolitical violence — and reveal that the gap between what children feel about distant conflicts and what they understand about those conflicts is not a fixed developmental limit but a bridgeable information gap.\n\nThe study, conducted between 5 and 10 March 2026 at Blue Blocks Montessori School in Hyderabad, used semi-structured group discussions across three age cohorts (6–10, 10–13, and 13–16)."
+        },
+        {
+          id: "pr-findings-senior",
+          type: "textBlock",
+          header: "Adolescent Cohort: Nuclear Deterrence Logic Constructed From Scratch",
+          body: "Among the most striking findings: a teenager in the 13–16 cohort independently constructed the core logic of nuclear deterrence theory — reasoning that launching nuclear weapons destroys the very country the aggressor sought to protect, making the outcome indistinguishable from defeat. The same cohort produced structural critiques of the UN Security Council veto system, linked the current crisis to the Israel-Palestine conflict and Iran's nuclear programme, and identified India, Russia, and Iran as potential mediators with reasoned justifications for each."
+        },
+        {
+          id: "pr-findings-junior",
+          type: "textBlock",
+          header: "Young Children: Legal Process Over Violence — Across Three Independent Groups",
+          body: "At the other end of the developmental arc, children aged 6–10 independently arrived at the same moral conclusion across three entirely separate, non-overlapping discussion groups: when asked what should happen to leaders who cause harm, they said put them in jail. Not bomb them back. Not go to war. Put them in jail and make them answer for it. This convergence across three independent sessions, without coordination, suggests that children's baseline moral intuitions are rooted in the legal process by default — a natural scaffold for peace education that does not need to begin by establishing that violence is wrong."
+        },
+        {
+          id: "pr-information-gap",
+          type: "textBlock",
+          header: "The Most Educationally Significant Finding: The Information Gap",
+          body: "The study also documents what the authors describe as its most educationally significant finding: when facilitators explained how distant conflicts affect non-participating countries, children's responses shifted from detachment to personal engagement within minutes.\n\n*\"What surprised us most wasn't that the children knew about the war — it was what happened when we explained how it could affect them personally. The room went quiet. Children who had been detached two minutes earlier were suddenly asking questions about oil prices and food costs. That shift tells us something important, that distance children show when they hear about a war far away — it isn't indifference. It's an information gap. And it closes in minutes, with a single honest conversation,\"* said **Pavan Goyal, Founder and Principal Investigator, Blue Blocks Micro Research Institute.**"
+        },
+        {
+          id: "pr-war-spectacle",
+          type: "textBlock",
+          header: "War-as-Spectacle: Romanticisation Reaches Low-Screen-Time Households",
+          body: "The study reports that a small number of children initially expressed enthusiasm for the war continuing — engaging with the topic through combat strategy and weapons rather than human cost. The authors attribute this to the romanticisation of conflict in popular culture. Notably, this pattern appeared in children with restricted media access, suggesting that war-as-spectacle narratives reach children through games and peer culture even in low-screen-time households. The enthusiasm dissipated after facilitators explained real-world consequences, reinforcing the study's central finding: explanation works."
+        },
+        {
+          id: "pr-moral-injury",
+          type: "textBlock",
+          header: "Moral Injury in the Oldest Cohort",
+          body: "*\"What struck us in the oldest cohort was not sadness but something closer to moral injury — a disappointment that something the adults should have handled better simply wasn't. One fifteen-year-old articulated it plainly: leaders sometimes make immoral decisions in the name of national interest, and you have to accept it even if you disagree. That a child of fifteen is carrying that weight is something we cannot ignore,\"* said **Sreemoyee Chakraborty, STEM Research Head, Blue Blocks Micro Research Institute.**"
+        },
+        {
+          id: "pr-media-literacy",
+          type: "textBlock",
+          header: "A Specific Target for Media Literacy Education",
+          body: "One finding the authors highlight as particularly significant for educators: none of the children, at any age, questioned the reliability of their own information sources. Even the oldest cohort, which could critique how powerful nations construct self-serving narratives, did not turn that same critical lens on the newspapers, family conversations, and peer discussions through which they had received their own understanding of the conflict. The authors identify this as a specific and tractable target for media literacy education."
+        },
+        {
+          id: "pr-methodology-note",
+          type: "textBlock",
+          header: "Methodology & Ethics",
+          body: "The study employed thematic analysis of verbatim transcripts from five group discussions. All participants are minors up to age 16; parental consent was obtained for all sessions. Participant identities have been fully anonymised with no linkage file created or retained. The full case study is published on Zenodo as an open-access working paper."
+        },
+        {
+          id: "pr-links",
+          type: "highlightBox",
+          variant: "note",
+          heading: "Reference Links",
+          body: "**Full case study:** [https://doi.org/10.5281/zenodo.18996507](https://doi.org/10.5281/zenodo.18996507)\n\n**Research page:** [research.blueblocks.in/publications/iran-war-case-study](/publications/iran-war-case-study)"
+        },
+        {
+          id: "pr-about",
+          type: "textBlock",
+          header: "About Blue Blocks Micro Research Institute",
+          body: "Blue Blocks Micro Research Institute is the research division of Blue Blocks Montessori Educational Society, Hyderabad, India, an AMI-guided Montessori school serving children aged 1–18, in collaboration with IIT Hyderabad. The institute publishes open-access research in child development, education methodology, and participatory science on Zenodo. The same students whose satellite payload (SBB-1) received ISRO/IN-SPACe flight authorization in 2026 are among the children whose responses to the Iran crisis are documented in this study."
+        },
+        {
+          id: "pr-media-contact",
+          type: "highlightBox",
+          variant: "callout",
+          heading: "Media Contact",
+          body: "**Sruthi Matta**, Research Team Lead\nBlue Blocks Micro Research Institute\nEmail: research@blueblocks.in\n[research.blueblocks.in](https://research.blueblocks.in)"
+        },
+        {
+          id: "pr-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Full Case Study", description: "Read the complete research paper on Zenodo.", icon: "publication", href: "https://doi.org/10.5281/zenodo.18996507", external: true },
+            { title: "Research Page", description: "Detailed analysis and methodology.", icon: "brief", href: "/publications/iran-war-case-study" },
+            { title: "All News", description: "Back to newsroom.", icon: "news", href: "/newsroom" }
+          ]
+        }
+      ]
+    },
+
     "/newsroom/coverage/nobel-peace-center": {
       title: "Nobel Peace Center Coverage",
       metaDescription: "Coverage of Blue Blocks Micro Research Institute's exhibition at the Nobel Peace Center.",
@@ -7853,6 +8078,7 @@ const CPT_MAP = {
   '/collaborate': 'page',
   '/newsroom': 'page',
   '/newsroom/dispatch/isro-payload-authorization': 'news-item',
+  '/newsroom/dispatch/iran-crisis-study-press-release': 'news-item',
   '/newsroom/coverage/nobel-peace-center': 'news-item',
   '/newsroom/updates/iit-hyderabad-advisory': 'news-item',
   '/newsroom/updates/utility-patent-4421': 'news-item',
@@ -7992,6 +8218,14 @@ const FIELDS_MAP = {
     newsType: 'coverage',
     author: 'Blue Blocks Micro Research Institute',
     researchDomains: ['International', 'Innovation'],
+  },
+  '/newsroom/dispatch/iran-crisis-study-press-release': {
+    publishedDate: '2026-03-16',
+    newsType: 'dispatch',
+    author: 'Blue Blocks Micro Research Institute',
+    doi: '10.5281/zenodo.18996507',
+    zenodoUrl: 'https://doi.org/10.5281/zenodo.18996507',
+    researchDomains: ['Child Development', 'Peace Education', 'Geopolitical Reasoning'],
   },
   '/newsroom/updates/iit-hyderabad-advisory': {
     publishedDate: '2025-10-15',
