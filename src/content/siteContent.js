@@ -5223,10 +5223,10 @@ const siteContent = {
         {
           id: "patent-related", type: "relatedCards", header: "Related Registry",
           cards: [
+            { title: "View on Zenodo", description: "Archival DOI record.", icon: "archive", href: "https://doi.org/10.5281/zenodo.18610847", external: true },
             { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
             { title: "Methodology", description: "Lab-to-Launch framework.", icon: "publication", href: "/methodology" },
-            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" },
-            { title: "Downloads", description: "All documents.", icon: "default", href: "/downloads" }
+            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" }
           ]
         }
       ]
