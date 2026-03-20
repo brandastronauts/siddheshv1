@@ -4881,10 +4881,10 @@ const siteContent = {
         {
           id: "patent-related", type: "relatedCards", header: "Related Registry",
           cards: [
+            { title: "View on Zenodo", description: "Archival DOI record.", icon: "archive", href: "https://doi.org/10.5281/zenodo.18610003", external: true },
             { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
             { title: "Methodology", description: "Lab-to-Launch framework.", icon: "publication", href: "/methodology" },
-            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" },
-            { title: "Downloads", description: "All documents.", icon: "default", href: "/downloads" }
+            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" }
           ]
         }
       ]
@@ -4995,10 +4995,10 @@ const siteContent = {
         {
           id: "patent-related", type: "relatedCards", header: "Related Registry",
           cards: [
+            { title: "View on Zenodo", description: "Archival DOI record.", icon: "archive", href: "https://doi.org/10.5281/zenodo.18610200", external: true },
             { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
             { title: "Methodology", description: "Lab-to-Launch framework.", icon: "publication", href: "/methodology" },
-            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" },
-            { title: "Downloads", description: "All documents.", icon: "default", href: "/downloads" }
+            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" }
           ]
         }
       ]
@@ -5019,6 +5019,7 @@ const siteContent = {
           { "@type": "ListItem", position: 3, name: "Contactless Delivery System", item: "https://siddheshv1.lovable.app/patents/contactless-delivery-system" }
         ]}
       ],
+      stickyCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18610450", type: "external" },
       sections: [
         {
           id: "patent-zenodo", type: "metaStrip",
@@ -5053,6 +5054,9 @@ const siteContent = {
             { title: "Application Number", body: "—" }
           ]},
           right: { panels: [
+            { title: "Zenodo Record", links: [
+              { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18610450", external: true }
+            ]},
             { title: "Registry Links", links: [
               { label: "Patent Registry", href: "/patents" },
               { label: "Publications", href: "/publications" },
@@ -5105,10 +5109,10 @@ const siteContent = {
         {
           id: "patent-related", type: "relatedCards", header: "Related Registry",
           cards: [
+            { title: "View on Zenodo", description: "Archival DOI record.", icon: "archive", href: "https://doi.org/10.5281/zenodo.18610450", external: true },
             { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
             { title: "Methodology", description: "Lab-to-Launch framework.", icon: "publication", href: "/methodology" },
-            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" },
-            { title: "Downloads", description: "All documents.", icon: "default", href: "/downloads" }
+            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" }
           ]
         }
       ]
@@ -5129,6 +5133,7 @@ const siteContent = {
           { "@type": "ListItem", position: 3, name: "Autonomous Medical Assistance System", item: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system" }
         ]}
       ],
+      stickyCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18610847", type: "external" },
       sections: [
         {
           id: "patent-zenodo", type: "metaStrip",
@@ -5163,6 +5168,9 @@ const siteContent = {
             { title: "Application Number", body: "202041027075" }
           ]},
           right: { panels: [
+            { title: "Zenodo Record", links: [
+              { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18610847", external: true }
+            ]},
             { title: "Registry Links", links: [
               { label: "Patent Registry", href: "/patents" },
               { label: "Publications", href: "/publications" },
@@ -5215,10 +5223,10 @@ const siteContent = {
         {
           id: "patent-related", type: "relatedCards", header: "Related Registry",
           cards: [
+            { title: "View on Zenodo", description: "Archival DOI record.", icon: "archive", href: "https://doi.org/10.5281/zenodo.18610847", external: true },
             { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
             { title: "Methodology", description: "Lab-to-Launch framework.", icon: "publication", href: "/methodology" },
-            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" },
-            { title: "Downloads", description: "All documents.", icon: "default", href: "/downloads" }
+            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" }
           ]
         }
       ]
@@ -5239,6 +5247,7 @@ const siteContent = {
           { "@type": "ListItem", position: 3, name: "Autonomous Health Monitoring System", item: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system" }
         ]}
       ],
+      stickyCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18628995", type: "external" },
       sections: [
         {
           id: "patent-zenodo", type: "metaStrip",
@@ -5273,6 +5282,9 @@ const siteContent = {
             { title: "Application Number", body: "\u2014" }
           ]},
           right: { panels: [
+            { title: "Zenodo Record", links: [
+              { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18628995", external: true }
+            ]},
             { title: "Registry Links", links: [
               { label: "Patent Registry", href: "/patents" },
               { label: "Publications", href: "/publications" },
@@ -5325,10 +5337,10 @@ const siteContent = {
         {
           id: "patent-related", type: "relatedCards", header: "Related Registry",
           cards: [
+            { title: "View on Zenodo", description: "Archival DOI record.", icon: "archive", href: "https://doi.org/10.5281/zenodo.18628995", external: true },
             { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
             { title: "Methodology", description: "Lab-to-Launch framework.", icon: "publication", href: "/methodology" },
-            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" },
-            { title: "Downloads", description: "All documents.", icon: "default", href: "/downloads" }
+            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" }
           ]
         }
       ]
