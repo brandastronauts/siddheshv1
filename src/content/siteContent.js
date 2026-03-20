@@ -5021,6 +5021,16 @@ const siteContent = {
       ],
       sections: [
         {
+          id: "patent-zenodo", type: "metaStrip",
+          items: [
+            { label: "Archival Repository", value: "Zenodo (CERN)" },
+            { label: "DOI", value: "10.5281/zenodo.18610450", href: "https://doi.org/10.5281/zenodo.18610450", external: true },
+            { label: "Status", value: "Active" },
+            { label: "Access", value: "Open Access" },
+            { label: "License", value: "CC BY 4.0" }
+          ]
+        },
+        {
           id: "patent-hero", type: "hero", variant: "publication",
           headline: "Patent Portfolio : Autonomous Contactless Delivery System (ACDS)",
           subheadline: "Patent Pending · Robotics / Autonomous Logistics / Public Health Engineering",
