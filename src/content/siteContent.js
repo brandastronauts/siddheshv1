@@ -6746,7 +6746,7 @@ const siteContent = {
           type: "highlightBox",
           variant: "callout",
           heading: "Media Contact",
-          body: "**Sruthi Matta**, Research Team Lead\nBlue Blocks Micro Research Institute\nEmail: research@blueblocks.in\n[research.blueblocks.in](https://research.blueblocks.in)"
+          body: "**Sruthi Matta**, Research Team Lead\nBlue Blocks Micro Research Institute\nEmail: press.research@blueblocks.in\n[research.blueblocks.in](https://research.blueblocks.in)"
         },
         {
           id: "pr-related",
