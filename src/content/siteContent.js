@@ -4807,6 +4807,16 @@ const siteContent = {
       stickyCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18610003", type: "link" },
       sections: [
         {
+          id: "patent-zenodo", type: "metaStrip",
+          items: [
+            { label: "Archival Repository", value: "Zenodo (CERN)" },
+            { label: "DOI", value: "10.5281/zenodo.18610003", href: "https://doi.org/10.5281/zenodo.18610003", external: true },
+            { label: "Status", value: "Active" },
+            { label: "Access", value: "Open Access" },
+            { label: "License", value: "CC BY 4.0" }
+          ]
+        },
+        {
           id: "patent-hero", type: "hero", variant: "publication",
           headline: "Patent Portfolio : System for Automated Security (UAV)",
           subheadline: "Patent Pending · Application No. 202041031343 · Robotics / Unnamed Aerial Systems (UAS)",
