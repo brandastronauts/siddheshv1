@@ -5019,6 +5019,7 @@ const siteContent = {
           { "@type": "ListItem", position: 3, name: "Contactless Delivery System", item: "https://siddheshv1.lovable.app/patents/contactless-delivery-system" }
         ]}
       ],
+      stickyCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18610450", type: "external" },
       sections: [
         {
           id: "patent-zenodo", type: "metaStrip",
@@ -5053,6 +5054,9 @@ const siteContent = {
             { title: "Application Number", body: "—" }
           ]},
           right: { panels: [
+            { title: "Zenodo Record", links: [
+              { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18610450", external: true }
+            ]},
             { title: "Registry Links", links: [
               { label: "Patent Registry", href: "/patents" },
               { label: "Publications", href: "/publications" },
