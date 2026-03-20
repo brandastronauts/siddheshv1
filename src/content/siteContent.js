@@ -5021,6 +5021,16 @@ const siteContent = {
       ],
       sections: [
         {
+          id: "patent-zenodo", type: "metaStrip",
+          items: [
+            { label: "Archival Repository", value: "Zenodo (CERN)" },
+            { label: "DOI", value: "10.5281/zenodo.18610450", href: "https://doi.org/10.5281/zenodo.18610450", external: true },
+            { label: "Status", value: "Active" },
+            { label: "Access", value: "Open Access" },
+            { label: "License", value: "CC BY 4.0" }
+          ]
+        },
+        {
           id: "patent-hero", type: "hero", variant: "publication",
           headline: "Patent Portfolio : Autonomous Contactless Delivery System (ACDS)",
           subheadline: "Patent Pending · Robotics / Autonomous Logistics / Public Health Engineering",
@@ -5121,6 +5131,16 @@ const siteContent = {
       ],
       sections: [
         {
+          id: "patent-zenodo", type: "metaStrip",
+          items: [
+            { label: "Archival Repository", value: "Zenodo (CERN)" },
+            { label: "DOI", value: "10.5281/zenodo.18610847", href: "https://doi.org/10.5281/zenodo.18610847", external: true },
+            { label: "Status", value: "Active" },
+            { label: "Access", value: "Open Access" },
+            { label: "License", value: "CC BY 4.0" }
+          ]
+        },
+        {
           id: "patent-hero", type: "hero", variant: "publication",
           headline: "Patent Portfolio : Autonomous Medical Assistance System (AMAS)",
           subheadline: "Patent Pending · Application No. 202041027075 · Medical Robotics / Telerobotics / Epidemiology",
@@ -5220,6 +5240,16 @@ const siteContent = {
         ]}
       ],
       sections: [
+        {
+          id: "patent-zenodo", type: "metaStrip",
+          items: [
+            { label: "Archival Repository", value: "Zenodo (CERN)" },
+            { label: "DOI", value: "10.5281/zenodo.18628995", href: "https://doi.org/10.5281/zenodo.18628995", external: true },
+            { label: "Status", value: "Active" },
+            { label: "Access", value: "Open Access" },
+            { label: "License", value: "CC BY 4.0" }
+          ]
+        },
         {
           id: "patent-hero", type: "hero", variant: "publication",
           headline: "Patent Portfolio : Autonomous Health Monitoring System (AHMS)",
@@ -6716,7 +6746,7 @@ const siteContent = {
           type: "highlightBox",
           variant: "callout",
           heading: "Media Contact",
-          body: "**Sruthi Matta**, Research Team Lead\nBlue Blocks Micro Research Institute\nEmail: research@blueblocks.in\n[research.blueblocks.in](https://research.blueblocks.in)"
+          body: "**Sruthi Matta**, Research Team Lead\nBlue Blocks Micro Research Institute\nEmail: press.research@blueblocks.in\n[research.blueblocks.in](https://research.blueblocks.in)"
         },
         {
           id: "pr-related",
