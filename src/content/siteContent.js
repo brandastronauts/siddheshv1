@@ -5131,6 +5131,16 @@ const siteContent = {
       ],
       sections: [
         {
+          id: "patent-zenodo", type: "metaStrip",
+          items: [
+            { label: "Archival Repository", value: "Zenodo (CERN)" },
+            { label: "DOI", value: "10.5281/zenodo.18610847", href: "https://doi.org/10.5281/zenodo.18610847", external: true },
+            { label: "Status", value: "Active" },
+            { label: "Access", value: "Open Access" },
+            { label: "License", value: "CC BY 4.0" }
+          ]
+        },
+        {
           id: "patent-hero", type: "hero", variant: "publication",
           headline: "Patent Portfolio : Autonomous Medical Assistance System (AMAS)",
           subheadline: "Patent Pending · Application No. 202041027075 · Medical Robotics / Telerobotics / Epidemiology",
