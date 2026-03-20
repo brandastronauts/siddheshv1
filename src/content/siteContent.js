@@ -5241,6 +5241,16 @@ const siteContent = {
       ],
       sections: [
         {
+          id: "patent-zenodo", type: "metaStrip",
+          items: [
+            { label: "Archival Repository", value: "Zenodo (CERN)" },
+            { label: "DOI", value: "10.5281/zenodo.18628995", href: "https://doi.org/10.5281/zenodo.18628995", external: true },
+            { label: "Status", value: "Active" },
+            { label: "Access", value: "Open Access" },
+            { label: "License", value: "CC BY 4.0" }
+          ]
+        },
+        {
           id: "patent-hero", type: "hero", variant: "publication",
           headline: "Patent Portfolio : Autonomous Health Monitoring System (AHMS)",
           subheadline: "Patent Pending · Medical Robotics / Public Health Surveillance / Bio-Telemetry",
