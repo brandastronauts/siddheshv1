@@ -369,6 +369,22 @@ const seoSchemaConfig = {
         },
         { ...instituteNode },
         {
+          '@type': 'ScholarlyArticle',
+          '@id': `${SITE_URL}/methodology/#article`,
+          name: 'Micro-Research Methodology Framework — Paper 01',
+          identifier: 'https://doi.org/10.5281/zenodo.18584816',
+          url: `${SITE_URL}/methodology`,
+          sameAs: 'https://doi.org/10.5281/zenodo.18584816',
+          publisher: { '@id': PERMANENT_IDS.INSTITUTE },
+          author: {
+            '@type': 'Person',
+            name: 'Pavan Goyal',
+            sameAs: 'https://orcid.org/0009-0009-8840-8505',
+          },
+          about: 'The operational framework for running high-frequency, low-footprint observation studies inside Montessori learning environments. Covers the Four Pillars, Four Gates, 4-Week Cycle, and 17-year compound dataset methodology.',
+          license: 'https://creativecommons.org/licenses/by/4.0/',
+        },
+        {
           '@type': 'HowTo',
           '@id': `${SITE_URL}/methodology/#framework`,
           name: 'The Micro-Research 4-Week Cycle',
