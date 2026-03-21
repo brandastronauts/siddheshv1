@@ -427,6 +427,20 @@ const siteContent = {
               button: { label: "Explore Books", href: "/books" }
             },
             {
+              title: "Methodology",
+              icon: "methodology",
+              description: "Research design, observation protocols, and the micro-research framework.",
+              image: "https://images.unsplash.com/photo-1450101215322-bf5cd27642fc?auto=format&fit=crop&w=1600&q=80",
+              button: { label: "View Methodology", href: "/methodology" }
+            },
+            {
+              title: "Governance",
+              icon: "governance",
+              description: "Ethics, compliance, research standards, and institutional oversight.",
+              image: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1600&q=80",
+              button: { label: "View Governance", href: "/governance" }
+            },
+            {
               title: "Team",
               icon: "users",
               description: "Researchers, embedded fellows, leadership, and institutional collaborators.",
