@@ -363,12 +363,44 @@ function renderSection(section) {
 
 /**
  * Render an entire page's sections array to a semantic HTML string.
+ * Also handles pages with non-standard structures (e.g., FAQ pages
+ * that use faqSections instead of sections, or pages with heroTitle).
+ *
  * @param {object} page – a siteContent.pages[route] object
  * @returns {string} HTML string (empty if nothing to render)
  */
 export function renderPageToStaticHtml(page) {
-  if (!page?.sections?.length) return '';
-  const parts = page.sections.map(renderSection).filter(Boolean);
+  if (!page) return '';
+
+  const parts = [];
+
+  // Handle heroTitle/heroSubtitle for pages without a hero section
+  if (page.heroTitle && (!page.sections || !page.sections.some(s => s.type === 'hero'))) {
+    parts.push(`<header><h1>${esc(page.heroTitle)}</h1>${page.heroSubtitle ? `<p>${bold(page.heroSubtitle)}</p>` : ''}</header>`);
+  }
+
+  // Render standard sections
+  if (page.sections?.length) {
+    parts.push(...page.sections.map(renderSection).filter(Boolean));
+  }
+
+  // Handle FAQ-style pages with faqSections (q/a items grouped by title)
+  if (page.faqSections?.length) {
+    for (const group of page.faqSections) {
+      let html = group.title ? `<h2>${esc(group.title)}</h2>` : '';
+      if (group.items?.length) {
+        html += group.items
+          .map(i => {
+            const q = i.q || i.question || i.title || '';
+            const a = i.a || i.answer || i.content || '';
+            return `<details><summary>${esc(q)}</summary>${renderParagraphs(a)}</details>`;
+          })
+          .join('\n');
+      }
+      if (html) parts.push(`<section>${html}</section>`);
+    }
+  }
+
   if (!parts.length) return '';
   return `<article>${parts.join('\n')}</article>`;
 }

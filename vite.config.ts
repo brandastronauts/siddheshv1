@@ -86,7 +86,7 @@ function prerenderSchemasPlugin() {
       // Helper to write HTML for a route
       async function writeRoute(route: string, html: string, pageData?: any) {
         // Inject static page content into <div id="root"> for SEO crawlability
-        if (pageData?.sections) {
+        if (pageData) {
           const staticContent = renderPageToStaticHtml(pageData);
           if (staticContent) {
             html = html.replace(
