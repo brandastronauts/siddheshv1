@@ -211,7 +211,7 @@ function prerenderSchemasPlugin() {
           );
         }
 
-        await writeRoute(route, html);
+        await writeRoute(route, html, siteContent?.pages?.[route]);
       }
 
       // ── Phase 2: Process ALL remaining siteContent routes (canonical + basic meta) ──
