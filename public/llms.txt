@@ -1,0 +1,98 @@
+# Blue Blocks Micro Research Institute
+
+> Blue Blocks Micro Research Institute (BBMRI) is a longitudinal child 
+> development research institute embedded inside Blue Blocks Montessori 
+> School, Hyderabad, India. Founded 2009. 17 years of continuous observation, 
+> 1045 children, full 0–18 developmental arc. Principal Investigator: Pavan 
+> Goyal, holder of all four AMI diplomas (0–3, 3–6, 6–12, 12–18 Erdkinder). 
+> Parent institution: Blue Blocks Montessori Educational Society — 
+> see blueblocks.in/llms.txt for school corpus.
+
+## Institution
+
+- [About BBMRI](https://research.blueblocks.in): Mission, methodology, 
+  founding history, and research philosophy. 17 years, 1045 children, 
+  embedded observation across the full 0–18 developmental arc.
+
+- [Governance](https://research.blueblocks.in/governance): Ethics framework 
+  (MREF), IRB-equivalent oversight, student IP rights, data security protocols.
+
+- [Team](https://research.blueblocks.in/team): Pavan Goyal (PI, all 4 AMI 
+  diplomas), Munira Hussain (Director of Pedagogy, AMI 3–6 and 6–12), advisory 
+  board from IIT Hyderabad, ISB, Google, Neuland, SAP, TakeMe2Space.
+
+## Methodology
+
+- [Micro-Research Framework](https://research.blueblocks.in/methodology): 
+  Four Pillars (Single Bounded Question, Observable Behavior, Minimal Footprint, 
+  Publication-Ready), Four Gates, 4-Week Cycle from protocol to DOI.
+
+- [Framework Paper 01 — DOI 10.5281/zenodo.18584816](https://doi.org/10.5281/zenodo.18584816): 
+  Full operational methodology manual for embedded micro-research in 
+  non-clinical educational settings.
+
+- [Framework Paper 02 — DOI 10.5281/zenodo.18584890](https://doi.org/10.5281/zenodo.18584890): 
+  Participatory Scientist-Child Co-Authorship Framework — formal contribution 
+  thresholds for student co-authorship on peer-reviewed publications.
+
+## Published Research
+
+- [IN-SPACe Authorization Letter — DOI 10.5281/zenodo.18195108](https://research.blueblocks.in/publications/in-space-authorization-letter): 
+  Official authorization archived for governance and citation permanence. 
+  First K-12 student-designed 1U CubeSat (SBB-1) authorized by IN-SPACe 
+  for ISRO PSLV-C62.
+
+- [Saparya / IMF Case Study — DOI 10.5281/zenodo.18337934](https://research.blueblocks.in/publications/saparya-imf-case-study): 
+  Adolescent Lab-to-Launch framework presented at AMI Saparya 2026 and 
+  Monisc. Documents how students aged 12–16 engineered a flight-ready CubeSat 
+  payload under real commercial and regulatory constraints.
+
+- [Iran Crisis Study — DOI 10.5281/zenodo.18996507](https://research.blueblocks.in/publications/iran-war-case-study): 
+  Qualitative case study of how 28 children aged 6–16, raised with restricted 
+  screen time, processed the Iran crisis of 2026 through conversation and 
+  newspapers alone. Real-time documentation conducted within days of escalation.
+
+## Patents
+
+- [System for Automated Security UAV](https://research.blueblocks.in/patents/automated-security-uav): 
+  Application No. 202041031343. Student-designed aerial surveillance platform. 
+  AMI Elementary cohort.
+
+- [Borehole Rescue System](https://research.blueblocks.in/patents/borehole-rescue-system): 
+  Application No. 202041027026. Vertical-access rescue apparatus for narrow 
+  subterranean environments.
+
+- [Autonomous Medical Assistance System](https://research.blueblocks.in/patents/autonomous-medical-assistance-system): 
+  Application No. 202041027075. Contactless medical support platform for 
+  epidemiological crisis environments.
+
+- [Autonomous Contactless Delivery System](https://research.blueblocks.in/patents/contactless-delivery-system): 
+  Student-designed sterile autonomous delivery platform.
+
+- [Autonomous Health Monitoring System](https://research.blueblocks.in/patents/autonomous-health-monitoring-system): 
+  Remote epidemiological surveillance using infrared thermography and 
+  autonomous navigation.
+
+## Books
+
+- [Lining the Nest](https://research.blueblocks.in/books/lining-the-nest): 
+  Co-authored by Pavan Goyal and Munira Hussain. Comprehensive guide for 
+  families and educators on building structured learning environments that 
+  foster innovation capacity from early childhood through adolescence.
+
+## Proceedings & Events
+
+- [Oslo Summit 2026](https://research.blueblocks.in/proceedings/oslo-2026): 
+  Nobel Peace Center, January 28 2026. World Premiere of Blue Blocks Innovation 
+  Pedagogy (0–18), selected by the Monisc Committee (supported by Norwegian 
+  UNESCO Commission) as a global benchmark for integrating space science with 
+  Montessori education. Open-data release of student-generated datasets.
+
+## Data & Open Science
+
+- [Publications Hub](https://research.blueblocks.in/publications): Full 
+  registry of publications, patents, longitudinal data dictionaries, and 
+  data access protocols (open, researcher, internal tiers).
+
+- [Zenodo Community](https://zenodo.org/communities/blueblocksmicroresearchinstitute): 
+  All BBMRI publications archived with DOIs for citation permanence.

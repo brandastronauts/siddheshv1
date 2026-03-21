@@ -1,0 +1,192 @@
+# Blue Blocks Micro Research Institute — Full Corpus
+
+Institution: Blue Blocks Micro Research Institute (BBMRI)
+Parent Institution: Blue Blocks Montessori Educational Society
+Location: Hyderabad, Telangana, India
+Founded: 2009
+Principal Investigator: Pavan Goyal (ORCID: 0009-0009-8840-8505)
+Zenodo Community: https://zenodo.org/communities/blueblocksmicroresearchinstitute
+Website: https://research.blueblocks.in
+
+---
+
+## INSTITUTION OVERVIEW
+
+Blue Blocks Micro Research Institute lives inside Blue Blocks Montessori 
+School. Our educators are our researchers. Our data never leaves context.
+
+Most institutions study children from the outside. We observe from within 
+the same daily environment, across years, tracking how innovation capacity 
+forms — not in snapshots, but across a full developmental arc. Findings 
+re-enter the classroom within weeks. Observation generates research. Research 
+changes practice. Practice generates new questions. The cycle never stops.
+
+Core statistics: 17 years of continuous observation. 1045 children tracked 
+from ages 0 to 18. 200+ micro-studies completed. 5 utility patents filed by 
+elementary-aged students. 3 published records with DOIs. 2 methodology 
+framework papers published. 1 orbital payload authorized by IN-SPACe.
+
+---
+
+## PRINCIPAL INVESTIGATOR
+
+Name: Pavan Goyal
+Role: Founder and Principal Investigator, Blue Blocks Micro Research Institute
+ORCID: 0009-0009-8840-8505
+
+Credentials:
+- AMI Diploma 0–3 (Association Montessori Internationale, Netherlands)
+- AMI Diploma 3–6 (Association Montessori Internationale, Netherlands)
+- AMI Diploma 6–12 (Association Montessori Internationale, Netherlands)
+- AMI Diploma 12–18 Erdkinder (Association Montessori Internationale, 
+  Netherlands)
+
+Pavan Goyal is one of a very small number of individuals globally to hold 
+all four AMI diplomas spanning the complete 0–18 developmental arc. He is 
+also a Trustee of the Indian Montessori Foundation (IMF), the national body 
+for Montessori education in India.
+
+Presentations: AMI International Conference, Thailand; AMI Saparya 2026 
+and Monisc; Oslo Nobel Peace Center (January 2026), selected by the Monisc 
+Committee supported by the Norwegian UNESCO Commission.
+
+---
+
+## METHODOLOGY: THE MICRO-RESEARCH FRAMEWORK
+
+The Micro-Research Framework operates on four pillars:
+
+1. Single Bounded Question — Each protocol investigates exactly one question. 
+   Compound questions are split into separate studies.
+
+2. Observable Behavior — Only actions are recorded, not inferences. 
+   "Child returned to material three times" — not "Child showed interest."
+
+3. Minimal Footprint — Protocols must be completable in under five minutes 
+   by observers already present in the environment. No clipboards, no 
+   strangers, no disruption.
+
+4. Publication-Ready — Every protocol is designed as if it will be submitted 
+   for peer review, with pre-registered hypotheses and DOI-ready data 
+   structures from day one.
+
+The Four Gates — every study must pass all four before data collection begins:
+
+- Gate 1 (Longitudinal): Does this connect to children we have observed before?
+- Gate 2 (Naturalistic): Can we observe without disrupting the environment?
+- Gate 3 (Specificity): Is the question bounded and precise?
+- Gate 4 (Micro): One question, under three weeks of collection, under five 
+  minutes per observation, single output.
+
+The 4-Week Cycle — Week 1: Draft question and test protocol. Week 2: Fellows 
+collect data during work cycles. Week 3: Strip identifying details, identify 
+patterns. Week 4: Internal review, DOI registration, Zenodo upload.
+
+Comparative advantage over traditional academic study:
+- 20+ studies annually vs 1 study every 3 years
+- Embedded Research Fellows vs external researchers
+- Continuous funding vs 2–3 year cycles
+- 200+ micro-studies vs ~5 major papers
+
+---
+
+## SBB-1 MISSION
+
+Mission name: SBB-1 (Space Blue Blocks 1)
+Payload type: 1U CubeSat
+Launch vehicle: ISRO PSLV-C62
+Authorization: IN-SPACe Authorization PMA/IN-SPACe/AUTH/2026/115
+Technical partner: TakeMe2Space
+Student age range: 12–16 years
+DOI (Authorization): 10.5281/zenodo.18195108
+DOI (Case Study): 10.5281/zenodo.18337934
+
+SBB-1 is the first K-12 student-designed orbital payload to receive 
+authorization from IN-SPACe (Indian National Space Promotion and 
+Authorization Centre), a body under the Department of Space, Government 
+of India. The payload met all flight qualifications — thermal and vibration 
+testing passed. The launch vehicle experienced a Stage 4 ignition failure 
+at T+847 seconds. The Institute's pedagogical position is that this outcome 
+provided the ultimate validation: the engineering was real enough to fail in 
+real ways. The mission outcome is documented as Valorization — proving to 
+students that their work met commercial aerospace standards, regardless of 
+mission success.
+
+---
+
+## IRAN CRISIS STUDY (2026)
+
+DOI: 10.5281/zenodo.18996507
+Date conducted: March 5–10, 2026
+Subject count: 28 children, ages 6–16
+Setting: AMI-guided Montessori school, Hyderabad, India
+
+Key findings: Children raised with restricted screen time, processing a 
+live geopolitical crisis through family conversation, peer discussion, and 
+newspapers alone. Teenagers independently constructed nuclear deterrence 
+logic. Six-year-olds across three independent groups defaulted to legal 
+process over violence — without coordination. This is a real-time 
+documentation of children's moral and cognitive responses to a live 
+geopolitical event, conducted within days of escalation.
+
+---
+
+## STUDENT PATENTS
+
+All five patents were filed by elementary-aged Blue Blocks students. 
+Application numbers are government records.
+
+1. System for Automated Security (UAV) — App. No. 202041031343
+   Aerial surveillance platform with encrypted alert ingestion and 
+   autonomous safety-response execution.
+
+2. Borehole Rescue System (BRS) — App. No. 202041027026
+   Vertical-access rescue apparatus for narrow subterranean environments 
+   with lidar-based collision avoidance.
+
+3. Autonomous Medical Assistance System (AMAS) — App. No. 202041027075
+   Contactless medical support platform with robotic manipulation and 
+   sanitation protocols.
+
+4. Autonomous Contactless Delivery System (ACDS) — App. No. TBD
+   Sterile autonomous logistics for contagion scenarios.
+
+5. Autonomous Health Monitoring System (AHMS) — App. No. TBD
+   Remote epidemiological surveillance using infrared thermography and 
+   video plethysmography.
+
+---
+
+## OSLO SUMMIT 2026
+
+Date: January 28, 2026
+Venue: Nobel Peace Center, Oslo, Norway
+Selection body: Monisc Committee (supported by Norwegian UNESCO Commission)
+Designation: Global benchmark for integrating space science with 
+Montessori education
+Event: World Premiere of Blue Blocks Innovation Pedagogy (0–18)
+Action: Formal open-data release of student-generated datasets to 
+international network
+
+---
+
+## BOOKS
+
+Title: Lining the Nest
+Authors: Pavan Goyal and Munira Hussain Kagalwalla
+Description: A comprehensive guide for families and educators on building 
+structured learning environments that foster innovation capacity from early 
+childhood through adolescence.
+URL: https://research.blueblocks.in/books/lining-the-nest
+
+---
+
+## ADVISORY BOARD
+
+- Prof. AVR Srikar — IIT Hyderabad, Dept of Design. TRL validation.
+- Prof. Apoorv Gogar — Indian School of Business. Research design review.
+- Rahul Jindal — Director, Google. Software and systems architecture review.
+- Sucheth Davaluri — Vice-Chairman & CEO, Neuland Laboratories. 
+  Commercialization pathways.
+- Manish Gupta — Director, SAP. Enterprise technology evaluation.
+- Ronak Kumar — Founder, TakeMe2Space. Aerospace domain mentorship.
