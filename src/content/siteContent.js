@@ -427,6 +427,20 @@ const siteContent = {
               button: { label: "Explore Books", href: "/books" }
             },
             {
+              title: "Methodology",
+              icon: "methodology",
+              description: "Research design, observation protocols, and the micro-research framework.",
+              image: "https://images.unsplash.com/photo-1450101215322-bf5cd27642fc?auto=format&fit=crop&w=1600&q=80",
+              button: { label: "View Methodology", href: "/methodology" }
+            },
+            {
+              title: "Governance",
+              icon: "governance",
+              description: "Ethics, compliance, research standards, and institutional oversight.",
+              image: "https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1600&q=80",
+              button: { label: "View Governance", href: "/governance" }
+            },
+            {
               title: "Team",
               icon: "users",
               description: "Researchers, embedded fellows, leadership, and institutional collaborators.",
@@ -1290,6 +1304,14 @@ const siteContent = {
           intro: "Formal publications with DOI identifiers, archived for citation and institutional traceability.",
           variant: "blogGrid",
           cards: [
+            {
+              tag: "Published Record",
+              headline: "Official Launch Authorization: Project SBB-1",
+              meta: "DOI: 10.5281/zenodo.18195108",
+              body: "IN-SPACe authorization certificate for the SBB-1 CubeSat payload. Archived for governance traceability, regulatory documentation continuity, and citation permanence.",
+              cta: { label: "View Publication", href: "/publications/CubeSat-INSPACE" },
+              image: { src: "/src/assets/placeholders/labs/authorization-letter.jpg", alt: "IN-SPACe authorization document", variant: "card" }
+            },
             {
               tag: "Published Record",
               headline: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
