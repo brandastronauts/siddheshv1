@@ -64,6 +64,16 @@ function prerenderSchemasPlugin() {
         console.warn('⚠ prerender-schemas: Could not import siteContent, skipping content routes.', err);
       }
 
+      // Load static HTML renderer for content injection into View Source
+      const rendererPath = pathMod.resolve('src', 'lib', 'staticHtmlRenderer.js');
+      let renderPageToStaticHtml = (_page: any): string => '';
+      try {
+        const rendererMod = await import(pathToFileURL(rendererPath).href);
+        renderPageToStaticHtml = rendererMod.renderPageToStaticHtml;
+      } catch (err) {
+        console.warn('⚠ prerender-schemas: Could not import staticHtmlRenderer, skipping content injection.', err);
+      }
+
       // Map app routes to canonical output paths where they differ
       const OUTPUT_PATH_MAP: Record<string, string> = {
         '/the-institute': '/institute',
@@ -74,7 +84,18 @@ function prerenderSchemasPlugin() {
       let count = 0;
 
       // Helper to write HTML for a route
-      async function writeRoute(route: string, html: string) {
+      async function writeRoute(route: string, html: string, pageData?: any) {
+        // Inject static page content into <div id="root"> for SEO crawlability
+        if (pageData?.sections) {
+          const staticContent = renderPageToStaticHtml(pageData);
+          if (staticContent) {
+            html = html.replace(
+              '<div id="root"></div>',
+              `<div id="root">${staticContent}</div>`
+            );
+          }
+        }
+
         const outputRoute = OUTPUT_PATH_MAP[route] || route;
         const cleanRoute = outputRoute.replace(/^\//, '');
         if (cleanRoute) {
@@ -190,7 +211,7 @@ function prerenderSchemasPlugin() {
           );
         }
 
-        await writeRoute(route, html);
+        await writeRoute(route, html, siteContent?.pages?.[route]);
       }
 
       // ── Phase 2: Process ALL remaining siteContent routes (canonical + basic meta) ──
@@ -290,7 +311,7 @@ function prerenderSchemasPlugin() {
             }
           }
 
-          await writeRoute(route, html);
+          await writeRoute(route, html, pageData);
         }
       }
 
