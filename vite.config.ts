@@ -64,6 +64,16 @@ function prerenderSchemasPlugin() {
         console.warn('⚠ prerender-schemas: Could not import siteContent, skipping content routes.', err);
       }
 
+      // Load static HTML renderer for content injection into View Source
+      const rendererPath = pathMod.resolve('src', 'lib', 'staticHtmlRenderer.js');
+      let renderPageToStaticHtml = (_page: any): string => '';
+      try {
+        const rendererMod = await import(pathToFileURL(rendererPath).href);
+        renderPageToStaticHtml = rendererMod.renderPageToStaticHtml;
+      } catch (err) {
+        console.warn('⚠ prerender-schemas: Could not import staticHtmlRenderer, skipping content injection.', err);
+      }
+
       // Map app routes to canonical output paths where they differ
       const OUTPUT_PATH_MAP: Record<string, string> = {
         '/the-institute': '/institute',
