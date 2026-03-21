@@ -161,6 +161,19 @@ const seoSchemaConfig = {
           },
           email: 'research@blueblocks.in',
           telephone: '+919000955050',
+          sameAs: [
+            'https://zenodo.org/communities/blueblocksmicroresearchinstitute',
+            PARENT_URL,
+          ],
+          location: {
+            '@type': 'Place',
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'Hyderabad',
+              addressRegion: 'Telangana',
+              addressCountry: 'IN',
+            },
+          },
         },
         {
           '@type': 'Person',
