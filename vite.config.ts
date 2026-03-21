@@ -84,7 +84,18 @@ function prerenderSchemasPlugin() {
       let count = 0;
 
       // Helper to write HTML for a route
-      async function writeRoute(route: string, html: string) {
+      async function writeRoute(route: string, html: string, pageData?: any) {
+        // Inject static page content into <div id="root"> for SEO crawlability
+        if (pageData?.sections) {
+          const staticContent = renderPageToStaticHtml(pageData);
+          if (staticContent) {
+            html = html.replace(
+              '<div id="root"></div>',
+              `<div id="root">${staticContent}</div>`
+            );
+          }
+        }
+
         const outputRoute = OUTPUT_PATH_MAP[route] || route;
         const cleanRoute = outputRoute.replace(/^\//, '');
         if (cleanRoute) {
