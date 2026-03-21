@@ -315,6 +315,22 @@ function prerenderSchemasPlugin() {
         }
       }
 
+      // ── Phase 3: Inject static content into homepage (dist/index.html) ──
+      if (siteContent?.pages?.['/']) {
+        const homePageData = siteContent.pages['/'];
+        const staticContent = renderPageToStaticHtml(homePageData);
+        if (staticContent) {
+          const homePath = pathMod.join(distDir, 'index.html');
+          let homeHtml = await fs.readFile(homePath, 'utf-8');
+          homeHtml = homeHtml.replace(
+            '<div id="root"></div>',
+            `<div id="root">${staticContent}</div>`
+          );
+          await fs.writeFile(homePath, homeHtml, 'utf-8');
+          console.log('  ✓ prerender-schemas: Injected static content into homepage index.html');
+        }
+      }
+
       if (count > 0) {
         console.log(`\n  ✓ prerender-schemas: Generated ${count} static HTML files with correct canonicals\n`);
       }
