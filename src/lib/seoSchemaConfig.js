@@ -181,6 +181,10 @@ const seoSchemaConfig = {
           name: 'Pavan Goyal',
           jobTitle: 'Principal Investigator & Founder',
           worksFor: { '@id': PERMANENT_IDS.INSTITUTE },
+          sameAs: [
+            'https://orcid.org/0009-0009-8840-8505',
+            PARENT_URL,
+          ],
           hasCredential: {
             '@type': 'EducationalOccupationalCredential',
             credentialCategory: 'AMI Diploma (0-18)',
