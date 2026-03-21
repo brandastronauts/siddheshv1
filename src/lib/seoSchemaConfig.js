@@ -161,6 +161,19 @@ const seoSchemaConfig = {
           },
           email: 'research@blueblocks.in',
           telephone: '+919000955050',
+          sameAs: [
+            'https://zenodo.org/communities/blueblocksmicroresearchinstitute',
+            PARENT_URL,
+          ],
+          location: {
+            '@type': 'Place',
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'Hyderabad',
+              addressRegion: 'Telangana',
+              addressCountry: 'IN',
+            },
+          },
         },
         {
           '@type': 'Person',
@@ -168,6 +181,10 @@ const seoSchemaConfig = {
           name: 'Pavan Goyal',
           jobTitle: 'Principal Investigator & Founder',
           worksFor: { '@id': PERMANENT_IDS.INSTITUTE },
+          sameAs: [
+            'https://orcid.org/0009-0009-8840-8505',
+            PARENT_URL,
+          ],
           hasCredential: {
             '@type': 'EducationalOccupationalCredential',
             credentialCategory: 'AMI Diploma (0-18)',
@@ -351,6 +368,22 @@ const seoSchemaConfig = {
           about: { '@id': PERMANENT_IDS.INSTITUTE },
         },
         { ...instituteNode },
+        {
+          '@type': 'ScholarlyArticle',
+          '@id': `${SITE_URL}/methodology/#article`,
+          name: 'Micro-Research Methodology Framework — Paper 01',
+          identifier: 'https://doi.org/10.5281/zenodo.18584816',
+          url: `${SITE_URL}/methodology`,
+          sameAs: 'https://doi.org/10.5281/zenodo.18584816',
+          publisher: { '@id': PERMANENT_IDS.INSTITUTE },
+          author: {
+            '@type': 'Person',
+            name: 'Pavan Goyal',
+            sameAs: 'https://orcid.org/0009-0009-8840-8505',
+          },
+          about: 'The operational framework for running high-frequency, low-footprint observation studies inside Montessori learning environments. Covers the Four Pillars, Four Gates, 4-Week Cycle, and 17-year compound dataset methodology.',
+          license: 'https://creativecommons.org/licenses/by/4.0/',
+        },
         {
           '@type': 'HowTo',
           '@id': `${SITE_URL}/methodology/#framework`,
@@ -804,6 +837,212 @@ const seoSchemaConfig = {
           { name: 'Home', item: `${SITE_URL}/` },
           { name: 'Publications', item: `${SITE_URL}/publications` },
           { name: 'Iran War Case Study', item: `${SITE_URL}/publications/iran-war-case-study` },
+        ]),
+      ],
+    },
+  },
+
+  // ═══ TEAM PAGE ═══════════════════════════════════════════════════════════
+  '/team': {
+    meta: {
+      title: 'Team | Blue Blocks Micro Research Institute',
+      description: 'Meet the research team at Blue Blocks Micro Research Institute led by Principal Investigator Pavan Goyal.',
+      canonical: `${SITE_URL}/team`,
+    },
+    openGraph: {
+      type: 'website',
+      title: 'Team | Blue Blocks Micro Research Institute',
+      url: `${SITE_URL}/team`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Team | Blue Blocks Micro Research Institute',
+    },
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'WebPage',
+          '@id': `${SITE_URL}/team/#webpage`,
+          url: `${SITE_URL}/team`,
+          name: 'Team | Blue Blocks Micro Research Institute',
+          isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
+        },
+        { ...instituteNode },
+        {
+          '@type': 'Person',
+          '@id': PERMANENT_IDS.PAVAN,
+          name: 'Pavan Goyal',
+          jobTitle: 'Principal Investigator & Founder',
+          affiliation: {
+            '@type': 'ResearchOrganization',
+            name: 'Blue Blocks Micro Research Institute',
+            url: SITE_URL,
+          },
+          sameAs: [
+            'https://orcid.org/0009-0009-8840-8505',
+            PARENT_URL,
+          ],
+          hasCredential: [
+            {
+              '@type': 'EducationalOccupationalCredential',
+              name: 'AMI Diploma 0–3',
+              credentialCategory: 'Professional Certification',
+              recognizedBy: {
+                '@type': 'Organization',
+                name: 'Association Montessori Internationale',
+                url: 'https://ami-global.org',
+              },
+            },
+            {
+              '@type': 'EducationalOccupationalCredential',
+              name: 'AMI Diploma 3–6',
+              credentialCategory: 'Professional Certification',
+              recognizedBy: {
+                '@type': 'Organization',
+                name: 'Association Montessori Internationale',
+                url: 'https://ami-global.org',
+              },
+            },
+            {
+              '@type': 'EducationalOccupationalCredential',
+              name: 'AMI Diploma 6–12',
+              credentialCategory: 'Professional Certification',
+              recognizedBy: {
+                '@type': 'Organization',
+                name: 'Association Montessori Internationale',
+                url: 'https://ami-global.org',
+              },
+            },
+            {
+              '@type': 'EducationalOccupationalCredential',
+              name: 'AMI Diploma 12–18 (Erdkinder)',
+              credentialCategory: 'Professional Certification',
+              recognizedBy: {
+                '@type': 'Organization',
+                name: 'Association Montessori Internationale',
+                url: 'https://ami-global.org',
+              },
+            },
+          ],
+        },
+        breadcrumb(`${SITE_URL}/team/#breadcrumb`, [
+          { name: 'Home', item: `${SITE_URL}/` },
+          { name: 'Governance', item: `${SITE_URL}/governance` },
+          { name: 'Team', item: `${SITE_URL}/team` },
+        ]),
+      ],
+    },
+  },
+
+  // ═══ IN-SPACe Authorization Letter ═══════════════════════════════════════
+  '/publications/in-space-authorization-letter': {
+    meta: {
+      title: 'IN-SPACe Authorization Letter — SBB-1 / Blue Blocks | Blue Blocks Micro Research Institute',
+      description: 'IN-SPACe authorization letter for the SBB-1 CubeSat mission. First K-12 student-designed 1U CubeSat payload authorized for ISRO PSLV-C62 launch.',
+      canonical: `${SITE_URL}/publications/in-space-authorization-letter`,
+    },
+    openGraph: {
+      type: 'article',
+      title: 'IN-SPACe Authorization Letter — SBB-1 / Blue Blocks',
+      url: `${SITE_URL}/publications/in-space-authorization-letter`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'IN-SPACe Authorization Letter — SBB-1 / Blue Blocks',
+    },
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'WebPage',
+          '@id': `${SITE_URL}/publications/in-space-authorization-letter/#webpage`,
+          url: `${SITE_URL}/publications/in-space-authorization-letter`,
+          name: 'IN-SPACe Authorization Letter — SBB-1 / Blue Blocks',
+          isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
+        },
+        { ...instituteNode },
+        {
+          '@type': 'TechArticle',
+          '@id': `${SITE_URL}/publications/in-space-authorization-letter/#article`,
+          name: 'IN-SPACe Authorization Letter — SBB-1 / Blue Blocks',
+          identifier: 'https://doi.org/10.5281/zenodo.18195108',
+          url: `${SITE_URL}/publications/in-space-authorization-letter`,
+          sameAs: 'https://doi.org/10.5281/zenodo.18195108',
+          publisher: { '@id': PERMANENT_IDS.INSTITUTE },
+          author: {
+            '@type': 'Person',
+            name: 'Pavan Goyal',
+            sameAs: 'https://orcid.org/0009-0009-8840-8505',
+          },
+          about: {
+            '@type': 'ResearchProject',
+            name: 'SBB-1 CubeSat Mission',
+            description: 'First K-12 student-designed 1U CubeSat payload authorized by IN-SPACe for ISRO PSLV-C62 launch. Mission validation through launch vehicle anomaly valorization.',
+            funder: {
+              '@type': 'GovernmentOrganization',
+              name: 'Indian National Space Promotion and Authorization Centre (IN-SPACe)',
+              url: 'https://www.inspace.gov.in',
+            },
+          },
+          license: 'https://creativecommons.org/licenses/by/4.0/',
+        },
+        breadcrumb(`${SITE_URL}/publications/in-space-authorization-letter/#breadcrumb`, [
+          { name: 'Home', item: `${SITE_URL}/` },
+          { name: 'Publications', item: `${SITE_URL}/publications` },
+          { name: 'IN-SPACe Authorization Letter', item: `${SITE_URL}/publications/in-space-authorization-letter` },
+        ]),
+      ],
+    },
+  },
+
+  // ═══ Saparya / IMF Case Study ════════════════════════════════════════════
+  '/publications/saparya-imf-case-study': {
+    meta: {
+      title: 'Saparya / IMF Conference Case Study — SBB-1 Mission & Valorization | Blue Blocks Micro Research Institute',
+      description: 'Adolescent engineering mission presented at AMI Saparya 2026 and Monisc conferences, documenting a Lab-to-Launch framework for student-led aerospace innovation.',
+      canonical: `${SITE_URL}/publications/saparya-imf-case-study`,
+    },
+    openGraph: {
+      type: 'article',
+      title: 'Saparya / IMF Conference Case Study — SBB-1 Mission & Valorization',
+      url: `${SITE_URL}/publications/saparya-imf-case-study`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Saparya / IMF Conference Case Study — SBB-1 Mission',
+    },
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'WebPage',
+          '@id': `${SITE_URL}/publications/saparya-imf-case-study/#webpage`,
+          url: `${SITE_URL}/publications/saparya-imf-case-study`,
+          name: 'Saparya / IMF Conference Case Study — SBB-1 Mission & Valorization',
+          isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
+        },
+        { ...instituteNode },
+        {
+          '@type': 'ScholarlyArticle',
+          '@id': `${SITE_URL}/publications/saparya-imf-case-study/#article`,
+          name: 'Saparya / IMF Conference Case Study — SBB-1 Mission & Valorization',
+          identifier: 'https://doi.org/10.5281/zenodo.18337934',
+          url: `${SITE_URL}/publications/saparya-imf-case-study`,
+          sameAs: 'https://doi.org/10.5281/zenodo.18337934',
+          publisher: { '@id': PERMANENT_IDS.INSTITUTE },
+          author: {
+            '@type': 'Person',
+            name: 'Pavan Goyal',
+            sameAs: 'https://orcid.org/0009-0009-8840-8505',
+          },
+          about: 'Adolescent engineering mission presented at AMI Saparya 2026 and Monisc conferences, documenting a Lab-to-Launch framework for student-led aerospace innovation.',
+          license: 'https://creativecommons.org/licenses/by/4.0/',
+        },
+        breadcrumb(`${SITE_URL}/publications/saparya-imf-case-study/#breadcrumb`, [
+          { name: 'Home', item: `${SITE_URL}/` },
+          { name: 'Publications', item: `${SITE_URL}/publications` },
+          { name: 'Saparya / IMF Case Study', item: `${SITE_URL}/publications/saparya-imf-case-study` },
         ]),
       ],
     },
