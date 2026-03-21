@@ -311,7 +311,7 @@ function prerenderSchemasPlugin() {
             }
           }
 
-          await writeRoute(route, html);
+          await writeRoute(route, html, pageData);
         }
       }
 
