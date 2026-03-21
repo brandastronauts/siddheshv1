@@ -1,4 +1,4 @@
-import { sitemapData } from './sitemapData';
+import { sitemapData } from './sitemapData.js';
 
 /**
  * Build-time static HTML renderer.
