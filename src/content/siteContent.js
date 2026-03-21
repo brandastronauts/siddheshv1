@@ -1306,6 +1306,14 @@ const siteContent = {
           cards: [
             {
               tag: "Published Record",
+              headline: "Official Launch Authorization: Project SBB-1",
+              meta: "DOI: 10.5281/zenodo.18195108",
+              body: "IN-SPACe authorization certificate for the SBB-1 CubeSat payload. Archived for governance traceability, regulatory documentation continuity, and citation permanence.",
+              cta: { label: "View Publication", href: "/publications/CubeSat-INSPACE" },
+              image: { src: "/src/assets/placeholders/labs/authorization-letter.jpg", alt: "IN-SPACe authorization document", variant: "card" }
+            },
+            {
+              tag: "Published Record",
               headline: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
               meta: "DOI: 10.5281/zenodo.18195108",
               body: "Official authorization archived for governance traceability, regulatory documentation continuity, and citation permanence.",
