@@ -2,13 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core -->
   <url><loc>https://research.blueblocks.in/</loc></url>
+  <url><loc>https://research.blueblocks.in/the-institute</loc></url>
+  <url><loc>https://research.blueblocks.in/methodology</loc></url>
+  <url><loc>https://research.blueblocks.in/publications</loc></url>
+  <url><loc>https://research.blueblocks.in/governance</loc></url>
+  <url><loc>https://research.blueblocks.in/collaborate</loc></url>
+  <url><loc>https://research.blueblocks.in/newsroom</loc></url>
+  <url><loc>https://research.blueblocks.in/contact</loc></url>
+
+  <!-- Governance -->
+  <url><loc>https://research.blueblocks.in/governance/ethics</loc></url>
+  <url><loc>https://research.blueblocks.in/governance/standards</loc></url>
+  <url><loc>https://research.blueblocks.in/governance/compliance</loc></url>
+  <url><loc>https://research.blueblocks.in/governance/our-standards</loc></url>
+
+  <!-- Methodology -->
+  <url><loc>https://research.blueblocks.in/methodology/innovation</loc></url>
+  <url><loc>https://research.blueblocks.in/methodology/limitations</loc></url>
+  <url><loc>https://research.blueblocks.in/methodology/tools</loc></url>
 
   <!-- Publications -->
-  <url><loc>https://research.blueblocks.in/publications</loc></url>
   <url><loc>https://research.blueblocks.in/publications/CubeSat-INSPACE</loc></url>
-  <url><loc>https://research.blueblocks.in/publications/iran-war-case-study</loc></url>
-  <url><loc>https://research.blueblocks.in/publications/saparya-imf-case-study</loc></url>
   <url><loc>https://research.blueblocks.in/publications/in-space-authorization-letter</loc></url>
+  <url><loc>https://research.blueblocks.in/publications/saparya-imf-case-study</loc></url>
+  <url><loc>https://research.blueblocks.in/publications/iran-war-case-study</loc></url>
+  <url><loc>https://research.blueblocks.in/publications/citation-standards</loc></url>
+  <url><loc>https://research.blueblocks.in/publications/data</loc></url>
+  <url><loc>https://research.blueblocks.in/publications/glossary</loc></url>
 
   <!-- Patents -->
   <url><loc>https://research.blueblocks.in/patents</loc></url>
@@ -22,7 +42,37 @@
   <url><loc>https://research.blueblocks.in/books</loc></url>
   <url><loc>https://research.blueblocks.in/books/lining-the-nest</loc></url>
 
-  <!-- Other -->
-  <url><loc>https://research.blueblocks.in/methodology</loc></url>
-  <url><loc>https://research.blueblocks.in/governance</loc></url>
+  <!-- Team -->
+  <url><loc>https://research.blueblocks.in/team</loc></url>
+  <url><loc>https://research.blueblocks.in/team/pavan-goyal</loc></url>
+  <url><loc>https://research.blueblocks.in/team/munira-hussain</loc></url>
+  <url><loc>https://research.blueblocks.in/team/adolescent-research-cohort</loc></url>
+  <url><loc>https://research.blueblocks.in/governance/team/dr-sreemoyee-chakraborty</loc></url>
+  <url><loc>https://research.blueblocks.in/governance/team/dr-shobha-ediga</loc></url>
+  <url><loc>https://research.blueblocks.in/governance/team/sandhya-rao-m</loc></url>
+  <url><loc>https://research.blueblocks.in/governance/team/sruthi-matta</loc></url>
+  <url><loc>https://research.blueblocks.in/governance/team/sreedhar-reddy-boddu</loc></url>
+  <url><loc>https://research.blueblocks.in/governance/team/vinay-shyam-donakanti</loc></url>
+
+  <!-- Downloads -->
+  <url><loc>https://research.blueblocks.in/downloads</loc></url>
+
+  <!-- Technical / Presentations / Proceedings -->
+  <url><loc>https://research.blueblocks.in/technical-briefs/sbb-1</loc></url>
+  <url><loc>https://research.blueblocks.in/presentations/marrakesh-human-capital</loc></url>
+  <url><loc>https://research.blueblocks.in/proceedings/oslo-2026</loc></url>
+
+  <!-- Newsroom -->
+  <url><loc>https://research.blueblocks.in/newsroom/dispatch/isro-payload-authorization</loc></url>
+  <url><loc>https://research.blueblocks.in/newsroom/dispatch/iran-crisis-study-press-release</loc></url>
+  <url><loc>https://research.blueblocks.in/newsroom/coverage/nobel-peace-center</loc></url>
+  <url><loc>https://research.blueblocks.in/newsroom/updates/iit-hyderabad-advisory</loc></url>
+  <url><loc>https://research.blueblocks.in/newsroom/updates/utility-patent-4421</loc></url>
+  <url><loc>https://research.blueblocks.in/newsroom/updates/visiting-scholars-2026</loc></url>
+
+  <!-- Legal & Utility -->
+  <url><loc>https://research.blueblocks.in/privacy</loc></url>
+  <url><loc>https://research.blueblocks.in/terms</loc></url>
+  <url><loc>https://research.blueblocks.in/sitemap</loc></url>
+  <url><loc>https://research.blueblocks.in/faq</loc></url>
 </urlset>
