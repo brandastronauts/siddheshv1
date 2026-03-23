@@ -1,19 +1,62 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, CheckCircle } from 'lucide-react';
+import { Send, CheckCircle, AlertCircle } from 'lucide-react';
 
-const FormSection = ({ heading, header, description, intro, fields, submitLabel, recipientEmail, submit }) => {
+const HUBSPOT_PORTAL_ID = '245638953';
+const HUBSPOT_FORM_ID = '54cad465-b7b1-45cb-b9c2-28ec4a7283a4';
+
+const FIELD_NAME_TO_HUBSPOT = {
+  name: 'fullname',
+  email: 'email',
+  inquiryType: 'inquiry_type',
+  institution: 'company',
+  phone: 'phone',
+  message: 'message',
+};
+
+const submitToHubSpot = async (fields, formData) => {
+  const hubspotFields = fields
+    .filter((field) => formData[field.name]?.trim())
+    .map((field) => ({
+      objectTypeId: '0-1',
+      name: FIELD_NAME_TO_HUBSPOT[field.name] || field.name,
+      value: formData[field.name].trim(),
+    }));
+
+  const response = await fetch(
+    `https://api.hsforms.com/submissions/v3/integration/submit/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`,
+    {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        fields: hubspotFields,
+        context: {
+          pageUri: window.location.href,
+          pageName: document.title,
+          hutk: document.cookie.match(/hubspotutk=([^;]*)/)?.[1] || undefined,
+        },
+      }),
+    }
+  );
+
+  if (!response.ok) {
+    const errorData = await response.json().catch(() => ({}));
+    throw new Error(errorData.message || `Submission failed (${response.status})`);
+  }
+
+  return response.json();
+};
+
+const FormSection = ({ heading, header, description, intro, fields, submitLabel, submit }) => {
   const [formData, setFormData] = useState({});
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
   const [honeypot, setHoneypot] = useState('');
 
   const title = header || heading;
   const subtitle = intro || description;
-  const emailTo = submit?.to || recipientEmail;
-  const mediaEmailTo = submit?.mediaTo;
-  const emailSubject = submit?.subject || `Contact Form Submission`;
-  const successMessage = submit?.successMessage || "Draft email opened in your mail client.";
 
   const validateField = (field, value) => {
     if (field.required && (!value || value.trim() === '')) {
@@ -34,25 +77,20 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: null }));
     }
+    if (submitError) setSubmitError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Honeypot check — bots fill this hidden field
     if (honeypot) return;
-    
-    // Validate all fields
+
     const newErrors = {};
     fields.forEach((field) => {
       const error = validateField(field, formData[field.name]);
-      if (error) {
-        newErrors[field.name] = error;
-      }
+      if (error) newErrors[field.name] = error;
     });
 
     if (Object.keys(newErrors).length > 0) {
@@ -60,22 +98,17 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
       return;
     }
 
-    // Track submission via HubSpot collected forms
-    try {
-      if (window._hsq) {
-        // Identify contact if email field exists
-        const emailField = fields.find(f => f.type === 'email');
-        const emailValue = emailField ? formData[emailField.name] : null;
-        if (emailValue) {
-          window._hsq.push(['identify', { email: emailValue }]);
-        }
-        window._hsq.push(['trackPageView']);
-      }
-    } catch (err) {
-      // Silent fail — tracking is non-critical
-    }
+    setSubmitting(true);
+    setSubmitError('');
 
-    setSubmitted(true);
+    try {
+      await submitToHubSpot(fields, formData);
+      setSubmitted(true);
+    } catch (err) {
+      setSubmitError('Something went wrong. Please try again or email us directly.');
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -120,9 +153,9 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
               {title}
             </h2>
           )}
-          
+
           {subtitle && (
-            <motion.p 
+            <motion.p
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -132,16 +165,16 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
               {subtitle}
             </motion.p>
           )}
-          
-          <motion.form 
+
+          <motion.form
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            onSubmit={handleSubmit} 
+            onSubmit={handleSubmit}
             className="bg-card rounded-2xl p-6 md:p-8 shadow-card border border-border/50"
           >
-            {/* Honeypot field — hidden from real users, bots fill it */}
+            {/* Honeypot field */}
             <div className="absolute -left-[9999px]" aria-hidden="true">
               <label htmlFor="website_url_hp">Website</label>
               <input
@@ -165,7 +198,7 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
                     {field.label}
                     {field.required && <span className="text-destructive ml-1">*</span>}
                   </label>
-                  
+
                   {field.type === 'textarea' ? (
                     <textarea
                       id={field.name}
@@ -212,20 +245,28 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
                       placeholder={field.placeholder || ''}
                     />
                   )}
-                  
+
                   {errors[field.name] && (
                     <p className="mt-2 text-sm text-destructive">{errors[field.name]}</p>
                   )}
                 </div>
               ))}
             </div>
-            
+
+            {submitError && (
+              <div className="mt-4 flex items-center gap-2 text-destructive text-sm">
+                <AlertCircle className="w-4 h-4 flex-shrink-0" />
+                <span>{submitError}</span>
+              </div>
+            )}
+
             <button
               type="submit"
-              className="mt-8 w-full flex items-center justify-center gap-2 px-6 py-3 min-h-[48px] bg-primary-navy text-white font-medium rounded-lg hover:bg-secondary-blue transition-all duration-200 hover:shadow-lg"
+              disabled={submitting}
+              className="mt-8 w-full flex items-center justify-center gap-2 px-6 py-3 min-h-[48px] bg-primary-navy text-white font-medium rounded-lg hover:bg-secondary-blue transition-all duration-200 hover:shadow-lg disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {submitLabel || 'Submit Request'}
-              <Send className="w-4 h-4" />
+              {submitting ? 'Submitting…' : (submitLabel || 'Submit Request')}
+              {!submitting && <Send className="w-4 h-4" />}
             </button>
           </motion.form>
         </div>
