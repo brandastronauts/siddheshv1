@@ -99,7 +99,7 @@ const FooterNewsletter = () => {
       {submitted ? (
         <div className="flex items-center gap-3 py-4 text-accent-cyan">
           <CheckCircle className="w-5 h-5" />
-          <span className="text-sm font-medium">Subscription request received. Check your email client.</span>
+          <span className="text-sm font-medium">Thank you. Your submission has been received successfully.</span>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
