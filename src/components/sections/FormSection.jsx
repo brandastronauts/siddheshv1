@@ -91,10 +91,10 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
               <CheckCircle className="w-8 h-8 text-green-600" />
             </div>
             <h3 className="text-2xl font-bold text-deep-ink mb-3">
-              Inquiry Submitted
+              Submission Received
             </h3>
             <p className="text-muted-foreground mb-6">
-              {successMessage}
+              Thank you. Your submission has been received successfully.
             </p>
             <button
               onClick={() => {
