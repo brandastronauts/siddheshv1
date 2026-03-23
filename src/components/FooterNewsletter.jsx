@@ -56,27 +56,22 @@ const FooterNewsletter = () => {
     }
     
     setErrors({});
-    
-    // Construct mailto link
-    const timestamp = new Date().toISOString();
-    const affiliationLabel = affiliationOptions.find(opt => opt.value === affiliation)?.label || 'Not specified';
-    const subject = encodeURIComponent('Newsletter Subscription');
-    const body = encodeURIComponent(
-      `Newsletter Subscription Request\n\n` +
-      `Email: ${email.trim()}\n` +
-      `Affiliation: ${affiliationLabel}\n` +
-      `Timestamp: ${timestamp}\n\n` +
-      `Consent: Agreed to receive institutional updates.`
-    );
-    
-    // Open mailto
-    window.location.href = `mailto:research@blueblocks.in?subject=${subject}&body=${body}`;
+
+    // Track via HubSpot collected forms
+    try {
+      if (window._hsq) {
+        window._hsq.push(['identify', { email: email.trim() }]);
+        window._hsq.push(['trackPageView']);
+      }
+    } catch (err) {
+      // Silent fail — tracking is non-critical
+    }
     
     // Show success state
     setSubmitted(true);
     toast({
-      title: 'Subscription request received',
-      description: 'Your email client will open to complete the subscription.',
+      title: 'Subscription received',
+      description: 'Thank you. Your submission has been received successfully.',
     });
     
     // Reset form after delay
@@ -104,7 +99,7 @@ const FooterNewsletter = () => {
       {submitted ? (
         <div className="flex items-center gap-3 py-4 text-accent-cyan">
           <CheckCircle className="w-5 h-5" />
-          <span className="text-sm font-medium">Subscription request received. Check your email client.</span>
+          <span className="text-sm font-medium">Thank you. Your submission has been received successfully.</span>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
