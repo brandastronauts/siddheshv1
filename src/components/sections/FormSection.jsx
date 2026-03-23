@@ -60,40 +60,21 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
       return;
     }
 
-    // Determine recipient based on inquiry type
-    const inquiryType = formData.inquiryType || '';
-    const isMedia = inquiryType === 'media';
-    const recipient = isMedia && mediaEmailTo ? mediaEmailTo : emailTo;
-
-    // Build email body
-    const emailBody = fields
-      .map((field) => {
-        const value = formData[field.name] || 'N/A';
-        if (field.type === 'select' && field.options?.[0]?.label) {
-          const selectedOption = field.options.find(opt => opt.value === value);
-          return `${field.label}: ${selectedOption?.label || value}`;
+    // Track submission via HubSpot collected forms
+    try {
+      if (window._hsq) {
+        // Identify contact if email field exists
+        const emailField = fields.find(f => f.type === 'email');
+        const emailValue = emailField ? formData[emailField.name] : null;
+        if (emailValue) {
+          window._hsq.push(['identify', { email: emailValue }]);
         }
-        return `${field.label}: ${value}`;
-      })
-      .join('\n\n');
-
-    // Build subject with inquiry type
-    const inquiryLabel = (() => {
-      const field = fields.find(f => f.name === 'inquiryType');
-      if (field?.options) {
-        const opt = field.options.find(o => o.value === inquiryType);
-        return opt?.label || inquiryType;
+        window._hsq.push(['trackPageView']);
       }
-      return inquiryType;
-    })();
+    } catch (err) {
+      // Silent fail — tracking is non-critical
+    }
 
-    const subject = inquiryLabel
-      ? `${emailSubject} — ${inquiryLabel} — ${formData.name || 'Website'}`
-      : `${emailSubject} — ${formData.name || 'Website'}`;
-    
-    const mailtoLink = `mailto:${encodeURIComponent(recipient)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-    
-    window.open(mailtoLink, '_blank');
     setSubmitted(true);
   };
 
