@@ -1,6 +1,6 @@
 # Blue Blocks Micro Research Institute — Full Corpus
 
-Institution: Blue Blocks Micro Research Institute (BBMRI)
+Institution: Blue Blocks Micro Research Institute
 Parent Institution: Blue Blocks Montessori Educational Society
 Location: Hyderabad, Telangana, India
 Founded: 2009

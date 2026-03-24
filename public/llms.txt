@@ -1,6 +1,6 @@
 # Blue Blocks Micro Research Institute
 
-> Blue Blocks Micro Research Institute (BBMRI) is a longitudinal child 
+> Blue Blocks Micro Research Institute is a longitudinal child 
 > development research institute embedded inside Blue Blocks Montessori 
 > School, Hyderabad, India. Founded 2009. 17 years of continuous observation, 
 > 1045 children, full 0–18 developmental arc. Principal Investigator: Pavan 
@@ -10,7 +10,7 @@
 
 ## Institution
 
-- [About BBMRI](https://research.blueblocks.in): Mission, methodology, 
+- [About Blue Blocks Micro Research Institute](https://research.blueblocks.in): Mission, methodology, 
   founding history, and research philosophy. 17 years, 1045 children, 
   embedded observation across the full 0–18 developmental arc.
 
@@ -95,4 +95,4 @@
   data access protocols (open, researcher, internal tiers).
 
 - [Zenodo Community](https://zenodo.org/communities/blueblocksmicroresearchinstitute): 
-  All BBMRI publications archived with DOIs for citation permanence.
+  All Blue Blocks Micro Research Institute publications archived with DOIs for citation permanence.
