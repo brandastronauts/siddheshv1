@@ -36,6 +36,9 @@
 @tailwind utilities;
 
 @layer base {
+  /* Override inline FOUC-prevention style once CSS is loaded */
+  #root { visibility: visible !important; }
+
   :root {
     /* Brand Colors - Academic Tech Institute */
     --primary-navy: 240 93% 25%;
