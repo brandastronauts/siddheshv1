@@ -6367,7 +6367,6 @@ const siteContent = {
           cards: [
             { title: "Technical Brief: SBB-1", description: "Full mission documentation.", icon: "brief", href: "/technical-briefs/sbb-1" },
             { title: "All News", description: "Back to newsroom.", icon: "news", href: "/newsroom" }
-            { title: "All News", description: "Back to newsroom.", icon: "news", href: "/newsroom" }
           ]
         }
       ]
