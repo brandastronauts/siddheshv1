@@ -3908,7 +3908,6 @@ const siteContent = {
                 title: "Related Publications",
                 links: [
                   { label: "Methodology", href: "/methodology" }
-                  { label: "Methodology", href: "/methodology" }
                 ]
               }
             ]
