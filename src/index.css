@@ -37,7 +37,7 @@
 
 @layer base {
   /* Override inline FOUC-prevention style once CSS is loaded */
-  #root { visibility: visible !important; }
+  #root { opacity: 1 !important; }
 
   :root {
     /* Brand Colors - Academic Tech Institute */
