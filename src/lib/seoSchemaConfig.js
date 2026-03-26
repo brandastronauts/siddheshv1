@@ -935,67 +935,6 @@ const seoSchemaConfig = {
     },
   },
 
-  // ═══ IN-SPACe Authorization Letter ═══════════════════════════════════════
-  '/publications/in-space-authorization-letter': {
-    meta: {
-      title: 'IN-SPACe Authorization Letter — SBB-1 / Blue Blocks | Blue Blocks Micro Research Institute',
-      description: 'IN-SPACe authorization letter for the SBB-1 CubeSat mission. First K-12 student-designed 1U CubeSat payload authorized for ISRO PSLV-C62 launch.',
-      canonical: `${SITE_URL}/publications/in-space-authorization-letter`,
-    },
-    openGraph: {
-      type: 'article',
-      title: 'IN-SPACe Authorization Letter — SBB-1 / Blue Blocks',
-      url: `${SITE_URL}/publications/in-space-authorization-letter`,
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: 'IN-SPACe Authorization Letter — SBB-1 / Blue Blocks',
-    },
-    jsonLd: {
-      '@context': 'https://schema.org',
-      '@graph': [
-        {
-          '@type': 'WebPage',
-          '@id': `${SITE_URL}/publications/in-space-authorization-letter/#webpage`,
-          url: `${SITE_URL}/publications/in-space-authorization-letter`,
-          name: 'IN-SPACe Authorization Letter — SBB-1 / Blue Blocks',
-          isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
-        },
-        { ...instituteNode },
-        {
-          '@type': 'TechArticle',
-          '@id': `${SITE_URL}/publications/in-space-authorization-letter/#article`,
-          name: 'IN-SPACe Authorization Letter — SBB-1 / Blue Blocks',
-          identifier: 'https://doi.org/10.5281/zenodo.18195108',
-          url: `${SITE_URL}/publications/in-space-authorization-letter`,
-          sameAs: 'https://doi.org/10.5281/zenodo.18195108',
-          publisher: { '@id': PERMANENT_IDS.INSTITUTE },
-          author: {
-            '@type': 'Person',
-            name: 'Pavan Goyal',
-            sameAs: 'https://orcid.org/0009-0009-8840-8505',
-          },
-          about: {
-            '@type': 'ResearchProject',
-            name: 'SBB-1 CubeSat Mission',
-            description: 'First K-12 student-designed 1U CubeSat payload authorized by IN-SPACe for ISRO PSLV-C62 launch. Mission validation through launch vehicle anomaly valorization.',
-            funder: {
-              '@type': 'GovernmentOrganization',
-              name: 'Indian National Space Promotion and Authorization Centre (IN-SPACe)',
-              url: 'https://www.inspace.gov.in',
-            },
-          },
-          license: 'https://creativecommons.org/licenses/by/4.0/',
-        },
-        breadcrumb(`${SITE_URL}/publications/in-space-authorization-letter/#breadcrumb`, [
-          { name: 'Home', item: `${SITE_URL}/` },
-          { name: 'Publications', item: `${SITE_URL}/publications` },
-          { name: 'IN-SPACe Authorization Letter', item: `${SITE_URL}/publications/in-space-authorization-letter` },
-        ]),
-      ],
-    },
-  },
-
   // ═══ Saparya / IMF Case Study ════════════════════════════════════════════
   '/publications/saparya-imf-case-study': {
     meta: {

@@ -1259,7 +1259,6 @@ const siteContent = {
           description: "Research docket, intellectual property registry, and open access materials.",
           isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" },
           hasPart: [
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter" },
             { "@type": "WebPage", url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study" },
             { "@type": "WebPage", url: "https://siddheshv1.lovable.app/publications/iran-war-case-study" }
           ]
@@ -1310,14 +1309,6 @@ const siteContent = {
               meta: "DOI: 10.5281/zenodo.18195108",
               body: "IN-SPACe authorization certificate for the SBB-1 CubeSat payload. Archived for governance traceability, regulatory documentation continuity, and citation permanence.",
               cta: { label: "View Publication", href: "/publications/CubeSat-INSPACE" },
-              image: { src: "/src/assets/placeholders/labs/authorization-letter.jpg", alt: "IN-SPACe authorization document", variant: "card" }
-            },
-            {
-              tag: "Published Record",
-              headline: "IN-SPACe Authorization Letter (SBB-1 / Blue Blocks)",
-              meta: "DOI: 10.5281/zenodo.18195108",
-              body: "Official authorization archived for governance traceability, regulatory documentation continuity, and citation permanence.",
-              cta: { label: "View Publication", href: "/publications/in-space-authorization-letter" },
               image: { src: "/src/assets/placeholders/labs/authorization-letter.jpg", alt: "IN-SPACe authorization document", variant: "card" }
             },
             {
@@ -2904,7 +2895,7 @@ const siteContent = {
           type: "dossierRelated",
           header: "Related Documentation",
           cards: [
-            { title: "IN-SPACe Authorization Letter", description: "Official authorization record archived on Zenodo.", icon: "publication", href: "/publications/in-space-authorization-letter" },
+            { title: "CubeSat-INSPACE Publication", description: "Full mission publication archived on Zenodo.", icon: "publication", href: "/publications/CubeSat-INSPACE" },
             { title: "Saparya Conference Presentation", description: "SBB-1 case study presented at AMI Saparya 2026.", icon: "presentation", href: "/presentations/marrakesh-human-capital" },
             { title: "Downloads Hub", description: "Access mission documents and media kit.", icon: "download", href: "/downloads" }
           ]
@@ -3826,258 +3817,6 @@ const siteContent = {
     },
 
     // ==================== PUBLICATIONS DETAIL PAGES ====================
-    "/publications/in-space-authorization-letter": {
-      title: "IN-SPACe Authorization Letter",
-      metaDescription: "Official IN-SPACe authorization record for the SBB-1 mission payload by Blue Blocks Micro Research Institute.",
-      seo: {
-        title: "IN-SPACe Authorization Letter | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter",
-        robots: "noindex,nofollow,noarchive,nosnippet",
-        openGraph: {
-          type: "article",
-          url: "https://siddheshv1.lovable.app/publications/in-space-authorization-letter",
-          title: "IN-SPACe Authorization Letter",
-          description: "Official authorization record for the SBB-1 mission activity.",
-          image: {
-            url: "https://siddheshv1.lovable.app/og/publications/in-space-authorization-letter.jpg",
-            width: 1200,
-            height: 630,
-            alt: "IN-SPACe Authorization Letter"
-          }
-        }
-      },
-      schemas: [
-        {
-          "@context": "https://schema.org",
-          "@type": "ScholarlyArticle",
-          headline: "Authorization Certificate for Establishment and Operation of Student-Engineered Hosted Payload SBB-1",
-          description: "Official authorization archived for governance traceability, regulatory documentation continuity, and citation permanence.",
-          identifier: "10.5281/zenodo.18195108",
-          sameAs: "https://doi.org/10.5281/zenodo.18195108",
-          datePublished: "2026",
-          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
-        }
-      ],
-      sections: [
-        {
-          id: "pub-detail-hero",
-          type: "hero",
-          variant: "publication",
-          headline: "Authorization Certificate for Establishment and Operation of Student-Engineered Hosted Payload SBB-1",
-          subheadline: "Authorization No. PMA/IN-SPACe/AUTH/2026/115",
-          image: { src: "/src/assets/banners/publications-doi.jpg", alt: "IN-SPACe Authorization Certificate", variant: "hero", privacyBlur: false }
-        },
-        {
-          id: "pub-detail-meta",
-          type: "metaStrip",
-          items: [
-            { label: "DOI", value: "10.5281/zenodo.18195108", href: "https://doi.org/10.5281/zenodo.18195108", external: true },
-            { label: "Type", value: "Administrative Record" },
-            { label: "Status", value: "Archived" },
-            { label: "Authority", value: "IN-SPACe (Dept. of Space, GoI)" },
-            { label: "Auth. No", value: "PMA/IN-SPACe/AUTH/2026/115" },
-            { label: "Date", value: "07 Jan 2026" },
-            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" },
-            { label: "Access", value: "Open Access" }
-          ]
-        },
-        {
-          id: "pub-introduction",
-          type: "twoColumn",
-          compact: true,
-          left: {
-            sections: [
-              {
-                title: "Introduction",
-                body: "This record archives a regulatory milestone in Indian K-12 space education, the first IN-SPACe authorization granted directly to a Montessori educational institution for a student-engineered orbital payload. The certificate validates that the SBB-1 payload, developed by students of Blue Blocks Montessori School under the pedagogical guidance of Blue Blocks Micro Research Institute and technical partnership with TM2Space, meets India's national space regulatory requirements for flight certification under the \"Lab-to-Launch\" framework."
-              }
-            ]
-          },
-          right: {
-            panels: [
-              {
-                title: "Repository & Access",
-                links: [
-                  { label: "View on Zenodo (DOI)", href: "https://doi.org/10.5281/zenodo.18195108", external: true },
-                  { label: "Download PDF", href: "/downloads/in-space-authorization-letter.pdf", download: true },
-                  { label: "IN-SPACe Registry", href: "https://www.inspace.gov.in", external: true }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          id: "pub-abstract",
-          type: "twoColumn",
-          compact: true,
-          left: {
-            sections: [
-              {
-                title: "Abstract",
-                subtitle: "Official Record Summary:",
-                body: "This record summarizes the formal Authorization Certificate No. PMA/IN-SPACe/AUTH/2026/115 issued by the Indian National Space Promotion and Authorization Centre (IN-SPACe). The certificate formally designates Blue Blocks Montessori Educational Society as both the Authorized Entity and the Applicant, granting legal authorization for the establishment and operation of the SBB-1 hosted payload. As the Applicant, Blue Blocks Montessori Educational Society assumes sole legal responsibility for ensuring the payload's compliance with the Convention on International Liability for Damage Caused by Space Objects (Liability Convention) and the Convention on Registration of Objects Launched into Outer Space (Registration Convention). The authorization is supported by official registry references, including the Department of Space (DOS) Master Registry entry INRSO/DOS/SC/2025/011-01 for the hosted payload dated 29 December 2025, and the International Telecommunication Union (ITU) filing reference IND2025-78363, coordinated through the Host Entity."
-              }
-            ]
-          },
-          right: {
-            panels: [
-              {
-                title: "Related Publications",
-                links: [
-                  { label: "SAPARYA / IMF Case Study", href: "/publications/saparya-imf-case-study" },
-                  { label: "Blue Blocks Innovation Portal", href: "https://blueblocks.in/Innovation/CubeSat-Mission/", external: true }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          id: "pub-methodology",
-          type: "twoColumn",
-          compact: true,
-          left: {
-            sections: [
-              {
-                title: "Methodology",
-                body: "The SBB-1 payload was developed under the proprietary \"Lab-to-Launch\" pedagogical framework — a structured methodology enabling K-12 students to operate within professional aerospace constraints while managing the complete product lifecycle from PCB design to payload integration. The framework operates through a tripartite institutional structure: the school provides the student research team responsible for design, development, and testing; the research institute delivers pedagogical scaffolding, research standards, and regulatory navigation; and TM2Space contributes technical architecture, flight hardware validation, and launch integration. This approach ensures student-led execution with institutional accountability, progressive skill development mapped to space-grade certification milestones, and regulatory alignment with IN-SPACe compliance requirements — maintaining pedagogical integrity while meeting the engineering rigor demanded by orbital deployment."
-              }
-            ]
-          },
-          right: {
-            panels: [
-              {
-                title: "Framework Outcomes",
-                citation: "• Student-led execution with institutional accountability\n• Progressive skill development mapped to certification milestones\n• Regulatory alignment with IN-SPACe compliance standards\n• Pedagogical integrity alongside engineering rigor"
-              }
-            ]
-          }
-        },
-        {
-          id: "pub-results",
-          type: "twoColumn",
-          compact: true,
-          left: {
-            sections: [
-              {
-                title: "Payload Specifications & Architecture",
-                body: "The IN-SPACe authorization validates the deployment of the SBB-1 payload, which was independently designed and developed by the student research team. While the payload is hosted on the MOI-1 bus, its architecture remains distinct and proprietary. The authorized configuration includes:",
-                bullets: [
-                  "Custom Avionics: An in-house designed microcontroller unit featuring AES-256 encryption for secure data handling and RS485 differential serial communication.",
-                  "Sensor Integration:",
-                  "BME280: For environmental sensing (Pressure, Temperature, Humidity).",
-                  "BNO055: For attitude determination (9-axis Orientation).",
-                  "206 PT RTD: For precision thermal monitoring in a 1206 SMD form factor."
-                ]
-              }
-            ]
-          },
-          right: {
-            panels: [
-              {
-                title: "Sensor Suite",
-                citation: "The sensor suite provides comprehensive environmental and orientation telemetry for in-orbit characterization of the hosted payload environment."
-              }
-            ]
-          }
-        },
-        {
-          id: "pub-discussion",
-          type: "twoColumn",
-          compact: true,
-          left: {
-            sections: [
-              {
-                title: "Regulatory & Legal Compliance",
-                body: "Authorization No. PMA/IN-SPACe/AUTH/2026/115 formally designates the Blue Blocks Montessori Educational Society as the Authorized Entity and Applicant. As the Applicant, the Society assumes sole legal responsibility for ensuring the payload's compliance with two critical international treaties:",
-                bullets: [
-                  "The Convention on International Liability for Damage Caused by Space Objects (Liability Convention).",
-                  "The Convention on Registration of Objects Launched into Outer Space (Registration Convention)."
-                ]
-              },
-              {
-                body: "This authorization is substantiated by the Department of Space (DOS) Master Registry entry INRSO/DOS/SC/2025/011-01 (dated 29 December 2025) and the International Telecommunication Union (ITU) filing reference IND2025-78363."
-              }
-            ]
-          },
-          right: {
-            panels: [
-              {
-                title: "Cross-References",
-                links: [
-                  { label: "Methodology", href: "/methodology" },
-                  { label: "Patent Registry", href: "/patents" },
-                  { label: "Governance", href: "/governance" },
-                  { label: "Downloads", href: "/downloads" }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          id: "pub-supplementary",
-          type: "twoColumn",
-          compact: true,
-          left: {
-            sections: [
-              {
-                title: "Supplementary Materials",
-                subtitle: "Official Logs & Registry:",
-                bullets: [
-                  "IN-SPACe Authorization Registry: https://www.inspace.gov.in/inspace?id=inspace_authorizations",
-                  "Mission Home & Logs: https://blueblocks.in/Innovation/CubeSat-Mission"
-                ]
-              },
-              {
-                subtitle: "Independent Media Coverage:",
-                bullets: [
-                  "NDTV (National): \"17 Hyderabad Students Build Payload for Upcoming ISRO Launch\" — https://www.ndtv.com/india-news/17-hyderabad-students-build-payload-for-upcoming-isro-launch-10569889",
-                  "India Today (National): \"Blue Blocks Co-founder Munira Hussain: Students' CubeSat Set for ISRO Launch\" — https://www.indiatoday.in/technology/video/blue-blocks-co-founder-munira-hussain-students-cubesat-set-for-isro-launch-ytvd-2848900-2026-01-08",
-                  "Telangana Today (Regional): \"Hyderabad School Students Make History with CubeSat on ISRO's PSLV-C62\" — https://telanganatoday.com/hyderabad-school-students-make-history-with-cubesat-on-isros-pslv-c62"
-                ]
-              }
-            ]
-          },
-          right: {
-            panels: [
-              {
-                title: "How to Cite (APA)",
-                citation: "Goyal, P. (2026). Authorization Certificate For Establishment and operations of a hosted payload, namely Students of BlueBlocks-1 (SBB-1) (Authorization No. PMA/IN-SPACe/AUTH/2026/115). Blue Blocks Micro Research Institute. https://research.blueblocks.in/publications/CubeSat-INSPACE"
-              }
-            ]
-          }
-        },
-        {
-          id: "pub-faq",
-          type: "accordion",
-          header: "Frequently Asked Questions",
-          items: [
-            { q: "Is this the original authorization document?", a: "The Zenodo DOI record serves as the authoritative archival version." },
-            { q: "Can institutions use this for verification?", a: "Yes. The page exists specifically for governance traceability." },
-            { q: "Does this expose student identities?", a: "No. Privacy protections are maintained." },
-            { q: "Can media cite this document?", a: "Yes, with DOI attribution." }
-          ]
-        },
-        
-        {
-          id: "pub-archival-note",
-          type: "textBlock",
-          variant: "muted",
-          body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
-        },
-        {
-          id: "pub-related",
-          type: "relatedCards",
-          header: "Related Registry",
-          cards: [
-            { title: "Methodology", description: "Lab-to-Launch framework.", icon: "publication", href: "/methodology" },
-            { title: "Patents", description: "Student IP registry.", icon: "patent", href: "/patents" },
-            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" },
-            { title: "Downloads", description: "All documents.", icon: "default", href: "/downloads" }
-          ]
-        }
-      ]
-    },
 
     "/publications/saparya-imf-case-study": {
       title: "Valorization In Orbit — An Adolescent CubeSat Mission",
@@ -4176,7 +3915,7 @@ const siteContent = {
               {
                 title: "Related Publications",
                 links: [
-                  { label: "IN-SPACe Authorization Letter", href: "/publications/in-space-authorization-letter" },
+                  { label: "CubeSat-INSPACE Publication", href: "/publications/CubeSat-INSPACE" },
                   { label: "Methodology", href: "/methodology" }
                 ]
               }
@@ -6636,7 +6375,7 @@ const siteContent = {
           header: "Related",
           cards: [
             { title: "Technical Brief: SBB-1", description: "Full mission documentation.", icon: "brief", href: "/technical-briefs/sbb-1" },
-            { title: "IN-SPACe Authorization", description: "Official record.", icon: "publication", href: "/publications/in-space-authorization-letter" },
+            { title: "CubeSat-INSPACE Publication", description: "Full mission publication.", icon: "publication", href: "/publications/CubeSat-INSPACE" },
             { title: "All News", description: "Back to newsroom.", icon: "news", href: "/newsroom" }
           ]
         }
@@ -8093,7 +7832,7 @@ const CPT_MAP = {
   '/methodology': 'page',
   '/methodology/innovation': 'innovation-project',
   '/publications': 'page',
-  '/publications/in-space-authorization-letter': 'publication',
+  
   '/publications/saparya-imf-case-study': 'publication',
   '/publications/iran-war-case-study': 'publication',
   '/publications/citation-standards': 'page',
@@ -8144,15 +7883,6 @@ const CPT_MAP = {
 // Structured fields extracted from existing section data for CMS mapping.
 // These do NOT duplicate or replace section content — they normalize metadata.
 const FIELDS_MAP = {
-  '/publications/in-space-authorization-letter': {
-    doi: '10.5281/zenodo.18195108',
-    zenodoUrl: 'https://doi.org/10.5281/zenodo.18195108',
-    publishedDate: '2026-01-07',
-    authors: [{ name: 'Blue Blocks Micro Research Institute', type: 'organization' }],
-    researchDomains: ['Aerospace', 'Regulatory'],
-    publicationStatus: 'Archived',
-    publicationType: 'Administrative Record',
-  },
   '/publications/saparya-imf-case-study': {
     doi: '10.5281/zenodo.18337934',
     zenodoUrl: 'https://doi.org/10.5281/zenodo.18337934',

@@ -21,7 +21,7 @@ export const sitemapData = {
     { name: "Tools for Researchers", url: "/methodology/tools", status: "complete" },
   ],
   publications: [
-    { name: "IN-SPACe Authorization Letter", url: "/publications/in-space-authorization-letter", status: "complete" },
+    
     { name: "SAPARYA / IMF Case Study", url: "/publications/saparya-imf-case-study", status: "complete" },
     { name: "Citation Standards", url: "/publications/citation-standards", status: "complete" },
     { name: "Open Data Access", url: "/publications/data", status: "complete" },

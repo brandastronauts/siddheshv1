@@ -181,6 +181,10 @@
   </head>
 
   <body>
+    <style>
+      /* Hide pre-rendered static content until CSS loads to prevent FOUC */
+      #root { visibility: hidden; }
+    </style>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     <!-- HubSpot Tracking Code -->
