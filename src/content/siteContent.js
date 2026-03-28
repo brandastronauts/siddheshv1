@@ -2895,7 +2895,7 @@ const siteContent = {
           type: "dossierRelated",
           header: "Related Documentation",
           cards: [
-            { title: "CubeSat-INSPACE Publication", description: "Full mission publication archived on Zenodo.", icon: "publication", href: "/publications/in-space-authorization-letter" },
+            { title: "In-SPACe Authorization Letter", description: "Full mission publication archived on Zenodo.", icon: "publication", href: "/publications/in-space-authorization-letter" },
             { title: "Saparya Conference Presentation", description: "SBB-1 case study presented at AMI Saparya 2026.", icon: "presentation", href: "/presentations/marrakesh-human-capital" },
             { title: "Downloads Hub", description: "Access mission documents and media kit.", icon: "download", href: "/downloads" }
           ]
@@ -3915,7 +3915,7 @@ const siteContent = {
               {
                 title: "Related Publications",
                 links: [
-                  { label: "CubeSat-INSPACE Publication", href: "/publications/in-space-authorization-letter" },
+                  { label: "In-SPACe Authorization Letter", href: "/publications/in-space-authorization-letter" },
                   { label: "Methodology", href: "/methodology" }
                 ]
               }
@@ -6618,7 +6618,7 @@ const siteContent = {
           header: "Related",
           cards: [
             { title: "Technical Brief: SBB-1", description: "Full mission documentation.", icon: "brief", href: "/technical-briefs/sbb-1" },
-            { title: "CubeSat-INSPACE Publication", description: "Full mission publication.", icon: "publication", href: "/publications/in-space-authorization-letter" },
+            { title: "In-SPACe Authorization Letter", description: "Full mission publication.", icon: "publication", href: "/publications/in-space-authorization-letter" },
             { title: "All News", description: "Back to newsroom.", icon: "news", href: "/newsroom" }
           ]
         }
