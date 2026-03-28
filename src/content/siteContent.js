@@ -5459,13 +5459,13 @@ const siteContent = {
           type: "list",
           header: "Key Topics Covered",
           items: [
-            "Creating the prepared environment at home",
-            "Scaffolding problem-solving without interference",
-            "From play to invention: recognizing cognitive leaps",
-            "Supporting adolescent agency and IP creation",
-            "Integrating real-world constraints into learning",
-            "The role of failure in building resilience",
-            "Balancing structure and freedom"
+            { title: "Creating the prepared environment at home" },
+            { title: "Scaffolding problem-solving without interference" },
+            { title: "From play to invention: recognizing cognitive leaps" },
+            { title: "Supporting adolescent agency and IP creation" },
+            { title: "Integrating real-world constraints into learning" },
+            { title: "The role of failure in building resilience" },
+            { title: "Balancing structure and freedom" }
           ],
           cta: { label: "View Author Profile", href: "/team/pavan-goyal" }
         },
