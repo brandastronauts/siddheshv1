@@ -182,12 +182,8 @@
 
   <body>
     <style>
-      /*
-       * FOUC prevention: hide pre-rendered static HTML until the app's
-       * CSS bundle has loaded and applied proper styling.
-       * The app CSS (index.css) overrides this with visibility:visible.
-       */
-      #root { opacity: 0; }
+      /* Hide pre-rendered static content until CSS loads to prevent FOUC */
+      #root { visibility: hidden; }
     </style>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

@@ -1304,6 +1304,14 @@ const siteContent = {
           variant: "blogGrid",
           cards: [
             {
+              tag: "Published Record",
+              headline: "Official Launch Authorization: Project SBB-1",
+              meta: "DOI: 10.5281/zenodo.18195108",
+              body: "IN-SPACe authorization certificate for the SBB-1 CubeSat payload. Archived for governance traceability, regulatory documentation continuity, and citation permanence.",
+              cta: { label: "View Publication", href: "/publications/CubeSat-INSPACE" },
+              image: { src: "/src/assets/placeholders/labs/authorization-letter.jpg", alt: "IN-SPACe authorization document", variant: "card" }
+            },
+            {
               tag: "Published Case Study",
               headline: "SAPARYA / IMF Conference Case Study (SBB-1 Mission & Valorization)",
               meta: "DOI: 10.5281/zenodo.18337934",
@@ -2887,7 +2895,7 @@ const siteContent = {
           type: "dossierRelated",
           header: "Related Documentation",
           cards: [
-            { title: "Saparya Conference Presentation", description: "SBB-1 case study presented at AMI Saparya 2026.", icon: "presentation", href: "/presentations/marrakesh-human-capital" },
+            { title: "CubeSat-INSPACE Publication", description: "Full mission publication archived on Zenodo.", icon: "publication", href: "/publications/CubeSat-INSPACE" },
             { title: "Saparya Conference Presentation", description: "SBB-1 case study presented at AMI Saparya 2026.", icon: "presentation", href: "/presentations/marrakesh-human-capital" },
             { title: "Downloads Hub", description: "Access mission documents and media kit.", icon: "download", href: "/downloads" }
           ]
@@ -3907,6 +3915,7 @@ const siteContent = {
               {
                 title: "Related Publications",
                 links: [
+                  { label: "CubeSat-INSPACE Publication", href: "/publications/CubeSat-INSPACE" },
                   { label: "Methodology", href: "/methodology" }
                 ]
               }
@@ -6366,6 +6375,7 @@ const siteContent = {
           header: "Related",
           cards: [
             { title: "Technical Brief: SBB-1", description: "Full mission documentation.", icon: "brief", href: "/technical-briefs/sbb-1" },
+            { title: "CubeSat-INSPACE Publication", description: "Full mission publication.", icon: "publication", href: "/publications/CubeSat-INSPACE" },
             { title: "All News", description: "Back to newsroom.", icon: "news", href: "/newsroom" }
           ]
         }
