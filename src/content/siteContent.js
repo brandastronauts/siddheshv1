@@ -5417,30 +5417,57 @@ const siteContent = {
         },
         {
           id: "book-overview",
-          type: "textBlock",
+          type: "highlightBox",
+          variant: "dark",
           header: "Overview",
           body: "Lining The Nest examines how structured environments support developmental responsibility over time. It emphasizes observation-led decision making, gradual autonomy, and continuity between home, school, and research environments.\n\nThe title references the metaphor of preparation: just as birds line their nests before eggs arrive, adults must prepare the environment before expecting children to innovate. The book argues that innovation capacity is not innate talent but an emergent property of well-structured environments."
         },
         {
+          id: "book-themes",
+          type: "numberedCards",
+          header: "Five Core Themes",
+          cards: [
+            {
+              number: "01",
+              title: "Environment as Behavioral Scaffold",
+              body: "How structured spaces shape behavior before instruction begins. The physical and social environment is the first teacher — design it deliberately."
+            },
+            {
+              number: "02",
+              title: "Structured Independence",
+              body: "Balancing freedom with clear boundaries to foster self-direction. Children learn to govern themselves when the structure is consistent and transparent."
+            },
+            {
+              number: "03",
+              title: "Responsibility Transfer",
+              body: "Moving ownership of decisions from adults to children over time. A gradual, documented shift — not abandonment, but planned handover."
+            },
+            {
+              number: "04",
+              title: "Observation-Led Pedagogy",
+              body: "Using systematic observation rather than testing to guide development. The adult watches, records, and adjusts — never assumes."
+            },
+            {
+              number: "05",
+              title: "Long-Horizon Developmental Culture",
+              body: "Building habits and capacities measured in years, not semesters. The compound effect of daily structure produces innovation capacity."
+            }
+          ]
+        },
+        {
           id: "book-content",
-          type: "twoColumn",
-          left: {
-            header: "Key Themes",
-            body: "The book is organized around five core themes:\n\n**Environment as behavioral scaffold:** How structured spaces shape behavior before instruction begins.\n\n**Structured independence:** Balancing freedom with clear boundaries to foster self-direction.\n\n**Responsibility transfer:** Moving ownership of decisions from adults to children over time.\n\n**Observation-led pedagogy:** Using systematic observation rather than testing to guide development.\n\n**Long-horizon developmental culture:** Building habits and capacities measured in years, not semesters."
-          },
-          right: {
-            header: "Key Topics",
-            items: [
-              "Creating the prepared environment at home",
-              "Scaffolding problem-solving without interference",
-              "From play to invention: recognizing cognitive leaps",
-              "Supporting adolescent agency and IP creation",
-              "Integrating real-world constraints into learning",
-              "The role of failure in building resilience",
-              "Balancing structure and freedom"
-            ],
-            cta: { label: "View Author Profile", href: "/team/pavan-goyal" }
-          }
+          type: "list",
+          header: "Key Topics Covered",
+          items: [
+            "Creating the prepared environment at home",
+            "Scaffolding problem-solving without interference",
+            "From play to invention: recognizing cognitive leaps",
+            "Supporting adolescent agency and IP creation",
+            "Integrating real-world constraints into learning",
+            "The role of failure in building resilience",
+            "Balancing structure and freedom"
+          ],
+          cta: { label: "View Author Profile", href: "/team/pavan-goyal" }
         },
         {
           id: "book-purchase",
