@@ -5426,7 +5426,7 @@ const siteContent = {
           id: "book-themes",
           type: "numberedCards",
           header: "Five Core Themes",
-          cards: [
+          items: [
             {
               number: "01",
               title: "Environment as Behavioral Scaffold",
