@@ -1305,10 +1305,10 @@ const siteContent = {
           cards: [
             {
               tag: "Published Record",
-              headline: "Official Launch Authorization: Project SBB-1",
+              headline: "In-SPACe Authorization Letter (SBB-1 / Blueblocks)",
               meta: "DOI: 10.5281/zenodo.18195108",
               body: "IN-SPACe authorization certificate for the SBB-1 CubeSat payload. Archived for governance traceability, regulatory documentation continuity, and citation permanence.",
-              cta: { label: "View Publication", href: "/publications/CubeSat-INSPACE" },
+              cta: { label: "View Publication", href: "/publications/in-space-authorization-letter" },
               image: { src: "/src/assets/placeholders/labs/authorization-letter.jpg", alt: "IN-SPACe authorization document", variant: "card" }
             },
             {
@@ -2895,7 +2895,7 @@ const siteContent = {
           type: "dossierRelated",
           header: "Related Documentation",
           cards: [
-            { title: "CubeSat-INSPACE Publication", description: "Full mission publication archived on Zenodo.", icon: "publication", href: "/publications/CubeSat-INSPACE" },
+            { title: "In-SPACe Authorization Letter", description: "Full mission publication archived on Zenodo.", icon: "publication", href: "/publications/in-space-authorization-letter" },
             { title: "Saparya Conference Presentation", description: "SBB-1 case study presented at AMI Saparya 2026.", icon: "presentation", href: "/presentations/marrakesh-human-capital" },
             { title: "Downloads Hub", description: "Access mission documents and media kit.", icon: "download", href: "/downloads" }
           ]
@@ -3915,7 +3915,7 @@ const siteContent = {
               {
                 title: "Related Publications",
                 links: [
-                  { label: "CubeSat-INSPACE Publication", href: "/publications/CubeSat-INSPACE" },
+                  { label: "In-SPACe Authorization Letter", href: "/publications/in-space-authorization-letter" },
                   { label: "Methodology", href: "/methodology" }
                 ]
               }
@@ -4098,17 +4098,17 @@ const siteContent = {
       ]
     },
 
-    "/publications/CubeSat-INSPACE": {
+    "/publications/in-space-authorization-letter": {
       title: "Authorization Certificate for Establishment and Operation of Student-Engineered Hosted Payload SBB-1",
       metaDescription: "Official IN-SPACe authorization certificate (PMA/IN-SPACe/AUTH/2026/115) for the SBB-1 hosted payload. First authorization granted to a Montessori educational institution for a student-engineered orbital payload under India's Lab-to-Launch framework.",
       seo: {
         title: "IN-SPACe Authorization Certificate — SBB-1 Hosted Payload | Blue Blocks Micro Research Institute",
-        canonical: "https://research.blueblocks.in/publications/CubeSat-INSPACE",
+        canonical: "https://research.blueblocks.in/publications/in-space-authorization-letter",
         robots: "index, follow",
         keywords: "IN-SPACe authorization, SBB-1, CubeSat, hosted payload, Blue Blocks Montessori, ISRO PSLV-C62, space education, Lab-to-Launch, student-engineered payload, aerospace education India",
         openGraph: {
           type: "article",
-          url: "https://research.blueblocks.in/publications/CubeSat-INSPACE",
+          url: "https://research.blueblocks.in/publications/in-space-authorization-letter",
           title: "IN-SPACe Authorization Certificate — SBB-1 Hosted Payload",
           description: "First IN-SPACe authorization granted to a Montessori educational institution for a student-engineered orbital payload.",
           image: {
@@ -4316,7 +4316,7 @@ const siteContent = {
             panels: [
               {
                 title: "How to Cite (APA)",
-                citation: "Goyal, P. (2026). Authorization Certificate For Establishment and operations of a hosted payload, namely Students of BlueBlocks-1 (SBB-1) (Authorization No. PMA/IN-SPACe/AUTH/2026/115). Blue Blocks Micro Research Institute. https://research.blueblocks.in/publications/CubeSat-INSPACE"
+                citation: "Goyal, P. (2026). Authorization Certificate For Establishment and operations of a hosted payload, namely Students of BlueBlocks-1 (SBB-1) (Authorization No. PMA/IN-SPACe/AUTH/2026/115). Blue Blocks Micro Research Institute. https://research.blueblocks.in/publications/in-space-authorization-letter"
               }
             ]
           }
@@ -6618,7 +6618,7 @@ const siteContent = {
           header: "Related",
           cards: [
             { title: "Technical Brief: SBB-1", description: "Full mission documentation.", icon: "brief", href: "/technical-briefs/sbb-1" },
-            { title: "CubeSat-INSPACE Publication", description: "Full mission publication.", icon: "publication", href: "/publications/CubeSat-INSPACE" },
+            { title: "In-SPACe Authorization Letter", description: "Full mission publication.", icon: "publication", href: "/publications/in-space-authorization-letter" },
             { title: "All News", description: "Back to newsroom.", icon: "news", href: "/newsroom" }
           ]
         }
@@ -8076,7 +8076,7 @@ const CPT_MAP = {
   '/methodology/innovation': 'innovation-project',
   '/publications': 'page',
   
-  '/publications/CubeSat-INSPACE': 'publication',
+  '/publications/in-space-authorization-letter': 'publication',
   '/publications/saparya-imf-case-study': 'publication',
   '/publications/iran-war-case-study': 'publication',
   '/publications/citation-standards': 'page',
@@ -8155,7 +8155,7 @@ const FIELDS_MAP = {
     publicationStatus: 'Published',
     publicationType: 'Case Study',
   },
-  '/publications/CubeSat-INSPACE': {
+  '/publications/in-space-authorization-letter': {
     doi: '10.5281/zenodo.18195108',
     zenodoUrl: 'https://doi.org/10.5281/zenodo.18195108',
     publishedDate: '2026-01-12',
