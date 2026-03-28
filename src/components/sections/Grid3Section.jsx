@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { getIcon } from '../../lib/iconMap';
 import ExpandableText from '../common/ExpandableText';
@@ -70,6 +71,25 @@ const Grid3Section = ({ heading, header, intro, items }) => {
                   textClassName="leading-relaxed"
                 />
                 
+                {item.cta && !item.cta.disabled && (
+                  item.cta.href?.startsWith('/downloads/') || item.cta.external
+                    ? <a
+                        href={item.cta.href}
+                        download={item.cta.href?.endsWith('.pdf')}
+                        target={item.cta.external ? '_blank' : undefined}
+                        rel={item.cta.external ? 'noopener noreferrer' : undefined}
+                        className="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-accent-cyan hover:text-primary-navy transition-colors"
+                      >
+                        {item.cta.label}
+                      </a>
+                    : <Link
+                        to={item.cta.href}
+                        className="inline-flex items-center gap-2 mt-4 text-sm font-semibold text-accent-cyan hover:text-primary-navy transition-colors"
+                      >
+                        {item.cta.label}
+                      </Link>
+                )}
+
                 {item.email && (
                   <a
                     href={`mailto:${item.email}`}
