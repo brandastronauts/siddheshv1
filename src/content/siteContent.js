@@ -5400,7 +5400,7 @@ const siteContent = {
           headline: "Lining The Nest",
           subheadline: "A comprehensive guide for families and educators on building structured learning environments that foster innovation capacity from early childhood through adolescence. Drawing on 17 years of longitudinal observation at Blue Blocks Micro Research Institute.",
           primaryCta: { label: "Buy on Amazon", href: "https://amzn.in/d/09xLf6FE", external: true },
-          secondaryCta: { label: "Download Sample Chapter", href: "/downloads/lining-the-nest-sample-chapter.pdf" },
+          secondaryCta: { label: "Download Sample Chapters", href: "#book-sample" },
           image: { src: "/src/assets/placeholders/card-default.jpg", alt: "Lining The Nest book cover", variant: "hero" }
         },
         {
@@ -5453,25 +5453,26 @@ const siteContent = {
         {
           id: "book-sample",
           type: "grid3",
-          header: "Sample & Downloads",
+          header: "Sample Chapters",
+          intro: "Download free sample chapters to preview the book's approach, structure, and depth before purchasing.",
           items: [
             {
-              title: "Sample Chapter",
+              title: "Chapter 1",
               icon: "download",
-              body: "Preview Chapter 3: 'The Reasoning Child' to get a sense of the book's approach.",
-              cta: { label: "Download PDF", href: "/downloads/lining-the-nest-sample-chapter.pdf" }
+              body: "The opening chapter that sets the foundation for building structured learning environments.",
+              cta: { label: "Download PDF", href: "/downloads/lining-the-nest-chapter-1.pdf" }
             },
             {
-              title: "Author Profile",
-              icon: "user",
-              body: "Learn more about Pavan Goyal, AMI-certified educator and Principal Investigator.",
-              cta: { label: "View Profile", href: "/team/pavan-goyal" }
+              title: "Chapter 2",
+              icon: "download",
+              body: "Explores the core principles of environment design and early childhood development.",
+              cta: { label: "Download PDF", href: "/downloads/lining-the-nest-chapter-2.pdf" }
             },
             {
-              title: "Methodology",
-              icon: "methodology",
-              body: "Understand the research methodology that informs the book's recommendations.",
-              cta: { label: "View Methodology", href: "/methodology" }
+              title: "Chapter 7: Independence",
+              icon: "download",
+              body: "A deep dive into fostering independence and self-directed learning within structured environments.",
+              cta: { label: "Download PDF", href: "/downloads/lining-the-nest-chapter-7.pdf" }
             }
           ]
         },
