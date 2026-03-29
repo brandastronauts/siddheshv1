@@ -28,8 +28,15 @@ if (import.meta.env.DEV) {
   });
 }
 
-createRoot(document.getElementById("root")!).render(
+const root = document.getElementById("root")!;
+
+createRoot(root).render(
   <HelmetProvider>
     <App />
   </HelmetProvider>
 );
+
+// Reveal after React has mounted (prevents static-HTML flash)
+requestAnimationFrame(() => {
+  root.style.visibility = "visible";
+});

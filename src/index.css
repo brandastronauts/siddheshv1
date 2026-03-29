@@ -36,8 +36,7 @@
 @tailwind utilities;
 
 @layer base {
-  /* Override inline FOUC-prevention style once CSS is loaded */
-  #root { visibility: visible !important; }
+  /* visibility is now toggled by main.tsx after React mounts */
 
   :root {
     /* Brand Colors - Academic Tech Institute */
