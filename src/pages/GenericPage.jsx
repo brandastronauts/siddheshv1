@@ -25,10 +25,11 @@ const PROFILE_PATTERNS = [
 
 const GenericPage = () => {
   const location = useLocation();
-  const page = siteContent.pages[location.pathname];
+  const normalizedPath = location.pathname !== '/' && location.pathname.endsWith('/') ? location.pathname.slice(0, -1) : location.pathname;
+  const page = siteContent.pages[normalizedPath];
 
-  const isDetailPage = DETAIL_PATTERNS.some(p => p.test(location.pathname));
-  const isProfilePage = PROFILE_PATTERNS.some(p => p.test(location.pathname));
+  const isDetailPage = DETAIL_PATTERNS.some(p => p.test(normalizedPath));
+  const isProfilePage = PROFILE_PATTERNS.some(p => p.test(normalizedPath));
 
   // Extract primary CTA from page config if available
   const stickyCta = page?.stickyCta; // { label, href, type }

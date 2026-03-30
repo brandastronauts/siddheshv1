@@ -30,17 +30,10 @@ jobs:
           test -d dist || (echo "❌ dist/ not found. Check Vite build output." && exit 1)
           echo "✅ dist/ found"
 
-      - name: Add SPA .htaccess (React Router)
+      - name: Verify SPA .htaccess exists
         run: |
-          cat > dist/.htaccess <<'EOF'
-          RewriteEngine On
-          RewriteBase /
-          RewriteRule ^index\.html$ - [L]
-          RewriteCond %{REQUEST_FILENAME} !-f
-          RewriteCond %{REQUEST_FILENAME} !-d
-          RewriteRule . /index.html [L]
-          EOF
-          echo "✅ .htaccess added to dist/"
+          test -f dist/.htaccess || (echo "❌ .htaccess not found in dist/" && exit 1)
+          echo "✅ .htaccess present in dist/ (from public/)"
 
       - name: Deploy to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
