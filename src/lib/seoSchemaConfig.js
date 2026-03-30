@@ -56,8 +56,7 @@ const breadcrumb = (id, items) => ({
 });
 
 // ─── Route → SEO Config Map ──────────────────────────────────────────────────
-// NOTE: App routes /the-institute and /methodology/innovation map to client
-// canonical URLs /institute and /innovation respectively.
+// NOTE: All canonical URLs match their exact application routes.
 const seoSchemaConfig = {
 
   // ═══ PAGE 1: HOME ═══════════════════════════════════════════════════════════
