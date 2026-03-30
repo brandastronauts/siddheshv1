@@ -51,14 +51,15 @@ function injectJsonLd(payload) {
 
 const PageShell = ({ children }) => {
   const location = useLocation();
-  const seoConfig = seoSchemaConfig[location.pathname];
+  const normalizedPath = location.pathname !== '/' && location.pathname.endsWith('/') ? location.pathname.slice(0, -1) : location.pathname;
+  const seoConfig = seoSchemaConfig[normalizedPath];
   const [page, setPage] = useState(null);
 
   useEffect(() => {
     import('../../content/siteContent').then((mod) => {
-      setPage(mod.default.pages[location.pathname] || null);
+      setPage(mod.default.pages[normalizedPath] || null);
     });
-  }, [location.pathname]);
+  }, [normalizedPath]);
 
   const buildSeoProps = () => {
     const globalNodes = buildGlobalGraphNodes(nav);
