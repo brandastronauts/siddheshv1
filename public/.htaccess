@@ -1,5 +1,5 @@
 # Apache SPA routing for cPanel / subdomain deployment
-# Prevents trailing-slash redirects and serves index.html for all routes
+# Serves pre-rendered per-route HTML when available, falls back to SPA
 
 # Disable Apache DirectorySlash (prevents auto-adding trailing slashes)
 DirectorySlash Off
@@ -8,15 +8,28 @@ DirectorySlash Off
   RewriteEngine On
   RewriteBase /
 
-  # Strip trailing slashes (except root "/") — 301 redirect /path/ → /path
+  # ── Legacy URL redirects (GSC 404 cleanup) ──
+  # Old CubeSat/INSPACE pages → new canonical
+  RewriteRule ^publications/CubeSat-INSPACE(/.*)?$ /publications/in-space-authorization-letter [R=301,L]
+
+  # Old blog path → no equivalent, let it 404 naturally
+  # RewriteRule ^blueblocks/blog(/.*)?$ - [G]
+
+  # ── Strip trailing slashes (except root "/") — 301 redirect /path/ → /path ──
   RewriteCond %{REQUEST_URI} ^(.+)/$
   RewriteRule ^ %1 [R=301,L]
 
-  # Skip actual files
+  # ── Skip actual files (JS, CSS, images, etc.) ──
   RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
 
-  # Fallback all other requests to index.html (SPA routing)
+  # ── Serve pre-rendered per-route index.html if it exists ──
+  # This enables static HTML with correct canonical/meta/content per route
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.+)$ /$1/index.html [L]
+
+  # ── SPA fallback: serve root index.html for routes without pre-rendered HTML ──
   RewriteRule . /index.html [L]
 </IfModule>
 
@@ -33,3 +46,6 @@ DirectorySlash Off
   ExpiresByType text/css "access plus 1 year"
   ExpiresByType application/pdf "access plus 1 week"
 </IfModule>
+
+# Proper 404 for truly missing pages
+ErrorDocument 404 /index.html
