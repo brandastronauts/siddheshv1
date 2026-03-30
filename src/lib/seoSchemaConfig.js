@@ -215,13 +215,13 @@ const seoSchemaConfig = {
       description: "Blue Blocks Micro Research Institute: 17 years of continuous embedded observation across 1045 children. The world's longest record of human innovation capacity within an AMI Montessori environment.",
       keywords: 'micro research institute, longitudinal child development, embedded observation, Montessori research, innovation capacity, ecological validity, Blue Blocks Micro Research Institute',
       robots: 'index, follow',
-      canonical: `${SITE_URL}/institute`,
+      canonical: `${SITE_URL}/the-institute`,
     },
     openGraph: {
       type: 'article',
       title: 'The 0-18 Continuum | Blue Blocks Micro Research Institute',
       description: "17 years of continuous observation. 1045 children. 35,000+ hours of data per child. The world's longest record of human innovation capacity.",
-      url: `${SITE_URL}/institute`,
+      url: `${SITE_URL}/the-institute`,
       site_name: OG_SITE_NAME,
       image: `${SITE_URL}/images/og-institute.jpg`,
     },
@@ -235,8 +235,8 @@ const seoSchemaConfig = {
       '@graph': [
         {
           '@type': 'WebPage',
-          '@id': `${SITE_URL}/institute/#webpage`,
-          url: `${SITE_URL}/institute`,
+          '@id': `${SITE_URL}/the-institute/#webpage`,
+          url: `${SITE_URL}/the-institute`,
           name: 'The 0-18 Continuum | Blue Blocks Micro Research Institute',
           description: '17 years of continuous embedded observation across 1045 children within an AMI Montessori environment.',
           isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
@@ -284,9 +284,9 @@ const seoSchemaConfig = {
           license: 'https://creativecommons.org/licenses/by-nc-nd/4.0/',
           isAccessibleForFree: false,
         },
-        breadcrumb(`${SITE_URL}/institute/#breadcrumb`, [
+        breadcrumb(`${SITE_URL}/the-institute/#breadcrumb`, [
           { name: 'Home', item: `${SITE_URL}/` },
-          { name: 'The Institute', item: `${SITE_URL}/institute` },
+          { name: 'The Institute', item: `${SITE_URL}/the-institute` },
         ]),
       ],
     },
@@ -447,13 +447,13 @@ const seoSchemaConfig = {
       description: 'Integrated design-research on innovation development across the 0-18 continuum. Didactic Innovation Principles (DIP), purpose-designed DIP Labs, and the design-research loop. Research by Blue Blocks Micro Research Institute, Hyderabad.',
       keywords: 'innovation research, innovation pedagogy, Didactic Innovation Principles, DIP Labs, design-research loop, Montessori innovation, child innovation capacity, 0-18 curriculum, Blue Blocks Micro Research Institute',
       robots: 'index, follow',
-      canonical: `${SITE_URL}/innovation`,
+      canonical: `${SITE_URL}/methodology/innovation`,
     },
     openGraph: {
       type: 'article',
       title: 'Innovation Research | Blue Blocks Micro Research Institute',
       description: 'Integrated design-research on innovation development. Didactic Innovation Principles (DIP), purpose-designed labs, and a 17-year design-research loop.',
-      url: `${SITE_URL}/innovation`,
+      url: `${SITE_URL}/methodology/innovation`,
       site_name: OG_SITE_NAME,
       image: `${SITE_URL}/images/og-innovation.jpg`,
     },
@@ -466,8 +466,8 @@ const seoSchemaConfig = {
       '@graph': [
         {
           '@type': 'WebPage',
-          '@id': `${SITE_URL}/innovation/#webpage`,
-          url: `${SITE_URL}/innovation`,
+          '@id': `${SITE_URL}/methodology/innovation/#webpage`,
+          url: `${SITE_URL}/methodology/innovation`,
           name: 'Innovation Research | Blue Blocks Micro Research Institute',
           description: 'Integrated design-research on innovation development across the 0-18 continuum.',
           isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
@@ -476,7 +476,7 @@ const seoSchemaConfig = {
         { ...instituteNode },
         {
           '@type': 'ResearchProject',
-          '@id': `${SITE_URL}/innovation/#project`,
+          '@id': `${SITE_URL}/methodology/innovation/#project`,
           name: 'Innovation Research: The 0-18 Innovation Continuum',
           description: 'Longitudinal integrated design-research studying how innovation capacity develops from infancy through adolescence within purpose-designed Didactic Innovation Principles (DIP) Labs and a 0-18 innovation curriculum.',
           parentOrganization: { '@id': PERMANENT_IDS.INSTITUTE },
@@ -492,9 +492,10 @@ const seoSchemaConfig = {
             { '@type': 'Thing', name: 'Child development', sameAs: 'https://en.wikipedia.org/wiki/Child_development' },
           ],
         },
-        breadcrumb(`${SITE_URL}/innovation/#breadcrumb`, [
+        breadcrumb(`${SITE_URL}/methodology/innovation/#breadcrumb`, [
           { name: 'Home', item: `${SITE_URL}/` },
-          { name: 'Innovation Research', item: `${SITE_URL}/innovation` },
+          { name: 'Methodology', item: `${SITE_URL}/methodology` },
+          { name: 'Innovation Research', item: `${SITE_URL}/methodology/innovation` },
         ]),
       ],
     },
