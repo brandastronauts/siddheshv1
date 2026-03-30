@@ -93,11 +93,11 @@ const PageShell = ({ children }) => {
       const pageSchemaNodes = page.schemas?.length
         ? page.schemas
         : [
-            buildWebPageSchema({ name: pageTitle, description, path: location.pathname }),
+            buildWebPageSchema({ name: pageTitle, description, path: normalizedPath }),
             buildBreadcrumbSchema([
-              ...buildBreadcrumbsFromPath(location.pathname),
-              ...(location.pathname !== '/'
-                ? [{ name: pageTitle, path: location.pathname }]
+              ...buildBreadcrumbsFromPath(normalizedPath),
+              ...(normalizedPath !== '/'
+                ? [{ name: pageTitle, path: normalizedPath }]
                 : []),
             ]),
           ];
