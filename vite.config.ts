@@ -74,11 +74,8 @@ function prerenderSchemasPlugin() {
         console.warn('⚠ prerender-schemas: Could not import staticHtmlRenderer, skipping content injection.', err);
       }
 
-      // Map app routes to canonical output paths where they differ
-      const OUTPUT_PATH_MAP: Record<string, string> = {
-        '/the-institute': '/institute',
-        '/methodology/innovation': '/innovation',
-      };
+      // No path mapping — all routes write to their exact canonical path
+      const OUTPUT_PATH_MAP: Record<string, string> = {};
 
       const processedRoutes = new Set<string>();
       let count = 0;
