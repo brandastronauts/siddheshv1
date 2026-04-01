@@ -248,6 +248,7 @@ function renderSection(section) {
     case 'anchorBlock':
     case 'split': {
       let html = '';
+      if (section.sectionName) html += `<p><strong>${esc(section.sectionName)}</strong></p>`;
       if (heading) html += `<h2>${esc(heading)}</h2>`;
       if (intro) html += renderParagraphs(intro);
       if (body) html += renderParagraphs(body);
