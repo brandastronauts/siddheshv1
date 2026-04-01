@@ -70,13 +70,25 @@ const TextBlockSection = ({ heading, header, sectionName, intro, content, body, 
 
           {cta && (
             <div className="mt-6">
-              <Link
-                to={cta.href || '#'}
-                className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group"
-              >
-                {cta.label}
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </Link>
+              {cta.external ? (
+                <a
+                  href={cta.href || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group"
+                >
+                  {cta.label}
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </a>
+              ) : (
+                <Link
+                  to={cta.href || '#'}
+                  className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group"
+                >
+                  {cta.label}
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              )}
             </div>
           )}
         </motion.div>
