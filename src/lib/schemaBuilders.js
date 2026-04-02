@@ -27,6 +27,9 @@ const ORCID_MAP = {
   'Munira Hussain': 'https://orcid.org/0009-0003-5904-6206',
   'Sruthi Matta': 'https://orcid.org/0009-0008-2791-1273',
   'Pavan Goyal': 'https://orcid.org/0009-0009-8840',
+  'Sreemoyee Chakraborty': 'https://orcid.org/0000-0001-5180-156X',
+  'Poulomi Bose': 'https://orcid.org/0009-0007-6156-2161',
+  'Kriti Khare': 'https://orcid.org/0009-0004-3106-8873',
 };
 
 // ─── Affiliation node (reused across builders) ───────────────────────────────
