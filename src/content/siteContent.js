@@ -4526,6 +4526,360 @@ const siteContent = {
       ]
     },
 
+    "/publications/flipside-case-study": {
+      title: "When Children Own the Research Instrument: The Flipside Workspace Field Research Case Study from the Blue Blocks Erdkinder Environment",
+      metaDescription: "Case study: 12 adolescents designed their own 25-question research instrument and interviewed neurodivergent adults at a Hyderabad cloud kitchen. First of a five-case series.",
+      seo: {
+        title: "Adolescent Field Research at Neurodivergent Workspace | Blue Blocks Micro Research Institute",
+        canonical: "https://research.blueblocks.in/publications/flipside-case-study",
+        robots: "index, follow",
+        keywords: "child-driven inquiry, neurodivergent entrepreneurship, research instrument design, adolescent fieldwork, Montessori Erdkinder, participatory research, student-authored research, instrument ownership, selective attention, mutual empathy, micro research, embedded observation, child-as-researcher, Blue Blocks Micro Research Institute",
+        openGraph: {
+          type: "article",
+          url: "https://research.blueblocks.in/publications/flipside-case-study",
+          title: "Adolescent Field Research at Neurodivergent Workspace | Blue Blocks Micro Research Institute",
+          description: "Case study: 12 adolescents designed their own 25-question research instrument and interviewed neurodivergent adults at a Hyderabad cloud kitchen. First of a five-case series.",
+          image: {
+            url: "https://research.blueblocks.in/images/og-home.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Flipside Case Study"
+          },
+          locale: "en_IN",
+          article: {
+            published_time: "2026-03-31",
+            author: "Chakraborty, S., Bose, P., Khare, K.",
+            section: "Publications"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Adolescent Field Research at Neurodivergent Workspace | Blue Blocks Micro Research Institute",
+          description: "Case study: 12 adolescents designed their own 25-question research instrument and interviewed neurodivergent adults at a Hyderabad cloud kitchen.",
+          image: "https://research.blueblocks.in/images/og-home.jpg"
+        },
+        citation: {
+          citation_title: "When Children Own the Research Instrument: The Flipside Workspace Field Research Case Study from the Blue Blocks Erdkinder Environment",
+          citation_authors: ["Chakraborty, Sreemoyee", "Bose, Poulomi", "Khare, Kriti"],
+          citation_publication_date: "2026/03/31",
+          citation_publisher: "Zenodo",
+          citation_doi: "10.5281/zenodo.19219065"
+        }
+      },
+      schemas: [
+        {
+          "@type": "WebPage",
+          "@id": "https://research.blueblocks.in/publications/flipside-case-study/#webpage",
+          url: "https://research.blueblocks.in/publications/flipside-case-study",
+          name: "Adolescent Field Research at Neurodivergent Workspace | Blue Blocks Micro Research Institute",
+          description: "Case study: 12 adolescents designed their own 25-question research instrument and interviewed neurodivergent adults at a Hyderabad cloud kitchen. First of a five-case series.",
+          isPartOf: { "@id": "https://research.blueblocks.in/#website" },
+          about: { "@id": "https://research.blueblocks.in/publications/flipside-case-study/#article" }
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://research.blueblocks.in/publications/flipside-case-study/#article",
+          name: "When Children Own the Research Instrument: The Flipside Workspace Field Research Case Study from the Blue Blocks Erdkinder Environment",
+          headline: "When Children Own the Research Instrument: The Flipside Workspace Field Research Case Study from the Blue Blocks Erdkinder Environment",
+          description: "This case study is the first case of a five-case cross-study series where the Blue Blocks Micro Research Institute investigates what children ask, produce, innovate, and observe when the research instrument ownership is given to the students in varied contexts. A group of Erdkinder adolescents from Blue Blocks School visited the Flipside workspace on 12th March, 2026, which is a cloud kitchen in Hyderabad operated by neurodivergent adults. They equipped themselves with a 25-question self-designed system. The visit included a structured interview session along with a shared cooking session.",
+          url: "https://research.blueblocks.in/publications/flipside-case-study",
+          mainEntityOfPage: "https://research.blueblocks.in/publications/flipside-case-study",
+          datePublished: "2026-03-31",
+          inLanguage: "en",
+          author: [
+            { "@type": "Organization", "@id": "https://research.blueblocks.in/#microresearch", name: "Blue Blocks Micro Research Institute" },
+            { "@type": "Person", name: "Sreemoyee Chakraborty", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } },
+            { "@type": "Person", name: "Poulomi Bose", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } },
+            { "@type": "Person", name: "Kriti Khare", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } }
+          ],
+          publisher: { "@type": "Organization", name: "Zenodo" },
+          isAccessibleForFree: true,
+          license: "https://creativecommons.org/licenses/by/4.0/",
+          identifier: "https://doi.org/10.5281/zenodo.19219065",
+          sameAs: "https://doi.org/10.5281/zenodo.19219065",
+          keywords: [
+            "child-driven inquiry", "neurodivergent entrepreneurship", "research instrument design",
+            "adolescent fieldwork", "Montessori Erdkinder", "participatory research",
+            "student-authored research", "instrument ownership", "selective attention",
+            "mutual empathy", "micro research", "embedded observation", "child-as-researcher"
+          ],
+          encoding: {
+            "@type": "MediaObject",
+            contentUrl: "https://research.blueblocks.in/publications/flipside-case-study/flipside-case-study.md",
+            encodingFormat: "text/markdown"
+          },
+          sourceOrganization: { "@type": "School", "@id": "https://blueblocks.in/#school" },
+          about: [
+            { "@type": "Thing", name: "Participatory research", sameAs: "https://en.wikipedia.org/wiki/Participatory_action_research" },
+            { "@type": "Thing", name: "Neurodiversity", sameAs: "https://en.wikipedia.org/wiki/Neurodiversity" },
+            { "@type": "Thing", name: "Montessori education", sameAs: "https://en.wikipedia.org/wiki/Montessori_education" },
+            { "@type": "Thing", name: "Qualitative research", sameAs: "https://en.wikipedia.org/wiki/Qualitative_research" },
+            { "@type": "Thing", name: "Child development", sameAs: "https://en.wikipedia.org/wiki/Child_development" }
+          ],
+          citation: [
+            { "@type": "ScholarlyArticle", name: "Practitioner-Led Methodology Framework", identifier: "https://doi.org/10.5281/zenodo.18584816", sameAs: "https://doi.org/10.5281/zenodo.18584816" },
+            { "@type": "ScholarlyArticle", name: "Participatory Co-Authorship Framework", identifier: "https://doi.org/10.5281/zenodo.18584890", sameAs: "https://doi.org/10.5281/zenodo.18584890" }
+          ],
+          spatialCoverage: { "@type": "Place", name: "Hyderabad, Telangana, India" },
+          temporalCoverage: "2026-03-12",
+          countryOfOrigin: { "@type": "Country", name: "India" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://research.blueblocks.in/publications/flipside-case-study/#breadcrumb",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications" },
+            { "@type": "ListItem", position: 3, name: "Flipside Case Study", item: "https://research.blueblocks.in/publications/flipside-case-study" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "flipside-hero",
+          type: "hero",
+          variant: "publication",
+          headline: "Children as Field Researchers at a Neurodivergent Workspace",
+          subheadline: "When Children Own the Research Instrument: The Flipside Workspace Field Research Case Study from the Blue Blocks Erdkinder Environment",
+          image: { src: "/src/assets/banners/publications-doi.jpg", alt: "Flipside Case Study", variant: "hero", privacyBlur: false }
+        },
+        {
+          id: "flipside-meta",
+          type: "metaStrip",
+          items: [
+            { label: "DOI", value: "10.5281/zenodo.19219065", href: "https://doi.org/10.5281/zenodo.19219065", external: true },
+            { label: "Type", value: "Qualitative Case Study" },
+            { label: "Status", value: "Published (Working Paper — Case 1 of 5)" },
+            { label: "Data Collection", value: "12 March 2026" },
+            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" },
+            { label: "Access", value: "Open Access" }
+          ]
+        },
+        {
+          id: "flipside-introduction",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Introduction",
+                body: "This record archives a qualitative case study documenting what happened when Erdkinder adolescents from Blue Blocks School in Hyderabad were given complete ownership of a research instrument and deployed it at a real-world professional site. The students designed a 25-question interview, visited Flipside — a cloud kitchen in Banjara Hills operated by neurodivergent adults — and conducted structured interviews alongside a shared cooking session on 12 March 2026. This is the first case in a five-case cross-study series investigating what children ask, produce, and observe when instrument ownership is transferred to the students.\n\nA distinctive feature of this study is the triple evidence stream. The research compares three independent records of the same visit: the students' pre-designed question instrument, the mentor's real-time observation log, and the students' own written report authored after the visit. By comparing what was planned, what happened, and what was remembered, the study surfaces patterns of inquiry behaviour, social adaptation, and selective attention that no single data source could reveal alone.\n\nThe visiting students were not passive observers. They operate their own venture — Terra Utopia, a student-run paper recycling initiative — and arrived at Flipside as fellow entrepreneurs with a genuine stake in understanding how a neurodivergent team had built something sustainable. The Montessori Erdkinder philosophy of student agency, real-world engagement, and entrepreneurial practice shaped both the questions the students designed and the quality of their on-site engagement."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Repository & Access",
+                links: [
+                  { label: "View on Zenodo (DOI)", href: "https://doi.org/10.5281/zenodo.19219065", external: true },
+                  { label: "Methodology Framework (DOI)", href: "https://doi.org/10.5281/zenodo.18584816", external: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "flipside-abstract",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Abstract",
+                body: "Official Record Summary:\n\nThis case study is the first case of a five-case cross-study series where the Blue Blocks Micro Research Institute investigates what children ask, produce, innovate, and observe when the research instrument ownership is given to the students in varied contexts. A group of Erdkinder adolescents from Blue Blocks School visited the Flipside workspace on 12th March, 2026, which is a cloud kitchen in Hyderabad operated by neurodivergent adults. They equipped themselves with a 25-question self-designed system. The visit included a structured interview session along with a shared cooking session. The evidentiary base is supported by the mentors' notes, a student-authored short report, and a question tracker. The case study provides analytically significant evidence, but it also has some limitations across three hypotheses — that children's self-designed instruments include framings adult researchers omit (H1); that children given instrument ownership deviate spontaneously from their prepared list in ways that indicate active inquiry (H2); and that what children choose to record from a response differs systematically from what was said (H3). One of the most notable and emergent findings includes the mutual empathy for public challenges between the Erdkinders and Flipside adults. This was not anticipated in the hypotheses, but added an important layer to the study. Gaps in the observation record are documented transparently.\n\nAll participants were minors. The study was conducted within the Blue Blocks Micro Research Ethics Framework (MREF v1.0). Participant identities have been fully anonymised, and no linkage file has been created or retained."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Related Publications",
+                links: [
+                  { label: "Practitioner-led Methodology Framework", href: "https://doi.org/10.5281/zenodo.18584816", external: true },
+                  { label: "Participatory Co-Authorship Framework", href: "https://doi.org/10.5281/zenodo.18584890", external: true },
+                  { label: "Publications Index", href: "/publications" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "flipside-key-findings",
+          type: "numberedCards",
+          header: "Key Findings",
+          items: [
+            {
+              number: "1",
+              title: "Questions Adult Researchers Omit",
+              body: "Students designed questions that adult researchers routinely omit — particularly around emotional experience in professional settings (\"How do you feel when you bake?\") and interpersonal hierarchy (\"Who is the best chef among you all?\"). Seven of 25 questions fell into emotional and experiential categories rarely present in adult-designed instruments for neurodivergent workplaces."
+            },
+            {
+              number: "2",
+              title: "Spontaneous Instrument Deviation",
+              body: "Within the first minutes of the interview, students abandoned their sequential question list and began reading the room — skipping questions they judged socially inappropriate, consulting a Flipside founder about which questions to ask, and in one case directly challenging the quality of their own instrument (\"What kind of stupid questions have we framed?\")."
+            },
+            {
+              number: "3",
+              title: "Role Repositioning",
+              body: "Two spontaneous questions not on the prepared list were asked during the visit — \"How do we place an order?\" and \"Where was the recent visit to?\" — both repositioning the student from researcher to customer or peer, a shift no adult-designed protocol anticipates."
+            },
+            {
+              number: "4",
+              title: "Selective Amplification in Reporting",
+              body: "The student-authored report written after the visit systematically amplified emotional, motivational, and human content (emotional regulation spaces, barefoot walking as a mental health practice, neurodivergent adults as proof of potential) while dropping every operational and business-mechanical detail that dominated half the prepared questions."
+            },
+            {
+              number: "5",
+              title: "Emergent Mutual Empathy",
+              body: "An unanticipated moment of mutual empathy occurred when neurodivergent adults observed students struggling with mental mathematics under pressure. The adults responded with empathy and camaraderie, recognising shared difficulty across differences. This moment was not produced by any prepared question and was not in any hypothesis."
+            },
+            {
+              number: "6",
+              title: "Transparent Gap Documentation",
+              body: "Significant gaps in the observation record — including missing pre-visit baseline predictions, an incomplete cooking-activity grid, and absent student initials — are documented transparently and inform template revisions for Cases 2–5."
+            }
+          ]
+        },
+        {
+          id: "flipside-methodology",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Methodology",
+                body: "The study is a qualitative case study using embedded observation and participatory instrument design as the primary data collection method, consistent with micro-research case study methodology (Blue Blocks Micro Research Institute et al., 2026a). The design is descriptive and exploratory; no experimental manipulation or comparison condition was used. The unit of analysis is the group-level visit event, with individual student data available only partially.\n\nTwelve Erdkinder adolescents visited the Flipside workspace in Banjara Hills, Hyderabad on 12 March 2026. Students had designed a 25-question instrument in advance and divided into sub-groups with distinct roles: an accounts team, an interview team, and a kitchen team. The visit comprised two phases: a structured interview session in which students asked questions of Flipside team members, and a baking activity in which students worked alongside Flipside adults in the kitchen. The mentor-observer was instructed to record observable behaviour only and keep inference strictly post-session, consistent with the Embedded Observer Principle of the Blue Blocks Micro Research framework.\n\nData sources include the student-designed question instrument (25 questions + 2 spontaneous), the mentor's real-time observation log with coded entries (DQ-USE, SELF-REV, EM-Q, ENG-SHIFT, PEER-X), a student-authored report written after the visit, and a question tracker documenting which questions were asked and skipped. The study was governed by the participatory micro-research methodology for scientist-child co-authorship (Blue Blocks Micro Research Institute et al., 2026b)."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Analytical Framework",
+                citation: "Hart (children's participation), Cook-Sather (student voice), Punch (child-centred methodology), Lincoln & Guba (naturalistic inquiry), Lave & Wenger (legitimate peripheral participation) — mapped against three domains: Instrument Quality (H1), Engagement Behaviour (H2), Selective Attention (H3)."
+              }
+            ]
+          }
+        },
+        {
+          id: "flipside-parameters",
+          type: "tableBlock",
+          header: "Study Parameters",
+          headers: ["Parameter", "Detail"],
+          rows: [
+            ["Participants", "12 Erdkinder adolescents from Blue Blocks (individual data for 9)"],
+            ["Site", "Flipside Workspace, Banjara Hills, Hyderabad"],
+            ["Data Collection Window", "12 March 2026"],
+            ["Visit Structure", "Phase 1: Structured interview · Phase 2: Baking activity"],
+            ["Instrument", "25-question student-designed interview + 2 spontaneous questions"],
+            ["Data Sources", "Mentor observation log (coded), student-authored report, question tracker"],
+            ["Observation Coding", "DQ-USE, SELF-REV, EM-Q, ENG-SHIFT, PEER-X"],
+            ["Hypotheses Tested", "H1 (Instrument Quality), H2 (Engagement Behaviour), H3 (Selective Attention)"],
+            ["Emergent Finding", "Mutual empathy between students and neurodivergent adults"],
+            ["Series Position", "Case 1 of 5 — Five-Case Cross-Study"],
+            ["Analytical Framework", "Hart, Cook-Sather, Punch, Lincoln & Guba, Lave & Wenger"],
+            ["Anonymisation", "Full anonymisation; no linkage file created or retained"],
+            ["Ethics Framework", "Blue Blocks MREF v1.0"],
+            ["Data Completeness", "Partial — pre-visit baseline and cooking-activity grid not completed"]
+          ]
+        },
+        {
+          id: "flipside-discussion",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Discussion",
+                body: "The study contributes to a significant gap in participatory research with children. While the field has long advocated for children's voices in research (Hart, 1992; Cook-Sather, 2006), few studies have operationalised child instrument ownership in a real-world professional setting and then tracked what happens across the full cycle of design, deployment, and reporting. Most participatory studies give children a consultative role. This study gave adolescents authorship of the research tool itself — and then documented what they did with that authorship in a live, unscripted encounter.\n\nThe study setting is significant because the students arrived with genuine prior motivation — as fellow entrepreneurs running Terra Utopia — rather than as assigned participants in an adult-designed exercise. The Flipside visit was a context where the children's existing identity made their questions authentic rather than performative. The Montessori Erdkinder philosophy of student agency and real-world engagement provided the developmental environment in which instrument ownership could function as a genuine research act, not a classroom exercise.\n\nThe strongest finding is for H3: students' post-visit reports are not neutral transcriptions of what happened. They are acts of interpretation that reveal the researcher's prior framework — in this case, a consistent lens prioritising human narrative over operational detail. The emergent mutual empathy finding raises a further question for the five-case series: whether such moments of cross-community recognition can be understood systematically, or whether they are irreducibly situational. Limitations including incomplete template sections, absent pre-visit baselines, and single-recorder data compression are documented transparently and inform design revisions for Cases 2–5."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Cross-References",
+                links: [
+                  { label: "Methodology", href: "/methodology" },
+                  { label: "Governance", href: "/governance" },
+                  { label: "Ethics & Privacy", href: "/governance/ethics" },
+                  { label: "Publications Index", href: "/publications" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "flipside-supplementary",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Supplementary Materials",
+                body: "Data & Ethics:\n\nThe observation template, student-authored report, and question tracker are retained in secure storage at Blue Blocks Micro Research Institute, Hyderabad. Anonymised data is available to qualified researchers upon reasonable request, subject to an appropriate data-sharing agreement. No personal identification markers appear anywhere in the publication. All participants were minors; the study was conducted within the Blue Blocks Micro Research Ethics Framework (MREF v1.0). The voluntary nature of participation is documented in the paper's ethics note."
+              },
+              {
+                title: "Author Information",
+                body: "",
+                bullets: [
+                  "Sreemoyee Chakraborty — STEM Research Lead (ORCID: 0000-0001-5180-156X)",
+                  "Poulomi Bose — Embedded Research Fellow (ORCID: 0009-0007-6156-2161)",
+                  "Kriti Khare — Embedded Research Fellow (ORCID: 0009-0004-3106-8873)"
+                ]
+              },
+              {
+                title: "Related Publications",
+                body: "",
+                bullets: [
+                  "DOI — Flipside Case Study: https://doi.org/10.5281/zenodo.19219065",
+                  "DOI — Methodology Framework: https://doi.org/10.5281/zenodo.18584816",
+                  "DOI — Co-Authorship Framework: https://doi.org/10.5281/zenodo.18584890"
+                ]
+              },
+              {
+                title: "Media Coverage",
+                body: "This section will be updated as coverage is published."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "How to Cite (APA)",
+                citation: "Chakraborty, S., Bose, P., & Khare, K. (2026). When Children Own the Research Instrument: The Flipside Workspace Field Research Case Study from the Blue Blocks Erdkinder Environment. Blue Blocks Micro Research Institute. https://research.blueblocks.in/publications/flipside-case-study"
+              }
+            ]
+          }
+        },
+        {
+          id: "flipside-zenodo-cta",
+          type: "highlightBox",
+          header: "Read the Full Paper on Zenodo",
+          body: "The complete paper is available as an open-access record on Zenodo.",
+          cta: { label: "Read the Full Paper on Zenodo", href: "https://doi.org/10.5281/zenodo.19219065", external: true }
+        },
+        {
+          id: "flipside-archival-note",
+          type: "textBlock",
+          variant: "muted",
+          body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
+        },
+        {
+          id: "flipside-related",
+          type: "relatedCards",
+          header: "Related Registry",
+          cards: [
+            { title: "Methodology", description: "Research framework.", icon: "publication", href: "/methodology" },
+            { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" },
+            { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
+            { title: "Downloads", description: "All documents.", icon: "default", href: "/downloads" }
+          ]
+        }
+      ]
+    },
+
     "/publications/citation-standards": {
       title: "Citation Standards & Guide",
       metaDescription: "Blue Blocks Micro Research Institute citation standards and guide for affiliated publications and datasets.",
