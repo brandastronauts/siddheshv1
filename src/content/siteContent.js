@@ -8412,6 +8412,19 @@ const FIELDS_MAP = {
     publicationStatus: 'Published',
     publicationType: 'Regulatory Record',
   },
+  '/publications/flipside-case-study': {
+    doi: '10.5281/zenodo.19219065',
+    zenodoUrl: 'https://doi.org/10.5281/zenodo.19219065',
+    publishedDate: '2026-03-31',
+    authors: [
+      { name: 'Chakraborty, Sreemoyee' },
+      { name: 'Bose, Poulomi' },
+      { name: 'Khare, Kriti' },
+    ],
+    researchDomains: ['Adolescent Research', 'Neurodiversity', 'Participatory Research'],
+    publicationStatus: 'Published',
+    publicationType: 'Case Study',
+  },
   '/technical-briefs/sbb-1': {
     doi: '',
     publishedDate: '2024-12-30',
