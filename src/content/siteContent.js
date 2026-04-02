@@ -8326,6 +8326,7 @@ const CPT_MAP = {
   '/publications/in-space-authorization-letter': 'publication',
   '/publications/saparya-imf-case-study': 'publication',
   '/publications/iran-war-case-study': 'publication',
+  '/publications/flipside-case-study': 'publication',
   '/publications/citation-standards': 'page',
   '/governance': 'page',
   '/governance/ethics': 'governance-page',
