@@ -986,6 +986,79 @@ const seoSchemaConfig = {
       ],
     },
   },
+
+  // ═══ Flipside Case Study ═══════════════════════════════════════════════
+  '/publications/flipside-case-study': {
+    meta: {
+      title: 'Adolescent Field Research at Neurodivergent Workspace | Blue Blocks Micro Research Institute',
+      description: 'Case study: 12 adolescents designed their own 25-question research instrument and interviewed neurodivergent adults at a Hyderabad cloud kitchen. First of a five-case series.',
+      keywords: 'child-driven inquiry, neurodivergent entrepreneurship, research instrument design, adolescent fieldwork, Montessori Erdkinder, participatory research, student-authored research, instrument ownership, selective attention, mutual empathy, micro research, embedded observation, child-as-researcher',
+      canonical: `${SITE_URL}/publications/flipside-case-study`,
+    },
+    openGraph: {
+      type: 'article',
+      title: 'Adolescent Field Research at Neurodivergent Workspace | Blue Blocks Micro Research Institute',
+      description: 'Case study: 12 adolescents designed their own 25-question research instrument and interviewed neurodivergent adults at a Hyderabad cloud kitchen. First of a five-case series.',
+      url: `${SITE_URL}/publications/flipside-case-study`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Adolescent Field Research at Neurodivergent Workspace | Blue Blocks Micro Research Institute',
+      description: 'Case study: 12 adolescents designed their own 25-question research instrument and interviewed neurodivergent adults at a Hyderabad cloud kitchen.',
+    },
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'WebPage',
+          '@id': `${SITE_URL}/publications/flipside-case-study/#webpage`,
+          url: `${SITE_URL}/publications/flipside-case-study`,
+          name: 'Adolescent Field Research at Neurodivergent Workspace | Blue Blocks Micro Research Institute',
+          isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
+          about: { '@id': `${SITE_URL}/publications/flipside-case-study/#article` },
+        },
+        { ...instituteNode },
+        {
+          '@type': 'ScholarlyArticle',
+          '@id': `${SITE_URL}/publications/flipside-case-study/#article`,
+          name: 'When Children Own the Research Instrument: The Flipside Workspace Field Research Case Study from the Blue Blocks Erdkinder Environment',
+          headline: 'When Children Own the Research Instrument: The Flipside Workspace Field Research Case Study from the Blue Blocks Erdkinder Environment',
+          identifier: 'https://doi.org/10.5281/zenodo.19219065',
+          url: `${SITE_URL}/publications/flipside-case-study`,
+          sameAs: 'https://doi.org/10.5281/zenodo.19219065',
+          publisher: { '@type': 'Organization', name: 'Zenodo' },
+          datePublished: '2026-03-31',
+          author: [
+            { '@type': 'Person', name: 'Sreemoyee Chakraborty', affiliation: { '@id': PERMANENT_IDS.INSTITUTE } },
+            { '@type': 'Person', name: 'Poulomi Bose', affiliation: { '@id': PERMANENT_IDS.INSTITUTE } },
+            { '@type': 'Person', name: 'Kriti Khare', affiliation: { '@id': PERMANENT_IDS.INSTITUTE } },
+          ],
+          license: 'https://creativecommons.org/licenses/by/4.0/',
+          isAccessibleForFree: true,
+          keywords: [
+            'child-driven inquiry', 'neurodivergent entrepreneurship', 'research instrument design',
+            'adolescent fieldwork', 'Montessori Erdkinder', 'participatory research',
+            'student-authored research', 'instrument ownership', 'selective attention',
+            'mutual empathy', 'micro research', 'embedded observation', 'child-as-researcher',
+          ],
+          about: [
+            { '@type': 'Thing', name: 'Participatory research', sameAs: 'https://en.wikipedia.org/wiki/Participatory_action_research' },
+            { '@type': 'Thing', name: 'Neurodiversity', sameAs: 'https://en.wikipedia.org/wiki/Neurodiversity' },
+            { '@type': 'Thing', name: 'Montessori education', sameAs: 'https://en.wikipedia.org/wiki/Montessori_education' },
+          ],
+          citation: [
+            { '@type': 'ScholarlyArticle', name: 'Practitioner-Led Methodology Framework', identifier: 'https://doi.org/10.5281/zenodo.18584816' },
+            { '@type': 'ScholarlyArticle', name: 'Participatory Co-Authorship Framework', identifier: 'https://doi.org/10.5281/zenodo.18584890' },
+          ],
+        },
+        breadcrumb(`${SITE_URL}/publications/flipside-case-study/#breadcrumb`, [
+          { name: 'Home', item: `${SITE_URL}/` },
+          { name: 'Publications', item: `${SITE_URL}/publications` },
+          { name: 'Flipside Case Study', item: `${SITE_URL}/publications/flipside-case-study` },
+        ]),
+      ],
+    },
+  },
 };
 
 export default seoSchemaConfig;
