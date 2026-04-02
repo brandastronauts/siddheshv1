@@ -1183,6 +1183,14 @@ const siteContent = {
               body: "This record archives a qualitative case study documenting how children aged 6–16 at an AMI-guided Montessori school in Hyderabad, India, responded emotionally, cognitively, and morally to the Iran crisis following the assassination of Supreme Leader Ayatollah Ali Khamenei on 28 February 2026. The study was conducted by the Blue Blocks Micro Research Institute between 5 and 10 March 2026 — within days of the conflict's escalation — making it a real-time documentation of children's responses to a live geopolitical event.",
               cta: { label: "View Publication", href: "/publications/iran-war-case-study" },
               image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Iran crisis case study", variant: "card" }
+            },
+            {
+              tag: "Published Case Study · Adolescent Research · Neurodiversity",
+              headline: "Adolescents Interview a Neurodivergent-Run Kitchen — And Redesign Their Own Questions",
+              meta: "DOI: 10.5281/zenodo.19219065",
+              body: "Erdkinder adolescents designed a 25-question instrument, visited a cloud kitchen run by neurodivergent adults, and rewrote their approach mid-interview. What they chose to report reveals more about children's research instincts than what they were told.",
+              cta: { label: "View Publication", href: "/publications/flipside-case-study" },
+              image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Flipside case study", variant: "card" }
             }
           ]
         },
