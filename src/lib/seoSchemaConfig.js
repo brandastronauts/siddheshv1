@@ -89,9 +89,15 @@ const seoSchemaConfig = {
         {
           '@type': 'WebSite',
           '@id': PERMANENT_IDS.WEBSITE,
-          url: SITE_URL,
+          url: `${SITE_URL}/`,
           name: 'Blue Blocks Micro Research Institute',
+          description: 'Children are the Data — Blue Blocks Micro Research Institute conducts longitudinal micro-research on child development, learning, and innovation.',
           publisher: { '@id': PERMANENT_IDS.INSTITUTE },
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: `${SITE_URL}/?s={search_term_string}`,
+            'query-input': 'required name=search_term_string',
+          },
         },
         {
           '@type': 'WebPage',
