@@ -312,20 +312,40 @@ function prerenderSchemasPlugin() {
         }
       }
 
-      // ── Phase 3: Inject static content into homepage (dist/index.html) ──
+      // ── Phase 3: Inject static content + JSON-LD into homepage (dist/index.html) ──
       if (siteContent?.pages?.['/']) {
         const homePageData = siteContent.pages['/'];
         const staticContent = renderPageToStaticHtml(homePageData);
+        const homePath = pathMod.join(distDir, 'index.html');
+        let homeHtml = await fs.readFile(homePath, 'utf-8');
+
         if (staticContent) {
-          const homePath = pathMod.join(distDir, 'index.html');
-          let homeHtml = await fs.readFile(homePath, 'utf-8');
           homeHtml = homeHtml.replace(
             '<div id="root"></div>',
             `<div id="root">${staticContent}</div>`
           );
-          await fs.writeFile(homePath, homeHtml, 'utf-8');
-          console.log('  ✓ prerender-schemas: Injected static content into homepage index.html');
         }
+
+        // Inject homepage JSON-LD from seoSchemaConfig
+        const homeConfig = config['/'];
+        if (homeConfig?.jsonLd) {
+          // Remove any existing JSON-LD
+          homeHtml = homeHtml.replace(
+            /\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/g,
+            ''
+          );
+          const jsonStr = JSON.stringify(
+            homeConfig.jsonLd,
+            (_k: string, v: any) => (v === undefined || v === null || v === '') ? undefined : v
+          );
+          homeHtml = homeHtml.replace(
+            '</head>',
+            `\n    <script type="application/ld+json">${jsonStr}</script>\n  </head>`
+          );
+        }
+
+        await fs.writeFile(homePath, homeHtml, 'utf-8');
+        console.log('  ✓ prerender-schemas: Injected static content + JSON-LD into homepage index.html');
       }
 
       if (count > 0) {
