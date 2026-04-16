@@ -1011,6 +1011,66 @@ const seoSchemaConfig = {
       ],
     },
   },
+
+  // ═══ TERMS OF USE (noindex — utility/legal) ═══════════════════════════════
+  '/terms': {
+    meta: {
+      title: 'Terms of Use | Blue Blocks Micro Research Institute',
+      description: 'Terms of use governing access to research.blueblocks.in, the website of Blue Blocks Micro Research Institute, Hyderabad.',
+      robots: 'noindex, follow',
+      canonical: `${SITE_URL}/terms`,
+    },
+    openGraph: {
+      type: 'website',
+      title: 'Terms of Use | Blue Blocks Micro Research Institute',
+      description: 'Terms of use for the Blue Blocks Micro Research Institute website.',
+      url: `${SITE_URL}/terms`,
+      site_name: OG_SITE_NAME,
+    },
+    twitter: { card: 'summary', title: 'Terms of Use | Blue Blocks Micro Research Institute' },
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'WebPage',
+          '@id': `${SITE_URL}/terms/#webpage`,
+          url: `${SITE_URL}/terms`,
+          name: 'Terms of Use | Blue Blocks Micro Research Institute',
+          isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
+        },
+      ],
+    },
+  },
+
+  // ═══ HTML SITEMAP (noindex — navigation aid, low value to index) ══════════
+  '/sitemap': {
+    meta: {
+      title: 'Sitemap | Blue Blocks Micro Research Institute',
+      description: 'Site index for research.blueblocks.in — full list of pages, publications, patents, and team profiles.',
+      robots: 'noindex, follow',
+      canonical: `${SITE_URL}/sitemap`,
+    },
+    openGraph: {
+      type: 'website',
+      title: 'Sitemap | Blue Blocks Micro Research Institute',
+      description: 'Navigational index of the Blue Blocks Micro Research Institute website.',
+      url: `${SITE_URL}/sitemap`,
+      site_name: OG_SITE_NAME,
+    },
+    twitter: { card: 'summary', title: 'Sitemap | Blue Blocks Micro Research Institute' },
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'WebPage',
+          '@id': `${SITE_URL}/sitemap/#webpage`,
+          url: `${SITE_URL}/sitemap`,
+          name: 'Sitemap | Blue Blocks Micro Research Institute',
+          isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
+        },
+      ],
+    },
+  },
 };
 
 export default seoSchemaConfig;
