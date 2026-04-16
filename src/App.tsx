@@ -99,6 +99,10 @@ const App = () => (
               <Route path="/debug/schema" element={<SchemaDebugPage />} />
               <Route path="/__preview/school-home" element={<SchoolHomePreview />} />
               
+              {/* Explicit 404 for legacy .shtml extensions (never existed on this domain) */}
+              <Route path="*.shtml" element={<NotFoundPage />} />
+              <Route path="/publications/CubeSat-INSPACE/*" element={<NotFoundPage />} />
+              
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </Suspense>
