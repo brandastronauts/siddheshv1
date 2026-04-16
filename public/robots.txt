@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /_next/
 
 Sitemap: https://research.blueblocks.in/sitemap.xml
