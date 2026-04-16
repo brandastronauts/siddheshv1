@@ -8,12 +8,13 @@ DirectorySlash Off
   RewriteEngine On
   RewriteBase /
 
-  # ── Legacy URL redirects (GSC 404 cleanup) ──
-  # Old CubeSat/INSPACE pages → new canonical
-  RewriteRule ^publications/CubeSat-INSPACE(/.*)?$ /publications/in-space-authorization-letter [R=301,L]
+  # ── Hard 404s for legacy / malformed URLs (must come BEFORE any redirects) ──
+  # Any .shtml file (legacy blueblocks.in extensions — never existed on this domain)
+  RewriteRule \.shtml$ - [R=404,L]
 
-  # Old blog path → no equivalent, let it 404 naturally
-  # RewriteRule ^blueblocks/blog(/.*)?$ - [G]
+  # Legacy CubeSat-INSPACE garbage paths crawled from external broken links → 404
+  # (Previously 301-redirected; GSC flagged as redirects instead of indexing real pages.)
+  RewriteRule ^publications/CubeSat-INSPACE(/.*)?$ - [R=404,L]
 
   # ── Strip trailing slashes (except root "/") — 301 redirect /path/ → /path ──
   RewriteCond %{REQUEST_URI} ^(.+)/$
@@ -47,5 +48,6 @@ DirectorySlash Off
   ExpiresByType application/pdf "access plus 1 week"
 </IfModule>
 
-# Proper 404 for truly missing pages
-ErrorDocument 404 /index.html
+# Custom 404 page — serves the SPA shell with a real 404 status code
+# (The SPA's NotFoundPage component renders for unknown routes.)
+ErrorDocument 404 /404.html
