@@ -47,7 +47,7 @@ const siteContent = {
       seo: {
         title: "Children are the Data",
         canonical: "https://research.blueblocks.in/",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
           url: "https://research.blueblocks.in/",
@@ -397,7 +397,7 @@ const siteContent = {
       seo: {
         title: "The 0–18 Continuum | The Institute | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/the-institute",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
           url: "https://siddheshv1.lovable.app/the-institute",
@@ -662,7 +662,7 @@ const siteContent = {
       seo: {
         title: "Methodology | Micro Research Framework | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/methodology",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
           url: "https://siddheshv1.lovable.app/methodology",
@@ -1072,7 +1072,7 @@ const siteContent = {
       seo: {
         title: "Publications & Open Science | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/publications",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
           url: "https://siddheshv1.lovable.app/publications",
@@ -1461,7 +1461,7 @@ const siteContent = {
       seo: {
         title: "Governance & Oversight | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/governance",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
           url: "https://siddheshv1.lovable.app/governance",
@@ -1752,7 +1752,7 @@ const siteContent = {
       seo: {
         title: "Collaborate | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/collaborate",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
           url: "https://siddheshv1.lovable.app/collaborate",
@@ -1931,7 +1931,7 @@ const siteContent = {
       seo: {
         title: "Newsroom | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/newsroom",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
           url: "https://siddheshv1.lovable.app/newsroom",
@@ -2212,7 +2212,7 @@ const siteContent = {
       seo: {
         title: "Contact | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/contact",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
           url: "https://siddheshv1.lovable.app/contact",
@@ -2296,7 +2296,7 @@ const siteContent = {
       seo: {
         title: "Privacy Policy | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/privacy",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
           url: "https://siddheshv1.lovable.app/privacy",
@@ -2518,7 +2518,7 @@ const siteContent = {
       seo: {
         title: "Terms of Use | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/terms",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "noindex,follow",
         openGraph: {
           type: "website",
           url: "https://siddheshv1.lovable.app/terms",
@@ -3160,7 +3160,7 @@ const siteContent = {
       seo: {
         title: "Staff Access | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/staff-access",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
           url: "https://siddheshv1.lovable.app/staff-access",
@@ -3217,7 +3217,7 @@ const siteContent = {
       seo: {
         title: "Sitemap | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/sitemap",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "noindex,follow",
         openGraph: {
           type: "website",
           url: "https://siddheshv1.lovable.app/sitemap",
@@ -3276,7 +3276,7 @@ const siteContent = {
       seo: {
         title: "Books | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/books",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "collection",
           url: "https://siddheshv1.lovable.app/books",
@@ -3368,7 +3368,7 @@ const siteContent = {
       seo: {
         title: "Patents | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/patents",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "collection",
           url: "https://siddheshv1.lovable.app/patents",
@@ -3521,7 +3521,7 @@ const siteContent = {
       seo: {
         title: "Team | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/team",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "collection",
           url: "https://siddheshv1.lovable.app/team",
@@ -3783,7 +3783,7 @@ const siteContent = {
       seo: {
         title: "Valorization In Orbit — An Adolescent CubeSat Mission | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "article",
           url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study",
@@ -4980,7 +4980,7 @@ const siteContent = {
       seo: {
         title: "Citation Standards & Guide | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/publications/citation-standards",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
           url: "https://siddheshv1.lovable.app/publications/citation-standards",
@@ -5103,7 +5103,7 @@ const siteContent = {
       seo: {
         title: "Patent Portfolio : System for Automated Security (UAV) | Patents | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/patents/automated-security-uav",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "article",
           url: "https://siddheshv1.lovable.app/patents/automated-security-uav",
@@ -5223,7 +5223,7 @@ const siteContent = {
       seo: {
         title: "Patent Portfolio : Borehole Rescue System (BRS) | Patents | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/patents/borehole-rescue-system",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
       },
       schemas: [
         { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
@@ -5337,7 +5337,7 @@ const siteContent = {
       seo: {
         title: "Patent Portfolio : Autonomous Contactless Delivery System (ACDS) | Patents | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/patents/contactless-delivery-system",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
       },
       schemas: [
         { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
@@ -5451,7 +5451,7 @@ const siteContent = {
       seo: {
         title: "Patent Portfolio : Autonomous Medical Assistance System (AMAS) | Patents | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
       },
       schemas: [
         { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
@@ -5565,7 +5565,7 @@ const siteContent = {
       seo: {
         title: "Patent Portfolio : Autonomous Health Monitoring System (AHMS) | Patents | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
       },
       schemas: [
         { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
@@ -5680,7 +5680,7 @@ const siteContent = {
       seo: {
         title: "Lining The Nest | Books | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/books/lining-the-nest",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "book",
           url: "https://siddheshv1.lovable.app/books/lining-the-nest",
@@ -5856,7 +5856,7 @@ const siteContent = {
       seo: {
         title: "Pavan Goyal | Team | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/team/pavan-goyal",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "profile",
           url: "https://siddheshv1.lovable.app/team/pavan-goyal",
@@ -5943,7 +5943,7 @@ const siteContent = {
       seo: {
         title: "Munira Hussain | Team | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/team/munira-hussain",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "profile",
           url: "https://siddheshv1.lovable.app/team/munira-hussain",
@@ -6030,7 +6030,7 @@ const siteContent = {
       seo: {
         title: "Vinay Shyam Donakanti | Governance Team | Blue Blocks Micro Research Institute",
         canonical: `${SITE_URL}/governance/team/vinay-shyam-donakanti`,
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "profile",
           url: `${SITE_URL}/governance/team/vinay-shyam-donakanti`,
@@ -6171,7 +6171,7 @@ const siteContent = {
       seo: {
         title: "Sreedhar Reddy Boddu | Governance Team | Blue Blocks Micro Research Institute",
         canonical: `${SITE_URL}/governance/team/sreedhar-reddy-boddu`,
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "profile",
           url: `${SITE_URL}/governance/team/sreedhar-reddy-boddu`,
@@ -6302,7 +6302,7 @@ const siteContent = {
       seo: {
         title: "Sruthi Matta | Governance Team | Blue Blocks Micro Research Institute",
         canonical: `${SITE_URL}/governance/team/sruthi-matta`,
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "profile",
           url: `${SITE_URL}/governance/team/sruthi-matta`,
@@ -6436,7 +6436,7 @@ const siteContent = {
       seo: {
         title: "Sandhya Rao M | Governance Team | Blue Blocks Micro Research Institute",
         canonical: `${SITE_URL}/governance/team/sandhya-rao-m`,
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "profile",
           url: `${SITE_URL}/governance/team/sandhya-rao-m`,
@@ -6577,7 +6577,7 @@ const siteContent = {
       seo: {
         title: "Dr. Sreemoyee Chakraborty | Governance Team | Blue Blocks Micro Research Institute",
         canonical: `${SITE_URL}/governance/team/dr-sreemoyee-chakraborty`,
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "profile",
           url: `${SITE_URL}/governance/team/dr-sreemoyee-chakraborty`,
@@ -6719,7 +6719,7 @@ const siteContent = {
       seo: {
         title: "Dr. Shobha Ediga | Governance Team | Blue Blocks Micro Research Institute",
         canonical: `${SITE_URL}/governance/team/dr-shobha-ediga`,
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "profile",
           url: `${SITE_URL}/governance/team/dr-shobha-ediga`,
@@ -6867,7 +6867,7 @@ const siteContent = {
       seo: {
         title: "Adolescent Research Cohort | Team | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/team/adolescent-research-cohort",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
       },
       schemas: [
         {
@@ -6917,7 +6917,7 @@ const siteContent = {
       seo: {
         title: "ISRO Payload Authorization | Newsroom | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/newsroom/dispatch/isro-payload-authorization",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
       },
       schemas: [
         {
@@ -7415,7 +7415,7 @@ const siteContent = {
       seo: {
         title: "Visiting Scholars 2026 | Newsroom | Blue Blocks Micro Research Institute",
         canonical: "https://siddheshv1.lovable.app/newsroom/updates/visiting-scholars-2026",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
       },
       schemas: [
         {
@@ -7884,7 +7884,7 @@ const siteContent = {
       seo: {
         title: "FAQ | Blue Blocks Micro Research Institute",
         canonical: `${SITE_URL}/faq`,
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
       },
       schemas: [
         {
@@ -8266,7 +8266,7 @@ const siteContent = {
     seo: {
       title: "Open Data Access | Blue Blocks Micro Research Institute",
       description: "Request access to anonymized child development research datasets. Data access for qualified researchers with institutional affiliation.",
-      robots: "noindex,nofollow,noarchive,nosnippet",
+      robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
       openGraph: {
         type: "article",
         title: "Open Data Access | Blue Blocks Micro Research Institute",
@@ -8441,7 +8441,7 @@ const siteContent = {
     seo: {
       title: "Glossary | Blue Blocks Micro Research Institute",
       description: "Key terms used across Blue Blocks Micro Research Institute publications and methodology.",
-      robots: "noindex,nofollow,noarchive,nosnippet",
+      robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
       openGraph: {
         type: "article",
         title: "Glossary | Blue Blocks Micro Research Institute",

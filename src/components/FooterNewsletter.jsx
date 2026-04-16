@@ -129,23 +129,28 @@ const FooterNewsletter = () => {
           <span className="text-sm font-medium">Thank you. Your submission has been received successfully.</span>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-4" aria-label="Newsletter subscription form">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Email Field */}
             <div className="space-y-2">
               <Label htmlFor="newsletter-email" className="text-white/70 text-xs uppercase tracking-wider">
-                Email <span className="text-accent-cyan">*</span>
+                Email <span className="text-accent-cyan" aria-hidden="true">*</span>
               </Label>
               <Input
                 id="newsletter-email"
+                name="email"
                 type="email"
+                autoComplete="email"
+                aria-required="true"
+                aria-invalid={errors.email ? 'true' : 'false'}
+                aria-describedby={errors.email ? 'newsletter-email-error' : undefined}
                 placeholder="you@institution.edu"
                 value={email}
                 onChange={(e) => { setEmail(e.target.value); if (submitError) setSubmitError(''); }}
                 className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:border-accent-cyan focus:ring-accent-cyan/20 transition-all duration-200"
               />
               {errors.email && (
-                <p className="text-red-400 text-xs">{errors.email}</p>
+                <p id="newsletter-email-error" role="alert" className="text-red-400 text-xs">{errors.email}</p>
               )}
             </div>
 
@@ -154,8 +159,8 @@ const FooterNewsletter = () => {
               <Label htmlFor="newsletter-affiliation" className="text-white/70 text-xs uppercase tracking-wider">
                 Affiliation <span className="text-white/40">(optional)</span>
               </Label>
-              <Select value={affiliation} onValueChange={setAffiliation}>
-                <SelectTrigger aria-label="Select affiliation" className="bg-white/5 border-white/10 text-white focus:border-accent-cyan focus:ring-accent-cyan/20 [&>span]:text-white/60 data-[state=open]:border-accent-cyan">
+              <Select value={affiliation} onValueChange={setAffiliation} name="affiliation">
+                <SelectTrigger id="newsletter-affiliation" aria-label="Select affiliation" className="bg-white/5 border-white/10 text-white focus:border-accent-cyan focus:ring-accent-cyan/20 [&>span]:text-white/60 data-[state=open]:border-accent-cyan">
                   <SelectValue placeholder="Select affiliation" />
                 </SelectTrigger>
                 <SelectContent className="bg-deep-ink border-white/10">
@@ -177,8 +182,12 @@ const FooterNewsletter = () => {
           <div className="flex items-start gap-3 pt-2">
             <Checkbox
               id="newsletter-consent"
+              name="consent"
               checked={consent}
               onCheckedChange={setConsent}
+              aria-required="true"
+              aria-invalid={errors.consent ? 'true' : 'false'}
+              aria-describedby={errors.consent ? 'newsletter-consent-error' : undefined}
               className="mt-0.5 border-white/30 data-[state=checked]:bg-accent-cyan data-[state=checked]:border-accent-cyan"
             />
             <div className="space-y-1">
@@ -186,17 +195,17 @@ const FooterNewsletter = () => {
                 htmlFor="newsletter-consent"
                 className="text-white/70 text-sm leading-relaxed cursor-pointer"
               >
-                I agree to receive institutional updates from Blue Blocks Micro Research Institute. <span className="text-accent-cyan">*</span>
+                I agree to receive institutional updates from Blue Blocks Micro Research Institute. <span className="text-accent-cyan" aria-hidden="true">*</span>
               </Label>
               {errors.consent && (
-                <p className="text-red-400 text-xs">{errors.consent}</p>
+                <p id="newsletter-consent-error" role="alert" className="text-red-400 text-xs">{errors.consent}</p>
               )}
             </div>
           </div>
 
           {submitError && (
-            <div className="flex items-center gap-2 text-red-400 text-xs">
-              <AlertCircle className="w-3.5 h-3.5 flex-shrink-0" />
+            <div className="flex items-center gap-2 text-red-400 text-xs" role="alert">
+              <AlertCircle className="w-3.5 h-3.5 flex-shrink-0" aria-hidden="true" />
               <span>{submitError}</span>
             </div>
           )}
@@ -206,6 +215,7 @@ const FooterNewsletter = () => {
             <Button
               type="submit"
               disabled={submitting}
+              aria-label="Subscribe to newsletter"
               className="bg-accent-cyan hover:bg-accent-cyan/90 text-deep-ink font-medium px-6 transition-all duration-200 hover:translate-y-[-1px] hover:shadow-lg hover:shadow-accent-cyan/20 disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {submitting ? 'Submitting…' : 'Subscribe'}

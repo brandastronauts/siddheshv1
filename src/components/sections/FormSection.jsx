@@ -189,68 +189,91 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
             </div>
 
             <div className="space-y-5">
-              {fields.map((field) => (
-                <div key={field.name}>
-                  <label
-                    htmlFor={field.name}
-                    className="block text-sm font-medium text-deep-ink mb-2"
-                  >
-                    {field.label}
-                    {field.required && <span className="text-destructive ml-1">*</span>}
-                  </label>
-
-                  {field.type === 'textarea' ? (
-                    <textarea
-                      id={field.name}
-                      name={field.name}
-                      rows={4}
-                      value={formData[field.name] || ''}
-                      onChange={handleChange}
-                      className={`w-full px-4 py-3 min-h-[44px] rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-cyan transition-all ${
-                        errors[field.name] ? 'border-destructive' : 'border-border'
-                      }`}
-                      placeholder={field.placeholder || ''}
-                    />
-                  ) : field.type === 'select' ? (
-                    <select
-                      id={field.name}
-                      name={field.name}
-                      value={formData[field.name] || ''}
-                      onChange={handleChange}
-                      className={`w-full px-4 py-3 min-h-[44px] rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent-cyan transition-all ${
-                        errors[field.name] ? 'border-destructive' : 'border-border'
-                      }`}
+              {fields.map((field) => {
+                const fieldId = `form-${field.name}`;
+                const errorId = `${fieldId}-error`;
+                const hasError = !!errors[field.name];
+                const autoComplete = field.autoComplete || (
+                  field.type === 'email' ? 'email' :
+                  field.type === 'tel' ? 'tel' :
+                  field.name === 'name' || field.name === 'fullName' ? 'name' :
+                  field.name === 'organization' || field.name === 'company' || field.name === 'affiliation' ? 'organization' :
+                  'on'
+                );
+                return (
+                  <div key={field.name}>
+                    <label
+                      htmlFor={fieldId}
+                      className="block text-sm font-medium text-deep-ink mb-2"
                     >
-                      <option value="">Select an option</option>
-                      {field.options?.map((option, idx) => {
-                        const optionValue = typeof option === 'string' ? option : option.value;
-                        const optionLabel = typeof option === 'string' ? option : option.label;
-                        return (
-                          <option key={idx} value={optionValue}>
-                            {optionLabel}
-                          </option>
-                        );
-                      })}
-                    </select>
-                  ) : (
-                    <input
-                      type={field.type}
-                      id={field.name}
-                      name={field.name}
-                      value={formData[field.name] || ''}
-                      onChange={handleChange}
-                      className={`w-full px-4 py-3 min-h-[44px] rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-cyan transition-all ${
-                        errors[field.name] ? 'border-destructive' : 'border-border'
-                      }`}
-                      placeholder={field.placeholder || ''}
-                    />
-                  )}
+                      {field.label}
+                      {field.required && <span className="text-destructive ml-1" aria-hidden="true">*</span>}
+                    </label>
 
-                  {errors[field.name] && (
-                    <p className="mt-2 text-sm text-destructive">{errors[field.name]}</p>
-                  )}
-                </div>
-              ))}
+                    {field.type === 'textarea' ? (
+                      <textarea
+                        id={fieldId}
+                        name={field.name}
+                        rows={4}
+                        value={formData[field.name] || ''}
+                        onChange={handleChange}
+                        autoComplete={autoComplete}
+                        aria-required={field.required ? 'true' : 'false'}
+                        aria-invalid={hasError ? 'true' : 'false'}
+                        aria-describedby={hasError ? errorId : undefined}
+                        className={`w-full px-4 py-3 min-h-[44px] rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-cyan transition-all ${
+                          hasError ? 'border-destructive' : 'border-border'
+                        }`}
+                        placeholder={field.placeholder || ''}
+                      />
+                    ) : field.type === 'select' ? (
+                      <select
+                        id={fieldId}
+                        name={field.name}
+                        value={formData[field.name] || ''}
+                        onChange={handleChange}
+                        aria-required={field.required ? 'true' : 'false'}
+                        aria-invalid={hasError ? 'true' : 'false'}
+                        aria-describedby={hasError ? errorId : undefined}
+                        className={`w-full px-4 py-3 min-h-[44px] rounded-lg border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent-cyan transition-all ${
+                          hasError ? 'border-destructive' : 'border-border'
+                        }`}
+                      >
+                        <option value="">Select an option</option>
+                        {field.options?.map((option, idx) => {
+                          const optionValue = typeof option === 'string' ? option : option.value;
+                          const optionLabel = typeof option === 'string' ? option : option.label;
+                          return (
+                            <option key={idx} value={optionValue}>
+                              {optionLabel}
+                            </option>
+                          );
+                        })}
+                      </select>
+                    ) : (
+                      <input
+                        type={field.type || 'text'}
+                        id={fieldId}
+                        name={field.name}
+                        value={formData[field.name] || ''}
+                        onChange={handleChange}
+                        autoComplete={autoComplete}
+                        aria-required={field.required ? 'true' : 'false'}
+                        aria-invalid={hasError ? 'true' : 'false'}
+                        aria-describedby={hasError ? errorId : undefined}
+                        className={`w-full px-4 py-3 min-h-[44px] rounded-lg border bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent-cyan transition-all ${
+                          hasError ? 'border-destructive' : 'border-border'
+                        }`}
+                        placeholder={field.placeholder || ''}
+                      />
+                    )}
+
+                    {hasError && (
+                      <p id={errorId} role="alert" className="mt-2 text-sm text-destructive">{errors[field.name]}</p>
+                    )}
+                  </div>
+                );
+              })}
             </div>
 
             {submitError && (
