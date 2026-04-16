@@ -75,6 +75,7 @@ const PageShell = ({ children }) => {
         canonicalUrl: meta.canonical,
         ogImage: openGraph?.image || twitter?.image,
         ogType: openGraph?.type || 'website',
+        robots: meta.robots,
         jsonLdNodes: pageNodes,
       };
     }
