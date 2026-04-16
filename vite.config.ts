@@ -155,6 +155,14 @@ function prerenderSchemasPlugin() {
           `<link rel="canonical" href="${canonical}" />`
         );
 
+        // Replace robots meta if explicitly set (e.g., noindex for /terms, /sitemap)
+        if (meta?.robots) {
+          html = html.replace(
+            /<meta name="robots" content="[^"]*" \/>/,
+            `<meta name="robots" content="${escHtml(meta.robots)}" />`
+          );
+        }
+
         // Replace OG url to match canonical
         html = html.replace(
           /(<meta property="og:url" content=")[^"]*(")/,

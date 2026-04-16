@@ -1,78 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core -->
-  <url><loc>https://research.blueblocks.in/</loc></url>
-  <url><loc>https://research.blueblocks.in/the-institute</loc></url>
-  <url><loc>https://research.blueblocks.in/methodology</loc></url>
-  <url><loc>https://research.blueblocks.in/publications</loc></url>
-  <url><loc>https://research.blueblocks.in/governance</loc></url>
-  <url><loc>https://research.blueblocks.in/collaborate</loc></url>
-  <url><loc>https://research.blueblocks.in/newsroom</loc></url>
-  <url><loc>https://research.blueblocks.in/contact</loc></url>
+  <!-- Homepage -->
+  <url><loc>https://research.blueblocks.in/</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
 
-  <!-- Governance -->
-  <url><loc>https://research.blueblocks.in/governance/ethics</loc></url>
-  <url><loc>https://research.blueblocks.in/governance/standards</loc></url>
-  <url><loc>https://research.blueblocks.in/governance/compliance</loc></url>
-  <url><loc>https://research.blueblocks.in/governance/our-standards</loc></url>
+  <!-- Core hubs (priority 0.9) -->
+  <url><loc>https://research.blueblocks.in/the-institute</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://research.blueblocks.in/methodology</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://research.blueblocks.in/publications</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://research.blueblocks.in/patents</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://research.blueblocks.in/newsroom</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://research.blueblocks.in/team</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
-  <!-- Methodology -->
-  <url><loc>https://research.blueblocks.in/methodology/innovation</loc></url>
-  <url><loc>https://research.blueblocks.in/methodology/limitations</loc></url>
-  <url><loc>https://research.blueblocks.in/methodology/tools</loc></url>
+  <!-- Flagship publications & patents (priority 0.8) -->
+  <url><loc>https://research.blueblocks.in/publications/iran-war-case-study</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.blueblocks.in/publications/flipside-case-study</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.blueblocks.in/publications/saparya-imf-case-study</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.blueblocks.in/publications/in-space-authorization-letter</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.blueblocks.in/patents/automated-security-uav</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.blueblocks.in/patents/borehole-rescue-system</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.blueblocks.in/patents/contactless-delivery-system</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.blueblocks.in/patents/autonomous-medical-assistance-system</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.blueblocks.in/patents/autonomous-health-monitoring-system</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.blueblocks.in/newsroom/dispatch/iran-crisis-study-press-release</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.blueblocks.in/newsroom/dispatch/isro-payload-authorization</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.blueblocks.in/newsroom/coverage/nobel-peace-center</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.blueblocks.in/proceedings/oslo-2026</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://research.blueblocks.in/technical-briefs/sbb-1</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
-  <!-- Publications -->
-  <url><loc>https://research.blueblocks.in/publications/in-space-authorization-letter</loc></url>
-  <url><loc>https://research.blueblocks.in/publications/saparya-imf-case-study</loc></url>
-  <url><loc>https://research.blueblocks.in/publications/iran-war-case-study</loc></url>
-  <url><loc>https://research.blueblocks.in/publications/flipside-case-study</loc></url>
-  <url><loc>https://research.blueblocks.in/publications/citation-standards</loc></url>
-  <url><loc>https://research.blueblocks.in/publications/data</loc></url>
-  <url><loc>https://research.blueblocks.in/publications/glossary</loc></url>
+  <!-- Team profiles, governance, methodology subpages, books (priority 0.7) -->
+  <url><loc>https://research.blueblocks.in/team/pavan-goyal</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/team/munira-hussain</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/team/adolescent-research-cohort</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/governance/team/dr-sreemoyee-chakraborty</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/governance/team/dr-shobha-ediga</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/governance/team/sandhya-rao-m</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/governance/team/sruthi-matta</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/governance/team/sreedhar-reddy-boddu</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/governance/team/vinay-shyam-donakanti</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/books</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/books/lining-the-nest</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/downloads</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/collaborate</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/governance</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/governance/ethics</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/governance/standards</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/governance/compliance</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/governance/our-standards</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/methodology/innovation</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/methodology/limitations</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/methodology/tools</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/publications/citation-standards</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/publications/data</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/publications/glossary</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/presentations/marrakesh-human-capital</loc><lastmod>2026-04-16</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/newsroom/updates/iit-hyderabad-advisory</loc><lastmod>2026-04-16</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/newsroom/updates/utility-patent-4421</loc><lastmod>2026-04-16</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://research.blueblocks.in/newsroom/updates/visiting-scholars-2026</loc><lastmod>2026-04-16</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
 
-  <!-- Patents -->
-  <url><loc>https://research.blueblocks.in/patents</loc></url>
-  <url><loc>https://research.blueblocks.in/patents/automated-security-uav</loc></url>
-  <url><loc>https://research.blueblocks.in/patents/borehole-rescue-system</loc></url>
-  <url><loc>https://research.blueblocks.in/patents/contactless-delivery-system</loc></url>
-  <url><loc>https://research.blueblocks.in/patents/autonomous-medical-assistance-system</loc></url>
-  <url><loc>https://research.blueblocks.in/patents/autonomous-health-monitoring-system</loc></url>
+  <!-- Utility / legal (priority 0.4) -->
+  <url><loc>https://research.blueblocks.in/privacy</loc><lastmod>2026-04-16</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://research.blueblocks.in/terms</loc><lastmod>2026-04-16</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://research.blueblocks.in/faq</loc><lastmod>2026-04-16</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://research.blueblocks.in/contact</loc><lastmod>2026-04-16</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
 
-  <!-- Books -->
-  <url><loc>https://research.blueblocks.in/books</loc></url>
-  <url><loc>https://research.blueblocks.in/books/lining-the-nest</loc></url>
-
-  <!-- Team -->
-  <url><loc>https://research.blueblocks.in/team</loc></url>
-  <url><loc>https://research.blueblocks.in/team/pavan-goyal</loc></url>
-  <url><loc>https://research.blueblocks.in/team/munira-hussain</loc></url>
-  <url><loc>https://research.blueblocks.in/team/adolescent-research-cohort</loc></url>
-  <url><loc>https://research.blueblocks.in/governance/team/dr-sreemoyee-chakraborty</loc></url>
-  <url><loc>https://research.blueblocks.in/governance/team/dr-shobha-ediga</loc></url>
-  <url><loc>https://research.blueblocks.in/governance/team/sandhya-rao-m</loc></url>
-  <url><loc>https://research.blueblocks.in/governance/team/sruthi-matta</loc></url>
-  <url><loc>https://research.blueblocks.in/governance/team/sreedhar-reddy-boddu</loc></url>
-  <url><loc>https://research.blueblocks.in/governance/team/vinay-shyam-donakanti</loc></url>
-
-  <!-- Downloads -->
-  <url><loc>https://research.blueblocks.in/downloads</loc></url>
-
-  <!-- Technical / Presentations / Proceedings -->
-  <url><loc>https://research.blueblocks.in/technical-briefs/sbb-1</loc></url>
-  <url><loc>https://research.blueblocks.in/presentations/marrakesh-human-capital</loc></url>
-  <url><loc>https://research.blueblocks.in/proceedings/oslo-2026</loc></url>
-
-  <!-- Newsroom -->
-  <url><loc>https://research.blueblocks.in/newsroom/dispatch/isro-payload-authorization</loc></url>
-  <url><loc>https://research.blueblocks.in/newsroom/dispatch/iran-crisis-study-press-release</loc></url>
-  <url><loc>https://research.blueblocks.in/newsroom/coverage/nobel-peace-center</loc></url>
-  <url><loc>https://research.blueblocks.in/newsroom/updates/iit-hyderabad-advisory</loc></url>
-  <url><loc>https://research.blueblocks.in/newsroom/updates/utility-patent-4421</loc></url>
-  <url><loc>https://research.blueblocks.in/newsroom/updates/visiting-scholars-2026</loc></url>
-
-  <!-- Legal & Utility -->
-  <url><loc>https://research.blueblocks.in/privacy</loc></url>
-  <url><loc>https://research.blueblocks.in/terms</loc></url>
-  <url><loc>https://research.blueblocks.in/sitemap</loc></url>
-  <url><loc>https://research.blueblocks.in/faq</loc></url>
+  <!-- HTML sitemap (priority 0.1) -->
+  <url><loc>https://research.blueblocks.in/sitemap</loc><lastmod>2026-04-16</lastmod><changefreq>yearly</changefreq><priority>0.1</priority></url>
 </urlset>

@@ -19,12 +19,13 @@ const SEO = ({
   twitter,
   article,
   citation,
+  robots,
 }) => {
   const location = useLocation();
   const canonical = canonicalUrl || `${BASE_URL}${location.pathname}`;
   const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
 
-  const robotsContent = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
+  const robotsContent = robots || 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1';
 
   const twitterCard = twitter?.card || 'summary_large_image';
   const twitterTitle = twitter?.title || title || SITE_NAME;
