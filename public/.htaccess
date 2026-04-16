@@ -8,6 +8,12 @@ DirectorySlash Off
   RewriteEngine On
   RewriteBase /
 
+  # ── Strip ALL query parameters from homepage — 301 to clean "/" ──
+  # Prevents ?SA=, ?utm_source=, ?ref=, etc. from being treated as duplicate pages.
+  RewriteCond %{QUERY_STRING} .+
+  RewriteCond %{REQUEST_URI} ^/$
+  RewriteRule ^$ / [R=301,L,QSD]
+
   # ── Hard 404s for legacy / malformed URLs (must come BEFORE any redirects) ──
   # Any .shtml file (legacy blueblocks.in extensions — never existed on this domain)
   RewriteRule \.shtml$ - [R=404,L]
