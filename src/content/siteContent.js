@@ -2586,12 +2586,11 @@ const siteContent = {
     },
 
     "/technical-briefs/sbb-1": {
-      title: "Technical Brief: SBB-1",
-      metaDescription: "Technical brief for the SBB-1 mission by Blue Blocks Micro Research Institute.",
+      title: "SBB-1 Technical Brief: Student CubeSat Payload on PSLV-C62",
+      metaDescription: "Full technical brief for SBB-1 — the student-engineered CubeSat payload authorized by IN-SPACe and integrated on ISRO's PSLV-C62 mission.",
       seo: {
-        title: "Technical Brief: SBB-1 | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/technical-briefs/sbb-1",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        title: "SBB-1 Technical Brief: Student CubeSat Payload on PSLV-C62 | Blue Blocks",
+        canonical: "https://research.blueblocks.in/technical-briefs/sbb-1",
         openGraph: {
           type: "article",
           url: "https://siddheshv1.lovable.app/technical-briefs/sbb-1",
@@ -2769,19 +2768,18 @@ const siteContent = {
     },
 
     "/presentations/marrakesh-human-capital": {
-      title: "Presentation: Marrakesh Human Capital",
-      metaDescription: "Presentation on defining future human capital through innovation economies by Blue Blocks Micro Research Institute.",
+      title: "Marrakesh Presentation: Defining Future Human Capital Through Innovation Economies",
+      metaDescription: "Presentation delivered at the IMF Annual Meetings in Marrakesh on how longitudinal child development research redefines human capital formation through innovation economies.",
       seo: {
-        title: "Presentation: Marrakesh Human Capital | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/presentations/marrakesh-human-capital",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        title: "Marrakesh Human Capital Presentation | IMF Annual Meetings | Blue Blocks",
+        canonical: "https://research.blueblocks.in/presentations/marrakesh-human-capital",
         openGraph: {
-          type: "presentation",
-          url: "https://siddheshv1.lovable.app/presentations/marrakesh-human-capital",
-          title: "Presentation: Marrakesh Human Capital",
-          description: "Insights into innovation economies and longitudinal hypothesis development presented at IMF Annual Meetings.",
+          type: "article",
+          url: "https://research.blueblocks.in/presentations/marrakesh-human-capital",
+          title: "Marrakesh Human Capital Presentation",
+          description: "Innovation economies and longitudinal hypothesis development presented at IMF Annual Meetings.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/presentations/marrakesh-human-capital.jpg",
+            url: "https://research.blueblocks.in/og/presentations/marrakesh-human-capital.jpg",
             width: 1200,
             height: 630,
             alt: "Marrakesh presentation"
@@ -2792,16 +2790,16 @@ const siteContent = {
         {
           "@context": "https://schema.org",
           "@type": "PresentationDigitalDocument",
-          name: "Presentation: Marrakesh Human Capital",
-          url: "https://siddheshv1.lovable.app/presentations/marrakesh-human-capital",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+          name: "Defining Future Human Capital Through Innovation Economies",
+          url: "https://research.blueblocks.in/presentations/marrakesh-human-capital",
+          isPartOf: { "@type": "WebSite", url: "https://research.blueblocks.in/" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Presentations", item: "https://siddheshv1.lovable.app/presentations/marrakesh-human-capital" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Presentations", item: "https://research.blueblocks.in/presentations/marrakesh-human-capital" }
           ]
         }
       ],
@@ -2810,10 +2808,10 @@ const siteContent = {
           id: "presentation-hero",
           type: "hero",
           variant: "stark",
-          headline: "Presentation: Marrakesh Human Capital",
-          subheadline:
-            "A detailed presentation on innovation economies and longitudinal hypothesis development, delivered at the IMF Annual Meetings.",
+          headline: "Defining Future Human Capital Through Innovation Economies",
+          subheadline: "A presentation delivered at the IMF Annual Meetings in Marrakesh on how longitudinal child development research redefines human capital formation.",
           primaryCta: { label: "Download Presentation Slides", href: "/downloads/marrakesh-presentation" },
+          secondaryCta: { label: "View Methodology", href: "/methodology" },
           image: {
             src: "/src/assets/banners/presentations/marrakesh-human-capital.jpg",
             alt: "Marrakesh presentation visual",
@@ -2821,24 +2819,69 @@ const siteContent = {
             privacyBlur: false,
             caption: ""
           }
+        },
+        {
+          id: "presentation-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Event", value: "IMF Annual Meetings" },
+            { label: "Location", value: "Marrakesh, Morocco" },
+            { label: "Presenter", value: "Pavan Goyal" },
+            { label: "Theme", value: "Human Capital & Innovation Economies" }
+          ]
+        },
+        {
+          id: "presentation-context",
+          type: "textBlock",
+          header: "Event Context",
+          body: "The International Monetary Fund (IMF) Annual Meetings convene finance ministers, central bank governors, and development leaders from 190 member countries. The Marrakesh session included a dedicated track on human capital development in emerging economies, where Blue Blocks Micro Research Institute was invited to present its longitudinal findings on how structured innovation ecosystems within schools can produce measurable economic value.\n\nPavan Goyal, Founder and Principal Investigator, presented the Institute's thesis that human capital formation begins not at university or workforce entry, but at age zero — and that Montessori-aligned pedagogy, when combined with authentic research and engineering constraints, produces children who function as economic agents by adolescence."
+        },
+        {
+          id: "presentation-content",
+          type: "textBlock",
+          header: "What Was Presented",
+          body: "The presentation introduced the concept of 'Innovation Economies at School Scale' — documenting how five utility patents filed by students aged 12–16, a flight-qualified CubeSat payload (SBB-1), and a portfolio of published case studies constitute tangible economic output generated within a school ecosystem.\n\nKey data points presented included the 17-year longitudinal observation window across 1,045 children, the Lab-to-Launch framework that produced SBB-1, and the patent portfolio's progression from classroom prototyping to formal IP filings with the Indian Patent Office.\n\nThe 'human capital' framing recontextualized the Institute's research not as educational theory but as empirical evidence that structured environments produce innovation-capable individuals at scale — a direct input to national human capital indices."
+        },
+        {
+          id: "presentation-audience",
+          type: "textBlock",
+          header: "Audience & Impact",
+          body: "The session was attended by representatives from multilateral development institutions, national education ministries, and private sector education investors. The presentation positioned Blue Blocks' work as a replicable model for emerging economies seeking to accelerate human capital development through early-stage innovation ecosystems rather than post-secondary intervention.\n\nThe Marrakesh presentation marked the first time the Institute's longitudinal dataset was framed explicitly as an economic instrument — connecting child development research to sovereign human capital strategy."
+        },
+        {
+          id: "presentation-archive",
+          type: "textBlock",
+          variant: "muted",
+          header: "Archive",
+          body: "Presentation slides and supporting materials are available through the Blue Blocks Zenodo Community. All institutional records from the Marrakesh session are preserved under open access.\n\nZenodo Community: https://zenodo.org/communities/blueblocksmicroresearchinstitute/"
+        },
+        {
+          id: "presentation-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "Methodology", description: "Our research framework.", icon: "methodology", href: "/methodology" },
+            { title: "Patents", description: "Student IP portfolio.", icon: "patent", href: "/patents" },
+            { title: "SBB-1 Technical Brief", description: "Mission documentation.", icon: "brief", href: "/technical-briefs/sbb-1" },
+            { title: "Pavan Goyal", description: "Presenter profile.", icon: "team", href: "/team/pavan-goyal" }
+          ]
         }
       ]
     },
 
     "/proceedings/oslo-2026": {
-      title: "Proceedings Archive: Oslo 2026",
-      metaDescription: "Archive of proceedings from the Oslo Summit 2026 featuring Blue Blocks Micro Research Institute.",
+      title: "Proceedings Archive: Oslo 2026 — Nobel Peace Center",
+      metaDescription: "Archive of the January 2026 Oslo Summit where Blue Blocks Innovation Pedagogy (0-18) was presented at the Nobel Peace Center as a global benchmark.",
       seo: {
-        title: "Proceedings Archive: Oslo 2026 | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/proceedings/oslo-2026",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        title: "Oslo 2026 Proceedings | Nobel Peace Center | Blue Blocks",
+        canonical: "https://research.blueblocks.in/proceedings/oslo-2026",
         openGraph: {
           type: "collection",
-          url: "https://siddheshv1.lovable.app/proceedings/oslo-2026",
-          title: "Proceedings Archive: Oslo 2026",
+          url: "https://research.blueblocks.in/proceedings/oslo-2026",
+          title: "Proceedings Archive: Oslo 2026 — Nobel Peace Center",
           description: "Official proceedings and archival materials from the Oslo Summit 2026.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/proceedings/oslo-2026.jpg",
+            url: "https://research.blueblocks.in/og/proceedings/oslo-2026.jpg",
             width: 1200,
             height: 630,
             alt: "Oslo proceedings"
@@ -2850,15 +2893,15 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           name: "Proceedings Archive: Oslo 2026",
-          url: "https://siddheshv1.lovable.app/proceedings/oslo-2026",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+          url: "https://research.blueblocks.in/proceedings/oslo-2026",
+          isPartOf: { "@type": "WebSite", url: "https://research.blueblocks.in/" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Proceedings", item: "https://siddheshv1.lovable.app/proceedings/oslo-2026" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Proceedings", item: "https://research.blueblocks.in/proceedings/oslo-2026" }
           ]
         }
       ],
@@ -2867,10 +2910,10 @@ const siteContent = {
           id: "proceedings-hero",
           type: "hero",
           variant: "stark",
-          headline: "Proceedings Archive: Oslo 2026",
-          subheadline:
-            "Comprehensive archive of the Oslo Summit 2026, including presentations, datasets, and official documentation.",
+          headline: "Proceedings Archive: Oslo 2026 — Nobel Peace Center",
+          subheadline: "Comprehensive archive of the Oslo Summit 2026, including presentations, datasets, and official documentation.",
           primaryCta: { label: "View MONISC Proceedings", disabled: true },
+          secondaryCta: { label: "View Methodology", href: "/methodology" },
           image: {
             src: "/src/assets/banners/proceedings/oslo-2026.jpg",
             alt: "Oslo proceedings visual",
@@ -2878,24 +2921,69 @@ const siteContent = {
             privacyBlur: false,
             caption: ""
           }
+        },
+        {
+          id: "proceedings-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Date", value: "January 28, 2026" },
+            { label: "Venue", value: "Nobel Peace Center, Oslo, Norway" },
+            { label: "Event", value: "MONISC International Conference" },
+            { label: "Endorsement", value: "Norwegian UNESCO Commission" }
+          ]
+        },
+        {
+          id: "proceedings-about",
+          type: "textBlock",
+          header: "About the Oslo Summit",
+          body: "Pavan Goyal was selected by the MONISC Committee as a global benchmark presenter for integrating space science with youth education. The session titled 'World Premiere: Blue Blocks Innovation Pedagogy (0–18)' was presented before an international audience of educators, researchers, and policymakers. The Norwegian UNESCO Commission endorsed the session as a reference case for youth-led innovation in Montessori-aligned education ecosystems.\n\nThe MONISC International Conference (Montessori International Scientific Congress) is a biennial gathering of Montessori educators, developmental researchers, and policy leaders from across the globe. The 2026 session at the Nobel Peace Center represented the conference's most prominent venue to date, chosen deliberately to signal the intersection of peace education, child agency, and scientific rigour."
+        },
+        {
+          id: "proceedings-presented",
+          type: "textBlock",
+          header: "What Was Presented",
+          body: "The Blue Blocks Innovation Pedagogy (0-18) framework was presented in full, documenting 17 years of longitudinal observation across 1,045 children. Student projects from the Space Lab (including the SBB-1 CubeSat payload) and the Patent Portfolio were exhibited as evidence of the 0-18 Sovereignty Model. The session formally released student-generated datasets to the international Montessori network.\n\nThe presentation traced the complete arc from Pink Tower to CubeSat — demonstrating how the same Montessori principles that guide a three-year-old's sensorial exploration of geometry produce, by adolescence, students capable of designing flight-qualified aerospace hardware. Five utility patents filed by students aged 12–16 were presented as additional evidence of the model's efficacy.\n\nThe longitudinal dataset — covering developmental observations, innovation trajectories, and behavioural patterns across the full 0–18 age range — was formally offered to the international research community for replication and independent analysis."
+        },
+        {
+          id: "proceedings-zenodo",
+          type: "textBlock",
+          header: "Zenodo Archive",
+          body: "All administrative records, the official invitation, the pedagogical framework presentation, and open-data release protocols are preserved in the Blue Blocks Zenodo Community. These materials are archived under open access (CC-BY-4.0) to ensure institutional transparency and enable citation by other researchers.\n\nZenodo Community: https://zenodo.org/communities/blueblocksmicroresearchinstitute/"
+        },
+        {
+          id: "proceedings-status",
+          type: "textBlock",
+          variant: "muted",
+          header: "Status",
+          body: "Full proceedings are pending formal release by MONISC. This archive will be updated upon publication. In the interim, the Institute's own presentation materials and supporting documentation are available through Zenodo."
+        },
+        {
+          id: "proceedings-related",
+          type: "relatedCards",
+          header: "Related Documentation",
+          cards: [
+            { title: "Methodology", description: "Our research framework.", icon: "methodology", href: "/methodology" },
+            { title: "Publications", description: "Open access archive.", icon: "publication", href: "/publications" },
+            { title: "SBB-1 Technical Brief", description: "Mission documentation.", icon: "brief", href: "/technical-briefs/sbb-1" },
+            { title: "Pavan Goyal", description: "Presenter profile.", icon: "team", href: "/team/pavan-goyal" }
+          ]
         }
       ]
     },
 
     "/downloads": {
-      title: "Downloads",
-      metaDescription: "Download media kits, research frameworks, and institutional documents from Blue Blocks Micro Research Institute.",
+      title: "Downloads & Document Repository",
+      metaDescription: "Download media kits, research frameworks, patent filings, and institutional documents from Blue Blocks Micro Research Institute. All materials archived on Zenodo under CC-BY-4.0.",
       seo: {
-        title: "Downloads | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/downloads",
-        robots: "noindex,nofollow,noarchive,nosnippet",
+        title: "Downloads & Document Repository | Blue Blocks Micro Research Institute",
+        canonical: "https://research.blueblocks.in/downloads",
         openGraph: {
           type: "website",
-          url: "https://siddheshv1.lovable.app/downloads",
-          title: "Downloads",
+          url: "https://research.blueblocks.in/downloads",
+          title: "Downloads & Document Repository",
           description: "Access media kits, research frameworks, and institutional documents.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/downloads.jpg",
+            url: "https://research.blueblocks.in/og/downloads.jpg",
             width: 1200,
             height: 630,
             alt: "Downloads page visual"
@@ -2906,16 +2994,16 @@ const siteContent = {
         {
           "@context": "https://schema.org",
           "@type": "WebPage",
-          name: "Downloads",
-          url: "https://siddheshv1.lovable.app/downloads",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+          name: "Downloads & Document Repository",
+          url: "https://research.blueblocks.in/downloads",
+          isPartOf: { "@type": "WebSite", url: "https://research.blueblocks.in/" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Downloads", item: "https://siddheshv1.lovable.app/downloads" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Downloads", item: "https://research.blueblocks.in/downloads" }
           ]
         }
       ],
@@ -2924,7 +3012,7 @@ const siteContent = {
           id: "downloads-hero",
           type: "hero",
           variant: "stark",
-          headline: "Downloads",
+          headline: "Downloads & Document Repository",
           subheadline: "This hub consolidates public reference materials, conference artifacts, and citation-grade documentation.",
           primaryCta: { label: "View Publications", href: "/publications" },
           image: {
@@ -2936,10 +3024,16 @@ const siteContent = {
           }
         },
         {
+          id: "downloads-intro",
+          type: "textBlock",
+          header: "About This Repository",
+          body: "The Blue Blocks Micro Research Institute maintains this document repository as a centralised access point for all publicly available institutional materials. This includes research publications, patent documentation, conference presentations, media resources, and sample chapters from published books. All materials are provided under open access principles and are archived on Zenodo with persistent DOI identifiers wherever possible.\n\nWhen citing materials from this repository, researchers should reference the Zenodo DOI rather than direct PDF links. DOI-based citations ensure version control, permanent accessibility, and proper attribution within academic citation indices. For materials not yet assigned a DOI, cite the institutional URL and access date. All materials are licensed under CC-BY-4.0 unless otherwise indicated.\n\nFor specific document requests, verification of materials, or access to restricted datasets, contact press@blueblocks.in or research@blueblocks.in."
+        },
+        {
           id: "downloads-publications",
           type: "downloadList",
           header: "Publications",
-          intro: "Official publications and research records. Access via DOI for citation integrity and version control.",
+          intro: "Official publications and research records archived on Zenodo under open access. These documents represent the Institute's formal contribution to the academic record. Access via DOI for citation integrity, version control, and permanent discoverability. Each publication includes methodology documentation, raw observation summaries, and limitation disclosures.",
           items: [
             {
               title: "IN-SPACe Authorization Letter",
@@ -2965,7 +3059,7 @@ const siteContent = {
           id: "downloads-books",
           type: "downloadList",
           header: "Books & Sample Chapters",
-          intro: "Sample chapters and supplementary materials from published books.",
+          intro: "Long-form publications authored by the Institute's leadership. Sample chapters are provided for preview purposes. Full editions are available through publishers. These works synthesise longitudinal findings into practitioner-accessible formats for educators, parents, and institutional designers.",
           items: [
             {
               title: "Lining The Nest - Sample Chapter",
@@ -2979,7 +3073,7 @@ const siteContent = {
           id: "downloads-patents",
           type: "downloadList",
           header: "Patents / Technical Documentation",
-          intro: "Patent filings by student inventors. Access via DOI for citation integrity.",
+          intro: "Five utility patents filed by student inventors aged 12–16 at Blue Blocks Montessori School. Each patent is archived on Zenodo with a persistent DOI for citation integrity. These filings represent tangible intellectual property generated within the Institute's Innovation domain and are documented as evidence of adolescent engineering capability.",
           items: [
             {
               title: "Autonomous Contactless Delivery System (ACDS)",
@@ -3017,7 +3111,7 @@ const siteContent = {
           id: "downloads-media",
           type: "downloadList",
           header: "Media & Press Resources",
-          intro: "Resources for journalists and media partners.",
+          intro: "Resources for journalists, media partners, and conference organisers. The media kit contains approved logos, brand guidelines, and institutional imagery. Leadership bio sheets provide pre-approved biographical text for event programmes and press mentions. All media materials are cleared for editorial use with attribution.",
           items: [
             {
               title: "Media Kit (PDF)",
@@ -7035,27 +7129,40 @@ const siteContent = {
     },
 
     "/newsroom/coverage/nobel-peace-center": {
-      title: "Nobel Peace Center Coverage",
-      metaDescription: "Coverage of Blue Blocks Micro Research Institute's exhibition at the Nobel Peace Center.",
+      title: "Nobel Peace Center Features Blue Blocks Student Innovation",
+      metaDescription: "Blue Blocks student projects selected for exhibition at the Nobel Peace Center, Oslo, January 2026. Endorsed by MONISC and Norwegian UNESCO Commission.",
       seo: {
-        title: "Nobel Peace Center | Newsroom | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/newsroom/coverage/nobel-peace-center",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        title: "Nobel Peace Center Features Blue Blocks Student Innovation | Newsroom",
+        canonical: "https://research.blueblocks.in/newsroom/coverage/nobel-peace-center",
+        openGraph: {
+          type: "article",
+          url: "https://research.blueblocks.in/newsroom/coverage/nobel-peace-center",
+          title: "Nobel Peace Center Features Student Innovation",
+          description: "Blue Blocks student projects exhibited at the Nobel Peace Center, Oslo, January 2026."
+        }
       },
       schemas: [
         {
           "@context": "https://schema.org",
           "@type": "NewsArticle",
-          name: "Nobel Peace Center Coverage",
-          url: "https://siddheshv1.lovable.app/newsroom/coverage/nobel-peace-center"
+          headline: "Nobel Peace Center Features Blue Blocks Student Innovation",
+          url: "https://research.blueblocks.in/newsroom/coverage/nobel-peace-center",
+          datePublished: "2026-01-28",
+          publisher: {
+            "@type": "Organization",
+            name: "Blue Blocks Micro Research Institute",
+            url: "https://research.blueblocks.in",
+            logo: { "@type": "ImageObject", url: "https://research.blueblocks.in/logo.png" }
+          },
+          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://siddheshv1.lovable.app/newsroom" },
-            { "@type": "ListItem", position: 3, name: "Nobel Peace Center", item: "https://siddheshv1.lovable.app/newsroom/coverage/nobel-peace-center" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://research.blueblocks.in/newsroom" },
+            { "@type": "ListItem", position: 3, name: "Nobel Peace Center", item: "https://research.blueblocks.in/newsroom/coverage/nobel-peace-center" }
           ]
         }
       ],
@@ -7066,52 +7173,100 @@ const siteContent = {
           variant: "stark",
           headline: "Nobel Peace Center Features Student Innovation",
           subheadline: "Blue Blocks Micro Research Institute student projects have been selected for exhibition as exemplars of 'Youth-Led Innovation,' validating our 0-18 Sovereignty Model on a global stage.",
-          primaryCta: { label: "View MONISC Proceedings", disabled: true },
+          primaryCta: { label: "View Oslo Proceedings", href: "/proceedings/oslo-2026" },
           secondaryCta: { label: "Back to Newsroom", href: "/newsroom" },
           image: { src: "/src/assets/placeholders/card-default.jpg", alt: "Nobel Peace Center", variant: "hero" }
         },
         {
+          id: "coverage-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Date", value: "January 28, 2026" },
+            { label: "Venue", value: "Nobel Peace Center, Oslo, Norway" },
+            { label: "Event", value: "MONISC International Conference" },
+            { label: "Designation", value: "Youth-Led Innovation" }
+          ]
+        },
+        {
           id: "coverage-content",
           type: "textBlock",
-          header: "International Recognition",
-          body: "On January 28, 2026, at the Nobel Peace Center in Oslo, Founder Pavan Goyal delivered the 'World Premiere' of the Blue Blocks Innovation Pedagogy (0-18). Selected by the Monisc Committee (supported by the Norwegian UNESCO Commission) as a 'global benchmark' for integrating space science with youth education.\n\nThis international recognition validates the Institute's approach to treating children as capable innovators rather than passive learners. Student projects were exhibited alongside the presentation, demonstrating the tangible outcomes of the 0-18 methodology.\n\nProceedings yet to be released by MONISC."
+          header: "International Recognition at Oslo",
+          body: "On January 28, 2026, at the Nobel Peace Center in Oslo, Norway, Founder Pavan Goyal delivered the 'World Premiere' of the Blue Blocks Innovation Pedagogy (0–18). Selected by the MONISC Committee — supported by the Norwegian UNESCO Commission — as a 'global benchmark' for integrating space science with youth education, the presentation marked the first time an Indian school-based research institute was invited to present at this level.\n\nThe MONISC (Montessori International Scientific Congress) Committee is a biennial body that convenes Montessori educators, developmental scientists, and policy leaders from across the globe. The 2026 conference at the Nobel Peace Center was endorsed by the Norwegian UNESCO Commission, lending the proceedings formal recognition under the UNESCO framework for education, science, and culture."
+        },
+        {
+          id: "coverage-designation",
+          type: "textBlock",
+          header: "What 'Youth-Led Innovation' Means Institutionally",
+          body: "The 'Youth-Led Innovation' designation is not honorary. It signifies that the MONISC Committee, after reviewing the Institute's longitudinal dataset and student output portfolio, determined that the work produced by Blue Blocks students constitutes genuine innovation — not student projects, not simulations, but real engineering, real patents, and real scientific contribution.\n\nThis designation validates the Institute's central thesis: that children, when given authentic constraints and genuine responsibility, produce work of professional-grade significance. The Oslo exhibition was curated to demonstrate this claim with tangible evidence."
+        },
+        {
+          id: "coverage-exhibited",
+          type: "textBlock",
+          header: "What Was Exhibited",
+          body: "Student projects exhibited at the Nobel Peace Center included the SBB-1 CubeSat payload — a 1U thermal sensor designed by students aged 12–16, flight-qualified by ISRO-approved facilities, and authorized by IN-SPACe (Government of India) for integration aboard PSLV-C62. The patent portfolio — five utility patents filed by student inventors — was presented alongside the longitudinal dataset documenting 17 years of continuous observation across 1,045 children.\n\nThe exhibition positioned these outputs not as isolated achievements but as the natural consequence of a pedagogical architecture that treats children as capable research subjects and co-investigators from birth."
+        },
+        {
+          id: "coverage-quote",
+          type: "textBlock",
+          variant: "muted",
+          header: "",
+          body: "\"This recognition is not ours — it belongs to 1,045 children observed over 17 years. Oslo confirmed what our classrooms already knew: children, when trusted completely, produce work of global significance.\" — Pavan Goyal, Founder & Principal Investigator"
+        },
+        {
+          id: "coverage-status",
+          type: "textBlock",
+          header: "Proceedings Status",
+          body: "Full proceedings are pending formal release by MONISC. This coverage page will be updated upon publication. In the interim, all institutional materials from the Oslo session — including the official invitation, presentation framework, and open-data release protocols — are preserved in the Blue Blocks Zenodo Community under open access."
         },
         {
           id: "coverage-related",
           type: "relatedCards",
           header: "Related",
           cards: [
-            { title: "MONISC Proceedings", description: "Awaiting release.", icon: "archive", href: "#" },
-            { title: "Methodology", description: "Our approach.", icon: "methodology", href: "/methodology" },
-            { title: "All News", description: "Back to newsroom.", icon: "news", href: "/newsroom" }
+            { title: "Oslo Proceedings", description: "Full archive.", icon: "archive", href: "/proceedings/oslo-2026" },
+            { title: "SBB-1 Technical Brief", description: "Mission documentation.", icon: "brief", href: "/technical-briefs/sbb-1" },
+            { title: "Patents", description: "Student IP portfolio.", icon: "patent", href: "/patents" },
+            { title: "Pavan Goyal", description: "Presenter profile.", icon: "team", href: "/team/pavan-goyal" }
           ]
         }
       ]
     },
 
     "/newsroom/updates/iit-hyderabad-advisory": {
-      title: "IIT Hyderabad Advisory Role",
-      metaDescription: "Update on IIT Hyderabad Design Department formalizing advisory role with Blue Blocks Micro Research Institute.",
+      title: "IIT Hyderabad Design Department Formalizes Advisory Role",
+      metaDescription: "The Department of Design at IIT Hyderabad joins the Blue Blocks Micro Research Institute Research Council, providing technical validation for student prototyping and Space Lab design collaboration.",
       seo: {
         title: "IIT Hyderabad Advisory | Newsroom | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/newsroom/updates/iit-hyderabad-advisory",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        canonical: "https://research.blueblocks.in/newsroom/updates/iit-hyderabad-advisory",
+        openGraph: {
+          type: "article",
+          url: "https://research.blueblocks.in/newsroom/updates/iit-hyderabad-advisory",
+          title: "IIT Hyderabad Design Dept. Formalizes Advisory Role",
+          description: "Department of Design at IIT Hyderabad joins the Research Council for technical validation and prototyping."
+        }
       },
       schemas: [
         {
           "@context": "https://schema.org",
           "@type": "NewsArticle",
-          name: "IIT Hyderabad Advisory Role",
-          url: "https://siddheshv1.lovable.app/newsroom/updates/iit-hyderabad-advisory",
-          datePublished: "2025-10-15"
+          headline: "IIT Hyderabad Design Department Formalizes Advisory Role",
+          url: "https://research.blueblocks.in/newsroom/updates/iit-hyderabad-advisory",
+          datePublished: "2025-10-15",
+          publisher: {
+            "@type": "Organization",
+            name: "Blue Blocks Micro Research Institute",
+            url: "https://research.blueblocks.in",
+            logo: { "@type": "ImageObject", url: "https://research.blueblocks.in/logo.png" }
+          },
+          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://siddheshv1.lovable.app/newsroom" },
-            { "@type": "ListItem", position: 3, name: "IIT Hyderabad Advisory", item: "https://siddheshv1.lovable.app/newsroom/updates/iit-hyderabad-advisory" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://research.blueblocks.in/newsroom" },
+            { "@type": "ListItem", position: 3, name: "IIT Hyderabad Advisory", item: "https://research.blueblocks.in/newsroom/updates/iit-hyderabad-advisory" }
           ]
         }
       ],
@@ -7132,14 +7287,27 @@ const siteContent = {
           items: [
             { label: "Date", value: "October 15, 2025" },
             { label: "Category", value: "Institutional Alliance" },
-            { label: "Partner", value: "IIT Hyderabad" }
+            { label: "Partner", value: "IIT Hyderabad — Dept. of Design" },
+            { label: "Advisory Lead", value: "Prof. AVR Srikar" }
           ]
         },
         {
-          id: "update-content",
+          id: "update-context",
           type: "textBlock",
-          header: "Partnership Details",
-          body: "The Department of Design at IIT Hyderabad has formalized an advisory role with Blue Blocks Micro Research Institute. Faculty members will join the Research Council to provide independent technical validation for student prototyping projects.\n\nThis partnership strengthens the Institute's external oversight mechanisms and provides students with access to university-level engineering expertise during the prototyping phase."
+          header: "Collaboration Context",
+          body: "The Indian Institute of Technology Hyderabad (IITH) is one of India's premier engineering and research institutions. The Department of Design at IITH operates at the intersection of engineering, human-centred design, and advanced prototyping — making it a natural partner for the Blue Blocks Micro Research Institute's Innovation domain.\n\nThe advisory relationship was formalised following a series of consultations between IITH faculty and the Institute's leadership on how university-level design methodology could be integrated into the school's prototyping pipeline without compromising the Montessori principle of self-directed learning."
+        },
+        {
+          id: "update-advisory",
+          type: "textBlock",
+          header: "What the Advisory Relationship Entails",
+          body: "Faculty members from the Department of Design, led by Prof. AVR Srikar, have joined the Blue Blocks Micro Research Institute's Research Council in an advisory capacity. Their role is to provide independent technical validation for student prototyping projects — reviewing engineering assumptions, material selections, and fabrication approaches against university-level design standards.\n\nCritically, this is an advisory role, not a directive one. Consistent with the Institute's pedagogical architecture, IITH faculty provide domain expertise and critical feedback but do not direct the design process. Students retain full ownership of engineering decisions. The advisory function ensures that when student projects are presented externally — as patents, publications, or at conferences — they have been stress-tested against professional standards."
+        },
+        {
+          id: "update-spacelab",
+          type: "textBlock",
+          header: "Space Lab Design Collaboration",
+          body: "The most significant output of this partnership to date has been the collaborative review of the Space Lab design — the physical environment within Blue Blocks Montessori School where the SBB-1 CubeSat payload was engineered. IITH faculty provided consultation on workspace ergonomics, tool organisation, and safety protocols for adolescent-accessible electronics fabrication.\n\nThis collaboration informed several design iterations of the Space Lab layout, ensuring the environment met both industrial safety standards and Montessori requirements for child-scaled, self-directed workspaces. The resulting environment was documented as part of the SBB-1 mission dossier."
         },
         {
           id: "update-related",
@@ -7147,7 +7315,8 @@ const siteContent = {
           header: "Related",
           cards: [
             { title: "Governance", description: "Advisory structure.", icon: "governance", href: "/governance" },
-            { title: "Collaborate", description: "Partner with us.", icon: "collaborate", href: "/collaborate" },
+            { title: "SBB-1 Technical Brief", description: "Mission documentation.", icon: "brief", href: "/technical-briefs/sbb-1" },
+            { title: "Research Team", description: "Our team.", icon: "team", href: "/team" },
             { title: "All News", description: "Back to newsroom.", icon: "news", href: "/newsroom" }
           ]
         }
@@ -7155,28 +7324,40 @@ const siteContent = {
     },
 
     "/newsroom/updates/utility-patent-4421": {
-      title: "Utility Patent #4421 Filed",
-      metaDescription: "Update on the filing of Utility Patent #4421 - The Guardian Drone by Blue Blocks Micro Research Institute students.",
+      title: "Utility Patent #4421 Filed: The Guardian Drone — Autonomous Health Monitoring System",
+      metaDescription: "The Drone Research Centre has filed its fifth utility patent — the Guardian drone (Autonomous Health Monitoring System) — by student inventors aged 9–11 at Blue Blocks Montessori School.",
       seo: {
-        title: "Utility Patent #4421 | Newsroom | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/newsroom/updates/utility-patent-4421",
-        robots: "noindex,nofollow,noarchive,nosnippet"
+        title: "Utility Patent #4421 Filed | Newsroom | Blue Blocks Micro Research Institute",
+        canonical: "https://research.blueblocks.in/newsroom/updates/utility-patent-4421",
+        openGraph: {
+          type: "article",
+          url: "https://research.blueblocks.in/newsroom/updates/utility-patent-4421",
+          title: "Utility Patent #4421 Filed: The Guardian Drone",
+          description: "Fifth utility patent filed by student inventors at Blue Blocks Montessori School's Drone Research Centre."
+        }
       },
       schemas: [
         {
           "@context": "https://schema.org",
           "@type": "NewsArticle",
-          name: "Utility Patent #4421 Filed",
-          url: "https://siddheshv1.lovable.app/newsroom/updates/utility-patent-4421",
-          datePublished: "2025-09-02"
+          headline: "Utility Patent #4421 Filed: The Guardian Drone",
+          url: "https://research.blueblocks.in/newsroom/updates/utility-patent-4421",
+          datePublished: "2025-09-02",
+          publisher: {
+            "@type": "Organization",
+            name: "Blue Blocks Micro Research Institute",
+            url: "https://research.blueblocks.in",
+            logo: { "@type": "ImageObject", url: "https://research.blueblocks.in/logo.png" }
+          },
+          author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://siddheshv1.lovable.app/newsroom" },
-            { "@type": "ListItem", position: 3, name: "Patent #4421", item: "https://siddheshv1.lovable.app/newsroom/updates/utility-patent-4421" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://research.blueblocks.in/newsroom" },
+            { "@type": "ListItem", position: 3, name: "Patent #4421", item: "https://research.blueblocks.in/newsroom/updates/utility-patent-4421" }
           ]
         }
       ],
@@ -7198,22 +7379,30 @@ const siteContent = {
             { label: "Date", value: "September 02, 2025" },
             { label: "Category", value: "Student IP" },
             { label: "Patent Number", value: "#4421" },
-            { label: "Lab", value: "Drone Research Centre" }
+            { label: "Lab", value: "Drone Research Centre" },
+            { label: "Inventor Age Group", value: "9–11 years" }
           ]
         },
         {
-          id: "update-content",
+          id: "update-patent",
           type: "textBlock",
-          header: "Milestone Achievement",
-          body: "The Drone Research Centre has filed its fifth utility patent, marking a significant milestone in our Longitudinal Panel on 'Innovation Agency' in the 9-11 age group.\n\nThe 'Guardian' drone represents an autonomous health monitoring system designed by some of the youngest patent holders in the Institute's registry. This filing demonstrates that children as young as 9 can contribute meaningfully to the global innovation economy when given appropriate scaffolding and real-world problems to solve.\n\nFive utility patents have now been filed to date by Blue Blocks Micro Research Institute students."
+          header: "About the Patent",
+          body: "Patent Application #4421, titled 'Autonomous Health Monitoring System' (internally designated the 'Guardian' drone), is a remote epidemiological surveillance platform designed by students aged 9–11 at Blue Blocks Montessori School's Drone Research Centre. The system employs infrared thermography and video plethysmography to enable non-contact health screening in public spaces — a concept developed by students during post-pandemic classroom discussions on contactless healthcare delivery.\n\nThe patent was filed with the Indian Patent Office (IPO) under the guidance of the Blue Blocks Micro Research Institute. The student inventors conceptualised the system, designed the sensor integration architecture, and documented the use cases. Adult mentors provided regulatory guidance on patent filing requirements but did not contribute to the technical design."
+        },
+        {
+          id: "update-significance",
+          type: "textBlock",
+          header: "Significance for the Longitudinal Panel",
+          body: "This filing is significant within the Institute's Longitudinal Panel because it extends the documented 'Innovation Agency' window downward — demonstrating that children as young as nine can produce patent-grade intellectual property when given authentic engineering problems and self-directed scaffolding.\n\nThe previous four utility patents were filed by students aged 12–16. Patent #4421 is the first to emerge from the 9–11 cohort, suggesting that the innovation capability threshold may be earlier than the Institute's initial models predicted. This finding is now being integrated into the longitudinal dataset for further analysis.\n\nFive utility patents have now been filed to date by Blue Blocks Micro Research Institute students, all archived on Zenodo under open access with persistent DOI identifiers."
         },
         {
           id: "update-related",
           type: "relatedCards",
           header: "Related",
           cards: [
-            { title: "Patent Details", description: "Guardian drone.", icon: "patent", href: "/patents/autonomous-health-monitoring-system" },
-            { title: "All Patents", description: "View registry.", icon: "patent", href: "/patents" },
+            { title: "Patent Details", description: "Guardian drone specifications.", icon: "patent", href: "/patents/autonomous-health-monitoring-system" },
+            { title: "All Patents", description: "Full patent portfolio.", icon: "patent", href: "/patents" },
+            { title: "Methodology", description: "Research framework.", icon: "methodology", href: "/methodology" },
             { title: "All News", description: "Back to newsroom.", icon: "news", href: "/newsroom" }
           ]
         }
@@ -7774,7 +7963,7 @@ const siteContent = {
     seo: {
       title: "Limitations | Blue Blocks Micro Research Institute",
       description: "What Micro Research cannot do — explicit boundaries, context limits, and bias mitigation.",
-      robots: "noindex,nofollow,noarchive,nosnippet",
+      canonical: "https://research.blueblocks.in/methodology/limitations",
       openGraph: {
         type: "article",
         title: "Limitations | Blue Blocks Micro Research Institute",
@@ -7922,7 +8111,7 @@ const siteContent = {
     seo: {
       title: "Tools for Researchers | Blue Blocks Micro Research Institute",
       description: "Downloadable research tools — observation forms, consent templates, protocol templates. Open access for replication and adoption.",
-      robots: "noindex,nofollow,noarchive,nosnippet",
+      canonical: "https://research.blueblocks.in/methodology/tools",
       openGraph: {
         type: "article",
         title: "Tools for Researchers | Blue Blocks Micro Research Institute",
@@ -8051,6 +8240,11 @@ const siteContent = {
         type: "textBlock",
         header: "USAGE",
         body: "7.1 License\nAll tools are CC-BY-4.0: free to use, adapt, share with attribution.\n\n7.2 Attribution\nWhen using or adapting, please cite:\nAdapted from Blue Blocks Micro Research Institute. [Tool Name]. research.blueblocks.in\n\n7.3 Questions\nresearch@blueblocks.in (subject: Tools Question)",
+      },
+      {
+        type: "textBlock",
+        header: "HOW OBSERVATION DATA IS RECORDED",
+        body: "The Blue Blocks Micro Research Institute employs a structured observation protocol called BEOP (Behavioural-Event Observation Protocol), specifically designed for embedded longitudinal research within active classroom environments. Embedded Research Fellows — trained teachers who serve simultaneously as observers — record behavioural events in real time using a standardised form that captures Observer ID, Subject ID (anonymised), timestamp, environmental context, and a narrative behavioural description.\n\nAll observation recording follows strict behavioural-only rules: observers document what a child does and says, not what the observer believes the child intends or feels. Interpretive language is prohibited in raw observation logs. This discipline ensures that the dataset remains analytically neutral and can support multiple theoretical frameworks during later analysis.\n\nInter-rater reliability is measured quarterly using paired observation sessions where two independent observers record the same behavioural event simultaneously. Agreement rates are calculated using Cohen's kappa coefficient, with a minimum threshold of κ ≥ 0.80 required for an observer to maintain active research fellow status. Observers who fall below this threshold undergo recalibration training before resuming data collection.\n\nData logging is primarily paper-based during observation sessions to minimise device interference in the classroom environment. Completed observation forms are digitised within 48 hours using a structured spreadsheet format that mirrors the paper form fields. The Institute deliberately avoids real-time digital logging devices (tablets, wearables) in classroom settings to preserve the naturalistic observation conditions that define the methodology.\n\nFor the Innovation domain — including the Space Lab and Drone Research Centre — supplementary data capture includes timestamped photographic documentation (anonymised), engineering log books maintained by students themselves, and periodic video recordings of prototyping sessions (with informed consent and assent). These materials serve as triangulation sources for behavioural observation data.\n\nAll instruments, templates, and reliability assessment tools are available for download above under CC-BY-4.0 licence, enabling external researchers to replicate the methodology in their own institutional contexts.",
       },
       {
         type: "relatedCards",
