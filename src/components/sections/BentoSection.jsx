@@ -1,3 +1,5 @@
+'use client'
+
 import SmartImage from '../common/SmartImage';
 import { motion } from 'framer-motion';
 import ExpandableText from '../common/ExpandableText';

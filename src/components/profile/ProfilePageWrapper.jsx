@@ -1,3 +1,5 @@
+'use client'
+
 import { lazy, Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Linkedin, Globe } from 'lucide-react';

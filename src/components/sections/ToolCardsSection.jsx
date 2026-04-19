@@ -1,3 +1,5 @@
+'use client'
+
 import { Download, FileText } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Button } from '../ui/button';

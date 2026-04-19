@@ -1,7 +1,9 @@
+'use client'
+
 import { useState } from 'react';
 import { X, ArrowRight, ExternalLink } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 /**
  * MobileExpandModal — renders a compact trigger on mobile that opens a full-screen
@@ -43,7 +45,7 @@ const MobileExpandModal = ({
       );
     }
     return (
-      <Link to={act.href} className={cls} onClick={() => setOpen(false)}>
+      <Link href={act.href} className={cls} onClick={() => setOpen(false)}>
         {act.label}
         <ArrowRight className="w-4 h-4" aria-hidden="true" />
       </Link>
@@ -151,7 +153,7 @@ const MobileExpandModal = ({
                       {relatedItems.map((item, i) => (
                         <li key={i}>
                           <Link
-                            to={item.href}
+                            href={item.href || '#'}
                             className="text-sm text-link-blue hover:text-secondary-blue flex items-center gap-1 transition-colors"
                             onClick={() => setOpen(false)}
                           >

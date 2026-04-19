@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion';
 import { Mail, Linkedin, Globe } from 'lucide-react';
 import SmartImage from '../common/SmartImage';

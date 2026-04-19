@@ -1,3 +1,5 @@
+'use client'
+
 /**
  * SectionHeading — CSS-only animated h2 for section titles.
  * Replaces motion.h2 to avoid JS-gated render delay that hurts LCP.

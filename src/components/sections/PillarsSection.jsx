@@ -1,3 +1,5 @@
+'use client'
+
 import { getIcon } from '../../lib/iconMap';
 
 const PillarsSection = ({ heading, header, items = [] }) => {

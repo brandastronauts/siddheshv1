@@ -1,3 +1,5 @@
+'use client'
+
 import ExpandableText from '../common/ExpandableText';
 
 const TimelineSection = ({ heading, header, items = [] }) => {

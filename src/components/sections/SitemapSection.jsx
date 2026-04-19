@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { Check, AlertCircle, X } from 'lucide-react';
 import { sitemapData } from '../../lib/sitemapData';
 
@@ -18,7 +20,7 @@ const SitemapSection = () => {
             <ul className="space-y-2">
               {sitemapData.core.map((item) => (
                 <li key={item.url}>
-                  <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
+                  <Link href={item.url} className="text-foreground hover:text-primary transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -30,7 +32,7 @@ const SitemapSection = () => {
             <ul className="space-y-2">
               {sitemapData.governance.map((item) => (
                 <li key={item.url}>
-                  <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
+                  <Link href={item.url} className="text-foreground hover:text-primary transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -42,7 +44,7 @@ const SitemapSection = () => {
             <ul className="space-y-2">
               {sitemapData.methodology.map((item) => (
                 <li key={item.url}>
-                  <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
+                  <Link href={item.url} className="text-foreground hover:text-primary transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -54,7 +56,7 @@ const SitemapSection = () => {
             <ul className="space-y-2">
               {sitemapData.publications.map((item) => (
                 <li key={item.url}>
-                  <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
+                  <Link href={item.url} className="text-foreground hover:text-primary transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -66,7 +68,7 @@ const SitemapSection = () => {
             <ul className="space-y-2">
               {sitemapData.patents.map((item) => (
                 <li key={item.url}>
-                  <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
+                  <Link href={item.url} className="text-foreground hover:text-primary transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -78,7 +80,7 @@ const SitemapSection = () => {
             <ul className="space-y-2">
               {sitemapData.books.map((item) => (
                 <li key={item.url}>
-                  <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
+                  <Link href={item.url} className="text-foreground hover:text-primary transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -90,7 +92,7 @@ const SitemapSection = () => {
             <ul className="space-y-2">
               {sitemapData.team.map((item) => (
                 <li key={item.url}>
-                  <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
+                  <Link href={item.url} className="text-foreground hover:text-primary transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -102,7 +104,7 @@ const SitemapSection = () => {
             <ul className="space-y-2">
               {sitemapData.downloads.map((item) => (
                 <li key={item.url}>
-                  <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
+                  <Link href={item.url} className="text-foreground hover:text-primary transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -114,7 +116,7 @@ const SitemapSection = () => {
             <ul className="space-y-2">
               {sitemapData.technical.map((item) => (
                 <li key={item.url}>
-                  <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
+                  <Link href={item.url} className="text-foreground hover:text-primary transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -126,7 +128,7 @@ const SitemapSection = () => {
             <ul className="space-y-2">
               {sitemapData.newsroom.map((item) => (
                 <li key={item.url}>
-                  <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
+                  <Link href={item.url} className="text-foreground hover:text-primary transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -138,7 +140,7 @@ const SitemapSection = () => {
             <ul className="space-y-2">
               {sitemapData.legal.map((item) => (
                 <li key={item.url}>
-                  <Link to={item.url} className="text-foreground hover:text-primary transition-colors">
+                  <Link href={item.url} className="text-foreground hover:text-primary transition-colors">
                     {item.name}
                   </Link>
                 </li>
@@ -163,7 +165,7 @@ const SitemapSection = () => {
                   <tr key={item.url} className="border-b hover:bg-muted/50">
                     <td className="py-3 px-4">{item.name}</td>
                     <td className="py-3 px-4">
-                      <Link to={item.url} className="text-primary hover:underline font-mono text-xs">
+                      <Link href={item.url} className="text-primary hover:underline font-mono text-xs">
                         {item.url}
                       </Link>
                     </td>

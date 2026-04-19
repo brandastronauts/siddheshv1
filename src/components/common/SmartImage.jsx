@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react';
 
 // Import fallback images
@@ -151,10 +153,21 @@ const defaultDimensions = {
   '3:2': { width: 600, height: 400 },
 };
 
+const toImageUrl = (value) => {
+  if (typeof value === 'string') return value;
+  if (value && typeof value === 'object' && typeof value.src === 'string') return value.src;
+  return null;
+};
+
 const resolveImageSrc = (src) => {
-  if (!src || src.trim() === '') return null;
-  if (imageMap[src]) return imageMap[src];
-  return src;
+  const normalizedSrc = toImageUrl(src);
+  if (!normalizedSrc) return null;
+
+  const trimmedSrc = normalizedSrc.trim();
+  if (!trimmedSrc) return null;
+
+  if (imageMap[trimmedSrc]) return toImageUrl(imageMap[trimmedSrc]);
+  return trimmedSrc;
 };
 
 const SmartImage = ({
@@ -171,7 +184,7 @@ const SmartImage = ({
   const [isLoaded, setIsLoaded] = useState(false);
 
   const resolvedSrc = resolveImageSrc(src);
-  const fallbackSrc = fallbackImages[variant] || fallbackImages.card;
+  const fallbackSrc = resolveImageSrc(fallbackImages[variant] || fallbackImages.card);
   const effectiveSrc = resolvedSrc || fallbackSrc;
   const showPlaceholder = !effectiveSrc || hasError;
   const aspectClass = aspectRatios[aspect] || aspectRatios['16:9'];

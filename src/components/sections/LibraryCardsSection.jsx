@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { FileText, BookOpen, Lock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ExpandableText from '../common/ExpandableText';
@@ -124,7 +126,7 @@ const LibraryCardsSection = ({ heading, header, sectionName, intro, items, cards
               </button>
             ) : cta.href ? (
               <Link
-                to={cta.href}
+                href={cta.href}
                 className="btn-primary"
               >
                 {cta.label}

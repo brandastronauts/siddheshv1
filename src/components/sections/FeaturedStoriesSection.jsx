@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import SmartImage from '../common/SmartImage';
@@ -17,7 +19,8 @@ const FeaturedStoriesSection = ({ header, layout, main, side }) => {
       );
     }
     
-    const isInternal = cta.href?.startsWith('/');
+    const ctaHref = cta.href || '#';
+    const isInternal = ctaHref.startsWith('/');
     const className = "inline-flex items-center gap-1.5 text-sm font-medium text-link-blue hover:text-accent-cyan transition-colors group";
     
     const content = (
@@ -28,9 +31,9 @@ const FeaturedStoriesSection = ({ header, layout, main, side }) => {
     );
 
     if (isInternal) {
-      return <Link to={cta.href} className={className}>{content}</Link>;
+      return <Link href={ctaHref} className={className}>{content}</Link>;
     }
-    return <a href={cta.href} className={className}>{content}</a>;
+    return <a href={ctaHref} className={className}>{content}</a>;
   };
 
   return (

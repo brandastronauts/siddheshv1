@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Clock, CheckCircle } from 'lucide-react';
 import ExpandableText from '../common/ExpandableText';
@@ -116,7 +118,7 @@ const PatentGridSection = ({ header, intro, filterNote, cards = [], patents = []
                   {card.href && (
                     <div className="mt-auto pt-2 hidden md:flex">
                       <Link
-                        to={card.href}
+                        href={card.href}
                         className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group/link"
                       >
                         View Patent

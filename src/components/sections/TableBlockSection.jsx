@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion';
 
 const TableBlockSection = ({ heading, header, intro, headers: tableHeaders = [], rows = [] }) => {

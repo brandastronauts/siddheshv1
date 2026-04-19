@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import SmartImage from '../common/SmartImage';
 import { getIcon } from '../../lib/iconMap';
@@ -341,7 +343,7 @@ export const DossierRelatedSection = ({ header, cards = [] }) => (
           {cards.map((card, i) => (
             <Link
               key={i}
-              to={card.href || '#'}
+              href={card.href || '#'}
               className="p-6 group hover:bg-surface/40 transition-colors block"
             >
               <h3 className="text-sm font-bold text-deep-ink group-hover:text-primary-navy transition-colors mb-2 tracking-[-0.01em]">

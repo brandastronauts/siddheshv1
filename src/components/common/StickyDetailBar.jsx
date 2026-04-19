@@ -1,5 +1,7 @@
+'use client'
+
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Download, ExternalLink, BookOpen, ArrowRight } from 'lucide-react';
 
 /**
@@ -56,7 +58,7 @@ const StickyDetailBar = ({ label = 'Download', href = '#', type = 'download' }) 
             {label}
           </a>
         ) : (
-          <Link to={href} className={btnClass} aria-label={label}>
+          <Link href={href} className={btnClass} aria-label={label}>
             <IconComponent className="w-4 h-4" aria-hidden="true" />
             {label}
           </Link>

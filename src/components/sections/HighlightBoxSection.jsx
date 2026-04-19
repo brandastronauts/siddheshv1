@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { ArrowRight, Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ExpandableText from '../common/ExpandableText';
@@ -59,9 +61,9 @@ const HighlightBoxSection = ({ heading, title, text, body, bullets, cta }) => {
               
               {cta && (
                 <div className="text-center">
-                  {cta.external || cta.href?.startsWith('http') ? (
+                  {(cta.path || cta.href || '#').startsWith('http') || cta.external ? (
                     <a
-                      href={cta.href}
+                      href={cta.path || cta.href || '#'}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-navy font-medium rounded-xl hover:bg-white/90 transition-all duration-200 hover:shadow-lg group"
@@ -71,7 +73,7 @@ const HighlightBoxSection = ({ heading, title, text, body, bullets, cta }) => {
                     </a>
                   ) : (
                     <Link
-                      to={cta.path || cta.href || '#'}
+                      href={cta.path || cta.href || '#'}
                       className="inline-flex items-center gap-2 px-6 py-3 bg-white text-primary-navy font-medium rounded-xl hover:bg-white/90 transition-all duration-200 hover:shadow-lg group"
                     >
                       {cta.label}

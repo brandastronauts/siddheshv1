@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { Download, FileText, FileArchive, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -78,7 +80,7 @@ const DownloadListSection = ({ heading, header, intro, items = [] }) => {
         viewport={{ once: true }}
         transition={{ delay: index * 0.05 }}
       >
-        <Link to={item.href || '#'} className={className}>
+        <Link href={item.href || '#'} className={className}>
           {content}
         </Link>
       </motion.div>

@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { ArrowRight, Calendar } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { boldifyText } from '../../lib/boldifyText';
@@ -79,7 +81,7 @@ const ListSection = ({ heading, header, sectionName, intro, items }) => {
                 
                 {item.link && (
                   <Link
-                    to={item.link}
+                    href={item.link}
                     className="flex-shrink-0 w-10 h-10 rounded-full bg-surface flex items-center justify-center group-hover:bg-accent-cyan/10 transition-colors"
                   >
                     <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-accent-cyan transition-colors" />

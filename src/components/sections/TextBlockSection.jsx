@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import ExpandableText from '../common/ExpandableText';
@@ -82,7 +84,7 @@ const TextBlockSection = ({ heading, header, sectionName, intro, content, body, 
                 </a>
               ) : (
                 <Link
-                  to={cta.href || '#'}
+                  href={cta.href || '#'}
                   className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group"
                 >
                   {cta.label}

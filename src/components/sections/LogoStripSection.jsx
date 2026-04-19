@@ -1,5 +1,6 @@
+'use client'
+
 import { motion } from 'framer-motion';
-import SmartImage from '../common/SmartImage';
 
 // Import brand logos
 import iitLogo from '@/assets/brand/iit-hyderabad-logo.png';
@@ -26,9 +27,15 @@ const logoImports = {
 const LogoStripSection = ({ heading, header, intro, logos, scrollable, style }) => {
   const title = header || heading;
   const isGreyscale = style === 'greyscale';
+
+  const normalizeImageUrl = (value) => {
+    if (typeof value === 'string') return value;
+    if (value && typeof value === 'object' && typeof value.src === 'string') return value.src;
+    return null;
+  };
   
   const resolveLogoSrc = (src) => {
-    return logoImports[src] || src;
+    return normalizeImageUrl(logoImports[src] || src);
   };
 
   return (

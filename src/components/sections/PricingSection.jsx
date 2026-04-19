@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Check } from 'lucide-react';
 
@@ -14,7 +16,8 @@ const PricingSection = ({ header, columns }) => {
       );
     }
     
-    const isInternal = cta.href?.startsWith('/');
+    const ctaHref = cta.href || '#';
+    const isInternal = ctaHref.startsWith('/');
     const className = "btn-secondary w-full justify-center";
     
     const content = (
@@ -25,9 +28,9 @@ const PricingSection = ({ header, columns }) => {
     );
 
     if (isInternal) {
-      return <Link to={cta.href} className={className}>{content}</Link>;
+      return <Link href={ctaHref} className={className}>{content}</Link>;
     }
-    return <a href={cta.href} className={className}>{content}</a>;
+    return <a href={ctaHref} className={className}>{content}</a>;
   };
 
   return (

@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { getIcon } from '../../lib/iconMap';
@@ -33,7 +35,7 @@ const RelatedCardsSection = ({ header, cards = [] }) => {
                 transition={{ delay: index * 0.1 }}
               >
                 <Link
-                  to={card.href || '#'}
+                  href={card.href || '#'}
                   className="group block bg-card rounded-xl p-6 border border-border/50 shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="flex items-center gap-4 mb-4">

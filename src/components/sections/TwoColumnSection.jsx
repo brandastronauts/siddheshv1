@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, ExternalLink, Copy, Check } from 'lucide-react';
 import { useState } from 'react';
@@ -31,9 +33,10 @@ const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, cta, c
   const renderCta = (cta) => {
     if (!cta) return null;
     
-    const isFile = /\.(pdf|zip|docx?|xlsx?|pptx?|txt|csv)$/i.test(cta.href);
-    const isInternal = cta.href?.startsWith('/') && !isFile;
-    const isExternal = cta.href?.startsWith('http') || cta.external || isFile;
+    const ctaHref = cta.href || '#';
+    const isFile = /\.(pdf|zip|docx?|xlsx?|pptx?|txt|csv)$/i.test(ctaHref);
+    const isInternal = ctaHref.startsWith('/') && !isFile;
+    const isExternal = ctaHref.startsWith('http') || cta.external || isFile;
     const isDownload = cta.download;
     const className = "inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group";
     
@@ -46,11 +49,11 @@ const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, cta, c
     );
 
     if (isInternal) {
-      return <Link to={cta.href} className={className}>{content}</Link>;
+      return <Link href={ctaHref} className={className}>{content}</Link>;
     }
     return (
       <a 
-        href={cta.href} 
+        href={ctaHref} 
         className={className} 
         target={isExternal ? "_blank" : undefined} 
         rel={isExternal ? "noopener noreferrer" : undefined}
@@ -188,7 +191,7 @@ const TwoColumnSection = ({ header, intro, left = {}, right = {}, footer, cta, c
             {panel.profiles.map((profile, i) => (
               <Link
                 key={i}
-                to={profile.href || '#'}
+                href={profile.href || '#'}
                 className="flex items-center gap-3 p-3 rounded-lg hover:bg-white transition-colors group"
               >
                 <div className="w-10 h-10 rounded-full overflow-hidden bg-border/50 flex-shrink-0">

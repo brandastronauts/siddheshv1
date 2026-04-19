@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { getIcon } from '../../lib/iconMap';
@@ -88,7 +90,7 @@ const TierCardsSection = ({ heading, header, intro, tiers = [] }) => {
                       </a>
                     ) : (
                       <Link
-                        to={tier.cta.href || '#'}
+                        href={tier.cta.href || '#'}
                         className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group"
                       >
                         {tier.cta.label}

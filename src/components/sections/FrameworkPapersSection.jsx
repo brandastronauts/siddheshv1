@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion';
 import { FileText, ExternalLink } from 'lucide-react';
 import { boldifyText } from '../../lib/boldifyText';
