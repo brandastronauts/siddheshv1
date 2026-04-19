@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SmartImage from '../common/SmartImage';
@@ -16,7 +18,7 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
   const hasImages = cardData.some(card => card.image);
 
   const renderAction = (action) => {
-    if (!action) return null;
+    if (!action || !action.label) return null;
     
     if (action.disabled) {
       return (
@@ -26,12 +28,13 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
       );
     }
     
-    const isExternal = action.external || action.href?.startsWith('http');
+    const actionHref = (typeof action.href === 'string' && action.href.trim()) || '#';
+    const isExternal = action.external || actionHref.startsWith('http');
     
     if (isExternal) {
       return (
         <a
-          href={action.href}
+          href={actionHref}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group"
@@ -44,7 +47,7 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
 
     return (
       <Link
-        to={action.href || '#'}
+        href={actionHref}
         className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group"
       >
         {action.label}

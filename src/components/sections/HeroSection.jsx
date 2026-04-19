@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { boldifyText } from '../../lib/boldifyText';
 
@@ -35,8 +37,8 @@ const HeroCta = ({ ctaData, isPrimary }) => {
   if (!ctaData) return null;
 
   const isExternal = ctaData.external;
-  const isAnchor = ctaData.href?.startsWith('#');
-  const href = ctaData.href || ctaData.path;
+  const href = ctaData.href || ctaData.path || '#';
+  const isAnchor = href.startsWith('#');
   const isDisabled = ctaData.disabled;
 
   if (isPrimary) {
@@ -47,7 +49,7 @@ const HeroCta = ({ ctaData, isPrimary }) => {
         </span>
       );
     }
-    const className = "btn-primary group text-white";
+    const className = "btn-primary group !text-white hover:!text-white focus:!text-white active:!text-white visited:!text-white";
     const content = (
       <>
         {ctaData.label}
@@ -65,7 +67,7 @@ const HeroCta = ({ ctaData, isPrimary }) => {
     if (isAnchor) {
       return <a href={href} onClick={createAnchorClickHandler(href)} className={className}>{content}</a>;
     }
-    return <Link to={href} className={className}>{content}</Link>;
+    return <Link href={href} className={className}>{content}</Link>;
   }
 
   // Secondary button
@@ -77,7 +79,7 @@ const HeroCta = ({ ctaData, isPrimary }) => {
     );
   }
 
-  const className = "inline-flex items-center justify-center gap-2 px-6 py-3 font-medium rounded-xl border-2 border-white/40 text-white bg-white/10 backdrop-blur-sm transition-all duration-200 hover:bg-white/20 hover:border-white/60 group";
+  const className = "inline-flex items-center justify-center gap-2 px-6 py-3 font-medium rounded-xl border-2 border-white/40 !text-white hover:!text-white focus:!text-white active:!text-white visited:!text-white bg-white/10 backdrop-blur-sm transition-all duration-200 hover:bg-white/20 hover:border-white/60 group";
   const content = (
     <>
       {ctaData.label}
@@ -91,7 +93,7 @@ const HeroCta = ({ ctaData, isPrimary }) => {
   if (isAnchor) {
     return <a href={href} onClick={createAnchorClickHandler(href)} className={className}>{content}</a>;
   }
-  return <Link to={href} className={className}>{content}</Link>;
+  return <Link href={href} className={className}>{content}</Link>;
 };
 
 const HeroSection = ({ 

@@ -1,6 +1,7 @@
+'use client'
+
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import SmartImage from '../common/SmartImage';
+import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 // Import visual evidence images
@@ -20,6 +21,14 @@ const imageImports = {
   '/src/assets/placeholders/visual-evidence/drone-frame-1.jpg': droneFrame,
   '/src/assets/placeholders/visual-evidence/field-soil-1.jpg': fieldSoil,
 };
+
+const resolveImageUrl = (image) => {
+  if (typeof image === 'string') return image;
+  if (image && typeof image === 'object' && typeof image.src === 'string') return image.src;
+  return null;
+};
+
+const FALLBACK_IMAGE = labBench;
 
 const GalleryGridSection = ({ 
   sectionName,
@@ -75,7 +84,7 @@ const GalleryGridSection = ({
             </motion.p>
           )}
 
-          {cta && (
+          {typeof cta?.href === 'string' && cta.href.trim() && (
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -83,10 +92,10 @@ const GalleryGridSection = ({
               transition={{ delay: 0.15 }}
             >
               <Link 
-                to={cta.href} 
+                href={cta.href} 
                 className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors"
               >
-                {cta.label}
+                {cta.label || 'Learn more'}
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </motion.div>
@@ -97,9 +106,11 @@ const GalleryGridSection = ({
         {items.length > 0 && (
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
             {items.map((item, index) => {
-              const resolvedSrc = item.image?.src 
-                ? (imageImports[item.image.src] || item.image.src) 
-                : null;
+              const mappedSrc = item.image?.src
+                ? (imageImports[item.image.src] || item.image.src)
+                : item.image;
+              const resolvedSrc = resolveImageUrl(mappedSrc);
+              const fallbackSrc = resolveImageUrl(FALLBACK_IMAGE);
 
               return (
                 <motion.div
@@ -123,6 +134,11 @@ const GalleryGridSection = ({
                           className={`w-full h-full object-cover transition-all duration-500 grayscale group-hover:grayscale-0 group-hover:scale-[1.02] ${
                             item.image?.privacyBlur ? 'privacy-blur' : ''
                           }`}
+                          onError={(e) => {
+                            if (fallbackSrc && e.currentTarget.src !== fallbackSrc) {
+                              e.currentTarget.src = fallbackSrc;
+                            }
+                          }}
                         />
                       ) : (
                         <div className="w-full h-full bg-surface flex items-center justify-center">

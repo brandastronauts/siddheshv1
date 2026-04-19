@@ -1,5 +1,7 @@
+'use client'
+
 import { useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, ExternalLink, Shield, BookOpen, Scale, FlaskConical, ClipboardCheck, Sparkles } from 'lucide-react';
 import { getIcon } from '../lib/iconMap';
@@ -160,22 +162,31 @@ const RichBody = ({ body, variant = 'default' }) => {
    ═══════════════════════════════════════════════════════════════════ */
 
 const LightHero = ({ headline, subheadline, badge }) => (
-  <section className="relative overflow-hidden bg-surface min-h-[280px] md:min-h-[340px] flex items-center">
-    {/* Gradient orbs */}
-    <div className="absolute top-[-80px] left-[-60px] w-[300px] h-[300px] rounded-full opacity-[0.07]" style={{ background: 'radial-gradient(circle, hsl(195 100% 46%), transparent 70%)' }} />
-    <div className="absolute bottom-[-60px] right-[-40px] w-[250px] h-[250px] rounded-full opacity-[0.05]" style={{ background: 'radial-gradient(circle, hsl(240 93% 25%), transparent 70%)' }} />
-    
-    {/* Grid pattern */}
-    <div className="absolute inset-0 pattern-grid opacity-[0.08]" />
-    
-    {/* Bottom gradient fade */}
-    <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-background to-transparent" />
+  <section className="relative overflow-hidden min-h-[320px] md:min-h-[420px] flex items-center">
+    <div className="absolute inset-0 z-0">
+      <div
+        className="absolute inset-0"
+        style={{
+          backgroundImage: 'url(/ui/site-banner.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'linear-gradient(180deg, rgba(2,18,46,0.76) 0%, rgba(3,34,84,0.58) 52%, rgba(2,20,52,0.72) 100%)',
+        }}
+      />
+    </div>
 
-    <div className="container-grid relative z-10 pt-16 pb-12 md:pt-20 md:pb-14">
-      <div className="max-w-3xl mx-auto text-center">
+    <div className="container-grid relative z-10 py-16 md:py-20">
+      <div className="max-w-4xl mx-auto text-center">
         {badge && (
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4 }}>
-            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest rounded-full bg-primary-navy/8 text-primary-navy border border-primary-navy/10 mb-5">
+            <span className="inline-flex items-center gap-1.5 px-4 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] rounded-full bg-white/10 text-white border border-white/20 mb-5 backdrop-blur-sm">
               {badge === 'Governance' && <Shield className="w-3 h-3" />}
               {badge === 'Methodology' && <FlaskConical className="w-3 h-3" />}
               {badge === 'Legal' && <Scale className="w-3 h-3" />}
@@ -187,7 +198,8 @@ const LightHero = ({ headline, subheadline, badge }) => (
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.05 }}
-          className="text-h1 md:text-display-2 text-deep-ink mb-5 text-balance"
+          className="font-bold mb-4 text-balance leading-[1.12] text-white text-[34px] md:text-[56px]"
+          style={{ textShadow: '0 2px 18px rgba(0,0,0,0.55)' }}
         >
           {headline}
         </motion.h1>
@@ -196,7 +208,8 @@ const LightHero = ({ headline, subheadline, badge }) => (
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="text-body-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed"
+            className="text-base md:text-lg text-white/85 max-w-2xl mx-auto leading-relaxed"
+            style={{ textShadow: '0 2px 14px rgba(0,0,0,0.45)' }}
           >
             {subheadline}
           </motion.p>
@@ -346,7 +359,7 @@ const TextSection = ({ id, heading, sectionName, body, cta, isFirst, isAlt }) =>
                 </a>
               ) : (
                 <Link
-                  to={cta.href || '#'}
+                  href={cta.href || '#'}
                   className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium rounded-xl bg-primary-navy/5 text-primary-navy hover:bg-primary-navy/10 border border-primary-navy/10 transition-all duration-200 group"
                 >
                   {cta.label}

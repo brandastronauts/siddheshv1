@@ -1,4 +1,6 @@
-import { Link } from 'react-router-dom';
+'use client'
+
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { getIcon } from '../../lib/iconMap';
@@ -9,18 +11,28 @@ import patentsImg from '@/assets/cards/patents-card.jpg';
 import booksImg from '@/assets/cards/books-card.jpg';
 import teamImg from '@/assets/cards/team-card.jpg';
 import downloadsImg from '@/assets/cards/downloads-card.jpg';
+import methodologyImg from '@/assets/placeholders/labs/protocol-notes.jpg';
+import governanceImg from '@/assets/placeholders/labs/avionics.jpg';
 
 // Image map to override content-provided URLs with local assets
 const cardImageMap = {
   'Publications': publicationsImg,
   'Patents': patentsImg,
   'Books': booksImg,
+  'Methodology': methodologyImg,
+  'Governance': governanceImg,
   'Team': teamImg,
   'Downloads': downloadsImg,
 };
 
 // Fallback image for failed loads
 const FALLBACK_IMAGE = publicationsImg;
+
+const resolveImageUrl = (image) => {
+  if (typeof image === 'string') return image;
+  if (image && typeof image === 'object' && typeof image.src === 'string') return image.src;
+  return null;
+};
 
 // Default fallback cards for Explore Registries
 const defaultRegistryCards = [
@@ -72,16 +84,18 @@ const ButtonCardsSection = ({ heading, header, items, cards, footerNote }) => {
     const buttonData = item.button;
     if (!buttonData) return null;
 
-    const isAnchor = buttonData.href?.startsWith('#');
-    const isExternal = buttonData.href?.startsWith('http');
+    const buttonHref = (typeof buttonData.href === 'string' && buttonData.href.trim()) || '/';
+    const buttonLabel = buttonData.label || 'Learn more';
+    const isAnchor = buttonHref.startsWith('#');
+    const isExternal = buttonHref.startsWith('http');
 
     if (isAnchor) {
       return (
         <a
-          href={buttonData.href}
+          href={buttonHref}
           className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group/btn"
         >
-          {buttonData.label}
+          {buttonLabel}
           <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
         </a>
       );
@@ -90,12 +104,12 @@ const ButtonCardsSection = ({ heading, header, items, cards, footerNote }) => {
     if (isExternal) {
       return (
         <a
-          href={buttonData.href}
+          href={buttonHref}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group/btn"
         >
-          {buttonData.label}
+          {buttonLabel}
           <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
         </a>
       );
@@ -103,10 +117,10 @@ const ButtonCardsSection = ({ heading, header, items, cards, footerNote }) => {
 
     return (
       <Link
-        to={buttonData.href || '/'}
+        href={buttonHref}
         className="inline-flex items-center gap-2 text-sm font-medium text-link-blue hover:text-secondary-blue transition-colors group/btn"
       >
-        {buttonData.label}
+        {buttonLabel}
         <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
       </Link>
     );
@@ -134,6 +148,8 @@ const ButtonCardsSection = ({ heading, header, items, cards, footerNote }) => {
             const cardTitle = item.headline || item.title;
             const cardBody = item.body || item.description;
             const cardImage = cardImageMap[cardTitle] || item.image;
+            const cardImageSrc = resolveImageUrl(cardImage);
+            const fallbackImageSrc = resolveImageUrl(FALLBACK_IMAGE);
             
             return (
               <motion.div
@@ -145,26 +161,27 @@ const ButtonCardsSection = ({ heading, header, items, cards, footerNote }) => {
                 className="bg-card rounded-xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 border border-border/50 group flex flex-col"
               >
                 {/* Square image container */}
-                {cardImage && (
+                {cardImageSrc && (
                   <div className="aspect-square w-full overflow-hidden">
                     <img
-                      src={cardImage}
+                      src={cardImageSrc}
                       alt={cardTitle || 'Registry image'}
                       width={400}
                       height={400}
                       className="w-full h-full object-cover grayscale transition-all duration-300 group-hover:scale-105 group-hover:grayscale-0"
                       loading="lazy"
                       referrerPolicy="no-referrer"
-                      crossOrigin="anonymous"
                       onError={(e) => {
-                        e.currentTarget.src = FALLBACK_IMAGE;
+                        if (fallbackImageSrc && e.currentTarget.src !== fallbackImageSrc) {
+                          e.currentTarget.src = fallbackImageSrc;
+                        }
                       }}
                     />
                   </div>
                 )}
                 
                 <div className="p-5 flex flex-col flex-1">
-                  {IconComponent && !cardImage && (
+                  {IconComponent && !cardImageSrc && (
                     <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-accent-cyan/10 flex items-center justify-center group-hover:bg-accent-cyan/20 transition-colors mb-4">
                       <IconComponent className="w-6 h-6 text-accent-cyan" />
                     </div>

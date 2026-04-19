@@ -1,28 +1,31 @@
-import { useState, useRef, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown } from 'lucide-react';
-import { nav, brand } from '../../content/siteCore';
-// Logo served from /public as static assets for optimal LCP discovery
-import { getIcon } from '../../lib/iconMap';
+'use client'
+
+import { useState, useRef, useEffect } from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Menu, X, ChevronDown } from 'lucide-react'
+import { nav, brand } from '../../content/siteCore'
+import { getIcon } from '../../lib/iconMap'
 
 /* ─── Desktop Dropdown ─────────────────────────────────────────────── */
-const DesktopDropdown = ({ item, isActive, location }) => {
-  const [open, setOpen] = useState(false);
-  const timeout = useRef(null);
-  const id = `dropdown-${item.path.replace(/\//g, '-')}`;
+const DesktopDropdown = ({ item, isActive }) => {
+  const [open, setOpen] = useState(false)
+  const timeout = useRef(null)
+  const pathname = usePathname()
+  const id = `dropdown-${item.path.replace(/\//g, '-')}`
 
-  const enter = () => { clearTimeout(timeout.current); setOpen(true); };
-  const leave = () => { timeout.current = setTimeout(() => setOpen(false), 150); };
+  const enter = () => { clearTimeout(timeout.current); setOpen(true) }
+  const leave = () => { timeout.current = setTimeout(() => setOpen(false), 150) }
 
-  useEffect(() => () => clearTimeout(timeout.current), []);
+  useEffect(() => () => clearTimeout(timeout.current), [])
 
-  const childActive = item.children?.some(c => location.pathname === c.path);
+  const childActive = item.children?.some((c) => pathname === c.path)
 
   return (
     <div className="relative" onMouseEnter={enter} onMouseLeave={leave}>
       <Link
-        to={item.path}
+        href={item.path}
         aria-expanded={open}
         aria-controls={id}
         onFocus={enter}
@@ -33,7 +36,7 @@ const DesktopDropdown = ({ item, isActive, location }) => {
             : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
         }`}
       >
-        {(() => { const I = getIcon(item.icon); return I ? <I className="w-3.5 h-3.5" aria-hidden="true" /> : null; })()}
+        {(() => { const I = getIcon(item.icon); return I ? <I className="w-3.5 h-3.5" aria-hidden="true" /> : null })()}
         {item.label}
         <ChevronDown className={`w-3 h-3 transition-transform ${open ? 'rotate-180' : ''}`} aria-hidden="true" />
       </Link>
@@ -49,13 +52,13 @@ const DesktopDropdown = ({ item, isActive, location }) => {
             transition={{ duration: 0.15 }}
             className="absolute top-full left-0 mt-1 min-w-[200px] bg-popover border border-border rounded-lg shadow-lg p-1 z-50"
           >
-            {item.children.map(child => {
-              const ChildIcon = getIcon(child.icon);
-              const active = location.pathname === child.path;
+            {item.children.map((child) => {
+              const ChildIcon = getIcon(child.icon)
+              const active = pathname === child.path
               return (
                 <Link
                   key={child.path}
-                  to={child.path}
+                  href={child.path}
                   role="menuitem"
                   onClick={() => setOpen(false)}
                   className={`flex items-center gap-2 px-3 py-2.5 text-sm rounded-md transition-colors ${
@@ -67,27 +70,28 @@ const DesktopDropdown = ({ item, isActive, location }) => {
                   {ChildIcon && <ChildIcon className="w-3.5 h-3.5" aria-hidden="true" />}
                   {child.label}
                 </Link>
-              );
+              )
             })}
           </motion.div>
         )}
       </AnimatePresence>
     </div>
-  );
-};
+  )
+}
 
 /* ─── Mobile Accordion Item ────────────────────────────────────────── */
-const MobileAccordionItem = ({ item, location, closeMobileMenu }) => {
-  const [expanded, setExpanded] = useState(false);
-  const id = `mobile-dd-${item.path.replace(/\//g, '-')}`;
-  const isActive = location.pathname === item.path;
-  const childActive = item.children?.some(c => location.pathname === c.path);
+const MobileAccordionItem = ({ item, closeMobileMenu }) => {
+  const [expanded, setExpanded] = useState(false)
+  const pathname = usePathname()
+  const id = `mobile-dd-${item.path.replace(/\//g, '-')}`
+  const isActive = pathname === item.path
+  const childActive = item.children?.some((c) => pathname === c.path)
 
   return (
     <div>
       <div className="flex items-center">
         <Link
-          to={item.path}
+          href={item.path}
           onClick={closeMobileMenu}
           className={`flex-1 px-4 py-3 text-base font-medium rounded-xl transition-all duration-200 flex items-center gap-2 ${
             isActive || childActive
@@ -95,7 +99,7 @@ const MobileAccordionItem = ({ item, location, closeMobileMenu }) => {
               : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
           }`}
         >
-          {(() => { const I = getIcon(item.icon); return I ? <I className="w-4 h-4" aria-hidden="true" /> : null; })()}
+          {(() => { const I = getIcon(item.icon); return I ? <I className="w-4 h-4" aria-hidden="true" /> : null })()}
           {item.label}
         </Link>
         <button
@@ -121,13 +125,13 @@ const MobileAccordionItem = ({ item, location, closeMobileMenu }) => {
             className="overflow-hidden"
           >
             <div className="pl-6 pb-1 space-y-1">
-              {item.children.map(child => {
-                const ChildIcon = getIcon(child.icon);
-                const active = location.pathname === child.path;
+              {item.children.map((child) => {
+                const ChildIcon = getIcon(child.icon)
+                const active = pathname === child.path
                 return (
                   <Link
                     key={child.path}
-                    to={child.path}
+                    href={child.path}
                     role="menuitem"
                     onClick={closeMobileMenu}
                     className={`flex items-center gap-2 px-4 py-3 text-base font-medium rounded-xl transition-colors min-h-[44px] ${
@@ -139,30 +143,29 @@ const MobileAccordionItem = ({ item, location, closeMobileMenu }) => {
                     {ChildIcon && <ChildIcon className="w-4 h-4" aria-hidden="true" />}
                     {child.label}
                   </Link>
-                );
+                )
               })}
             </div>
           </motion.div>
         )}
       </AnimatePresence>
     </div>
-  );
-};
+  )
+}
 
 /* ─── Header ───────────────────────────────────────────────────────── */
 const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const location = useLocation();
-  // nav and brand imported from siteCore
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
 
-  const closeMobileMenu = () => setMobileMenuOpen(false);
+  const closeMobileMenu = () => setMobileMenuOpen(false)
 
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="container-grid">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2.5 group">
+          <a href="/" className="flex items-center gap-2.5 group">
             <div className="h-12 md:h-14 w-12 md:w-14 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-border/20">
               <img
                 src="/logo.png"
@@ -183,31 +186,46 @@ const Header = () => {
                 Micro Research Institute
               </span>
             </div>
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden xl:flex items-center gap-1" aria-label="Main navigation">
             {nav.map((item) => {
-              const isActive = location.pathname === item.path;
+              const isActive = pathname === item.path
 
               if (item.children?.length) {
-                return <DesktopDropdown key={item.path} item={item} isActive={isActive} location={location} />;
+                return <DesktopDropdown key={item.path} item={item} isActive={isActive} />
               }
 
               return (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 inline-flex items-center gap-1.5 ${
-                    isActive
-                      ? 'text-primary-navy bg-primary-navy/5'
-                      : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
-                  }`}
-                >
-                  {(() => { const I = getIcon(item.icon); return I ? <I className="w-3.5 h-3.5" aria-hidden="true" /> : null; })()}
-                  {item.label}
-                </Link>
-              );
+                item.path === '/' ? (
+                  <a
+                    key={item.path}
+                    href="/"
+                    className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 inline-flex items-center gap-1.5 ${
+                      isActive
+                        ? 'text-primary-navy bg-primary-navy/5'
+                        : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
+                    }`}
+                  >
+                    {(() => { const I = getIcon(item.icon); return I ? <I className="w-3.5 h-3.5" aria-hidden="true" /> : null })()}
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.path}
+                    href={item.path}
+                    className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 inline-flex items-center gap-1.5 ${
+                      isActive
+                        ? 'text-primary-navy bg-primary-navy/5'
+                        : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
+                    }`}
+                  >
+                    {(() => { const I = getIcon(item.icon); return I ? <I className="w-3.5 h-3.5" aria-hidden="true" /> : null })()}
+                    {item.label}
+                  </Link>
+                )
+              )
             })}
           </nav>
 
@@ -245,28 +263,43 @@ const Header = () => {
                       <MobileAccordionItem
                         key={item.path}
                         item={item}
-                        location={location}
                         closeMobileMenu={closeMobileMenu}
                       />
-                    );
+                    )
                   }
 
-                  const isActive = location.pathname === item.path;
+                  const isActive = pathname === item.path
                   return (
-                    <Link
-                      key={item.path}
-                      to={item.path}
-                      onClick={closeMobileMenu}
-                      className={`px-4 py-3 text-base font-medium rounded-xl transition-all duration-200 flex items-center gap-2 min-h-[44px] ${
-                        isActive
-                          ? 'text-primary-navy bg-primary-navy/5'
-                          : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
-                      }`}
-                    >
-                      {(() => { const I = getIcon(item.icon); return I ? <I className="w-4 h-4" aria-hidden="true" /> : null; })()}
-                      {item.label}
-                    </Link>
-                  );
+                    item.path === '/' ? (
+                      <a
+                        key={item.path}
+                        href="/"
+                        onClick={closeMobileMenu}
+                        className={`px-4 py-3 text-base font-medium rounded-xl transition-all duration-200 flex items-center gap-2 min-h-[44px] ${
+                          isActive
+                            ? 'text-primary-navy bg-primary-navy/5'
+                            : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
+                        }`}
+                      >
+                        {(() => { const I = getIcon(item.icon); return I ? <I className="w-4 h-4" aria-hidden="true" /> : null })()}
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link
+                        key={item.path}
+                        href={item.path}
+                        onClick={closeMobileMenu}
+                        className={`px-4 py-3 text-base font-medium rounded-xl transition-all duration-200 flex items-center gap-2 min-h-[44px] ${
+                          isActive
+                            ? 'text-primary-navy bg-primary-navy/5'
+                            : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
+                        }`}
+                      >
+                        {(() => { const I = getIcon(item.icon); return I ? <I className="w-4 h-4" aria-hidden="true" /> : null })()}
+                        {item.label}
+                      </Link>
+                    )
+                  )
                 })}
               </div>
             </nav>
@@ -274,7 +307,7 @@ const Header = () => {
         )}
       </AnimatePresence>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
