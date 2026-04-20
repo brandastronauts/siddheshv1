@@ -1,5 +1,2 @@
 User-agent: *
-Allow: /
-Disallow: /api/
-
-Sitemap: https://research.blueblocks.in/sitemap.xml
+Disallow: /
