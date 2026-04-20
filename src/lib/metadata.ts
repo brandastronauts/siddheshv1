@@ -35,7 +35,6 @@ export function buildPageMetadata(page: any, pathname: string): Metadata {
     title: title || undefined,
     description,
     keywords: page?.seo?.keywords,
-    alternates: { canonical },
     openGraph: {
       title: title || SITE_NAME,
       description,

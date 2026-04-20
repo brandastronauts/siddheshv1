@@ -26,14 +26,16 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
+    nocache: true,
     googleBot: {
-      index: true,
-      follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      index: false,
+      follow: false,
+      noimageindex: true,
       'max-video-preview': -1,
+      'max-image-preview': 'none',
+      'max-snippet': -1,
     },
   },
 }
