@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
-import siteContent from '@/content/siteContent'
-import { buildPageMetadata } from '@/lib/metadata'
+import { getPageMetadata } from '@/lib/metadata'
 import GenericPageContent from '@/components/GenericPageContent'
 
 type Props = { params: Promise<{ slug: string }> }
@@ -8,10 +7,11 @@ type Props = { params: Promise<{ slug: string }> }
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const pathname = `/presentations/${slug}`
-  return buildPageMetadata((siteContent as any).pages[pathname], pathname)
+  return getPageMetadata(pathname)
 }
 
 export default async function Page({ params }: Props) {
   const { slug } = await params
   return <GenericPageContent pathname={`/presentations/${slug}`} />
 }
+

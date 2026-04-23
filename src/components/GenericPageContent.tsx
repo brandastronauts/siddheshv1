@@ -1,8 +1,8 @@
-import siteContent from '@/content/siteContent'
 import SectionRenderer from '@/components/SectionRenderer'
 import StickyDetailBar from '@/components/common/StickyDetailBar'
 import StandardPageTemplate from '@/components/StandardPageTemplate'
 import ProfilePageClient from '@/components/ProfilePageClient'
+import { getPageContent } from '@/lib/cms/pageContent'
 
 const DETAIL_PATTERNS = [
   /^\/publications\/.+/,
@@ -25,8 +25,11 @@ interface Props {
   badge?: string
 }
 
-export default function GenericPageContent({ pathname, template = false, badge }: Props) {
-  const page = (siteContent as any).pages?.[pathname]
+export default async function GenericPageContent({ pathname, template = false, badge }: Props) {
+  const page = await getPageContent(pathname)
+  const schemaNodes = Array.isArray(page?.schemas)
+    ? page.schemas.filter((node: any) => node && typeof node === 'object')
+    : []
 
   const isDetailPage = DETAIL_PATTERNS.some((p) => p.test(pathname))
   const isProfilePage = PROFILE_PATTERNS.some((p) => p.test(pathname))
@@ -51,6 +54,13 @@ export default function GenericPageContent({ pathname, template = false, badge }
 
   return (
     <>
+      {schemaNodes.map((node: any, index: number) => (
+        <script
+          key={`jsonld-${index}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(node) }}
+        />
+      ))}
       <SectionRenderer sections={page.sections} />
       {isDetailPage && stickyCta && (
         <StickyDetailBar
@@ -61,4 +71,8 @@ export default function GenericPageContent({ pathname, template = false, badge }
       )}
     </>
   )
+}
+
+function serializeJsonLd(node: Record<string, unknown>) {
+  return JSON.stringify(node).replace(/</g, '\\u003c')
 }

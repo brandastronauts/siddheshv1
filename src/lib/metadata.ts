@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { getPageContent } from '@/lib/cms/pageContent'
 
 const BASE_URL = 'https://research.blueblocks.in'
 const SITE_NAME = 'Blue Blocks Micro Research Institute'
@@ -35,6 +36,9 @@ export function buildPageMetadata(page: any, pathname: string): Metadata {
     title: title || undefined,
     description,
     keywords: page?.seo?.keywords,
+    alternates: {
+      canonical,
+    },
     openGraph: {
       title: title || SITE_NAME,
       description,
@@ -49,4 +53,9 @@ export function buildPageMetadata(page: any, pathname: string): Metadata {
       images: [page?.seo?.twitter?.image || ogImage],
     },
   }
+}
+
+export async function getPageMetadata(pathname: string): Promise<Metadata> {
+  const page = await getPageContent(pathname)
+  return buildPageMetadata(page, pathname)
 }

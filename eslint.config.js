@@ -5,6 +5,9 @@ const compat = new FlatCompat({
 })
 
 module.exports = [
+  {
+    ignores: ['src/payload/payload-types.ts'],
+  },
   ...compat.extends('next/core-web-vitals'),
   {
     rules: {
