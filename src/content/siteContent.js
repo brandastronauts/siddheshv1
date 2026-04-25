@@ -9370,6 +9370,20 @@ const FIELDS_MAP = {
     publicationStatus: 'Published',
     publicationType: 'Case Study',
   },
+  '/publications/resilience-workshop': {
+    doi: '10.5281/zenodo.19344032',
+    zenodoUrl: 'https://doi.org/10.5281/zenodo.19344032',
+    publishedDate: '2026-04-07',
+    authors: [
+      { name: 'Blue Blocks Micro Research Institute', type: 'organization' },
+      { name: 'Chakraborty, Sreemoyee' },
+      { name: 'Bose, Poulomi' },
+      { name: 'Khare, Kaustav' },
+    ],
+    researchDomains: ['Adolescent Research', 'Resilience', 'Erdkinder', 'STEM Education'],
+    publicationStatus: 'Published',
+    publicationType: 'Case Study',
+  },
   '/technical-briefs/sbb-1': {
     doi: '',
     publishedDate: '2024-12-30',
