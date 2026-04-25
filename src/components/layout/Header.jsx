@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown } from 'lucide-react'
-import { nav, brand } from '../../content/siteCore'
+import { nav as staticNav, brand as staticBrand } from '../../content/siteCore'
 import { getIcon } from '../../lib/iconMap'
 
 /* ─── Desktop Dropdown ─────────────────────────────────────────────── */
@@ -61,6 +61,7 @@ const DesktopDropdown = ({ item, isActive }) => {
                   href={child.path}
                   role="menuitem"
                   onClick={() => setOpen(false)}
+                  {...(child.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                   className={`flex items-center gap-2 px-3 py-2.5 text-sm rounded-md transition-colors ${
                     active
                       ? 'text-primary-navy bg-primary-navy/5 font-medium'
@@ -93,6 +94,7 @@ const MobileAccordionItem = ({ item, closeMobileMenu }) => {
         <Link
           href={item.path}
           onClick={closeMobileMenu}
+          {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
           className={`flex-1 px-4 py-3 text-base font-medium rounded-xl transition-all duration-200 flex items-center gap-2 ${
             isActive || childActive
               ? 'text-primary-navy bg-primary-navy/5'
@@ -134,6 +136,7 @@ const MobileAccordionItem = ({ item, closeMobileMenu }) => {
                     href={child.path}
                     role="menuitem"
                     onClick={closeMobileMenu}
+                    {...(child.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                     className={`flex items-center gap-2 px-4 py-3 text-base font-medium rounded-xl transition-colors min-h-[44px] ${
                       active
                         ? 'text-primary-navy bg-primary-navy/5'
@@ -154,7 +157,9 @@ const MobileAccordionItem = ({ item, closeMobileMenu }) => {
 }
 
 /* ─── Header ───────────────────────────────────────────────────────── */
-const Header = () => {
+const Header = ({ nav: navProp, brand: brandProp }) => {
+  const nav = navProp || staticNav
+  const brand = brandProp || staticBrand
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
 
@@ -183,7 +188,7 @@ const Header = () => {
                 Blue Blocks
               </span>
               <span className="text-[9px] md:text-[10px] font-semibold text-muted-foreground uppercase tracking-[0.08em]">
-                Micro Research Institute
+                {brand.headerTagline}
               </span>
             </div>
           </a>
@@ -197,34 +202,22 @@ const Header = () => {
                 return <DesktopDropdown key={item.path} item={item} isActive={isActive} />
               }
 
-              return (
-                item.path === '/' ? (
-                  <a
-                    key={item.path}
-                    href="/"
-                    className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 inline-flex items-center gap-1.5 ${
-                      isActive
-                        ? 'text-primary-navy bg-primary-navy/5'
-                        : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
-                    }`}
-                  >
-                    {(() => { const I = getIcon(item.icon); return I ? <I className="w-3.5 h-3.5" aria-hidden="true" /> : null })()}
-                    {item.label}
-                  </a>
-                ) : (
-                  <Link
-                    key={item.path}
-                    href={item.path}
-                    className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 inline-flex items-center gap-1.5 ${
-                      isActive
-                        ? 'text-primary-navy bg-primary-navy/5'
-                        : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
-                    }`}
-                  >
-                    {(() => { const I = getIcon(item.icon); return I ? <I className="w-3.5 h-3.5" aria-hidden="true" /> : null })()}
-                    {item.label}
-                  </Link>
-                )
+              const linkProps = item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {}
+              const className = `px-4 py-2 text-sm font-medium rounded-lg transition-all duration-200 inline-flex items-center gap-1.5 ${
+                isActive
+                  ? 'text-primary-navy bg-primary-navy/5'
+                  : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
+              }`
+              const icon = (() => { const I = getIcon(item.icon); return I ? <I className="w-3.5 h-3.5" aria-hidden="true" /> : null })()
+
+              return item.path === '/' ? (
+                <a key={item.path} href="/" className={className}>
+                  {icon}{item.label}
+                </a>
+              ) : (
+                <Link key={item.path} href={item.path} className={className} {...linkProps}>
+                  {icon}{item.label}
+                </Link>
               )
             })}
           </nav>
@@ -269,36 +262,22 @@ const Header = () => {
                   }
 
                   const isActive = pathname === item.path
-                  return (
-                    item.path === '/' ? (
-                      <a
-                        key={item.path}
-                        href="/"
-                        onClick={closeMobileMenu}
-                        className={`px-4 py-3 text-base font-medium rounded-xl transition-all duration-200 flex items-center gap-2 min-h-[44px] ${
-                          isActive
-                            ? 'text-primary-navy bg-primary-navy/5'
-                            : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
-                        }`}
-                      >
-                        {(() => { const I = getIcon(item.icon); return I ? <I className="w-4 h-4" aria-hidden="true" /> : null })()}
-                        {item.label}
-                      </a>
-                    ) : (
-                      <Link
-                        key={item.path}
-                        href={item.path}
-                        onClick={closeMobileMenu}
-                        className={`px-4 py-3 text-base font-medium rounded-xl transition-all duration-200 flex items-center gap-2 min-h-[44px] ${
-                          isActive
-                            ? 'text-primary-navy bg-primary-navy/5'
-                            : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
-                        }`}
-                      >
-                        {(() => { const I = getIcon(item.icon); return I ? <I className="w-4 h-4" aria-hidden="true" /> : null })()}
-                        {item.label}
-                      </Link>
-                    )
+                  const linkProps = item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {}
+                  const className = `px-4 py-3 text-base font-medium rounded-xl transition-all duration-200 flex items-center gap-2 min-h-[44px] ${
+                    isActive
+                      ? 'text-primary-navy bg-primary-navy/5'
+                      : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
+                  }`
+                  const icon = (() => { const I = getIcon(item.icon); return I ? <I className="w-4 h-4" aria-hidden="true" /> : null })()
+
+                  return item.path === '/' ? (
+                    <a key={item.path} href="/" onClick={closeMobileMenu} className={className}>
+                      {icon}{item.label}
+                    </a>
+                  ) : (
+                    <Link key={item.path} href={item.path} onClick={closeMobileMenu} className={className} {...linkProps}>
+                      {icon}{item.label}
+                    </Link>
                   )
                 })}
               </div>

@@ -4,6 +4,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
 import ChunkLoadRecovery from '@/components/ChunkLoadRecovery'
+import { getHeaderNav, getBrandData, getFooterData } from '@/lib/cms/navigation'
 import '../index.css'
 
 const BASE_URL = 'https://research.blueblocks.in'
@@ -40,7 +41,13 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const [nav, brand, footerData] = await Promise.all([
+    getHeaderNav(),
+    getBrandData(),
+    getFooterData(),
+  ])
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -54,9 +61,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="min-h-screen flex flex-col">
             <ChunkLoadRecovery />
             <ScrollToTop />
-            <Header />
+            <Header nav={nav} brand={brand} />
             <main className="flex-1">{children}</main>
-            <Footer />
+            <Footer nav={nav} brand={brand} footerData={footerData} />
           </div>
         </Providers>
       </body>

@@ -91,9 +91,11 @@ export interface Config {
   fallbackLocale: null;
   globals: {
     'site-settings': SiteSetting;
+    'footer-settings': FooterSetting;
   };
   globalsSelect: {
     'site-settings': SiteSettingsSelect<false> | SiteSettingsSelect<true>;
+    'footer-settings': FooterSettingsSelect<false> | FooterSettingsSelect<true>;
   };
   locale: null;
   user: User;
@@ -2560,7 +2562,7 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   createdAt?: T;
 }
 /**
- * Global brand and navigation details used site-wide.
+ * Global brand, navigation, and contact details used site-wide.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "site-settings".
@@ -2570,22 +2572,144 @@ export interface SiteSetting {
   siteName?: string | null;
   headerTagline?: string | null;
   /**
-   * Shown in the website footer.
+   * Shown below the logo in the website footer.
    */
   ethicsTagline?: string | null;
   logo?: (string | null) | Media;
   researchEmail?: string | null;
   pressEmail?: string | null;
   /**
-   * Use drag and drop to reorder navigation items.
+   * Drag to reorder. Each item can have sub-menu children.
    */
   navigation?:
     | {
         label: string;
+        /**
+         * Use /path for internal links, or https://... for external.
+         */
         path: string;
+        /**
+         * Optional icon shown next to the label.
+         */
+        icon?:
+          | (
+              | ''
+              | 'home'
+              | 'institute'
+              | 'methodology'
+              | 'publication'
+              | 'governance'
+              | 'collaborate'
+              | 'newsroom'
+              | 'contact'
+              | 'lightbulb'
+              | 'alert'
+              | 'download'
+              | 'database'
+              | 'bookOpen'
+              | 'team'
+              | 'lock'
+              | 'scale'
+              | 'clipboardList'
+              | 'badgeCheck'
+              | 'microscope'
+              | 'globe'
+              | 'newspaper'
+              | 'archive'
+            )
+          | null;
+        external?: boolean | null;
+        /**
+         * Add dropdown items under this navigation link.
+         */
+        children?:
+          | {
+              label: string;
+              path: string;
+              icon?:
+                | (
+                    | ''
+                    | 'home'
+                    | 'institute'
+                    | 'methodology'
+                    | 'publication'
+                    | 'governance'
+                    | 'collaborate'
+                    | 'newsroom'
+                    | 'contact'
+                    | 'lightbulb'
+                    | 'alert'
+                    | 'download'
+                    | 'database'
+                    | 'bookOpen'
+                    | 'team'
+                    | 'lock'
+                    | 'scale'
+                    | 'clipboardList'
+                    | 'badgeCheck'
+                    | 'microscope'
+                    | 'globe'
+                    | 'newspaper'
+                    | 'archive'
+                  )
+                | null;
+              external?: boolean | null;
+              id?: string | null;
+            }[]
+          | null;
         id?: string | null;
       }[]
     | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * Manage footer social links, governance column, utility bar, and copyright.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "footer-settings".
+ */
+export interface FooterSetting {
+  id: string;
+  /**
+   * Shown in the footer brand column. Drag to reorder.
+   */
+  socialLinks?:
+    | {
+        platform: 'facebook' | 'instagram' | 'youtube' | 'linkedin' | 'whatsapp' | 'twitter' | 'other';
+        url: string;
+        label: string;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Links in the Governance column on the right side of the footer.
+   */
+  governanceLinks?:
+    | {
+        label: string;
+        path: string;
+        external?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Small links shown below the navigation columns.
+   */
+  utilityLinks?:
+    | {
+        label: string;
+        path: string;
+        external?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
+  schoolLink?: string | null;
+  schoolLinkLabel?: string | null;
+  /**
+   * Leave blank to use: © {year} {Site Name}. All rights reserved.
+   */
+  copyrightText?: string | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -2605,8 +2729,55 @@ export interface SiteSettingsSelect<T extends boolean = true> {
     | {
         label?: T;
         path?: T;
+        icon?: T;
+        external?: T;
+        children?:
+          | T
+          | {
+              label?: T;
+              path?: T;
+              icon?: T;
+              external?: T;
+              id?: T;
+            };
         id?: T;
       };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "footer-settings_select".
+ */
+export interface FooterSettingsSelect<T extends boolean = true> {
+  socialLinks?:
+    | T
+    | {
+        platform?: T;
+        url?: T;
+        label?: T;
+        id?: T;
+      };
+  governanceLinks?:
+    | T
+    | {
+        label?: T;
+        path?: T;
+        external?: T;
+        id?: T;
+      };
+  utilityLinks?:
+    | T
+    | {
+        label?: T;
+        path?: T;
+        external?: T;
+        id?: T;
+      };
+  schoolLink?: T;
+  schoolLinkLabel?: T;
+  copyrightText?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

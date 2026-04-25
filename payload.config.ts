@@ -7,6 +7,7 @@ import sharp from 'sharp'
 import { Media } from './src/payload/collections/Media.js'
 import { PageOverrides } from './src/payload/collections/PageOverrides.js'
 import { Users } from './src/payload/collections/Users.js'
+import { FooterSettings } from './src/payload/globals/FooterSettings.js'
 import { SiteSettings } from './src/payload/globals/SiteSettings.js'
 
 const filename = fileURLToPath(import.meta.url)
@@ -28,7 +29,7 @@ export default buildConfig({
     },
   },
   collections: [Users, Media, PageOverrides],
-  globals: [SiteSettings],
+  globals: [SiteSettings, FooterSettings],
   graphQL: {
     disable: true,
   },

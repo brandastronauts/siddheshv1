@@ -2,9 +2,10 @@
 
 import Link from 'next/link'
 import { Mail, ArrowUpRight, FileText, Lightbulb, BookOpen, Users, Download, Lock, ScrollText, MapPin, Linkedin } from 'lucide-react'
-import { nav, brand } from '../../content/siteCore'
+import { nav as staticNav, brand as staticBrand } from '../../content/siteCore'
 import FooterNewsletter from '../FooterNewsletter'
 
+/* ─── Social platform icons (inline SVG to avoid extra deps) ─────── */
 const FacebookIcon = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
 )
@@ -17,16 +18,52 @@ const YouTubeIcon = (props) => (
 const WhatsAppIcon = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg>
 )
+const TwitterIcon = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M4 4l16 16M4 20L20 4"/></svg>
+)
 
-const SOCIAL_LINKS = [
-  { icon: FacebookIcon, href: 'https://www.facebook.com/blueblocksmontessorischool', label: 'Blue Blocks on Facebook' },
-  { icon: InstagramIcon, href: 'https://www.instagram.com/blueblocksmontessorischool/', label: 'Blue Blocks on Instagram' },
-  { icon: YouTubeIcon, href: 'https://www.youtube.com/channel/UCnJ6uX3B-uwAg63PgTK0LhQ', label: 'Blue Blocks on YouTube' },
-  { icon: Linkedin, href: 'https://www.linkedin.com/school/blue-blocks-school', label: 'Blue Blocks on LinkedIn' },
-  { icon: WhatsAppIcon, href: 'https://wa.link/vohpxj', label: 'Blue Blocks on WhatsApp' },
+const platformIcons = {
+  facebook: FacebookIcon,
+  instagram: InstagramIcon,
+  youtube: YouTubeIcon,
+  linkedin: Linkedin,
+  whatsapp: WhatsAppIcon,
+  twitter: TwitterIcon,
+  other: ArrowUpRight,
+}
+
+/* Static fallback social links — matches what was hardcoded before */
+const staticSocialLinks = [
+  { platform: 'facebook', url: 'https://www.facebook.com/blueblocksmontessorischool', label: 'Blue Blocks on Facebook' },
+  { platform: 'instagram', url: 'https://www.instagram.com/blueblocksmontessorischool/', label: 'Blue Blocks on Instagram' },
+  { platform: 'youtube', url: 'https://www.youtube.com/channel/UCnJ6uX3B-uwAg63PgTK0LhQ', label: 'Blue Blocks on YouTube' },
+  { platform: 'linkedin', url: 'https://www.linkedin.com/school/blue-blocks-school', label: 'Blue Blocks on LinkedIn' },
+  { platform: 'whatsapp', url: 'https://wa.link/vohpxj', label: 'Blue Blocks on WhatsApp' },
 ]
 
-const Footer = () => {
+const staticGovernanceLinks = [
+  { label: 'Ethics & Privacy', path: '/governance/ethics' },
+  { label: 'Research Standards', path: '/governance/standards' },
+  { label: 'Regulatory Compliance', path: '/governance/compliance' },
+  { label: 'Our Standards', path: '/governance/our-standards' },
+]
+
+const staticUtilityLinks = [
+  { label: 'Open Science Statement', path: '/publications' },
+  { label: 'Data Access', path: '/collaborate' },
+  { label: 'Research Ethics', path: '/governance' },
+]
+
+const Footer = ({ nav: navProp, brand: brandProp, footerData }) => {
+  const nav = navProp || staticNav
+  const brand = brandProp || staticBrand
+  const socialLinks = footerData?.socialLinks || staticSocialLinks
+  const governanceLinks = footerData?.governanceLinks || staticGovernanceLinks
+  const utilityLinks = footerData?.utilityLinks || staticUtilityLinks
+  const schoolLink = footerData?.schoolLink || 'https://www.blueblocks.in/'
+  const schoolLinkLabel = footerData?.schoolLinkLabel || 'Blue Blocks Montessori School'
+  const copyrightText = footerData?.copyrightText || `© ${new Date().getFullYear()} ${brand.siteName}. All rights reserved.`
+
   return (
     <footer className="bg-deep-ink text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary-navy/20 to-transparent" />
@@ -58,20 +95,23 @@ const Footer = () => {
               </a>
             </div>
             <a
-              href="https://www.blueblocks.in/"
+              href={schoolLink}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-white/80 hover:text-white transition-all group mt-4 border border-white/20 hover:border-white/40 rounded-md px-3 py-1.5 bg-white/5 hover:bg-white/10"
             >
-              <span>Blue Blocks Montessori School</span>
+              <span>{schoolLinkLabel}</span>
               <ArrowUpRight className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity" />
             </a>
             <div className="flex items-center gap-3 mt-5">
-              {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
-                <a key={href} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="text-white/40 hover:text-white transition-colors">
-                  <Icon className="w-4 h-4" aria-hidden="true" />
-                </a>
-              ))}
+              {socialLinks.map(({ platform, url, label }) => {
+                const Icon = platformIcons[platform] || ArrowUpRight
+                return (
+                  <a key={url} href={url} target="_blank" rel="noopener noreferrer" aria-label={label} className="text-white/40 hover:text-white transition-colors">
+                    <Icon className="w-4 h-4" aria-hidden="true" />
+                  </a>
+                )
+              })}
             </div>
           </div>
 
@@ -85,7 +125,12 @@ const Footer = () => {
                     {item.label}
                   </a>
                 ) : (
-                  <Link key={item.path} href={item.path} className="block text-sm text-white/60 hover:text-white transition-colors">
+                  <Link
+                    key={item.path}
+                    href={item.path}
+                    className="block text-sm text-white/60 hover:text-white transition-colors"
+                    {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  >
                     {item.label}
                   </Link>
                 )
@@ -103,14 +148,16 @@ const Footer = () => {
                     {item.label}
                   </a>
                 ) : (
-                  <Link key={item.path} href={item.path} className="block text-sm text-white/60 hover:text-white transition-colors">
+                  <Link
+                    key={item.path}
+                    href={item.path}
+                    className="block text-sm text-white/60 hover:text-white transition-colors"
+                    {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  >
                     {item.label}
                   </Link>
                 )
               ))}
-              <Link href="/methodology/innovation" className="block text-sm text-white/60 hover:text-white transition-colors">
-                Innovation Research
-              </Link>
             </nav>
           </div>
 
@@ -118,10 +165,16 @@ const Footer = () => {
           <div className="md:col-span-2 lg:col-span-1">
             <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/60">Governance</h4>
             <nav className="space-y-3">
-              <Link href="/governance/ethics" className="block text-sm text-white/60 hover:text-white transition-colors">Ethics &amp; Privacy</Link>
-              <Link href="/governance/standards" className="block text-sm text-white/60 hover:text-white transition-colors">Research Standards</Link>
-              <Link href="/governance/compliance" className="block text-sm text-white/60 hover:text-white transition-colors">Regulatory Compliance</Link>
-              <Link href="/governance/our-standards" className="block text-sm text-white/60 hover:text-white transition-colors">Our Standards</Link>
+              {governanceLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  className="block text-sm text-white/60 hover:text-white transition-colors"
+                  {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
           </div>
         </div>
@@ -139,13 +192,22 @@ const Footer = () => {
         </div>
 
         {/* Utility Links Row */}
-        <div className="mt-6">
-          <div className="flex flex-wrap gap-4">
-            <Link href="/publications" className="text-xs text-white/60 hover:text-white/80 transition-colors">Open Science Statement</Link>
-            <Link href="/collaborate" className="text-xs text-white/60 hover:text-white/80 transition-colors">Data Access</Link>
-            <Link href="/governance" className="text-xs text-white/60 hover:text-white/80 transition-colors">Research Ethics</Link>
+        {utilityLinks.length > 0 && (
+          <div className="mt-6">
+            <div className="flex flex-wrap gap-4">
+              {utilityLinks.map((link) => (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  className="text-xs text-white/60 hover:text-white/80 transition-colors"
+                  {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Newsletter Section */}
         <div className="mt-12 md:mt-16">
@@ -155,7 +217,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-10 pt-8 border-t border-white/10">
           <div className="flex flex-col items-center gap-4 text-xs text-white/60 md:flex-row md:justify-between">
-            <p>(c) {new Date().getFullYear()} {brand.siteName}. All rights reserved.</p>
+            <p>{copyrightText}</p>
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
               <Link href="/privacy" className="inline-flex items-center gap-1 py-1 hover:text-white/80 transition-colors min-h-[44px] sm:min-h-0"><Lock className="w-3 h-3" aria-hidden="true" />Privacy Policy</Link>
               <Link href="/terms" className="inline-flex items-center gap-1 py-1 hover:text-white/80 transition-colors min-h-[44px] sm:min-h-0"><ScrollText className="w-3 h-3" aria-hidden="true" />Terms of Use</Link>
