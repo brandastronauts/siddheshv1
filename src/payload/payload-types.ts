@@ -86,7 +86,7 @@ export interface Config {
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
   };
   db: {
-    defaultIDType: number;
+    defaultIDType: string;
   };
   fallbackLocale: null;
   globals: {
@@ -127,7 +127,7 @@ export interface UserAuthOperations {
  * via the `definition` "users".
  */
 export interface User {
-  id: number;
+  id: string;
   name?: string | null;
   updatedAt: string;
   createdAt: string;
@@ -155,7 +155,7 @@ export interface User {
  * via the `definition` "media".
  */
 export interface Media {
-  id: number;
+  id: string;
   /**
    * Describe the image for accessibility and SEO.
    */
@@ -206,7 +206,7 @@ export interface Media {
  * via the `definition` "page-overrides".
  */
 export interface PageOverride {
-  id: number;
+  id: string;
   /**
    * Editor-friendly name shown only in CMS.
    */
@@ -253,7 +253,7 @@ export interface PageOverride {
               download?: boolean | null;
             };
             image?: {
-              asset?: (number | null) | Media;
+              asset?: (string | null) | Media;
               /**
                * Use this only when not uploading to Media Library.
                */
@@ -324,7 +324,7 @@ export interface PageOverride {
                   body?: string | null;
                   icon?: string | null;
                   image?: {
-                    asset?: (number | null) | Media;
+                    asset?: (string | null) | Media;
                     /**
                      * Use this only when not uploading to Media Library.
                      */
@@ -539,7 +539,7 @@ export interface PageOverride {
                   headline: string;
                   body?: string | null;
                   image?: {
-                    asset?: (number | null) | Media;
+                    asset?: (string | null) | Media;
                     /**
                      * Use this only when not uploading to Media Library.
                      */
@@ -561,7 +561,7 @@ export interface PageOverride {
             logos?:
               | {
                   name: string;
-                  asset?: (number | null) | Media;
+                  asset?: (string | null) | Media;
                   src?: string | null;
                   alt?: string | null;
                   role?: string | null;
@@ -686,7 +686,7 @@ export interface PageOverride {
               headline: string;
               excerpt?: string | null;
               image?: {
-                asset?: (number | null) | Media;
+                asset?: (string | null) | Media;
                 /**
                  * Use this only when not uploading to Media Library.
                  */
@@ -712,7 +712,7 @@ export interface PageOverride {
                   headline: string;
                   excerpt?: string | null;
                   image?: {
-                    asset?: (number | null) | Media;
+                    asset?: (string | null) | Media;
                     /**
                      * Use this only when not uploading to Media Library.
                      */
@@ -784,7 +784,7 @@ export interface PageOverride {
                   title: string;
                   caption?: string | null;
                   image?: {
-                    asset?: (number | null) | Media;
+                    asset?: (string | null) | Media;
                     /**
                      * Use this only when not uploading to Media Library.
                      */
@@ -906,7 +906,7 @@ export interface PageOverride {
             role?: string | null;
             email?: string | null;
             image?: {
-              asset?: (number | null) | Media;
+              asset?: (string | null) | Media;
               /**
                * Use this only when not uploading to Media Library.
                */
@@ -1218,7 +1218,7 @@ export interface PageOverride {
             label?: string | null;
             images?:
               | {
-                  asset?: (number | null) | Media;
+                  asset?: (string | null) | Media;
                   src?: string | null;
                   alt?: string | null;
                   caption?: string | null;
@@ -1274,12 +1274,12 @@ export interface PageOverride {
     ogTitle?: string | null;
     ogDescription?: string | null;
     ogType?: ('website' | 'article') | null;
-    ogImage?: (number | null) | Media;
+    ogImage?: (string | null) | Media;
     ogImageUrl?: string | null;
     ogImageAlt?: string | null;
     twitterTitle?: string | null;
     twitterDescription?: string | null;
-    twitterImage?: (number | null) | Media;
+    twitterImage?: (string | null) | Media;
     twitterImageUrl?: string | null;
   };
   /**
@@ -1309,7 +1309,7 @@ export interface PageOverride {
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
-  id: number;
+  id: string;
   key: string;
   data:
     | {
@@ -1326,24 +1326,24 @@ export interface PayloadKv {
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
-  id: number;
+  id: string;
   document?:
     | ({
         relationTo: 'users';
-        value: number | User;
+        value: string | User;
       } | null)
     | ({
         relationTo: 'media';
-        value: number | Media;
+        value: string | Media;
       } | null)
     | ({
         relationTo: 'page-overrides';
-        value: number | PageOverride;
+        value: string | PageOverride;
       } | null);
   globalSlug?: string | null;
   user: {
     relationTo: 'users';
-    value: number | User;
+    value: string | User;
   };
   updatedAt: string;
   createdAt: string;
@@ -1353,10 +1353,10 @@ export interface PayloadLockedDocument {
  * via the `definition` "payload-preferences".
  */
 export interface PayloadPreference {
-  id: number;
+  id: string;
   user: {
     relationTo: 'users';
-    value: number | User;
+    value: string | User;
   };
   key?: string | null;
   value?:
@@ -1376,7 +1376,7 @@ export interface PayloadPreference {
  * via the `definition` "payload-migrations".
  */
 export interface PayloadMigration {
-  id: number;
+  id: string;
   name?: string | null;
   batch?: number | null;
   updatedAt: string;
@@ -2566,14 +2566,14 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
  * via the `definition` "site-settings".
  */
 export interface SiteSetting {
-  id: number;
+  id: string;
   siteName?: string | null;
   headerTagline?: string | null;
   /**
    * Shown in the website footer.
    */
   ethicsTagline?: string | null;
-  logo?: (number | null) | Media;
+  logo?: (string | null) | Media;
   researchEmail?: string | null;
   pressEmail?: string | null;
   /**

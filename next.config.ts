@@ -1,6 +1,7 @@
 import type { NextConfig } from 'next'
 
 const config: NextConfig = {
+  allowedDevOrigins: ['local.research.cms.com'],
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   webpack(config, { dev }) {
     if (dev) {

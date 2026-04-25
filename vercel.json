@@ -115,10 +115,6 @@
     {
       "source": "/llms-full.txt",
       "destination": "/llms-full.txt"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ]
 }
