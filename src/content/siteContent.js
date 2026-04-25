@@ -8986,6 +8986,18 @@ const FIELDS_MAP = {
     publicationStatus: 'Published',
     publicationType: 'Case Study',
   },
+  '/publications/structured-debate-side-switch': {
+    doi: '10.5281/zenodo.19480752',
+    zenodoUrl: 'https://doi.org/10.5281/zenodo.19480752',
+    publishedDate: '2026-04-09',
+    authors: [
+      { name: 'Chakraborty, Sreemoyee' },
+      { name: 'Matta, Sruthi' },
+    ],
+    researchDomains: ['Adolescent Research', 'Civic Reasoning', 'Erdkinder', 'Structured Debate'],
+    publicationStatus: 'Published',
+    publicationType: 'Case Study',
+  },
   '/technical-briefs/sbb-1': {
     doi: '',
     publishedDate: '2024-12-30',
