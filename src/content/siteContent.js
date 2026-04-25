@@ -8887,6 +8887,7 @@ const CPT_MAP = {
   '/publications/saparya-imf-case-study': 'publication',
   '/publications/iran-war-case-study': 'publication',
   '/publications/flipside-case-study': 'publication',
+  '/publications/structured-debate-side-switch': 'publication',
   '/publications/citation-standards': 'page',
   '/governance': 'page',
   '/governance/ethics': 'governance-page',
