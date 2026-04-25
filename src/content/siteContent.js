@@ -1191,6 +1191,14 @@ const siteContent = {
               body: "Erdkinder adolescents designed a 25-question instrument, visited a cloud kitchen run by neurodivergent adults, and rewrote their approach mid-interview. What they chose to report reveals more about children's research instincts than what they were told.",
               cta: { label: "View Publication", href: "/publications/flipside-case-study" },
               image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Flipside case study", variant: "card" }
+            },
+            {
+              tag: "Published Case Study · Adolescent Research · Civic Reasoning · Erdkinder · Structured Debate",
+              headline: "Adolescents Who Switched Sides Mid-Debate and Argued Better for It",
+              meta: "DOI: 10.5281/zenodo.19480752",
+              body: "Twelve Erdkinder adolescents were assigned positions in a live civic debate on voting age — then told, without warning, to switch sides at the halfway mark. Neither team collapsed. Several students turned their own Phase 1 arguments against themselves in Phase 2, producing richer reasoning than before the switch. The finding is not that debate builds civic thinking. The finding is that enforced perspective change might.",
+              cta: { label: "Read the Case Study", href: "/publications/structured-debate-side-switch" },
+              image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Structured debate side switch case study", variant: "card" }
             }
           ]
         },
@@ -4615,6 +4623,364 @@ const siteContent = {
             { title: "Governance", description: "Institutional oversight.", icon: "book", href: "/governance" },
             { title: "Publications", description: "Research docket.", icon: "publication", href: "/publications" },
             { title: "Downloads", description: "All documents.", icon: "default", href: "/downloads" }
+          ]
+        }
+      ]
+    },
+
+    "/publications/structured-debate-side-switch": {
+      title: "The Structured Debate With Mid-Point Side Switch: A Case Study from the Blue Blocks Erdkinder Environment",
+      metaDescription: "Case study: 12 adolescents debated voting age, then switched sides mid-debate. Phase 2 arguments were qualitatively richer. Erdkinder environment, Hyderabad.",
+      seo: {
+        title: "Debate Side Switch: Adolescent Civic Reasoning",
+        canonical: "https://research.blueblocks.in/publications/structured-debate-side-switch",
+        robots: "index, follow",
+        keywords: "structured debate, side switch, adolescent argumentation, civic reasoning, Erdkinder, perspective-taking, micro research, Blue Blocks Micro Research Institute, qualitative case study, embodied argumentation, voting age, cross-listening, group cohesion, observation instrument, Montessori adolescent, adversarial design, argumentation quality, civic self-positioning, phase analysis, inter-rater reliability",
+        openGraph: {
+          type: "article",
+          url: "https://research.blueblocks.in/publications/structured-debate-side-switch",
+          title: "Debate Side Switch: Adolescent Civic Reasoning | Blue Blocks Micro Research Institute",
+          description: "Case study: 12 adolescents debated voting age, then switched sides mid-debate. Phase 2 arguments were qualitatively richer. Erdkinder environment, Hyderabad.",
+          image: {
+            url: "https://research.blueblocks.in/images/og-home.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Structured Debate Side Switch Case Study"
+          },
+          locale: "en_IN",
+          article: {
+            published_time: "2026-04-09",
+            author: "Chakraborty, S., Matta, S.",
+            section: "Publications"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Debate Side Switch: Adolescent Civic Reasoning | Blue Blocks Micro Research Institute",
+          description: "Case study: 12 adolescents debated voting age, then switched sides mid-debate. Phase 2 arguments were qualitatively richer. Erdkinder environment, Hyderabad.",
+          image: "https://research.blueblocks.in/images/og-home.jpg"
+        },
+        citation: {
+          citation_title: "The Structured Debate With Mid-Point Side Switch: A Case Study from the Blue Blocks Erdkinder Environment",
+          citation_authors: ["Chakraborty, Sreemoyee", "Matta, Sruthi"],
+          citation_publication_date: "2026/04/09",
+          citation_publisher: "Zenodo",
+          citation_doi: "10.5281/zenodo.19480752"
+        }
+      },
+      schemas: [
+        {
+          "@type": "WebPage",
+          "@id": "https://research.blueblocks.in/publications/structured-debate-side-switch/#webpage",
+          url: "https://research.blueblocks.in/publications/structured-debate-side-switch",
+          name: "Debate Side Switch: Adolescent Civic Reasoning | Blue Blocks Micro Research Institute",
+          description: "Case study: 12 adolescents debated voting age, then switched sides mid-debate. Phase 2 arguments were qualitatively richer. Erdkinder environment, Hyderabad.",
+          isPartOf: { "@id": "https://research.blueblocks.in/#website" },
+          about: { "@id": "https://research.blueblocks.in/publications/structured-debate-side-switch/#article" }
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://research.blueblocks.in/publications/structured-debate-side-switch/#article",
+          name: "The Structured Debate With Mid-Point Side Switch: A Case Study from the Blue Blocks Erdkinder Environment",
+          headline: "The Structured Debate With Mid-Point Side Switch: A Case Study from the Blue Blocks Erdkinder Environment",
+          description: "This case study is the third of a five-case series investigating what children notice, ask, and produce when given ownership of a research instrument — and what happens when that ownership is subsequently disrupted. Twelve adolescent students were divided into two teams and assigned positions in a structured debate on the motion: This house believes the voting age should be lowered to 16. At the midpoint, without prior warning, both teams were asked to switch sides. The central finding is that the switch did not collapse the debate — Phase 2 arguments were in several instances qualitatively richer than Phase 1 output, most notably when students turned their own earlier arguments against themselves.",
+          url: "https://research.blueblocks.in/publications/structured-debate-side-switch",
+          mainEntityOfPage: "https://research.blueblocks.in/publications/structured-debate-side-switch",
+          datePublished: "2026-04-09",
+          inLanguage: "en",
+          identifier: "https://doi.org/10.5281/zenodo.19480752",
+          sameAs: "https://doi.org/10.5281/zenodo.19480752",
+          author: [
+            { "@type": "Organization", "@id": "https://research.blueblocks.in/#microresearch", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" },
+            { "@type": "Person", name: "Sreemoyee Chakraborty", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } },
+            { "@type": "Person", name: "Sruthi Matta", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } }
+          ],
+          publisher: { "@type": "Organization", name: "Zenodo", url: "https://zenodo.org" },
+          isAccessibleForFree: true,
+          license: "https://creativecommons.org/licenses/by/4.0/",
+          keywords: [
+            "structured debate", "side switch", "adolescent argumentation", "civic reasoning",
+            "Erdkinder", "perspective-taking", "micro research", "Blue Blocks Micro Research Institute",
+            "qualitative case study", "embodied argumentation", "voting age", "cross-listening",
+            "group cohesion", "observation instrument", "Montessori adolescent", "adversarial design",
+            "argumentation quality", "civic self-positioning", "phase analysis", "inter-rater reliability"
+          ],
+          about: [
+            { "@type": "Thing", name: "Structured debate with perspective-taking constraint" },
+            { "@type": "Thing", name: "Adolescent civic reasoning and argumentation" },
+            { "@type": "Thing", name: "Mid-point side switch as research instrument disruption" },
+            { "@type": "Thing", name: "Cross-listening and argument quality in adolescents" }
+          ],
+          citation: [
+            { "@type": "ScholarlyArticle", name: "Blue Blocks Micro Research Methodology: A Practitioner-Led, Longitudinal Framework for Embedded Educational Research", url: "https://doi.org/10.5281/zenodo.18584816" },
+            { "@type": "ScholarlyArticle", name: "Blue Blocks Embedded Observation Protocol (BEOP v1.0)", url: "https://doi.org/10.5281/zenodo.19087415" },
+            { "@type": "ScholarlyArticle", name: "Micro Research Ethics Framework (MREF v1.0)", url: "https://doi.org/10.5281/zenodo.19047669" }
+          ],
+          sourceOrganization: { "@id": "https://research.blueblocks.in/#microresearch" },
+          spatialCoverage: { "@type": "Place", name: "Hyderabad, Telangana, India" },
+          countryOfOrigin: { "@type": "Country", name: "India" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://research.blueblocks.in/publications/structured-debate-side-switch/#breadcrumb",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications" },
+            { "@type": "ListItem", position: 3, name: "Structured Debate Side Switch", item: "https://research.blueblocks.in/publications/structured-debate-side-switch" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "debate-hero",
+          type: "hero",
+          variant: "publication",
+          headline: "Adolescents Who Switched Sides Mid-Debate and Argued Better for It",
+          subheadline: "The Structured Debate With Mid-Point Side Switch — A Case Study from the Blue Blocks Erdkinder Environment | CS-2026-003",
+          image: { src: "/src/assets/banners/publications-doi.jpg", alt: "Structured Debate Side Switch Case Study", variant: "hero", privacyBlur: false }
+        },
+        {
+          id: "debate-meta",
+          type: "metaStrip",
+          items: [
+            { label: "DOI", value: "10.5281/zenodo.19480752", href: "https://doi.org/10.5281/zenodo.19480752", external: true },
+            { label: "Case ID", value: "CS-2026-003" },
+            { label: "Type", value: "Qualitative Case Study" },
+            { label: "Series", value: "Five-Case Series — Case 3 of 5" },
+            { label: "Status", value: "Published" },
+            { label: "Data Collection", value: "Single session, April 2026" },
+            { label: "Setting", value: "Blue Blocks Montessori School, Hyderabad, India" },
+            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" },
+            { label: "Access", value: "Open Access — CC BY 4.0" }
+          ]
+        },
+        {
+          id: "debate-introduction",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Introduction",
+                body: "What happens when you give adolescents full ownership of an argument — and then take it away mid-debate? This case study documents exactly that. Twelve students from the Blue Blocks Erdkinder environment were assigned opposing positions on the motion that the voting age should be lowered to 16, given preparation time, and asked to argue their case in a structured debate format. At the midpoint, without any prior warning, both teams were instructed to switch sides and continue from the opposing position.\n\nCS-2026-003 is the third in a five-case series from Blue Blocks Micro Research Institute investigating what children produce when given ownership of a research instrument — and what happens when that ownership is disrupted by design. This case is the most adversarially designed in the set. The side-switch is not a pedagogical strategy being evaluated for effectiveness; it is a deliberate methodological disruption inserted to observe how adolescents handle cognitive and civic dissonance in real time.\n\nThe study was conducted within the Erdkinder environment at Blue Blocks Montessori School, Hyderabad — an adolescent programme structured around self-directed learning, community responsibility, and practical reasoning. Four embedded observers using a structured observation instrument recorded argumentation quality, civic self-positioning, group cohesion, and behavioural response across both phases of the debate. All data collection followed the Blue Blocks Embedded Observation Protocol (BEOP v1.0) and the Micro Research Ethics Framework (MREF v1.0)."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Repository & Access",
+                links: [
+                  { label: "Full Paper on Zenodo (DOI)", href: "https://doi.org/10.5281/zenodo.19480752", external: true },
+                  { label: "Methodology Framework", href: "https://doi.org/10.5281/zenodo.18584816", external: true },
+                  { label: "Observation Protocol (BEOP v1.0)", href: "https://doi.org/10.5281/zenodo.19087415", external: true },
+                  { label: "Ethics Framework (MREF v1.0)", href: "https://doi.org/10.5281/zenodo.19047669", external: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "debate-abstract",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Abstract",
+                body: "This case study is the third of a five-case series in which the Blue Blocks Micro Research Institute investigates what children notice, ask, and produce when given ownership of a research instrument — and what happens when that ownership is subsequently disrupted. Case 3 is the most adversarially designed case in the set. Twelve adolescent students were divided into two teams and assigned positions in a structured debate on the motion: This house believes the voting age should be lowered to 16. Each team was given preparation time and ownership of their assigned position. At the midpoint of the debate, without prior warning, both teams were asked to switch sides and continue arguing from the opposing position. Four observers — two per team — recorded behaviour, argumentation quality, civic self-positioning, and group cohesion using a structured observation instrument. The central finding is that the switch did not collapse the debate. Both teams adapted, drew on cross-listening, and produced arguments in Phase 2 that were, in several instances, qualitatively richer than their Phase 1 output — most notably when students turned their own earlier arguments against themselves.\n\nEthics note: All participants are adolescent students at Blue Blocks Montessori School. Participation was voluntary. Informed consent and assent were obtained in accordance with the Micro Research Ethics Framework (MREF v1.0). All student identifiers are anonymised throughout."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Related Publications",
+                links: [
+                  { label: "Methodology Framework", href: "/methodology" },
+                  { label: "Publications Index", href: "/publications" },
+                  { label: "Flipside Case Study", href: "/publications/flipside-case-study" },
+                  { label: "Iran War Case Study", href: "/publications/iran-war-case-study" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "debate-key-findings",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Key Findings",
+                body: "",
+                bullets: [
+                  "1. The side switch did not collapse the debate. Both teams continued arguing after the mid-point switch, adapting to their new positions without structural breakdown of the session — demonstrating that adolescents can sustain reasoned argumentation even when their assigned stance is forcibly reversed.",
+                  "2. Phase 2 arguments were qualitatively richer in several instances. Students who had just argued one side drew directly on their own Phase 1 arguments to construct counter-positions in Phase 2 — a behaviour observed across both teams and flagged by multiple observers as analytically significant.",
+                  "3. Cross-listening was the primary mechanism enabling the switch. Observer data showed that students who had actively listened to the opposing team during Phase 1 adapted more fluidly in Phase 2. Students with lower cross-listening scores showed more resistance and shorter argument construction in Phase 2.",
+                  "4. Civic self-positioning shifted measurably between phases. Several students whose personal view aligned with their Phase 1 position showed the most creative argumentation in Phase 2 — having to argue against their own convictions appeared to sharpen rather than suppress their reasoning.",
+                  "5. An emergent finding around exam pressure arose unprompted. During Phase 2, students raised exam pressure as an argument against lowering the voting age — a topic not introduced by facilitators, demonstrating that adolescents in the Erdkinder environment actively connect civic questions to their immediate lived experience.",
+                  "6. Observer agreement was strong across all four scorers. The structured observation instrument produced consistent scores across both lead and second observers for argumentation quality and group cohesion metrics, supporting the instrument's reliability in an adversarial session design."
+                ]
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Analytical Framework",
+                citation: "Toulmin (argumentation structure), Kohlberg (civic/moral reasoning) — mapped against argumentation quality, civic self-positioning, and cross-listening domains."
+              }
+            ]
+          }
+        },
+        {
+          id: "debate-methodology",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Methodology Summary",
+                body: "CS-2026-003 is a qualitative case study using embedded observation within a live structured debate session. The study design is adversarial by construction: the mid-point side switch is a deliberate disruption introduced to observe how adolescents manage cognitive and civic dissonance under real-time conditions. This is not an evaluation of debate as a pedagogical method; it is a case study of argumentation behaviour under enforced perspective change.\n\nTwelve adolescent participants from the Blue Blocks Erdkinder environment were divided into two teams of six. The session ran in two phases separated by the side switch. Four embedded observers — two assigned per team — used a standardised observation instrument to score five metrics per phase: argumentation quality, civic self-positioning, cross-listening, group cohesion, and individual resistance to the switch. Verbatim quotes were recorded by observers and are reproduced in the appendix. Researcher inference was recorded in a separate column from raw observation, maintaining the separation required by the BEOP protocol.\n\nData was analysed for patterns across both phases and across the four observer records. Hypotheses were pre-registered for the session and assessed against the data post-collection. The analytical framework drew on Toulmin's argumentation model for assessing argument structure, and Kohlberg's moral development stages for interpreting civic self-positioning claims."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Cross-References",
+                links: [
+                  { label: "Methodology", href: "/methodology" },
+                  { label: "Governance", href: "/governance" },
+                  { label: "Ethics & Privacy", href: "/governance/ethics" },
+                  { label: "Publications Index", href: "/publications" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "debate-parameters",
+          type: "tableBlock",
+          header: "Study Parameters",
+          headers: ["Parameter", "Detail"],
+          rows: [
+            ["Participants", "12 adolescent students"],
+            ["Age Cohort", "Erdkinder (adolescent cohort, approx. 12–15 years)"],
+            ["Teams", "2 teams of 6"],
+            ["Observers", "4 (2 per team — lead observer and second observer)"],
+            ["Session Structure", "Two-phase structured debate with mid-point side switch"],
+            ["Debate Motion", "This house believes the voting age should be lowered to 16"],
+            ["Data Collection", "Single session, April 2026"],
+            ["Setting", "Blue Blocks Montessori School, Hyderabad, India"],
+            ["Data Type", "Structured observer scores (1–5 scale) + verbatim quotes"],
+            ["Metrics Scored", "Argumentation quality, civic self-positioning, cross-listening, group cohesion, resistance to switch"],
+            ["Analytical Framework", "Toulmin (argumentation), Kohlberg (moral/civic reasoning)"],
+            ["Inter-Rater Reliability", "Four observers across two independent scoring streams"],
+            ["Observation Protocol", "Blue Blocks Embedded Observation Protocol (BEOP v1.0)"],
+            ["Ethics Protocol", "Micro Research Ethics Framework (MREF v1.0)"],
+            ["Anonymization", "All student identifiers removed; observer designations used throughout"]
+          ]
+        },
+        {
+          id: "debate-discussion",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Discussion Summary",
+                body: "This case study addresses a gap in participatory research with adolescents: most studies either observe adolescent reasoning passively or structure debates without disruption. CS-2026-003 introduces disruption as the research instrument itself, testing whether enforced perspective change degrades or improves adolescent argumentation quality. The finding that Phase 2 arguments were in several instances richer than Phase 1 challenges the assumption that position ownership is necessary for high-quality argumentation. It suggests instead that having argued one side deeply — and then being forced to argue against it — can activate a more sophisticated form of reasoning that draws on both positions simultaneously.\n\nThe Erdkinder setting is significant here. The Blue Blocks Montessori adolescent environment emphasizes self-directed reasoning, community responsibility, and the capacity to hold complexity. The students in this case were not performing for a grade; they were engaging with a genuine civic question in a setting where intellectual honesty is normalized. This may explain why the switch produced richer arguments rather than resistance or shutdown.\n\nLimitations acknowledged in the paper include the small sample size of twelve participants and the single-session design, which does not allow for longitudinal pattern claims. The emergent finding around exam pressure — raised unprompted by students — was not captured in the pre-registered hypotheses and is flagged as a direction for a future dedicated micro-study. The paper explicitly does not claim that the side-switch method improves debate ability in general; it documents what happened in this one session with this cohort."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "How to Cite (APA)",
+                citation: "Blue Blocks Micro Research Institute, Chakraborty, S., & Matta, S. (2026). The Structured Debate With Mid-Point Side Switch: A Case Study from the Blue Blocks Erdkinder Environment. Blue Blocks Micro Research Institute. Zenodo. https://doi.org/10.5281/zenodo.19480752"
+              }
+            ]
+          }
+        },
+        {
+          id: "debate-implications",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Implications",
+                body: "For Educators\nThe mid-point side switch offers a classroom instrument that is easy to implement and produces observable data about how students listen to opposing arguments. Teachers working in Socratic or debate-based programmes may find value in introducing a mid-point reversal not as a surprise but as a structured technique — and observing whether students who listen more actively in Phase 1 argue more effectively in Phase 2.\n\nFor Researchers in Adolescent Argumentation\nThis case provides a replicable single-session design with a structured observation instrument (full instrument in Appendix 1) that other researchers can adapt. The pre-registration of hypotheses against which the emergent exam pressure finding is contrasted demonstrates the value of embedded observation in surfacing findings that hypothesis-driven designs would not anticipate.\n\nFor Civic Education Researchers\nThe voting age debate motion was not chosen arbitrarily — it is a question that directly affects the adolescent participants. The data on civic self-positioning across both phases, and particularly the shift in positioning after the switch, offers a small but replicable window into how adolescents reason about their own civic status when that status is under discussion."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Authors",
+                links: [
+                  { label: "Sreemoyee Chakraborty (Lead Researcher) — ORCID 0000-0001-5180-156X", href: "https://orcid.org/0000-0001-5180-156X", external: true },
+                  { label: "Sruthi Matta (Co-Researcher) — ORCID 0009-0008-2791-1273", href: "https://orcid.org/0009-0008-2791-1273", external: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "debate-references",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "References",
+                body: "",
+                bullets: [
+                  "Blue Blocks Micro Research Institute, Goyal, P., Chakraborty, S., & Ediga, S. (2026). Blue Blocks Micro Research Methodology: A Practitioner-Led, Longitudinal Framework for Embedded Educational Research. Zenodo. https://doi.org/10.5281/zenodo.18584816",
+                  "Blue Blocks Micro Research Institute. (2026). Blue Blocks Embedded Observation Protocol (BEOP v1.0). Zenodo. https://doi.org/10.5281/zenodo.19087415",
+                  "Blue Blocks Micro Research Institute. (2026). Micro Research Ethics Framework (MREF v1.0). Zenodo. https://doi.org/10.5281/zenodo.19047669",
+                  "Toulmin, S. E. (1958). The Uses of Argument. Cambridge University Press.",
+                  "Kohlberg, L. (1969). Stage and sequence: The cognitive-developmental approach to socialisation. In D. A. Goslin (Ed.), Handbook of Socialisation Theory and Research (pp. 347–480). Rand McNally.",
+                  "Kuhn, D. (1991). The Skills of Argument. Cambridge University Press.",
+                  "Mercier, H., & Sperber, D. (2011). Why do humans reason? Arguments for an argumentative theory. Behavioral and Brain Sciences, 34(2), 57–74."
+                ]
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Series Context",
+                citation: "Case 3 of 5 — Five-Case Series investigating what children produce when given ownership of a research instrument, and what happens when that ownership is disrupted by design."
+              }
+            ]
+          }
+        },
+        {
+          id: "debate-zenodo-cta",
+          type: "highlightBox",
+          header: "Read the Full Paper on Zenodo",
+          body: "The complete paper is available as an open-access record on Zenodo under CC BY 4.0.",
+          cta: { label: "Read the Full Paper on Zenodo", href: "https://doi.org/10.5281/zenodo.19480752", external: true }
+        },
+        {
+          id: "debate-archival-note",
+          type: "textBlock",
+          variant: "muted",
+          body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
+        },
+        {
+          id: "debate-related",
+          type: "relatedCards",
+          header: "Related Registry",
+          cards: [
+            { title: "Methodology", description: "Research framework.", icon: "publication", href: "/methodology" },
+            { title: "Flipside Case Study", description: "Case 1 of the five-case series.", icon: "publication", href: "/publications/flipside-case-study" },
+            { title: "Iran War Case Study", description: "Age-differentiated responses to geopolitical violence.", icon: "publication", href: "/publications/iran-war-case-study" },
+            { title: "Publications", description: "Full research docket.", icon: "publication", href: "/publications" }
           ]
         }
       ]
@@ -8521,6 +8887,7 @@ const CPT_MAP = {
   '/publications/saparya-imf-case-study': 'publication',
   '/publications/iran-war-case-study': 'publication',
   '/publications/flipside-case-study': 'publication',
+  '/publications/structured-debate-side-switch': 'publication',
   '/publications/citation-standards': 'page',
   '/governance': 'page',
   '/governance/ethics': 'governance-page',
@@ -8616,6 +8983,18 @@ const FIELDS_MAP = {
       { name: 'Khare, Kriti' },
     ],
     researchDomains: ['Adolescent Research', 'Neurodiversity', 'Participatory Research'],
+    publicationStatus: 'Published',
+    publicationType: 'Case Study',
+  },
+  '/publications/structured-debate-side-switch': {
+    doi: '10.5281/zenodo.19480752',
+    zenodoUrl: 'https://doi.org/10.5281/zenodo.19480752',
+    publishedDate: '2026-04-09',
+    authors: [
+      { name: 'Chakraborty, Sreemoyee' },
+      { name: 'Matta, Sruthi' },
+    ],
+    researchDomains: ['Adolescent Research', 'Civic Reasoning', 'Erdkinder', 'Structured Debate'],
     publicationStatus: 'Published',
     publicationType: 'Case Study',
   },
