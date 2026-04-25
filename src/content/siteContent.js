@@ -1191,6 +1191,14 @@ const siteContent = {
               body: "Erdkinder adolescents designed a 25-question instrument, visited a cloud kitchen run by neurodivergent adults, and rewrote their approach mid-interview. What they chose to report reveals more about children's research instincts than what they were told.",
               cta: { label: "View Publication", href: "/publications/flipside-case-study" },
               image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Flipside case study", variant: "card" }
+            },
+            {
+              tag: "Published Case Study · Adolescent Research · Civic Reasoning · Erdkinder · Structured Debate",
+              headline: "Adolescents Who Switched Sides Mid-Debate and Argued Better for It",
+              meta: "DOI: 10.5281/zenodo.19480752",
+              body: "Twelve Erdkinder adolescents were assigned positions in a live civic debate on voting age — then told, without warning, to switch sides at the halfway mark. Neither team collapsed. Several students turned their own Phase 1 arguments against themselves in Phase 2, producing richer reasoning than before the switch. The finding is not that debate builds civic thinking. The finding is that enforced perspective change might.",
+              cta: { label: "Read the Case Study", href: "/publications/structured-debate-side-switch" },
+              image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Structured debate side switch case study", variant: "card" }
             }
           ]
         },
