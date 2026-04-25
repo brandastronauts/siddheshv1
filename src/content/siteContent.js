@@ -1199,6 +1199,14 @@ const siteContent = {
               body: "Twelve Erdkinder adolescents were assigned positions in a live civic debate on voting age — then told, without warning, to switch sides at the halfway mark. Neither team collapsed. Several students turned their own Phase 1 arguments against themselves in Phase 2, producing richer reasoning than before the switch. The finding is not that debate builds civic thinking. The finding is that enforced perspective change might.",
               cta: { label: "Read the Case Study", href: "/publications/structured-debate-side-switch" },
               image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Structured debate side switch case study", variant: "card" }
+            },
+            {
+              tag: "Published Case Study · Adolescent Research · Resilience · Erdkinder · Engineering",
+              headline: "When Children Encounter Designed Adversity",
+              meta: "DOI: 10.5281/zenodo.19344032",
+              body: "Twelve adolescents who lived through a real satellite failure face a new engineering challenge designed to break within thirty minutes. All four teams treated failure as a puzzle. The gap between what they wrote privately about their satellite and what they did publicly in the challenge is the finding that matters most.",
+              cta: { label: "Read the Case Study", href: "/publications/resilience-workshop" },
+              image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Resilience workshop case study", variant: "card" }
             }
           ]
         },
