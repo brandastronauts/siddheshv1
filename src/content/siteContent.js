@@ -9259,6 +9259,7 @@ const CPT_MAP = {
   '/publications/iran-war-case-study': 'publication',
   '/publications/flipside-case-study': 'publication',
   '/publications/structured-debate-side-switch': 'publication',
+  '/publications/resilience-workshop': 'publication',
   '/publications/citation-standards': 'page',
   '/governance': 'page',
   '/governance/ethics': 'governance-page',
