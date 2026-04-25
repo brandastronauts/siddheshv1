@@ -4628,6 +4628,369 @@ const siteContent = {
       ]
     },
 
+    "/publications/resilience-workshop": {
+      title: "When Children Encounter Designed Adversity — The Resilience Workshop: A Case Study from the Blue Blocks Erdkinder Environment",
+      metaDescription: "Case study: 12 adolescents who survived a real satellite failure face a designed engineering challenge. All four teams treated failure as a puzzle, not a problem.",
+      seo: {
+        title: "Adolescent Resilience Workshop",
+        canonical: "https://research.blueblocks.in/publications/resilience-workshop",
+        robots: "index, follow",
+        keywords: "adolescent resilience, designed adversity, failure framing, cognitive transfer, Montessori Erdkinder, engineering challenge, CubeSat, SBB-1, embedded observation, practitioner-led research, micro research, cross-study series, STEM education, Blue Blocks Micro Research Institute",
+        openGraph: {
+          type: "article",
+          url: "https://research.blueblocks.in/publications/resilience-workshop",
+          title: "Adolescent Resilience Workshop | Blue Blocks Micro Research Institute",
+          description: "Case study: 12 adolescents who survived a real satellite failure face a designed engineering challenge. All four teams treated failure as a puzzle, not a problem.",
+          image: {
+            url: "https://research.blueblocks.in/images/og-home.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Resilience Workshop Case Study"
+          },
+          locale: "en_IN",
+          article: {
+            published_time: "2026-04-07",
+            author: "Chakraborty, S., Bose, P., Khare, K.",
+            section: "Publications"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Adolescent Resilience Workshop | Blue Blocks Micro Research Institute",
+          description: "Case study: 12 adolescents who survived a real satellite failure face a designed engineering challenge. All four teams treated failure as a puzzle, not a problem.",
+          image: "https://research.blueblocks.in/images/og-home.jpg"
+        },
+        citation: {
+          citation_title: "When Children Encounter Designed Adversity - The Resilience Workshop: A Case Study from the Blue Blocks Erdkinder Environment",
+          citation_authors: ["Blue Blocks Micro Research Institute", "Chakraborty, Sreemoyee", "Bose, Poulomi", "Khare, Kaustav"],
+          citation_publication_date: "2026/04/07",
+          citation_publisher: "Blue Blocks Micro Research Institute",
+          citation_doi: "10.5281/zenodo.19344032"
+        }
+      },
+      schemas: [
+        {
+          "@type": "WebPage",
+          "@id": "https://research.blueblocks.in/publications/resilience-workshop/#webpage",
+          url: "https://research.blueblocks.in/publications/resilience-workshop",
+          name: "Adolescent Resilience Workshop | Blue Blocks Micro Research Institute",
+          description: "Case study: 12 adolescents who survived a real satellite failure face a designed engineering challenge. All four teams treated failure as a puzzle, not a problem.",
+          isPartOf: { "@id": "https://research.blueblocks.in/#website" },
+          about: { "@id": "https://research.blueblocks.in/publications/resilience-workshop/#article" }
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://research.blueblocks.in/publications/resilience-workshop/#article",
+          name: "When Children Encounter Designed Adversity - The Resilience Workshop: A Case Study from the Blue Blocks Erdkinder Environment",
+          headline: "When Children Encounter Designed Adversity - The Resilience Workshop: A Case Study from the Blue Blocks Erdkinder Environment",
+          description: "This case study is the second of a five-case series in which the Blue Blocks Micro Research Institute investigates how children react and adjust when the conditions of learning are designed to give rise to adversity in the environment. The erdkinder adolescents from Blue Blocks participated in a resilience study where on day 1, they were given a worksheet about their satellite project failures, and day 2 gave them a time-bound engineering problem designed to fail. All four teams framed failure as a puzzle, interrogated the challenge brief, and drew on prior physics knowledge as a cognitive resource.",
+          url: "https://research.blueblocks.in/publications/resilience-workshop",
+          mainEntityOfPage: "https://research.blueblocks.in/publications/resilience-workshop",
+          datePublished: "2026-04-07",
+          inLanguage: "en",
+          identifier: "https://doi.org/10.5281/zenodo.19344032",
+          sameAs: "https://doi.org/10.5281/zenodo.19344032",
+          author: [
+            { "@type": "Organization", "@id": "https://research.blueblocks.in/#microresearch", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" },
+            { "@type": "Person", name: "Sreemoyee Chakraborty", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } },
+            { "@type": "Person", name: "Poulomi Bose", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } },
+            { "@type": "Person", name: "Kaustav Khare", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } }
+          ],
+          publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" },
+          isAccessibleForFree: true,
+          license: "https://creativecommons.org/licenses/by/4.0/",
+          keywords: [
+            "adolescent resilience", "designed adversity", "failure framing", "cognitive transfer",
+            "Montessori Erdkinder", "engineering challenge", "CubeSat", "SBB-1", "embedded observation",
+            "practitioner-led research", "micro research", "cross-study series", "STEM education",
+            "Blue Blocks Micro Research Institute"
+          ],
+          about: [
+            { "@type": "Thing", name: "adolescent resilience" },
+            { "@type": "Thing", name: "designed adversity" },
+            { "@type": "Thing", name: "cross-domain cognitive transfer" },
+            { "@type": "Thing", name: "failure framing" }
+          ],
+          citation: [
+            { "@type": "ScholarlyArticle", name: "Blue Blocks Micro Research Methodology: A Practitioner-Led, Longitudinal Framework for Embedded Educational Research", url: "https://doi.org/10.5281/zenodo.18584816" },
+            { "@type": "ScholarlyArticle", name: "Bridging the Lab and the Classroom: A Participatory Micro-Research Methodology for Scientist-Child Co-authorship in STEM", url: "https://doi.org/10.5281/zenodo.18584890" },
+            { "@type": "ScholarlyArticle", name: "When Children Own the Research Instrument: The Flipside Workspace Field Research Case Study", url: "https://doi.org/10.5281/zenodo.19219065" },
+            { "@type": "ScholarlyArticle", name: "Valorization In Orbit — An Adolescent CubeSat Mission", url: "https://doi.org/10.5281/zenodo.18337934" }
+          ],
+          sourceOrganization: { "@id": "https://research.blueblocks.in/#microresearch" },
+          spatialCoverage: { "@type": "Place", name: "Hyderabad, Telangana, India" },
+          countryOfOrigin: { "@type": "Country", name: "India" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://research.blueblocks.in/publications/resilience-workshop/#breadcrumb",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications" },
+            { "@type": "ListItem", position: 3, name: "Resilience Workshop Case Study", item: "https://research.blueblocks.in/publications/resilience-workshop" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "resilience-hero",
+          type: "hero",
+          variant: "publication",
+          headline: "Adolescent Resilience Through Designed Engineering Failure",
+          subheadline: "When Children Encounter Designed Adversity — The Resilience Workshop: A Case Study from the Blue Blocks Erdkinder Environment | CS-2026-002",
+          image: { src: "/src/assets/banners/publications-doi.jpg", alt: "Resilience Workshop Case Study", variant: "hero", privacyBlur: false }
+        },
+        {
+          id: "resilience-meta",
+          type: "metaStrip",
+          items: [
+            { label: "DOI", value: "10.5281/zenodo.19344032", href: "https://doi.org/10.5281/zenodo.19344032", external: true },
+            { label: "Case ID", value: "CS-2026-002" },
+            { label: "Type", value: "Qualitative Case Study" },
+            { label: "Series", value: "Case 2 of 5 — Child-Driven Inquiry Series" },
+            { label: "Status", value: "Published" },
+            { label: "Data Collection", value: "March 2026" },
+            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" },
+            { label: "Access", value: "Open Access — CC BY 4.0" }
+          ]
+        },
+        {
+          id: "resilience-introduction",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Introduction",
+                body: "What happens when adolescents who have already lived through a genuine project failure — a student-designed satellite payload that reached ISRO's PSLV-C62 launchpad but was lost to a Stage 4 anomaly — are handed an unfamiliar engineering challenge with a built-in first failure?\n\nThis case study follows twelve Erdkinder students from Blue Blocks through a two-day resilience workshop designed to answer that question. Day 1 asked students to write privately about their satellite failure — what they thought had happened, how they felt, and what they now understood differently. Day 2 placed them in four teams of three, gave them a constrained engineering problem (transfer water between containers without pouring, using only paper, tape, straws, and scissors), and watched what happened when the obvious approach failed within the first thirty minutes.\n\nThe study is the second in a five-case series from the Blue Blocks Micro Research Institute investigating child-driven inquiry across varied conditions of adversity, ownership, and engagement. It uses the BBMRI Micro-Research Methodology — a practitioner-led framework for embedded educational observation — and is the first case in the series to introduce adversity as a designed condition rather than a by-product of the activity."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Repository & Access",
+                links: [
+                  { label: "Full Paper on Zenodo (DOI)", href: "https://doi.org/10.5281/zenodo.19344032", external: true },
+                  { label: "Methodology Framework", href: "https://doi.org/10.5281/zenodo.18584816", external: true },
+                  { label: "Co-Authorship Framework", href: "https://doi.org/10.5281/zenodo.18584890", external: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "resilience-abstract",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Abstract",
+                body: "This case study is the second of a five-case series in which the Blue Blocks Micro Research Institute investigates how children react and adjust when the conditions of learning are designed to give rise to adversity in the environment. The present case study is structurally different from the first study in the series because, in this case, the adversity is the designed conditions; it is not a by-product of the activity. The erdkinder adolescents from Blue Blocks participated in a resilience study where on day 1, they were given a worksheet that asked them about their failures and the process of creating the satellite project linking them to real-world failure. Day 2 gave them a completely new challenge — it was a time-bound, simple engineering problem where they were asked to transfer water from one container to another without pouring it directly using only a specified set of materials, where the initial approach was designed to produce partial or complete failure. The analysis observed pre-specified hypotheses based on ownership and adaptability, which held true through the case study. One emergent finding was spontaneous cross-domain cognitive transfer — children drew unprompted on physics concepts from prior learning to solve an unfamiliar engineering problem. Gaps in the record are documented transparently.\n\nEthics Note: All participants were adolescents from Blue Blocks School. Regular parental consent was obtained. Student identities are anonymised using reference codes (P-01 to P-08 for reflection sheets, C-01 to C-12 for Day 2 observations). Weekend reflection sheets were completed at home voluntarily."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Related Publications",
+                links: [
+                  { label: "Methodology Framework", href: "/methodology" },
+                  { label: "Publications Index", href: "/publications" },
+                  { label: "Flipside Case Study (Case 1)", href: "/publications/flipside-case-study" },
+                  { label: "Structured Debate Side Switch (Case 3)", href: "/publications/structured-debate-side-switch" },
+                  { label: "SAPARYA / IMF — SBB-1 Mission", href: "/publications/saparya-imf-case-study" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "resilience-key-findings",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Key Findings",
+                body: "",
+                bullets: [
+                  "1. All four teams framed failure as a puzzle, not a problem. When the initial engineering approach failed — paper channels leaked, tape seals broke — no team blamed a member, stopped working, or sought adult rescue. All four teams treated the failure as information and iterated.",
+                  "2. Three out of four teams interrogated the challenge brief itself. Students re-read the brief, noticed what it did not constrain, and acted on that reading — requesting extra cups and materials the brief permitted but did not display. This brief interrogation behaviour is a qualitatively different orientation to problem-solving than accepting apparent constraints as fixed.",
+                  "3. Students spontaneously transferred physics concepts from prior learning. Two teams explicitly drew on Archimedes' principle and siphon mechanics from classroom science to solve an unfamiliar engineering problem. One student's verbatim: \"Remember the thingy which we have in the science lab. The Greek guy thing.\" This cross-domain cognitive transfer was not hypothesised and emerged from the observer record.",
+                  "4. Private reflection sheets surfaced emotional content entirely absent from in-session observation. Students who appeared enthusiastic and adaptive during the Day 2 challenge had written — privately, the night before — about sadness, disappointment, and doubt about the satellite failure. The emotional register of the reflection sheets and the behavioural register of the observer sheets are measuring different things. Both are required for a complete picture.",
+                  "5. Students who had owned a genuinely hard prior project arrived at the new challenge with failure already normalised. Reflection sheet language clustered around three themes: failure as information, failure as permission to restart, and failure as epistemically valuable. One student wrote: \"to not just succeed but to again learn faithfully until the path to success had a lot of wisdom, and to have that wisdom and succeed, is the greatest thing of all.\"",
+                  "6. The designed adversity produced a qualitatively different research yield than incidental adversity. Because the Day 2 challenge was engineered to fail at a predictable point, the study captured the exact moment of failure response — language, behaviour, team dynamics — in real time. This is data that retrospective studies cannot produce."
+                ]
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Analytical Framework",
+                citation: "Hart (1992) and Cook-Sather (2006) on children's participation, Werner & Smith (1992) on resilience, Lincoln & Guba (1985) on naturalistic inquiry — mapped against adversity response, cognitive transfer, and dual-instrument comparison."
+              }
+            ]
+          }
+        },
+        {
+          id: "resilience-methodology",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Methodology Summary",
+                body: "This is a qualitative case study using structured observation and private written reflection as dual data collection instruments. Twelve adolescent students (ages 12-15) from the Blue Blocks Erdkinder programme participated across two days. Day 1 administered a four-part weekend reflection sheet asking students to write privately about their experience of the SBB-1 CubeSat project failure. Day 2 presented a 60-minute time-bound engineering challenge (water transfer using constrained materials) with a built-in first failure point.\n\nFour teams of three were each assigned a dedicated observer using an eight-section structured observation template covering: language at failure, response types, failure framing, brief interrogation behaviour, materials requested, recovery arc, help-seeking, and end-of-session summary. The brief interrogation and materials request sections (Sections D and E) were new additions to this case study's instrument, designed to capture whether students read and acted on what the challenge brief permitted but did not display.\n\nThree hypotheses were pre-specified: H1 (instrument quality — children's resilience framing reveals language adult instruments miss), H2 (engagement behaviour — prior ownership of a hard project produces adaptive problem-framing), and H3 (selective attention — private reflection surfaces content absent from in-session observation). Analysis followed the Embedded Observer Principle of the BBMRI Micro-Research framework."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Cross-References",
+                links: [
+                  { label: "Methodology", href: "/methodology" },
+                  { label: "Governance", href: "/governance" },
+                  { label: "Ethics & Privacy", href: "/governance/ethics" },
+                  { label: "Publications Index", href: "/publications" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "resilience-parameters",
+          type: "tableBlock",
+          header: "Study Parameters",
+          headers: ["Parameter", "Detail"],
+          rows: [
+            ["Participants", "12 adolescents (Erdkinder cohort)"],
+            ["Age Range", "12–15 years"],
+            ["Study Setting", "Blue Blocks School, Hyderabad, India"],
+            ["Data Collection", "March 2026 (two-day workshop)"],
+            ["Day 1 Instrument", "Four-part weekend reflection sheet (completed at home)"],
+            ["Day 2 Instrument", "Eight-section structured observer sheet (per team)"],
+            ["Teams", "4 teams of 3 students, each with dedicated observer"],
+            ["Day 2 Task", "Water transfer engineering challenge (60 minutes, built-in first failure)"],
+            ["Prior Adversity Condition", "SBB-1 CubeSat mission — IN-SPACe authorized, PSLV-C62 launch, Stage 4 anomaly"],
+            ["Reflection Sheets Returned", "8 of 12 (2 outstanding)"],
+            ["Hypotheses", "H1 (instrument quality), H2 (engagement behaviour), H3 (selective attention)"],
+            ["Emergent Finding", "Spontaneous cross-domain cognitive transfer (physics to engineering)"],
+            ["Anonymisation", "Reference codes: P-01 to P-08 (reflections), C-01 to C-12 (observations)"],
+            ["Series Position", "Case 2 of 5 — Child-Driven Inquiry Series"]
+          ]
+        },
+        {
+          id: "resilience-discussion",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Discussion Summary",
+                body: "This study addresses a gap in the adolescent resilience literature: most resilience research observes children after naturally occurring adversity. This study designed the adversity, controlled the failure point, and captured the exact moment of response — providing data that retrospective studies cannot produce.\n\nThe study setting is significant because the prior adversity condition was not hypothetical. The students had genuinely participated in the design of a satellite payload that was certified flight-ready, integrated with an ISRO launch vehicle, and lost to a Stage 4 anomaly. Their reflection sheets describe real disappointment, real sadness, and real philosophical processing of what failure means. When they then encountered a designed failure in the engineering challenge, their behaviour was measurably adaptive — but their private emotional history was only visible through the reflection instrument.\n\nThe primary limitation is the absence of Day 1 observation data. The CubeSat failure — the actual adversity condition — was not observed in real time by the research team. It was reconstructed retrospectively through student reflection sheets. This means H2's evidence is strong for the designed (Day 2) adversity but relies on self-report for the prior (Day 1) adversity. A dedicated Day 1 observer protocol is recommended for Cases 4 and 5."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "How to Cite (APA)",
+                citation: "Blue Blocks Micro Research Institute, Chakraborty, S., Bose, P., & Khare, K. (2026). When Children Encounter Designed Adversity — The Resilience Workshop: A Case Study from the Blue Blocks Erdkinder Environment. Blue Blocks Micro Research Institute. Zenodo. https://doi.org/10.5281/zenodo.19344032"
+              }
+            ]
+          }
+        },
+        {
+          id: "resilience-implications",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Implications",
+                body: "For Educators\nThe finding that all four teams treated designed failure as a puzzle — and that three teams interrogated the challenge constraints rather than accepting them — suggests that prior ownership of genuinely difficult work builds a transferable orientation to adversity. This has direct implications for curriculum design: engineering challenges with built-in failure points, when preceded by real project experience, produce observable adaptive behaviour that worksheets and discussions about resilience cannot replicate.\n\nFor Resilience Researchers\nThe mismatch between private emotional content (reflection sheets) and public adaptive behaviour (observer notes) raises a methodological concern for single-instrument resilience studies. Students who appeared enthusiastic and adaptive in the session had written privately about sadness and doubt. A study relying only on in-session observation would systematically underestimate the emotional cost of resilience.\n\nFor Montessori Practitioners\nThe study provides empirical evidence for the Erdkinder model's emphasis on real work with real consequences. The students' prior engagement with the CubeSat project — a genuinely difficult, genuinely high-stakes initiative — appears to have produced not just emotional resilience but cognitive equipment: prior knowledge that students treated as a legitimate tool in a new domain."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Authors",
+                links: [
+                  { label: "Sreemoyee Chakraborty (Lead Researcher) — ORCID 0000-0001-5180-156X", href: "https://orcid.org/0000-0001-5180-156X", external: true },
+                  { label: "Poulomi Bose (Co-Researcher) — ORCID 0009-0007-6156-2161", href: "https://orcid.org/0009-0007-6156-2161", external: true },
+                  { label: "Kriti Khare (Co-Researcher) — ORCID 0009-0004-3106-8873", href: "https://orcid.org/0009-0004-3106-8873", external: true },
+                  { label: "Pavan Goyal (Project Leader, Contributor) — ORCID 0009-0009-8840-8505", href: "https://orcid.org/0009-0009-8840-8505", external: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "resilience-references",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "References",
+                body: "",
+                bullets: [
+                  "Blue Blocks Micro Research Institute, Goyal, P., Chakraborty, S., & Ediga, S. (2026a). Blue Blocks Micro Research Methodology: A Practitioner-Led, Longitudinal Framework for Embedded Educational Research. Zenodo. https://doi.org/10.5281/zenodo.18584816",
+                  "Blue Blocks Micro Research Institute, Goyal, P., Chakraborty, S., & Ediga, S. (2026b). Blue Blocks Bridging the Lab and the Classroom: A Participatory Micro-Research Methodology for Scientist-Child Co-authorship in STEM. Zenodo. https://doi.org/10.5281/zenodo.18584890",
+                  "Chakraborty, S., Bose, P., & Khare, K. (2026). When Children Own the Research Instrument: The Flipside Workspace Field Research Case Study from the Blue Blocks Erdkinder Environment. Blue Blocks Micro Research Institute. Zenodo. https://doi.org/10.5281/zenodo.19219065",
+                  "Cook-Sather, A. (2006). Sound, presence, and power: 'Student voice' in educational research and reform. Curriculum Inquiry, 36(4), 359–390.",
+                  "Greene, S. M., & Hill, M. (2005). Researching children's experiences: Methods and methodological issues. In S. M. Greene & D. M. Hogan (Eds.), Researching Children's Experience: Approaches and Methods (pp. 1–21). Sage.",
+                  "Hart, R. A. (1992). Children's Participation: From Tokenism to Citizenship. UNICEF Innocenti Essays No. 4. UNICEF International Child Development Centre.",
+                  "Lave, J., & Wenger, E. (1991). Situated Learning: Legitimate Peripheral Participation. Cambridge University Press.",
+                  "Lillard, A. S. (2017). Montessori: The Science Behind the Genius (3rd ed.). Oxford University Press.",
+                  "Lincoln, Y. S., & Guba, E. G. (1985). Naturalistic Inquiry. Sage.",
+                  "Punch, S. (2002). Research with children: The same or different from research with adults? Childhood, 9(3), 321–341.",
+                  "Werner, E. E., & Smith, R. S. (1992). Overcoming the Odds: High Risk Children from Birth to Adulthood. Cornell University Press."
+                ]
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Series Context",
+                citation: "Case 2 of 5 — Child-Driven Inquiry Series. The first case study in the series to introduce adversity as a designed condition rather than a by-product of the activity."
+              }
+            ]
+          }
+        },
+        {
+          id: "resilience-zenodo-cta",
+          type: "highlightBox",
+          header: "Read the Full Paper on Zenodo",
+          body: "The complete paper is available as an open-access record on Zenodo under CC BY 4.0.",
+          cta: { label: "Read the Full Paper on Zenodo", href: "https://doi.org/10.5281/zenodo.19344032", external: true }
+        },
+        {
+          id: "resilience-archival-note",
+          type: "textBlock",
+          variant: "muted",
+          body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
+        },
+        {
+          id: "resilience-related",
+          type: "relatedCards",
+          header: "Related Registry",
+          cards: [
+            { title: "Methodology", description: "Research framework.", icon: "publication", href: "/methodology" },
+            { title: "Flipside Case Study", description: "Case 1 of the five-case series.", icon: "publication", href: "/publications/flipside-case-study" },
+            { title: "Structured Debate Side Switch", description: "Case 3 of the five-case series.", icon: "publication", href: "/publications/structured-debate-side-switch" },
+            { title: "SAPARYA / IMF (SBB-1)", description: "The CubeSat mission referenced as prior adversity.", icon: "publication", href: "/publications/saparya-imf-case-study" }
+          ]
+        }
+      ]
+    },
+
     "/publications/structured-debate-side-switch": {
       title: "The Structured Debate With Mid-Point Side Switch: A Case Study from the Blue Blocks Erdkinder Environment",
       metaDescription: "Case study: 12 adolescents debated voting age, then switched sides mid-debate. Phase 2 arguments were qualitatively richer. Erdkinder environment, Hyderabad.",
