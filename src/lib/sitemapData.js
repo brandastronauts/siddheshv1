@@ -26,6 +26,7 @@ export const sitemapData = {
     { name: "Iran War Case Study", url: "/publications/iran-war-case-study", status: "complete" },
     { name: "Flipside Case Study", url: "/publications/flipside-case-study", status: "complete" },
     { name: "Structured Debate Side Switch", url: "/publications/structured-debate-side-switch", status: "complete" },
+    { name: "Resilience Workshop Case Study", url: "/publications/resilience-workshop", status: "complete" },
     { name: "Citation Standards", url: "/publications/citation-standards", status: "complete" },
     { name: "Open Data Access", url: "/publications/data", status: "complete" },
     { name: "Glossary", url: "/publications/glossary", status: "complete" },
