@@ -504,11 +504,16 @@ function renderSubBlock(block) {
   if (!block) return '';
   let html = '';
   const heading = pick(block, ['heading', 'title', 'header', 'label']);
-  const body = pick(block, ['body', 'content', 'text', 'description']);
+  const body = pick(block, ['body', 'content', 'text', 'description', 'citation']);
+
   if (heading) html += `<h3>${esc(heading)}</h3>`;
   if (body) html += renderParagraphs(body);
+  if (block.bullets?.length) html += renderBullets(block.bullets);
   if (block.items?.length) html += renderCardCollection(block.items);
   if (block.links?.length) html += renderLinkList(block.links);
+  if (block.sections?.length) {
+    html += block.sections.map((section) => renderSubBlock(section)).join('');
+  }
   if (block.panels?.length) {
     html += block.panels.map((panel) => renderSubBlock(panel)).join('');
   }
