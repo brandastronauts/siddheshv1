@@ -1106,7 +1106,7 @@ const blocks = [
 
 export const PageOverrides = {
   slug: 'page-overrides',
-  labels: { singular: 'Page Override', plural: 'Page Overrides' },
+  labels: { singular: 'Page', plural: 'Pages' },
   access: {
     read: () => true,
     create: isAdmin,
@@ -1117,8 +1117,20 @@ export const PageOverrides = {
     useAsTitle: 'internalName',
     defaultColumns: ['internalName', 'pathname', '_status', 'updatedAt'],
     description:
-      'Page-wise CMS overlays for existing website routes. If an override is missing, the current website content is used unchanged.',
+      'Edit any website page. Set the URL Path (e.g. /methodology/innovation), then add sections from the block library. If you leave the sections empty, the page falls back to its built-in design — perfect for incremental editing.',
     group: 'Website Content',
+    livePreview: {
+      url: ({ data }) => {
+        const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://local.research.cms.com:3001'
+        const path = (data?.pathname || '/').replace(/\/+$/, '') || '/'
+        return `${base}${path}`
+      },
+      breakpoints: [
+        { label: 'Mobile', name: 'mobile', width: 375, height: 667 },
+        { label: 'Tablet', name: 'tablet', width: 768, height: 1024 },
+        { label: 'Desktop', name: 'desktop', width: 1440, height: 900 },
+      ],
+    },
   },
   versions: { drafts: true, maxPerDoc: 50 },
   hooks: {

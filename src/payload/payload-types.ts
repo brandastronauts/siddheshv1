@@ -202,7 +202,7 @@ export interface Media {
   };
 }
 /**
- * Page-wise CMS overlays for existing website routes. If an override is missing, the current website content is used unchanged.
+ * Edit any website page. Set the URL Path (e.g. /methodology/innovation), then add sections from the block library. If you leave the sections empty, the page falls back to its built-in design — perfect for incremental editing.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "page-overrides".
