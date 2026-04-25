@@ -1,7 +1,7 @@
 // @ts-nocheck
 import path from 'path'
 import { fileURLToPath } from 'url'
-import { postgresAdapter } from '@payloadcms/db-postgres'
+import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { buildConfig } from 'payload'
 import sharp from 'sharp'
 import { Media } from './src/payload/collections/Media.js'
@@ -14,12 +14,8 @@ const dirname = path.dirname(filename)
 
 export default buildConfig({
   secret: process.env.PAYLOAD_SECRET || 'dev-payload-secret-change-me',
-  db: postgresAdapter({
-    pool: {
-      connectionString:
-        process.env.DATABASE_URL ||
-        'postgres://postgres:postgres@127.0.0.1:5432/blueblocks_payload',
-    },
+  db: mongooseAdapter({
+    url: process.env.DATABASE_URL || 'mongodb://127.0.0.1:27017/blueblocks_payload',
   }),
   admin: {
     user: Users.slug,
