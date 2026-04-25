@@ -25,6 +25,7 @@ export const sitemapData = {
     { name: "SAPARYA / IMF Case Study", url: "/publications/saparya-imf-case-study", status: "complete" },
     { name: "Iran War Case Study", url: "/publications/iran-war-case-study", status: "complete" },
     { name: "Flipside Case Study", url: "/publications/flipside-case-study", status: "complete" },
+    { name: "Structured Debate Side Switch", url: "/publications/structured-debate-side-switch", status: "complete" },
     { name: "Citation Standards", url: "/publications/citation-standards", status: "complete" },
     { name: "Open Data Access", url: "/publications/data", status: "complete" },
     { name: "Glossary", url: "/publications/glossary", status: "complete" },
