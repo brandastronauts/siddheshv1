@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
+import Breadcrumbs from '../common/Breadcrumbs';
 import SEO from '../SEO';
 import seoSchemaConfig from '../../lib/seoSchemaConfig';
 import {
@@ -151,6 +152,7 @@ const PageShell = ({ children }) => {
     <div className="min-h-screen flex flex-col">
       <SEO {...metaProps} />
       <Header />
+      <Breadcrumbs pageTitle={metaProps.title} />
       <main className="flex-1">{children}</main>
       <Footer />
     </div>
