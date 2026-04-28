@@ -66,7 +66,7 @@ function prerenderSchemasPlugin() {
 
       // Load static HTML renderer for content injection into View Source
       const rendererPath = pathMod.resolve('src', 'lib', 'staticHtmlRenderer.js');
-      let renderPageToStaticHtml = (_page: any): string => '';
+      let renderPageToStaticHtml = (_page: any, _route?: string): string => '';
       try {
         const rendererMod = await import(pathToFileURL(rendererPath).href);
         renderPageToStaticHtml = rendererMod.renderPageToStaticHtml;
@@ -84,7 +84,7 @@ function prerenderSchemasPlugin() {
       async function writeRoute(route: string, html: string, pageData?: any) {
         // Inject static page content into <div id="root"> for SEO crawlability
         if (pageData) {
-          const staticContent = renderPageToStaticHtml(pageData);
+          const staticContent = renderPageToStaticHtml(pageData, route);
           if (staticContent) {
             html = html.replace(
               '<div id="root"></div>',
@@ -323,7 +323,7 @@ function prerenderSchemasPlugin() {
       // ── Phase 3: Inject static content + JSON-LD into homepage (dist/index.html) ──
       if (siteContent?.pages?.['/']) {
         const homePageData = siteContent.pages['/'];
-        const staticContent = renderPageToStaticHtml(homePageData);
+        const staticContent = renderPageToStaticHtml(homePageData, '/');
         const homePath = pathMod.join(distDir, 'index.html');
         let homeHtml = await fs.readFile(homePath, 'utf-8');
 

@@ -1,4 +1,5 @@
 import { sitemapData } from './sitemapData.js';
+import { buildBreadcrumbTrail } from './breadcrumbsResolver.js';
 
 /**
  * Build-time static HTML renderer.
@@ -520,10 +521,28 @@ function renderSubBlock(block) {
   return html;
 }
 
-export function renderPageToStaticHtml(page) {
+function renderStaticBreadcrumbs(route, page) {
+  if (!route || route === '/') return '';
+  const trail = buildBreadcrumbTrail(route, page?.title || page?.heroTitle);
+  if (!trail.length) return '';
+  const items = [
+    `<li><a href="/">Home</a></li>`,
+    ...trail.map((c) =>
+      c.current
+        ? `<li><span aria-current="page">${esc(c.name)}</span></li>`
+        : `<li><a href="${esc(c.path)}">${esc(c.name)}</a></li>`
+    ),
+  ].join('');
+  return `<nav aria-label="Breadcrumb"><ol>${items}</ol></nav>`;
+}
+
+export function renderPageToStaticHtml(page, route) {
   if (!page) return '';
 
   const parts = [];
+  const crumbs = renderStaticBreadcrumbs(route, page);
+  if (crumbs) parts.push(crumbs);
+
   const hasHero = page.sections?.some((section) => section?.type === 'hero' || section?.type === 'dossierHeader');
 
   if (!hasHero) {
