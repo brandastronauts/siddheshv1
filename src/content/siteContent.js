@@ -5943,6 +5943,15 @@ const siteContent = {
           body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
         },
         {
+          id: "patent-siblings", type: "relatedCards", header: "Other Patents in This Registry",
+          cards: [
+            { title: "Borehole Rescue System", icon: "patent", href: "/patents/borehole-rescue-system" },
+            { title: "Contactless Delivery System", icon: "patent", href: "/patents/contactless-delivery-system" },
+            { title: "Autonomous Medical Assistance System", icon: "patent", href: "/patents/autonomous-medical-assistance-system" },
+            { title: "Autonomous Health Monitoring System", icon: "patent", href: "/patents/autonomous-health-monitoring-system" }
+          ]
+        },
+        {
           id: "patent-related", type: "relatedCards", header: "Related Registry",
           cards: [
             { title: "View on Zenodo", description: "Archival DOI record.", icon: "archive", href: "https://doi.org/10.5281/zenodo.18610003", external: true },
@@ -6055,6 +6064,15 @@ const siteContent = {
         {
           id: "patent-archival", type: "textBlock", variant: "muted",
           body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
+        },
+        {
+          id: "patent-siblings", type: "relatedCards", header: "Other Patents in This Registry",
+          cards: [
+            { title: "Automated Security UAV", icon: "patent", href: "/patents/automated-security-uav" },
+            { title: "Contactless Delivery System", icon: "patent", href: "/patents/contactless-delivery-system" },
+            { title: "Autonomous Medical Assistance System", icon: "patent", href: "/patents/autonomous-medical-assistance-system" },
+            { title: "Autonomous Health Monitoring System", icon: "patent", href: "/patents/autonomous-health-monitoring-system" }
+          ]
         },
         {
           id: "patent-related", type: "relatedCards", header: "Related Registry",
@@ -6171,6 +6189,15 @@ const siteContent = {
           body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
         },
         {
+          id: "patent-siblings", type: "relatedCards", header: "Other Patents in This Registry",
+          cards: [
+            { title: "Automated Security UAV", icon: "patent", href: "/patents/automated-security-uav" },
+            { title: "Borehole Rescue System", icon: "patent", href: "/patents/borehole-rescue-system" },
+            { title: "Autonomous Medical Assistance System", icon: "patent", href: "/patents/autonomous-medical-assistance-system" },
+            { title: "Autonomous Health Monitoring System", icon: "patent", href: "/patents/autonomous-health-monitoring-system" }
+          ]
+        },
+        {
           id: "patent-related", type: "relatedCards", header: "Related Registry",
           cards: [
             { title: "View on Zenodo", description: "Archival DOI record.", icon: "archive", href: "https://doi.org/10.5281/zenodo.18610450", external: true },
@@ -6285,6 +6312,15 @@ const siteContent = {
           body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
         },
         {
+          id: "patent-siblings", type: "relatedCards", header: "Other Patents in This Registry",
+          cards: [
+            { title: "Automated Security UAV", icon: "patent", href: "/patents/automated-security-uav" },
+            { title: "Borehole Rescue System", icon: "patent", href: "/patents/borehole-rescue-system" },
+            { title: "Contactless Delivery System", icon: "patent", href: "/patents/contactless-delivery-system" },
+            { title: "Autonomous Health Monitoring System", icon: "patent", href: "/patents/autonomous-health-monitoring-system" }
+          ]
+        },
+        {
           id: "patent-related", type: "relatedCards", header: "Related Registry",
           cards: [
             { title: "View on Zenodo", description: "Archival DOI record.", icon: "archive", href: "https://doi.org/10.5281/zenodo.18610847", external: true },
@@ -6397,6 +6433,15 @@ const siteContent = {
         {
           id: "patent-archival", type: "textBlock", variant: "muted",
           body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
+        },
+        {
+          id: "patent-siblings", type: "relatedCards", header: "Other Patents in This Registry",
+          cards: [
+            { title: "Automated Security UAV", icon: "patent", href: "/patents/automated-security-uav" },
+            { title: "Borehole Rescue System", icon: "patent", href: "/patents/borehole-rescue-system" },
+            { title: "Contactless Delivery System", icon: "patent", href: "/patents/contactless-delivery-system" },
+            { title: "Autonomous Medical Assistance System", icon: "patent", href: "/patents/autonomous-medical-assistance-system" }
+          ]
         },
         {
           id: "patent-related", type: "relatedCards", header: "Related Registry",
