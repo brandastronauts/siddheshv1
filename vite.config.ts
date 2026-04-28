@@ -66,7 +66,7 @@ function prerenderSchemasPlugin() {
 
       // Load static HTML renderer for content injection into View Source
       const rendererPath = pathMod.resolve('src', 'lib', 'staticHtmlRenderer.js');
-      let renderPageToStaticHtml = (_page: any): string => '';
+      let renderPageToStaticHtml = (_page: any, _route?: string): string => '';
       try {
         const rendererMod = await import(pathToFileURL(rendererPath).href);
         renderPageToStaticHtml = rendererMod.renderPageToStaticHtml;
