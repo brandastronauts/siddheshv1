@@ -14,16 +14,19 @@ DirectorySlash Off
   RewriteCond %{REQUEST_URI} ^/$
   RewriteRule ^$ / [R=301,L,QSD]
 
-  # ── Hard 404s for legacy / malformed URLs (must come BEFORE any redirects) ──
-  # Any .shtml file (legacy blueblocks.in extensions — never existed on this domain)
-  RewriteRule \.shtml$ - [R=404,L]
+  # ── Legacy URL 301 redirects (per owner directive) ──
+  # Specific legacy CubeSat-INSPACE .shtml paths → mapped live pages
+  RewriteRule ^publications/CubeSat-INSPACE/privacy-policy\.shtml$ /privacy [R=301,L]
+  RewriteRule ^publications/CubeSat-INSPACE/nursery-school\.shtml$ /publications [R=301,L]
+  RewriteRule ^publications/CubeSat-INSPACE/our-programs\.shtml$ /publications [R=301,L]
+  RewriteRule ^publications/CubeSat-INSPACE/innovation\.shtml$ /publications [R=301,L]
+  RewriteRule ^publications/CubeSat-INSPACE/montessori\.shtml$ /publications [R=301,L]
 
-  # Legacy CubeSat-INSPACE garbage paths crawled from external broken links → 404
-  # (Previously 301-redirected; GSC flagged as redirects instead of indexing real pages.)
-  RewriteRule ^publications/CubeSat-INSPACE(/.*)?$ - [R=404,L]
+  # Legacy /blueblocks/blog/ (and anything under /blueblocks/) → /publications
+  RewriteRule ^blueblocks(/.*)?$ /publications [R=301,L]
 
-  # Legacy /blueblocks/* paths (never existed on this subdomain) → 404
-  RewriteRule ^blueblocks(/.*)?$ - [R=404,L]
+  # Catch-all: any remaining .shtml URL → homepage (future-proof)
+  RewriteRule \.shtml$ / [R=301,L]
 
   # ── Strip trailing slashes (except root "/") — 301 redirect /path/ → /path ──
   RewriteCond %{REQUEST_URI} ^(.+)/$
