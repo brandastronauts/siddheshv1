@@ -22,6 +22,9 @@ DirectorySlash Off
   # (Previously 301-redirected; GSC flagged as redirects instead of indexing real pages.)
   RewriteRule ^publications/CubeSat-INSPACE(/.*)?$ - [R=404,L]
 
+  # Legacy /blueblocks/* paths (never existed on this subdomain) → 404
+  RewriteRule ^blueblocks(/.*)?$ - [R=404,L]
+
   # ── Strip trailing slashes (except root "/") — 301 redirect /path/ → /path ──
   RewriteCond %{REQUEST_URI} ^(.+)/$
   RewriteRule ^ %1 [R=301,L]
