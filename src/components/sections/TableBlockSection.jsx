@@ -17,7 +17,7 @@ const TableBlockSection = ({ heading, header, intro, headers: tableHeaders = [],
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-muted-foreground text-sm mb-6 max-w-3xl"
+            className="text-muted-foreground text-sm text-center mb-6 max-w-3xl mx-auto"
           >
             {intro}
           </motion.p>
