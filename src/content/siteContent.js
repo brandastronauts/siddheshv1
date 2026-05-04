@@ -7910,6 +7910,253 @@ const siteContent = {
       ]
     },
 
+    "/newsroom/dispatch/ami-congress-2026-press-release": {
+      title: "Press Release: India's Only School at the 30th AMI Montessori Congress",
+      metaDescription: "Blue Blocks Montessori School, Hyderabad, presents an official Design Thinking breakout session at the 30th International AMI Montessori Congress in Mérida, Mexico, alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond. Blue Blocks adolescents announce SBB-2 — a second student-built satellite.",
+      _cpt: "news-item",
+      _status: "published",
+      seo: {
+        title: "India's Only School at the 30th AMI Montessori Congress | Press Release | Blue Blocks Micro Research Institute",
+        canonical: "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release",
+        description: "Blue Blocks Montessori School, Hyderabad, presents an official Design Thinking breakout session alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond at the 30th International AMI Montessori Congress in Mérida, Mexico. Blue Blocks adolescents announce SBB-2 — a second student-built satellite.",
+        keywords: "AMI Congress 2026, Association Montessori Internationale, Mérida Mexico, Blue Blocks Montessori School, Design Thinking workshop, SBB-2 satellite, SBB-1, Pavan Goyal, Munira Hussain, Dr. Gabor Maté, Dr. Adele Diamond, Dr. Angeline Lillard, Alain Tschudin, Montessori innovation, student-built satellite, IN-SPACe, PSLV-C62, Hyderabad",
+        openGraph: {
+          type: "article",
+          title: "India's Only School at the 30th AMI Montessori Congress",
+          description: "Blue Blocks Montessori School, Hyderabad, presents an official Design Thinking breakout session alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond in Mérida, Mexico. Blue Blocks adolescents announce SBB-2 — a second student-built satellite.",
+          image: { url: "https://research.blueblocks.in/images/og-home.jpg", width: 1200, height: 630 },
+          article: {
+            published_time: "2026-04-25T00:00:00+05:30",
+            author: "Blue Blocks Micro Research Institute",
+            section: "Press Release"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "India's Only School at the 30th AMI Montessori Congress",
+          description: "Blue Blocks Montessori School presents an official Design Thinking breakout session in Mérida, Mexico, alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond. Adolescents announce SBB-2.",
+          image: "https://research.blueblocks.in/images/og-home.jpg"
+        },
+        citation: {
+          citation_title: "Montessori and Innovation: A Design Thinking Workshop for a Changing World — Pre-registration of 30th AMI Congress Presentation",
+          citation_authors: ["Pavan Goyal", "Munira Hussain"],
+          citation_publication_date: "2026/04/25",
+          citation_publisher: "Blue Blocks Micro Research Institute",
+          citation_doi: "10.5281/zenodo.19752834"
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "NewsArticle",
+          "@id": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release#article",
+          "headline": "India's Only School at the 30th AMI Montessori Congress",
+          "alternativeHeadline": "Blue Blocks Montessori School Presents at the 30th International AMI Congress in Mérida, Mexico",
+          "datePublished": "2026-04-25T00:00:00+05:30",
+          "dateModified": "2026-04-25T00:00:00+05:30",
+          "author": [
+            {
+              "@type": "Person",
+              "name": "Pavan Goyal",
+              "jobTitle": "Co-founder & Principal Investigator",
+              "affiliation": { "@type": "ResearchOrganization", "name": "Blue Blocks Micro Research Institute" },
+              "sameAs": "https://orcid.org/0009-0009-8840-8505"
+            },
+            {
+              "@type": "Person",
+              "name": "Munira Hussain",
+              "jobTitle": "Co-founder & AMI Auxiliary Trainer",
+              "affiliation": { "@type": "ResearchOrganization", "name": "Blue Blocks Micro Research Institute" }
+            }
+          ],
+          "publisher": {
+            "@type": "ResearchOrganization",
+            "@id": "https://research.blueblocks.in/#microresearch",
+            "name": "Blue Blocks Micro Research Institute",
+            "logo": { "@type": "ImageObject", "url": "https://research.blueblocks.in/logo.png" }
+          },
+          "image": { "@type": "ImageObject", "url": "https://research.blueblocks.in/images/og-home.jpg", "width": 1200, "height": 630 },
+          "about": [
+            { "@type": "Thing", "name": "AMI Congress 2026" },
+            { "@type": "Thing", "name": "Montessori Education" },
+            { "@type": "Thing", "name": "Design Thinking" },
+            { "@type": "Thing", "name": "Student-Built Satellite" },
+            { "@type": "Thing", "name": "SBB-2" }
+          ],
+          "description": "Blue Blocks Montessori School, Hyderabad, presents an official Design Thinking breakout session at the 30th International AMI Montessori Congress in Mérida, Mexico, alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond. Blue Blocks adolescents announce SBB-2 — a second student-built satellite.",
+          "url": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release",
+          "mainEntityOfPage": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release",
+          "isPartOf": { "@type": "WebSite", "@id": "https://research.blueblocks.in/#website" },
+          "citation": {
+            "@type": "ScholarlyArticle",
+            "name": "Montessori and Innovation: A Design Thinking Workshop for a Changing World — Pre-registration of 30th AMI Congress Presentation",
+            "url": "https://doi.org/10.5281/zenodo.19752834",
+            "sameAs": "https://doi.org/10.5281/zenodo.19752834"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://research.blueblocks.in/" },
+            { "@type": "ListItem", "position": 2, "name": "Newsroom", "item": "https://research.blueblocks.in/newsroom" },
+            { "@type": "ListItem", "position": 3, "name": "AMI Congress 2026 Press Release", "item": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release" }
+          ]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Event",
+          "name": "30th International AMI Montessori Congress 2026",
+          "startDate": "2026-05-01",
+          "endDate": "2026-05-04",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "location": {
+            "@type": "Place",
+            "name": "Centro Internacional de Congresos",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Mérida",
+              "addressRegion": "Yucatán",
+              "addressCountry": "MX"
+            }
+          },
+          "organizer": {
+            "@type": "Organization",
+            "name": "Association Montessori Internationale",
+            "url": "https://montessori-ami.org"
+          },
+          "url": "https://montessoricongress2026.org/program"
+        }
+      ],
+      sections: [
+        {
+          id: "pr-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "India's Only School at the 30th AMI Montessori Congress",
+          subheadline: "Blue Blocks Montessori School, Hyderabad, presents an official Design Thinking breakout session alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond in Mérida, Mexico. Blue Blocks adolescents also announce SBB-2 — a second student-built satellite after losing their first to the PSLV-C62 launch anomaly.",
+          primaryCta: { label: "Read Full Press Release (NewsVoir)", href: "https://www.newsvoir.com/", external: true },
+          secondaryCta: { label: "Back to Newsroom", href: "/newsroom" },
+          image: { src: "/src/assets/banners/newsroom-press.jpg", alt: "AMI Congress 2026 press release", variant: "hero" }
+        },
+        {
+          id: "pr-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Date", value: "April 25, 2026" },
+            { label: "Type", value: "Press Release" },
+            { label: "Event", value: "30th AMI Congress 2026" },
+            { label: "Venue", value: "Mérida, Yucatán, Mexico" },
+            { label: "DOI", value: "10.5281/zenodo.19752834", href: "https://doi.org/10.5281/zenodo.19752834", external: true }
+          ]
+        },
+        {
+          id: "pr-body",
+          type: "textBlock",
+          variant: "compact",
+          header: "What This Is About",
+          body: "On May 1–4, 2026, the Association Montessori Internationale — the organisation founded by Dr. Maria Montessori in 1929 — holds its 30th International Congress at the Centro Internacional de Congresos in Mérida, Yucatán, Mexico. The congress is the triennial global gathering of the Montessori community, bringing together educators, researchers, and practitioners from over 15 countries.\n\nBlue Blocks Montessori School, Hyderabad, is the only school from India presenting at this congress. Co-founders Pavan Goyal and Munira Hussain lead an official breakout session on May 3rd. Blue Blocks adolescents separately present their student-built satellite programme alongside adolescent presentations from Montessori schools worldwide.\n\nThe congress features keynote speakers including Dr. Gabor Maté (Order of Canada, bestselling author of *The Myth of Normal*), Dr. Adele Diamond (Canada Research Chair, University of British Columbia), Dr. Angeline Stoll Lillard (University of Virginia), and AMI President Professor Alain Tschudin (Stellenbosch University)."
+        },
+        {
+          id: "pr-media-brief",
+          type: "tableBlock",
+          header: "Media Brief",
+          columns: ["Item", "Detail"],
+          rows: [
+            ["Event", "30th International AMI Montessori Congress 2026"],
+            ["Dates", "May 1–4, 2026"],
+            ["Venue", "Centro Internacional de Congresos, Mérida, Yucatán, Mexico"],
+            ["Organiser", "Association Montessori Internationale (est. 1929, Amsterdam)"],
+            ["Blue Blocks session", "Montessori and Innovation: A Design Thinking Workshop for a Changing World"],
+            ["Session date and time", "May 3, 2026 · 12:00–13:00 · Breakout Room"],
+            ["Speakers", "Pavan Goyal & Munira Hussain, Co-founders, Blue Blocks Montessori School"],
+            ["Adolescent presentation", "Blue Blocks adolescents share SBB-1 satellite story and announce SBB-2 alongside adolescent presentations from schools worldwide"],
+            ["Notable congress speakers", "Dr. Gabor Maté · Dr. Adele Diamond · Dr. Angeline Lillard · Prof. Alain Tschudin (AMI President)"],
+            ["India at this congress", "Two Indian voices — Anuradha Shankar (IPS officer/activist) and Blue Blocks Montessori School (the only school from India)"]
+          ]
+        },
+        {
+          id: "pr-key-numbers",
+          type: "list",
+          header: "Key Numbers",
+          variant: "bullet",
+          items: [
+            "19 years of continuous operation (est. 2005)",
+            "1,047 children in longitudinal data panel",
+            "45,000+ parents engaged through workshops worldwide",
+            "30+ open-access research publications across Zenodo, OSF, SSRN, Harvard Dataverse",
+            "5 patents filed by school-age children in drone design",
+            "1 CubeSat satellite payload authorised by IN-SPACe, Govt. of India (SBB-1)",
+            "4 AMI diplomas held by founder Pavan Goyal — first person globally with this combination",
+            "2 campuses — Gachibowli and Tellapur, Hyderabad",
+            "0 other schools from India presenting at this congress"
+          ]
+        },
+        {
+          id: "pr-satellite-story",
+          type: "textBlock",
+          variant: "compact",
+          header: "The Satellite Story",
+          body: "SBB-1 was a student-designed and student-built CubeSat payload that received formal authorisation from IN-SPACe, the Department of Space, Government of India (Reference PMA/IN-SPACe/AUTH/2026/115). It was integrated with ISRO's PSLV-C62 launch vehicle and launched on January 12, 2026. The launch experienced an anomaly during the ascent phase, and the payload was lost — through no fault in the SBB-1 hardware, which had completed its full qualification campaign.\n\nBlue Blocks treated the loss as a documented research protocol, not a programme failure. Three independent observation streams tracked the experience: the engineering record, the learner-development record, and the programme-level record.\n\nAt the congress, Blue Blocks formally announces SBB-2 — the second-generation student-built satellite. SBB-2 incorporates three methodological improvements: an external academic partner from the concept phase, a pre-registered observation protocol with an external co-investigator, and an independently auditable data pipeline.\n\nThe student team has also filed five patents in drone design, dedicated to Dr. Maria Montessori on her 150th birthday."
+        },
+        {
+          id: "pr-design-thinking",
+          type: "textBlock",
+          variant: "compact",
+          header: "The Design Thinking Workshop",
+          body: "The official breakout session — *Montessori and Innovation: A Design Thinking Workshop for a Changing World* — combines a presentation on how Montessori pedagogy builds innovative capacity across the developmental continuum with a hands-on workshop. Educators and students practise Design Thinking together as active collaborators, working through empathy, ideation, and prototyping in real time.\n\nThe session draws on Blue Blocks Micro Research Institute's 19-year longitudinal data panel of 1,047 Indian children — the only data panel of its kind in India tracking children across the full AMI Montessori continuum from birth to 18 years.\n\nThe pre-registration for this congress presentation is published open-access: DOI: [10.5281/zenodo.19752834](https://doi.org/10.5281/zenodo.19752834)"
+        },
+        {
+          id: "pr-quotes",
+          type: "highlightBox",
+          variant: "callout",
+          heading: "Quotes",
+          body: "*\"Presenting in Mérida alongside researchers of the calibre of Adele Diamond and Gabor Maté is the result of 19 years of trusting children. Our students built a satellite. The data from 1,047 children over 19 years tells us why. That story belongs on the world stage.\"*\n— **Pavan Goyal**, Co-founder & Principal Investigator\n\n*\"These are not students presenting a school project. They are the engineers who designed, prototyped, tested, and built a satellite payload that received formal authorisation from the Government of India. They are presenting their own work, in their own words, to the world's foremost Montessori community.\"*\n— **Munira Hussain**, AMI Auxiliary Trainer & Co-founder"
+        },
+        {
+          id: "pr-source-verification",
+          type: "tableBlock",
+          header: "Source Verification",
+          columns: ["Source", "Link"],
+          rows: [
+            ["Congress programme (session confirmed)", "montessoricongress2026.org/program"],
+            ["Congress speaker listing (bio confirmed)", "montessoricongress2026.org/speakers"],
+            ["IN-SPACe authorisation (Zenodo)", "doi.org/10.5281/zenodo.18195108"],
+            ["Pre-registration of presentation", "doi.org/10.5281/zenodo.19752834"],
+            ["Research archive (Zenodo)", "zenodo.org/communities/blueblocksmicroresearchinstitute"],
+            ["ORCID — Pavan Goyal", "orcid.org/0009-0009-8840-8505"]
+          ]
+        },
+        {
+          id: "pr-cta-bottom",
+          type: "highlightBox",
+          variant: "callout",
+          heading: "Read Full Press Release",
+          body: "The full press release is distributed via NewsVoir.\n\n[→ Read Full Press Release (NewsVoir)](https://www.newsvoir.com/)"
+        },
+        {
+          id: "pr-related",
+          type: "relatedCards",
+          header: "Related Publications",
+          cards: [
+            { title: "SBB-1 to SBB-2: Open Announcement", description: "Formal announcement of the second-generation student-built satellite payload.", icon: "publication", href: "https://doi.org/10.5281/zenodo.19752834", external: true },
+            { title: "IN-SPACe Authorisation Certificate", description: "Government of India space authorisation for SBB-1.", icon: "brief", href: "https://doi.org/10.5281/zenodo.18195108", external: true },
+            { title: "AMI Congress Pre-registration", description: "Pre-registration of congress presentation.", icon: "publication", href: "https://doi.org/10.5281/zenodo.19752834", external: true },
+            { title: "Iran Crisis Case Study", description: "Age-differentiated responses to geopolitical violence among school children.", icon: "publication", href: "/publications/iran-war-case-study" },
+            { title: "Blue Blocks Micro Research Methodology", description: "Foundational methodology paper.", icon: "brief", href: "/methodology" }
+          ]
+        },
+        {
+          id: "pr-media-contact",
+          type: "highlightBox",
+          variant: "callout",
+          heading: "Media Contact",
+          body: "**Sruthi Matta**, Research Team Lead\nBlue Blocks Micro Research Institute\nEmail: press.research@blueblocks.in\n\nFor high-resolution images, additional photos, or to arrange interviews with the students or school leadership, contact the address above.\n\nBlue Blocks Montessori School · [blueblocks.in](https://blueblocks.in)\nBlue Blocks Micro Research Institute · [research.blueblocks.in](https://research.blueblocks.in)\nGachibowli & Tellapur · Hyderabad, Telangana 500032 · India"
+        }
+      ]
+    },
+
     "/newsroom/coverage/nobel-peace-center": {
       title: "Nobel Peace Center Features Blue Blocks Student Innovation",
       metaDescription: "Blue Blocks student projects selected for exhibition at the Nobel Peace Center, Oslo, January 2026. Endorsed by MONISC and Norwegian UNESCO Commission.",
