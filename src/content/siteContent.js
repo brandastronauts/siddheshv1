@@ -2079,7 +2079,7 @@ const siteContent = {
               body:
                 "Blue Blocks Montessori School, Hyderabad, presents an official Design Thinking breakout session alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond in Mérida, Mexico. Blue Blocks adolescents announce SBB-2 — a second student-built satellite after losing their first to the PSLV-C62 launch anomaly.",
               cta: { label: "Read Full Press Release", href: "/newsroom/dispatch/ami-congress-2026-press-release" },
-              image: { src: "/src/assets/banners/newsroom-press.jpg", alt: "AMI Congress 2026 press release", variant: "card", privacyBlur: false }
+              image: { src: "/images/newsroom/blueblocks-ami-congress-stage.jpeg", alt: "Blue Blocks adolescents on stage at the 30th International Montessori Congress, Mérida, Mexico", variant: "card", privacyBlur: false }
             },
             {
               tag: "Press Release",
