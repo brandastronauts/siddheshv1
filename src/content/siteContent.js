@@ -8200,7 +8200,7 @@ const siteContent = {
           subheadline: "Blue Blocks Montessori School, Hyderabad, presents an official Design Thinking breakout session alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond in Mérida, Mexico. Blue Blocks adolescents also announce SBB-2 — a second student-built satellite after losing their first to the PSLV-C62 launch anomaly.",
           primaryCta: { label: "Read Full Press Release (NewsVoir)", href: "https://www.newsvoir.com/release/blue-blocks-montessori-school-india-apos-s-only-school-at-the-30th-ami-montessori-congress-presents-alongside-dr-gabor-mate-and-dr-adele-diamond-35407.html", external: true },
           secondaryCta: { label: "Back to Newsroom", href: "/newsroom" },
-          image: { src: "/images/newsroom/blueblocks-isro-mission-control.jpeg", alt: "Blue Blocks Montessori School students and founder Pavan Goyal at ISRO Mission Control during the PSLV-C62 launch, January 2026", variant: "hero" }
+          image: { src: "/images/newsroom/blueblocks-ami-congress-stage.jpeg", alt: "Blue Blocks adolescents on stage at the 30th International Montessori Congress, Mérida, Mexico", variant: "hero" }
         },
         {
           id: "pr-meta",
