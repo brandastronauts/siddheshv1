@@ -27,7 +27,7 @@ const TableBlockSection = ({ heading, header, intro, headers: tableHeaders = [],
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-4xl overflow-x-auto"
+          className="max-w-4xl mx-auto overflow-x-auto"
         >
           <table className="w-full text-sm border border-border rounded-xl overflow-hidden">
             {tableHeaders.length > 0 && (
