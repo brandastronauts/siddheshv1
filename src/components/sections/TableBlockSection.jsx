@@ -80,7 +80,7 @@ const TableBlockSection = ({ heading, header, intro, headers: tableHeaders = [],
                   <tr key={ri} className={`border-b border-border last:border-b-0 ${ri % 2 === 0 ? 'bg-card' : 'bg-surface'}`}>
                     {cells.map((cell, ci) => (
                       <td key={ci} className="px-4 py-3 text-muted-foreground">
-                        <code className={ci === 0 ? 'text-deep-ink font-mono text-xs' : ''}>{cell}</code>
+                        <code className={ci === 0 ? 'text-deep-ink font-mono text-xs' : ''}>{linkify(cell)}</code>
                       </td>
                     ))}
                   </tr>
