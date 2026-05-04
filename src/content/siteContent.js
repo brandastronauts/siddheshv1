@@ -9562,6 +9562,7 @@ const CPT_MAP = {
   '/newsroom': 'page',
   '/newsroom/dispatch/isro-payload-authorization': 'news-item',
   '/newsroom/dispatch/iran-crisis-study-press-release': 'news-item',
+  '/newsroom/dispatch/ami-congress-2026-press-release': 'news-item',
   '/newsroom/coverage/nobel-peace-center': 'news-item',
   '/newsroom/updates/iit-hyderabad-advisory': 'news-item',
   '/newsroom/updates/utility-patent-4421': 'news-item',
