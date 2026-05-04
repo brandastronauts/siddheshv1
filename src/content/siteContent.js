@@ -8071,7 +8071,7 @@ const siteContent = {
           id: "pr-media-brief",
           type: "tableBlock",
           header: "Media Brief",
-          columns: ["Item", "Detail"],
+          headers: ["Item", "Detail"],
           rows: [
             ["Event", "30th International AMI Montessori Congress 2026"],
             ["Dates", "May 1–4, 2026"],
@@ -8127,7 +8127,7 @@ const siteContent = {
           id: "pr-source-verification",
           type: "tableBlock",
           header: "Source Verification",
-          columns: ["Source", "Link"],
+          headers: ["Source", "Link"],
           rows: [
             ["Congress programme (session confirmed)", "montessoricongress2026.org/program"],
             ["Congress speaker listing (bio confirmed)", "montessoricongress2026.org/speakers"],
