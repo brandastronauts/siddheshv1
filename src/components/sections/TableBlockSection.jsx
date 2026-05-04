@@ -1,5 +1,37 @@
 import { motion } from 'framer-motion';
 
+// Universal cell renderer: auto-link URLs (http(s)://, www., bare domains like doi.org/...) and emails.
+const URL_REGEX = /((?:https?:\/\/|www\.)[^\s<>()]+[^\s<>().,;:!?]|(?:[a-z0-9-]+\.)+(?:org|com|in|net|io|edu|gov|co|ai|dev)(?:\/[^\s<>()]*)?|[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/gi;
+
+const linkify = (text) => {
+  if (typeof text !== 'string') return text;
+  const parts = text.split(URL_REGEX);
+  return parts.map((part, i) => {
+    if (!part) return null;
+    if (URL_REGEX.test(part)) {
+      URL_REGEX.lastIndex = 0;
+      const isEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(part);
+      const href = isEmail
+        ? `mailto:${part}`
+        : part.startsWith('http')
+          ? part
+          : `https://${part}`;
+      return (
+        <a
+          key={i}
+          href={href}
+          target={isEmail ? undefined : '_blank'}
+          rel={isEmail ? undefined : 'noopener noreferrer'}
+          className="text-primary-navy underline underline-offset-2 hover:text-primary-navy/80 break-all"
+        >
+          {part}
+        </a>
+      );
+    }
+    return <span key={i}>{part}</span>;
+  });
+};
+
 const TableBlockSection = ({ heading, header, intro, headers: tableHeaders = [], rows = [] }) => {
   const title = header || heading;
 
