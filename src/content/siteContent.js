@@ -9493,14 +9493,6 @@ const siteContent = {
           variant: "hero",
         },
   },
-  '/newsroom/dispatch/ami-congress-2026-press-release': {
-    publishedDate: '2026-04-25',
-    newsType: 'dispatch',
-    author: 'Blue Blocks Micro Research Institute',
-    doi: '10.5281/zenodo.19752834',
-    zenodoUrl: 'https://doi.org/10.5281/zenodo.19752834',
-    researchDomains: ['Montessori Education', 'Innovation', 'Aerospace'],
-  },
       {
         type: "glossaryAccordion",
         header: "Terms & Definitions",
