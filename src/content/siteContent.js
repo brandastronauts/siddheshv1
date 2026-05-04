@@ -7957,85 +7957,238 @@ const siteContent = {
       schemas: [
         {
           "@context": "https://schema.org",
-          "@type": "NewsArticle",
-          "@id": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release#article",
-          "headline": "India's Only School at the 30th AMI Montessori Congress",
-          "alternativeHeadline": "Blue Blocks Montessori School Presents at the 30th International AMI Congress in Mérida, Mexico",
-          "datePublished": "2026-04-25T00:00:00+05:30",
-          "dateModified": "2026-04-25T00:00:00+05:30",
-          "author": [
+          "@graph": [
             {
-              "@type": "Person",
-              "name": "Pavan Goyal",
-              "jobTitle": "Co-founder & Principal Investigator",
-              "affiliation": { "@type": "ResearchOrganization", "name": "Blue Blocks Micro Research Institute" },
-              "sameAs": "https://orcid.org/0009-0009-8840-8505"
+              "@type": "NewsArticle",
+              "@id": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release#article",
+              "headline": "India's Only School at the 30th AMI Montessori Congress",
+              "alternativeHeadline": "Blue Blocks Montessori School — India's Only School at the 30th AMI Montessori Congress — Presents Design Thinking Session in Mérida Alongside Dr. Gabor Maté and Dr. Adele Diamond",
+              "description": "Media brief and background for Blue Blocks Montessori School's presentation at the 30th International AMI Montessori Congress in Mérida, Mexico (May 1–4, 2026). Blue Blocks adolescents announce SBB-2, a second student-built satellite after losing SBB-1 to the PSLV-C62 launch anomaly.",
+              "datePublished": "2026-04-25",
+              "dateModified": "2026-04-25",
+              "url": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release"
+              },
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://research.blueblocks.in/images/newsroom/blueblocks-isro-mission-control.jpeg",
+                "caption": "Blue Blocks Montessori School students and founder Pavan Goyal at ISRO Mission Control during the PSLV-C62 launch of their student-built satellite, January 2026",
+                "width": 1200,
+                "height": 675
+              },
+              "author": [
+                {
+                  "@type": "Person",
+                  "@id": "https://research.blueblocks.in/team/pavan-goyal#person",
+                  "name": "Pavan Goyal",
+                  "jobTitle": "Founder & Principal Investigator",
+                  "affiliation": { "@id": "https://research.blueblocks.in#institute" },
+                  "sameAs": ["https://orcid.org/0009-0009-8840-8505"]
+                },
+                {
+                  "@type": "Person",
+                  "@id": "https://research.blueblocks.in/team/munira-hussain#person",
+                  "name": "Munira Hussain",
+                  "jobTitle": "AMI Auxiliary Trainer & Co-founder",
+                  "affiliation": { "@id": "https://blueblocks.in#school" },
+                  "sameAs": ["https://orcid.org/0009-0003-5904-6206"]
+                }
+              ],
+              "publisher": { "@id": "https://research.blueblocks.in#institute" },
+              "about": [
+                {
+                  "@type": "Event",
+                  "@id": "https://montessoricongress2026.org#event",
+                  "name": "30th International AMI Montessori Congress 2026",
+                  "startDate": "2026-05-01",
+                  "endDate": "2026-05-04",
+                  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                  "eventStatus": "https://schema.org/EventScheduled",
+                  "location": {
+                    "@type": "Place",
+                    "name": "Centro Internacional de Congresos de Yucatán",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "addressLocality": "Mérida",
+                      "addressRegion": "Yucatán",
+                      "addressCountry": "MX"
+                    }
+                  },
+                  "organizer": {
+                    "@type": "Organization",
+                    "name": "Association Montessori Internationale",
+                    "alternateName": "AMI",
+                    "foundingDate": "1929",
+                    "url": "https://montessori-ami.org",
+                    "sameAs": ["https://en.wikipedia.org/wiki/Association_Montessori_Internationale"]
+                  },
+                  "performer": [
+                    { "@type": "Person", "name": "Pavan Goyal", "sameAs": "https://orcid.org/0009-0009-8840-8505" },
+                    { "@type": "Person", "name": "Munira Hussain", "sameAs": "https://orcid.org/0009-0003-5904-6206" },
+                    { "@type": "Person", "name": "Dr. Gabor Maté", "sameAs": "https://en.wikipedia.org/wiki/Gabor_Mat%C3%A9" },
+                    { "@type": "Person", "name": "Dr. Adele Diamond", "sameAs": "https://en.wikipedia.org/wiki/Adele_Diamond" },
+                    { "@type": "Person", "name": "Dr. Angeline Stoll Lillard", "sameAs": "https://en.wikipedia.org/wiki/Angeline_Lillard" },
+                    { "@type": "Person", "name": "Professor Alain Tschudin", "jobTitle": "AMI President" }
+                  ],
+                  "subEvent": [
+                    {
+                      "@type": "Event",
+                      "name": "Montessori and Innovation: A Design Thinking Workshop for a Changing World",
+                      "description": "Official breakout session combining a presentation on Montessori-to-innovation pedagogy with a hands-on Design Thinking workshop where educators and students practise together.",
+                      "startDate": "2026-05-03T12:00:00-06:00",
+                      "endDate": "2026-05-03T13:00:00-06:00",
+                      "performer": [
+                        { "@type": "Person", "name": "Pavan Goyal" },
+                        { "@type": "Person", "name": "Munira Hussain" }
+                      ],
+                      "organizer": { "@id": "https://blueblocks.in#school" }
+                    }
+                  ]
+                }
+              ],
+              "mentions": [
+                {
+                  "@type": "CreativeWork",
+                  "name": "SBB-1 CubeSat Payload",
+                  "description": "Student-designed and student-built 1U-class CubeSat payload authorised by IN-SPACe under reference PMA/IN-SPACe/AUTH/2026/115. Launched aboard ISRO PSLV-C62 on January 12, 2026. Lost during launch anomaly.",
+                  "identifier": "PMA/IN-SPACe/AUTH/2026/115"
+                },
+                {
+                  "@type": "CreativeWork",
+                  "name": "SBB-2 CubeSat Payload",
+                  "description": "Second-generation student-built satellite payload announced at the 30th AMI Congress. Three methodological improvements over SBB-1."
+                },
+                {
+                  "@type": "ScholarlyArticle",
+                  "name": "AMI Congress 2026 Pre-registration",
+                  "url": "https://doi.org/10.5281/zenodo.19752834",
+                  "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.19752834" }
+                },
+                {
+                  "@type": "ScholarlyArticle",
+                  "name": "IN-SPACe Authorisation Certificate",
+                  "url": "https://doi.org/10.5281/zenodo.18195108",
+                  "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.18195108" }
+                },
+                {
+                  "@type": "ScholarlyArticle",
+                  "name": "Age-Differentiated Responses to Geopolitical Violence: Iran Crisis Case Study",
+                  "url": "https://doi.org/10.5281/zenodo.18996507",
+                  "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.18996507" }
+                },
+                {
+                  "@type": "ScholarlyArticle",
+                  "name": "Blue Blocks Micro Research Methodology (v1.0)",
+                  "url": "https://doi.org/10.5281/zenodo.18584816",
+                  "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.18584816" }
+                }
+              ],
+              "citation": [
+                {
+                  "@type": "CreativeWork",
+                  "name": "NewsVoir Wire Distribution",
+                  "url": "https://www.newsvoir.com/release/blue-blocks-montessori-school-india-apos-s-only-school-at-the-30th-ami-montessori-congress-presents-alongside-dr-gabor-mate-and-dr-adele-diamond-35407.html"
+                }
+              ],
+              "keywords": [
+                "AMI Montessori Congress 2026",
+                "Blue Blocks Montessori School",
+                "Blue Blocks Micro Research Institute",
+                "Pavan Goyal",
+                "Munira Hussain",
+                "Gabor Maté",
+                "Adele Diamond",
+                "Angeline Lillard",
+                "CubeSat",
+                "SBB-1",
+                "SBB-2",
+                "IN-SPACe",
+                "ISRO",
+                "PSLV-C62",
+                "Design Thinking",
+                "Montessori India",
+                "Mérida Mexico",
+                "student-built satellite",
+                "Hyderabad education",
+                "longitudinal data panel",
+                "AMI diplomas"
+              ],
+              "inLanguage": "en",
+              "copyrightHolder": { "@id": "https://research.blueblocks.in#institute" },
+              "copyrightYear": 2026,
+              "accessMode": "textual",
+              "isAccessibleForFree": true
             },
             {
-              "@type": "Person",
-              "name": "Munira Hussain",
-              "jobTitle": "Co-founder & AMI Auxiliary Trainer",
-              "affiliation": { "@type": "ResearchOrganization", "name": "Blue Blocks Micro Research Institute" }
+              "@type": "ResearchOrganization",
+              "@id": "https://research.blueblocks.in#institute",
+              "name": "Blue Blocks Micro Research Institute",
+              "url": "https://research.blueblocks.in",
+              "parentOrganization": { "@id": "https://blueblocks.in#school" },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Hyderabad",
+                "addressRegion": "Telangana",
+                "postalCode": "500032",
+                "addressCountry": "IN"
+              },
+              "sameAs": [
+                "https://zenodo.org/communities/blueblocksmicroresearchinstitute",
+                "https://orcid.org/0009-0009-8840-8505",
+                "https://montessori-ami.org"
+              ]
+            },
+            {
+              "@type": "School",
+              "@id": "https://blueblocks.in#school",
+              "name": "Blue Blocks Montessori School",
+              "alternateName": [
+                "Blue Blocks Montessori Educational Society",
+                "Blue Blocks School",
+                "Blue Blocks Hyderabad"
+              ],
+              "url": "https://blueblocks.in",
+              "foundingDate": "2005",
+              "founder": [
+                { "@type": "Person", "name": "Pavan Goyal", "sameAs": "https://orcid.org/0009-0009-8840-8505" },
+                { "@type": "Person", "name": "Munira Hussain", "sameAs": "https://orcid.org/0009-0003-5904-6206" }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Hyderabad",
+                "addressRegion": "Telangana",
+                "postalCode": "500032",
+                "addressCountry": "IN"
+              },
+              "department": { "@id": "https://research.blueblocks.in#institute" },
+              "sameAs": [
+                "https://montessori-ami.org",
+                "https://blueblocks.in"
+              ]
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release",
+              "name": "India's Only School at the 30th AMI Montessori Congress — Media Brief",
+              "url": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release",
+              "description": "Media brief, key facts, quotes, and source verification for Blue Blocks Montessori School's presentation at the 30th International AMI Montessori Congress, Mérida, Mexico, May 1–4, 2026.",
+              "isPartOf": {
+                "@type": "WebSite",
+                "name": "Blue Blocks Micro Research Institute",
+                "url": "https://research.blueblocks.in"
+              },
+              "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://research.blueblocks.in" },
+                  { "@type": "ListItem", "position": 2, "name": "Newsroom", "item": "https://research.blueblocks.in/newsroom" },
+                  { "@type": "ListItem", "position": 3, "name": "AMI Congress 2026 Press Release", "item": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release" }
+                ]
+              }
             }
-          ],
-          "publisher": {
-            "@type": "ResearchOrganization",
-            "@id": "https://research.blueblocks.in/#microresearch",
-            "name": "Blue Blocks Micro Research Institute",
-            "logo": { "@type": "ImageObject", "url": "https://research.blueblocks.in/logo.png" }
-          },
-          "image": { "@type": "ImageObject", "url": "https://research.blueblocks.in/images/og-home.jpg", "width": 1200, "height": 630 },
-          "about": [
-            { "@type": "Thing", "name": "AMI Congress 2026" },
-            { "@type": "Thing", "name": "Montessori Education" },
-            { "@type": "Thing", "name": "Design Thinking" },
-            { "@type": "Thing", "name": "Student-Built Satellite" },
-            { "@type": "Thing", "name": "SBB-2" }
-          ],
-          "description": "Blue Blocks Montessori School, Hyderabad, presents an official Design Thinking breakout session at the 30th International AMI Montessori Congress in Mérida, Mexico, alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond. Blue Blocks adolescents announce SBB-2 — a second student-built satellite.",
-          "url": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release",
-          "mainEntityOfPage": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release",
-          "isPartOf": { "@type": "WebSite", "@id": "https://research.blueblocks.in/#website" },
-          "citation": {
-            "@type": "ScholarlyArticle",
-            "name": "Montessori and Innovation: A Design Thinking Workshop for a Changing World — Pre-registration of 30th AMI Congress Presentation",
-            "url": "https://doi.org/10.5281/zenodo.19752834",
-            "sameAs": "https://doi.org/10.5281/zenodo.19752834"
-          }
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://research.blueblocks.in/" },
-            { "@type": "ListItem", "position": 2, "name": "Newsroom", "item": "https://research.blueblocks.in/newsroom" },
-            { "@type": "ListItem", "position": 3, "name": "AMI Congress 2026 Press Release", "item": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release" }
           ]
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "Event",
-          "name": "30th International AMI Montessori Congress 2026",
-          "startDate": "2026-05-01",
-          "endDate": "2026-05-04",
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventScheduled",
-          "location": {
-            "@type": "Place",
-            "name": "Centro Internacional de Congresos",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Mérida",
-              "addressRegion": "Yucatán",
-              "addressCountry": "MX"
-            }
-          },
-          "organizer": {
-            "@type": "Organization",
-            "name": "Association Montessori Internationale",
-            "url": "https://montessori-ami.org"
-          },
-          "url": "https://montessoricongress2026.org/program"
         }
       ],
       sections: [
