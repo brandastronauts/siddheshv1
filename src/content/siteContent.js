@@ -8198,7 +8198,7 @@ const siteContent = {
           variant: "stark",
           headline: "India's Only School at the 30th AMI Montessori Congress",
           subheadline: "Blue Blocks Montessori School, Hyderabad, presents an official Design Thinking breakout session alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond in Mérida, Mexico. Blue Blocks adolescents also announce SBB-2 — a second student-built satellite after losing their first to the PSLV-C62 launch anomaly.",
-          primaryCta: { label: "Read Full Press Release (NewsVoir)", href: "https://www.newsvoir.com/", external: true },
+          primaryCta: { label: "Read Full Press Release (NewsVoir)", href: "https://www.newsvoir.com/release/blue-blocks-montessori-school-india-apos-s-only-school-at-the-30th-ami-montessori-congress-presents-alongside-dr-gabor-mate-and-dr-adele-diamond-35407.html", external: true },
           secondaryCta: { label: "Back to Newsroom", href: "/newsroom" },
           image: { src: "/src/assets/banners/newsroom-press.jpg", alt: "AMI Congress 2026 press release", variant: "hero" }
         },
@@ -8295,7 +8295,7 @@ const siteContent = {
           type: "highlightBox",
           variant: "callout",
           heading: "Read Full Press Release",
-          body: "The full press release is distributed via NewsVoir.\n\n[→ Read Full Press Release (NewsVoir)](https://www.newsvoir.com/)"
+          body: "The full press release is distributed via NewsVoir.\n\n[→ Read Full Press Release (NewsVoir)](https://www.newsvoir.com/release/blue-blocks-montessori-school-india-apos-s-only-school-at-the-30th-ami-montessori-congress-presents-alongside-dr-gabor-mate-and-dr-adele-diamond-35407.html)"
         },
         {
           id: "pr-related",
