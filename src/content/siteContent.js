@@ -9750,6 +9750,14 @@ const FIELDS_MAP = {
     zenodoUrl: 'https://doi.org/10.5281/zenodo.18996507',
     researchDomains: ['Child Development', 'Peace Education', 'Geopolitical Reasoning'],
   },
+  '/newsroom/dispatch/ami-congress-2026-press-release': {
+    publishedDate: '2026-04-25',
+    newsType: 'dispatch',
+    author: 'Blue Blocks Micro Research Institute',
+    doi: '10.5281/zenodo.19752834',
+    zenodoUrl: 'https://doi.org/10.5281/zenodo.19752834',
+    researchDomains: ['Montessori Education', 'Innovation', 'Aerospace'],
+  },
   '/newsroom/updates/iit-hyderabad-advisory': {
     publishedDate: '2025-10-15',
     newsType: 'update',
