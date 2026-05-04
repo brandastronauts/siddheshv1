@@ -7951,7 +7951,7 @@ const siteContent = {
           citation_authors: ["Pavan Goyal", "Munira Hussain"],
           citation_publication_date: "2026/04/25",
           citation_publisher: "Blue Blocks Micro Research Institute",
-          citation_doi: "10.5281/zenodo.19752834"
+          citation_doi: "10.17605/OSF.IO/ST9H2"
         }
       },
       schemas: [
@@ -8063,8 +8063,8 @@ const siteContent = {
                 {
                   "@type": "ScholarlyArticle",
                   "name": "AMI Congress 2026 Pre-registration",
-                  "url": "https://doi.org/10.5281/zenodo.19752834",
-                  "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.19752834" }
+                  "url": "https://doi.org/10.17605/OSF.IO/ST9H2",
+                  "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.17605/OSF.IO/ST9H2" }
                 },
                 {
                   "@type": "ScholarlyArticle",
@@ -8210,7 +8210,7 @@ const siteContent = {
             { label: "Type", value: "Press Release" },
             { label: "Event", value: "30th AMI Congress 2026" },
             { label: "Venue", value: "Mérida, Yucatán, Mexico" },
-            { label: "DOI", value: "10.5281/zenodo.19752834", href: "https://doi.org/10.5281/zenodo.19752834", external: true }
+            { label: "DOI", value: "10.17605/OSF.IO/ST9H2", href: "https://doi.org/10.17605/OSF.IO/ST9H2", external: true }
           ]
         },
         {
@@ -8257,7 +8257,7 @@ const siteContent = {
           type: "textBlock",
           variant: "compact",
           header: "The Design Thinking Workshop",
-          body: "The official breakout session — *Montessori and Innovation: A Design Thinking Workshop for a Changing World* — combines a presentation on how Montessori pedagogy builds innovative capacity across the developmental continuum with a hands-on workshop. Educators and students practise Design Thinking together as active collaborators, working through empathy, ideation, and prototyping in real time.\n\nThe session draws on Blue Blocks Micro Research Institute's 19-year longitudinal data panel of 1,047 Indian children — the only data panel of its kind in India tracking children across the full AMI Montessori continuum from birth to 18 years.\n\nThe pre-registration for this congress presentation is published open-access: DOI: [10.5281/zenodo.19752834](https://doi.org/10.5281/zenodo.19752834)"
+          body: "The official breakout session — *Montessori and Innovation: A Design Thinking Workshop for a Changing World* — combines a presentation on how Montessori pedagogy builds innovative capacity across the developmental continuum with a hands-on workshop. Educators and students practise Design Thinking together as active collaborators, working through empathy, ideation, and prototyping in real time.\n\nThe session draws on Blue Blocks Micro Research Institute's 19-year longitudinal data panel of 1,047 Indian children — the only data panel of its kind in India tracking children across the full AMI Montessori continuum from birth to 18 years.\n\nThe pre-registration for this congress presentation is published open-access: DOI: [10.17605/OSF.IO/ST9H2](https://doi.org/10.17605/OSF.IO/ST9H2)"
         },
         {
           id: "pr-quotes",
@@ -8275,7 +8275,7 @@ const siteContent = {
             ["Congress programme (session confirmed)", "montessoricongress2026.org/program"],
             ["Congress speaker listing (bio confirmed)", "montessoricongress2026.org/speakers"],
             ["IN-SPACe authorisation (Zenodo)", "doi.org/10.5281/zenodo.18195108"],
-            ["Pre-registration of presentation", "doi.org/10.5281/zenodo.19752834"],
+            ["Pre-registration of presentation", "doi.org/10.17605/OSF.IO/ST9H2"],
             ["Research archive (Zenodo)", "zenodo.org/communities/blueblocksmicroresearchinstitute"],
             ["ORCID — Pavan Goyal", "orcid.org/0009-0009-8840-8505"]
           ]
@@ -8292,9 +8292,9 @@ const siteContent = {
           type: "relatedCards",
           header: "Related Publications",
           cards: [
-            { title: "SBB-1 to SBB-2: Open Announcement", description: "Formal announcement of the second-generation student-built satellite payload.", icon: "publication", href: "https://doi.org/10.5281/zenodo.19752834", external: true },
+            { title: "SBB-1 to SBB-2: Open Announcement", description: "Formal announcement of the second-generation student-built satellite payload.", icon: "publication", href: "https://doi.org/10.17605/OSF.IO/ST9H2", external: true },
             { title: "IN-SPACe Authorisation Certificate", description: "Government of India space authorisation for SBB-1.", icon: "brief", href: "https://doi.org/10.5281/zenodo.18195108", external: true },
-            { title: "AMI Congress Pre-registration", description: "Pre-registration of congress presentation.", icon: "publication", href: "https://doi.org/10.5281/zenodo.19752834", external: true },
+            { title: "AMI Congress Pre-registration", description: "Pre-registration of congress presentation.", icon: "publication", href: "https://doi.org/10.17605/OSF.IO/ST9H2", external: true },
             { title: "Iran Crisis Case Study", description: "Age-differentiated responses to geopolitical violence among school children.", icon: "publication", href: "/publications/iran-war-case-study" },
             { title: "Blue Blocks Micro Research Methodology", description: "Foundational methodology paper.", icon: "brief", href: "/methodology" }
           ]
@@ -9906,8 +9906,8 @@ const FIELDS_MAP = {
     publishedDate: '2026-04-25',
     newsType: 'dispatch',
     author: 'Blue Blocks Micro Research Institute',
-    doi: '10.5281/zenodo.19752834',
-    zenodoUrl: 'https://doi.org/10.5281/zenodo.19752834',
+    doi: '10.17605/OSF.IO/ST9H2',
+    zenodoUrl: 'https://doi.org/10.17605/OSF.IO/ST9H2',
     researchDomains: ['Montessori Education', 'Innovation', 'Aerospace'],
   },
   '/newsroom/updates/iit-hyderabad-advisory': {
