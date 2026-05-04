@@ -66,6 +66,7 @@ export const sitemapData = {
   newsroom: [
     { name: "Dispatch: Payload Authorized", url: "/newsroom/dispatch/isro-payload-authorization", status: "complete" },
     { name: "Dispatch: Iran Crisis Study", url: "/newsroom/dispatch/iran-crisis-study-press-release", status: "complete" },
+    { name: "Dispatch: AMI Congress 2026", url: "/newsroom/dispatch/ami-congress-2026-press-release", status: "complete" },
     { name: "Coverage: Nobel Peace Center", url: "/newsroom/coverage/nobel-peace-center", status: "complete" },
     { name: "Update: IIT Hyderabad Advisory", url: "/newsroom/updates/iit-hyderabad-advisory", status: "complete" },
     { name: "Update: Utility Patent #4421", url: "/newsroom/updates/utility-patent-4421", status: "complete" },
