@@ -8200,7 +8200,7 @@ const siteContent = {
           subheadline: "Blue Blocks Montessori School, Hyderabad, presents an official Design Thinking breakout session alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond in Mérida, Mexico. Blue Blocks adolescents also announce SBB-2 — a second student-built satellite after losing their first to the PSLV-C62 launch anomaly.",
           primaryCta: { label: "Read Full Press Release (NewsVoir)", href: "https://www.newsvoir.com/release/blue-blocks-montessori-school-india-apos-s-only-school-at-the-30th-ami-montessori-congress-presents-alongside-dr-gabor-mate-and-dr-adele-diamond-35407.html", external: true },
           secondaryCta: { label: "Back to Newsroom", href: "/newsroom" },
-          image: { src: "/src/assets/banners/newsroom-press.jpg", alt: "AMI Congress 2026 press release", variant: "hero" }
+          image: { src: "/images/newsroom/blueblocks-isro-mission-control.jpeg", alt: "Blue Blocks Montessori School students and founder Pavan Goyal at ISRO Mission Control during the PSLV-C62 launch, January 2026", variant: "hero" }
         },
         {
           id: "pr-meta",
@@ -8240,20 +8240,10 @@ const siteContent = {
         },
         {
           id: "pr-key-numbers",
-          type: "list",
+          type: "textBlock",
+          variant: "compact",
           header: "Key Numbers",
-          variant: "bullet",
-          items: [
-            "19 years of continuous operation (est. 2005)",
-            "1,047 children in longitudinal data panel",
-            "45,000+ parents engaged through workshops worldwide",
-            "30+ open-access research publications across Zenodo, OSF, SSRN, Harvard Dataverse",
-            "5 patents filed by school-age children in drone design",
-            "1 CubeSat satellite payload authorised by IN-SPACe, Govt. of India (SBB-1)",
-            "4 AMI diplomas held by founder Pavan Goyal — first person globally with this combination",
-            "2 campuses — Gachibowli and Tellapur, Hyderabad",
-            "0 other schools from India presenting at this congress"
-          ]
+          body: "- **19 years** of continuous operation (est. 2005)\n- **1,047 children** in longitudinal data panel\n- **45,000+ parents** engaged through workshops worldwide\n- **30+ open-access research publications** across Zenodo, OSF, SSRN, Harvard Dataverse\n- **5 patents** filed by school-age children in drone design\n- **1 CubeSat satellite payload** authorised by IN-SPACe, Govt. of India (SBB-1)\n- **4 AMI diplomas** held by founder Pavan Goyal — first person globally with this combination\n- **2 campuses** — Gachibowli and Tellapur, Hyderabad\n- **0 other schools** from India presenting at this congress"
         },
         {
           id: "pr-satellite-story",
