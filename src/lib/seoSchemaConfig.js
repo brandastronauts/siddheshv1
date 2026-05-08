@@ -1012,12 +1012,12 @@ const seoSchemaConfig = {
     },
   },
 
-  // ═══ TERMS OF USE (noindex — utility/legal) ═══════════════════════════════
+  // ═══ TERMS OF USE ═══════════════════════════════════════════════════════════
   '/terms': {
     meta: {
       title: 'Terms of Use | Blue Blocks Micro Research Institute',
       description: 'Terms of use governing access to research.blueblocks.in, the website of Blue Blocks Micro Research Institute, Hyderabad.',
-      robots: 'noindex, follow',
+      robots: 'index, follow',
       canonical: `${SITE_URL}/terms`,
     },
     openGraph: {

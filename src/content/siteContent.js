@@ -2542,15 +2542,15 @@ const siteContent = {
       metaDescription: "Terms of use for Blue Blocks Micro Research Institute website and services.",
       seo: {
         title: "Terms of Use | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/terms",
-        robots: "noindex,follow",
+        canonical: "https://research.blueblocks.in/terms",
+        robots: "index,follow",
         openGraph: {
           type: "website",
-          url: "https://siddheshv1.lovable.app/terms",
+          url: "https://research.blueblocks.in/terms",
           title: "Terms of Use",
           description: "Terms and conditions governing the use of Blue Blocks Micro Research Institute website and services.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/terms.jpg",
+            url: "https://research.blueblocks.in/og/terms.jpg",
             width: 1200,
             height: 630,
             alt: "Terms of use visual"
