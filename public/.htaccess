@@ -21,6 +21,7 @@ DirectorySlash Off
   RewriteRule ^publications/CubeSat-INSPACE/our-programs\.shtml$ /publications [R=301,L]
   RewriteRule ^publications/CubeSat-INSPACE/innovation\.shtml$ /publications [R=301,L]
   RewriteRule ^publications/CubeSat-INSPACE/montessori\.shtml$ /publications [R=301,L]
+  RewriteRule ^publications/CubeSat-INSPACE/positive-parenting\.shtml$ /publications [R=301,L]
 
   # Legacy /blueblocks/blog/ (and anything under /blueblocks/) → /publications
   RewriteRule ^blueblocks(/.*)?$ /publications [R=301,L]
