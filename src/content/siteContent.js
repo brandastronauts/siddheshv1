@@ -2550,7 +2550,7 @@ const siteContent = {
           title: "Terms of Use",
           description: "Terms and conditions governing the use of Blue Blocks Micro Research Institute website and services.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/terms.jpg",
+            url: "https://research.blueblocks.in/og/terms.jpg",
             width: 1200,
             height: 630,
             alt: "Terms of use visual"
