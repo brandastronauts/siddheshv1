@@ -2129,7 +2129,7 @@ const siteContent = {
               icon: "user",
               body:
                 "Approved biography and headshots for Pavan Goyal (PI) and Munira Hussain (Director of Pedagogy).",
-              cta: { label: "Download Bio Sheet", href: "/downloads/leadership-bio-sheet" }
+              cta: { label: "Contact for Bio Sheet", href: "/contact" }
             },
             {
               title: "Attribution Standards",
