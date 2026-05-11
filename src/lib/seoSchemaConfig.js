@@ -118,6 +118,8 @@ const seoSchemaConfig = {
           },
           sameAs: [
             'https://www.blueblocks.in/',
+            'https://www.linkedin.com/company/blue-blocks-micro-research-institute/',
+            'https://x.com/BlueBlocks_BB',
           ],
         },
         {

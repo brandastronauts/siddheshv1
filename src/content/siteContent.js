@@ -1545,6 +1545,7 @@ const siteContent = {
               body:
                 "**Credentials:** AMI Diploma (0-18)\n\nOversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes.",
               image: { src: "/src/assets/placeholders/avatars/pavan.webp", alt: "Pavan Goyal", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/pavangoel/",
               cta: { label: "View Profile", href: "/team/pavan-goyal" }
             },
             {
@@ -1553,6 +1554,7 @@ const siteContent = {
               body:
                 "**Credentials:** AMI Diploma / M.Ed\n\nEnsures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the \"Children's House.\"",
               image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/munira-hussain-b515bb14/",
               cta: { label: "View Profile", href: "/team/munira-hussain" }
             }
           ]
@@ -1620,10 +1622,27 @@ const siteContent = {
           cards: [
             {
               headline: "Dr. Sreemoyee Chakraborty",
-              tag: "STEM Research Lead | Palaeontology & Earth Sciences",
+              tag: "Dean of Research",
               body: "**Training:** PhD, Palaeontology (ISI / University of Calcutta)\n\nLeads fossil-based STEM research modules and scientific inquiry frameworks within the institute. Contributes domain expertise in paleoclimate interpretation, geological data modeling, and child-led scientific investigation design.",
               image: { src: "/src/assets/placeholders/avatars/sreemoyee-chakraborty.webp", alt: "Dr. Sreemoyee Chakraborty", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/sreemoyee-chakraborty-403192333/",
               cta: { label: "View Profile", href: "/governance/team/dr-sreemoyee-chakraborty" }
+            },
+            {
+              headline: "Sruthi Matta",
+              tag: "Research Project Lead – Pedagogy & Innovation",
+              body: "**Training:** Graduate Diploma in Journalism (Concordia University); AEC Media Strategies & Advertising; B.A. Humanities\n\nLeads research initiatives focused on pedagogy and innovation frameworks. Develops rapid-cycle micro-research protocols, interdisciplinary documentation models, and inquiry systems embedded within natural classroom environments.",
+              image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/sruthi-m-writer-freelance-journalist/",
+              cta: { label: "View Profile", href: "/governance/team/sruthi-matta" }
+            },
+            {
+              headline: "Sandhya Rao M",
+              tag: "Director of Operations, Biomimicry Research Lead",
+              body: "**Training:** AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation\n\nIntegrates Montessori pedagogy with structured research documentation in the Elementary environment. Contributes to interdisciplinary observation protocols, developmental research alignment, and nature-integrated inquiry frameworks.",
+              image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/sandhya-rao-98572116b/",
+              cta: { label: "View Profile", href: "/governance/team/sandhya-rao-m" }
             },
             {
               headline: "Dr. Shobha Ediga",
@@ -1631,20 +1650,6 @@ const siteContent = {
               body: "**Training:** PhD, Plant Sciences (University of Hyderabad)\n\nProvides research oversight in biological sciences, laboratory methodologies, and adolescent-level scientific investigation. Supports integration of microbiology, biochemistry, and environmental inquiry within the Erdkinder research framework.",
               image: { src: "/src/assets/placeholders/avatars/shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "avatar", privacyBlur: false },
               cta: { label: "View Profile", href: "/governance/team/dr-shobha-ediga" }
-            },
-            {
-              headline: "Sandhya Rao M",
-              tag: "AMI Elementary Guide | Biomimicry Educator",
-              body: "**Training:** AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation\n\nIntegrates Montessori pedagogy with structured research documentation in the Elementary environment. Contributes to interdisciplinary observation protocols, developmental research alignment, and nature-integrated inquiry frameworks.",
-              image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/governance/team/sandhya-rao-m" }
-            },
-            {
-              headline: "Sruthi Matta",
-              tag: "Research Team Lead — Pedagogy & Innovation",
-              body: "**Training:** Graduate Diploma in Journalism (Concordia University); AEC Media Strategies & Advertising; B.A. Humanities\n\nLeads research initiatives focused on pedagogy and innovation frameworks. Develops rapid-cycle micro-research protocols, interdisciplinary documentation models, and inquiry systems embedded within natural classroom environments.",
-              image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/governance/team/sruthi-matta" }
             },
             {
               headline: "Sreedhar Reddy Boddu",
@@ -3604,6 +3609,7 @@ const siteContent = {
               tag: "Principal Investigator & Founder",
               body: "Oversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes (AMI Diploma 0-18).",
               image: { src: "/src/assets/placeholders/avatars/pavan.webp", alt: "Pavan Goyal", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/pavangoel/",
               cta: { label: "View Profile", href: "/team/pavan-goyal" }
             },
             {
@@ -3611,6 +3617,7 @@ const siteContent = {
               tag: "Director of Pedagogy",
               body: "Ensures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the \"Children's House.\" Credentials: AMI Diploma / M.Ed.",
               image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/munira-hussain-b515bb14/",
               cta: { label: "View Profile", href: "/team/munira-hussain" }
             }
           ]
@@ -3668,10 +3675,27 @@ const siteContent = {
           cards: [
             {
               headline: "Dr. Sreemoyee Chakraborty",
-              tag: "STEM Research Lead | Palaeontology & Earth Sciences",
+              tag: "Dean of Research",
               body: "PhD, Palaeontology (ISI / University of Calcutta). Leads fossil-based STEM research modules and scientific inquiry frameworks.",
               image: { src: "/src/assets/placeholders/avatars/sreemoyee-chakraborty.webp", alt: "Dr. Sreemoyee Chakraborty", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/sreemoyee-chakraborty-403192333/",
               cta: { label: "View Profile", href: "/governance/team/dr-sreemoyee-chakraborty" }
+            },
+            {
+              headline: "Sruthi Matta",
+              tag: "Research Project Lead – Pedagogy & Innovation",
+              body: "Graduate Diploma in Journalism (Concordia University); B.A. Humanities. Leads research initiatives focused on pedagogy and innovation frameworks.",
+              image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/sruthi-m-writer-freelance-journalist/",
+              cta: { label: "View Profile", href: "/governance/team/sruthi-matta" }
+            },
+            {
+              headline: "Sandhya Rao M",
+              tag: "Director of Operations, Biomimicry Research Lead",
+              body: "AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation. Integrates Montessori pedagogy with structured research documentation.",
+              image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/sandhya-rao-98572116b/",
+              cta: { label: "View Profile", href: "/governance/team/sandhya-rao-m" }
             },
             {
               headline: "Dr. Shobha Ediga",
@@ -3679,20 +3703,6 @@ const siteContent = {
               body: "PhD, Plant Sciences (University of Hyderabad). Provides research oversight in biological sciences and adolescent-level scientific investigation.",
               image: { src: "/src/assets/placeholders/avatars/shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "avatar", privacyBlur: false },
               cta: { label: "View Profile", href: "/governance/team/dr-shobha-ediga" }
-            },
-            {
-              headline: "Sandhya Rao M",
-              tag: "AMI Elementary Guide | Biomimicry Educator",
-              body: "AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation. Integrates Montessori pedagogy with structured research documentation.",
-              image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/governance/team/sandhya-rao-m" }
-            },
-            {
-              headline: "Sruthi Matta",
-              tag: "Research Team Lead — Pedagogy & Innovation",
-              body: "Graduate Diploma in Journalism (Concordia University); B.A. Humanities. Leads research initiatives focused on pedagogy and innovation frameworks.",
-              image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/governance/team/sruthi-matta" }
             },
             {
               headline: "Sreedhar Reddy Boddu",

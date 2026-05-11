@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SmartImage from '../common/SmartImage';
 import ExpandableText from '../common/ExpandableText';
@@ -175,8 +175,19 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
                   <ExpandableText text={bodyText} collapsedLines={4} minChars={200} className="mb-5" />
 
                   {/* Action button */}
-                  <div className="mt-auto pt-2 flex flex-wrap items-center gap-3">
+                  <div className={`mt-auto pt-2 flex flex-wrap items-center gap-3 ${isProfiles ? 'justify-center' : ''}`}>
                     {cardAction && renderAction(cardAction)}
+                    {item.linkedin && (
+                      <a
+                        href={item.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${cardTitle} on LinkedIn`}
+                        className="inline-flex items-center justify-center w-9 h-9 rounded-lg border border-border/50 bg-surface text-muted-foreground hover:text-primary-navy hover:border-primary-navy/40 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-cyan/40"
+                      >
+                        <Linkedin className="w-4 h-4" aria-hidden="true" />
+                      </a>
+                    )}
                     {item.secondaryAction && (
                       <span className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground border border-border rounded-lg px-4 py-2 opacity-70 cursor-default">
                         {item.secondaryAction.label}
