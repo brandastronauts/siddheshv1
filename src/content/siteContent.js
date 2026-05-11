@@ -1545,6 +1545,7 @@ const siteContent = {
               body:
                 "**Credentials:** AMI Diploma (0-18)\n\nOversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes.",
               image: { src: "/src/assets/placeholders/avatars/pavan.webp", alt: "Pavan Goyal", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/pavangoel/",
               cta: { label: "View Profile", href: "/team/pavan-goyal" }
             },
             {
@@ -1553,6 +1554,7 @@ const siteContent = {
               body:
                 "**Credentials:** AMI Diploma / M.Ed\n\nEnsures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the \"Children's House.\"",
               image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/munira-hussain-b515bb14/",
               cta: { label: "View Profile", href: "/team/munira-hussain" }
             }
           ]
