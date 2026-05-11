@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, ArrowUpRight, FileText, Lightbulb, BookOpen, Users, Download, Lock, ScrollText, MapPin, Linkedin } from 'lucide-react';
+import { Mail, ArrowUpRight, FileText, Lightbulb, BookOpen, Users, Download, Lock, ScrollText, MapPin, Linkedin, Twitter } from 'lucide-react';
 import { nav, brand } from '../../content/siteCore';
 // Logo served from /public as static asset
 import FooterNewsletter from '../FooterNewsletter';
