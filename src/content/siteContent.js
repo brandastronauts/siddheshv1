@@ -3675,10 +3675,27 @@ const siteContent = {
           cards: [
             {
               headline: "Dr. Sreemoyee Chakraborty",
-              tag: "STEM Research Lead | Palaeontology & Earth Sciences",
+              tag: "Dean of Research",
               body: "PhD, Palaeontology (ISI / University of Calcutta). Leads fossil-based STEM research modules and scientific inquiry frameworks.",
               image: { src: "/src/assets/placeholders/avatars/sreemoyee-chakraborty.webp", alt: "Dr. Sreemoyee Chakraborty", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/sreemoyee-chakraborty-403192333/",
               cta: { label: "View Profile", href: "/governance/team/dr-sreemoyee-chakraborty" }
+            },
+            {
+              headline: "Sruthi Matta",
+              tag: "Research Project Lead – Pedagogy & Innovation",
+              body: "Graduate Diploma in Journalism (Concordia University); B.A. Humanities. Leads research initiatives focused on pedagogy and innovation frameworks.",
+              image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/sruthi-m-writer-freelance-journalist/",
+              cta: { label: "View Profile", href: "/governance/team/sruthi-matta" }
+            },
+            {
+              headline: "Sandhya Rao M",
+              tag: "Director of Operations, Biomimicry Research Lead",
+              body: "AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation. Integrates Montessori pedagogy with structured research documentation.",
+              image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/sandhya-rao-98572116b/",
+              cta: { label: "View Profile", href: "/governance/team/sandhya-rao-m" }
             },
             {
               headline: "Dr. Shobha Ediga",
@@ -3686,20 +3703,6 @@ const siteContent = {
               body: "PhD, Plant Sciences (University of Hyderabad). Provides research oversight in biological sciences and adolescent-level scientific investigation.",
               image: { src: "/src/assets/placeholders/avatars/shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "avatar", privacyBlur: false },
               cta: { label: "View Profile", href: "/governance/team/dr-shobha-ediga" }
-            },
-            {
-              headline: "Sandhya Rao M",
-              tag: "AMI Elementary Guide | Biomimicry Educator",
-              body: "AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation. Integrates Montessori pedagogy with structured research documentation.",
-              image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/governance/team/sandhya-rao-m" }
-            },
-            {
-              headline: "Sruthi Matta",
-              tag: "Research Team Lead — Pedagogy & Innovation",
-              body: "Graduate Diploma in Journalism (Concordia University); B.A. Humanities. Leads research initiatives focused on pedagogy and innovation frameworks.",
-              image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/governance/team/sruthi-matta" }
             },
             {
               headline: "Sreedhar Reddy Boddu",
