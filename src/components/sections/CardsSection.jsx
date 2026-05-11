@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SmartImage from '../common/SmartImage';
 import ExpandableText from '../common/ExpandableText';
