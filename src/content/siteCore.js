@@ -9,6 +9,11 @@ export const brand = {
     research: "research@blueblocks.in",
     press: "press@blueblocks.in",
   },
+  socials: {
+    linkedin: "https://www.linkedin.com/company/blue-blocks-micro-research-institute/",
+    twitter: "https://x.com/BlueBlocks_BB",
+    email: "research@blueblocks.in",
+  },
 };
 
 export const nav = [
