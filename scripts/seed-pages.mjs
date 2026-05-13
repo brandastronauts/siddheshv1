@@ -97,7 +97,9 @@ const PAGES = [
   { internalName: 'Publication — Flipside Case Study',     pathname: '/publications/flipside-case-study',                      pageTitle: 'Flipside Case Study' },
   { internalName: 'Publication — In-Space Authorization',  pathname: '/publications/in-space-authorization-letter',            pageTitle: 'In-Space Authorization Letter' },
   { internalName: 'Publication — Iran War Case Study',     pathname: '/publications/iran-war-case-study',                      pageTitle: 'Iran War Case Study' },
+  { internalName: 'Publication — Resilience Workshop',     pathname: '/publications/resilience-workshop',                      pageTitle: 'Resilience Workshop' },
   { internalName: 'Publication — Saparya IMF Case Study',  pathname: '/publications/saparya-imf-case-study',                   pageTitle: 'Saparya IMF Case Study' },
+  { internalName: 'Publication — Structured Debate',       pathname: '/publications/structured-debate-side-switch',            pageTitle: 'Structured Debate Side-Switch' },
 
   // Patents
   { internalName: 'Patent — Automated Security UAV',       pathname: '/patents/automated-security-uav',                        pageTitle: 'Automated Security UAV' },
@@ -123,6 +125,7 @@ const PAGES = [
   { internalName: 'News Coverage — Nobel Peace Center',    pathname: '/newsroom/coverage/nobel-peace-center',                  pageTitle: 'Nobel Peace Center' },
 
   // Newsroom — dispatch
+  { internalName: 'News Dispatch — AMI Congress 2026',     pathname: '/newsroom/dispatch/ami-congress-2026-press-release',     pageTitle: 'AMI Congress 2026 — Press Release' },
   { internalName: 'News Dispatch — Iran Crisis Study',     pathname: '/newsroom/dispatch/iran-crisis-study-press-release',     pageTitle: 'Iran Crisis Study — Press Release' },
   { internalName: 'News Dispatch — ISRO Payload Auth',     pathname: '/newsroom/dispatch/isro-payload-authorization',          pageTitle: 'ISRO Payload Authorization' },
 

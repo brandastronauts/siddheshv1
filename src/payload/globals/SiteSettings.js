@@ -1,4 +1,4 @@
-import { isAdmin } from '../access/isAdmin.js'
+import { isAdmin, isEditor } from '../access/isAdmin.js'
 
 const iconOptions = [
   { label: 'None', value: '' },
@@ -31,7 +31,7 @@ export const SiteSettings = {
   label: 'Site Settings',
   access: {
     read: () => true,
-    update: isAdmin,
+    update: isEditor,
   },
   admin: {
     description: 'Global brand, navigation, and contact details used site-wide.',
@@ -85,6 +85,37 @@ export const SiteSettings = {
           type: 'email',
           label: 'Press Email',
           defaultValue: 'press@blueblocks.in',
+        },
+      ],
+    },
+    {
+      type: 'collapsible',
+      label: 'Research Social Links',
+      admin: { initCollapsed: true },
+      fields: [
+        {
+          name: 'socials',
+          type: 'group',
+          fields: [
+            {
+              name: 'linkedin',
+              type: 'text',
+              label: 'LinkedIn URL',
+              defaultValue: 'https://www.linkedin.com/company/blue-blocks-micro-research-institute/',
+            },
+            {
+              name: 'twitter',
+              type: 'text',
+              label: 'X / Twitter URL',
+              defaultValue: 'https://x.com/BlueBlocks_BB',
+            },
+            {
+              name: 'email',
+              type: 'email',
+              label: 'Social Email',
+              defaultValue: 'research@blueblocks.in',
+            },
+          ],
         },
       ],
     },

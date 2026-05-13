@@ -49,7 +49,30 @@ const submitToHubSpot = async (fields, formData) => {
   return response.json();
 };
 
-const FormSection = ({ heading, header, description, intro, fields, submitLabel, submit }) => {
+// Fire-and-forget: save a copy to the CMS form-submissions collection.
+// Never throws — HubSpot is the authoritative submission path.
+const saveToPayload = (fields, formData, formName) => {
+  const payload = {};
+  fields.forEach((field) => {
+    if (formData[field.name]) payload[field.name] = formData[field.name];
+  });
+
+  fetch('/api/form-submit', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      formName: formName || 'Contact Form',
+      email: formData['email'] || undefined,
+      name: formData['name'] || undefined,
+      payload,
+      sourcePath: window.location.pathname,
+    }),
+  }).catch(() => {
+    // Intentionally silent — CMS logging is secondary to HubSpot
+  });
+};
+
+const FormSection = ({ heading, header, description, intro, fields, submitLabel, submit, formName }) => {
   const [formData, setFormData] = useState({});
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
@@ -105,6 +128,7 @@ const FormSection = ({ heading, header, description, intro, fields, submitLabel,
 
     try {
       await submitToHubSpot(fields, formData);
+      saveToPayload(fields, formData, header || heading || formName);
       setSubmitted(true);
     } catch (err) {
       setSubmitError('Something went wrong. Please try again or email us directly.');

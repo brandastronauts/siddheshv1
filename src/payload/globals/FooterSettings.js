@@ -1,11 +1,11 @@
-import { isAdmin } from '../access/isAdmin.js'
+import { isAdmin, isEditor } from '../access/isAdmin.js'
 
 export const FooterSettings = {
   slug: 'footer-settings',
   label: 'Footer Settings',
   access: {
     read: () => true,
-    update: isAdmin,
+    update: isEditor,
   },
   admin: {
     description: 'Manage footer social links, governance column, utility bar, and copyright.',

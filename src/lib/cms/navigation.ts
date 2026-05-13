@@ -64,6 +64,15 @@ export interface FooterData {
   copyrightText?: string
 }
 
+export interface AnnouncementBarData {
+  enabled: boolean
+  type: 'info' | 'success' | 'warning' | 'urgent'
+  message: string
+  linkLabel?: string
+  linkUrl?: string
+  dismissible: boolean
+}
+
 // ---------------------------------------------------------------------------
 // Static fallbacks (mirrors what Footer.jsx has hardcoded today)
 // ---------------------------------------------------------------------------
@@ -159,11 +168,38 @@ export const getBrandData = cache(async (): Promise<BrandData> => {
         research: doc?.researchEmail || staticBrand.contact.research,
         press: doc?.pressEmail || staticBrand.contact.press,
       },
-      socials: doc?.socials || staticBrand.socials,
+      socials: {
+        linkedin: doc?.socials?.linkedin || staticBrand.socials.linkedin,
+        twitter: doc?.socials?.twitter || staticBrand.socials.twitter,
+        email: doc?.socials?.email || staticBrand.socials.email,
+      },
     }
   } catch {
     warn('getBrandData: CMS unavailable, using static brand')
     return staticBrand as BrandData
+  }
+})
+
+/** Returns announcement bar config from CMS global. Returns disabled state if CMS is unavailable. */
+export const getAnnouncementBar = cache(async (): Promise<AnnouncementBarData> => {
+  const disabled: AnnouncementBarData = { enabled: false, type: 'info', message: '', dismissible: true }
+  if (!isCMSEnabled) return disabled
+
+  try {
+    const payload = await getPayloadInstance()
+    const doc = await payload.findGlobal({ slug: 'announcement-bar', depth: 0 })
+    if (!doc || !doc.enabled) return disabled
+    return {
+      enabled: true,
+      type: (doc.type as AnnouncementBarData['type']) || 'info',
+      message: doc.message || '',
+      linkLabel: doc.linkLabel || undefined,
+      linkUrl: doc.linkUrl || undefined,
+      dismissible: doc.dismissible !== false,
+    }
+  } catch {
+    warn('getAnnouncementBar: CMS unavailable')
+    return disabled
   }
 })
 

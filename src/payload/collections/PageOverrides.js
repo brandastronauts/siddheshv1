@@ -1,4 +1,4 @@
-import { isAdmin } from '../access/isAdmin.js'
+import { isAdmin, isEditor } from '../access/isAdmin.js'
 
 const idField = {
   name: 'id',
@@ -1109,8 +1109,8 @@ export const PageOverrides = {
   labels: { singular: 'Page', plural: 'Pages' },
   access: {
     read: () => true,
-    create: isAdmin,
-    update: isAdmin,
+    create: isEditor,
+    update: isEditor,
     delete: isAdmin,
   },
   admin: {

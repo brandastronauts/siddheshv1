@@ -1,10 +1,12 @@
 import { cache } from 'react'
+import { draftMode } from 'next/headers'
 import siteContent from '@/content/siteContent'
 
 const isCMSEnabled = Boolean(process.env.PAYLOAD_SECRET && process.env.DATABASE_URL)
 
 export const getPageContent = cache(async (pathname: string) => {
   const staticPage = (siteContent as any).pages?.[pathname] ?? null
+  const isDraft = await getIsDraftMode()
 
   if (!isCMSEnabled) return staticPage
 
@@ -20,7 +22,7 @@ export const getPageContent = cache(async (pathname: string) => {
       where: { pathname: { equals: pathname } },
       depth: 2,
       limit: 1,
-      draft: false,
+      draft: isDraft,
     })
 
     const doc = result?.docs?.[0]
@@ -37,6 +39,15 @@ export const getPageContent = cache(async (pathname: string) => {
     return staticPage
   }
 })
+
+async function getIsDraftMode() {
+  try {
+    const draft = await draftMode()
+    return Boolean(draft.isEnabled)
+  } catch {
+    return false
+  }
+}
 
 function mergePage(staticPage: any, cmsPage: any) {
   const merged = deepMerge(staticPage, cmsPage)

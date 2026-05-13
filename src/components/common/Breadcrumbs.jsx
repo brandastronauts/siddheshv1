@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { buildBreadcrumbTrail } from '../../lib/breadcrumbsResolver';
 
-const Breadcrumbs = ({ pageTitle }) => {
+const Breadcrumbs = ({ pageTitle = '' }) => {
   const rawPath = usePathname();
   const pathname = rawPath?.replace(/\/$/, '') || '/';
 

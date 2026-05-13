@@ -1,22 +1,19 @@
 import type { Metadata } from 'next'
 import { getPageMetadata } from '@/lib/metadata'
 import GenericPageContent from '@/components/GenericPageContent'
-import siteContent from '@/content/siteContent'
+import { getStaticSlugsForPrefix } from '@/lib/cms/staticParams'
 
 type Props = { params: Promise<{ slug: string }> }
 
-export function generateStaticParams() {
-  const pages = (siteContent as any).pages ?? {}
-  const prefix = '/governance/team/'
-  return Object.keys(pages)
-    .filter(k => k.startsWith(prefix) && !k.slice(prefix.length).includes('/'))
-    .map(k => ({ slug: k.slice(prefix.length) }))
+export const dynamicParams = true
+
+export async function generateStaticParams() {
+  return getStaticSlugsForPrefix('/governance/team')
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
-  const pathname = `/governance/team/${slug}`
-  return getPageMetadata(pathname)
+  return getPageMetadata(`/governance/team/${slug}`)
 }
 
 export default async function Page({ params }: Props) {

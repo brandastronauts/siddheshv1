@@ -70,6 +70,18 @@ export interface Config {
     users: User;
     media: Media;
     'page-overrides': PageOverride;
+    posts: Post;
+    categories: Category;
+    authors: Author;
+    'team-members': TeamMember;
+    faqs: Faq;
+    testimonials: Testimonial;
+    services: Service;
+    products: Product;
+    'form-submissions': FormSubmission;
+    redirects: Redirect;
+    webhooks: Webhook;
+    'search-index': SearchIndex;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -80,6 +92,18 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     'page-overrides': PageOverridesSelect<false> | PageOverridesSelect<true>;
+    posts: PostsSelect<false> | PostsSelect<true>;
+    categories: CategoriesSelect<false> | CategoriesSelect<true>;
+    authors: AuthorsSelect<false> | AuthorsSelect<true>;
+    'team-members': TeamMembersSelect<false> | TeamMembersSelect<true>;
+    faqs: FaqsSelect<false> | FaqsSelect<true>;
+    testimonials: TestimonialsSelect<false> | TestimonialsSelect<true>;
+    services: ServicesSelect<false> | ServicesSelect<true>;
+    products: ProductsSelect<false> | ProductsSelect<true>;
+    'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
+    redirects: RedirectsSelect<false> | RedirectsSelect<true>;
+    webhooks: WebhooksSelect<false> | WebhooksSelect<true>;
+    'search-index': SearchIndexSelect<false> | SearchIndexSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -92,10 +116,16 @@ export interface Config {
   globals: {
     'site-settings': SiteSetting;
     'footer-settings': FooterSetting;
+    'seo-defaults': SeoDefault;
+    'theme-settings': ThemeSetting;
+    'announcement-bar': AnnouncementBar;
   };
   globalsSelect: {
     'site-settings': SiteSettingsSelect<false> | SiteSettingsSelect<true>;
     'footer-settings': FooterSettingsSelect<false> | FooterSettingsSelect<true>;
+    'seo-defaults': SeoDefaultsSelect<false> | SeoDefaultsSelect<true>;
+    'theme-settings': ThemeSettingsSelect<false> | ThemeSettingsSelect<true>;
+    'announcement-bar': AnnouncementBarSelect<false> | AnnouncementBarSelect<true>;
   };
   locale: null;
   user: User;
@@ -131,6 +161,10 @@ export interface UserAuthOperations {
 export interface User {
   id: string;
   name?: string | null;
+  /**
+   * Controls access to privileged CMS operations.
+   */
+  role: 'admin' | 'editor' | 'reviewer';
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -1308,6 +1342,349 @@ export interface PageOverride {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "posts".
+ */
+export interface Post {
+  id: string;
+  title: string;
+  /**
+   * URL-safe identifier. Usually derived from title.
+   */
+  slug: string;
+  type: 'publication' | 'dispatch' | 'updates' | 'coverage' | 'technical-brief' | 'proceeding' | 'presentation';
+  excerpt?: string | null;
+  heroImage?: (string | null) | Media;
+  body?: string | null;
+  downloads?:
+    | {
+        label: string;
+        file?: (string | null) | Media;
+        url?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  authors?: (string | Author)[] | null;
+  categories?: (string | Category)[] | null;
+  publishedAt?: string | null;
+  seo?: {
+    title?: string | null;
+    description?: string | null;
+    canonical?: string | null;
+    keywords?: string | null;
+    robots?: string | null;
+    openGraph?: {
+      title?: string | null;
+      description?: string | null;
+      type?: ('website' | 'article') | null;
+      image?: (string | null) | Media;
+    };
+    /**
+     * Optional JSON-LD object or array for advanced schema markup.
+     */
+    structuredData?:
+      | {
+          [k: string]: unknown;
+        }
+      | unknown[]
+      | string
+      | number
+      | boolean
+      | null;
+  };
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "authors".
+ */
+export interface Author {
+  id: string;
+  name: string;
+  /**
+   * URL-safe identifier. Usually derived from name.
+   */
+  slug: string;
+  role?: string | null;
+  email?: string | null;
+  avatar?: (string | null) | Media;
+  bio?: string | null;
+  links?:
+    | {
+        label: string;
+        url: string;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "categories".
+ */
+export interface Category {
+  id: string;
+  title: string;
+  /**
+   * URL-safe identifier. Usually derived from title.
+   */
+  slug: string;
+  type?: ('general' | 'publication' | 'newsroom' | 'research-domain') | null;
+  description?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "team-members".
+ */
+export interface TeamMember {
+  id: string;
+  name: string;
+  /**
+   * URL-safe identifier. Usually derived from name.
+   */
+  slug: string;
+  role?: string | null;
+  group?: ('research' | 'governance' | 'advisor' | 'student-cohort') | null;
+  email?: string | null;
+  image?: (string | null) | Media;
+  bio?: string | null;
+  socials?:
+    | {
+        type?: string | null;
+        label?: string | null;
+        href?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  seo?: {
+    title?: string | null;
+    description?: string | null;
+    canonical?: string | null;
+    keywords?: string | null;
+    robots?: string | null;
+    openGraph?: {
+      title?: string | null;
+      description?: string | null;
+      type?: ('website' | 'article') | null;
+      image?: (string | null) | Media;
+    };
+    /**
+     * Optional JSON-LD object or array for advanced schema markup.
+     */
+    structuredData?:
+      | {
+          [k: string]: unknown;
+        }
+      | unknown[]
+      | string
+      | number
+      | boolean
+      | null;
+  };
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "faqs".
+ */
+export interface Faq {
+  id: string;
+  question: string;
+  answer: string;
+  category?: (string | null) | Category;
+  sortOrder?: number | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "testimonials".
+ */
+export interface Testimonial {
+  id: string;
+  quote: string;
+  attribution?: string | null;
+  role?: string | null;
+  context?: string | null;
+  image?: (string | null) | Media;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "services".
+ */
+export interface Service {
+  id: string;
+  title: string;
+  /**
+   * URL-safe identifier. Usually derived from title.
+   */
+  slug: string;
+  summary?: string | null;
+  icon?: string | null;
+  image?: (string | null) | Media;
+  body?: string | null;
+  seo?: {
+    title?: string | null;
+    description?: string | null;
+    canonical?: string | null;
+    keywords?: string | null;
+    robots?: string | null;
+    openGraph?: {
+      title?: string | null;
+      description?: string | null;
+      type?: ('website' | 'article') | null;
+      image?: (string | null) | Media;
+    };
+    /**
+     * Optional JSON-LD object or array for advanced schema markup.
+     */
+    structuredData?:
+      | {
+          [k: string]: unknown;
+        }
+      | unknown[]
+      | string
+      | number
+      | boolean
+      | null;
+  };
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "products".
+ */
+export interface Product {
+  id: string;
+  title: string;
+  /**
+   * URL-safe identifier. Usually derived from title.
+   */
+  slug: string;
+  status?: ('concept' | 'research' | 'patent-filed' | 'archived') | null;
+  summary?: string | null;
+  image?: (string | null) | Media;
+  body?: string | null;
+  relatedDownloads?:
+    | {
+        label?: string | null;
+        url?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  seo?: {
+    title?: string | null;
+    description?: string | null;
+    canonical?: string | null;
+    keywords?: string | null;
+    robots?: string | null;
+    openGraph?: {
+      title?: string | null;
+      description?: string | null;
+      type?: ('website' | 'article') | null;
+      image?: (string | null) | Media;
+    };
+    /**
+     * Optional JSON-LD object or array for advanced schema markup.
+     */
+    structuredData?:
+      | {
+          [k: string]: unknown;
+        }
+      | unknown[]
+      | string
+      | number
+      | boolean
+      | null;
+  };
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "form-submissions".
+ */
+export interface FormSubmission {
+  id: string;
+  formName: string;
+  email?: string | null;
+  name?: string | null;
+  payload:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  sourcePath?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "redirects".
+ */
+export interface Redirect {
+  id: string;
+  from: string;
+  to: string;
+  statusCode?: ('301' | '302' | '307' | '308') | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "webhooks".
+ */
+export interface Webhook {
+  id: string;
+  name: string;
+  endpoint: string;
+  event: 'content-published' | 'content-updated' | 'content-deleted';
+  enabled?: boolean | null;
+  /**
+   * Store real secrets in environment variables.
+   */
+  secretHint?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * Prepared denormalized records for future search indexing.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "search-index".
+ */
+export interface SearchIndex {
+  id: string;
+  title: string;
+  pathname: string;
+  excerpt?: string | null;
+  sourceCollection?: string | null;
+  sourceId?: string | null;
+  keywords?:
+    | {
+        value?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv".
  */
 export interface PayloadKv {
@@ -1341,6 +1718,54 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'page-overrides';
         value: string | PageOverride;
+      } | null)
+    | ({
+        relationTo: 'posts';
+        value: string | Post;
+      } | null)
+    | ({
+        relationTo: 'categories';
+        value: string | Category;
+      } | null)
+    | ({
+        relationTo: 'authors';
+        value: string | Author;
+      } | null)
+    | ({
+        relationTo: 'team-members';
+        value: string | TeamMember;
+      } | null)
+    | ({
+        relationTo: 'faqs';
+        value: string | Faq;
+      } | null)
+    | ({
+        relationTo: 'testimonials';
+        value: string | Testimonial;
+      } | null)
+    | ({
+        relationTo: 'services';
+        value: string | Service;
+      } | null)
+    | ({
+        relationTo: 'products';
+        value: string | Product;
+      } | null)
+    | ({
+        relationTo: 'form-submissions';
+        value: string | FormSubmission;
+      } | null)
+    | ({
+        relationTo: 'redirects';
+        value: string | Redirect;
+      } | null)
+    | ({
+        relationTo: 'webhooks';
+        value: string | Webhook;
+      } | null)
+    | ({
+        relationTo: 'search-index';
+        value: string | SearchIndex;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -1390,6 +1815,7 @@ export interface PayloadMigration {
  */
 export interface UsersSelect<T extends boolean = true> {
   name?: T;
+  role?: T;
   updatedAt?: T;
   createdAt?: T;
   email?: T;
@@ -2523,6 +2949,278 @@ export interface PageOverridesSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "posts_select".
+ */
+export interface PostsSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  type?: T;
+  excerpt?: T;
+  heroImage?: T;
+  body?: T;
+  downloads?:
+    | T
+    | {
+        label?: T;
+        file?: T;
+        url?: T;
+        id?: T;
+      };
+  authors?: T;
+  categories?: T;
+  publishedAt?: T;
+  seo?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        canonical?: T;
+        keywords?: T;
+        robots?: T;
+        openGraph?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              type?: T;
+              image?: T;
+            };
+        structuredData?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "categories_select".
+ */
+export interface CategoriesSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  type?: T;
+  description?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "authors_select".
+ */
+export interface AuthorsSelect<T extends boolean = true> {
+  name?: T;
+  slug?: T;
+  role?: T;
+  email?: T;
+  avatar?: T;
+  bio?: T;
+  links?:
+    | T
+    | {
+        label?: T;
+        url?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "team-members_select".
+ */
+export interface TeamMembersSelect<T extends boolean = true> {
+  name?: T;
+  slug?: T;
+  role?: T;
+  group?: T;
+  email?: T;
+  image?: T;
+  bio?: T;
+  socials?:
+    | T
+    | {
+        type?: T;
+        label?: T;
+        href?: T;
+        id?: T;
+      };
+  seo?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        canonical?: T;
+        keywords?: T;
+        robots?: T;
+        openGraph?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              type?: T;
+              image?: T;
+            };
+        structuredData?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "faqs_select".
+ */
+export interface FaqsSelect<T extends boolean = true> {
+  question?: T;
+  answer?: T;
+  category?: T;
+  sortOrder?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "testimonials_select".
+ */
+export interface TestimonialsSelect<T extends boolean = true> {
+  quote?: T;
+  attribution?: T;
+  role?: T;
+  context?: T;
+  image?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "services_select".
+ */
+export interface ServicesSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  summary?: T;
+  icon?: T;
+  image?: T;
+  body?: T;
+  seo?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        canonical?: T;
+        keywords?: T;
+        robots?: T;
+        openGraph?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              type?: T;
+              image?: T;
+            };
+        structuredData?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "products_select".
+ */
+export interface ProductsSelect<T extends boolean = true> {
+  title?: T;
+  slug?: T;
+  status?: T;
+  summary?: T;
+  image?: T;
+  body?: T;
+  relatedDownloads?:
+    | T
+    | {
+        label?: T;
+        url?: T;
+        id?: T;
+      };
+  seo?:
+    | T
+    | {
+        title?: T;
+        description?: T;
+        canonical?: T;
+        keywords?: T;
+        robots?: T;
+        openGraph?:
+          | T
+          | {
+              title?: T;
+              description?: T;
+              type?: T;
+              image?: T;
+            };
+        structuredData?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "form-submissions_select".
+ */
+export interface FormSubmissionsSelect<T extends boolean = true> {
+  formName?: T;
+  email?: T;
+  name?: T;
+  payload?: T;
+  sourcePath?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "redirects_select".
+ */
+export interface RedirectsSelect<T extends boolean = true> {
+  from?: T;
+  to?: T;
+  statusCode?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "webhooks_select".
+ */
+export interface WebhooksSelect<T extends boolean = true> {
+  name?: T;
+  endpoint?: T;
+  event?: T;
+  enabled?: T;
+  secretHint?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "search-index_select".
+ */
+export interface SearchIndexSelect<T extends boolean = true> {
+  title?: T;
+  pathname?: T;
+  excerpt?: T;
+  sourceCollection?: T;
+  sourceId?: T;
+  keywords?:
+    | T
+    | {
+        value?: T;
+        id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-kv_select".
  */
 export interface PayloadKvSelect<T extends boolean = true> {
@@ -2578,6 +3276,11 @@ export interface SiteSetting {
   logo?: (string | null) | Media;
   researchEmail?: string | null;
   pressEmail?: string | null;
+  socials?: {
+    linkedin?: string | null;
+    twitter?: string | null;
+    email?: string | null;
+  };
   /**
    * Drag to reorder. Each item can have sub-menu children.
    */
@@ -2714,6 +3417,70 @@ export interface FooterSetting {
   createdAt?: string | null;
 }
 /**
+ * Fallback metadata, OpenGraph, robots, and structured data settings.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "seo-defaults".
+ */
+export interface SeoDefault {
+  id: string;
+  siteName?: string | null;
+  baseUrl?: string | null;
+  defaultTitle?: string | null;
+  defaultDescription?: string | null;
+  defaultImage?: (string | null) | Media;
+  robots?: string | null;
+  organizationSchema?:
+    | {
+        [k: string]: unknown;
+      }
+    | unknown[]
+    | string
+    | number
+    | boolean
+    | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * Editable design tokens for future theme controls. Current CSS remains the source of truth.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "theme-settings".
+ */
+export interface ThemeSetting {
+  id: string;
+  colors?: {
+    primaryNavy?: string | null;
+    accentCyan?: string | null;
+    secondaryBlue?: string | null;
+    surface?: string | null;
+  };
+  typography?: {
+    sans?: string | null;
+    serif?: string | null;
+  };
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * A dismissible banner shown at the top of every page. Disable it here when not in use.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "announcement-bar".
+ */
+export interface AnnouncementBar {
+  id: string;
+  enabled?: boolean | null;
+  type?: ('info' | 'success' | 'warning' | 'urgent') | null;
+  message: string;
+  linkLabel?: string | null;
+  linkUrl?: string | null;
+  dismissible?: boolean | null;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "site-settings_select".
  */
@@ -2724,6 +3491,13 @@ export interface SiteSettingsSelect<T extends boolean = true> {
   logo?: T;
   researchEmail?: T;
   pressEmail?: T;
+  socials?:
+    | T
+    | {
+        linkedin?: T;
+        twitter?: T;
+        email?: T;
+      };
   navigation?:
     | T
     | {
@@ -2778,6 +3552,60 @@ export interface FooterSettingsSelect<T extends boolean = true> {
   schoolLink?: T;
   schoolLinkLabel?: T;
   copyrightText?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "seo-defaults_select".
+ */
+export interface SeoDefaultsSelect<T extends boolean = true> {
+  siteName?: T;
+  baseUrl?: T;
+  defaultTitle?: T;
+  defaultDescription?: T;
+  defaultImage?: T;
+  robots?: T;
+  organizationSchema?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "theme-settings_select".
+ */
+export interface ThemeSettingsSelect<T extends boolean = true> {
+  colors?:
+    | T
+    | {
+        primaryNavy?: T;
+        accentCyan?: T;
+        secondaryBlue?: T;
+        surface?: T;
+      };
+  typography?:
+    | T
+    | {
+        sans?: T;
+        serif?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "announcement-bar_select".
+ */
+export interface AnnouncementBarSelect<T extends boolean = true> {
+  enabled?: T;
+  type?: T;
+  message?: T;
+  linkLabel?: T;
+  linkUrl?: T;
+  dismissible?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

@@ -1,4 +1,4 @@
-import { isAdmin } from '../access/isAdmin.js'
+import { isAdmin, isEditor } from '../access/isAdmin.js'
 
 export const Media = {
   slug: 'media',
@@ -29,8 +29,8 @@ export const Media = {
   },
   access: {
     read: () => true,
-    create: isAdmin,
-    update: isAdmin,
+    create: isEditor,
+    update: isEditor,
     delete: isAdmin,
   },
   admin: {

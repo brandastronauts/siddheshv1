@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "db:seed": "node scripts/seed-pages.mjs",
+    "db:seed:globals": "node scripts/seed-globals.mjs",
+    "db:seed:all": "npm run db:seed && npm run db:seed:globals",
     "payload:generate:types": "payload generate:types",
     "payload:generate:importmap": "payload generate:importmap"
   },
