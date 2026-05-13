@@ -1191,6 +1191,22 @@ const siteContent = {
               body: "Erdkinder adolescents designed a 25-question instrument, visited a cloud kitchen run by neurodivergent adults, and rewrote their approach mid-interview. What they chose to report reveals more about children's research instincts than what they were told.",
               cta: { label: "View Publication", href: "/publications/flipside-case-study" },
               image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Flipside case study", variant: "card" }
+            },
+            {
+              tag: "Published Case Study · Adolescent Research · Civic Reasoning · Erdkinder · Structured Debate",
+              headline: "Adolescents Who Switched Sides Mid-Debate and Argued Better for It",
+              meta: "DOI: 10.5281/zenodo.19480752",
+              body: "Twelve Erdkinder adolescents were assigned positions in a live civic debate on voting age — then told, without warning, to switch sides at the halfway mark. Neither team collapsed. Several students turned their own Phase 1 arguments against themselves in Phase 2, producing richer reasoning than before the switch. The finding is not that debate builds civic thinking. The finding is that enforced perspective change might.",
+              cta: { label: "Read the Case Study", href: "/publications/structured-debate-side-switch" },
+              image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Structured debate side switch case study", variant: "card" }
+            },
+            {
+              tag: "Published Case Study · Adolescent Research · Resilience · Erdkinder · Engineering",
+              headline: "When Children Encounter Designed Adversity",
+              meta: "DOI: 10.5281/zenodo.19344032",
+              body: "Twelve adolescents who lived through a real satellite failure face a new engineering challenge designed to break within thirty minutes. All four teams treated failure as a puzzle. The gap between what they wrote privately about their satellite and what they did publicly in the challenge is the finding that matters most.",
+              cta: { label: "Read the Case Study", href: "/publications/resilience-workshop" },
+              image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Resilience workshop case study", variant: "card" }
             }
           ]
         },
@@ -1529,6 +1545,7 @@ const siteContent = {
               body:
                 "**Credentials:** AMI Diploma (0-18)\n\nOversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes.",
               image: { src: "/src/assets/placeholders/avatars/pavan.webp", alt: "Pavan Goyal", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/pavangoel/",
               cta: { label: "View Profile", href: "/team/pavan-goyal" }
             },
             {
@@ -1537,6 +1554,7 @@ const siteContent = {
               body:
                 "**Credentials:** AMI Diploma / M.Ed\n\nEnsures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the \"Children's House.\"",
               image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/munira-hussain-b515bb14/",
               cta: { label: "View Profile", href: "/team/munira-hussain" }
             }
           ]
@@ -1604,10 +1622,27 @@ const siteContent = {
           cards: [
             {
               headline: "Dr. Sreemoyee Chakraborty",
-              tag: "STEM Research Lead | Palaeontology & Earth Sciences",
+              tag: "Dean of Research",
               body: "**Training:** PhD, Palaeontology (ISI / University of Calcutta)\n\nLeads fossil-based STEM research modules and scientific inquiry frameworks within the institute. Contributes domain expertise in paleoclimate interpretation, geological data modeling, and child-led scientific investigation design.",
               image: { src: "/src/assets/placeholders/avatars/sreemoyee-chakraborty.webp", alt: "Dr. Sreemoyee Chakraborty", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/sreemoyee-chakraborty-403192333/",
               cta: { label: "View Profile", href: "/governance/team/dr-sreemoyee-chakraborty" }
+            },
+            {
+              headline: "Sruthi Matta",
+              tag: "Research Project Lead – Pedagogy & Innovation",
+              body: "**Training:** Graduate Diploma in Journalism (Concordia University); AEC Media Strategies & Advertising; B.A. Humanities\n\nLeads research initiatives focused on pedagogy and innovation frameworks. Develops rapid-cycle micro-research protocols, interdisciplinary documentation models, and inquiry systems embedded within natural classroom environments.",
+              image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/sruthi-m-writer-freelance-journalist/",
+              cta: { label: "View Profile", href: "/governance/team/sruthi-matta" }
+            },
+            {
+              headline: "Sandhya Rao M",
+              tag: "Director of Operations, Biomimicry Research Lead",
+              body: "**Training:** AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation\n\nIntegrates Montessori pedagogy with structured research documentation in the Elementary environment. Contributes to interdisciplinary observation protocols, developmental research alignment, and nature-integrated inquiry frameworks.",
+              image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/sandhya-rao-98572116b/",
+              cta: { label: "View Profile", href: "/governance/team/sandhya-rao-m" }
             },
             {
               headline: "Dr. Shobha Ediga",
@@ -1615,20 +1650,6 @@ const siteContent = {
               body: "**Training:** PhD, Plant Sciences (University of Hyderabad)\n\nProvides research oversight in biological sciences, laboratory methodologies, and adolescent-level scientific investigation. Supports integration of microbiology, biochemistry, and environmental inquiry within the Erdkinder research framework.",
               image: { src: "/src/assets/placeholders/avatars/shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "avatar", privacyBlur: false },
               cta: { label: "View Profile", href: "/governance/team/dr-shobha-ediga" }
-            },
-            {
-              headline: "Sandhya Rao M",
-              tag: "AMI Elementary Guide | Biomimicry Educator",
-              body: "**Training:** AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation\n\nIntegrates Montessori pedagogy with structured research documentation in the Elementary environment. Contributes to interdisciplinary observation protocols, developmental research alignment, and nature-integrated inquiry frameworks.",
-              image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/governance/team/sandhya-rao-m" }
-            },
-            {
-              headline: "Sruthi Matta",
-              tag: "Research Team Lead — Pedagogy & Innovation",
-              body: "**Training:** Graduate Diploma in Journalism (Concordia University); AEC Media Strategies & Advertising; B.A. Humanities\n\nLeads research initiatives focused on pedagogy and innovation frameworks. Develops rapid-cycle micro-research protocols, interdisciplinary documentation models, and inquiry systems embedded within natural classroom environments.",
-              image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/governance/team/sruthi-matta" }
             },
             {
               headline: "Sreedhar Reddy Boddu",
@@ -2058,6 +2079,15 @@ const siteContent = {
           cards: [
             {
               tag: "Press Release",
+              headline: "India's Only School at the 30th AMI Montessori Congress",
+              meta: "April 25, 2026",
+              body:
+                "Blue Blocks Montessori School, Hyderabad, presents an official Design Thinking breakout session alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond in Mérida, Mexico. Blue Blocks adolescents announce SBB-2 — a second student-built satellite after losing their first to the PSLV-C62 launch anomaly.",
+              cta: { label: "Read Full Press Release", href: "/newsroom/dispatch/ami-congress-2026-press-release" },
+              image: { src: "/images/newsroom/blueblocks-ami-congress-stage.jpeg", alt: "Blue Blocks adolescents on stage at the 30th International Montessori Congress, Mérida, Mexico", variant: "card", privacyBlur: false }
+            },
+            {
+              tag: "Press Release",
               headline: "Hyderabad Study: Children Develop Geopolitical Reasoning Without Algorithms",
               meta: "March 16, 2026",
               body:
@@ -2104,7 +2134,7 @@ const siteContent = {
               icon: "user",
               body:
                 "Approved biography and headshots for Pavan Goyal (PI) and Munira Hussain (Director of Pedagogy).",
-              cta: { label: "Download Bio Sheet", href: "/downloads/leadership-bio-sheet" }
+              cta: { label: "Contact for Bio Sheet", href: "/contact" }
             },
             {
               title: "Attribution Standards",
@@ -2517,15 +2547,15 @@ const siteContent = {
       metaDescription: "Terms of use for Blue Blocks Micro Research Institute website and services.",
       seo: {
         title: "Terms of Use | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/terms",
-        robots: "noindex,follow",
+        canonical: "https://research.blueblocks.in/terms",
+        robots: "index,follow",
         openGraph: {
           type: "website",
-          url: "https://siddheshv1.lovable.app/terms",
+          url: "https://research.blueblocks.in/terms",
           title: "Terms of Use",
           description: "Terms and conditions governing the use of Blue Blocks Micro Research Institute website and services.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/terms.jpg",
+            url: "https://research.blueblocks.in/og/terms.jpg",
             width: 1200,
             height: 630,
             alt: "Terms of use visual"
@@ -3579,6 +3609,7 @@ const siteContent = {
               tag: "Principal Investigator & Founder",
               body: "Oversees the longitudinal integrity of the 0-18 study. Holds rare complete AMI certification across all developmental planes (AMI Diploma 0-18).",
               image: { src: "/src/assets/placeholders/avatars/pavan.webp", alt: "Pavan Goyal", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/pavangoel/",
               cta: { label: "View Profile", href: "/team/pavan-goyal" }
             },
             {
@@ -3586,6 +3617,7 @@ const siteContent = {
               tag: "Director of Pedagogy",
               body: "Ensures all research protocols integrate seamlessly with the Montessori curriculum without disrupting the \"Children's House.\" Credentials: AMI Diploma / M.Ed.",
               image: { src: "/src/assets/placeholders/avatars/munira.jpg", alt: "Munira Hussain", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/munira-hussain-b515bb14/",
               cta: { label: "View Profile", href: "/team/munira-hussain" }
             }
           ]
@@ -3643,10 +3675,27 @@ const siteContent = {
           cards: [
             {
               headline: "Dr. Sreemoyee Chakraborty",
-              tag: "STEM Research Lead | Palaeontology & Earth Sciences",
+              tag: "Dean of Research",
               body: "PhD, Palaeontology (ISI / University of Calcutta). Leads fossil-based STEM research modules and scientific inquiry frameworks.",
               image: { src: "/src/assets/placeholders/avatars/sreemoyee-chakraborty.webp", alt: "Dr. Sreemoyee Chakraborty", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/sreemoyee-chakraborty-403192333/",
               cta: { label: "View Profile", href: "/governance/team/dr-sreemoyee-chakraborty" }
+            },
+            {
+              headline: "Sruthi Matta",
+              tag: "Research Project Lead – Pedagogy & Innovation",
+              body: "Graduate Diploma in Journalism (Concordia University); B.A. Humanities. Leads research initiatives focused on pedagogy and innovation frameworks.",
+              image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/sruthi-m-writer-freelance-journalist/",
+              cta: { label: "View Profile", href: "/governance/team/sruthi-matta" }
+            },
+            {
+              headline: "Sandhya Rao M",
+              tag: "Director of Operations, Biomimicry Research Lead",
+              body: "AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation. Integrates Montessori pedagogy with structured research documentation.",
+              image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/sandhya-rao-98572116b/",
+              cta: { label: "View Profile", href: "/governance/team/sandhya-rao-m" }
             },
             {
               headline: "Dr. Shobha Ediga",
@@ -3654,20 +3703,6 @@ const siteContent = {
               body: "PhD, Plant Sciences (University of Hyderabad). Provides research oversight in biological sciences and adolescent-level scientific investigation.",
               image: { src: "/src/assets/placeholders/avatars/shobha-ediga.webp", alt: "Dr. Shobha Ediga", variant: "avatar", privacyBlur: false },
               cta: { label: "View Profile", href: "/governance/team/dr-shobha-ediga" }
-            },
-            {
-              headline: "Sandhya Rao M",
-              tag: "AMI Elementary Guide | Biomimicry Educator",
-              body: "AMI Elementary Diploma; M.P.T. Community-Based Rehabilitation. Integrates Montessori pedagogy with structured research documentation.",
-              image: { src: "/src/assets/placeholders/avatars/sandhya-rao.webp", alt: "Sandhya Rao M", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/governance/team/sandhya-rao-m" }
-            },
-            {
-              headline: "Sruthi Matta",
-              tag: "Research Team Lead — Pedagogy & Innovation",
-              body: "Graduate Diploma in Journalism (Concordia University); B.A. Humanities. Leads research initiatives focused on pedagogy and innovation frameworks.",
-              image: { src: "/src/assets/placeholders/avatars/sruthi-matta.webp", alt: "Sruthi Matta", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/governance/team/sruthi-matta" }
             },
             {
               headline: "Sreedhar Reddy Boddu",
@@ -4620,6 +4655,727 @@ const siteContent = {
       ]
     },
 
+    "/publications/resilience-workshop": {
+      title: "When Children Encounter Designed Adversity — The Resilience Workshop: A Case Study from the Blue Blocks Erdkinder Environment",
+      metaDescription: "Case study: 12 adolescents who survived a real satellite failure face a designed engineering challenge. All four teams treated failure as a puzzle, not a problem.",
+      seo: {
+        title: "Adolescent Resilience Workshop",
+        canonical: "https://research.blueblocks.in/publications/resilience-workshop",
+        robots: "index, follow",
+        keywords: "adolescent resilience, designed adversity, failure framing, cognitive transfer, Montessori Erdkinder, engineering challenge, CubeSat, SBB-1, embedded observation, practitioner-led research, micro research, cross-study series, STEM education, Blue Blocks Micro Research Institute",
+        openGraph: {
+          type: "article",
+          url: "https://research.blueblocks.in/publications/resilience-workshop",
+          title: "Adolescent Resilience Workshop | Blue Blocks Micro Research Institute",
+          description: "Case study: 12 adolescents who survived a real satellite failure face a designed engineering challenge. All four teams treated failure as a puzzle, not a problem.",
+          image: {
+            url: "https://research.blueblocks.in/images/og-home.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Resilience Workshop Case Study"
+          },
+          locale: "en_IN",
+          article: {
+            published_time: "2026-04-07",
+            author: "Chakraborty, S., Bose, P., Khare, K.",
+            section: "Publications"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Adolescent Resilience Workshop | Blue Blocks Micro Research Institute",
+          description: "Case study: 12 adolescents who survived a real satellite failure face a designed engineering challenge. All four teams treated failure as a puzzle, not a problem.",
+          image: "https://research.blueblocks.in/images/og-home.jpg"
+        },
+        citation: {
+          citation_title: "When Children Encounter Designed Adversity - The Resilience Workshop: A Case Study from the Blue Blocks Erdkinder Environment",
+          citation_authors: ["Blue Blocks Micro Research Institute", "Chakraborty, Sreemoyee", "Bose, Poulomi", "Khare, Kaustav"],
+          citation_publication_date: "2026/04/07",
+          citation_publisher: "Blue Blocks Micro Research Institute",
+          citation_doi: "10.5281/zenodo.19344032"
+        }
+      },
+      schemas: [
+        {
+          "@type": "WebPage",
+          "@id": "https://research.blueblocks.in/publications/resilience-workshop/#webpage",
+          url: "https://research.blueblocks.in/publications/resilience-workshop",
+          name: "Adolescent Resilience Workshop | Blue Blocks Micro Research Institute",
+          description: "Case study: 12 adolescents who survived a real satellite failure face a designed engineering challenge. All four teams treated failure as a puzzle, not a problem.",
+          isPartOf: { "@id": "https://research.blueblocks.in/#website" },
+          about: { "@id": "https://research.blueblocks.in/publications/resilience-workshop/#article" }
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://research.blueblocks.in/publications/resilience-workshop/#article",
+          name: "When Children Encounter Designed Adversity - The Resilience Workshop: A Case Study from the Blue Blocks Erdkinder Environment",
+          headline: "When Children Encounter Designed Adversity - The Resilience Workshop: A Case Study from the Blue Blocks Erdkinder Environment",
+          description: "This case study is the second of a five-case series in which the Blue Blocks Micro Research Institute investigates how children react and adjust when the conditions of learning are designed to give rise to adversity in the environment. The erdkinder adolescents from Blue Blocks participated in a resilience study where on day 1, they were given a worksheet about their satellite project failures, and day 2 gave them a time-bound engineering problem designed to fail. All four teams framed failure as a puzzle, interrogated the challenge brief, and drew on prior physics knowledge as a cognitive resource.",
+          url: "https://research.blueblocks.in/publications/resilience-workshop",
+          mainEntityOfPage: "https://research.blueblocks.in/publications/resilience-workshop",
+          datePublished: "2026-04-07",
+          inLanguage: "en",
+          identifier: "https://doi.org/10.5281/zenodo.19344032",
+          sameAs: "https://doi.org/10.5281/zenodo.19344032",
+          author: [
+            { "@type": "Organization", "@id": "https://research.blueblocks.in/#microresearch", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" },
+            { "@type": "Person", name: "Sreemoyee Chakraborty", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } },
+            { "@type": "Person", name: "Poulomi Bose", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } },
+            { "@type": "Person", name: "Kaustav Khare", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } }
+          ],
+          publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" },
+          isAccessibleForFree: true,
+          license: "https://creativecommons.org/licenses/by/4.0/",
+          keywords: [
+            "adolescent resilience", "designed adversity", "failure framing", "cognitive transfer",
+            "Montessori Erdkinder", "engineering challenge", "CubeSat", "SBB-1", "embedded observation",
+            "practitioner-led research", "micro research", "cross-study series", "STEM education",
+            "Blue Blocks Micro Research Institute"
+          ],
+          about: [
+            { "@type": "Thing", name: "adolescent resilience" },
+            { "@type": "Thing", name: "designed adversity" },
+            { "@type": "Thing", name: "cross-domain cognitive transfer" },
+            { "@type": "Thing", name: "failure framing" }
+          ],
+          citation: [
+            { "@type": "ScholarlyArticle", name: "Blue Blocks Micro Research Methodology: A Practitioner-Led, Longitudinal Framework for Embedded Educational Research", url: "https://doi.org/10.5281/zenodo.18584816" },
+            { "@type": "ScholarlyArticle", name: "Bridging the Lab and the Classroom: A Participatory Micro-Research Methodology for Scientist-Child Co-authorship in STEM", url: "https://doi.org/10.5281/zenodo.18584890" },
+            { "@type": "ScholarlyArticle", name: "When Children Own the Research Instrument: The Flipside Workspace Field Research Case Study", url: "https://doi.org/10.5281/zenodo.19219065" },
+            { "@type": "ScholarlyArticle", name: "Valorization In Orbit — An Adolescent CubeSat Mission", url: "https://doi.org/10.5281/zenodo.18337934" }
+          ],
+          sourceOrganization: { "@id": "https://research.blueblocks.in/#microresearch" },
+          spatialCoverage: { "@type": "Place", name: "Hyderabad, Telangana, India" },
+          countryOfOrigin: { "@type": "Country", name: "India" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://research.blueblocks.in/publications/resilience-workshop/#breadcrumb",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications" },
+            { "@type": "ListItem", position: 3, name: "Resilience Workshop Case Study", item: "https://research.blueblocks.in/publications/resilience-workshop" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "resilience-hero",
+          type: "hero",
+          variant: "publication",
+          headline: "Adolescent Resilience Through Designed Engineering Failure",
+          subheadline: "When Children Encounter Designed Adversity — The Resilience Workshop: A Case Study from the Blue Blocks Erdkinder Environment | CS-2026-002",
+          image: { src: "/src/assets/banners/publications-doi.jpg", alt: "Resilience Workshop Case Study", variant: "hero", privacyBlur: false }
+        },
+        {
+          id: "resilience-meta",
+          type: "metaStrip",
+          items: [
+            { label: "DOI", value: "10.5281/zenodo.19344032", href: "https://doi.org/10.5281/zenodo.19344032", external: true },
+            { label: "Case ID", value: "CS-2026-002" },
+            { label: "Type", value: "Qualitative Case Study" },
+            { label: "Series", value: "Case 2 of 5 — Child-Driven Inquiry Series" },
+            { label: "Status", value: "Published" },
+            { label: "Data Collection", value: "March 2026" },
+            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" },
+            { label: "Access", value: "Open Access — CC BY 4.0" }
+          ]
+        },
+        {
+          id: "resilience-introduction",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Introduction",
+                body: "What happens when adolescents who have already lived through a genuine project failure — a student-designed satellite payload that reached ISRO's PSLV-C62 launchpad but was lost to a Stage 4 anomaly — are handed an unfamiliar engineering challenge with a built-in first failure?\n\nThis case study follows twelve Erdkinder students from Blue Blocks through a two-day resilience workshop designed to answer that question. Day 1 asked students to write privately about their satellite failure — what they thought had happened, how they felt, and what they now understood differently. Day 2 placed them in four teams of three, gave them a constrained engineering problem (transfer water between containers without pouring, using only paper, tape, straws, and scissors), and watched what happened when the obvious approach failed within the first thirty minutes.\n\nThe study is the second in a five-case series from the Blue Blocks Micro Research Institute investigating child-driven inquiry across varied conditions of adversity, ownership, and engagement. It uses the BBMRI Micro-Research Methodology — a practitioner-led framework for embedded educational observation — and is the first case in the series to introduce adversity as a designed condition rather than a by-product of the activity."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Repository & Access",
+                links: [
+                  { label: "Full Paper on Zenodo (DOI)", href: "https://doi.org/10.5281/zenodo.19344032", external: true },
+                  { label: "Methodology Framework", href: "https://doi.org/10.5281/zenodo.18584816", external: true },
+                  { label: "Co-Authorship Framework", href: "https://doi.org/10.5281/zenodo.18584890", external: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "resilience-abstract",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Abstract",
+                body: "This case study is the second of a five-case series in which the Blue Blocks Micro Research Institute investigates how children react and adjust when the conditions of learning are designed to give rise to adversity in the environment. The present case study is structurally different from the first study in the series because, in this case, the adversity is the designed conditions; it is not a by-product of the activity. The erdkinder adolescents from Blue Blocks participated in a resilience study where on day 1, they were given a worksheet that asked them about their failures and the process of creating the satellite project linking them to real-world failure. Day 2 gave them a completely new challenge — it was a time-bound, simple engineering problem where they were asked to transfer water from one container to another without pouring it directly using only a specified set of materials, where the initial approach was designed to produce partial or complete failure. The analysis observed pre-specified hypotheses based on ownership and adaptability, which held true through the case study. One emergent finding was spontaneous cross-domain cognitive transfer — children drew unprompted on physics concepts from prior learning to solve an unfamiliar engineering problem. Gaps in the record are documented transparently.\n\nEthics Note: All participants were adolescents from Blue Blocks School. Regular parental consent was obtained. Student identities are anonymised using reference codes (P-01 to P-08 for reflection sheets, C-01 to C-12 for Day 2 observations). Weekend reflection sheets were completed at home voluntarily."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Related Publications",
+                links: [
+                  { label: "Methodology Framework", href: "/methodology" },
+                  { label: "Publications Index", href: "/publications" },
+                  { label: "Flipside Case Study (Case 1)", href: "/publications/flipside-case-study" },
+                  { label: "Structured Debate Side Switch (Case 3)", href: "/publications/structured-debate-side-switch" },
+                  { label: "SAPARYA / IMF — SBB-1 Mission", href: "/publications/saparya-imf-case-study" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "resilience-key-findings",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Key Findings",
+                body: "",
+                bullets: [
+                  "1. All four teams framed failure as a puzzle, not a problem. When the initial engineering approach failed — paper channels leaked, tape seals broke — no team blamed a member, stopped working, or sought adult rescue. All four teams treated the failure as information and iterated.",
+                  "2. Three out of four teams interrogated the challenge brief itself. Students re-read the brief, noticed what it did not constrain, and acted on that reading — requesting extra cups and materials the brief permitted but did not display. This brief interrogation behaviour is a qualitatively different orientation to problem-solving than accepting apparent constraints as fixed.",
+                  "3. Students spontaneously transferred physics concepts from prior learning. Two teams explicitly drew on Archimedes' principle and siphon mechanics from classroom science to solve an unfamiliar engineering problem. One student's verbatim: \"Remember the thingy which we have in the science lab. The Greek guy thing.\" This cross-domain cognitive transfer was not hypothesised and emerged from the observer record.",
+                  "4. Private reflection sheets surfaced emotional content entirely absent from in-session observation. Students who appeared enthusiastic and adaptive during the Day 2 challenge had written — privately, the night before — about sadness, disappointment, and doubt about the satellite failure. The emotional register of the reflection sheets and the behavioural register of the observer sheets are measuring different things. Both are required for a complete picture.",
+                  "5. Students who had owned a genuinely hard prior project arrived at the new challenge with failure already normalised. Reflection sheet language clustered around three themes: failure as information, failure as permission to restart, and failure as epistemically valuable. One student wrote: \"to not just succeed but to again learn faithfully until the path to success had a lot of wisdom, and to have that wisdom and succeed, is the greatest thing of all.\"",
+                  "6. The designed adversity produced a qualitatively different research yield than incidental adversity. Because the Day 2 challenge was engineered to fail at a predictable point, the study captured the exact moment of failure response — language, behaviour, team dynamics — in real time. This is data that retrospective studies cannot produce."
+                ]
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Analytical Framework",
+                citation: "Hart (1992) and Cook-Sather (2006) on children's participation, Werner & Smith (1992) on resilience, Lincoln & Guba (1985) on naturalistic inquiry — mapped against adversity response, cognitive transfer, and dual-instrument comparison."
+              }
+            ]
+          }
+        },
+        {
+          id: "resilience-methodology",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Methodology Summary",
+                body: "This is a qualitative case study using structured observation and private written reflection as dual data collection instruments. Twelve adolescent students (ages 12-15) from the Blue Blocks Erdkinder programme participated across two days. Day 1 administered a four-part weekend reflection sheet asking students to write privately about their experience of the SBB-1 CubeSat project failure. Day 2 presented a 60-minute time-bound engineering challenge (water transfer using constrained materials) with a built-in first failure point.\n\nFour teams of three were each assigned a dedicated observer using an eight-section structured observation template covering: language at failure, response types, failure framing, brief interrogation behaviour, materials requested, recovery arc, help-seeking, and end-of-session summary. The brief interrogation and materials request sections (Sections D and E) were new additions to this case study's instrument, designed to capture whether students read and acted on what the challenge brief permitted but did not display.\n\nThree hypotheses were pre-specified: H1 (instrument quality — children's resilience framing reveals language adult instruments miss), H2 (engagement behaviour — prior ownership of a hard project produces adaptive problem-framing), and H3 (selective attention — private reflection surfaces content absent from in-session observation). Analysis followed the Embedded Observer Principle of the BBMRI Micro-Research framework."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Cross-References",
+                links: [
+                  { label: "Methodology", href: "/methodology" },
+                  { label: "Governance", href: "/governance" },
+                  { label: "Ethics & Privacy", href: "/governance/ethics" },
+                  { label: "Publications Index", href: "/publications" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "resilience-parameters",
+          type: "tableBlock",
+          header: "Study Parameters",
+          headers: ["Parameter", "Detail"],
+          rows: [
+            ["Participants", "12 adolescents (Erdkinder cohort)"],
+            ["Age Range", "12–15 years"],
+            ["Study Setting", "Blue Blocks School, Hyderabad, India"],
+            ["Data Collection", "March 2026 (two-day workshop)"],
+            ["Day 1 Instrument", "Four-part weekend reflection sheet (completed at home)"],
+            ["Day 2 Instrument", "Eight-section structured observer sheet (per team)"],
+            ["Teams", "4 teams of 3 students, each with dedicated observer"],
+            ["Day 2 Task", "Water transfer engineering challenge (60 minutes, built-in first failure)"],
+            ["Prior Adversity Condition", "SBB-1 CubeSat mission — IN-SPACe authorized, PSLV-C62 launch, Stage 4 anomaly"],
+            ["Reflection Sheets Returned", "8 of 12 (2 outstanding)"],
+            ["Hypotheses", "H1 (instrument quality), H2 (engagement behaviour), H3 (selective attention)"],
+            ["Emergent Finding", "Spontaneous cross-domain cognitive transfer (physics to engineering)"],
+            ["Anonymisation", "Reference codes: P-01 to P-08 (reflections), C-01 to C-12 (observations)"],
+            ["Series Position", "Case 2 of 5 — Child-Driven Inquiry Series"]
+          ]
+        },
+        {
+          id: "resilience-discussion",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Discussion Summary",
+                body: "This study addresses a gap in the adolescent resilience literature: most resilience research observes children after naturally occurring adversity. This study designed the adversity, controlled the failure point, and captured the exact moment of response — providing data that retrospective studies cannot produce.\n\nThe study setting is significant because the prior adversity condition was not hypothetical. The students had genuinely participated in the design of a satellite payload that was certified flight-ready, integrated with an ISRO launch vehicle, and lost to a Stage 4 anomaly. Their reflection sheets describe real disappointment, real sadness, and real philosophical processing of what failure means. When they then encountered a designed failure in the engineering challenge, their behaviour was measurably adaptive — but their private emotional history was only visible through the reflection instrument.\n\nThe primary limitation is the absence of Day 1 observation data. The CubeSat failure — the actual adversity condition — was not observed in real time by the research team. It was reconstructed retrospectively through student reflection sheets. This means H2's evidence is strong for the designed (Day 2) adversity but relies on self-report for the prior (Day 1) adversity. A dedicated Day 1 observer protocol is recommended for Cases 4 and 5."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "How to Cite (APA)",
+                citation: "Blue Blocks Micro Research Institute, Chakraborty, S., Bose, P., & Khare, K. (2026). When Children Encounter Designed Adversity — The Resilience Workshop: A Case Study from the Blue Blocks Erdkinder Environment. Blue Blocks Micro Research Institute. Zenodo. https://doi.org/10.5281/zenodo.19344032"
+              }
+            ]
+          }
+        },
+        {
+          id: "resilience-implications",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Implications",
+                body: "For Educators\nThe finding that all four teams treated designed failure as a puzzle — and that three teams interrogated the challenge constraints rather than accepting them — suggests that prior ownership of genuinely difficult work builds a transferable orientation to adversity. This has direct implications for curriculum design: engineering challenges with built-in failure points, when preceded by real project experience, produce observable adaptive behaviour that worksheets and discussions about resilience cannot replicate.\n\nFor Resilience Researchers\nThe mismatch between private emotional content (reflection sheets) and public adaptive behaviour (observer notes) raises a methodological concern for single-instrument resilience studies. Students who appeared enthusiastic and adaptive in the session had written privately about sadness and doubt. A study relying only on in-session observation would systematically underestimate the emotional cost of resilience.\n\nFor Montessori Practitioners\nThe study provides empirical evidence for the Erdkinder model's emphasis on real work with real consequences. The students' prior engagement with the CubeSat project — a genuinely difficult, genuinely high-stakes initiative — appears to have produced not just emotional resilience but cognitive equipment: prior knowledge that students treated as a legitimate tool in a new domain."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Authors",
+                links: [
+                  { label: "Sreemoyee Chakraborty (Lead Researcher) — ORCID 0000-0001-5180-156X", href: "https://orcid.org/0000-0001-5180-156X", external: true },
+                  { label: "Poulomi Bose (Co-Researcher) — ORCID 0009-0007-6156-2161", href: "https://orcid.org/0009-0007-6156-2161", external: true },
+                  { label: "Kriti Khare (Co-Researcher) — ORCID 0009-0004-3106-8873", href: "https://orcid.org/0009-0004-3106-8873", external: true },
+                  { label: "Pavan Goyal (Project Leader, Contributor) — ORCID 0009-0009-8840-8505", href: "https://orcid.org/0009-0009-8840-8505", external: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "resilience-references",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "References",
+                body: "",
+                bullets: [
+                  "Blue Blocks Micro Research Institute, Goyal, P., Chakraborty, S., & Ediga, S. (2026a). Blue Blocks Micro Research Methodology: A Practitioner-Led, Longitudinal Framework for Embedded Educational Research. Zenodo. https://doi.org/10.5281/zenodo.18584816",
+                  "Blue Blocks Micro Research Institute, Goyal, P., Chakraborty, S., & Ediga, S. (2026b). Blue Blocks Bridging the Lab and the Classroom: A Participatory Micro-Research Methodology for Scientist-Child Co-authorship in STEM. Zenodo. https://doi.org/10.5281/zenodo.18584890",
+                  "Chakraborty, S., Bose, P., & Khare, K. (2026). When Children Own the Research Instrument: The Flipside Workspace Field Research Case Study from the Blue Blocks Erdkinder Environment. Blue Blocks Micro Research Institute. Zenodo. https://doi.org/10.5281/zenodo.19219065",
+                  "Cook-Sather, A. (2006). Sound, presence, and power: 'Student voice' in educational research and reform. Curriculum Inquiry, 36(4), 359–390.",
+                  "Greene, S. M., & Hill, M. (2005). Researching children's experiences: Methods and methodological issues. In S. M. Greene & D. M. Hogan (Eds.), Researching Children's Experience: Approaches and Methods (pp. 1–21). Sage.",
+                  "Hart, R. A. (1992). Children's Participation: From Tokenism to Citizenship. UNICEF Innocenti Essays No. 4. UNICEF International Child Development Centre.",
+                  "Lave, J., & Wenger, E. (1991). Situated Learning: Legitimate Peripheral Participation. Cambridge University Press.",
+                  "Lillard, A. S. (2017). Montessori: The Science Behind the Genius (3rd ed.). Oxford University Press.",
+                  "Lincoln, Y. S., & Guba, E. G. (1985). Naturalistic Inquiry. Sage.",
+                  "Punch, S. (2002). Research with children: The same or different from research with adults? Childhood, 9(3), 321–341.",
+                  "Werner, E. E., & Smith, R. S. (1992). Overcoming the Odds: High Risk Children from Birth to Adulthood. Cornell University Press."
+                ]
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Series Context",
+                citation: "Case 2 of 5 — Child-Driven Inquiry Series. The first case study in the series to introduce adversity as a designed condition rather than a by-product of the activity."
+              }
+            ]
+          }
+        },
+        {
+          id: "resilience-zenodo-cta",
+          type: "highlightBox",
+          header: "Read the Full Paper on Zenodo",
+          body: "The complete paper is available as an open-access record on Zenodo under CC BY 4.0.",
+          cta: { label: "Read the Full Paper on Zenodo", href: "https://doi.org/10.5281/zenodo.19344032", external: true }
+        },
+        {
+          id: "resilience-archival-note",
+          type: "textBlock",
+          variant: "muted",
+          body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
+        },
+        {
+          id: "resilience-related",
+          type: "relatedCards",
+          header: "Related Registry",
+          cards: [
+            { title: "Methodology", description: "Research framework.", icon: "publication", href: "/methodology" },
+            { title: "Flipside Case Study", description: "Case 1 of the five-case series.", icon: "publication", href: "/publications/flipside-case-study" },
+            { title: "Structured Debate Side Switch", description: "Case 3 of the five-case series.", icon: "publication", href: "/publications/structured-debate-side-switch" },
+            { title: "SAPARYA / IMF (SBB-1)", description: "The CubeSat mission referenced as prior adversity.", icon: "publication", href: "/publications/saparya-imf-case-study" }
+          ]
+        }
+      ]
+    },
+
+    "/publications/structured-debate-side-switch": {
+      title: "The Structured Debate With Mid-Point Side Switch: A Case Study from the Blue Blocks Erdkinder Environment",
+      metaDescription: "Case study: 12 adolescents debated voting age, then switched sides mid-debate. Phase 2 arguments were qualitatively richer. Erdkinder environment, Hyderabad.",
+      seo: {
+        title: "Debate Side Switch: Adolescent Civic Reasoning",
+        canonical: "https://research.blueblocks.in/publications/structured-debate-side-switch",
+        robots: "index, follow",
+        keywords: "structured debate, side switch, adolescent argumentation, civic reasoning, Erdkinder, perspective-taking, micro research, Blue Blocks Micro Research Institute, qualitative case study, embodied argumentation, voting age, cross-listening, group cohesion, observation instrument, Montessori adolescent, adversarial design, argumentation quality, civic self-positioning, phase analysis, inter-rater reliability",
+        openGraph: {
+          type: "article",
+          url: "https://research.blueblocks.in/publications/structured-debate-side-switch",
+          title: "Debate Side Switch: Adolescent Civic Reasoning | Blue Blocks Micro Research Institute",
+          description: "Case study: 12 adolescents debated voting age, then switched sides mid-debate. Phase 2 arguments were qualitatively richer. Erdkinder environment, Hyderabad.",
+          image: {
+            url: "https://research.blueblocks.in/images/og-home.jpg",
+            width: 1200,
+            height: 630,
+            alt: "Structured Debate Side Switch Case Study"
+          },
+          locale: "en_IN",
+          article: {
+            published_time: "2026-04-09",
+            author: "Chakraborty, S., Matta, S.",
+            section: "Publications"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Debate Side Switch: Adolescent Civic Reasoning | Blue Blocks Micro Research Institute",
+          description: "Case study: 12 adolescents debated voting age, then switched sides mid-debate. Phase 2 arguments were qualitatively richer. Erdkinder environment, Hyderabad.",
+          image: "https://research.blueblocks.in/images/og-home.jpg"
+        },
+        citation: {
+          citation_title: "The Structured Debate With Mid-Point Side Switch: A Case Study from the Blue Blocks Erdkinder Environment",
+          citation_authors: ["Chakraborty, Sreemoyee", "Matta, Sruthi"],
+          citation_publication_date: "2026/04/09",
+          citation_publisher: "Zenodo",
+          citation_doi: "10.5281/zenodo.19480752"
+        }
+      },
+      schemas: [
+        {
+          "@type": "WebPage",
+          "@id": "https://research.blueblocks.in/publications/structured-debate-side-switch/#webpage",
+          url: "https://research.blueblocks.in/publications/structured-debate-side-switch",
+          name: "Debate Side Switch: Adolescent Civic Reasoning | Blue Blocks Micro Research Institute",
+          description: "Case study: 12 adolescents debated voting age, then switched sides mid-debate. Phase 2 arguments were qualitatively richer. Erdkinder environment, Hyderabad.",
+          isPartOf: { "@id": "https://research.blueblocks.in/#website" },
+          about: { "@id": "https://research.blueblocks.in/publications/structured-debate-side-switch/#article" }
+        },
+        {
+          "@type": "ScholarlyArticle",
+          "@id": "https://research.blueblocks.in/publications/structured-debate-side-switch/#article",
+          name: "The Structured Debate With Mid-Point Side Switch: A Case Study from the Blue Blocks Erdkinder Environment",
+          headline: "The Structured Debate With Mid-Point Side Switch: A Case Study from the Blue Blocks Erdkinder Environment",
+          description: "This case study is the third of a five-case series investigating what children notice, ask, and produce when given ownership of a research instrument — and what happens when that ownership is subsequently disrupted. Twelve adolescent students were divided into two teams and assigned positions in a structured debate on the motion: This house believes the voting age should be lowered to 16. At the midpoint, without prior warning, both teams were asked to switch sides. The central finding is that the switch did not collapse the debate — Phase 2 arguments were in several instances qualitatively richer than Phase 1 output, most notably when students turned their own earlier arguments against themselves.",
+          url: "https://research.blueblocks.in/publications/structured-debate-side-switch",
+          mainEntityOfPage: "https://research.blueblocks.in/publications/structured-debate-side-switch",
+          datePublished: "2026-04-09",
+          inLanguage: "en",
+          identifier: "https://doi.org/10.5281/zenodo.19480752",
+          sameAs: "https://doi.org/10.5281/zenodo.19480752",
+          author: [
+            { "@type": "Organization", "@id": "https://research.blueblocks.in/#microresearch", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" },
+            { "@type": "Person", name: "Sreemoyee Chakraborty", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } },
+            { "@type": "Person", name: "Sruthi Matta", affiliation: { "@id": "https://research.blueblocks.in/#microresearch" } }
+          ],
+          publisher: { "@type": "Organization", name: "Zenodo", url: "https://zenodo.org" },
+          isAccessibleForFree: true,
+          license: "https://creativecommons.org/licenses/by/4.0/",
+          keywords: [
+            "structured debate", "side switch", "adolescent argumentation", "civic reasoning",
+            "Erdkinder", "perspective-taking", "micro research", "Blue Blocks Micro Research Institute",
+            "qualitative case study", "embodied argumentation", "voting age", "cross-listening",
+            "group cohesion", "observation instrument", "Montessori adolescent", "adversarial design",
+            "argumentation quality", "civic self-positioning", "phase analysis", "inter-rater reliability"
+          ],
+          about: [
+            { "@type": "Thing", name: "Structured debate with perspective-taking constraint" },
+            { "@type": "Thing", name: "Adolescent civic reasoning and argumentation" },
+            { "@type": "Thing", name: "Mid-point side switch as research instrument disruption" },
+            { "@type": "Thing", name: "Cross-listening and argument quality in adolescents" }
+          ],
+          citation: [
+            { "@type": "ScholarlyArticle", name: "Blue Blocks Micro Research Methodology: A Practitioner-Led, Longitudinal Framework for Embedded Educational Research", url: "https://doi.org/10.5281/zenodo.18584816" },
+            { "@type": "ScholarlyArticle", name: "Blue Blocks Embedded Observation Protocol (BEOP v1.0)", url: "https://doi.org/10.5281/zenodo.19087415" },
+            { "@type": "ScholarlyArticle", name: "Micro Research Ethics Framework (MREF v1.0)", url: "https://doi.org/10.5281/zenodo.19047669" }
+          ],
+          sourceOrganization: { "@id": "https://research.blueblocks.in/#microresearch" },
+          spatialCoverage: { "@type": "Place", name: "Hyderabad, Telangana, India" },
+          countryOfOrigin: { "@type": "Country", name: "India" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://research.blueblocks.in/publications/structured-debate-side-switch/#breadcrumb",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications" },
+            { "@type": "ListItem", position: 3, name: "Structured Debate Side Switch", item: "https://research.blueblocks.in/publications/structured-debate-side-switch" }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "debate-hero",
+          type: "hero",
+          variant: "publication",
+          headline: "Adolescents Who Switched Sides Mid-Debate and Argued Better for It",
+          subheadline: "The Structured Debate With Mid-Point Side Switch — A Case Study from the Blue Blocks Erdkinder Environment | CS-2026-003",
+          image: { src: "/src/assets/banners/publications-doi.jpg", alt: "Structured Debate Side Switch Case Study", variant: "hero", privacyBlur: false }
+        },
+        {
+          id: "debate-meta",
+          type: "metaStrip",
+          items: [
+            { label: "DOI", value: "10.5281/zenodo.19480752", href: "https://doi.org/10.5281/zenodo.19480752", external: true },
+            { label: "Case ID", value: "CS-2026-003" },
+            { label: "Type", value: "Qualitative Case Study" },
+            { label: "Series", value: "Five-Case Series — Case 3 of 5" },
+            { label: "Status", value: "Published" },
+            { label: "Data Collection", value: "Single session, April 2026" },
+            { label: "Setting", value: "Blue Blocks Montessori School, Hyderabad, India" },
+            { label: "Affiliation", value: "Blue Blocks Micro Research Institute" },
+            { label: "Access", value: "Open Access — CC BY 4.0" }
+          ]
+        },
+        {
+          id: "debate-introduction",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Introduction",
+                body: "What happens when you give adolescents full ownership of an argument — and then take it away mid-debate? This case study documents exactly that. Twelve students from the Blue Blocks Erdkinder environment were assigned opposing positions on the motion that the voting age should be lowered to 16, given preparation time, and asked to argue their case in a structured debate format. At the midpoint, without any prior warning, both teams were instructed to switch sides and continue from the opposing position.\n\nCS-2026-003 is the third in a five-case series from Blue Blocks Micro Research Institute investigating what children produce when given ownership of a research instrument — and what happens when that ownership is disrupted by design. This case is the most adversarially designed in the set. The side-switch is not a pedagogical strategy being evaluated for effectiveness; it is a deliberate methodological disruption inserted to observe how adolescents handle cognitive and civic dissonance in real time.\n\nThe study was conducted within the Erdkinder environment at Blue Blocks Montessori School, Hyderabad — an adolescent programme structured around self-directed learning, community responsibility, and practical reasoning. Four embedded observers using a structured observation instrument recorded argumentation quality, civic self-positioning, group cohesion, and behavioural response across both phases of the debate. All data collection followed the Blue Blocks Embedded Observation Protocol (BEOP v1.0) and the Micro Research Ethics Framework (MREF v1.0)."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Repository & Access",
+                links: [
+                  { label: "Full Paper on Zenodo (DOI)", href: "https://doi.org/10.5281/zenodo.19480752", external: true },
+                  { label: "Methodology Framework", href: "https://doi.org/10.5281/zenodo.18584816", external: true },
+                  { label: "Observation Protocol (BEOP v1.0)", href: "https://doi.org/10.5281/zenodo.19087415", external: true },
+                  { label: "Ethics Framework (MREF v1.0)", href: "https://doi.org/10.5281/zenodo.19047669", external: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "debate-abstract",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Abstract",
+                body: "This case study is the third of a five-case series in which the Blue Blocks Micro Research Institute investigates what children notice, ask, and produce when given ownership of a research instrument — and what happens when that ownership is subsequently disrupted. Case 3 is the most adversarially designed case in the set. Twelve adolescent students were divided into two teams and assigned positions in a structured debate on the motion: This house believes the voting age should be lowered to 16. Each team was given preparation time and ownership of their assigned position. At the midpoint of the debate, without prior warning, both teams were asked to switch sides and continue arguing from the opposing position. Four observers — two per team — recorded behaviour, argumentation quality, civic self-positioning, and group cohesion using a structured observation instrument. The central finding is that the switch did not collapse the debate. Both teams adapted, drew on cross-listening, and produced arguments in Phase 2 that were, in several instances, qualitatively richer than their Phase 1 output — most notably when students turned their own earlier arguments against themselves.\n\nEthics note: All participants are adolescent students at Blue Blocks Montessori School. Participation was voluntary. Informed consent and assent were obtained in accordance with the Micro Research Ethics Framework (MREF v1.0). All student identifiers are anonymised throughout."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Related Publications",
+                links: [
+                  { label: "Methodology Framework", href: "/methodology" },
+                  { label: "Publications Index", href: "/publications" },
+                  { label: "Flipside Case Study", href: "/publications/flipside-case-study" },
+                  { label: "Iran War Case Study", href: "/publications/iran-war-case-study" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "debate-key-findings",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Key Findings",
+                body: "",
+                bullets: [
+                  "1. The side switch did not collapse the debate. Both teams continued arguing after the mid-point switch, adapting to their new positions without structural breakdown of the session — demonstrating that adolescents can sustain reasoned argumentation even when their assigned stance is forcibly reversed.",
+                  "2. Phase 2 arguments were qualitatively richer in several instances. Students who had just argued one side drew directly on their own Phase 1 arguments to construct counter-positions in Phase 2 — a behaviour observed across both teams and flagged by multiple observers as analytically significant.",
+                  "3. Cross-listening was the primary mechanism enabling the switch. Observer data showed that students who had actively listened to the opposing team during Phase 1 adapted more fluidly in Phase 2. Students with lower cross-listening scores showed more resistance and shorter argument construction in Phase 2.",
+                  "4. Civic self-positioning shifted measurably between phases. Several students whose personal view aligned with their Phase 1 position showed the most creative argumentation in Phase 2 — having to argue against their own convictions appeared to sharpen rather than suppress their reasoning.",
+                  "5. An emergent finding around exam pressure arose unprompted. During Phase 2, students raised exam pressure as an argument against lowering the voting age — a topic not introduced by facilitators, demonstrating that adolescents in the Erdkinder environment actively connect civic questions to their immediate lived experience.",
+                  "6. Observer agreement was strong across all four scorers. The structured observation instrument produced consistent scores across both lead and second observers for argumentation quality and group cohesion metrics, supporting the instrument's reliability in an adversarial session design."
+                ]
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Analytical Framework",
+                citation: "Toulmin (argumentation structure), Kohlberg (civic/moral reasoning) — mapped against argumentation quality, civic self-positioning, and cross-listening domains."
+              }
+            ]
+          }
+        },
+        {
+          id: "debate-methodology",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Methodology Summary",
+                body: "CS-2026-003 is a qualitative case study using embedded observation within a live structured debate session. The study design is adversarial by construction: the mid-point side switch is a deliberate disruption introduced to observe how adolescents manage cognitive and civic dissonance under real-time conditions. This is not an evaluation of debate as a pedagogical method; it is a case study of argumentation behaviour under enforced perspective change.\n\nTwelve adolescent participants from the Blue Blocks Erdkinder environment were divided into two teams of six. The session ran in two phases separated by the side switch. Four embedded observers — two assigned per team — used a standardised observation instrument to score five metrics per phase: argumentation quality, civic self-positioning, cross-listening, group cohesion, and individual resistance to the switch. Verbatim quotes were recorded by observers and are reproduced in the appendix. Researcher inference was recorded in a separate column from raw observation, maintaining the separation required by the BEOP protocol.\n\nData was analysed for patterns across both phases and across the four observer records. Hypotheses were pre-registered for the session and assessed against the data post-collection. The analytical framework drew on Toulmin's argumentation model for assessing argument structure, and Kohlberg's moral development stages for interpreting civic self-positioning claims."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Cross-References",
+                links: [
+                  { label: "Methodology", href: "/methodology" },
+                  { label: "Governance", href: "/governance" },
+                  { label: "Ethics & Privacy", href: "/governance/ethics" },
+                  { label: "Publications Index", href: "/publications" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "debate-parameters",
+          type: "tableBlock",
+          header: "Study Parameters",
+          headers: ["Parameter", "Detail"],
+          rows: [
+            ["Participants", "12 adolescent students"],
+            ["Age Cohort", "Erdkinder (adolescent cohort, approx. 12–15 years)"],
+            ["Teams", "2 teams of 6"],
+            ["Observers", "4 (2 per team — lead observer and second observer)"],
+            ["Session Structure", "Two-phase structured debate with mid-point side switch"],
+            ["Debate Motion", "This house believes the voting age should be lowered to 16"],
+            ["Data Collection", "Single session, April 2026"],
+            ["Setting", "Blue Blocks Montessori School, Hyderabad, India"],
+            ["Data Type", "Structured observer scores (1–5 scale) + verbatim quotes"],
+            ["Metrics Scored", "Argumentation quality, civic self-positioning, cross-listening, group cohesion, resistance to switch"],
+            ["Analytical Framework", "Toulmin (argumentation), Kohlberg (moral/civic reasoning)"],
+            ["Inter-Rater Reliability", "Four observers across two independent scoring streams"],
+            ["Observation Protocol", "Blue Blocks Embedded Observation Protocol (BEOP v1.0)"],
+            ["Ethics Protocol", "Micro Research Ethics Framework (MREF v1.0)"],
+            ["Anonymization", "All student identifiers removed; observer designations used throughout"]
+          ]
+        },
+        {
+          id: "debate-discussion",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Discussion Summary",
+                body: "This case study addresses a gap in participatory research with adolescents: most studies either observe adolescent reasoning passively or structure debates without disruption. CS-2026-003 introduces disruption as the research instrument itself, testing whether enforced perspective change degrades or improves adolescent argumentation quality. The finding that Phase 2 arguments were in several instances richer than Phase 1 challenges the assumption that position ownership is necessary for high-quality argumentation. It suggests instead that having argued one side deeply — and then being forced to argue against it — can activate a more sophisticated form of reasoning that draws on both positions simultaneously.\n\nThe Erdkinder setting is significant here. The Blue Blocks Montessori adolescent environment emphasizes self-directed reasoning, community responsibility, and the capacity to hold complexity. The students in this case were not performing for a grade; they were engaging with a genuine civic question in a setting where intellectual honesty is normalized. This may explain why the switch produced richer arguments rather than resistance or shutdown.\n\nLimitations acknowledged in the paper include the small sample size of twelve participants and the single-session design, which does not allow for longitudinal pattern claims. The emergent finding around exam pressure — raised unprompted by students — was not captured in the pre-registered hypotheses and is flagged as a direction for a future dedicated micro-study. The paper explicitly does not claim that the side-switch method improves debate ability in general; it documents what happened in this one session with this cohort."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "How to Cite (APA)",
+                citation: "Blue Blocks Micro Research Institute, Chakraborty, S., & Matta, S. (2026). The Structured Debate With Mid-Point Side Switch: A Case Study from the Blue Blocks Erdkinder Environment. Blue Blocks Micro Research Institute. Zenodo. https://doi.org/10.5281/zenodo.19480752"
+              }
+            ]
+          }
+        },
+        {
+          id: "debate-implications",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Implications",
+                body: "For Educators\nThe mid-point side switch offers a classroom instrument that is easy to implement and produces observable data about how students listen to opposing arguments. Teachers working in Socratic or debate-based programmes may find value in introducing a mid-point reversal not as a surprise but as a structured technique — and observing whether students who listen more actively in Phase 1 argue more effectively in Phase 2.\n\nFor Researchers in Adolescent Argumentation\nThis case provides a replicable single-session design with a structured observation instrument (full instrument in Appendix 1) that other researchers can adapt. The pre-registration of hypotheses against which the emergent exam pressure finding is contrasted demonstrates the value of embedded observation in surfacing findings that hypothesis-driven designs would not anticipate.\n\nFor Civic Education Researchers\nThe voting age debate motion was not chosen arbitrarily — it is a question that directly affects the adolescent participants. The data on civic self-positioning across both phases, and particularly the shift in positioning after the switch, offers a small but replicable window into how adolescents reason about their own civic status when that status is under discussion."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Authors",
+                links: [
+                  { label: "Sreemoyee Chakraborty (Lead Researcher) — ORCID 0000-0001-5180-156X", href: "https://orcid.org/0000-0001-5180-156X", external: true },
+                  { label: "Sruthi Matta (Co-Researcher) — ORCID 0009-0008-2791-1273", href: "https://orcid.org/0009-0008-2791-1273", external: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "debate-references",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "References",
+                body: "",
+                bullets: [
+                  "Blue Blocks Micro Research Institute, Goyal, P., Chakraborty, S., & Ediga, S. (2026). Blue Blocks Micro Research Methodology: A Practitioner-Led, Longitudinal Framework for Embedded Educational Research. Zenodo. https://doi.org/10.5281/zenodo.18584816",
+                  "Blue Blocks Micro Research Institute. (2026). Blue Blocks Embedded Observation Protocol (BEOP v1.0). Zenodo. https://doi.org/10.5281/zenodo.19087415",
+                  "Blue Blocks Micro Research Institute. (2026). Micro Research Ethics Framework (MREF v1.0). Zenodo. https://doi.org/10.5281/zenodo.19047669",
+                  "Toulmin, S. E. (1958). The Uses of Argument. Cambridge University Press.",
+                  "Kohlberg, L. (1969). Stage and sequence: The cognitive-developmental approach to socialisation. In D. A. Goslin (Ed.), Handbook of Socialisation Theory and Research (pp. 347–480). Rand McNally.",
+                  "Kuhn, D. (1991). The Skills of Argument. Cambridge University Press.",
+                  "Mercier, H., & Sperber, D. (2011). Why do humans reason? Arguments for an argumentative theory. Behavioral and Brain Sciences, 34(2), 57–74."
+                ]
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Series Context",
+                citation: "Case 3 of 5 — Five-Case Series investigating what children produce when given ownership of a research instrument, and what happens when that ownership is disrupted by design."
+              }
+            ]
+          }
+        },
+        {
+          id: "debate-zenodo-cta",
+          type: "highlightBox",
+          header: "Read the Full Paper on Zenodo",
+          body: "The complete paper is available as an open-access record on Zenodo under CC BY 4.0.",
+          cta: { label: "Read the Full Paper on Zenodo", href: "https://doi.org/10.5281/zenodo.19480752", external: true }
+        },
+        {
+          id: "debate-archival-note",
+          type: "textBlock",
+          variant: "muted",
+          body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
+        },
+        {
+          id: "debate-related",
+          type: "relatedCards",
+          header: "Related Registry",
+          cards: [
+            { title: "Methodology", description: "Research framework.", icon: "publication", href: "/methodology" },
+            { title: "Flipside Case Study", description: "Case 1 of the five-case series.", icon: "publication", href: "/publications/flipside-case-study" },
+            { title: "Iran War Case Study", description: "Age-differentiated responses to geopolitical violence.", icon: "publication", href: "/publications/iran-war-case-study" },
+            { title: "Publications", description: "Full research docket.", icon: "publication", href: "/publications" }
+          ]
+        }
+      ]
+    },
+
     "/publications/flipside-case-study": {
       title: "When Children Own the Research Instrument: The Flipside Workspace Field Research Case Study from the Blue Blocks Erdkinder Environment",
       metaDescription: "Case study: 12 adolescents designed their own 25-question research instrument and interviewed neurodivergent adults at a Hyderabad cloud kitchen. First of a five-case series.",
@@ -5206,6 +5962,15 @@ const siteContent = {
           body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
         },
         {
+          id: "patent-siblings", type: "relatedCards", header: "Other Patents in This Registry",
+          cards: [
+            { title: "Borehole Rescue System", icon: "patent", href: "/patents/borehole-rescue-system" },
+            { title: "Contactless Delivery System", icon: "patent", href: "/patents/contactless-delivery-system" },
+            { title: "Autonomous Medical Assistance System", icon: "patent", href: "/patents/autonomous-medical-assistance-system" },
+            { title: "Autonomous Health Monitoring System", icon: "patent", href: "/patents/autonomous-health-monitoring-system" }
+          ]
+        },
+        {
           id: "patent-related", type: "relatedCards", header: "Related Registry",
           cards: [
             { title: "View on Zenodo", description: "Archival DOI record.", icon: "archive", href: "https://doi.org/10.5281/zenodo.18610003", external: true },
@@ -5318,6 +6083,15 @@ const siteContent = {
         {
           id: "patent-archival", type: "textBlock", variant: "muted",
           body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
+        },
+        {
+          id: "patent-siblings", type: "relatedCards", header: "Other Patents in This Registry",
+          cards: [
+            { title: "Automated Security UAV", icon: "patent", href: "/patents/automated-security-uav" },
+            { title: "Contactless Delivery System", icon: "patent", href: "/patents/contactless-delivery-system" },
+            { title: "Autonomous Medical Assistance System", icon: "patent", href: "/patents/autonomous-medical-assistance-system" },
+            { title: "Autonomous Health Monitoring System", icon: "patent", href: "/patents/autonomous-health-monitoring-system" }
+          ]
         },
         {
           id: "patent-related", type: "relatedCards", header: "Related Registry",
@@ -5434,6 +6208,15 @@ const siteContent = {
           body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
         },
         {
+          id: "patent-siblings", type: "relatedCards", header: "Other Patents in This Registry",
+          cards: [
+            { title: "Automated Security UAV", icon: "patent", href: "/patents/automated-security-uav" },
+            { title: "Borehole Rescue System", icon: "patent", href: "/patents/borehole-rescue-system" },
+            { title: "Autonomous Medical Assistance System", icon: "patent", href: "/patents/autonomous-medical-assistance-system" },
+            { title: "Autonomous Health Monitoring System", icon: "patent", href: "/patents/autonomous-health-monitoring-system" }
+          ]
+        },
+        {
           id: "patent-related", type: "relatedCards", header: "Related Registry",
           cards: [
             { title: "View on Zenodo", description: "Archival DOI record.", icon: "archive", href: "https://doi.org/10.5281/zenodo.18610450", external: true },
@@ -5548,6 +6331,15 @@ const siteContent = {
           body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
         },
         {
+          id: "patent-siblings", type: "relatedCards", header: "Other Patents in This Registry",
+          cards: [
+            { title: "Automated Security UAV", icon: "patent", href: "/patents/automated-security-uav" },
+            { title: "Borehole Rescue System", icon: "patent", href: "/patents/borehole-rescue-system" },
+            { title: "Contactless Delivery System", icon: "patent", href: "/patents/contactless-delivery-system" },
+            { title: "Autonomous Health Monitoring System", icon: "patent", href: "/patents/autonomous-health-monitoring-system" }
+          ]
+        },
+        {
           id: "patent-related", type: "relatedCards", header: "Related Registry",
           cards: [
             { title: "View on Zenodo", description: "Archival DOI record.", icon: "archive", href: "https://doi.org/10.5281/zenodo.18610847", external: true },
@@ -5660,6 +6452,15 @@ const siteContent = {
         {
           id: "patent-archival", type: "textBlock", variant: "muted",
           body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
+        },
+        {
+          id: "patent-siblings", type: "relatedCards", header: "Other Patents in This Registry",
+          cards: [
+            { title: "Automated Security UAV", icon: "patent", href: "/patents/automated-security-uav" },
+            { title: "Borehole Rescue System", icon: "patent", href: "/patents/borehole-rescue-system" },
+            { title: "Contactless Delivery System", icon: "patent", href: "/patents/contactless-delivery-system" },
+            { title: "Autonomous Medical Assistance System", icon: "patent", href: "/patents/autonomous-medical-assistance-system" }
+          ]
         },
         {
           id: "patent-related", type: "relatedCards", header: "Related Registry",
@@ -7128,6 +7929,396 @@ const siteContent = {
       ]
     },
 
+    "/newsroom/dispatch/ami-congress-2026-press-release": {
+      title: "Press Release: India's Only School at the 30th AMI Montessori Congress",
+      metaDescription: "Blue Blocks Montessori School, Hyderabad, presents an official Design Thinking breakout session at the 30th International AMI Montessori Congress in Mérida, Mexico, alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond. Blue Blocks adolescents announce SBB-2 — a second student-built satellite.",
+      _cpt: "news-item",
+      _status: "published",
+      seo: {
+        title: "India's Only School at the 30th AMI Montessori Congress | Press Release | Blue Blocks Micro Research Institute",
+        canonical: "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release",
+        description: "Blue Blocks Montessori School, Hyderabad, presents an official Design Thinking breakout session alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond at the 30th International AMI Montessori Congress in Mérida, Mexico. Blue Blocks adolescents announce SBB-2 — a second student-built satellite.",
+        keywords: "AMI Congress 2026, Association Montessori Internationale, Mérida Mexico, Blue Blocks Montessori School, Design Thinking workshop, SBB-2 satellite, SBB-1, Pavan Goyal, Munira Hussain, Dr. Gabor Maté, Dr. Adele Diamond, Dr. Angeline Lillard, Alain Tschudin, Montessori innovation, student-built satellite, IN-SPACe, PSLV-C62, Hyderabad",
+        openGraph: {
+          type: "article",
+          title: "India's Only School at the 30th AMI Montessori Congress",
+          description: "Blue Blocks Montessori School, Hyderabad, presents an official Design Thinking breakout session alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond in Mérida, Mexico. Blue Blocks adolescents announce SBB-2 — a second student-built satellite.",
+          image: { url: "https://research.blueblocks.in/images/og-home.jpg", width: 1200, height: 630 },
+          article: {
+            published_time: "2026-04-25T00:00:00+05:30",
+            author: "Blue Blocks Micro Research Institute",
+            section: "Press Release"
+          }
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "India's Only School at the 30th AMI Montessori Congress",
+          description: "Blue Blocks Montessori School presents an official Design Thinking breakout session in Mérida, Mexico, alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond. Adolescents announce SBB-2.",
+          image: "https://research.blueblocks.in/images/og-home.jpg"
+        },
+        citation: {
+          citation_title: "Montessori and Innovation: A Design Thinking Workshop for a Changing World — Pre-registration of 30th AMI Congress Presentation",
+          citation_authors: ["Pavan Goyal", "Munira Hussain"],
+          citation_publication_date: "2026/04/25",
+          citation_publisher: "Blue Blocks Micro Research Institute",
+          citation_doi: "10.17605/OSF.IO/ST9H2"
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "NewsArticle",
+              "@id": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release#article",
+              "headline": "India's Only School at the 30th AMI Montessori Congress",
+              "alternativeHeadline": "Blue Blocks Montessori School — India's Only School at the 30th AMI Montessori Congress — Presents Design Thinking Session in Mérida Alongside Dr. Gabor Maté and Dr. Adele Diamond",
+              "description": "Media brief and background for Blue Blocks Montessori School's presentation at the 30th International AMI Montessori Congress in Mérida, Mexico (May 1–4, 2026). Blue Blocks adolescents announce SBB-2, a second student-built satellite after losing SBB-1 to the PSLV-C62 launch anomaly.",
+              "datePublished": "2026-04-25",
+              "dateModified": "2026-04-25",
+              "url": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release",
+              "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release"
+              },
+              "image": {
+                "@type": "ImageObject",
+                "url": "https://research.blueblocks.in/images/newsroom/blueblocks-isro-mission-control.jpeg",
+                "caption": "Blue Blocks Montessori School students and founder Pavan Goyal at ISRO Mission Control during the PSLV-C62 launch of their student-built satellite, January 2026",
+                "width": 1200,
+                "height": 675
+              },
+              "author": [
+                {
+                  "@type": "Person",
+                  "@id": "https://research.blueblocks.in/team/pavan-goyal#person",
+                  "name": "Pavan Goyal",
+                  "jobTitle": "Founder & Principal Investigator",
+                  "affiliation": { "@id": "https://research.blueblocks.in#institute" },
+                  "sameAs": ["https://orcid.org/0009-0009-8840-8505"]
+                },
+                {
+                  "@type": "Person",
+                  "@id": "https://research.blueblocks.in/team/munira-hussain#person",
+                  "name": "Munira Hussain",
+                  "jobTitle": "AMI Auxiliary Trainer & Co-founder",
+                  "affiliation": { "@id": "https://blueblocks.in#school" },
+                  "sameAs": ["https://orcid.org/0009-0003-5904-6206"]
+                }
+              ],
+              "publisher": { "@id": "https://research.blueblocks.in#institute" },
+              "about": [
+                {
+                  "@type": "Event",
+                  "@id": "https://montessoricongress2026.org#event",
+                  "name": "30th International AMI Montessori Congress 2026",
+                  "startDate": "2026-05-01",
+                  "endDate": "2026-05-04",
+                  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                  "eventStatus": "https://schema.org/EventScheduled",
+                  "location": {
+                    "@type": "Place",
+                    "name": "Centro Internacional de Congresos de Yucatán",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "addressLocality": "Mérida",
+                      "addressRegion": "Yucatán",
+                      "addressCountry": "MX"
+                    }
+                  },
+                  "organizer": {
+                    "@type": "Organization",
+                    "name": "Association Montessori Internationale",
+                    "alternateName": "AMI",
+                    "foundingDate": "1929",
+                    "url": "https://montessori-ami.org",
+                    "sameAs": ["https://en.wikipedia.org/wiki/Association_Montessori_Internationale"]
+                  },
+                  "performer": [
+                    { "@type": "Person", "name": "Pavan Goyal", "sameAs": "https://orcid.org/0009-0009-8840-8505" },
+                    { "@type": "Person", "name": "Munira Hussain", "sameAs": "https://orcid.org/0009-0003-5904-6206" },
+                    { "@type": "Person", "name": "Dr. Gabor Maté", "sameAs": "https://en.wikipedia.org/wiki/Gabor_Mat%C3%A9" },
+                    { "@type": "Person", "name": "Dr. Adele Diamond", "sameAs": "https://en.wikipedia.org/wiki/Adele_Diamond" },
+                    { "@type": "Person", "name": "Dr. Angeline Stoll Lillard", "sameAs": "https://en.wikipedia.org/wiki/Angeline_Lillard" },
+                    { "@type": "Person", "name": "Professor Alain Tschudin", "jobTitle": "AMI President" }
+                  ],
+                  "subEvent": [
+                    {
+                      "@type": "Event",
+                      "name": "Montessori and Innovation: A Design Thinking Workshop for a Changing World",
+                      "description": "Official breakout session combining a presentation on Montessori-to-innovation pedagogy with a hands-on Design Thinking workshop where educators and students practise together.",
+                      "startDate": "2026-05-03T12:00:00-06:00",
+                      "endDate": "2026-05-03T13:00:00-06:00",
+                      "performer": [
+                        { "@type": "Person", "name": "Pavan Goyal" },
+                        { "@type": "Person", "name": "Munira Hussain" }
+                      ],
+                      "organizer": { "@id": "https://blueblocks.in#school" }
+                    }
+                  ]
+                }
+              ],
+              "mentions": [
+                {
+                  "@type": "CreativeWork",
+                  "name": "SBB-1 CubeSat Payload",
+                  "description": "Student-designed and student-built 1U-class CubeSat payload authorised by IN-SPACe under reference PMA/IN-SPACe/AUTH/2026/115. Launched aboard ISRO PSLV-C62 on January 12, 2026. Lost during launch anomaly.",
+                  "identifier": "PMA/IN-SPACe/AUTH/2026/115"
+                },
+                {
+                  "@type": "CreativeWork",
+                  "name": "SBB-2 CubeSat Payload",
+                  "description": "Second-generation student-built satellite payload announced at the 30th AMI Congress. Three methodological improvements over SBB-1."
+                },
+                {
+                  "@type": "ScholarlyArticle",
+                  "name": "AMI Congress 2026 Pre-registration",
+                  "url": "https://doi.org/10.17605/OSF.IO/ST9H2",
+                  "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.17605/OSF.IO/ST9H2" }
+                },
+                {
+                  "@type": "ScholarlyArticle",
+                  "name": "IN-SPACe Authorisation Certificate",
+                  "url": "https://doi.org/10.5281/zenodo.18195108",
+                  "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.18195108" }
+                },
+                {
+                  "@type": "ScholarlyArticle",
+                  "name": "Age-Differentiated Responses to Geopolitical Violence: Iran Crisis Case Study",
+                  "url": "https://doi.org/10.5281/zenodo.18996507",
+                  "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.18996507" }
+                },
+                {
+                  "@type": "ScholarlyArticle",
+                  "name": "Blue Blocks Micro Research Methodology (v1.0)",
+                  "url": "https://doi.org/10.5281/zenodo.18584816",
+                  "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": "10.5281/zenodo.18584816" }
+                }
+              ],
+              "citation": [
+                {
+                  "@type": "CreativeWork",
+                  "name": "NewsVoir Wire Distribution",
+                  "url": "https://www.newsvoir.com/release/blue-blocks-montessori-school-india-apos-s-only-school-at-the-30th-ami-montessori-congress-presents-alongside-dr-gabor-mate-and-dr-adele-diamond-35407.html"
+                }
+              ],
+              "keywords": [
+                "AMI Montessori Congress 2026",
+                "Blue Blocks Montessori School",
+                "Blue Blocks Micro Research Institute",
+                "Pavan Goyal",
+                "Munira Hussain",
+                "Gabor Maté",
+                "Adele Diamond",
+                "Angeline Lillard",
+                "CubeSat",
+                "SBB-1",
+                "SBB-2",
+                "IN-SPACe",
+                "ISRO",
+                "PSLV-C62",
+                "Design Thinking",
+                "Montessori India",
+                "Mérida Mexico",
+                "student-built satellite",
+                "Hyderabad education",
+                "longitudinal data panel",
+                "AMI diplomas"
+              ],
+              "inLanguage": "en",
+              "copyrightHolder": { "@id": "https://research.blueblocks.in#institute" },
+              "copyrightYear": 2026,
+              "accessMode": "textual",
+              "isAccessibleForFree": true
+            },
+            {
+              "@type": "ResearchOrganization",
+              "@id": "https://research.blueblocks.in#institute",
+              "name": "Blue Blocks Micro Research Institute",
+              "url": "https://research.blueblocks.in",
+              "parentOrganization": { "@id": "https://blueblocks.in#school" },
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Hyderabad",
+                "addressRegion": "Telangana",
+                "postalCode": "500032",
+                "addressCountry": "IN"
+              },
+              "sameAs": [
+                "https://zenodo.org/communities/blueblocksmicroresearchinstitute",
+                "https://orcid.org/0009-0009-8840-8505",
+                "https://montessori-ami.org"
+              ]
+            },
+            {
+              "@type": "School",
+              "@id": "https://blueblocks.in#school",
+              "name": "Blue Blocks Montessori School",
+              "alternateName": [
+                "Blue Blocks Montessori Educational Society",
+                "Blue Blocks School",
+                "Blue Blocks Hyderabad"
+              ],
+              "url": "https://blueblocks.in",
+              "foundingDate": "2005",
+              "founder": [
+                { "@type": "Person", "name": "Pavan Goyal", "sameAs": "https://orcid.org/0009-0009-8840-8505" },
+                { "@type": "Person", "name": "Munira Hussain", "sameAs": "https://orcid.org/0009-0003-5904-6206" }
+              ],
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Hyderabad",
+                "addressRegion": "Telangana",
+                "postalCode": "500032",
+                "addressCountry": "IN"
+              },
+              "department": { "@id": "https://research.blueblocks.in#institute" },
+              "sameAs": [
+                "https://montessori-ami.org",
+                "https://blueblocks.in"
+              ]
+            },
+            {
+              "@type": "WebPage",
+              "@id": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release",
+              "name": "India's Only School at the 30th AMI Montessori Congress — Media Brief",
+              "url": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release",
+              "description": "Media brief, key facts, quotes, and source verification for Blue Blocks Montessori School's presentation at the 30th International AMI Montessori Congress, Mérida, Mexico, May 1–4, 2026.",
+              "isPartOf": {
+                "@type": "WebSite",
+                "name": "Blue Blocks Micro Research Institute",
+                "url": "https://research.blueblocks.in"
+              },
+              "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://research.blueblocks.in" },
+                  { "@type": "ListItem", "position": 2, "name": "Newsroom", "item": "https://research.blueblocks.in/newsroom" },
+                  { "@type": "ListItem", "position": 3, "name": "AMI Congress 2026 Press Release", "item": "https://research.blueblocks.in/newsroom/dispatch/ami-congress-2026-press-release" }
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "pr-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "India's Only School at the 30th AMI Montessori Congress",
+          subheadline: "Blue Blocks Montessori School, Hyderabad, presents an official Design Thinking breakout session alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond in Mérida, Mexico. Blue Blocks adolescents also announce SBB-2 — a second student-built satellite after losing their first to the PSLV-C62 launch anomaly.",
+          primaryCta: { label: "Read Full Press Release (NewsVoir)", href: "https://www.newsvoir.com/release/blue-blocks-montessori-school-india-apos-s-only-school-at-the-30th-ami-montessori-congress-presents-alongside-dr-gabor-mate-and-dr-adele-diamond-35407.html", external: true },
+          secondaryCta: { label: "Back to Newsroom", href: "/newsroom" },
+          image: { src: "/images/newsroom/blueblocks-ami-congress-stage.jpeg", alt: "Blue Blocks adolescents on stage at the 30th International Montessori Congress, Mérida, Mexico", variant: "hero" }
+        },
+        {
+          id: "pr-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Date", value: "April 25, 2026" },
+            { label: "Type", value: "Press Release" },
+            { label: "Event", value: "30th AMI Congress 2026" },
+            { label: "Venue", value: "Mérida, Yucatán, Mexico" },
+            { label: "DOI", value: "10.17605/OSF.IO/ST9H2", href: "https://doi.org/10.17605/OSF.IO/ST9H2", external: true }
+          ]
+        },
+        {
+          id: "pr-body",
+          type: "textBlock",
+          variant: "compact",
+          header: "What This Is About",
+          body: "On May 1–4, 2026, the Association Montessori Internationale — the organisation founded by Dr. Maria Montessori in 1929 — holds its 30th International Congress at the Centro Internacional de Congresos in Mérida, Yucatán, Mexico. The congress is the triennial global gathering of the Montessori community, bringing together educators, researchers, and practitioners from over 15 countries.\n\nBlue Blocks Montessori School, Hyderabad, is the only school from India presenting at this congress. Co-founders Pavan Goyal and Munira Hussain lead an official breakout session on May 3rd. Blue Blocks adolescents separately present their student-built satellite programme alongside adolescent presentations from Montessori schools worldwide.\n\nThe congress features keynote speakers including Dr. Gabor Maté (Order of Canada, bestselling author of *The Myth of Normal*), Dr. Adele Diamond (Canada Research Chair, University of British Columbia), Dr. Angeline Stoll Lillard (University of Virginia), and AMI President Professor Alain Tschudin (Stellenbosch University)."
+        },
+        {
+          id: "pr-media-brief",
+          type: "tableBlock",
+          header: "Media Brief",
+          headers: ["Item", "Detail"],
+          rows: [
+            ["Event", "30th International AMI Montessori Congress 2026"],
+            ["Dates", "May 1–4, 2026"],
+            ["Venue", "Centro Internacional de Congresos, Mérida, Yucatán, Mexico"],
+            ["Organiser", "Association Montessori Internationale (est. 1929, Amsterdam)"],
+            ["Blue Blocks session", "Montessori and Innovation: A Design Thinking Workshop for a Changing World"],
+            ["Session date and time", "May 3, 2026 · 12:00–13:00 · Breakout Room"],
+            ["Speakers", "Pavan Goyal & Munira Hussain, Co-founders, Blue Blocks Montessori School"],
+            ["Adolescent presentation", "Blue Blocks adolescents share SBB-1 satellite story and announce SBB-2 alongside adolescent presentations from schools worldwide"],
+            ["Notable congress speakers", "Dr. Gabor Maté · Dr. Adele Diamond · Dr. Angeline Lillard · Prof. Alain Tschudin (AMI President)"],
+            ["India at this congress", "Two Indian voices — Anuradha Shankar (IPS officer/activist) and Blue Blocks Montessori School (the only school from India)"]
+          ]
+        },
+        {
+          id: "pr-key-numbers",
+          type: "textBlock",
+          variant: "compact",
+          header: "Key Numbers",
+          body: "- **19 years** of continuous operation (est. 2005)\n- **1,047 children** in longitudinal data panel\n- **45,000+ parents** engaged through workshops worldwide\n- **30+ open-access research publications** across Zenodo, OSF, SSRN, Harvard Dataverse\n- **5 patents** filed by school-age children in drone design\n- **1 CubeSat satellite payload** authorised by IN-SPACe, Govt. of India (SBB-1)\n- **4 AMI diplomas** held by founder Pavan Goyal — first person globally with this combination\n- **2 campuses** — Gachibowli and Tellapur, Hyderabad\n- **0 other schools** from India presenting at this congress"
+        },
+        {
+          id: "pr-satellite-story",
+          type: "textBlock",
+          variant: "compact",
+          header: "The Satellite Story",
+          body: "SBB-1 was a student-designed and student-built CubeSat payload that received formal authorisation from IN-SPACe, the Department of Space, Government of India (Reference PMA/IN-SPACe/AUTH/2026/115). It was integrated with ISRO's PSLV-C62 launch vehicle and launched on January 12, 2026. The launch experienced an anomaly during the ascent phase, and the payload was lost — through no fault in the SBB-1 hardware, which had completed its full qualification campaign.\n\nBlue Blocks treated the loss as a documented research protocol, not a programme failure. Three independent observation streams tracked the experience: the engineering record, the learner-development record, and the programme-level record.\n\nAt the congress, Blue Blocks formally announces SBB-2 — the second-generation student-built satellite. SBB-2 incorporates three methodological improvements: an external academic partner from the concept phase, a pre-registered observation protocol with an external co-investigator, and an independently auditable data pipeline.\n\nThe student team has also filed five patents in drone design, dedicated to Dr. Maria Montessori on her 150th birthday."
+        },
+        {
+          id: "pr-design-thinking",
+          type: "textBlock",
+          variant: "compact",
+          header: "The Design Thinking Workshop",
+          body: "The official breakout session — *Montessori and Innovation: A Design Thinking Workshop for a Changing World* — combines a presentation on how Montessori pedagogy builds innovative capacity across the developmental continuum with a hands-on workshop. Educators and students practise Design Thinking together as active collaborators, working through empathy, ideation, and prototyping in real time.\n\nThe session draws on Blue Blocks Micro Research Institute's 19-year longitudinal data panel of 1,047 Indian children — the only data panel of its kind in India tracking children across the full AMI Montessori continuum from birth to 18 years.\n\nThe pre-registration for this congress presentation is published open-access: DOI: [10.17605/OSF.IO/ST9H2](https://doi.org/10.17605/OSF.IO/ST9H2)"
+        },
+        {
+          id: "pr-quotes",
+          type: "highlightBox",
+          variant: "callout",
+          heading: "Quotes",
+          body: "*\"Presenting in Mérida alongside researchers of the calibre of Adele Diamond and Gabor Maté is the result of 19 years of trusting children. Our students built a satellite. The data from 1,047 children over 19 years tells us why. That story belongs on the world stage.\"*\n— **Pavan Goyal**, Co-founder & Principal Investigator\n\n*\"These are not students presenting a school project. They are the engineers who designed, prototyped, tested, and built a satellite payload that received formal authorisation from the Government of India. They are presenting their own work, in their own words, to the world's foremost Montessori community.\"*\n— **Munira Hussain**, AMI Auxiliary Trainer & Co-founder"
+        },
+        {
+          id: "pr-source-verification",
+          type: "tableBlock",
+          header: "Source Verification",
+          headers: ["Source", "Link"],
+          rows: [
+            ["Congress programme (session confirmed)", "montessoricongress2026.org/program"],
+            ["Congress speaker listing (bio confirmed)", "montessoricongress2026.org/speakers"],
+            ["IN-SPACe authorisation (Zenodo)", "doi.org/10.5281/zenodo.18195108"],
+            ["Pre-registration of presentation", "doi.org/10.17605/OSF.IO/ST9H2"],
+            ["Research archive (Zenodo)", "zenodo.org/communities/blueblocksmicroresearchinstitute"],
+            ["ORCID — Pavan Goyal", "orcid.org/0009-0009-8840-8505"]
+          ]
+        },
+        {
+          id: "pr-cta-bottom",
+          type: "highlightBox",
+          variant: "callout",
+          heading: "Read Full Press Release",
+          body: "The full press release is distributed via NewsVoir.\n\n[→ Read Full Press Release (NewsVoir)](https://www.newsvoir.com/release/blue-blocks-montessori-school-india-apos-s-only-school-at-the-30th-ami-montessori-congress-presents-alongside-dr-gabor-mate-and-dr-adele-diamond-35407.html)"
+        },
+        {
+          id: "pr-related",
+          type: "relatedCards",
+          header: "Related Publications",
+          cards: [
+            { title: "SBB-1 to SBB-2: Open Announcement", description: "Formal announcement of the second-generation student-built satellite payload.", icon: "publication", href: "https://doi.org/10.17605/OSF.IO/ST9H2", external: true },
+            { title: "IN-SPACe Authorisation Certificate", description: "Government of India space authorisation for SBB-1.", icon: "brief", href: "https://doi.org/10.5281/zenodo.18195108", external: true },
+            { title: "AMI Congress Pre-registration", description: "Pre-registration of congress presentation.", icon: "publication", href: "https://doi.org/10.17605/OSF.IO/ST9H2", external: true },
+            { title: "Iran Crisis Case Study", description: "Age-differentiated responses to geopolitical violence among school children.", icon: "publication", href: "/publications/iran-war-case-study" },
+            { title: "Blue Blocks Micro Research Methodology", description: "Foundational methodology paper.", icon: "brief", href: "/methodology" }
+          ]
+        },
+        {
+          id: "pr-media-contact",
+          type: "highlightBox",
+          variant: "callout",
+          heading: "Media Contact",
+          body: "**Sruthi Matta**, Research Team Lead\nBlue Blocks Micro Research Institute\nEmail: press.research@blueblocks.in\n\nFor high-resolution images, additional photos, or to arrange interviews with the students or school leadership, contact the address above.\n\nBlue Blocks Montessori School · [blueblocks.in](https://blueblocks.in)\nBlue Blocks Micro Research Institute · [research.blueblocks.in](https://research.blueblocks.in)\nGachibowli & Tellapur · Hyderabad, Telangana 500032 · India"
+        }
+      ]
+    },
+
     "/newsroom/coverage/nobel-peace-center": {
       title: "Nobel Peace Center Features Blue Blocks Student Innovation",
       metaDescription: "Blue Blocks student projects selected for exhibition at the Nobel Peace Center, Oslo, January 2026. Endorsed by MONISC and Norwegian UNESCO Commission.",
@@ -8463,7 +9654,7 @@ const siteContent = {
           alt: "Glossary",
           variant: "hero",
         },
-      },
+  },
       {
         type: "glossaryAccordion",
         header: "Terms & Definitions",
@@ -8521,6 +9712,8 @@ const CPT_MAP = {
   '/publications/saparya-imf-case-study': 'publication',
   '/publications/iran-war-case-study': 'publication',
   '/publications/flipside-case-study': 'publication',
+  '/publications/structured-debate-side-switch': 'publication',
+  '/publications/resilience-workshop': 'publication',
   '/publications/citation-standards': 'page',
   '/governance': 'page',
   '/governance/ethics': 'governance-page',
@@ -8531,6 +9724,7 @@ const CPT_MAP = {
   '/newsroom': 'page',
   '/newsroom/dispatch/isro-payload-authorization': 'news-item',
   '/newsroom/dispatch/iran-crisis-study-press-release': 'news-item',
+  '/newsroom/dispatch/ami-congress-2026-press-release': 'news-item',
   '/newsroom/coverage/nobel-peace-center': 'news-item',
   '/newsroom/updates/iit-hyderabad-advisory': 'news-item',
   '/newsroom/updates/utility-patent-4421': 'news-item',
@@ -8619,6 +9813,32 @@ const FIELDS_MAP = {
     publicationStatus: 'Published',
     publicationType: 'Case Study',
   },
+  '/publications/structured-debate-side-switch': {
+    doi: '10.5281/zenodo.19480752',
+    zenodoUrl: 'https://doi.org/10.5281/zenodo.19480752',
+    publishedDate: '2026-04-09',
+    authors: [
+      { name: 'Chakraborty, Sreemoyee' },
+      { name: 'Matta, Sruthi' },
+    ],
+    researchDomains: ['Adolescent Research', 'Civic Reasoning', 'Erdkinder', 'Structured Debate'],
+    publicationStatus: 'Published',
+    publicationType: 'Case Study',
+  },
+  '/publications/resilience-workshop': {
+    doi: '10.5281/zenodo.19344032',
+    zenodoUrl: 'https://doi.org/10.5281/zenodo.19344032',
+    publishedDate: '2026-04-07',
+    authors: [
+      { name: 'Blue Blocks Micro Research Institute', type: 'organization' },
+      { name: 'Chakraborty, Sreemoyee' },
+      { name: 'Bose, Poulomi' },
+      { name: 'Khare, Kaustav' },
+    ],
+    researchDomains: ['Adolescent Research', 'Resilience', 'Erdkinder', 'STEM Education'],
+    publicationStatus: 'Published',
+    publicationType: 'Case Study',
+  },
   '/technical-briefs/sbb-1': {
     doi: '',
     publishedDate: '2024-12-30',
@@ -8691,6 +9911,14 @@ const FIELDS_MAP = {
     doi: '10.5281/zenodo.18996507',
     zenodoUrl: 'https://doi.org/10.5281/zenodo.18996507',
     researchDomains: ['Child Development', 'Peace Education', 'Geopolitical Reasoning'],
+  },
+  '/newsroom/dispatch/ami-congress-2026-press-release': {
+    publishedDate: '2026-04-25',
+    newsType: 'dispatch',
+    author: 'Blue Blocks Micro Research Institute',
+    doi: '10.17605/OSF.IO/ST9H2',
+    zenodoUrl: 'https://doi.org/10.17605/OSF.IO/ST9H2',
+    researchDomains: ['Montessori Education', 'Innovation', 'Aerospace'],
   },
   '/newsroom/updates/iit-hyderabad-advisory': {
     publishedDate: '2025-10-15',

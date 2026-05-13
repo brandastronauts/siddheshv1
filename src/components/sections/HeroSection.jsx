@@ -106,12 +106,14 @@ const HeroSection = ({
   const altCta = secondaryCta;
   const isCompact = variant === 'publication' || variant === 'archive';
 
+  const bgUrl = heroImage?.src || '/ui/site-banner.webp';
+
   return (
     <section className={`relative overflow-hidden ${isCompact ? 'min-h-[200px] md:min-h-[260px]' : 'min-h-[420px] md:min-h-[520px]'} flex items-center`}>
-      {/* CSS-only gradient background for all pages */}
+      {/* Background image (route-specific if provided, otherwise default site banner) */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'url(/ui/site-banner.webp)',
+          backgroundImage: `url(${bgUrl})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

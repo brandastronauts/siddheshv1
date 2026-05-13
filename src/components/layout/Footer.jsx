@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Mail, ArrowUpRight, FileText, Lightbulb, BookOpen, Users, Download, Lock, ScrollText, MapPin, Linkedin } from 'lucide-react'
+import { Mail, ArrowUpRight, FileText, Lightbulb, BookOpen, Users, Download, Lock, ScrollText, MapPin, Linkedin, Twitter } from 'lucide-react'
 import { nav, brand } from '../../content/siteCore'
 import FooterNewsletter from '../FooterNewsletter'
 
@@ -66,12 +66,55 @@ const Footer = () => {
               <span>Blue Blocks Montessori School</span>
               <ArrowUpRight className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity" />
             </a>
-            <div className="flex items-center gap-3 mt-5">
-              {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
-                <a key={href} href={href} target="_blank" rel="noopener noreferrer" aria-label={label} className="text-white/40 hover:text-white transition-colors">
-                  <Icon className="w-4 h-4" aria-hidden="true" />
+            {/* Institute Socials */}
+            <div className="mt-5">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/40 mb-2">Institute</p>
+              <div className="flex items-center gap-3">
+                <a
+                  href={brand.socials.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Blue Blocks Micro Research Institute on LinkedIn"
+                  className="text-white/50 hover:text-white transition-colors"
+                >
+                  <Linkedin className="w-4 h-4" aria-hidden="true" />
                 </a>
-              ))}
+                <a
+                  href={brand.socials.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Blue Blocks Micro Research Institute on X (Twitter)"
+                  className="text-white/50 hover:text-white transition-colors"
+                >
+                  <Twitter className="w-4 h-4" aria-hidden="true" />
+                </a>
+                <a
+                  href={`mailto:${brand.socials.email}`}
+                  aria-label="Email Blue Blocks Micro Research Institute"
+                  className="text-white/50 hover:text-white transition-colors"
+                >
+                  <Mail className="w-4 h-4" aria-hidden="true" />
+                </a>
+              </div>
+            </div>
+
+            {/* School Socials */}
+            <div className="mt-5">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/40 mb-2">School</p>
+              <div className="flex items-center gap-3">
+                {SOCIAL_LINKS.map(({ icon: Icon, href, label }) => (
+                  <a
+                    key={href}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="text-white/40 hover:text-white transition-colors"
+                  >
+                    <Icon className="w-4 h-4" aria-hidden="true" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Providers } from './providers'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
+import Breadcrumbs from '@/components/common/Breadcrumbs'
 import ScrollToTop from '@/components/ScrollToTop'
 import ChunkLoadRecovery from '@/components/ChunkLoadRecovery'
 import '../index.css'
@@ -55,6 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <ChunkLoadRecovery />
             <ScrollToTop />
             <Header />
+            <Breadcrumbs />
             <main className="flex-1">{children}</main>
             <Footer />
           </div>

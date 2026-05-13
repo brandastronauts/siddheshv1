@@ -118,6 +118,8 @@ const seoSchemaConfig = {
           },
           sameAs: [
             'https://www.blueblocks.in/',
+            'https://www.linkedin.com/company/blue-blocks-micro-research-institute/',
+            'https://x.com/BlueBlocks_BB',
           ],
         },
         {
@@ -1012,12 +1014,12 @@ const seoSchemaConfig = {
     },
   },
 
-  // ═══ TERMS OF USE (noindex — utility/legal) ═══════════════════════════════
+  // ═══ TERMS OF USE ═══════════════════════════════════════════════════════════
   '/terms': {
     meta: {
       title: 'Terms of Use | Blue Blocks Micro Research Institute',
       description: 'Terms of use governing access to research.blueblocks.in, the website of Blue Blocks Micro Research Institute, Hyderabad.',
-      robots: 'noindex, follow',
+      robots: 'index, follow',
       canonical: `${SITE_URL}/terms`,
     },
     openGraph: {

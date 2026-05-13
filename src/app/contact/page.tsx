@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import siteContent from '@/content/siteContent'
 import { buildPageMetadata } from '@/lib/metadata'
 import GenericPageContent from '@/components/GenericPageContent'
+import ContactSocials from './ContactSocials'
 
 const PATH = '/contact'
 
@@ -10,5 +11,10 @@ export function generateMetadata(): Metadata {
 }
 
 export default function Page() {
-  return <GenericPageContent pathname={PATH} />
+  return (
+    <>
+      <GenericPageContent pathname={PATH} />
+      <ContactSocials />
+    </>
+  )
 }
