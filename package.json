@@ -7,9 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "db:seed": "node scripts/seed-pages.mjs",
+    "db:seed": "npx tsx scripts/seed-pages.ts",
     "db:seed:globals": "node scripts/seed-globals.mjs",
     "db:seed:all": "npm run db:seed && npm run db:seed:globals",
+    "db:seed:admin": "npx tsx scripts/create-admin.ts",
     "payload:generate:types": "payload generate:types",
     "payload:generate:importmap": "payload generate:importmap"
   },
