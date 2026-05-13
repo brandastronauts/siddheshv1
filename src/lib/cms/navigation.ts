@@ -36,6 +36,11 @@ export interface BrandData {
     research: string
     press: string
   }
+  socials?: {
+    linkedin: string
+    twitter: string
+    email: string
+  }
 }
 
 export interface SocialLink {
@@ -154,6 +159,7 @@ export const getBrandData = cache(async (): Promise<BrandData> => {
         research: doc?.researchEmail || staticBrand.contact.research,
         press: doc?.pressEmail || staticBrand.contact.press,
       },
+      socials: doc?.socials || staticBrand.socials,
     }
   } catch {
     warn('getBrandData: CMS unavailable, using static brand')

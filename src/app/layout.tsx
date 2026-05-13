@@ -5,6 +5,7 @@ import Footer from '@/components/layout/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
 import ChunkLoadRecovery from '@/components/ChunkLoadRecovery'
 import { getHeaderNav, getBrandData, getFooterData } from '@/lib/cms/navigation'
+import Breadcrumbs from '@/components/common/Breadcrumbs'
 import '../index.css'
 
 const BASE_URL = 'https://research.blueblocks.in'
@@ -62,6 +63,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             <ChunkLoadRecovery />
             <ScrollToTop />
             <Header nav={nav} brand={brand} />
+            <Breadcrumbs />
             <main className="flex-1">{children}</main>
             <Footer nav={nav} brand={brand} footerData={footerData} />
           </div>

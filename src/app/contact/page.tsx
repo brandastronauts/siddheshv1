@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { getPageMetadata } from '@/lib/metadata'
 import GenericPageContent from '@/components/GenericPageContent'
+import ContactSocials from './ContactSocials'
 
 const PATH = '/contact'
 
@@ -9,6 +10,11 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function Page() {
-  return <GenericPageContent pathname={PATH} />
+  return (
+    <>
+      <GenericPageContent pathname={PATH} />
+      <ContactSocials />
+    </>
+  )
 }
 

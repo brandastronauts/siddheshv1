@@ -111,7 +111,7 @@ const HeroSection = ({
       {/* CSS-only gradient background for all pages */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0" style={{
-          backgroundImage: 'url(/ui/site-banner.webp)',
+          backgroundImage: `url(${heroImage?.src || '/ui/site-banner.webp'})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

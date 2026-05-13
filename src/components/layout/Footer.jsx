@@ -94,6 +94,22 @@ const Footer = ({ nav: navProp, brand: brandProp, footerData }) => {
                 <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
             </div>
+            {brand.socials && (
+              <div className="mt-5">
+                <p className="text-[10px] font-semibold uppercase tracking-widest text-white/40 mb-2">Institute</p>
+                <div className="flex items-center gap-3">
+                  <a href={brand.socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label="Blue Blocks Micro Research Institute on LinkedIn" className="text-white/40 hover:text-white transition-colors">
+                    <Linkedin className="w-4 h-4" aria-hidden="true" />
+                  </a>
+                  <a href={brand.socials.twitter} target="_blank" rel="noopener noreferrer" aria-label="Blue Blocks Micro Research Institute on X (Twitter)" className="text-white/40 hover:text-white transition-colors">
+                    <TwitterIcon className="w-4 h-4" aria-hidden="true" />
+                  </a>
+                  <a href={`mailto:${brand.socials.email}`} aria-label="Email the Institute" className="text-white/40 hover:text-white transition-colors">
+                    <Mail className="w-4 h-4" aria-hidden="true" />
+                  </a>
+                </div>
+              </div>
+            )}
             <a
               href={schoolLink}
               target="_blank"
@@ -103,16 +119,21 @@ const Footer = ({ nav: navProp, brand: brandProp, footerData }) => {
               <span>{schoolLinkLabel}</span>
               <ArrowUpRight className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity" />
             </a>
-            <div className="flex items-center gap-3 mt-5">
-              {socialLinks.map(({ platform, url, label }) => {
-                const Icon = platformIcons[platform] || ArrowUpRight
-                return (
-                  <a key={url} href={url} target="_blank" rel="noopener noreferrer" aria-label={label} className="text-white/40 hover:text-white transition-colors">
-                    <Icon className="w-4 h-4" aria-hidden="true" />
-                  </a>
-                )
-              })}
-            </div>
+            {socialLinks.length > 0 && (
+              <div className="mt-3">
+                <p className="text-[10px] font-semibold uppercase tracking-widest text-white/40 mb-2">School</p>
+                <div className="flex items-center gap-3">
+                  {socialLinks.map(({ platform, url, label }) => {
+                    const Icon = platformIcons[platform] || ArrowUpRight
+                    return (
+                      <a key={url} href={url} target="_blank" rel="noopener noreferrer" aria-label={label} className="text-white/40 hover:text-white transition-colors">
+                        <Icon className="w-4 h-4" aria-hidden="true" />
+                      </a>
+                    )
+                  })}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Navigation Column */}
