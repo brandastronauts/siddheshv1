@@ -181,7 +181,7 @@ try {
   }
 
   console.log(`\n[seed] Done. Created ${created}, skipped ${skipped}.`)
-  console.log(`[seed] Open http://local.research.cms.com:3001/admin → Website Content → Pages`)
+  console.log(`[seed] Open http://localhost:3001/admin → Website Content → Pages`)
 } catch (err) {
   console.error('[seed] Failed:', err.message)
   process.exit(1)

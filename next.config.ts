@@ -32,7 +32,7 @@ async function fetchCmsRedirects(): Promise<Array<{ source: string; destination:
 }
 
 const config: NextConfig = {
-  allowedDevOrigins: ['local.research.cms.com'],
+  allowedDevOrigins: ['localhost'],
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   webpack(config, { dev }) {
     if (dev) {

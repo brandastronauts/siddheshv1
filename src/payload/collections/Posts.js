@@ -13,7 +13,7 @@ export const Posts = {
     group: 'Editorial Content',
     livePreview: {
       url: ({ data }) => {
-        const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://local.research.cms.com:3001'
+        const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3001'
         const type = data?.type || 'dispatch'
         const slug = data?.slug || ''
         const path = type === 'publication' ? `/publications/${slug}` : `/newsroom/${type}/${slug}`

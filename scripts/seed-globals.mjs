@@ -186,7 +186,7 @@ try {
   await seedGlobal(db, SEO_DEFAULTS)
 
   console.log('\n[seed:globals] Done.')
-  console.log('[seed:globals] Open http://local.research.cms.com:3001/admin → Site Configuration')
+  console.log('[seed:globals] Open http://localhost:3001/admin → Site Configuration')
 } catch (err) {
   console.error('[seed:globals] Failed:', err.message)
   process.exit(1)

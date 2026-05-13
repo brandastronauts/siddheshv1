@@ -1121,7 +1121,7 @@ export const PageOverrides = {
     group: 'Website Content',
     livePreview: {
       url: ({ data }) => {
-        const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://local.research.cms.com:3001'
+        const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3001'
         const path = (data?.pathname || '/').replace(/\/+$/, '') || '/'
         return `${base}${path}`
       },
