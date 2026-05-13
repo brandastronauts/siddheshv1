@@ -3,6 +3,14 @@ import siteContent from '@/content/siteContent'
 import { buildPageMetadata } from '@/lib/metadata'
 import GenericPageContent from '@/components/GenericPageContent'
 
+export function generateStaticParams() {
+  const pages = (siteContent as any).pages ?? {}
+  const prefix = '/governance/team/'
+  return Object.keys(pages)
+    .filter(k => k.startsWith(prefix) && !k.slice(prefix.length).includes('/'))
+    .map(k => ({ slug: k.slice(prefix.length) }))
+}
+
 type Props = { params: Promise<{ slug: string }> }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
