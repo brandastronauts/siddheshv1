@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Providers } from './providers'
+import { Providers } from '../providers'
 
 // Revalidate all pages every 60 seconds so CMS changes appear on Vercel within ~1 minute
 export const revalidate = 60
@@ -10,7 +10,7 @@ import ChunkLoadRecovery from '@/components/ChunkLoadRecovery'
 import { getHeaderNav, getBrandData, getFooterData, getAnnouncementBar } from '@/lib/cms/navigation'
 import AnnouncementBar from '@/components/layout/AnnouncementBar'
 import Breadcrumbs from '@/components/common/Breadcrumbs'
-import '../index.css'
+import '../../index.css'
 
 const BASE_URL = 'https://research.blueblocks.in'
 
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function SiteLayout({ children }: { children: React.ReactNode }) {
   const [nav, brand, footerData, announcement] = await Promise.all([
     getHeaderNav(),
     getBrandData(),
