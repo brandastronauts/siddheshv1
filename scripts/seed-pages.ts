@@ -140,6 +140,7 @@ async function main() {
         pathname:     page.pathname,
         pageTitle:    page.pageTitle,
         sections:     [],
+        _status:      'published',
       },
     })
 

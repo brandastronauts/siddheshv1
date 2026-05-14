@@ -318,7 +318,9 @@ async function main() {
       data: {
         sections: blocks,
         pageTitle: doc.pageTitle || pageData.title || undefined,
+        _status: 'published',
       },
+      draft: false,
     })
 
     console.log(`  ✓  migrated   ${pathname.padEnd(55)} (${blocks.length} blocks)`)

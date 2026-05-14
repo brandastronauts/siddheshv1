@@ -3,7 +3,6 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { buildConfig } from 'payload'
-import { s3Storage } from '@payloadcms/storage-s3'
 import sharp from 'sharp'
 import { Media } from './src/payload/collections/Media.js'
 import { PageOverrides } from './src/payload/collections/PageOverrides.js'
@@ -71,24 +70,6 @@ export default buildConfig({
     SearchIndex,
   ],
   globals: [SiteSettings, FooterSettings, SEODefaults, ThemeSettings, AnnouncementBar],
-  // ── Cloud media storage (Cloudflare R2 in production, local in dev) ──────────
-  // Set R2_* env vars in Vercel to enable cloud storage.
-  // Without them the plugin is skipped and files stay in public/media locally.
-  plugins: process.env.R2_BUCKET ? [
-    s3Storage({
-      collections: { media: true },
-      bucket: process.env.R2_BUCKET,
-      config: {
-        credentials: {
-          accessKeyId: process.env.R2_ACCESS_KEY_ID || '',
-          secretAccessKey: process.env.R2_SECRET_ACCESS_KEY || '',
-        },
-        // Cloudflare R2 endpoint: https://<ACCOUNT_ID>.r2.cloudflarestorage.com
-        endpoint: process.env.R2_ENDPOINT || '',
-        region: 'auto',
-      },
-    }),
-  ] : [],
   graphQL: {
     disable: true,
   },
