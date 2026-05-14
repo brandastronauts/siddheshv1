@@ -8,6 +8,7 @@ export const Products = {
     useAsTitle: 'title',
     defaultColumns: ['title', 'status', '_status', 'updatedAt'],
     group: 'Reusable Content',
+    hidden: true,
   },
   access: {
     read: () => true,

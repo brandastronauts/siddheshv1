@@ -276,10 +276,12 @@ function mapSectionBlock(block: any) {
         intro: block.intro,
         headers: mapTextArray(block.headers),
         columns: mapTextArray(block.columns),
-        rows: (block.rows || []).map((row: any) => ({
-          label: row.label,
-          values: mapTextArray(row.values),
-        })),
+        rows: (block.rows || [])
+          .filter((row: any) => row.label || (Array.isArray(row.values) && row.values.length > 0))
+          .map((row: any) => ({
+            label: row.label,
+            values: mapTextArray(row.values),
+          })),
       }
 
     case 'bento':

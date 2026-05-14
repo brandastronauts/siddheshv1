@@ -37,6 +37,7 @@ export const Media = {
     useAsTitle: 'alt',
     defaultColumns: ['alt', 'filename', 'updatedAt'],
     description: 'Upload and manage images used across the website.',
+    group: 'Website Content',
   },
   fields: [
     {

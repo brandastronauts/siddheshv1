@@ -11,6 +11,7 @@ export const Posts = {
     useAsTitle: 'title',
     defaultColumns: ['title', 'type', '_status', 'publishedAt', 'updatedAt'],
     group: 'Editorial Content',
+    hidden: true,
     livePreview: {
       url: ({ data }) => {
         const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3001'

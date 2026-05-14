@@ -168,6 +168,7 @@ const cardsBlock = {
       defaultValue: 'blogGrid',
       options: [
         { label: 'Standard Grid', value: 'blogGrid' },
+        { label: 'Icon Cards', value: 'iconCards' },
         { label: 'Profiles', value: 'profiles' },
         { label: 'News Grid', value: 'newsGrid' },
         { label: 'Press Room', value: 'pressRoom' },
@@ -304,6 +305,9 @@ const highlightBoxBlock = {
       options: [
         { label: 'Default', value: 'default' },
         { label: 'Compact', value: 'compact' },
+        { label: 'Accent', value: 'accent' },
+        { label: 'Dark', value: 'dark' },
+        { label: 'Callout', value: 'callout' },
       ],
     },
     { name: 'cta', type: 'group', label: 'Button (Optional)', fields: linkGroupFields },
@@ -460,7 +464,7 @@ const textBlock = {
   fields: [
     idField,
     { name: 'sectionName', type: 'text', label: 'Small Section Label (Optional)' },
-    { name: 'header', type: 'text', label: 'Heading', required: true },
+    { name: 'header', type: 'text', label: 'Heading' },
     { name: 'body', type: 'textarea', label: 'Body Text', required: true },
     {
       name: 'variant',
@@ -469,6 +473,7 @@ const textBlock = {
       options: [
         { label: 'Default', value: 'default' },
         { label: 'Muted', value: 'muted' },
+        { label: 'Compact', value: 'compact' },
       ],
     },
     { name: 'cta', type: 'group', label: 'Optional Button', fields: linkGroupFields },
@@ -536,6 +541,7 @@ const featuredStoriesBlock = {
       options: [
         { label: 'Default', value: 'default' },
         { label: 'Large Main Story', value: 'mainLarge' },
+        { label: 'Asymmetric', value: 'asymmetric' },
       ],
     },
     {
@@ -638,6 +644,7 @@ const twoColumnBlock = {
       options: [
         { label: 'Default', value: 'default' },
         { label: 'Comparison', value: 'comparison' },
+        { label: 'Cards', value: 'cards' },
       ],
     },
     { name: 'compact', type: 'checkbox', label: 'Compact Spacing', defaultValue: false },
@@ -916,7 +923,7 @@ const dossierSectionBlock = {
     idField,
     { name: 'number', type: 'text', label: 'Section Number (Optional)' },
     { name: 'label', type: 'text', label: 'Section Label (Optional)' },
-    { name: 'header', type: 'text', label: 'Heading', required: true },
+    { name: 'header', type: 'text', label: 'Heading' },
     { name: 'body', type: 'textarea', label: 'Body', required: true },
     {
       name: 'variant',

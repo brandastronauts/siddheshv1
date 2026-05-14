@@ -8,6 +8,7 @@ export const Services = {
     useAsTitle: 'title',
     defaultColumns: ['title', '_status', 'updatedAt'],
     group: 'Reusable Content',
+    hidden: true,
   },
   access: {
     read: () => true,

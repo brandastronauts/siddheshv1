@@ -7,6 +7,7 @@ export const Authors = {
     useAsTitle: 'name',
     defaultColumns: ['name', 'role', 'updatedAt'],
     group: 'Editorial Content',
+    hidden: true,
   },
   access: {
     read: () => true,

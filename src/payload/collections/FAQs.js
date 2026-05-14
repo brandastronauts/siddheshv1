@@ -6,6 +6,7 @@ export const FAQs = {
     useAsTitle: 'question',
     defaultColumns: ['question', 'category', 'updatedAt'],
     group: 'Reusable Content',
+    hidden: true,
   },
   access: {
     read: () => true,

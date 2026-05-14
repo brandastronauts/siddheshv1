@@ -6,6 +6,7 @@ export const Testimonials = {
     useAsTitle: 'quote',
     defaultColumns: ['attribution', 'context', 'updatedAt'],
     group: 'Reusable Content',
+    hidden: true,
   },
   access: {
     read: () => true,

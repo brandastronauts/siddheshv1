@@ -7,6 +7,7 @@ export const TeamMembers = {
     useAsTitle: 'name',
     defaultColumns: ['name', 'role', 'group', 'updatedAt'],
     group: 'People',
+    hidden: true,
   },
   access: {
     read: () => true,

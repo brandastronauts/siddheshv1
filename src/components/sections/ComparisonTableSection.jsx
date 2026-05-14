@@ -10,9 +10,13 @@ const ComparisonTableSection = ({ heading, header, headers, columns, rows, intro
   // Normalize rows: support both array-of-arrays and array-of-objects ({label, values})
   const normalizedRows = (rows || []).map(row => {
     if (Array.isArray(row)) return row;
-    if (row.label && Array.isArray(row.values)) return [row.label, ...row.values];
+    if (row && typeof row === 'object') {
+      const vals = Array.isArray(row.values) ? row.values : [];
+      if (!row.label && vals.length === 0) return null;
+      return [row.label, ...vals].filter(v => v !== undefined && v !== null);
+    }
     return [row];
-  });
+  }).filter(Boolean);
 
   return (
     <section className="section-spacing bg-surface">

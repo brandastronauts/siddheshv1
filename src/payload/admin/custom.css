@@ -1,0 +1,72 @@
+/* ── Blue Blocks CMS – Admin UI overrides ── */
+
+/* ── Fix: collapsible field "Toggle block" / label overlap ── */
+.field-type.collapsible > .collapsible__toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+/* Hide the raw "Toggle block" i18n button text, keep icon only */
+.field-type.collapsible > .collapsible__toggle .btn__label {
+  display: none;
+}
+
+/* Show the field label clearly */
+.field-type.collapsible > .collapsible__toggle > .collapsible__toggle-text,
+.field-type.collapsible > .collapsible__toggle > span:not([class]) {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--theme-text);
+  letter-spacing: 0.01em;
+}
+
+/* ── Collapsible border & spacing ── */
+.field-type.collapsible {
+  border: 1px solid var(--theme-elevation-150);
+  border-radius: 4px;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.field-type.collapsible > .collapsible__toggle {
+  padding: 10px 16px;
+  background: var(--theme-elevation-50);
+  cursor: pointer;
+  border-bottom: 1px solid var(--theme-elevation-150);
+}
+
+.field-type.collapsible > .collapsible__content {
+  padding: 16px;
+}
+
+/* ── Admin nav logo area ── */
+.nav__brand {
+  padding: 8px 0;
+}
+
+/* ── Collection list: make table rows a bit tighter ── */
+.table .row td {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* ── Blocks builder: block header chip ── */
+.blocks-field__block-pill {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ── Page title spacing ── */
+.collection-edit__header,
+.global-edit__header {
+  padding-bottom: 8px;
+}
+
+/* ── Make required asterisk red ── */
+.field-label .required {
+  color: var(--theme-error-500, #ef4444);
+  margin-left: 2px;
+}

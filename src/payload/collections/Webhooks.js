@@ -6,6 +6,7 @@ export const Webhooks = {
     useAsTitle: 'name',
     defaultColumns: ['name', 'event', 'enabled', 'updatedAt'],
     group: 'Operations',
+    hidden: true,
   },
   access: {
     read: isAdmin,

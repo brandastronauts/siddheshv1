@@ -6,6 +6,7 @@ export const SearchIndex = {
     useAsTitle: 'title',
     defaultColumns: ['title', 'pathname', 'sourceCollection', 'updatedAt'],
     group: 'Operations',
+    hidden: true,
     description: 'Prepared denormalized records for future search indexing.',
   },
   access: {

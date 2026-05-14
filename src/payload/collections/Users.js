@@ -5,6 +5,7 @@ export const Users = {
     useAsTitle: 'email',
     defaultColumns: ['email', 'name', 'updatedAt'],
     description: 'CMS administrators for content editing access.',
+    group: 'Administration',
   },
   fields: [
     {

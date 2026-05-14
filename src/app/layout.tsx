@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 import { Providers } from './providers'
+
+// Revalidate all pages every 60 seconds so CMS changes appear on Vercel within ~1 minute
+export const revalidate = 60
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import ScrollToTop from '@/components/ScrollToTop'

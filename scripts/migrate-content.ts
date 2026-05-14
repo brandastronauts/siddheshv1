@@ -113,7 +113,10 @@ function toBlock(section: any): any {
     case 'comparisonTable':
       return { ...base, heading: rest.heading, header: rest.header, intro: rest.intro,
         headers: toTextArr(rest.headers), columns: toTextArr(rest.columns),
-        rows: (rest.rows || []).map((r: any) => ({ label: r.label, values: toTextArr(r.values) })) }
+        rows: (rest.rows || []).map((r: any) => {
+          if (Array.isArray(r)) return { label: r[0] || '', values: r.slice(1).map((v: any) => ({ text: String(v) })) }
+          return { label: r.label || '', values: toTextArr(r.values) }
+        }) }
 
     case 'bento':
       return { ...base, header: rest.header,
@@ -126,9 +129,9 @@ function toBlock(section: any): any {
     case 'buttonCards':
       return { ...base, header: rest.header, footerNote: rest.footerNote,
         cards: (rest.cards || []).map((c: any) => ({
-          title: c.title, icon: c.icon, description: c.description,
+          title: c.title || c.headline, icon: c.icon, description: c.description || c.body,
           image: typeof c.image === 'string' ? c.image : c.image?.src,
-          button: toCta(c.button),
+          button: toCta(c.button || c.cta),
         })) }
 
     case 'downloadList':
@@ -172,7 +175,10 @@ function toBlock(section: any): any {
 
     case 'relatedCards':
       return { ...base, header: rest.header,
-        cards: (rest.cards || []).map((c: any) => ({ title: c.title, description: c.description, icon: c.icon, href: c.href })) }
+        cards: (rest.cards || []).map((c: any) => ({
+          title: c.title, description: c.description || c.body, icon: c.icon,
+          href: c.href || c.action?.href || '',
+        })) }
 
     case 'patentGrid':
       return { ...base, header: rest.header, intro: rest.intro, filterNote: rest.filterNote,
@@ -188,7 +194,7 @@ function toBlock(section: any): any {
 
     case 'numberedCards':
       return { ...base, header: rest.header,
-        items: (rest.items || []).map((i: any) => ({ number: i.number, title: i.title, body: i.body })) }
+        items: (rest.items || []).map((i: any) => ({ number: String(i.number), title: i.title, body: i.body })) }
 
     case 'tierCards':
       return { ...base, header: rest.header,
@@ -268,7 +274,7 @@ async function main() {
   const { getPayload } = await import('payload')
   const { default: config } = await import('../payload.config.js')
   const req = createRequire(import.meta.url)
-  const siteContent = req('./src/content/siteContent.js').default ?? req('./src/content/siteContent.js')
+  const siteContent = req('../src/content/siteContent.js').default ?? req('../src/content/siteContent.js')
   const pages: Record<string, any> = siteContent?.pages ?? {}
 
   console.log('[migrate-content] Initialising Payload...')

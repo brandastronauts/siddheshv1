@@ -7,6 +7,7 @@ export const Categories = {
     useAsTitle: 'title',
     defaultColumns: ['title', 'slug', 'type', 'updatedAt'],
     group: 'Editorial Content',
+    hidden: true,
   },
   access: {
     read: () => true,

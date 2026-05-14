@@ -423,7 +423,12 @@ const TableSection = ({ id, heading, headers, rows, intro }) => {
                 )}
                 <tbody className="divide-y divide-border/50">
                   {(rows || []).map((row, ri) => {
-                    const cells = Array.isArray(row) ? row : [row];
+                    const cells = Array.isArray(row)
+                      ? row
+                      : row && typeof row === 'object' && (row.label || (Array.isArray(row.values) && row.values.length))
+                        ? [row.label, ...(Array.isArray(row.values) ? row.values : [])].filter(v => v != null)
+                        : [];
+                    if (!cells.length) return null;
                     return (
                       <tr key={ri} className="hover:bg-surface/60 transition-colors">
                         {cells.map((cell, ci) => (

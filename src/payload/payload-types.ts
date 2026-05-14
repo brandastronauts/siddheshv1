@@ -348,7 +348,7 @@ export interface PageOverride {
             id?: string | null;
             header: string;
             intro?: string | null;
-            variant?: ('blogGrid' | 'profiles' | 'newsGrid' | 'pressRoom') | null;
+            variant?: ('blogGrid' | 'iconCards' | 'profiles' | 'newsGrid' | 'pressRoom') | null;
             /**
              * Add, remove, and reorder cards by drag-and-drop.
              */
@@ -496,7 +496,7 @@ export interface PageOverride {
                   id?: string | null;
                 }[]
               | null;
-            variant?: ('default' | 'compact') | null;
+            variant?: ('default' | 'compact' | 'accent' | 'dark' | 'callout') | null;
             cta?: {
               label?: string | null;
               /**
@@ -654,9 +654,9 @@ export interface PageOverride {
         | {
             id?: string | null;
             sectionName?: string | null;
-            header: string;
+            header?: string | null;
             body: string;
-            variant?: ('default' | 'muted') | null;
+            variant?: ('default' | 'muted' | 'compact') | null;
             cta?: {
               label?: string | null;
               /**
@@ -716,7 +716,7 @@ export interface PageOverride {
         | {
             id?: string | null;
             header: string;
-            layout?: ('default' | 'mainLarge') | null;
+            layout?: ('default' | 'mainLarge' | 'asymmetric') | null;
             main: {
               tag?: string | null;
               headline: string;
@@ -859,7 +859,7 @@ export interface PageOverride {
             id?: string | null;
             header?: string | null;
             intro?: string | null;
-            variant?: ('default' | 'comparison') | null;
+            variant?: ('default' | 'comparison' | 'cards') | null;
             compact?: boolean | null;
             left?: {
               heading?: string | null;
@@ -1182,7 +1182,7 @@ export interface PageOverride {
             id?: string | null;
             number?: string | null;
             label?: string | null;
-            header: string;
+            header?: string | null;
             body: string;
             variant?: ('default' | 'abstract') | null;
             blockName?: string | null;

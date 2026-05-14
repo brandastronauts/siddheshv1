@@ -39,9 +39,18 @@ export default buildConfig({
       baseDir: dirname,
       importMapFile: path.resolve(dirname, 'src/app/(payload)/admin/importMap.js'),
     },
-    meta: {
-      titleSuffix: ' - Blue Blocks CMS',
+    components: {
+      graphics: {
+        Logo: '/src/payload/admin/Logo.js#default',
+        Icon: '/src/payload/admin/Icon.js#default',
+      },
     },
+    css: path.resolve(dirname, 'src/payload/admin/custom.css'),
+    meta: {
+      titleSuffix: ' — Blue Blocks CMS',
+      description: 'Blue Blocks Micro Research Institute — Content Management System',
+    },
+    dateFormat: 'dd MMM yyyy, HH:mm',
   },
   collections: [
     Users,
