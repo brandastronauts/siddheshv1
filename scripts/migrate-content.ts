@@ -168,10 +168,32 @@ function toBlock(section: any): any {
       return { ...base,
         items: (rest.items || []).map((i: any) => ({ label: i.label, value: i.value, href: i.href, external: Boolean(i.external) })) }
 
-    case 'twoColumn':
+    case 'twoColumn': {
+      const mapSideCol = (col: any) => {
+        if (!col) return undefined
+        return {
+          heading: col.heading,
+          icon: col.icon,
+          lead: col.lead,
+          items: (col.items || []).map((i: any) => ({ label: i.label, text: i.text })),
+          sections: (col.sections || []).map((s: any) => ({
+            title: s.title,
+            body: s.body,
+            bullets: toTextArr(Array.isArray(s.bullets) ? s.bullets : []),
+          })),
+          panels: (col.panels || []).map((p: any) => ({
+            title: p.title,
+            links: (p.links || []).map((l: any) => ({ label: l.label, href: l.href || l.path, external: Boolean(l.external), download: Boolean(l.download) })),
+            citation: p.citation,
+            profiles: (p.profiles || []).map((pr: any) => ({ name: pr.name, role: pr.role, image: pr.image, href: pr.href })),
+            images: (p.images || []).map((img: any) => ({ src: img.src, alt: img.alt })),
+          })),
+        }
+      }
       return { ...base, header: rest.header, intro: rest.intro, variant: rest.variant, compact: Boolean(rest.compact), footer: rest.footer, cta: toCta(rest.cta),
-        left: rest.left ? { heading: rest.left.heading, icon: rest.left.icon, lead: rest.left.lead, items: (rest.left.items || []).map((i: any) => ({ label: i.label, text: i.text })) } : undefined,
-        right: rest.right ? { heading: rest.right.heading, icon: rest.right.icon, lead: rest.right.lead, items: (rest.right.items || []).map((i: any) => ({ label: i.label, text: i.text })) } : undefined }
+        left: mapSideCol(rest.left),
+        right: mapSideCol(rest.right) }
+    }
 
     case 'relatedCards':
       return { ...base, header: rest.header,
@@ -285,7 +307,23 @@ async function main() {
   let noData = 0
 
   for (const [pathname, pageData] of Object.entries(pages)) {
-    const staticSections: any[] = Array.isArray(pageData?.sections) ? pageData.sections : []
+    let staticSections: any[] = Array.isArray(pageData?.sections) ? pageData.sections : []
+
+    // Special case: FAQ page stores content in faqSections instead of sections
+    if (staticSections.length === 0 && Array.isArray((pageData as any).faqSections) && (pageData as any).faqSections.length > 0) {
+      const p = pageData as any
+      const builtSections: any[] = []
+      if (p.heroTitle) builtSections.push({ type: 'hero', variant: 'stark', headline: p.heroTitle, subheadline: p.heroSubtitle })
+      for (const group of p.faqSections) {
+        builtSections.push({
+          type: 'accordion',
+          header: group.title,
+          items: (group.items || []).map((f: any) => ({ q: f.q, a: f.a })),
+        })
+      }
+      staticSections = builtSections
+    }
+
     if (staticSections.length === 0) { noData++; continue }
 
     // Find the CMS document

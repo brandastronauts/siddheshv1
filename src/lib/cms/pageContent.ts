@@ -788,6 +788,31 @@ function mapSideColumn(column: any) {
       label: item.label,
       text: item.text,
     })),
+    sections: (column.sections || []).map((s: any) => ({
+      title: s.title,
+      body: s.body,
+      bullets: mapTextArray(s.bullets),
+    })),
+    panels: (column.panels || []).map((p: any) => ({
+      title: p.title,
+      links: (p.links || []).map((l: any) => ({
+        label: l.label,
+        href: l.href,
+        external: Boolean(l.external),
+        download: Boolean(l.download),
+      })),
+      citation: p.citation,
+      profiles: (p.profiles || []).map((pr: any) => ({
+        name: pr.name,
+        role: pr.role,
+        image: pr.image,
+        href: pr.href,
+      })),
+      images: (p.images || []).map((img: any) => ({
+        src: img.src,
+        alt: img.alt,
+      })),
+    })),
   }
 }
 

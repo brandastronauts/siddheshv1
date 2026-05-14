@@ -84,6 +84,63 @@ const sideColumnFields = [
       { name: 'text', type: 'textarea', label: 'Text' },
     ],
   },
+  {
+    name: 'sections',
+    type: 'array',
+    label: 'Content Sections',
+    admin: { initCollapsed: true, description: 'Rich text sections (used by publication pages).' },
+    fields: [
+      { name: 'title', type: 'text', label: 'Section Title' },
+      { name: 'body', type: 'textarea', label: 'Body Text' },
+      {
+        name: 'bullets',
+        type: 'array',
+        label: 'Bullet Points',
+        fields: [{ name: 'text', type: 'text', label: 'Bullet' }],
+      },
+    ],
+  },
+  {
+    name: 'panels',
+    type: 'array',
+    label: 'Side Panels',
+    admin: { initCollapsed: true, description: 'Sidebar panels with links/citations (used by publication pages).' },
+    fields: [
+      { name: 'title', type: 'text', label: 'Panel Title' },
+      {
+        name: 'links',
+        type: 'array',
+        label: 'Links',
+        fields: [
+          { name: 'label', type: 'text', label: 'Label' },
+          { name: 'href', type: 'text', label: 'URL' },
+          { name: 'external', type: 'checkbox', label: 'Open in new tab', defaultValue: false },
+          { name: 'download', type: 'checkbox', label: 'Download link', defaultValue: false },
+        ],
+      },
+      { name: 'citation', type: 'textarea', label: 'Citation Text' },
+      {
+        name: 'profiles',
+        type: 'array',
+        label: 'Profile Links',
+        fields: [
+          { name: 'name', type: 'text', label: 'Name' },
+          { name: 'role', type: 'text', label: 'Role' },
+          { name: 'image', type: 'text', label: 'Image URL' },
+          { name: 'href', type: 'text', label: 'Profile URL' },
+        ],
+      },
+      {
+        name: 'images',
+        type: 'array',
+        label: 'Gallery Images',
+        fields: [
+          { name: 'src', type: 'text', label: 'Image URL' },
+          { name: 'alt', type: 'text', label: 'Alt Text' },
+        ],
+      },
+    ],
+  },
 ]
 
 const heroBlock = {

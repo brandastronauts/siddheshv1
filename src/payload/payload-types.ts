@@ -872,6 +872,57 @@ export interface PageOverride {
                     id?: string | null;
                   }[]
                 | null;
+              /**
+               * Rich text sections (used by publication pages).
+               */
+              sections?:
+                | {
+                    title?: string | null;
+                    body?: string | null;
+                    bullets?:
+                      | {
+                          text?: string | null;
+                          id?: string | null;
+                        }[]
+                      | null;
+                    id?: string | null;
+                  }[]
+                | null;
+              /**
+               * Sidebar panels with links/citations (used by publication pages).
+               */
+              panels?:
+                | {
+                    title?: string | null;
+                    links?:
+                      | {
+                          label?: string | null;
+                          href?: string | null;
+                          external?: boolean | null;
+                          download?: boolean | null;
+                          id?: string | null;
+                        }[]
+                      | null;
+                    citation?: string | null;
+                    profiles?:
+                      | {
+                          name?: string | null;
+                          role?: string | null;
+                          image?: string | null;
+                          href?: string | null;
+                          id?: string | null;
+                        }[]
+                      | null;
+                    images?:
+                      | {
+                          src?: string | null;
+                          alt?: string | null;
+                          id?: string | null;
+                        }[]
+                      | null;
+                    id?: string | null;
+                  }[]
+                | null;
             };
             right?: {
               heading?: string | null;
@@ -881,6 +932,57 @@ export interface PageOverride {
                 | {
                     label?: string | null;
                     text?: string | null;
+                    id?: string | null;
+                  }[]
+                | null;
+              /**
+               * Rich text sections (used by publication pages).
+               */
+              sections?:
+                | {
+                    title?: string | null;
+                    body?: string | null;
+                    bullets?:
+                      | {
+                          text?: string | null;
+                          id?: string | null;
+                        }[]
+                      | null;
+                    id?: string | null;
+                  }[]
+                | null;
+              /**
+               * Sidebar panels with links/citations (used by publication pages).
+               */
+              panels?:
+                | {
+                    title?: string | null;
+                    links?:
+                      | {
+                          label?: string | null;
+                          href?: string | null;
+                          external?: boolean | null;
+                          download?: boolean | null;
+                          id?: string | null;
+                        }[]
+                      | null;
+                    citation?: string | null;
+                    profiles?:
+                      | {
+                          name?: string | null;
+                          role?: string | null;
+                          image?: string | null;
+                          href?: string | null;
+                          id?: string | null;
+                        }[]
+                      | null;
+                    images?:
+                      | {
+                          src?: string | null;
+                          alt?: string | null;
+                          id?: string | null;
+                        }[]
+                      | null;
                     id?: string | null;
                   }[]
                 | null;
@@ -2493,6 +2595,51 @@ export interface PageOverridesSelect<T extends boolean = true> {
                           text?: T;
                           id?: T;
                         };
+                    sections?:
+                      | T
+                      | {
+                          title?: T;
+                          body?: T;
+                          bullets?:
+                            | T
+                            | {
+                                text?: T;
+                                id?: T;
+                              };
+                          id?: T;
+                        };
+                    panels?:
+                      | T
+                      | {
+                          title?: T;
+                          links?:
+                            | T
+                            | {
+                                label?: T;
+                                href?: T;
+                                external?: T;
+                                download?: T;
+                                id?: T;
+                              };
+                          citation?: T;
+                          profiles?:
+                            | T
+                            | {
+                                name?: T;
+                                role?: T;
+                                image?: T;
+                                href?: T;
+                                id?: T;
+                              };
+                          images?:
+                            | T
+                            | {
+                                src?: T;
+                                alt?: T;
+                                id?: T;
+                              };
+                          id?: T;
+                        };
                   };
               right?:
                 | T
@@ -2505,6 +2652,51 @@ export interface PageOverridesSelect<T extends boolean = true> {
                       | {
                           label?: T;
                           text?: T;
+                          id?: T;
+                        };
+                    sections?:
+                      | T
+                      | {
+                          title?: T;
+                          body?: T;
+                          bullets?:
+                            | T
+                            | {
+                                text?: T;
+                                id?: T;
+                              };
+                          id?: T;
+                        };
+                    panels?:
+                      | T
+                      | {
+                          title?: T;
+                          links?:
+                            | T
+                            | {
+                                label?: T;
+                                href?: T;
+                                external?: T;
+                                download?: T;
+                                id?: T;
+                              };
+                          citation?: T;
+                          profiles?:
+                            | T
+                            | {
+                                name?: T;
+                                role?: T;
+                                image?: T;
+                                href?: T;
+                                id?: T;
+                              };
+                          images?:
+                            | T
+                            | {
+                                src?: T;
+                                alt?: T;
+                                id?: T;
+                              };
                           id?: T;
                         };
                   };
