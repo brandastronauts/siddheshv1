@@ -849,6 +849,8 @@ export interface PageOverride {
               | {
                   label: string;
                   value: string;
+                  href?: string | null;
+                  external?: boolean | null;
                   id?: string | null;
                 }[]
               | null;
@@ -1274,6 +1276,8 @@ export interface PageOverride {
               | {
                   label: string;
                   value: string;
+                  href?: string | null;
+                  external?: boolean | null;
                   id?: string | null;
                 }[]
               | null;
@@ -2570,6 +2574,8 @@ export interface PageOverridesSelect<T extends boolean = true> {
                 | {
                     label?: T;
                     value?: T;
+                    href?: T;
+                    external?: T;
                     id?: T;
                   };
               blockName?: T;
@@ -2978,6 +2984,8 @@ export interface PageOverridesSelect<T extends boolean = true> {
                 | {
                     label?: T;
                     value?: T;
+                    href?: T;
+                    external?: T;
                     id?: T;
                   };
               blockName?: T;

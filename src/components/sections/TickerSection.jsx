@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const TickerSection = ({ items, text }) => {
   // Support both items array and single text string
-  const tickerItems = items || (text ? text.split(' /// ') : []);
+  const tickerItems = (items && items.length > 0) ? items : (text ? text.split(' /// ') : []);
 
   return (
     <section className="bg-primary-navy py-4 overflow-hidden relative">

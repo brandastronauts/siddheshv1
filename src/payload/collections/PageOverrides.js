@@ -60,6 +60,8 @@ const keyValueArrayField = {
   fields: [
     { name: 'label', type: 'text', label: 'Label', required: true },
     { name: 'value', type: 'text', label: 'Value', required: true },
+    { name: 'href', type: 'text', label: 'Link URL (Optional)' },
+    { name: 'external', type: 'checkbox', label: 'Open in new tab', defaultValue: false },
   ],
 }
 
