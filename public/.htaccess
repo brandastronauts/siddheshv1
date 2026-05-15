@@ -19,13 +19,14 @@ DirectorySlash Off
   RewriteRule ^publications/CubeSat-INSPACE/privacy-policy\.shtml$ /privacy [R=301,L]
 
   # All other CubeSat-INSPACE paths (with or without trailing slash, .shtml or not)
-  # → single 1-hop 301 to /publications. Handles:
+  # → single 1-hop 301 to the SBB-1 CubeSat authorization publication (closest topical match).
+  # Handles:
   #   /publications/CubeSat-INSPACE
   #   /publications/CubeSat-INSPACE/
   #   /publications/CubeSat-INSPACE/campus.shtml
   #   /publications/CubeSat-INSPACE/positive-parenting.shtml
   #   /publications/CubeSat-INSPACE/anything
-  RewriteRule ^publications/CubeSat-INSPACE(/.*)?$ /publications [R=301,L]
+  RewriteRule ^publications/CubeSat-INSPACE(/.*)?$ /publications/in-space-authorization-letter [R=301,L]
 
   # Legacy /blueblocks/blog/ (and anything under /blueblocks/) → /publications
   RewriteRule ^blueblocks(/.*)?$ /publications [R=301,L]
