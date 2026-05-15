@@ -9656,6 +9656,11 @@ const siteContent = {
         },
   },
       {
+        type: "textBlock",
+        body: "This glossary defines the technical terms, methodologies, and frameworks used across Blue Blocks Micro Research Institute publications. Each entry corresponds to constructs introduced in our peer-reviewed methodology papers (DOI-001 and DOI-001a) and operationalised across the longitudinal panel of 1,045 children. Use the alphabet jump-nav below to locate a term, or browse the full publications archive for primary sources. Individual terms are deep-linkable via #term-<slug> anchors for citation in external work.",
+        cta: { label: "Browse Publications Archive", href: "/publications" },
+      },
+      {
         type: "glossaryAccordion",
         header: "Terms & Definitions",
         items: [

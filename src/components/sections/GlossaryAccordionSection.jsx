@@ -82,8 +82,9 @@ const GlossaryAccordionSection = ({ heading, header, items = [] }) => {
                   {terms.map((item, idx) => {
                     const termName = item.term || item.title || '';
                     const definition = item.definition || item.body || '';
+                    const slug = termName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
                     return (
-                      <AccordionItem key={idx} value={`${letter}-${idx}`} className="border-b last:border-b-0">
+                      <AccordionItem key={idx} value={`${letter}-${idx}`} id={`term-${slug}`} className="border-b last:border-b-0 scroll-mt-24">
                         <AccordionTrigger className="px-5 py-4 text-left text-deep-ink font-semibold text-sm hover:no-underline hover:bg-surface/50">
                           {termName}
                         </AccordionTrigger>
