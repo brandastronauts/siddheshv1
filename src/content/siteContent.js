@@ -9657,7 +9657,8 @@ const siteContent = {
   },
       {
         type: "textBlock",
-        body: "This glossary defines the technical terms, methodologies, and frameworks used across Blue Blocks Micro Research Institute publications. Each entry corresponds to constructs introduced in our peer-reviewed methodology papers (DOI-001 and DOI-001a) and operationalised across the longitudinal panel of 1,045 children. Use the alphabet jump-nav to locate a term, or browse our full <a href=\"/publications\">publications archive</a> for primary sources. For methodology origins, see <a href=\"/methodology\">Methodology</a>; for citation conventions, see <a href=\"/publications/citation-standards\">Citation Standards</a>.",
+        body: "This glossary defines the technical terms, methodologies, and frameworks used across Blue Blocks Micro Research Institute publications. Each entry corresponds to constructs introduced in our peer-reviewed methodology papers (DOI-001 and DOI-001a) and operationalised across the longitudinal panel of 1,045 children. Use the alphabet jump-nav below to locate a term, or browse the full publications archive for primary sources. Individual terms are deep-linkable via #term-<slug> anchors for citation in external work.",
+        cta: { label: "Browse Publications Archive", href: "/publications" },
       },
       {
         type: "glossaryAccordion",
