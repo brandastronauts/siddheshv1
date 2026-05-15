@@ -15,19 +15,23 @@ DirectorySlash Off
   RewriteRule ^$ / [R=301,L,QSD]
 
   # ── Legacy URL 301 redirects (per owner directive) ──
-  # Specific legacy CubeSat-INSPACE .shtml paths → mapped live pages
+  # Specific legacy CubeSat-INSPACE .shtml path → privacy
   RewriteRule ^publications/CubeSat-INSPACE/privacy-policy\.shtml$ /privacy [R=301,L]
-  RewriteRule ^publications/CubeSat-INSPACE/nursery-school\.shtml$ /publications [R=301,L]
-  RewriteRule ^publications/CubeSat-INSPACE/our-programs\.shtml$ /publications [R=301,L]
-  RewriteRule ^publications/CubeSat-INSPACE/innovation\.shtml$ /publications [R=301,L]
-  RewriteRule ^publications/CubeSat-INSPACE/montessori\.shtml$ /publications [R=301,L]
-  RewriteRule ^publications/CubeSat-INSPACE/positive-parenting\.shtml$ /publications [R=301,L]
+
+  # All other CubeSat-INSPACE paths (with or without trailing slash, .shtml or not)
+  # → single 1-hop 301 to /publications. Handles:
+  #   /publications/CubeSat-INSPACE
+  #   /publications/CubeSat-INSPACE/
+  #   /publications/CubeSat-INSPACE/campus.shtml
+  #   /publications/CubeSat-INSPACE/positive-parenting.shtml
+  #   /publications/CubeSat-INSPACE/anything
+  RewriteRule ^publications/CubeSat-INSPACE(/.*)?$ /publications [R=301,L]
 
   # Legacy /blueblocks/blog/ (and anything under /blueblocks/) → /publications
   RewriteRule ^blueblocks(/.*)?$ /publications [R=301,L]
 
-  # Catch-all: any remaining .shtml URL → homepage (future-proof)
-  RewriteRule \.shtml$ / [R=301,L]
+  # Catch-all: any remaining .shtml URL → /publications (legacy site lived there)
+  RewriteRule \.shtml$ /publications [R=301,L]
 
   # ── Strip trailing slashes (except root "/") — 301 redirect /path/ → /path ──
   RewriteCond %{REQUEST_URI} ^(.+)/$
@@ -40,9 +44,6 @@ DirectorySlash Off
   RewriteRule ^proceedings$ - [R=404,L]
   RewriteRule ^technical-briefs$ - [R=404,L]
   RewriteRule ^downloads/leadership-bio-sheet$ - [R=404,L]
-
-  # ── Hard 404 for malformed/legacy CubeSat-INSPACE publication slugs ──
-  RewriteRule ^publications/CubeSat-INSPACE - [R=404,L]
 
   # ── Hard 404 for unrecognised /publications/<slug> URLs (whitelist valid slugs) ──
   RewriteCond %{REQUEST_URI} ^/publications/([^/]+)$
