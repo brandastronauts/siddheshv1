@@ -1233,11 +1233,11 @@ const siteContent = {
               image: { src: "/src/assets/publications/meerkat-bio-leadership-dataset.jpg", alt: "Meerkat Bio-Leadership Dataset", variant: "card" }
             },
             {
-              tag: "Published Working Paper · SSRN · Bio-Leadership",
-              headline: "The Meerkat Model of Bio-Leadership: Embodying Leadership Through Biomimicry",
+              tag: "Bio-Leadership Working Paper | SSRN Preprint",
+              headline: "No One Taught Them Leadership — They Learned It From Meerkats",
               meta: "DOI: 10.2139/ssrn.6656598",
-              body: "Working paper introducing the Meerkat Model — using biomimicry to translate observable animal leadership behaviours into embodied leadership practice with children aged 6–10.",
-              cta: { label: "View Publication", href: "/publications/meerkat-bio-leadership" },
+              body: "85 children. 9 sessions. Zero instructions about leadership. They rotated sentinel roles without prompting, invented signal systems for three predator types, and designed colony architectures with dummy burrows and self-expanding doors. The meerkat colony didn't teach leadership — it revealed that children already know how.",
+              cta: { label: "Read the Paper", href: "/publications/meerkat-bio-leadership" },
               image: { src: "/src/assets/publications/meerkat-bio-leadership.jpg", alt: "Meerkat Bio-Leadership Working Paper", variant: "card" }
             },
             {
