@@ -1249,11 +1249,11 @@ const siteContent = {
               image: { src: "/src/assets/publications/ami-congress-2026.jpg", alt: "AMI Congress 2026", variant: "card" }
             },
             {
-              tag: "Published Case Study · Adolescent Research · Disability & Achievement",
-              headline: "When Children Meet Achievement Without Sight — Adolescent Inquiry With a Blind VP",
+              tag: "Case Study CS-2026-004 | Child-Driven Inquiry Series",
+              headline: "When Children Meet Achievement Without Sight",
               meta: "DOI: 10.5281/zenodo.19752834",
-              body: "Case 4 of 5 in the Child-Driven Inquiry Series. Twelve adolescents met a blind Vice President of JP Morgan Chase. Only one of nineteen spontaneous questions addressed blindness directly.",
-              cta: { label: "View Publication", href: "/publications/achievement-without-sight" },
+              body: "Twelve adolescents met a blind VP of JP Morgan Chase. Only one of nineteen questions was about blindness. The private reflection sheets revealed what the public session suppressed — and three of five students reported their assumptions about disability changed significantly.",
+              cta: { label: "Read the Case Study →", href: "/publications/achievement-without-sight" },
               image: { src: "/src/assets/publications/achievement-without-sight.jpg", alt: "Achievement Without Sight", variant: "card" }
             },
             {
