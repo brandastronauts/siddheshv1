@@ -4810,6 +4810,14 @@ const siteContent = {
               {
                 title: "How to Cite (APA)",
                 citation: "Blue Blocks Micro Research Institute, Rao, S., Chakraborty, S., Goyal, P., & Matta, S. (2026). The Meerkat Model Of Bio-Leadership: Using Biomimicry To Embody Leadership Principles In Children — Dataset [Data set]. Blue Blocks Micro Research Institute. https://doi.org/10.5281/zenodo.19467584\n\nFor secondary analysis or data reuse enquiries, contact: research@blueblocks.in"
+              },
+              {
+                title: "Cross-References",
+                links: [
+                  { label: "Publications Index", href: "/publications" },
+                  { label: "Governance — Ethics", href: "/governance/ethics" },
+                  { label: "Governance — Standards", href: "/governance/standards" }
+                ]
               }
             ]
           }
