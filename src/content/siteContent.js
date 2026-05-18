@@ -1207,6 +1207,30 @@ const siteContent = {
               body: "Twelve adolescents who lived through a real satellite failure face a new engineering challenge designed to break within thirty minutes. All four teams treated failure as a puzzle. The gap between what they wrote privately about their satellite and what they did publicly in the challenge is the finding that matters most.",
               cta: { label: "Read the Case Study", href: "/publications/resilience-workshop" },
               image: { src: "/src/assets/placeholders/labs/protocol-notes.jpg", alt: "Resilience workshop case study", variant: "card" }
+            },
+            {
+              tag: "Published Dataset · Harvard Dataverse · Biophilia",
+              headline: "81 Children Drew a Place Where Life Can Exist — Here Is What They Drew",
+              meta: "DOI: 10.7910/DVN/AWUK3Z",
+              body: "Structured observational coding of 81 children's drawings across 30 binary element categories in five domains (water, vegetation, animals, sky/light, built environment). Includes inter-rater reliability dataset. Published on Harvard Dataverse under CC0.",
+              cta: { label: "Access the Dataset", href: "/publications/biophilia-drawing-dataset" },
+              image: { src: "/src/assets/publications/biophilia-drawing-dataset.jpg", alt: "Biophilia Drawing Study Dataset", variant: "card" }
+            },
+            {
+              tag: "Preregistration · OSF · Biophilia",
+              headline: "Do Children Draw Nature When You Only Ask Them to Draw Life?",
+              meta: "DOI: 10.17605/OSF.IO/F296R",
+              body: "Pre-registered pilot study: 70–80 children given one prompt — \"Draw a place where life can exist\" — with no priming. Four hypotheses, coding scheme, and analysis plan locked on OSF before any data exists.",
+              cta: { label: "View the Preregistration", href: "/publications/biophilia-drawing-preregistration" },
+              image: { src: "/src/assets/publications/biophilia-drawing-preregistration.jpg", alt: "Biophilia Drawing Study Preregistration", variant: "card" }
+            },
+            {
+              tag: "Published Dataset · Zenodo · Biomimicry · Bio-Leadership",
+              headline: "Children Learning Leadership From Meerkats — Nine Sessions of Research Data",
+              meta: "DOI: 10.5281/zenodo.19467584",
+              body: "Open dataset spanning nine facilitated Bio-Leadership sessions with children aged 6–10. Observer notes, audio transcript excerpts, and video transcript excerpts published on Zenodo under CC BY 4.0.",
+              cta: { label: "Access the Dataset", href: "/publications/meerkat-bio-leadership-dataset" },
+              image: { src: "/src/assets/publications/meerkat-bio-leadership-dataset.jpg", alt: "Meerkat Bio-Leadership Dataset", variant: "card" }
             }
           ]
         },
