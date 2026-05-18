@@ -4631,26 +4631,30 @@ const siteContent = {
       metaDescription: "Open dataset: 9 sessions of children learning leadership from meerkat colony behaviour. Observer notes, audio transcripts, video transcripts. Ages 6-10. CC BY 4.0.",
       seo: {
         title: "Meerkat Bio-Leadership Research Dataset | Blue Blocks Micro Research Institute",
-        canonical: "https://research.blueblocks.in/publications/meerkat-bio-leadership-dataset",
+        canonical: "https://research.blueblocks.in/publications/meerkat-bio-leadership-dataset/",
         robots: "index, follow",
         keywords: "biomimicry, bio-leadership, meerkat behaviour, leadership development, children's leadership, embodied learning, animal behaviour, social learning, group dynamics, qualitative dataset, Montessori education, open science",
+        alternate: { type: "text/markdown", href: "/publications/meerkat-bio-leadership-dataset/meerkat-bio-leadership-dataset.md", title: "Machine-readable version" },
         openGraph: {
           type: "article",
-          url: "https://research.blueblocks.in/publications/meerkat-bio-leadership-dataset",
+          url: "https://research.blueblocks.in/publications/meerkat-bio-leadership-dataset/",
           title: "Meerkat Bio-Leadership Research Dataset | Blue Blocks Micro Research Institute",
           description: "Open dataset: 9 sessions of children learning leadership from meerkat colony behaviour. Observer notes, audio transcripts, video transcripts. Ages 6-10.",
+          siteName: "Blue Blocks Micro Research Institute",
           image: { url: "https://research.blueblocks.in/images/og-innovation.jpg", width: 1200, height: 630, alt: "Meerkat Bio-Leadership Dataset" }
-        }
+        },
+        twitter: { card: "summary_large_image", title: "Meerkat Bio-Leadership Research Dataset | Blue Blocks Micro Research Institute", description: "Open dataset: 9 sessions of children learning leadership from meerkat colony behaviour. Observer notes, audio transcripts, video transcripts. Ages 6-10." },
+        citation: { citation_title: "The Meerkat Model Of Bio-Leadership: Using Biomimicry To Embody Leadership Principles In Children - DataSet", citation_authors: ["Blue Blocks Micro Research Institute", "Rao, Sandhya", "Chakraborty, Sreemoyee", "Goyal, Pavan", "Matta, Sruthi"], citation_publication_date: "2026/04/09", citation_doi: "10.5281/zenodo.19467584", citation_publisher: "Blue Blocks Micro Research Institute", citation_language: "en", citation_keywords: "biomimicry; bio-leadership; meerkat behaviour; children's leadership; embodied learning; qualitative dataset; open science" }
       },
       schemas: [
         {
           "@context": "https://schema.org",
           "@type": "Dataset",
-          "@id": "https://research.blueblocks.in/publications/meerkat-bio-leadership-dataset#dataset",
+          "@id": "https://research.blueblocks.in/publications/meerkat-bio-leadership-dataset/#dataset",
           name: "The Meerkat Model Of Bio-Leadership: Using Biomimicry To Embody Leadership Principles In Children - DataSet",
-          headline: "Children Learning Leadership From Meerkats – Nine Sessions of Research Data",
+          headline: "Children Learning Leadership From Meerkats — Nine Sessions of Research Data",
           description: "Observational, audio-transcribed, and video-transcribed research data collected across nine facilitated Bio-Leadership sessions conducted between December 2025 and March 2026. Sessions were run with children aged 6–10 years using the Meerkat Colony Activity, a nature-based pedagogy protocol designed to study how children understand and enact leadership, signal design, group coherence, and collaborative problem-solving.",
-          url: "https://research.blueblocks.in/publications/meerkat-bio-leadership-dataset",
+          url: "https://research.blueblocks.in/publications/meerkat-bio-leadership-dataset/",
           datePublished: "2026-04-09",
           temporalCoverage: "2025-12/2026-03",
           inLanguage: "en",
@@ -4667,15 +4671,23 @@ const siteContent = {
           license: "https://creativecommons.org/licenses/by/4.0/",
           isAccessibleForFree: true,
           keywords: ["biomimicry", "bio-leadership", "meerkat behaviour", "leadership development", "children's leadership", "embodied learning", "animal behaviour", "social learning", "group dynamics", "qualitative dataset", "Montessori education", "open science", "Blue Blocks Micro Research Institute"],
-          spatialCoverage: { "@type": "Place", name: "Blue Blocks Montessori School, Hyderabad, India" }
+          distribution: [
+            { "@type": "DataDownload", encodingFormat: "application/pdf", contentUrl: "https://zenodo.org/records/19467584/files/BlueBlocks_DataSet_Bio-LeadershipPilot_Zenodo_Meerkat_2026_ObserverNotes_Public.pdf", name: "Session Observation Data" },
+            { "@type": "DataDownload", encodingFormat: "application/pdf", contentUrl: "https://zenodo.org/records/19467584/files/BlueBlocks_DataSet_Bio-LeadershipPilot_Zenodo_Meerkat_2026_AudioTranscripts_Public.pdf", name: "Audio Transcript Excerpts" },
+            { "@type": "DataDownload", encodingFormat: "application/pdf", contentUrl: "https://zenodo.org/records/19467584/files/BlueBlocks_DataSet_Bio-LeadershipPilot_Zenodo_Meerkat_2026_VideoTranscripts_Public.pdf", name: "Video Transcript Excerpts" },
+            { "@type": "DataDownload", encodingFormat: "text/markdown", contentUrl: "https://zenodo.org/records/19467584/files/BlueBlocks_DataSet_BioLeadership_Meerkat_AIReadable.md", name: "AI-Readable Version" }
+          ],
+          spatialCoverage: { "@type": "Place", name: "Blue Blocks Montessori School, Hyderabad, India" },
+          sourceOrganization: { "@type": "School", "@id": "https://blueblocks.in/#school", name: "Blue Blocks Montessori School" },
+          encoding: { "@type": "MediaObject", contentUrl: "https://research.blueblocks.in/publications/meerkat-bio-leadership-dataset/meerkat-bio-leadership-dataset.md", encodingFormat: "text/markdown" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications" },
-            { "@type": "ListItem", position: 3, name: "Meerkat Bio-Leadership Dataset", item: "https://research.blueblocks.in/publications/meerkat-bio-leadership-dataset" }
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications/" },
+            { "@type": "ListItem", position: 3, name: "Meerkat Bio-Leadership Dataset", item: "https://research.blueblocks.in/publications/meerkat-bio-leadership-dataset/" }
           ]
         }
       ],
