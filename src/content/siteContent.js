@@ -4335,6 +4335,666 @@ const siteContent = {
       ]
     },
 
+    "/publications/biophilia-drawing-preregistration": {
+      title: "Drawing Life: Spontaneous Biophilic Imagery in Children's Responses to an Open-Ended Prompt — A Pilot Study [Preregistration]",
+      metaDescription: "Pre-registered pilot study: 70-80 children given one prompt - \"Draw a place where life can exist\" - with no priming. Four hypotheses locked before any data exists.",
+      seo: {
+        title: "Biophilia Drawing Study Preregistration | Blue Blocks Micro Research Institute",
+        canonical: "https://research.blueblocks.in/publications/biophilia-drawing-preregistration",
+        robots: "index, follow",
+        keywords: "biophilia, children's drawings, open-ended prompt, preregistration, environmental psychology, nature orientation, Montessori education, observer coding, pilot study, open science",
+        openGraph: {
+          type: "article",
+          url: "https://research.blueblocks.in/publications/biophilia-drawing-preregistration",
+          title: "Biophilia Drawing Study Preregistration | Blue Blocks Micro Research Institute",
+          description: "Pre-registered pilot study: 70-80 children given one prompt — 'Draw a place where life can exist' — with no priming. Four hypotheses locked before any data exists.",
+          image: { url: "https://research.blueblocks.in/images/og-research-standards.jpg", width: 1200, height: 630, alt: "Biophilia Drawing Study Preregistration" }
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "ScholarlyArticle",
+          "@id": "https://research.blueblocks.in/publications/biophilia-drawing-preregistration#article",
+          name: "Drawing Life: Spontaneous Biophilic Imagery in Children's Responses to an Open-Ended Prompt – A Pilot Study",
+          headline: "Do Children Draw Nature When You Only Ask Them to Draw Life?",
+          description: "Pre-registered pilot study investigating whether children spontaneously produce biophilic imagery when given a single open-ended prompt with no environmental priming. Four hypotheses, full coding scheme, and analysis plan locked before any data exists.",
+          url: "https://research.blueblocks.in/publications/biophilia-drawing-preregistration",
+          datePublished: "2026-04-10",
+          inLanguage: "en",
+          identifier: "10.17605/OSF.IO/F296R",
+          sameAs: "https://doi.org/10.17605/OSF.IO/F296R",
+          author: [
+            { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" },
+            { "@type": "Person", name: "Sreemoyee Chakraborty", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } },
+            { "@type": "Person", name: "Sandhya Rao", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } }
+          ],
+          publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          isAccessibleForFree: true,
+          license: "https://creativecommons.org/licenses/by/4.0/",
+          keywords: ["biophilia", "children's drawings", "open-ended prompt", "preregistration", "environmental psychology", "nature orientation", "Montessori education", "observer coding", "pilot study", "open science"]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications" },
+            { "@type": "ListItem", position: 3, name: "Biophilia Drawing Study Preregistration", item: "https://research.blueblocks.in/publications/biophilia-drawing-preregistration" }
+          ]
+        }
+      ],
+      stickyCta: { label: "View on OSF (DOI)", href: "https://doi.org/10.17605/OSF.IO/F296R", type: "external" },
+      sections: [
+        {
+          id: "biophilia-prereg-hero",
+          type: "hero",
+          variant: "publication",
+          headline: "Do Children Draw Nature When You Only Ask Them to Draw Life?",
+          subheadline: "Drawing Life: Spontaneous Biophilic Imagery in Children's Responses to an Open-Ended Prompt — A Pilot Study [Preregistration]",
+          image: { src: "/src/assets/publications/biophilia-drawing-preregistration.jpg", alt: "Biophilia Drawing Study Preregistration", variant: "hero", privacyBlur: false }
+        },
+        {
+          id: "biophilia-prereg-meta",
+          type: "metaStrip",
+          items: [
+            { label: "DOI", value: "10.17605/OSF.IO/F296R", href: "https://doi.org/10.17605/OSF.IO/F296R", external: true },
+            { label: "Type", value: "Preregistration" },
+            { label: "Platform", value: "Open Science Framework (OSF)" },
+            { label: "Registered", value: "10 April 2026" },
+            { label: "Sample", value: "~70–80 children (3 age groups)" },
+            { label: "Access", value: "Open Access" }
+          ]
+        },
+        {
+          id: "biophilia-prereg-introduction",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Introduction",
+                body: "One prompt. No examples. No priming. \"Draw a place where life can exist.\"\n\nThis is the preregistration for a pilot study that will give 70–80 children at Blue Blocks Montessori School a blank sheet of paper, coloured pencils, and that single instruction — then code what they draw. The question is whether children default to nature when asked about life, without being told to draw nature. Four hypotheses, the complete coding scheme, the analysis thresholds, and every inclusion and exclusion rule are locked in this document before any child picks up a pencil.\n\nThe biophilia hypothesis proposes that humans have an evolved orientation toward living systems and natural environments. If that orientation is genuinely innate, it should be visible in what children spontaneously draw when the prompt references life but does not specify what form that life should take. No published study has tested this with a symbolic drawing prompt designed to avoid priming. This study is designed to close that gap."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Repository & Access",
+                links: [
+                  { label: "Biophilia Pre-registration Paper (DOI)", href: "https://doi.org/10.17605/OSF.IO/F296R", external: true },
+                  { label: "OSF Project Page", href: "https://osf.io/f296r", external: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "biophilia-prereg-abstract",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Abstract",
+                body: "This is a pilot observational study investigating whether children spontaneously produce biophilic imagery — imagery oriented toward living systems, nature, and natural elements — when given a neutral, open-ended drawing prompt. The study does not prime children toward nature before or during the session. The prompt is designed to be semantically open: it references life, but does not specify what form that life should take or where it should exist. The central question is whether children default to nature-oriented imagery in the absence of instruction to do so.\n\nThe study is conducted at Blue Blocks Montessori School, Hyderabad, India, with approximately 70–80 children across three age groups. It is positioned as a pilot to establish the coding instrument, the administration protocol, and the baseline findings that will inform a subsequent multi-school replication study.\n\nThe biophilia hypothesis (Wilson, 1984) proposes that humans have an evolved affinity for living systems and natural environments. This affinity is theorised to be innate rather than learned — a product of evolutionary history in which human survival depended on close observation of, and orientation toward, the natural world. If biophilia is genuinely innate, it should be observable in children's spontaneous representations of the world, independent of instruction or environmental priming.\n\nA complementary theoretical lens is provided by Jungian depth psychology, which identifies water, natural light, trees, and living creatures as recurring archetypal symbols in human imagery across cultures and historical periods. Both theoretical frameworks predict that nature-oriented imagery should emerge spontaneously when children are invited to represent a concept as fundamental as life itself.\n\nThe gap in the existing literature is specific: no published study has used a symbolic drawing prompt — one that references life without specifying its form — to test whether biophilic imagery emerges spontaneously in children without priming. Studies of children's drawings in the biophilia and nature-connection literature typically either ask children to draw nature explicitly (which primes the response) or analyse drawings produced in other contexts (which introduces confounds). This study is designed to close that gap at the pilot level.\n\nThe Montessori setting adds a further dimension of interest. Blue Blocks Montessori School provides nature-connected pedagogy, outdoor time, and hands-on materials across all age groups from early childhood through adolescence. Whether children educated in this environment show stronger biophilic orientation in spontaneous drawing than might be expected from general population data is a secondary question the pilot data can begin to address — though it cannot answer it without a comparison group, which is reserved for the replication study."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Key Specification",
+                citation: "Sample: ~70–80 children across three age groups (6–8, 9–12, 13–16 years) at Blue Blocks Montessori School, Hyderabad, India. Single-session, group-administered drawing task. Prompt delivered verbally with no elaboration."
+              }
+            ]
+          }
+        },
+        {
+          id: "biophilia-prereg-hypotheses",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "The Four Hypotheses",
+                body: "**H1 — Primary orientation:** More than 60% of drawings will be classified as predominantly or strongly biophilic.\n\n**H2 — Element frequency:** Water and vegetation will be the two most frequent element categories, consistent with both the biophilia literature and Jungian archetypal imagery.\n\n**H3 — Age variation:** Biophilic element frequency will be highest in the youngest group (6–8 years) and decrease with age — consistent with the hypothesis that urbanisation and formal schooling suppress spontaneous nature orientation.\n\n**H4 — Built environment:** Human-made elements will appear in fewer than 30% of drawings, and where they appear, they will be secondary to natural elements.\n\nEach hypothesis is evaluated against a pre-specified descriptive threshold. No inferential statistics are used."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Inference Thresholds",
+                citation: "All four hypotheses are pre-specified with descriptive thresholds locked before data collection. Any deviation will be reported transparently and labelled as such."
+              }
+            ]
+          }
+        },
+        {
+          id: "biophilia-prereg-design",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Study Design",
+                body: "Approximately 70–80 children across three age groups (6–8, 9–12, 13–16 years) at Blue Blocks Montessori School, Hyderabad. Single-session, group-administered drawing task. The prompt is delivered verbally with no elaboration. Children draw independently for 20–30 minutes. A trained observer codes each drawing immediately using a structured coding sheet across five element categories: water, vegetation, animals, sky and light, and human-made/built environment. A second observer independently codes a minimum of 20% of drawings for inter-rater reliability.\n\nAll participants are assigned anonymous codes. Parental consent obtained under the Blue Blocks Embedded Observer Protocol."
+              },
+              {
+                title: "What Makes This a Preregistration",
+                body: "Everything in this document was submitted to OSF and timestamped on 10 April 2026 before any data collection began. The hypotheses, the prompt wording, the coding categories, the age group boundaries, the sample size, the starting and stopping rules, the analysis plan, the inference thresholds, and the inclusion/exclusion criteria are all locked. Any deviation from this protocol will be reported transparently and labelled as such in the published paper. Analyses not pre-specified will be labelled exploratory."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Governance",
+                links: [
+                  { label: "Micro-Research Methodology (DOI)", href: "https://doi.org/10.5281/zenodo.18584816", external: true },
+                  { label: "BEOP v1.0 (DOI)", href: "https://doi.org/10.5281/zenodo.19087415", external: true },
+                  { label: "MREF v1.0 (DOI)", href: "https://doi.org/10.5281/zenodo.19047669", external: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "biophilia-prereg-citation",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "How to Cite (APA)",
+                body: "Blue Blocks Micro Research Institute, Chakraborty, S., & Rao, S. (2026). Drawing Life: Spontaneous Biophilic Imagery in Children's Responses to an Open-Ended Prompt – A Pilot Study [Preregistration]. Blue Blocks Micro Research Institute. https://doi.org/10.17605/OSF.IO/F296R"
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Cross-References",
+                links: [
+                  { label: "Biophilia Drawing Dataset", href: "/publications/biophilia-drawing-dataset" },
+                  { label: "Publications Index", href: "/publications" },
+                  { label: "Governance — Ethics", href: "/governance/ethics" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "biophilia-prereg-archival-note",
+          type: "textBlock",
+          variant: "muted",
+          body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
+        },
+        {
+          id: "biophilia-prereg-related",
+          type: "relatedCards",
+          header: "Related Registry",
+          cards: [
+            { title: "Biophilia Drawing Dataset", description: "The coded dataset (81 drawings, 30 element categories) from this preregistered study.", icon: "publication", href: "/publications/biophilia-drawing-dataset" },
+            { title: "Meerkat Bio-Leadership Dataset", description: "Nine sessions of bio-leadership observation data.", icon: "publication", href: "/publications/meerkat-bio-leadership-dataset" },
+            { title: "Governance — Ethics", description: "MREF and BEOP governance framework.", icon: "default", href: "/governance/ethics" },
+            { title: "Publications Index", description: "All published records.", icon: "default", href: "/publications" }
+          ]
+        }
+      ]
+    },
+
+    "/publications/meerkat-bio-leadership-dataset": {
+      title: "The Meerkat Model Of Bio-Leadership: Using Biomimicry To Embody Leadership Principles In Children — Dataset",
+      metaDescription: "Open dataset: 9 sessions of children learning leadership from meerkat colony behaviour. Observer notes, audio transcripts, video transcripts. Ages 6-10. CC BY 4.0.",
+      seo: {
+        title: "Meerkat Bio-Leadership Research Dataset | Blue Blocks Micro Research Institute",
+        canonical: "https://research.blueblocks.in/publications/meerkat-bio-leadership-dataset",
+        robots: "index, follow",
+        keywords: "biomimicry, bio-leadership, meerkat behaviour, leadership development, children's leadership, embodied learning, animal behaviour, social learning, group dynamics, qualitative dataset, Montessori education, open science",
+        openGraph: {
+          type: "article",
+          url: "https://research.blueblocks.in/publications/meerkat-bio-leadership-dataset",
+          title: "Meerkat Bio-Leadership Research Dataset | Blue Blocks Micro Research Institute",
+          description: "Open dataset: 9 sessions of children learning leadership from meerkat colony behaviour. Observer notes, audio transcripts, video transcripts. Ages 6-10.",
+          image: { url: "https://research.blueblocks.in/images/og-innovation.jpg", width: 1200, height: 630, alt: "Meerkat Bio-Leadership Dataset" }
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Dataset",
+          "@id": "https://research.blueblocks.in/publications/meerkat-bio-leadership-dataset#dataset",
+          name: "The Meerkat Model Of Bio-Leadership: Using Biomimicry To Embody Leadership Principles In Children - DataSet",
+          headline: "Children Learning Leadership From Meerkats – Nine Sessions of Research Data",
+          description: "Observational, audio-transcribed, and video-transcribed research data collected across nine facilitated Bio-Leadership sessions conducted between December 2025 and March 2026. Sessions were run with children aged 6–10 years using the Meerkat Colony Activity, a nature-based pedagogy protocol designed to study how children understand and enact leadership, signal design, group coherence, and collaborative problem-solving.",
+          url: "https://research.blueblocks.in/publications/meerkat-bio-leadership-dataset",
+          datePublished: "2026-04-09",
+          temporalCoverage: "2025-12/2026-03",
+          inLanguage: "en",
+          identifier: "10.5281/zenodo.19467584",
+          sameAs: "https://doi.org/10.5281/zenodo.19467584",
+          creator: [
+            { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" },
+            { "@type": "Person", name: "Sandhya Rao", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } },
+            { "@type": "Person", name: "Sreemoyee Chakraborty", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } },
+            { "@type": "Person", name: "Pavan Goyal", sameAs: "https://orcid.org/0009-0009-8840-8505", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } },
+            { "@type": "Person", name: "Sruthi Matta", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } }
+          ],
+          publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" },
+          license: "https://creativecommons.org/licenses/by/4.0/",
+          isAccessibleForFree: true,
+          keywords: ["biomimicry", "bio-leadership", "meerkat behaviour", "leadership development", "children's leadership", "embodied learning", "animal behaviour", "social learning", "group dynamics", "qualitative dataset", "Montessori education", "open science", "Blue Blocks Micro Research Institute"],
+          spatialCoverage: { "@type": "Place", name: "Blue Blocks Montessori School, Hyderabad, India" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications" },
+            { "@type": "ListItem", position: 3, name: "Meerkat Bio-Leadership Dataset", item: "https://research.blueblocks.in/publications/meerkat-bio-leadership-dataset" }
+          ]
+        }
+      ],
+      stickyCta: { label: "View on Zenodo (DOI)", href: "https://doi.org/10.5281/zenodo.19467584", type: "external" },
+      sections: [
+        {
+          id: "meerkat-hero",
+          type: "hero",
+          variant: "publication",
+          headline: "Children Learning Leadership From Meerkats — Nine Sessions of Research Data",
+          subheadline: "The Meerkat Model Of Bio-Leadership: Using Biomimicry To Embody Leadership Principles In Children — Dataset",
+          image: { src: "/src/assets/publications/meerkat-bio-leadership-dataset.jpg", alt: "Meerkat Bio-Leadership Dataset", variant: "hero", privacyBlur: false }
+        },
+        {
+          id: "meerkat-meta",
+          type: "metaStrip",
+          items: [
+            { label: "DOI", value: "10.5281/zenodo.19467584", href: "https://doi.org/10.5281/zenodo.19467584", external: true },
+            { label: "Type", value: "Dataset" },
+            { label: "Files", value: "3 PDFs + 1 AI-readable .md (540.4 KB)" },
+            { label: "Collection Period", value: "Dec 2025 – Mar 2026" },
+            { label: "Sessions", value: "9 facilitated Bio-Leadership sessions" },
+            { label: "Age Group", value: "6–10 years" },
+            { label: "Version", value: "v1.0" },
+            { label: "Access", value: "Open Access (CC BY 4.0)" }
+          ]
+        },
+        {
+          id: "meerkat-introduction",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Introduction",
+                body: "What does it look like when six-year-olds learn about leadership by studying how meerkats run a colony?\n\nThis dataset exists so that question can be answered by anyone — not just the authors. Nine sessions of raw observation data, audio transcript excerpts, and video transcript excerpts are published here independently from the forthcoming analytical paper. The separation is deliberate: the data is the evidence, the paper will be the argument. A researcher who disagrees with the paper's interpretation can return to this dataset and build a different one."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Repository & Access",
+                links: [
+                  { label: "Meerkat Bio-leadership Dataset (DOI)", href: "https://doi.org/10.5281/zenodo.19467584", external: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "meerkat-official-description",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Official Record Description",
+                body: "The following description is reproduced verbatim from the published Zenodo record:\n\nAll participant and facilitator names have been fully anonymised. Data is presented in three structured documents formatted for use as supplementary material in research.\n\nThis dataset was collected using the Blue Blocks Embedded Observer Protocol (BEOP, DOI: 10.5281/zenodo.19087415) for consent and observation procedures, within the Micro Research Ethics Framework (MREF, DOI: 10.5281/zenodo.19047669). The study methodology follows the Blue Blocks Micro Research Methodology (DOI: 10.5281/zenodo.18584816). The dataset is published independently from the forthcoming analytical paper to enable independent verification and secondary analysis."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Anonymisation",
+                citation: "All participant and facilitator names fully anonymised. Participant codes used consistently across all three documents."
+              }
+            ]
+          }
+        },
+        {
+          id: "meerkat-contents",
+          type: "tableBlock",
+          header: "Dataset Contents",
+          columns: ["File", "Contents", "Format", "Size"],
+          rows: [
+            ["Session Observation Data", "Observer notes across 9 sessions: dates, age groups, participant counts, leadership transitions, signal systems, group coherence, problem-solving, and cross-session patterns", "PDF", "191 KB"],
+            ["Audio Transcript Excerpts", "Thematic excerpts from audio-recorded sessions covering sentinel role understanding, leadership analogies, burrow design ideation, and a child-generated problem scenario", "PDF", "162 KB"],
+            ["Video Transcript Excerpts", "Thematic excerpts from video-recorded sessions covering burrow design presentations, child-generated questions for meerkats, and a child-presented challenge card", "PDF", "145 KB"],
+            ["AI-Readable Version", "Machine-readable markdown combining all dataset content with structured YAML frontmatter for AI/LLM ingestion", ".md", "42 KB"]
+          ]
+        },
+        {
+          id: "meerkat-coding",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Coding and Structure",
+                body: "The observer notes are structured by session, with each session record containing: date, age group, participant count, activity description, observed leadership transitions (who led, how leadership shifted, whether it was claimed or assigned), signal systems created by children, group coherence indicators, problem-solving approaches, and cross-session patterns noted by the observer.\n\nAudio transcripts are organised thematically rather than chronologically — excerpts are grouped by topic (sentinel role understanding, leadership analogies, burrow design ideation, child-generated problem scenarios) to enable thematic analysis across sessions.\n\nVideo transcripts follow the same thematic structure, covering burrow design presentations, child-generated questions directed at meerkats (a metacognitive exercise), and child-presented challenge cards.\n\nParticipant codes are used consistently across all three documents. The same child can be traced across observer notes, audio transcripts, and video transcripts using their code without any identifying information being exposed."
+              },
+              {
+                title: "Anonymisation and Ethics",
+                body: "No identifying information appears anywhere in this dataset — participant codes are used consistently across all three documents, allowing cross-referencing without exposure. The coding scheme was applied before any data left the session room.\n\nParental consent was obtained under the Blue Blocks Embedded Observer Protocol (BEOP) before data collection began. Children were not aware they were being observed for research purposes — from their perspective, the Meerkat Colony Activity was a normal part of their school programme. This is the Embedded Observer Principle in practice: observation from within the child's trusted environment, not observation introduced by external researchers."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Related Publication",
+                citation: "The analytical paper interpreting this dataset is forthcoming. When published, a direct link will be added here and a reciprocal DOI link will be added to the Zenodo record. This dataset can be used independently for secondary analysis, replication, or comparative research."
+              }
+            ]
+          }
+        },
+        {
+          id: "meerkat-governance",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Governance",
+                body: "This dataset was collected under three BBMRI institutional standards:",
+                bullets: [
+                  "**Micro-Research Methodology** (DOI: 10.5281/zenodo.18584816) — the methodological framework governing data collection procedures",
+                  "**BEOP v1.0** (DOI: 10.5281/zenodo.19087415) — the consent and observation protocol under which all sessions were conducted",
+                  "**MREF v1.0** (DOI: 10.5281/zenodo.19047669) — the ethics framework governing research with minors"
+                ]
+              },
+              {
+                title: "Reuse and Citation",
+                body: "This dataset is published under **CC BY 4.0** — you may reuse, redistribute, and build upon it for any purpose, provided you give appropriate credit."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "How to Cite (APA)",
+                citation: "Blue Blocks Micro Research Institute, Rao, S., Chakraborty, S., Goyal, P., & Matta, S. (2026). The Meerkat Model Of Bio-Leadership: Using Biomimicry To Embody Leadership Principles In Children — Dataset [Data set]. Blue Blocks Micro Research Institute. https://doi.org/10.5281/zenodo.19467584\n\nFor secondary analysis or data reuse enquiries, contact: research@blueblocks.in"
+              }
+            ]
+          }
+        },
+        {
+          id: "meerkat-archival-note",
+          type: "textBlock",
+          variant: "muted",
+          body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
+        },
+        {
+          id: "meerkat-related",
+          type: "relatedCards",
+          header: "Related Registry",
+          cards: [
+            { title: "Biophilia Drawing Dataset", description: "81 children's drawings coded across 30 biophilic element categories.", icon: "publication", href: "/publications/biophilia-drawing-dataset" },
+            { title: "Biophilia Preregistration", description: "Pre-registered pilot study protocol on OSF.", icon: "publication", href: "/publications/biophilia-drawing-preregistration" },
+            { title: "Governance — Ethics", description: "MREF and BEOP governance framework.", icon: "default", href: "/governance/ethics" },
+            { title: "Governance — Standards", description: "Institutional research standards.", icon: "default", href: "/governance/standards" }
+          ]
+        }
+      ]
+    },
+
+    "/publications/biophilia-drawing-dataset": {
+      title: "Drawing Life: Spontaneous Biophilic Imagery in Children's Responses to an Open-Ended Prompt — A Pilot Study from Blue Blocks Montessori School, Hyderabad, India (Dataset)",
+      metaDescription: "81 children's drawings coded across 30 biophilic element categories. Preregistered pilot study data on Harvard Dataverse. Open access, CC0, ready for reanalysis.",
+      seo: {
+        title: "Biophilia Drawing Study Dataset — Harvard Dataverse | Blue Blocks Micro Research Institute",
+        canonical: "https://research.blueblocks.in/publications/biophilia-drawing-dataset",
+        robots: "index, follow",
+        keywords: "biophilia, children's drawings, biophilic orientation, observational coding, open-ended prompt, nature orientation, environmental psychology, inter-rater reliability, pilot study, Montessori education, open data",
+        openGraph: {
+          type: "article",
+          url: "https://research.blueblocks.in/publications/biophilia-drawing-dataset",
+          title: "Biophilia Drawing Study Dataset — Harvard Dataverse | Blue Blocks Micro Research Institute",
+          description: "81 children's drawings coded across 30 biophilic element categories. Preregistered pilot study data on Harvard Dataverse. CC0, ready for reanalysis.",
+          image: { url: "https://research.blueblocks.in/images/og-research-standards.jpg", width: 1200, height: 630, alt: "Biophilia Drawing Study Dataset" }
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Dataset",
+          "@id": "https://research.blueblocks.in/publications/biophilia-drawing-dataset#dataset",
+          name: "Drawing Life: Spontaneous Biophilic Imagery in Children's Responses to an Open-Ended Prompt – A Pilot Study from Blue Blocks Montessori School, Hyderabad, India (DATASET)",
+          headline: "81 Children Drew a Place Where Life Can Exist – Here Is What They Drew",
+          description: "Structured observational coding of 81 children's drawings produced in response to the open-ended prompt 'Draw a place where life can exist.' 30 binary element categories across five domains (water, vegetation, animals, sky/light, built environment), with dominant orientation, overall environment classification, setting type, and total biophilic element count. Includes inter-rater reliability dataset from a second independent observer.",
+          url: "https://research.blueblocks.in/publications/biophilia-drawing-dataset",
+          datePublished: "2026-04-23",
+          inLanguage: "en",
+          identifier: "10.7910/DVN/AWUK3Z",
+          sameAs: "https://doi.org/10.7910/DVN/AWUK3Z",
+          creator: [
+            { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" },
+            { "@type": "Person", name: "Sandhya Rao", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } },
+            { "@type": "Person", name: "Sreemoyee Chakraborty", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } }
+          ],
+          publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" },
+          license: "https://creativecommons.org/publicdomain/zero/1.0/",
+          isAccessibleForFree: true,
+          keywords: ["biophilia", "children's drawings", "biophilic orientation", "observational coding", "open-ended prompt", "nature orientation", "environmental psychology", "inter-rater reliability", "pilot study", "Montessori education", "open data"],
+          spatialCoverage: { "@type": "Place", name: "Blue Blocks Montessori School, Hyderabad, India" },
+          isBasedOn: { "@type": "CreativeWork", name: "Biophilia Drawing Study Preregistration", url: "https://doi.org/10.17605/OSF.IO/F296R" }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications" },
+            { "@type": "ListItem", position: 3, name: "Biophilia Drawing Study Dataset", item: "https://research.blueblocks.in/publications/biophilia-drawing-dataset" }
+          ]
+        }
+      ],
+      stickyCta: { label: "View on Harvard Dataverse (DOI)", href: "https://doi.org/10.7910/DVN/AWUK3Z", type: "external" },
+      sections: [
+        {
+          id: "biophilia-dataset-hero",
+          type: "hero",
+          variant: "publication",
+          headline: "81 Children Drew a Place Where Life Can Exist — Here Is What They Drew",
+          subheadline: "Drawing Life: Spontaneous Biophilic Imagery in Children's Responses to an Open-Ended Prompt — A Pilot Study (Dataset)",
+          image: { src: "/src/assets/publications/biophilia-drawing-dataset.jpg", alt: "Biophilia Drawing Study Dataset", variant: "hero", privacyBlur: false }
+        },
+        {
+          id: "biophilia-dataset-meta",
+          type: "metaStrip",
+          items: [
+            { label: "DOI", value: "10.7910/DVN/AWUK3Z", href: "https://doi.org/10.7910/DVN/AWUK3Z", external: true },
+            { label: "Type", value: "Dataset" },
+            { label: "Platform", value: "Harvard Dataverse" },
+            { label: "Files", value: "2 Excel spreadsheets (42.4 KB)" },
+            { label: "Participants", value: "81 children" },
+            { label: "Age Groups", value: "6–8, 9–12, 13–16 years" },
+            { label: "Version", value: "v1.0" },
+            { label: "Access", value: "Open Access (CC0 1.0)" }
+          ]
+        },
+        {
+          id: "biophilia-dataset-about",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "About This Dataset",
+                body: "One prompt — \"Draw a place where life can exist\" — given with no examples, no priming, and no elaboration. Eighty-one children drew their answer. This dataset is what their drawings contained.\n\nEvery drawing was coded immediately by a trained observer across thirty binary element categories organised into five domains: water, vegetation, animals, sky and light, and human-made environment. Each drawing received an overall environment classification, a dominant orientation assessment, a setting type, and a total biophilic element count. A second independent observer coded a subset of twenty-two drawings for inter-rater reliability testing.\n\nThis is the raw coded data from the preregistered Biophilia Drawing Study. The preregistration — which locked all four hypotheses, the coding scheme, and the analysis thresholds before any child picked up a pencil — is archived separately on OSF (DOI: 10.17605/OSF.IO/F296R). The analytical paper interpreting this data is forthcoming. The dataset is published independently so that any researcher can verify, reanalyse, or extend the findings without relying on the authors' interpretation."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Repository & Access",
+                links: [
+                  { label: "Drawing Life Biophilia Dataset (DOI)", href: "https://doi.org/10.7910/DVN/AWUK3Z", external: true },
+                  { label: "Preregistration on OSF (DOI)", href: "https://doi.org/10.17605/OSF.IO/F296R", external: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "biophilia-dataset-official",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Official Record Description",
+                body: "The following description is reproduced verbatim from the published Harvard Dataverse record:\n\nThis dataset contains structured observational coding of children's drawings produced in response to the open-ended prompt \"Draw a place where life can exist,\" administered during a single session at Blue Blocks School, Hyderabad, India. The study is a pilot investigation into biophilic orientation in children — that is, the degree to which children spontaneously represent natural versus built environments when asked to imagine a life-sustaining place.\n\nFile 001 contains the primary dataset: 81 participants across three age groups (6–8, 9–12, and 13–16 years), coded across 30 binary element categories organized into five domains — water elements, plant/vegetation elements, animal/living creature elements, sky/light/atmospheric elements, and human-made/built environment elements. Each drawing was assessed for dominant orientation, overall environment classification, setting type, and total biophilic element count. Observer surprise notes are included where recorded.\n\nFile 002 contains a second independent observer's coding of a subset of 22 drawings (12 from the Erdkinder adolescent cohort, 10 overlapping with File 001), collected for inter-rater reliability testing. The coding instrument and element categories are identical across both files.\n\nThis dataset was produced under the Blue Blocks Micro Research Institute's participatory micro-research methodology. All data collection, coding, and anonymisation procedures followed the Blue Blocks Embedded Observation Protocol (BEOP v1.0, DOI: https://doi.org/10.5281/zenodo.19087415) and the Micro Research Ethics Framework (MREF v1.0, DOI: https://doi.org/10.5281/zenodo.19047669)."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Coding Categories",
+                citation: "30 binary element categories across 5 domains: Water, Vegetation, Animals/Living Creatures, Sky/Light/Atmosphere, Human-made/Built Environment."
+              }
+            ]
+          }
+        },
+        {
+          id: "biophilia-dataset-contents",
+          type: "tableBlock",
+          header: "Dataset Contents",
+          columns: ["File", "Contents", "Format", "Size"],
+          rows: [
+            ["File 001 — Primary Dataset", "81 participants, 30 binary element categories across 5 domains, dominant orientation, overall environment classification, setting type, total biophilic element count, observer surprise notes", ".xlsx", "27.3 KB"],
+            ["File 002 — Inter-Rater Reliability", "Second independent observer's coding of 22 drawings (12 Erdkinder + 10 overlapping with File 001), identical coding instrument", ".xlsx", "15.1 KB"]
+          ]
+        },
+        {
+          id: "biophilia-dataset-coding",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Coding and Structure",
+                body: "Each row in File 001 represents one child's drawing. Columns are organised into five domains:\n\n**Domain A — Water elements:** ocean/sea, river/stream/creek, lake/pond, rain/clouds with rain, waterfall, other water element. Each coded as present (1) or absent (0).\n\n**Domain B — Plant/vegetation elements:** trees, grass/meadow, flowers, fruits/berries, leaves/bushes, forest/jungle, other plant element. Each coded as present (1) or absent (0).\n\n**Domain C — Animal/living creature elements:** birds, fish/marine life, land animals, insects/butterflies, human figures, other living creature. Each coded as present (1) or absent (0).\n\n**Domain D — Sky/light/atmospheric elements:** sun, moon/stars, sky, clouds, rainbow, other light or sky element. Each coded as present (1) or absent (0).\n\n**Domain E — Human-made/built environment elements:** buildings/houses, roads/paths, vehicles, machines/technology, other built element. Each coded as present (1) or absent (0).\n\nSummary variables per drawing: dominant orientation (biophilic/mixed/built), overall environment classification (five-point scale from strongly biophilic to strongly built), setting type, and total biophilic element count (sum of present codes across Domains A–D, maximum possible score of 23).\n\nFile 002 uses the identical coding instrument. The second observer coded independently without seeing the first observer's codes. The 10 overlapping drawings enable direct inter-rater comparison; the 12 Erdkinder-only drawings extend reliability testing to the adolescent cohort."
+              },
+              {
+                title: "Anonymisation and Ethics",
+                body: "Every participant is identified by an anonymised student code only. No names, photographs, or directly identifying information appear in either file. The coding was applied to finished drawings — children's identities were separated from their artwork before any data entry began.\n\nData collection followed the Blue Blocks Embedded Observer Protocol (BEOP). The prompt was delivered verbally with no elaboration, examples, or environmental priming. Children drew independently for approximately 20–30 minutes. Observer coding was conducted immediately upon completion within the same session. Parental consent was obtained before data collection began."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Preregistration",
+                citation: "This dataset is the output of a preregistered study. The preregistration document — containing all four hypotheses, the complete coding scheme, the analysis plan, inference thresholds, and inclusion/exclusion criteria — was submitted to OSF and timestamped before any data collection began.",
+                links: [
+                  { label: "View the Preregistration (DOI)", href: "https://doi.org/10.17605/OSF.IO/F296R", external: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "biophilia-dataset-hypotheses",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "The Four Preregistered Hypotheses",
+                bullets: [
+                  "**H1:** More than 60% of drawings will be classified as biophilic",
+                  "**H2:** Water and vegetation will be the two most frequent element categories",
+                  "**H3:** Biophilic element frequency will decrease with age",
+                  "**H4:** Built environment elements will appear in fewer than 30% of drawings"
+                ]
+              },
+              {
+                title: "Related Publication",
+                body: "Whether these hypotheses held is a question for the analytical paper — forthcoming. This dataset is the evidence. It can be used independently for secondary analysis, replication, or comparative research on children's biophilic orientation, drawing analysis, environmental psychology, or nature connectedness."
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Governance",
+                links: [
+                  { label: "Micro-Research Methodology (DOI)", href: "https://doi.org/10.5281/zenodo.18584816", external: true },
+                  { label: "BEOP v1.0 (DOI)", href: "https://doi.org/10.5281/zenodo.19087415", external: true },
+                  { label: "MREF v1.0 (DOI)", href: "https://doi.org/10.5281/zenodo.19047669", external: true }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "biophilia-dataset-citation",
+          type: "twoColumn",
+          compact: true,
+          left: {
+            sections: [
+              {
+                title: "Reuse and Citation",
+                body: "This dataset is published under **CC0 1.0 Universal Public Domain Dedication** — you may use it for any purpose without restriction."
+              },
+              {
+                title: "How to Cite (APA)",
+                body: "Blue Blocks Micro Research Institute, Rao, S., & Chakraborty, S. (2026). Drawing Life: Spontaneous Biophilic Imagery in Children's Responses to an Open-Ended Prompt – A Pilot Study from Blue Blocks Montessori School, Hyderabad, India (DATASET). Blue Blocks Micro Research Institute. Harvard Dataverse. https://doi.org/10.7910/DVN/AWUK3Z"
+              }
+            ]
+          },
+          right: {
+            panels: [
+              {
+                title: "Cross-References",
+                links: [
+                  { label: "Biophilia Preregistration", href: "/publications/biophilia-drawing-preregistration" },
+                  { label: "Publications Index", href: "/publications" },
+                  { label: "Governance — Ethics", href: "/governance/ethics" }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          id: "biophilia-dataset-archival-note",
+          type: "textBlock",
+          variant: "muted",
+          body: "This record is maintained as part of the Blue Blocks Micro Research Institute open archival framework to support governance transparency, citation permanence, and research continuity."
+        },
+        {
+          id: "biophilia-dataset-related",
+          type: "relatedCards",
+          header: "Related Registry",
+          cards: [
+            { title: "Biophilia Preregistration", description: "Pre-registered protocol that locked the four hypotheses, coding scheme, and analysis plan before data collection.", icon: "publication", href: "/publications/biophilia-drawing-preregistration" },
+            { title: "Meerkat Bio-Leadership Dataset", description: "Nine sessions of bio-leadership observation data.", icon: "publication", href: "/publications/meerkat-bio-leadership-dataset" },
+            { title: "Governance — Ethics", description: "MREF and BEOP governance framework.", icon: "default", href: "/governance/ethics" },
+            { title: "Publications Index", description: "All published records.", icon: "default", href: "/publications" }
+          ]
+        }
+      ]
+    },
+
     "/publications/iran-war-case-study": {
       title: "Age-Differentiated Responses to Geopolitical Violence: A Qualitative Case Study on the Iran Crisis in 2026 Among School Children of Blue Blocks, Hyderabad, India",
       metaDescription: "Qualitative case study documenting how children aged 6–16 responded emotionally, cognitively, and morally to the Iran crisis (2026). 28 participants across three age cohorts. Semi-structured group discussions conducted 5–10 March 2026 at Blue Blocks Montessori School, Hyderabad. Published by Blue Blocks Micro Research Institute.",
