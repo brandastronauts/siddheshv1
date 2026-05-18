@@ -1281,11 +1281,11 @@ const siteContent = {
               image: { src: "/src/assets/publications/tedx-hyderabad-orienting-question.jpg", alt: "TEDxHyderabad Orienting Question Paper", variant: "card" }
             },
             {
-              tag: "Short Report · Preprint · ISI Collaboration",
-              headline: "First Vertebrate Fossil From the Nummulites obtusus Bed — A Crocodilian Skull Replaced by Iron",
+              tag: "ISI × BBMRI Collaboration | Kutch Basin Taphonomy",
+              headline: "First Vertebrate Fossil From the Nummulites obtusus Bed",
               meta: "DOI: 10.21203/rs.3.rs-9531614/v1",
-              body: "A 42-million-year-old crocodilian skull from the Harudi Formation, Kutch Basin — pervasively replaced by iron-bearing minerals while the surrounding Nummulites tests remain entirely unaltered. A BBMRI × Indian Statistical Institute collaboration on selective taphonomic preservation.",
-              cta: { label: "View Publication", href: "/publications/crocodilian-skull-kutch-taphonomy" },
+              body: "A 42-million-year-old crocodilian skull — the first vertebrate fossil from this horizon — shows iron replacement so faithful it preserved the teeth, the sutures, and the bone surface. The surrounding foraminifera are completely unaltered. This selectivity tells us something about how organic matter drives preservation.",
+              cta: { label: "Read the Short Report", href: "/publications/crocodilian-skull-kutch-taphonomy" },
               image: { src: "/src/assets/publications/crocodilian-skull-kutch-taphonomy.jpg", alt: "Crocodilian Skull Kutch Taphonomy", variant: "card" }
             }
           ]
