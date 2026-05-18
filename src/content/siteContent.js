@@ -1231,6 +1231,54 @@ const siteContent = {
               body: "Open dataset spanning nine facilitated Bio-Leadership sessions with children aged 6–10. Observer notes, audio transcript excerpts, and video transcript excerpts published on Zenodo under CC BY 4.0.",
               cta: { label: "Access the Dataset", href: "/publications/meerkat-bio-leadership-dataset" },
               image: { src: "/src/assets/publications/meerkat-bio-leadership-dataset.jpg", alt: "Meerkat Bio-Leadership Dataset", variant: "card" }
+            },
+            {
+              tag: "Published Working Paper · SSRN · Bio-Leadership",
+              headline: "The Meerkat Model of Bio-Leadership: Embodying Leadership Through Biomimicry",
+              meta: "DOI: 10.2139/ssrn.6656598",
+              body: "Working paper introducing the Meerkat Model — using biomimicry to translate observable animal leadership behaviours into embodied leadership practice with children aged 6–10.",
+              cta: { label: "View Publication", href: "/publications/meerkat-bio-leadership" },
+              image: { src: "/src/assets/publications/meerkat-bio-leadership.jpg", alt: "Meerkat Bio-Leadership Working Paper", variant: "card" }
+            },
+            {
+              tag: "Conference Contribution · OSF · AMI Congress",
+              headline: "AMI Congress 2026 — Design Thinking Workshop & SBB CubeSat Programme Announcement",
+              meta: "DOI: 10.17605/OSF.IO/ST9H2",
+              body: "Two documents from Blue Blocks at the 30th International Montessori Congress (Mexico, 2026): a Design Thinking workshop and the formal institutional announcement of SBB-2.",
+              cta: { label: "View Publication", href: "/publications/ami-congress-2026" },
+              image: { src: "/src/assets/publications/ami-congress-2026.jpg", alt: "AMI Congress 2026", variant: "card" }
+            },
+            {
+              tag: "Published Case Study · Adolescent Research · Disability & Achievement",
+              headline: "When Children Meet Achievement Without Sight — Adolescent Inquiry With a Blind VP",
+              meta: "DOI: 10.5281/zenodo.19752834",
+              body: "Case 4 of 5 in the Child-Driven Inquiry Series. Twelve adolescents met a blind Vice President of JP Morgan Chase. Only one of nineteen spontaneous questions addressed blindness directly.",
+              cta: { label: "View Publication", href: "/publications/achievement-without-sight" },
+              image: { src: "/src/assets/publications/achievement-without-sight.jpg", alt: "Achievement Without Sight", variant: "card" }
+            },
+            {
+              tag: "Published Case Study · Adolescent Research · Palaeontology",
+              headline: "Deep Time — Adolescents Invited Into Real Palaeontological Research",
+              meta: "DOI: 10.5281/zenodo.20019376",
+              body: "Case 5 of 5. Twelve adolescents were taught to identify 50-million-year-old fossils from the Kutch Basin. By session four, only three remained — and that attrition pattern is the finding.",
+              cta: { label: "View Publication", href: "/publications/deep-time-palaeontology" },
+              image: { src: "/src/assets/publications/deep-time-palaeontology.jpg", alt: "Deep Time Palaeontology Case Study", variant: "card" }
+            },
+            {
+              tag: "Published Dataset · Zenodo · Cross-Study",
+              headline: "Adolescent Inquiry Cross-Study Dataset (CS-2026-001 to CS-2026-005)",
+              meta: "DOI: Pending (Zenodo)",
+              body: "Eight-sheet structured tabulation of the Blue Blocks five-case Working Paper Series. Tier 1 (OPEN) under CDCS v1.0. Released before the cross-study synthesis paper.",
+              cta: { label: "Access the Dataset", href: "/publications/cross-study-dataset" },
+              image: { src: "/src/assets/publications/cross-study-dataset.jpg", alt: "Cross-Study Dataset", variant: "card" }
+            },
+            {
+              tag: "Conceptual Framework · Preprint · TEDxHyderabad",
+              headline: "\"What Do You Want to Build?\" — Reframing the Central Question of Schooling",
+              meta: "DOI: 10.5281/zenodo.19848394",
+              body: "17 years of longitudinal evidence from 1,047 children. A single shift in the Orienting Question — from \"What did you learn?\" to \"What do you want to build?\" — and its developmental arc from cardboard at six to a CubeSat at thirteen.",
+              cta: { label: "View Publication", href: "/publications/tedx-hyderabad-orienting-question" },
+              image: { src: "/src/assets/publications/tedx-hyderabad-orienting-question.jpg", alt: "TEDxHyderabad Orienting Question Paper", variant: "card" }
             }
           ]
         },
