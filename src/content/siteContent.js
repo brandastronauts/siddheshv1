@@ -1257,11 +1257,11 @@ const siteContent = {
               image: { src: "/src/assets/publications/achievement-without-sight.jpg", alt: "Achievement Without Sight", variant: "card" }
             },
             {
-              tag: "Published Case Study · Adolescent Research · Palaeontology",
-              headline: "Deep Time — Adolescents Invited Into Real Palaeontological Research",
+              tag: "Case Study CS-2026-005 | Child-Driven Inquiry Series (Final)",
+              headline: "Twelve Started. Three Chose to Become Scientists.",
               meta: "DOI: 10.5281/zenodo.20019376",
-              body: "Case 5 of 5. Twelve adolescents were taught to identify 50-million-year-old fossils from the Kutch Basin. By session four, only three remained — and that attrition pattern is the finding.",
-              cta: { label: "View Publication", href: "/publications/deep-time-palaeontology" },
+              body: "Twelve adolescents were invited into real palaeontological research on 50-million-year-old fossils. By session four, only three remained — and they asked for summer homework. The attrition wasn't the failure. It was the finding.",
+              cta: { label: "Read the Final Case Study →", href: "/publications/deep-time-palaeontology" },
               image: { src: "/src/assets/publications/deep-time-palaeontology.jpg", alt: "Deep Time Palaeontology Case Study", variant: "card" }
             },
             {
