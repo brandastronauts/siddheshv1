@@ -1220,7 +1220,7 @@ const siteContent = {
               tag: "Preregistration · OSF · Biophilia",
               headline: "Do Children Draw Nature When You Only Ask Them to Draw Life?",
               meta: "DOI: 10.17605/OSF.IO/F296R",
-              body: "Pre-registered pilot study: 70–80 children given one prompt — \"Draw a place where life can exist\" — with no priming. Four hypotheses, coding scheme, and analysis plan locked on OSF before any data exists.",
+              body: "One prompt. No priming. 70–80 children. Four hypotheses locked before any data exists. The study asks whether children default to nature when the word \"life\" is all they're given.",
               cta: { label: "View the Preregistration", href: "/publications/biophilia-drawing-preregistration" },
               image: { src: "/src/assets/publications/biophilia-drawing-preregistration.jpg", alt: "Biophilia Drawing Study Preregistration", variant: "card" }
             },
