@@ -25,6 +25,18 @@ import patentDeliveryImg from '@/assets/placeholders/labs/patent-delivery.jpg';
 import patentMedicalImg from '@/assets/placeholders/labs/patent-medical.jpg';
 import patentHealthImg from '@/assets/placeholders/labs/patent-health.jpg';
 
+// Import publication card/hero images
+import pubAchievementWithoutSight from '@/assets/publications/achievement-without-sight.jpg';
+import pubAmiCongress2026 from '@/assets/publications/ami-congress-2026.jpg';
+import pubBiophiliaDataset from '@/assets/publications/biophilia-drawing-dataset.jpg';
+import pubBiophiliaPrereg from '@/assets/publications/biophilia-drawing-preregistration.jpg';
+import pubCrocodilianSkull from '@/assets/publications/crocodilian-skull-kutch-taphonomy.jpg';
+import pubCrossStudyDataset from '@/assets/publications/cross-study-dataset.jpg';
+import pubDeepTime from '@/assets/publications/deep-time-palaeontology.jpg';
+import pubMeerkatDataset from '@/assets/publications/meerkat-bio-leadership-dataset.jpg';
+import pubMeerkatPaper from '@/assets/publications/meerkat-bio-leadership.jpg';
+import pubTedxOrientingQuestion from '@/assets/publications/tedx-hyderabad-orienting-question.jpg';
+
 
 // Import headshot placeholders
 import headshot1 from '@/assets/placeholders/avatars/headshot-1.jpg';
@@ -111,6 +123,18 @@ const imageMap = {
   '/src/assets/placeholders/labs/patent-delivery.jpg': patentDeliveryImg,
   '/src/assets/placeholders/labs/patent-medical.jpg': patentMedicalImg,
   '/src/assets/placeholders/labs/patent-health.jpg': patentHealthImg,
+
+  // Publication card/hero images
+  '/src/assets/publications/achievement-without-sight.jpg': pubAchievementWithoutSight,
+  '/src/assets/publications/ami-congress-2026.jpg': pubAmiCongress2026,
+  '/src/assets/publications/biophilia-drawing-dataset.jpg': pubBiophiliaDataset,
+  '/src/assets/publications/biophilia-drawing-preregistration.jpg': pubBiophiliaPrereg,
+  '/src/assets/publications/crocodilian-skull-kutch-taphonomy.jpg': pubCrocodilianSkull,
+  '/src/assets/publications/cross-study-dataset.jpg': pubCrossStudyDataset,
+  '/src/assets/publications/deep-time-palaeontology.jpg': pubDeepTime,
+  '/src/assets/publications/meerkat-bio-leadership-dataset.jpg': pubMeerkatDataset,
+  '/src/assets/publications/meerkat-bio-leadership.jpg': pubMeerkatPaper,
+  '/src/assets/publications/tedx-hyderabad-orienting-question.jpg': pubTedxOrientingQuestion,
   
   // Logos
   '/src/assets/placeholders/logos/logo-placeholder.png': logoPlaceholder,
