@@ -1226,9 +1226,9 @@ const siteContent = {
             },
             {
               tag: "Published Dataset · Zenodo · Biomimicry · Bio-Leadership",
-              headline: "Children Learning Leadership From Meerkats — Nine Sessions of Research Data",
+              headline: "Children Learning Leadership From Meerkats",
               meta: "DOI: 10.5281/zenodo.19467584",
-              body: "Open dataset spanning nine facilitated Bio-Leadership sessions with children aged 6–10. Observer notes, audio transcript excerpts, and video transcript excerpts published on Zenodo under CC BY 4.0.",
+              body: "Nine sessions. Three data streams. One question: what happens when children study how meerkats run a colony and then apply it to their own groups? The complete observer notes, audio transcripts, and video transcripts — published before the analytical paper so the data can be evaluated on its own terms.",
               cta: { label: "Access the Dataset", href: "/publications/meerkat-bio-leadership-dataset" },
               image: { src: "/src/assets/publications/meerkat-bio-leadership-dataset.jpg", alt: "Meerkat Bio-Leadership Dataset", variant: "card" }
             },
