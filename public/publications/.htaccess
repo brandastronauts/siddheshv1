@@ -1,0 +1,4 @@
+# Force clean: reset any inherited 404 behavior from a stale per-directory .htaccess
+# that may be lingering on cPanel from a previous deploy. The site-wide rules in
+# /public/.htaccess handle SPA routing for /publications and /publications/<slug>.
+RewriteEngine On
