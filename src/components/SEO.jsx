@@ -65,9 +65,15 @@ const SEO = ({
       {citation?.citation_authors?.map((author, i) => (
         <meta key={`citation-author-${i}`} name="citation_author" content={author} />
       ))}
+      {citation?.citation_author_institutions?.map((inst, i) => (
+        <meta key={`citation-author-inst-${i}`} name="citation_author_institution" content={inst} />
+      ))}
       {citation?.citation_publication_date && <meta name="citation_publication_date" content={citation.citation_publication_date} />}
       {citation?.citation_publisher && <meta name="citation_publisher" content={citation.citation_publisher} />}
       {citation?.citation_doi && <meta name="citation_doi" content={citation.citation_doi} />}
+      {citation?.citation_pdf_url && <meta name="citation_pdf_url" content={citation.citation_pdf_url} />}
+      {citation?.citation_language && <meta name="citation_language" content={citation.citation_language} />}
+      {citation?.citation_keywords && <meta name="citation_keywords" content={citation.citation_keywords} />}
     </Helmet>
   );
 };
