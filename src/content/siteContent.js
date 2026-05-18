@@ -1265,11 +1265,11 @@ const siteContent = {
               image: { src: "/src/assets/publications/deep-time-palaeontology.jpg", alt: "Deep Time Palaeontology Case Study", variant: "card" }
             },
             {
-              tag: "Published Dataset · Zenodo · Cross-Study",
-              headline: "Adolescent Inquiry Cross-Study Dataset (CS-2026-001 to CS-2026-005)",
+              tag: "Cross-Study Dataset | CS-2026 Series",
+              headline: "Five Case Studies. Eight Sheets. One Analytic Spine.",
               meta: "DOI: Pending (Zenodo)",
-              body: "Eight-sheet structured tabulation of the Blue Blocks five-case Working Paper Series. Tier 1 (OPEN) under CDCS v1.0. Released before the cross-study synthesis paper.",
-              cta: { label: "Access the Dataset", href: "/publications/cross-study-dataset" },
+              body: "The structured tabulation of the entire five-case series — hypothesis verdicts, engagement metrics, instrument comparisons, emergent findings, 25 verbatim quotes, and 23 documented limitations with severity ratings. Published before the synthesis paper so the comparative structure can be examined independently.",
+              cta: { label: "Access the Cross-Study Dataset", href: "/publications/cross-study-dataset" },
               image: { src: "/src/assets/publications/cross-study-dataset.jpg", alt: "Cross-Study Dataset", variant: "card" }
             },
             {
