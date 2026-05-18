@@ -123,6 +123,18 @@ const imageMap = {
   '/src/assets/placeholders/labs/patent-delivery.jpg': patentDeliveryImg,
   '/src/assets/placeholders/labs/patent-medical.jpg': patentMedicalImg,
   '/src/assets/placeholders/labs/patent-health.jpg': patentHealthImg,
+
+  // Publication card/hero images
+  '/src/assets/publications/achievement-without-sight.jpg': pubAchievementWithoutSight,
+  '/src/assets/publications/ami-congress-2026.jpg': pubAmiCongress2026,
+  '/src/assets/publications/biophilia-drawing-dataset.jpg': pubBiophiliaDataset,
+  '/src/assets/publications/biophilia-drawing-preregistration.jpg': pubBiophiliaPrereg,
+  '/src/assets/publications/crocodilian-skull-kutch-taphonomy.jpg': pubCrocodilianSkull,
+  '/src/assets/publications/cross-study-dataset.jpg': pubCrossStudyDataset,
+  '/src/assets/publications/deep-time-palaeontology.jpg': pubDeepTime,
+  '/src/assets/publications/meerkat-bio-leadership-dataset.jpg': pubMeerkatDataset,
+  '/src/assets/publications/meerkat-bio-leadership.jpg': pubMeerkatPaper,
+  '/src/assets/publications/tedx-hyderabad-orienting-question.jpg': pubTedxOrientingQuestion,
   
   // Logos
   '/src/assets/placeholders/logos/logo-placeholder.png': logoPlaceholder,
