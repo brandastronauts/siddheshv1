@@ -1274,10 +1274,10 @@ const siteContent = {
             },
             {
               tag: "Conceptual Framework · Preprint · TEDxHyderabad",
-              headline: "\"What Do You Want to Build?\" — Reframing the Central Question of Schooling",
+              headline: "What Do You Want to Build? — From Cardboard at Six to a Satellite at Thirteen",
               meta: "DOI: 10.5281/zenodo.19848394",
-              body: "17 years of longitudinal evidence from 1,047 children. A single shift in the Orienting Question — from \"What did you learn?\" to \"What do you want to build?\" — and its developmental arc from cardboard at six to a CubeSat at thirteen.",
-              cta: { label: "View Publication", href: "/publications/tedx-hyderabad-orienting-question" },
+              body: "Every school is built around one implicit question. This paper names it, argues the dominant one privileges memory, and presents 17 years of evidence for what happens when you change the question to \"What do you want to build?\" Five patents. One satellite. 1,047 children.",
+              cta: { label: "Read the Paper", href: "/publications/tedx-hyderabad-orienting-question" },
               image: { src: "/src/assets/publications/tedx-hyderabad-orienting-question.jpg", alt: "TEDxHyderabad Orienting Question Paper", variant: "card" }
             },
             {
