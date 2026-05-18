@@ -1210,9 +1210,9 @@ const siteContent = {
             },
             {
               tag: "Published Dataset · Harvard Dataverse · Biophilia",
-              headline: "81 Children Drew a Place Where Life Can Exist — Here Is What They Drew",
+              headline: "81 Children Drew a Place Where Life Can Exist",
               meta: "DOI: 10.7910/DVN/AWUK3Z",
-              body: "Structured observational coding of 81 children's drawings across 30 binary element categories in five domains (water, vegetation, animals, sky/light, built environment). Includes inter-rater reliability dataset. Published on Harvard Dataverse under CC0.",
+              body: "One prompt. No priming. 81 drawings coded across 30 element categories. The complete coded dataset from the preregistered Biophilia Drawing Study — published before the analytical paper so the evidence can be evaluated on its own terms.",
               cta: { label: "Access the Dataset", href: "/publications/biophilia-drawing-dataset" },
               image: { src: "/src/assets/publications/biophilia-drawing-dataset.jpg", alt: "Biophilia Drawing Study Dataset", variant: "card" }
             },
