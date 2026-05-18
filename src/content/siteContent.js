@@ -1241,12 +1241,12 @@ const siteContent = {
               image: { src: "/src/assets/publications/meerkat-bio-leadership.jpg", alt: "Meerkat Bio-Leadership Working Paper", variant: "card" }
             },
             {
-              tag: "Conference Contribution · OSF · AMI Congress",
-              headline: "AMI Congress 2026 — Design Thinking Workshop & SBB CubeSat Programme Announcement",
+              tag: "30th International Montessori Congress | Mexico 2026",
+              headline: "Design Thinking Workshop & SBB CubeSat Programme",
               meta: "DOI: 10.17605/OSF.IO/ST9H2",
-              body: "Two documents from Blue Blocks at the 30th International Montessori Congress (Mexico, 2026): a Design Thinking workshop and the formal institutional announcement of SBB-2.",
-              cta: { label: "View Publication", href: "/publications/ami-congress-2026" },
-              image: { src: "/src/assets/publications/ami-congress-2026.jpg", alt: "AMI Congress 2026", variant: "card" }
+              body: "A hands-on Design Thinking workshop showing how Montessori pedagogy produces innovation — and the formal announcement of SBB-2, the second student-built satellite, after SBB-1 reached an ISRO launchpad but was lost to a launch anomaly.",
+              cta: { label: "View the Congress Documents →", href: "/publications/ami-congress-2026" },
+              image: { src: "/src/assets/publications/ami-congress-2026.jpg", alt: "AMI Congress 2026 — Design Thinking & SBB CubeSat", variant: "card" }
             },
             {
               tag: "Case Study CS-2026-004 | Child-Driven Inquiry Series",
