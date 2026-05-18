@@ -36,6 +36,7 @@ export const sitemapData = {
     { name: "Deep Time Palaeontology (Case 5)", url: "/publications/deep-time-palaeontology", status: "complete" },
     { name: "Cross-Study Dataset (CS-2026-001 to 005)", url: "/publications/cross-study-dataset", status: "complete" },
     { name: "TEDxHyderabad — What Do You Want to Build?", url: "/publications/tedx-hyderabad-orienting-question", status: "complete" },
+    { name: "Crocodilian Skull — Kutch Taphonomy (ISI Collaboration)", url: "/publications/crocodilian-skull-kutch-taphonomy", status: "complete" },
     { name: "Citation Standards", url: "/publications/citation-standards", status: "complete" },
     { name: "Open Data Access", url: "/publications/data", status: "complete" },
     { name: "Glossary", url: "/publications/glossary", status: "complete" },
