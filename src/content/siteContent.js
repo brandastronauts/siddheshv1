@@ -4847,26 +4847,30 @@ const siteContent = {
       metaDescription: "81 children's drawings coded across 30 biophilic element categories. Preregistered pilot study data on Harvard Dataverse. Open access, CC0, ready for reanalysis.",
       seo: {
         title: "Biophilia Drawing Study Dataset — Harvard Dataverse | Blue Blocks Micro Research Institute",
-        canonical: "https://research.blueblocks.in/publications/biophilia-drawing-dataset",
+        canonical: "https://research.blueblocks.in/publications/biophilia-drawing-dataset/",
         robots: "index, follow",
         keywords: "biophilia, children's drawings, biophilic orientation, observational coding, open-ended prompt, nature orientation, environmental psychology, inter-rater reliability, pilot study, Montessori education, open data",
+        alternate: { type: "text/markdown", href: "/publications/biophilia-drawing-dataset/biophilia-drawing-dataset.md", title: "Machine-readable version" },
         openGraph: {
           type: "article",
-          url: "https://research.blueblocks.in/publications/biophilia-drawing-dataset",
+          url: "https://research.blueblocks.in/publications/biophilia-drawing-dataset/",
           title: "Biophilia Drawing Study Dataset — Harvard Dataverse | Blue Blocks Micro Research Institute",
           description: "81 children's drawings coded across 30 biophilic element categories. Preregistered pilot study data on Harvard Dataverse. CC0, ready for reanalysis.",
+          siteName: "Blue Blocks Micro Research Institute",
           image: { url: "https://research.blueblocks.in/images/og-research-standards.jpg", width: 1200, height: 630, alt: "Biophilia Drawing Study Dataset" }
-        }
+        },
+        twitter: { card: "summary_large_image", title: "Biophilia Drawing Study Dataset — Harvard Dataverse | Blue Blocks Micro Research Institute", description: "81 children's drawings coded across 30 biophilic element categories. Preregistered pilot study data on Harvard Dataverse. CC0, ready for reanalysis." },
+        citation: { citation_title: "Drawing Life: Spontaneous Biophilic Imagery in Children's Responses to an Open-Ended Prompt — A Pilot Study from Blue Blocks Montessori School, Hyderabad, India (DATASET)", citation_authors: ["Blue Blocks Micro Research Institute", "Rao, Sandhya", "Chakraborty, Sreemoyee"], citation_publication_date: "2026/04/23", citation_doi: "10.7910/DVN/AWUK3Z", citation_publisher: "Blue Blocks Micro Research Institute", citation_language: "en", citation_keywords: "biophilia; children's drawings; observational coding; biophilic orientation; open-ended prompt; nature orientation; pilot study; open data" }
       },
       schemas: [
         {
           "@context": "https://schema.org",
           "@type": "Dataset",
-          "@id": "https://research.blueblocks.in/publications/biophilia-drawing-dataset#dataset",
-          name: "Drawing Life: Spontaneous Biophilic Imagery in Children's Responses to an Open-Ended Prompt – A Pilot Study from Blue Blocks Montessori School, Hyderabad, India (DATASET)",
-          headline: "81 Children Drew a Place Where Life Can Exist – Here Is What They Drew",
+          "@id": "https://research.blueblocks.in/publications/biophilia-drawing-dataset/#dataset",
+          name: "Drawing Life: Spontaneous Biophilic Imagery in Children's Responses to an Open-Ended Prompt — A Pilot Study from Blue Blocks Montessori School, Hyderabad, India (DATASET)",
+          headline: "81 Children Drew a Place Where Life Can Exist — Here Is What They Drew",
           description: "Structured observational coding of 81 children's drawings produced in response to the open-ended prompt 'Draw a place where life can exist.' 30 binary element categories across five domains (water, vegetation, animals, sky/light, built environment), with dominant orientation, overall environment classification, setting type, and total biophilic element count. Includes inter-rater reliability dataset from a second independent observer.",
-          url: "https://research.blueblocks.in/publications/biophilia-drawing-dataset",
+          url: "https://research.blueblocks.in/publications/biophilia-drawing-dataset/",
           datePublished: "2026-04-23",
           inLanguage: "en",
           identifier: "10.7910/DVN/AWUK3Z",
@@ -4879,17 +4883,23 @@ const siteContent = {
           publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" },
           license: "https://creativecommons.org/publicdomain/zero/1.0/",
           isAccessibleForFree: true,
-          keywords: ["biophilia", "children's drawings", "biophilic orientation", "observational coding", "open-ended prompt", "nature orientation", "environmental psychology", "inter-rater reliability", "pilot study", "Montessori education", "open data"],
+          keywords: ["biophilia", "children's drawings", "biophilic orientation", "observational coding", "open-ended prompt", "nature orientation", "environmental psychology", "inter-rater reliability", "pilot study", "Montessori education", "open data", "Blue Blocks Micro Research Institute"],
+          distribution: [
+            { "@type": "DataDownload", encodingFormat: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", contentUrl: "https://dataverse.harvard.edu/api/access/datafile/BlueBlocks_DataSet_Biophilia_HarvardDataverse_PilotStudy_2026_001_Public.xlsx", name: "File 001 — Primary Dataset (81 participants)" },
+            { "@type": "DataDownload", encodingFormat: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", contentUrl: "https://dataverse.harvard.edu/api/access/datafile/BlueBlocks_DataSet_Biophilia_HarvardDataverse_PilotStudy_2026_002_Public.xlsx", name: "File 002 — Inter-Rater Reliability (22 drawings)" }
+          ],
           spatialCoverage: { "@type": "Place", name: "Blue Blocks Montessori School, Hyderabad, India" },
-          isBasedOn: { "@type": "CreativeWork", name: "Biophilia Drawing Study Preregistration", url: "https://doi.org/10.17605/OSF.IO/F296R" }
+          isBasedOn: { "@type": "CreativeWork", name: "Biophilia Drawing Study Preregistration", url: "https://doi.org/10.17605/OSF.IO/F296R" },
+          sourceOrganization: { "@type": "School", "@id": "https://blueblocks.in/#school", name: "Blue Blocks Montessori School" },
+          encoding: { "@type": "MediaObject", contentUrl: "https://research.blueblocks.in/publications/biophilia-drawing-dataset/biophilia-drawing-dataset.md", encodingFormat: "text/markdown" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
             { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
-            { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications" },
-            { "@type": "ListItem", position: 3, name: "Biophilia Drawing Study Dataset", item: "https://research.blueblocks.in/publications/biophilia-drawing-dataset" }
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications/" },
+            { "@type": "ListItem", position: 3, name: "Biophilia Drawing Study Dataset", item: "https://research.blueblocks.in/publications/biophilia-drawing-dataset/" }
           ]
         }
       ],
