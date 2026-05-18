@@ -48,7 +48,7 @@ DirectorySlash Off
 
   # ── Hard 404 for unrecognised /publications/<slug> URLs (whitelist valid slugs) ──
   RewriteCond %{REQUEST_URI} ^/publications/([^/]+)$
-  RewriteCond %1 !^(citation-standards|data|flipside-case-study|glossary|in-space-authorization-letter|iran-war-case-study|resilience-workshop|saparya-imf-case-study|structured-debate-side-switch)$
+  RewriteCond %1 !^(achievement-without-sight|ami-congress-2026|biophilia-drawing-dataset|biophilia-drawing-preregistration|citation-standards|crocodilian-skull-kutch-taphonomy|cross-study-dataset|data|deep-time-palaeontology|flipside-case-study|glossary|in-space-authorization-letter|iran-war-case-study|meerkat-bio-leadership|meerkat-bio-leadership-dataset|resilience-workshop|saparya-imf-case-study|structured-debate-side-switch|tedx-hyderabad-orienting-question)$
   RewriteRule ^ - [R=404,L]
 
   # ── Skip actual files (JS, CSS, images, etc.) ──
