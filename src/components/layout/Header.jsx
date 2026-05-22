@@ -4,9 +4,102 @@ import { useState, useRef, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronDown } from 'lucide-react'
+import { Menu, X, ChevronDown, ChevronRight } from 'lucide-react'
 import { nav as staticNav, brand as staticBrand } from '../../content/siteCore'
 import { getIcon } from '../../lib/iconMap'
+
+/* ─── Desktop child row (with optional fly-out for grandchildren) ── */
+const DesktopChildRow = ({ child, pathname, closeAll }) => {
+  const [flyoutOpen, setFlyoutOpen] = useState(false)
+  const timeout = useRef(null)
+  const ChildIcon = getIcon(child.icon)
+  const active = pathname === child.path
+  const grandActive = child.grandchildren?.some((g) => pathname === g.path)
+  const hasFlyout = Array.isArray(child.grandchildren) && child.grandchildren.length > 0
+
+  const enter = () => { clearTimeout(timeout.current); setFlyoutOpen(true) }
+  const leave = () => { timeout.current = setTimeout(() => setFlyoutOpen(false), 120) }
+
+  useEffect(() => () => clearTimeout(timeout.current), [])
+
+  const rowClass = `flex items-center gap-2 px-3 py-2.5 text-sm rounded-md transition-colors w-full ${
+    active || grandActive
+      ? 'text-primary-navy bg-primary-navy/5 font-medium'
+      : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
+  }`
+
+  if (!hasFlyout) {
+    return (
+      <Link
+        href={child.path}
+        role="menuitem"
+        onClick={closeAll}
+        {...(child.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+        className={rowClass}
+      >
+        {ChildIcon && <ChildIcon className="w-3.5 h-3.5" aria-hidden="true" />}
+        {child.label}
+      </Link>
+    )
+  }
+
+  return (
+    <div className="relative" onMouseEnter={enter} onMouseLeave={leave}>
+      <Link
+        href={child.path}
+        role="menuitem"
+        aria-haspopup="menu"
+        aria-expanded={flyoutOpen}
+        onFocus={enter}
+        onBlur={leave}
+        onClick={closeAll}
+        {...(child.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+        className={`${rowClass} justify-between`}
+      >
+        <span className="inline-flex items-center gap-2">
+          {ChildIcon && <ChildIcon className="w-3.5 h-3.5" aria-hidden="true" />}
+          {child.label}
+        </span>
+        <ChevronRight className="w-3 h-3 text-muted-foreground" aria-hidden="true" />
+      </Link>
+
+      <AnimatePresence>
+        {flyoutOpen && (
+          <motion.div
+            role="menu"
+            initial={{ opacity: 0, x: -4 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -4 }}
+            transition={{ duration: 0.15 }}
+            className="absolute top-0 left-full ml-1 min-w-[200px] bg-popover border border-border rounded-lg shadow-lg p-1 z-50"
+          >
+            {child.grandchildren.map((g) => {
+              const GIcon = getIcon(g.icon)
+              const gActive = pathname === g.path
+              return (
+                <Link
+                  key={g.path}
+                  href={g.path}
+                  role="menuitem"
+                  onClick={closeAll}
+                  {...(g.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  className={`flex items-center gap-2 px-3 py-2.5 text-sm rounded-md transition-colors ${
+                    gActive
+                      ? 'text-primary-navy bg-primary-navy/5 font-medium'
+                      : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
+                  }`}
+                >
+                  {GIcon && <GIcon className="w-3.5 h-3.5" aria-hidden="true" />}
+                  {g.label}
+                </Link>
+              )
+            })}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
 
 /* ─── Desktop Dropdown ─────────────────────────────────────────────── */
 const DesktopDropdown = ({ item, isActive }) => {
@@ -17,10 +110,13 @@ const DesktopDropdown = ({ item, isActive }) => {
 
   const enter = () => { clearTimeout(timeout.current); setOpen(true) }
   const leave = () => { timeout.current = setTimeout(() => setOpen(false), 150) }
+  const closeAll = () => setOpen(false)
 
   useEffect(() => () => clearTimeout(timeout.current), [])
 
-  const childActive = item.children?.some((c) => pathname === c.path)
+  const childActive = item.children?.some(
+    (c) => pathname === c.path || c.grandchildren?.some((g) => pathname === g.path)
+  )
 
   return (
     <div className="relative" onMouseEnter={enter} onMouseLeave={leave}>
@@ -52,27 +148,110 @@ const DesktopDropdown = ({ item, isActive }) => {
             transition={{ duration: 0.15 }}
             className="absolute top-full left-0 mt-1 min-w-[200px] bg-popover border border-border rounded-lg shadow-lg p-1 z-50"
           >
-            {item.children.map((child) => {
-              const ChildIcon = getIcon(child.icon)
-              const active = pathname === child.path
-              return (
-                <Link
-                  key={child.path}
-                  href={child.path}
-                  role="menuitem"
-                  onClick={() => setOpen(false)}
-                  {...(child.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                  className={`flex items-center gap-2 px-3 py-2.5 text-sm rounded-md transition-colors ${
-                    active
-                      ? 'text-primary-navy bg-primary-navy/5 font-medium'
-                      : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
-                  }`}
-                >
-                  {ChildIcon && <ChildIcon className="w-3.5 h-3.5" aria-hidden="true" />}
-                  {child.label}
-                </Link>
-              )
-            })}
+            {item.children.map((child) => (
+              <DesktopChildRow
+                key={child.path}
+                child={child}
+                pathname={pathname}
+                closeAll={closeAll}
+              />
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  )
+}
+
+/* ─── Mobile child row (with optional nested accordion for grandchildren) ─ */
+const MobileChildRow = ({ child, closeMobileMenu }) => {
+  const [expanded, setExpanded] = useState(false)
+  const pathname = usePathname()
+  const ChildIcon = getIcon(child.icon)
+  const isActive = pathname === child.path
+  const grandActive = child.grandchildren?.some((g) => pathname === g.path)
+  const hasGrand = Array.isArray(child.grandchildren) && child.grandchildren.length > 0
+  const id = `mobile-sub-${child.path.replace(/\//g, '-')}`
+
+  const baseClass = `flex-1 flex items-center gap-2 px-4 py-3 text-base font-medium rounded-xl transition-colors min-h-[44px] ${
+    isActive || grandActive
+      ? 'text-primary-navy bg-primary-navy/5'
+      : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
+  }`
+
+  if (!hasGrand) {
+    return (
+      <Link
+        href={child.path}
+        role="menuitem"
+        onClick={closeMobileMenu}
+        {...(child.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+        className={baseClass}
+      >
+        {ChildIcon && <ChildIcon className="w-4 h-4" aria-hidden="true" />}
+        {child.label}
+      </Link>
+    )
+  }
+
+  return (
+    <div>
+      <div className="flex items-center">
+        <Link
+          href={child.path}
+          role="menuitem"
+          onClick={closeMobileMenu}
+          {...(child.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+          className={baseClass}
+        >
+          {ChildIcon && <ChildIcon className="w-4 h-4" aria-hidden="true" />}
+          {child.label}
+        </Link>
+        <button
+          onClick={() => setExpanded(!expanded)}
+          aria-expanded={expanded}
+          aria-controls={id}
+          aria-label={`${expanded ? 'Collapse' : 'Expand'} ${child.label} submenu`}
+          className="p-3 rounded-xl hover:bg-surface transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+        >
+          <ChevronDown className={`w-4 h-4 text-muted-foreground transition-transform ${expanded ? 'rotate-180' : ''}`} />
+        </button>
+      </div>
+
+      <AnimatePresence>
+        {expanded && (
+          <motion.div
+            id={id}
+            role="menu"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            <div className="pl-6 pb-1 space-y-1">
+              {child.grandchildren.map((g) => {
+                const GIcon = getIcon(g.icon)
+                const gActive = pathname === g.path
+                return (
+                  <Link
+                    key={g.path}
+                    href={g.path}
+                    role="menuitem"
+                    onClick={closeMobileMenu}
+                    {...(g.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                    className={`flex items-center gap-2 px-4 py-3 text-sm font-medium rounded-xl transition-colors min-h-[44px] ${
+                      gActive
+                        ? 'text-primary-navy bg-primary-navy/5'
+                        : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
+                    }`}
+                  >
+                    {GIcon && <GIcon className="w-3.5 h-3.5" aria-hidden="true" />}
+                    {g.label}
+                  </Link>
+                )
+              })}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -127,27 +306,13 @@ const MobileAccordionItem = ({ item, closeMobileMenu }) => {
             className="overflow-hidden"
           >
             <div className="pl-6 pb-1 space-y-1">
-              {item.children.map((child) => {
-                const ChildIcon = getIcon(child.icon)
-                const active = pathname === child.path
-                return (
-                  <Link
-                    key={child.path}
-                    href={child.path}
-                    role="menuitem"
-                    onClick={closeMobileMenu}
-                    {...(child.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                    className={`flex items-center gap-2 px-4 py-3 text-base font-medium rounded-xl transition-colors min-h-[44px] ${
-                      active
-                        ? 'text-primary-navy bg-primary-navy/5'
-                        : 'text-muted-foreground hover:text-deep-ink hover:bg-surface'
-                    }`}
-                  >
-                    {ChildIcon && <ChildIcon className="w-4 h-4" aria-hidden="true" />}
-                    {child.label}
-                  </Link>
-                )
-              })}
+              {item.children.map((child) => (
+                <MobileChildRow
+                  key={child.path}
+                  child={child}
+                  closeMobileMenu={closeMobileMenu}
+                />
+              ))}
             </div>
           </motion.div>
         )}
@@ -156,12 +321,30 @@ const MobileAccordionItem = ({ item, closeMobileMenu }) => {
   )
 }
 
+/* Remove nav items (and their children/grandchildren) whose path is hidden. */
+const filterNavByHiddenPaths = (items, hiddenPaths) => {
+  if (!hiddenPaths || hiddenPaths.length === 0) return items
+  const hidden = new Set(hiddenPaths)
+  const walk = (list) =>
+    (list || [])
+      .filter((item) => !hidden.has(item.path))
+      .map((item) => ({
+        ...item,
+        children: item.children ? walk(item.children) : item.children,
+        grandchildren: item.grandchildren ? walk(item.grandchildren) : item.grandchildren,
+      }))
+  return walk(items)
+}
+
 /* ─── Header ───────────────────────────────────────────────────────── */
-const Header = ({ nav: navProp, brand: brandProp }) => {
-  const nav = navProp || staticNav
+const Header = ({ nav: navProp, brand: brandProp, pageVisibility }) => {
+  const rawNav = navProp || staticNav
   const brand = brandProp || staticBrand
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const pathname = usePathname()
+
+  const hiddenHeaderPaths = pageVisibility?.[pathname]?.hideHeader || []
+  const nav = filterNavByHiddenPaths(rawNav, hiddenHeaderPaths)
 
   const closeMobileMenu = () => setMobileMenuOpen(false)
 
@@ -173,7 +356,7 @@ const Header = ({ nav: navProp, brand: brandProp }) => {
           <a href="/" className="flex items-center gap-2.5 group">
             <div className="h-12 md:h-14 w-12 md:w-14 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-border/20">
               <img
-                src="/logo.png"
+                src={brand.logoUrl || '/logo.png'}
                 alt={brand.siteName}
                 className="h-11 md:h-12 w-11 md:w-12 object-contain"
                 width={48}

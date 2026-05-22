@@ -7,7 +7,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import ScrollToTop from '@/components/ScrollToTop'
 import ChunkLoadRecovery from '@/components/ChunkLoadRecovery'
-import { getHeaderNav, getBrandData, getFooterData, getAnnouncementBar } from '@/lib/cms/navigation'
+import { getHeaderNav, getBrandData, getFooterData, getAnnouncementBar, getPageVisibility } from '@/lib/cms/navigation'
 import AnnouncementBar from '@/components/layout/AnnouncementBar'
 import Breadcrumbs from '@/components/common/Breadcrumbs'
 import '../../index.css'
@@ -47,11 +47,12 @@ export const metadata: Metadata = {
 }
 
 export default async function SiteLayout({ children }: { children: React.ReactNode }) {
-  const [nav, brand, footerData, announcement] = await Promise.all([
+  const [nav, brand, footerData, announcement, pageVisibility] = await Promise.all([
     getHeaderNav(),
     getBrandData(),
     getFooterData(),
     getAnnouncementBar(),
+    getPageVisibility(),
   ])
 
   return (
@@ -68,10 +69,10 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
             <ChunkLoadRecovery />
             <ScrollToTop />
             <AnnouncementBar data={announcement} />
-            <Header nav={nav} brand={brand} />
+            <Header nav={nav} brand={brand} pageVisibility={pageVisibility} />
             <Breadcrumbs />
             <main className="flex-1">{children}</main>
-            <Footer nav={nav} brand={brand} footerData={footerData} />
+            <Footer nav={nav} brand={brand} footerData={footerData} pageVisibility={pageVisibility} />
           </div>
         </Providers>
       </body>

@@ -1,8 +1,10 @@
 'use client'
 
 import Link from 'next/link'
-import { Mail, ArrowUpRight, FileText, Lightbulb, BookOpen, Users, Download, Lock, ScrollText, MapPin, Linkedin } from 'lucide-react'
+import { usePathname } from 'next/navigation'
+import { Mail, ArrowUpRight, Linkedin } from 'lucide-react'
 import { nav as staticNav, brand as staticBrand } from '../../content/siteCore'
+import { getIcon } from '../../lib/iconMap'
 import FooterNewsletter from '../FooterNewsletter'
 
 /* ─── Social platform icons (inline SVG to avoid extra deps) ─────── */
@@ -54,12 +56,96 @@ const staticUtilityLinks = [
   { label: 'Research Ethics', path: '/governance' },
 ]
 
-const Footer = ({ nav: navProp, brand: brandProp, footerData }) => {
+const staticRegistriesLinks = [
+  { label: 'Publications', path: '/publications', icon: 'publication' },
+  { label: 'Patents', path: '/patents', icon: 'lightbulb' },
+  { label: 'Books', path: '/books', icon: 'bookOpen' },
+  { label: 'Team', path: '/team', icon: 'team' },
+  { label: 'Downloads', path: '/downloads', icon: 'download' },
+]
+
+const staticLegalLinks = [
+  { label: 'Privacy Policy', path: '/privacy', icon: 'lock' },
+  { label: 'Terms of Use', path: '/terms', icon: 'scroll' },
+  { label: 'Sitemap', path: '/sitemap-html', icon: 'mapPin' },
+]
+
+const staticColumnHeadings = {
+  navigation: 'Navigation',
+  more: 'More',
+  governance: 'Governance',
+  registries: 'Registries & Archives',
+}
+
+const staticNewsletter = {
+  heading: 'Subscribe to our Newsletter',
+  description: 'Monthly digest, DOI releases, and protocol updates. Announced 30 days in advance.',
+  emailPlaceholder: 'you@institution.edu',
+  consentText: 'I agree to receive institutional updates from Blue Blocks Micro Research Institute.',
+  buttonLabel: 'Subscribe',
+  submittingLabel: 'Submitting…',
+  successMessage: 'Thank you. Your submission has been received successfully.',
+  helperText: 'No spam. Unsubscribe anytime.',
+}
+
+/** Pick the array if it's a non-empty array, otherwise the fallback. */
+const pick = (value, fallback) =>
+  Array.isArray(value) && value.length > 0 ? value : fallback
+
+/** Flatten header nav (items + children + grandchildren) into a path → label map. */
+const buildNavLabelMap = (nav) => {
+  const map = {}
+  const walk = (items) => {
+    for (const item of items || []) {
+      if (item?.path) map[item.path] = item.label
+      if (item?.children) walk(item.children)
+      if (item?.grandchildren) walk(item.grandchildren)
+    }
+  }
+  walk(nav)
+  return map
+}
+
+/**
+ * Resolve a footer column.
+ * - If CMS supplied column links, resolve each path's label from the header nav
+ *   (labelOverride wins; falls back to the path itself if unmatched).
+ * - Otherwise derive from a slice of the header nav.
+ */
+const resolveColumn = (cmsLinks, navLabelMap, fallbackNavSlice) => {
+  if (Array.isArray(cmsLinks) && cmsLinks.length > 0) {
+    return cmsLinks.map((link) => ({
+      label: link.labelOverride || navLabelMap[link.path] || link.path,
+      path: link.path,
+      external: link.external || false,
+    }))
+  }
+  return (fallbackNavSlice || []).map((item) => ({
+    label: item.label,
+    path: item.path,
+    external: item.external || false,
+  }))
+}
+
+/** Drop any link whose path is in the hidden set. */
+const hideByPath = (links, hiddenSet) =>
+  hiddenSet.size === 0 ? links : links.filter((l) => !hiddenSet.has(l.path))
+
+const Footer = ({ nav: navProp, brand: brandProp, footerData, pageVisibility }) => {
   const nav = navProp || staticNav
   const brand = brandProp || staticBrand
-  const socialLinks = footerData?.socialLinks || staticSocialLinks
-  const governanceLinks = footerData?.governanceLinks || staticGovernanceLinks
-  const utilityLinks = footerData?.utilityLinks || staticUtilityLinks
+  const pathname = usePathname()
+  const hiddenSet = new Set(pageVisibility?.[pathname]?.hideFooter || [])
+  const navLabelMap = buildNavLabelMap(nav)
+  const socialLinks = pick(footerData?.socialLinks, staticSocialLinks)
+  const navigationLinks = hideByPath(resolveColumn(footerData?.navigationLinks, navLabelMap, nav.slice(0, 4)), hiddenSet)
+  const moreLinks = hideByPath(resolveColumn(footerData?.moreLinks, navLabelMap, nav.slice(4)), hiddenSet)
+  const governanceLinks = hideByPath(pick(footerData?.governanceLinks, staticGovernanceLinks), hiddenSet)
+  const utilityLinks = hideByPath(pick(footerData?.utilityLinks, staticUtilityLinks), hiddenSet)
+  const registriesLinks = hideByPath(pick(footerData?.registriesLinks, staticRegistriesLinks), hiddenSet)
+  const legalLinks = hideByPath(pick(footerData?.legalLinks, staticLegalLinks), hiddenSet)
+  const headings = { ...staticColumnHeadings, ...(footerData?.columnHeadings || {}) }
+  const newsletter = { ...staticNewsletter, ...(footerData?.newsletter || {}) }
   const schoolLink = footerData?.schoolLink || 'https://www.blueblocks.in/'
   const schoolLinkLabel = footerData?.schoolLinkLabel || 'Blue Blocks Montessori School'
   const copyrightText = footerData?.copyrightText || `© ${new Date().getFullYear()} ${brand.siteName}. All rights reserved.`
@@ -74,7 +160,7 @@ const Footer = ({ nav: navProp, brand: brandProp, footerData }) => {
           <div className="lg:col-span-2">
             <a href="/" className="inline-flex items-center gap-2.5 mb-5">
               <div className="h-12 w-12 rounded-lg bg-white flex items-center justify-center overflow-hidden border border-white/20">
-                <img src="/logo.png" alt={brand.siteName} className="h-11 w-11 object-contain" width={44} height={44} loading="lazy" decoding="async" />
+                <img src={brand.logoUrl || '/logo.png'} alt={brand.siteName} className="h-11 w-11 object-contain" width={44} height={44} loading="lazy" decoding="async" />
               </div>
               <div className="flex flex-col leading-none">
                 <span className="text-sm font-bold text-white/95">Blue Blocks</span>
@@ -138,9 +224,9 @@ const Footer = ({ nav: navProp, brand: brandProp, footerData }) => {
 
           {/* Navigation Column */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/60">Navigation</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/60">{headings.navigation}</h4>
             <nav className="space-y-3">
-              {nav.slice(0, 4).map((item) => (
+              {navigationLinks.map((item) => (
                 item.path === '/' ? (
                   <a key={item.path} href="/" className="block text-sm text-white/60 hover:text-white transition-colors">
                     {item.label}
@@ -161,9 +247,9 @@ const Footer = ({ nav: navProp, brand: brandProp, footerData }) => {
 
           {/* More Links Column */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/60">More</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/60">{headings.more}</h4>
             <nav className="space-y-3">
-              {nav.slice(4).map((item) => (
+              {moreLinks.map((item) => (
                 item.path === '/' ? (
                   <a key={item.path} href="/" className="block text-sm text-white/60 hover:text-white transition-colors">
                     {item.label}
@@ -184,7 +270,7 @@ const Footer = ({ nav: navProp, brand: brandProp, footerData }) => {
 
           {/* Governance Column */}
           <div className="md:col-span-2 lg:col-span-1">
-            <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/60">Governance</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/60">{headings.governance}</h4>
             <nav className="space-y-3">
               {governanceLinks.map((link) => (
                 <Link
@@ -201,16 +287,27 @@ const Footer = ({ nav: navProp, brand: brandProp, footerData }) => {
         </div>
 
         {/* Registries Row */}
-        <div className="mt-10 pt-8 border-t border-white/10">
-          <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/60">Registries &amp; Archives</h4>
-          <div className="flex flex-wrap gap-x-4 gap-y-2">
-            <Link href="/publications" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors py-1 min-h-[44px] sm:min-h-0"><FileText className="w-3.5 h-3.5" aria-hidden="true" />Publications</Link>
-            <Link href="/patents" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors py-1 min-h-[44px] sm:min-h-0"><Lightbulb className="w-3.5 h-3.5" aria-hidden="true" />Patents</Link>
-            <Link href="/books" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors py-1 min-h-[44px] sm:min-h-0"><BookOpen className="w-3.5 h-3.5" aria-hidden="true" />Books</Link>
-            <Link href="/team" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors py-1 min-h-[44px] sm:min-h-0"><Users className="w-3.5 h-3.5" aria-hidden="true" />Team</Link>
-            <Link href="/downloads" className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors py-1 min-h-[44px] sm:min-h-0"><Download className="w-3.5 h-3.5" aria-hidden="true" />Downloads</Link>
+        {registriesLinks.length > 0 && (
+          <div className="mt-10 pt-8 border-t border-white/10">
+            <h4 className="text-xs font-semibold uppercase tracking-widest mb-5 text-white/60">{headings.registries}</h4>
+            <div className="flex flex-wrap gap-x-4 gap-y-2">
+              {registriesLinks.map((link) => {
+                const Icon = getIcon(link.icon)
+                return (
+                  <Link
+                    key={link.path}
+                    href={link.path}
+                    className="inline-flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors py-1 min-h-[44px] sm:min-h-0"
+                    {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                  >
+                    {Icon && <Icon className="w-3.5 h-3.5" aria-hidden="true" />}
+                    {link.label}
+                  </Link>
+                )
+              })}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Utility Links Row */}
         {utilityLinks.length > 0 && (
@@ -232,18 +329,31 @@ const Footer = ({ nav: navProp, brand: brandProp, footerData }) => {
 
         {/* Newsletter Section */}
         <div className="mt-12 md:mt-16">
-          <FooterNewsletter />
+          <FooterNewsletter copy={newsletter} />
         </div>
 
         {/* Bottom Bar */}
         <div className="mt-10 pt-8 border-t border-white/10">
           <div className="flex flex-col items-center gap-4 text-xs text-white/60 md:flex-row md:justify-between">
             <p>{copyrightText}</p>
-            <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
-              <Link href="/privacy" className="inline-flex items-center gap-1 py-1 hover:text-white/80 transition-colors min-h-[44px] sm:min-h-0"><Lock className="w-3 h-3" aria-hidden="true" />Privacy Policy</Link>
-              <Link href="/terms" className="inline-flex items-center gap-1 py-1 hover:text-white/80 transition-colors min-h-[44px] sm:min-h-0"><ScrollText className="w-3 h-3" aria-hidden="true" />Terms of Use</Link>
-              <Link href="/sitemap-html" className="inline-flex items-center gap-1 py-1 hover:text-white/80 transition-colors min-h-[44px] sm:min-h-0"><MapPin className="w-3 h-3" aria-hidden="true" />Sitemap</Link>
-            </div>
+            {legalLinks.length > 0 && (
+              <div className="flex flex-col items-center gap-3 sm:flex-row sm:gap-6">
+                {legalLinks.map((link) => {
+                  const Icon = getIcon(link.icon)
+                  return (
+                    <Link
+                      key={link.path}
+                      href={link.path}
+                      className="inline-flex items-center gap-1 py-1 hover:text-white/80 transition-colors min-h-[44px] sm:min-h-0"
+                      {...(link.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                    >
+                      {Icon && <Icon className="w-3 h-3" aria-hidden="true" />}
+                      {link.label}
+                    </Link>
+                  )
+                })}
+              </div>
+            )}
           </div>
         </div>
       </div>

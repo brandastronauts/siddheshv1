@@ -26,7 +26,19 @@ const affiliationOptions = [
   { value: 'other', label: 'Other' },
 ];
 
-const FooterNewsletter = () => {
+const defaultCopy = {
+  heading: 'Subscribe to our Newsletter',
+  description: 'Monthly digest, DOI releases, and protocol updates. Announced 30 days in advance.',
+  emailPlaceholder: 'you@institution.edu',
+  consentText: 'I agree to receive institutional updates from Blue Blocks Micro Research Institute.',
+  buttonLabel: 'Subscribe',
+  submittingLabel: 'Submitting…',
+  successMessage: 'Thank you. Your submission has been received successfully.',
+  helperText: 'No spam. Unsubscribe anytime.',
+};
+
+const FooterNewsletter = ({ copy } = {}) => {
+  const c = { ...defaultCopy, ...(copy || {}) };
   const [email, setEmail] = useState('');
   const [affiliation, setAffiliation] = useState('');
   const [consent, setConsent] = useState(false);
@@ -86,7 +98,7 @@ const FooterNewsletter = () => {
             legalConsentOptions: {
               consent: {
                 consentToProcess: true,
-                text: 'I agree to receive institutional updates from Blue Blocks Micro Research Institute.',
+                text: c.consentText,
               },
             },
           }),
@@ -118,17 +130,17 @@ const FooterNewsletter = () => {
         <div className="p-2 rounded-lg bg-accent-cyan/10">
           <Mail className="w-5 h-5 text-accent-cyan" />
         </div>
-        <h3 className="text-lg font-semibold text-white">Subscribe to our Newsletter</h3>
+        <h3 className="text-lg font-semibold text-white">{c.heading}</h3>
       </div>
 
       <p className="text-white/60 text-sm mb-6 leading-relaxed">
-        Monthly digest, DOI releases, and protocol updates. Announced 30 days in advance.
+        {c.description}
       </p>
 
       {submitted ? (
         <div className="flex items-center gap-3 py-4 text-accent-cyan">
           <CheckCircle className="w-5 h-5" />
-          <span className="text-sm font-medium">Thank you. Your submission has been received successfully.</span>
+          <span className="text-sm font-medium">{c.successMessage}</span>
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4" aria-label="Newsletter subscription form">
@@ -146,7 +158,7 @@ const FooterNewsletter = () => {
                 aria-required="true"
                 aria-invalid={errors.email ? 'true' : 'false'}
                 aria-describedby={errors.email ? 'newsletter-email-error' : undefined}
-                placeholder="you@institution.edu"
+                placeholder={c.emailPlaceholder}
                 value={email}
                 onChange={(e) => { setEmail(e.target.value); if (submitError) setSubmitError(''); }}
                 className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:border-accent-cyan focus:ring-accent-cyan/20 transition-all duration-200"
@@ -197,7 +209,7 @@ const FooterNewsletter = () => {
                 htmlFor="newsletter-consent"
                 className="text-white/70 text-sm leading-relaxed cursor-pointer"
               >
-                I agree to receive institutional updates from Blue Blocks Micro Research Institute. <span className="text-accent-cyan" aria-hidden="true">*</span>
+                {c.consentText} <span className="text-accent-cyan" aria-hidden="true">*</span>
               </Label>
               {errors.consent && (
                 <p id="newsletter-consent-error" role="alert" className="text-red-400 text-xs">{errors.consent}</p>
@@ -220,10 +232,10 @@ const FooterNewsletter = () => {
               aria-label="Subscribe to newsletter"
               className="bg-accent-cyan hover:bg-accent-cyan/90 text-deep-ink font-medium px-6 transition-all duration-200 hover:translate-y-[-1px] hover:shadow-lg hover:shadow-accent-cyan/20 disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {submitting ? 'Submitting…' : 'Subscribe'}
+              {submitting ? c.submittingLabel : c.buttonLabel}
             </Button>
             <p className="text-white/40 text-xs">
-              No spam. Unsubscribe anytime.
+              {c.helperText}
             </p>
           </div>
         </form>

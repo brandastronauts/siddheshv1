@@ -1,5 +1,14 @@
 import { isAdmin, isEditor } from '../access/isAdmin.js'
 
+const revalidateAfterChange = async () => {
+  try {
+    const { revalidatePath } = await import('next/cache')
+    revalidatePath('/', 'layout')
+  } catch {
+    // No-op outside Next.js runtime (e.g. seed scripts)
+  }
+}
+
 const iconOptions = [
   { label: 'None', value: '' },
   { label: 'Home', value: 'home' },
@@ -36,6 +45,9 @@ export const SiteSettings = {
   admin: {
     description: 'Global brand, navigation, and contact details used site-wide.',
     group: 'Site Configuration',
+  },
+  hooks: {
+    afterChange: [revalidateAfterChange],
   },
   fields: [
     {
@@ -194,6 +206,44 @@ export const SiteSettings = {
               type: 'checkbox',
               label: 'Open in new tab',
               defaultValue: false,
+            },
+            {
+              name: 'grandchildren',
+              type: 'array',
+              label: 'Nested Sub-menu (Level 3)',
+              admin: {
+                description: 'Optional third level of nesting. Shown as a fly-out beside the parent on desktop, and as a nested accordion on mobile.',
+                initCollapsed: true,
+              },
+              fields: [
+                {
+                  name: 'label',
+                  type: 'text',
+                  required: true,
+                  label: 'Label',
+                },
+                {
+                  name: 'path',
+                  type: 'text',
+                  required: true,
+                  label: 'Path / URL',
+                  admin: {
+                    placeholder: '/methodology/innovation/topic',
+                  },
+                },
+                {
+                  name: 'icon',
+                  type: 'select',
+                  label: 'Icon',
+                  options: iconOptions,
+                },
+                {
+                  name: 'external',
+                  type: 'checkbox',
+                  label: 'Open in new tab',
+                  defaultValue: false,
+                },
+              ],
             },
           ],
         },

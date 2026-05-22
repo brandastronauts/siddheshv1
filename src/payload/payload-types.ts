@@ -1425,6 +1425,14 @@ export interface PageOverride {
     twitterImageUrl?: string | null;
   };
   /**
+   * Enter the exact path of each Header link to hide on this page (e.g. /collaborate). Press Enter after each. Leave empty to show all header links.
+   */
+  hideHeaderPaths?: string[] | null;
+  /**
+   * Enter the exact path of each Footer link to hide on this page. Press Enter after each. Leave empty to show all footer links.
+   */
+  hideFooterPaths?: string[] | null;
+  /**
    * Advanced: add one JSON object per schema node. These are rendered as JSON-LD on this page.
    */
   schemas?:
@@ -3136,6 +3144,8 @@ export interface PageOverridesSelect<T extends boolean = true> {
         twitterImage?: T;
         twitterImageUrl?: T;
       };
+  hideHeaderPaths?: T;
+  hideFooterPaths?: T;
   schemas?:
     | T
     | {
@@ -3557,6 +3567,44 @@ export interface SiteSetting {
                   )
                 | null;
               external?: boolean | null;
+              /**
+               * Optional third level of nesting. Shown as a fly-out beside the parent on desktop, and as a nested accordion on mobile.
+               */
+              grandchildren?:
+                | {
+                    label: string;
+                    path: string;
+                    icon?:
+                      | (
+                          | ''
+                          | 'home'
+                          | 'institute'
+                          | 'methodology'
+                          | 'publication'
+                          | 'governance'
+                          | 'collaborate'
+                          | 'newsroom'
+                          | 'contact'
+                          | 'lightbulb'
+                          | 'alert'
+                          | 'download'
+                          | 'database'
+                          | 'bookOpen'
+                          | 'team'
+                          | 'lock'
+                          | 'scale'
+                          | 'clipboardList'
+                          | 'badgeCheck'
+                          | 'microscope'
+                          | 'globe'
+                          | 'newspaper'
+                          | 'archive'
+                        )
+                      | null;
+                    external?: boolean | null;
+                    id?: string | null;
+                  }[]
+                | null;
               id?: string | null;
             }[]
           | null;
@@ -3567,13 +3615,19 @@ export interface SiteSetting {
   createdAt?: string | null;
 }
 /**
- * Manage footer social links, governance column, utility bar, and copyright.
+ * Manage social links, column headings, registries, legal links, newsletter copy, and copyright.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "footer-settings".
  */
 export interface FooterSetting {
   id: string;
+  columnHeadings?: {
+    navigation?: string | null;
+    more?: string | null;
+    governance?: string | null;
+    registries?: string | null;
+  };
   /**
    * Shown in the footer brand column. Drag to reorder.
    */
@@ -3582,6 +3636,34 @@ export interface FooterSetting {
         platform: 'facebook' | 'instagram' | 'youtube' | 'linkedin' | 'whatsapp' | 'twitter' | 'other';
         url: string;
         label: string;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Enter the path of a header link to reuse it; the label is inherited unless overridden.
+   */
+  navigationLinks?:
+    | {
+        path: string;
+        /**
+         * Leave blank to inherit the header link label.
+         */
+        labelOverride?: string | null;
+        external?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
+  /**
+   * Enter the path of a header link to reuse it; the label is inherited unless overridden.
+   */
+  moreLinks?:
+    | {
+        path: string;
+        /**
+         * Leave blank to inherit the header link label.
+         */
+        labelOverride?: string | null;
+        external?: boolean | null;
         id?: string | null;
       }[]
     | null;
@@ -3607,6 +3689,79 @@ export interface FooterSetting {
         id?: string | null;
       }[]
     | null;
+  /**
+   * Drag to reorder. Each link can have an icon.
+   */
+  registriesLinks?:
+    | {
+        label: string;
+        path: string;
+        icon?:
+          | (
+              | ''
+              | 'publication'
+              | 'lightbulb'
+              | 'bookOpen'
+              | 'team'
+              | 'download'
+              | 'archive'
+              | 'lock'
+              | 'scroll'
+              | 'mapPin'
+              | 'mail'
+              | 'globe'
+              | 'shield'
+              | 'database'
+              | 'newspaper'
+              | 'calendar'
+              | 'badgeCheck'
+              | 'award'
+            )
+          | null;
+        external?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
+  legalLinks?:
+    | {
+        label: string;
+        path: string;
+        icon?:
+          | (
+              | ''
+              | 'publication'
+              | 'lightbulb'
+              | 'bookOpen'
+              | 'team'
+              | 'download'
+              | 'archive'
+              | 'lock'
+              | 'scroll'
+              | 'mapPin'
+              | 'mail'
+              | 'globe'
+              | 'shield'
+              | 'database'
+              | 'newspaper'
+              | 'calendar'
+              | 'badgeCheck'
+              | 'award'
+            )
+          | null;
+        external?: boolean | null;
+        id?: string | null;
+      }[]
+    | null;
+  newsletter?: {
+    heading?: string | null;
+    description?: string | null;
+    emailPlaceholder?: string | null;
+    consentText?: string | null;
+    buttonLabel?: string | null;
+    submittingLabel?: string | null;
+    successMessage?: string | null;
+    helperText?: string | null;
+  };
   schoolLink?: string | null;
   schoolLinkLabel?: string | null;
   /**
@@ -3712,6 +3867,15 @@ export interface SiteSettingsSelect<T extends boolean = true> {
               path?: T;
               icon?: T;
               external?: T;
+              grandchildren?:
+                | T
+                | {
+                    label?: T;
+                    path?: T;
+                    icon?: T;
+                    external?: T;
+                    id?: T;
+                  };
               id?: T;
             };
         id?: T;
@@ -3725,12 +3889,36 @@ export interface SiteSettingsSelect<T extends boolean = true> {
  * via the `definition` "footer-settings_select".
  */
 export interface FooterSettingsSelect<T extends boolean = true> {
+  columnHeadings?:
+    | T
+    | {
+        navigation?: T;
+        more?: T;
+        governance?: T;
+        registries?: T;
+      };
   socialLinks?:
     | T
     | {
         platform?: T;
         url?: T;
         label?: T;
+        id?: T;
+      };
+  navigationLinks?:
+    | T
+    | {
+        path?: T;
+        labelOverride?: T;
+        external?: T;
+        id?: T;
+      };
+  moreLinks?:
+    | T
+    | {
+        path?: T;
+        labelOverride?: T;
+        external?: T;
         id?: T;
       };
   governanceLinks?:
@@ -3748,6 +3936,36 @@ export interface FooterSettingsSelect<T extends boolean = true> {
         path?: T;
         external?: T;
         id?: T;
+      };
+  registriesLinks?:
+    | T
+    | {
+        label?: T;
+        path?: T;
+        icon?: T;
+        external?: T;
+        id?: T;
+      };
+  legalLinks?:
+    | T
+    | {
+        label?: T;
+        path?: T;
+        icon?: T;
+        external?: T;
+        id?: T;
+      };
+  newsletter?:
+    | T
+    | {
+        heading?: T;
+        description?: T;
+        emailPlaceholder?: T;
+        consentText?: T;
+        buttonLabel?: T;
+        submittingLabel?: T;
+        successMessage?: T;
+        helperText?: T;
       };
   schoolLink?: T;
   schoolLinkLabel?: T;

@@ -1387,6 +1387,31 @@ export const PageOverrides = {
           ],
         },
         {
+          label: 'Header & Footer',
+          fields: [
+            {
+              name: 'hideHeaderPaths',
+              type: 'text',
+              hasMany: true,
+              label: 'Hide these links from the Header on this page',
+              admin: {
+                description:
+                  'Enter the exact path of each Header link to hide on this page (e.g. /collaborate). Press Enter after each. Leave empty to show all header links.',
+              },
+            },
+            {
+              name: 'hideFooterPaths',
+              type: 'text',
+              hasMany: true,
+              label: 'Hide these links from the Footer on this page',
+              admin: {
+                description:
+                  'Enter the exact path of each Footer link to hide on this page. Press Enter after each. Leave empty to show all footer links.',
+              },
+            },
+          ],
+        },
+        {
           label: 'Structured Data',
           fields: [
             {
