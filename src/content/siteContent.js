@@ -396,16 +396,16 @@ const siteContent = {
         "The 0–18 Continuum: a longitudinal, embedded micro-research institution tracking human innovation capacity. 17 years completed; Year 18 ongoing.",
       seo: {
         title: "The 0–18 Continuum | The Institute | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/the-institute",
+        canonical: "https://research.blueblocks.in/the-institute",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
-          url: "https://siddheshv1.lovable.app/the-institute",
+          url: "https://research.blueblocks.in/the-institute",
           title: "The 0–18 Continuum",
           description:
             "A new category of research institution built for questions requiring decades, not semesters — continuous observation from birth to age 18.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/the-institute.jpg",
+            url: "https://research.blueblocks.in/og/the-institute.jpg",
             width: 1200,
             height: 630,
             alt: "Research environment"
@@ -417,8 +417,8 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "WebPage",
           name: "The Institute",
-          url: "https://siddheshv1.lovable.app/the-institute",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" },
+          url: "https://research.blueblocks.in/the-institute",
+          isPartOf: { "@type": "WebSite", url: "https://research.blueblocks.in/" },
           about: {
             "@type": "Thing",
             name: "Longitudinal Micro-Research (0–18)"
@@ -428,8 +428,8 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "The Institute", item: "https://siddheshv1.lovable.app/the-institute" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "The Institute", item: "https://research.blueblocks.in/the-institute" }
           ]
         },
         {
@@ -661,16 +661,16 @@ const siteContent = {
         "Micro Research Methodology: embedded, high-frequency longitudinal observation protocols for tracking human innovation capacity from 0 to 18.",
       seo: {
         title: "Methodology | Micro Research Framework | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/methodology",
+        canonical: "https://research.blueblocks.in/methodology",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
-          url: "https://siddheshv1.lovable.app/methodology",
+          url: "https://research.blueblocks.in/methodology",
           title: "Micro Research Methodology",
           description:
             "High-frequency observation protocols designed for practitioner execution — ecological validity over laboratory control.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/methodology.jpg",
+            url: "https://research.blueblocks.in/og/methodology.jpg",
             width: 1200,
             height: 630,
             alt: "Methodology framework"
@@ -682,16 +682,16 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "WebPage",
           name: "Methodology",
-          url: "https://siddheshv1.lovable.app/methodology",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" },
+          url: "https://research.blueblocks.in/methodology",
+          isPartOf: { "@type": "WebSite", url: "https://research.blueblocks.in/" },
           about: { "@type": "Thing", name: "Micro Research Methodology" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Methodology", item: "https://siddheshv1.lovable.app/methodology" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Methodology", item: "https://research.blueblocks.in/methodology" }
           ]
         },
         {
@@ -1071,16 +1071,16 @@ const siteContent = {
         "Publications, research docket, and open science archive for the Blue Blocks Micro Research Institute longitudinal dataset.",
       seo: {
         title: "Publications & Open Science | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/publications",
+        canonical: "https://research.blueblocks.in/publications",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
-          url: "https://siddheshv1.lovable.app/publications",
+          url: "https://research.blueblocks.in/publications",
           title: "Publications & Open Science",
           description:
             "Research docket, intellectual property registry, and open access materials for the Blue Blocks longitudinal dataset.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/publications.jpg",
+            url: "https://research.blueblocks.in/og/publications.jpg",
             width: 1200,
             height: 630,
             alt: "Open science research archive"
@@ -1090,7 +1090,7 @@ const siteContent = {
           card: "summary_large_image",
           title: "Publications & Open Science | Blue Blocks",
           description: "Research docket and open science archive.",
-          image: "https://siddheshv1.lovable.app/og/publications.jpg"
+          image: "https://research.blueblocks.in/og/publications.jpg"
         }
       },
       schemas: [
@@ -1098,34 +1098,34 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/"
+          url: "https://research.blueblocks.in/"
         },
         {
           "@context": "https://schema.org",
           "@type": "Organization",
           name: "Blue Blocks Micro Research Institute",
-          url: "https://siddheshv1.lovable.app/",
-          logo: "https://siddheshv1.lovable.app/logo.png",
+          url: "https://research.blueblocks.in/",
+          logo: "https://research.blueblocks.in/logo.png",
           email: "research@blueblocks.in"
         },
         {
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           name: "Publications & Open Science",
-          url: "https://siddheshv1.lovable.app/publications",
+          url: "https://research.blueblocks.in/publications",
           description: "Research docket, intellectual property registry, and open access materials.",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" },
+          isPartOf: { "@type": "WebSite", url: "https://research.blueblocks.in/" },
           hasPart: [
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study" },
-            { "@type": "WebPage", url: "https://siddheshv1.lovable.app/publications/iran-war-case-study" }
+            { "@type": "WebPage", url: "https://research.blueblocks.in/publications/saparya-imf-case-study" },
+            { "@type": "WebPage", url: "https://research.blueblocks.in/publications/iran-war-case-study" }
           ]
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Publications", item: "https://siddheshv1.lovable.app/publications" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications" }
           ]
         }
       ],
@@ -1556,16 +1556,16 @@ const siteContent = {
         "Governance & Oversight: privacy architecture, student IP rights, and research council review protocols for embedded longitudinal observation.",
       seo: {
         title: "Governance & Oversight | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/governance",
+        canonical: "https://research.blueblocks.in/governance",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
-          url: "https://siddheshv1.lovable.app/governance",
+          url: "https://research.blueblocks.in/governance",
           title: "Governance & Oversight",
           description:
             "Protocols and oversight ensuring pedagogical integrity, privacy, and research governance standards.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/governance.jpg",
+            url: "https://research.blueblocks.in/og/governance.jpg",
             width: 1200,
             height: 630,
             alt: "Governance and oversight"
@@ -1852,16 +1852,16 @@ const siteContent = {
         "Collaboration pathways for researchers, industry partners, and policy makers seeking access to Blue Blocks Micro Research Institute's longitudinal dataset.",
       seo: {
         title: "Collaborate | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/collaborate",
+        canonical: "https://research.blueblocks.in/collaborate",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
-          url: "https://siddheshv1.lovable.app/collaborate",
+          url: "https://research.blueblocks.in/collaborate",
           title: "Collaborate with the Institute",
           description:
             "Pathways for researchers, industry partners, and policy makers seeking access to the longitudinal dataset.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/collaborate.jpg",
+            url: "https://research.blueblocks.in/og/collaborate.jpg",
             width: 1200,
             height: 630,
             alt: "Collaboration pathways"
@@ -2031,16 +2031,16 @@ const siteContent = {
         "Institutional news, mission milestones, publications, and press materials from Blue Blocks Micro Research Institute.",
       seo: {
         title: "Newsroom | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/newsroom",
+        canonical: "https://research.blueblocks.in/newsroom",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
-          url: "https://siddheshv1.lovable.app/newsroom",
+          url: "https://research.blueblocks.in/newsroom",
           title: "Newsroom",
           description:
             "Institutional news, mission milestones, publications, and press materials.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/newsroom.jpg",
+            url: "https://research.blueblocks.in/og/newsroom.jpg",
             width: 1200,
             height: 630,
             alt: "Institutional newsroom"
@@ -2052,16 +2052,16 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "WebPage",
           name: "Newsroom",
-          url: "https://siddheshv1.lovable.app/newsroom",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" },
+          url: "https://research.blueblocks.in/newsroom",
+          isPartOf: { "@type": "WebSite", url: "https://research.blueblocks.in/" },
           about: { "@type": "Thing", name: "Institutional news and press materials" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://siddheshv1.lovable.app/newsroom" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://research.blueblocks.in/newsroom" }
           ]
         },
         {
@@ -2321,15 +2321,15 @@ const siteContent = {
       metaDescription: "Contact Blue Blocks Micro Research Institute for inquiries, collaborations, and media requests.",
       seo: {
         title: "Contact | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/contact",
+        canonical: "https://research.blueblocks.in/contact",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
-          url: "https://siddheshv1.lovable.app/contact",
+          url: "https://research.blueblocks.in/contact",
           title: "Contact",
           description: "Reach out to Blue Blocks Micro Research Institute for research, media, or partnership inquiries.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/contact.jpg",
+            url: "https://research.blueblocks.in/og/contact.jpg",
             width: 1200,
             height: 630,
             alt: "Contact page visual"
@@ -2341,15 +2341,15 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "ContactPage",
           name: "Contact",
-          url: "https://siddheshv1.lovable.app/contact",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+          url: "https://research.blueblocks.in/contact",
+          isPartOf: { "@type": "WebSite", url: "https://research.blueblocks.in/" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Contact", item: "https://siddheshv1.lovable.app/contact" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Contact", item: "https://research.blueblocks.in/contact" }
           ]
         }
       ],
@@ -2405,15 +2405,15 @@ const siteContent = {
       metaDescription: "Privacy policy for Blue Blocks Micro Research Institute website and data handling.",
       seo: {
         title: "Privacy Policy | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/privacy",
+        canonical: "https://research.blueblocks.in/privacy",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
-          url: "https://siddheshv1.lovable.app/privacy",
+          url: "https://research.blueblocks.in/privacy",
           title: "Privacy Policy",
           description: "Privacy policy detailing data collection, usage, and protection at Blue Blocks Micro Research Institute.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/privacy.jpg",
+            url: "https://research.blueblocks.in/og/privacy.jpg",
             width: 1200,
             height: 630,
             alt: "Privacy policy visual"
@@ -2703,11 +2703,11 @@ const siteContent = {
         canonical: "https://research.blueblocks.in/technical-briefs/sbb-1",
         openGraph: {
           type: "article",
-          url: "https://siddheshv1.lovable.app/technical-briefs/sbb-1",
+          url: "https://research.blueblocks.in/technical-briefs/sbb-1",
           title: "Technical Brief: SBB-1",
           description: "Detailed technical brief on the SBB-1 mission payload and flight qualification.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/technical-briefs/sbb-1.jpg",
+            url: "https://research.blueblocks.in/og/technical-briefs/sbb-1.jpg",
             width: 1200,
             height: 630,
             alt: "SBB-1 technical brief"
@@ -2719,15 +2719,15 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "TechArticle",
           name: "Technical Brief: SBB-1",
-          url: "https://siddheshv1.lovable.app/technical-briefs/sbb-1",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+          url: "https://research.blueblocks.in/technical-briefs/sbb-1",
+          isPartOf: { "@type": "WebSite", url: "https://research.blueblocks.in/" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Technical Briefs", item: "https://siddheshv1.lovable.app/technical-briefs/sbb-1" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Technical Briefs", item: "https://research.blueblocks.in/technical-briefs/sbb-1" }
           ]
         }
       ],
@@ -3269,15 +3269,15 @@ const siteContent = {
       metaDescription: "Internal access portal for Blue Blocks Micro Research Institute staff and researchers.",
       seo: {
         title: "Staff Access | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/staff-access",
+        canonical: "https://research.blueblocks.in/staff-access",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
-          url: "https://siddheshv1.lovable.app/staff-access",
+          url: "https://research.blueblocks.in/staff-access",
           title: "Staff Access",
           description: "Secure internal access portal for staff and researchers.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/staff-access.jpg",
+            url: "https://research.blueblocks.in/og/staff-access.jpg",
             width: 1200,
             height: 630,
             alt: "Staff access portal"
@@ -3289,15 +3289,15 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "WebPage",
           name: "Staff Access",
-          url: "https://siddheshv1.lovable.app/staff-access",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+          url: "https://research.blueblocks.in/staff-access",
+          isPartOf: { "@type": "WebSite", url: "https://research.blueblocks.in/" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Staff Access", item: "https://siddheshv1.lovable.app/staff-access" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Staff Access", item: "https://research.blueblocks.in/staff-access" }
           ]
         }
       ],
@@ -3326,15 +3326,15 @@ const siteContent = {
       metaDescription: "Sitemap for Blue Blocks Micro Research Institute website.",
       seo: {
         title: "Sitemap | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/sitemap",
+        canonical: "https://research.blueblocks.in/sitemap",
         robots: "noindex,follow",
         openGraph: {
           type: "website",
-          url: "https://siddheshv1.lovable.app/sitemap",
+          url: "https://research.blueblocks.in/sitemap",
           title: "Sitemap",
           description: "Comprehensive sitemap of Blue Blocks Micro Research Institute website.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/sitemap.jpg",
+            url: "https://research.blueblocks.in/og/sitemap.jpg",
             width: 1200,
             height: 630,
             alt: "Sitemap visual"
@@ -3346,15 +3346,15 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "WebPage",
           name: "Sitemap",
-          url: "https://siddheshv1.lovable.app/sitemap",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+          url: "https://research.blueblocks.in/sitemap",
+          isPartOf: { "@type": "WebSite", url: "https://research.blueblocks.in/" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Sitemap", item: "https://siddheshv1.lovable.app/sitemap" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Sitemap", item: "https://research.blueblocks.in/sitemap" }
           ]
         }
       ],
@@ -3385,15 +3385,15 @@ const siteContent = {
       metaDescription: "Long-form publications and books by Blue Blocks Micro Research Institute.",
       seo: {
         title: "Books | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/books",
+        canonical: "https://research.blueblocks.in/books",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "collection",
-          url: "https://siddheshv1.lovable.app/books",
+          url: "https://research.blueblocks.in/books",
           title: "Books",
           description: "Long-form publications authored or curated by Blue Blocks Micro Research Institute.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/books.jpg",
+            url: "https://research.blueblocks.in/og/books.jpg",
             width: 1200,
             height: 630,
             alt: "Books collection"
@@ -3405,15 +3405,15 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           name: "Books",
-          url: "https://siddheshv1.lovable.app/books",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+          url: "https://research.blueblocks.in/books",
+          isPartOf: { "@type": "WebSite", url: "https://research.blueblocks.in/" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Books", item: "https://siddheshv1.lovable.app/books" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Books", item: "https://research.blueblocks.in/books" }
           ]
         }
       ],
@@ -3477,15 +3477,15 @@ const siteContent = {
       metaDescription: "Patent registry and intellectual property filings by Blue Blocks Micro Research Institute.",
       seo: {
         title: "Patents | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/patents",
+        canonical: "https://research.blueblocks.in/patents",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "collection",
-          url: "https://siddheshv1.lovable.app/patents",
+          url: "https://research.blueblocks.in/patents",
           title: "Patents",
           description: "Registry of patents and intellectual property filings by Blue Blocks Micro Research Institute.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/patents.jpg",
+            url: "https://research.blueblocks.in/og/patents.jpg",
             width: 1200,
             height: 630,
             alt: "Patents registry"
@@ -3497,15 +3497,15 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           name: "Patents",
-          url: "https://siddheshv1.lovable.app/patents",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+          url: "https://research.blueblocks.in/patents",
+          isPartOf: { "@type": "WebSite", url: "https://research.blueblocks.in/" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Patents", item: "https://research.blueblocks.in/patents" }
           ]
         }
       ],
@@ -3630,15 +3630,15 @@ const siteContent = {
       metaDescription: "Meet the leadership, researchers, and staff of Blue Blocks Micro Research Institute.",
       seo: {
         title: "Team | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/team",
+        canonical: "https://research.blueblocks.in/team",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "collection",
-          url: "https://siddheshv1.lovable.app/team",
+          url: "https://research.blueblocks.in/team",
           title: "Team",
           description: "Leadership, researchers, and staff of Blue Blocks Micro Research Institute.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/team.jpg",
+            url: "https://research.blueblocks.in/og/team.jpg",
             width: 1200,
             height: 630,
             alt: "Team members"
@@ -3650,15 +3650,15 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "CollectionPage",
           name: "Team",
-          url: "https://siddheshv1.lovable.app/team",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+          url: "https://research.blueblocks.in/team",
+          isPartOf: { "@type": "WebSite", url: "https://research.blueblocks.in/" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Team", item: "https://siddheshv1.lovable.app/team" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Team", item: "https://research.blueblocks.in/team" }
           ]
         }
       ],
@@ -3897,15 +3897,15 @@ const siteContent = {
       metaDescription: "Peer-reviewed case study presented at Saparya 7th National Montessori Conference documenting how seventeen adolescent students designed, built, and launched the SBB-1 CubeSat hosted payload.",
       seo: {
         title: "Valorization In Orbit — An Adolescent CubeSat Mission | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study",
+        canonical: "https://research.blueblocks.in/publications/saparya-imf-case-study",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "article",
-          url: "https://siddheshv1.lovable.app/publications/saparya-imf-case-study",
+          url: "https://research.blueblocks.in/publications/saparya-imf-case-study",
           title: "Valorization In Orbit — An Adolescent CubeSat Mission",
           description: "Case study on adolescent CubeSat mission presented at Saparya 7th National Montessori Conference.",
           image: {
-            url: "https://siddheshv1.lovable.app/og/publications/saparya-imf-case-study.jpg",
+            url: "https://research.blueblocks.in/og/publications/saparya-imf-case-study.jpg",
             width: 1200,
             height: 630,
             alt: "SAPARYA Case Study"
@@ -6697,11 +6697,11 @@ const siteContent = {
       metaDescription: "Blue Blocks Micro Research Institute citation standards and guide for affiliated publications and datasets.",
       seo: {
         title: "Citation Standards & Guide | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/publications/citation-standards",
+        canonical: "https://research.blueblocks.in/publications/citation-standards",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "website",
-          url: "https://siddheshv1.lovable.app/publications/citation-standards",
+          url: "https://research.blueblocks.in/publications/citation-standards",
           title: "Citation Standards & Guide",
           description: "Policy requirements for all affiliated publications and datasets."
         }
@@ -6711,16 +6711,16 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "WebPage",
           name: "Citation Standards & Guide",
-          url: "https://siddheshv1.lovable.app/publications/citation-standards",
-          isPartOf: { "@type": "WebSite", url: "https://siddheshv1.lovable.app/" }
+          url: "https://research.blueblocks.in/publications/citation-standards",
+          isPartOf: { "@type": "WebSite", url: "https://research.blueblocks.in/" }
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Publications", item: "https://siddheshv1.lovable.app/publications" },
-            { "@type": "ListItem", position: 3, name: "Citation Standards", item: "https://siddheshv1.lovable.app/publications/citation-standards" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications" },
+            { "@type": "ListItem", position: 3, name: "Citation Standards", item: "https://research.blueblocks.in/publications/citation-standards" }
           ]
         }
       ],
@@ -6820,11 +6820,11 @@ const siteContent = {
       metaDescription: "Patent filing for System for Automated Security UAV — a responsive aerial surveillance system developed by Blue Blocks Micro Research Institute students.",
       seo: {
         title: "Patent Portfolio : System for Automated Security (UAV) | Patents | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/patents/automated-security-uav",
+        canonical: "https://research.blueblocks.in/patents/automated-security-uav",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "article",
-          url: "https://siddheshv1.lovable.app/patents/automated-security-uav",
+          url: "https://research.blueblocks.in/patents/automated-security-uav",
           title: "Patent: System for Automated Security (UAV)",
           description: "Utility patent for a responsive aerial surveillance system."
         }
@@ -6949,14 +6949,14 @@ const siteContent = {
       metaDescription: "Patent filing for Borehole Rescue System — a vertical-access rescue apparatus developed by Blue Blocks Micro Research Institute students.",
       seo: {
         title: "Patent Portfolio : Borehole Rescue System (BRS) | Patents | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/patents/borehole-rescue-system",
+        canonical: "https://research.blueblocks.in/patents/borehole-rescue-system",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
       },
       schemas: [
         { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-          { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
-          { "@type": "ListItem", position: 3, name: "Borehole Rescue System", item: "https://siddheshv1.lovable.app/patents/borehole-rescue-system" }
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+          { "@type": "ListItem", position: 2, name: "Patents", item: "https://research.blueblocks.in/patents" },
+          { "@type": "ListItem", position: 3, name: "Borehole Rescue System", item: "https://research.blueblocks.in/patents/borehole-rescue-system" }
         ]}
       ],
       stickyCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18610200", type: "external" },
@@ -7072,14 +7072,14 @@ const siteContent = {
       metaDescription: "Patent filing for Autonomous Contactless Delivery System — an autonomous logistics ecosystem engineered for contactless distribution during high-risk contagion scenarios.",
       seo: {
         title: "Patent Portfolio : Autonomous Contactless Delivery System (ACDS) | Patents | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/patents/contactless-delivery-system",
+        canonical: "https://research.blueblocks.in/patents/contactless-delivery-system",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
       },
       schemas: [
         { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-          { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
-          { "@type": "ListItem", position: 3, name: "Contactless Delivery System", item: "https://siddheshv1.lovable.app/patents/contactless-delivery-system" }
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+          { "@type": "ListItem", position: 2, name: "Patents", item: "https://research.blueblocks.in/patents" },
+          { "@type": "ListItem", position: 3, name: "Contactless Delivery System", item: "https://research.blueblocks.in/patents/contactless-delivery-system" }
         ]}
       ],
       stickyCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18610450", type: "external" },
@@ -7195,14 +7195,14 @@ const siteContent = {
       metaDescription: "Patent filing for Autonomous Medical Assistance System — a telerobotic intervention platform designed for contactless medical support during epidemiological crises.",
       seo: {
         title: "Patent Portfolio : Autonomous Medical Assistance System (AMAS) | Patents | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system",
+        canonical: "https://research.blueblocks.in/patents/autonomous-medical-assistance-system",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
       },
       schemas: [
         { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-          { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
-          { "@type": "ListItem", position: 3, name: "Autonomous Medical Assistance System", item: "https://siddheshv1.lovable.app/patents/autonomous-medical-assistance-system" }
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+          { "@type": "ListItem", position: 2, name: "Patents", item: "https://research.blueblocks.in/patents" },
+          { "@type": "ListItem", position: 3, name: "Autonomous Medical Assistance System", item: "https://research.blueblocks.in/patents/autonomous-medical-assistance-system" }
         ]}
       ],
       stickyCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18610847", type: "external" },
@@ -7318,14 +7318,14 @@ const siteContent = {
       metaDescription: "Patent filing for Autonomous Health Monitoring System — a remote epidemiological surveillance network developed by Blue Blocks Micro Research Institute students.",
       seo: {
         title: "Patent Portfolio : Autonomous Health Monitoring System (AHMS) | Patents | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system",
+        canonical: "https://research.blueblocks.in/patents/autonomous-health-monitoring-system",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
       },
       schemas: [
         { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-          { "@type": "ListItem", position: 2, name: "Patents", item: "https://siddheshv1.lovable.app/patents" },
-          { "@type": "ListItem", position: 3, name: "Autonomous Health Monitoring System", item: "https://siddheshv1.lovable.app/patents/autonomous-health-monitoring-system" }
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+          { "@type": "ListItem", position: 2, name: "Patents", item: "https://research.blueblocks.in/patents" },
+          { "@type": "ListItem", position: 3, name: "Autonomous Health Monitoring System", item: "https://research.blueblocks.in/patents/autonomous-health-monitoring-system" }
         ]}
       ],
       stickyCta: { label: "View on Zenodo", href: "https://doi.org/10.5281/zenodo.18628995", type: "external" },
@@ -7442,11 +7442,11 @@ const siteContent = {
       metaDescription: "Lining The Nest - A guide for families and educators on building structured learning environments by Blue Blocks Micro Research Institute.",
       seo: {
         title: "Lining The Nest | Books | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/books/lining-the-nest",
+        canonical: "https://research.blueblocks.in/books/lining-the-nest",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "book",
-          url: "https://siddheshv1.lovable.app/books/lining-the-nest",
+          url: "https://research.blueblocks.in/books/lining-the-nest",
           title: "Lining The Nest",
           description: "A guide for families and educators on building structured learning environments."
         }
@@ -7618,11 +7618,11 @@ const siteContent = {
       metaDescription: "Profile of Pavan Goyal, Principal Investigator and Founder of Blue Blocks Micro Research Institute.",
       seo: {
         title: "Pavan Goyal | Team | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/team/pavan-goyal",
+        canonical: "https://research.blueblocks.in/team/pavan-goyal",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "profile",
-          url: "https://siddheshv1.lovable.app/team/pavan-goyal",
+          url: "https://research.blueblocks.in/team/pavan-goyal",
           title: "Pavan Goyal - Principal Investigator",
           description: "Profile of Pavan Goyal, Principal Investigator and Founder."
         }
@@ -7632,7 +7632,7 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Pavan Goyal",
-          url: "https://siddheshv1.lovable.app/team/pavan-goyal",
+          url: "https://research.blueblocks.in/team/pavan-goyal",
           jobTitle: "Principal Investigator & Founder",
           worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
         },
@@ -7640,9 +7640,9 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Team", item: "https://siddheshv1.lovable.app/team" },
-            { "@type": "ListItem", position: 3, name: "Pavan Goyal", item: "https://siddheshv1.lovable.app/team/pavan-goyal" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Team", item: "https://research.blueblocks.in/team" },
+            { "@type": "ListItem", position: 3, name: "Pavan Goyal", item: "https://research.blueblocks.in/team/pavan-goyal" }
           ]
         }
       ],
@@ -7705,11 +7705,11 @@ const siteContent = {
       metaDescription: "Profile of Munira Hussain, Director of Pedagogy at Blue Blocks Micro Research Institute.",
       seo: {
         title: "Munira Hussain | Team | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/team/munira-hussain",
+        canonical: "https://research.blueblocks.in/team/munira-hussain",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
         openGraph: {
           type: "profile",
-          url: "https://siddheshv1.lovable.app/team/munira-hussain",
+          url: "https://research.blueblocks.in/team/munira-hussain",
           title: "Munira Hussain - Director of Pedagogy",
           description: "Profile of Munira Hussain, Director of Pedagogy."
         }
@@ -7719,7 +7719,7 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Munira Hussain",
-          url: "https://siddheshv1.lovable.app/team/munira-hussain",
+          url: "https://research.blueblocks.in/team/munira-hussain",
           jobTitle: "Director of Pedagogy",
           worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
         },
@@ -7727,9 +7727,9 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Team", item: "https://siddheshv1.lovable.app/team" },
-            { "@type": "ListItem", position: 3, name: "Munira Hussain", item: "https://siddheshv1.lovable.app/team/munira-hussain" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Team", item: "https://research.blueblocks.in/team" },
+            { "@type": "ListItem", position: 3, name: "Munira Hussain", item: "https://research.blueblocks.in/team/munira-hussain" }
           ]
         }
       ],
@@ -8629,7 +8629,7 @@ const siteContent = {
       metaDescription: "Information about the Adolescent Research Cohort at Blue Blocks Micro Research Institute.",
       seo: {
         title: "Adolescent Research Cohort | Team | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/team/adolescent-research-cohort",
+        canonical: "https://research.blueblocks.in/team/adolescent-research-cohort",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
       },
       schemas: [
@@ -8637,9 +8637,9 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Team", item: "https://siddheshv1.lovable.app/team" },
-            { "@type": "ListItem", position: 3, name: "Adolescent Research Cohort", item: "https://siddheshv1.lovable.app/team/adolescent-research-cohort" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Team", item: "https://research.blueblocks.in/team" },
+            { "@type": "ListItem", position: 3, name: "Adolescent Research Cohort", item: "https://research.blueblocks.in/team/adolescent-research-cohort" }
           ]
         }
       ],
@@ -8679,7 +8679,7 @@ const siteContent = {
       metaDescription: "Official dispatch on Blue Blocks payload authorization for ISRO PSLV-C62 mission.",
       seo: {
         title: "ISRO Payload Authorization | Newsroom | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/newsroom/dispatch/isro-payload-authorization",
+        canonical: "https://research.blueblocks.in/newsroom/dispatch/isro-payload-authorization",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
       },
       schemas: [
@@ -8687,15 +8687,15 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "NewsArticle",
           name: "ISRO Payload Authorization Dispatch",
-          url: "https://siddheshv1.lovable.app/newsroom/dispatch/isro-payload-authorization"
+          url: "https://research.blueblocks.in/newsroom/dispatch/isro-payload-authorization"
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://siddheshv1.lovable.app/newsroom" },
-            { "@type": "ListItem", position: 3, name: "ISRO Payload Authorization", item: "https://siddheshv1.lovable.app/newsroom/dispatch/isro-payload-authorization" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://research.blueblocks.in/newsroom" },
+            { "@type": "ListItem", position: 3, name: "ISRO Payload Authorization", item: "https://research.blueblocks.in/newsroom/dispatch/isro-payload-authorization" }
           ]
         }
       ],
@@ -9567,7 +9567,7 @@ const siteContent = {
       metaDescription: "Information about visiting scholar applications for the 2026 Winter Residency at Blue Blocks Micro Research Institute.",
       seo: {
         title: "Visiting Scholars 2026 | Newsroom | Blue Blocks Micro Research Institute",
-        canonical: "https://siddheshv1.lovable.app/newsroom/updates/visiting-scholars-2026",
+        canonical: "https://research.blueblocks.in/newsroom/updates/visiting-scholars-2026",
         robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"
       },
       schemas: [
@@ -9575,16 +9575,16 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "NewsArticle",
           name: "Visiting Scholar Applications 2026",
-          url: "https://siddheshv1.lovable.app/newsroom/updates/visiting-scholars-2026",
+          url: "https://research.blueblocks.in/newsroom/updates/visiting-scholars-2026",
           datePublished: "2025-08-10"
         },
         {
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
           itemListElement: [
-            { "@type": "ListItem", position: 1, name: "Home", item: "https://siddheshv1.lovable.app/" },
-            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://siddheshv1.lovable.app/newsroom" },
-            { "@type": "ListItem", position: 3, name: "Visiting Scholars 2026", item: "https://siddheshv1.lovable.app/newsroom/updates/visiting-scholars-2026" }
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" },
+            { "@type": "ListItem", position: 2, name: "Newsroom", item: "https://research.blueblocks.in/newsroom" },
+            { "@type": "ListItem", position: 3, name: "Visiting Scholars 2026", item: "https://research.blueblocks.in/newsroom/updates/visiting-scholars-2026" }
           ]
         }
       ],
