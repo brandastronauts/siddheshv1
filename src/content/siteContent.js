@@ -3804,6 +3804,13 @@ const siteContent = {
               body: "B.Tech Computer Science & Data Science. Supports digitization, coding, and structuring of Montessori observation records into standardized research datasets.",
               image: { src: "/src/assets/placeholders/avatars/vinay-donakanti.webp", alt: "D. Vinay Shyam Donakanti", variant: "avatar", privacyBlur: false },
               cta: { label: "View Profile", href: "/governance/team/vinay-shyam-donakanti" }
+            },
+            {
+              headline: "Dr. Raunak Sharma",
+              tag: "PhD in Biological Sciences | Plant–Microbiome Research Lead",
+              body: "Listening to the underground conversations — where roots, microbes, and children all signal in languages adults rarely stop to hear.",
+              image: { src: "/src/assets/placeholders/avatars/raunak-sharma.webp", alt: "Dr. Raunak Sharma", variant: "avatar", privacyBlur: false },
+              cta: { label: "View Profile", href: "/governance/team/dr-raunak-sharma" }
             }
           ]
         },
