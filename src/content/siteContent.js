@@ -8515,12 +8515,66 @@ const siteContent = {
         {
           "@context": "https://schema.org",
           "@type": "Person",
+          "@id": `${SITE_URL}/governance/team/dr-raunak-sharma#person`,
           name: "Dr. Raunak Sharma",
+          givenName: "Raunak",
+          familyName: "Sharma",
+          honorificPrefix: "Dr.",
           url: `${SITE_URL}/governance/team/dr-raunak-sharma`,
+          mainEntityOfPage: `${SITE_URL}/governance/team/dr-raunak-sharma`,
           jobTitle: "Plant–Microbiome Research Lead; Science Research & Communications Associate",
           image: `${SITE_URL}/team/dr-raunak-sharma.webp`,
-          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
-          description: "PhD in Biological Sciences (BITS Pilani – Hyderabad, 2025). Plant–microbiome researcher and science communicator studying beneficial soil bacteria and plant–microbe interactions."
+          gender: "Female",
+          nationality: { "@type": "Country", name: "India" },
+          worksFor: {
+            "@type": "Organization",
+            name: "Blue Blocks Micro Research Institute",
+            url: SITE_URL
+          },
+          alumniOf: [
+            {
+              "@type": "CollegeOrUniversity",
+              name: "Birla Institute of Technology and Science, Pilani – Hyderabad Campus",
+              url: "https://www.bits-pilani.ac.in/hyderabad/"
+            },
+            {
+              "@type": "CollegeOrUniversity",
+              name: "Regional Centre for Biotechnology (UNESCO Category II)",
+              url: "https://rcb.res.in/"
+            }
+          ],
+          hasCredential: [
+            {
+              "@type": "EducationalOccupationalCredential",
+              credentialCategory: "degree",
+              educationalLevel: "PhD",
+              name: "PhD, Biological Sciences",
+              recognizedBy: { "@type": "CollegeOrUniversity", name: "BITS Pilani – Hyderabad" },
+              dateCreated: "2025"
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              credentialCategory: "certification",
+              name: "CSIR-NET (Life Sciences)"
+            },
+            {
+              "@type": "EducationalOccupationalCredential",
+              credentialCategory: "certification",
+              name: "GATE"
+            }
+          ],
+          knowsAbout: [
+            "Plant–Microbiome Interactions",
+            "Beneficial Soil Bacteria",
+            "Cell-Wall Biochemistry",
+            "Metabolic Phenotyping",
+            "LC-MS",
+            "GC-MS",
+            "Science Communication",
+            "Montessori Science Pedagogy"
+          ],
+          knowsLanguage: ["English", "Hindi"],
+          description: "PhD in Biological Sciences (BITS Pilani – Hyderabad, 2025). Plant–microbiome researcher and science communicator studying beneficial soil bacteria and plant–microbe interactions, with eight peer-reviewed publications and prior editorial work at the Journal of Visualized Experiments."
         },
         {
           "@context": "https://schema.org",
