@@ -64,6 +64,7 @@ export const sitemapData = {
     { name: "Sruthi Matta", url: "/governance/team/sruthi-matta", status: "complete" },
     { name: "Sreedhar Reddy Boddu", url: "/governance/team/sreedhar-reddy-boddu", status: "complete" },
     { name: "Vinay Shyam Donakanti", url: "/governance/team/vinay-shyam-donakanti", status: "complete" },
+    { name: "Dr. Raunak Sharma", url: "/governance/team/dr-raunak-sharma", status: "complete" },
   ],
   downloads: [
     { name: "Downloads Hub", url: "/downloads", status: "complete" },
