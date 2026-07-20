@@ -8490,6 +8490,124 @@ const siteContent = {
       ]
     },
 
+    "/governance/team/dr-raunak-sharma": {
+      title: "Dr. Raunak Sharma",
+      metaDescription: "Plant–Microbiome Research Lead; Science Research & Communications Associate. PhD, Biological Sciences, BITS Pilani – Hyderabad (2025).",
+      seo: {
+        title: "Dr. Raunak Sharma | Governance Team | Blue Blocks Micro Research Institute",
+        canonical: `${SITE_URL}/governance/team/dr-raunak-sharma`,
+        robots: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+        openGraph: {
+          type: "profile",
+          url: `${SITE_URL}/governance/team/dr-raunak-sharma`,
+          title: "Dr. Raunak Sharma — Plant–Microbiome Research Lead",
+          description: "Plant–Microbiome Research Lead; Science Research & Communications Associate. PhD, Biological Sciences, BITS Pilani – Hyderabad (2025).",
+          image: `${SITE_URL}/team/dr-raunak-sharma.webp`
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: "Dr. Raunak Sharma — Plant–Microbiome Research Lead",
+          description: "Plant–Microbiome Research Lead; Science Research & Communications Associate. PhD, Biological Sciences, BITS Pilani – Hyderabad (2025).",
+          image: `${SITE_URL}/team/dr-raunak-sharma.webp`
+        }
+      },
+      schemas: [
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Dr. Raunak Sharma",
+          url: `${SITE_URL}/governance/team/dr-raunak-sharma`,
+          jobTitle: "Plant–Microbiome Research Lead; Science Research & Communications Associate",
+          image: `${SITE_URL}/team/dr-raunak-sharma.webp`,
+          worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
+          description: "PhD in Biological Sciences (BITS Pilani – Hyderabad, 2025). Plant–microbiome researcher and science communicator studying beneficial soil bacteria and plant–microbe interactions."
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+            { "@type": "ListItem", position: 2, name: "Governance", item: `${SITE_URL}/governance` },
+            { "@type": "ListItem", position: 3, name: "Team", item: `${SITE_URL}/team` },
+            { "@type": "ListItem", position: 4, name: "Dr. Raunak Sharma", item: `${SITE_URL}/governance/team/dr-raunak-sharma` }
+          ]
+        }
+      ],
+      sections: [
+        {
+          id: "profile-hero",
+          type: "hero",
+          variant: "stark",
+          headline: "Dr. Raunak Sharma",
+          subheadline: "PhD in Biological Sciences | Plant–Microbiome Research Lead",
+          primaryCta: { label: "Contact", href: "mailto:research@blueblocks.in" },
+          secondaryCta: { label: "Back to Team", href: "/team" },
+          image: { src: "/src/assets/placeholders/avatars/raunak-sharma.webp", alt: "Dr. Raunak Sharma", variant: "hero" }
+        },
+        {
+          id: "profile-meta",
+          type: "metaStrip",
+          items: [
+            { label: "Role", value: "Plant–Microbiome Research Lead; Science Research & Communications Associate" },
+            { label: "PhD", value: "Biological Sciences, BITS Pilani – Hyderabad (2025)" },
+            { label: "Qualified", value: "CSIR-NET (Life Sciences); GATE" }
+          ]
+        },
+        {
+          id: "profile-card",
+          type: "profile",
+          name: "Dr. Raunak Sharma",
+          role: "Plant–Microbiome Research Lead; Science Research & Communications Associate",
+          image: { src: "/src/assets/placeholders/avatars/raunak-sharma.webp", alt: "Dr. Raunak Sharma", variant: "avatar" },
+          email: "research@blueblocks.in",
+          socials: [],
+          bio: "Listening to the underground conversations — where roots, microbes, and children all signal in languages adults rarely stop to hear."
+        },
+        {
+          id: "profile-pullquote",
+          type: "textBlock",
+          header: "",
+          body: "> \"How do we discover the truth about things that are completely invisible? What is happening in the spaces beyond our sight?\"\n\n— A question he carried from childhood, and never stopped chasing"
+        },
+        {
+          id: "profile-content",
+          type: "textBlock",
+          header: "",
+          body: "Dr. Raunak Sharma spent seven years learning to eavesdrop on a conversation most people never notice, the chemical dialogue between plant roots and the dense cloud of microbes in the soil around them. At BITS Pilani and, earlier, at the UNESCO-Regional Centre for Biotechnology, he mapped how beneficial soil bacteria help plants survive drought, salinity, and stress, publishing eight peer-reviewed papers on plant–microbe interactions, cell-wall biochemistry, and metabolic phenotyping using LC-MS and GC-MS.\n\nThen she moved from the journal to the garden. As Science Editor at the Journal of Visualized Experiments, she spent a year judging what makes scientific work rigorous; as a researcher, she spent years watching hidden systems respond to invisible signals. At Blue Blocks, she applies both lenses to a different kind of ecosystem: the child. \"A child in a garden is already running experiments,\" she observes. \"They isolate textures, profile smells, look for gradients in the soil. They are born researchers; we're just usually too hurried to see it.\""
+        },
+        {
+          id: "profile-pullquote-2",
+          type: "textBlock",
+          header: "",
+          body: "> \"Children, much like the hidden microbes in a thriving ecosystem, are the invisible architects of their environments, constantly sensing, signalling, and altering the world around them in ways adults are too hurried to see.\""
+        },
+        {
+          id: "profile-lens",
+          type: "textBlock",
+          header: "The Researcher's Lens: The Child as Scientist",
+          body: "Dr. Sharma sees the child not as a subject of study, but as a fellow investigator — one whose curiosity has not yet been narrowed by academic convention. At Blue Blocks he brings the discipline of the microbiology lab into the classroom: precise observation, patient documentation, and the willingness to sit with an invisible process long enough for it to reveal itself."
+        },
+        {
+          id: "profile-at-bb",
+          type: "textBlock",
+          header: "At Blue Blocks",
+          body: "Dr. Sharma leads plant–microbiome research modules for adolescent investigators, mentors science communication across the 0–18 continuum, and helps translate laboratory-grade rigor into classroom-scale inquiry. He bridges the Institute's biological research programme with its editorial and publications workflow."
+        },
+        {
+          id: "profile-related",
+          type: "relatedCards",
+          header: "Related",
+          cards: [
+            { title: "All Team", description: "View profiles.", icon: "team", href: "/team" },
+            { title: "Governance", description: "Leadership structure.", icon: "governance", href: "/governance" },
+            { title: "Research Team", description: "Research colleagues.", icon: "users", href: "/governance#gov-research-team" }
+          ]
+        }
+      ]
+    },
+
+
+
     "/governance/team/dr-shobha-ediga": {
       title: "Dr. Shobha Ediga",
       metaDescription: "Microbiological & Biochemical Research Lead; Erdkinder Biology Mentor. Plant Sciences, University of Hyderabad (2013).",
