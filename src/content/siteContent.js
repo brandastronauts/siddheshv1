@@ -8526,6 +8526,7 @@ const siteContent = {
           mainEntityOfPage: `${SITE_URL}/governance/team/dr-raunak-sharma`,
           jobTitle: "Plant–Microbiome Research Lead; Science Research & Communications Associate",
           image: `${SITE_URL}/team/dr-raunak-sharma.webp`,
+          sameAs: ["https://www.linkedin.com/in/raunak-sharma-7b324298/"],
           gender: "Female",
           nationality: { "@type": "Country", name: "India" },
           worksFor: {
