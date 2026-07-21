@@ -1732,6 +1732,14 @@ const siteContent = {
               cta: { label: "View Profile", href: "/governance/team/dr-shobha-ediga" }
             },
             {
+              headline: "Dr. Raunak Sharma",
+              tag: "PhD in Biological Sciences | Plant–Microbiome Research Lead",
+              body: "Listening to the underground conversations — where roots, microbes, and children all signal in languages adults rarely stop to hear.",
+              image: { src: "/src/assets/placeholders/avatars/raunak-sharma.webp", alt: "Dr. Raunak Sharma", variant: "avatar", privacyBlur: false },
+              linkedin: "https://www.linkedin.com/in/raunak-sharma-7b324298/",
+              cta: { label: "View Profile", href: "/governance/team/dr-raunak-sharma" }
+            },
+            {
               headline: "Sreedhar Reddy Boddu",
               tag: "Research & Data Analyst",
               body: "**Training:** B.Tech Civil Engineering (NIT Goa); Data Science & Analytics Certifications\n\nSupports ETL processes, dashboard development, and structured data visualization for classroom observation records. Contributes to predictive modeling frameworks and KPI tracking within the institute's longitudinal dataset architecture.",
@@ -1744,13 +1752,6 @@ const siteContent = {
               body: "**Training:** B.Tech Computer Science & Data Science\n\nSupports digitization, coding, and structuring of Montessori observation records into standardized research datasets. Assists in data pipeline development, analytics documentation, and longitudinal data consistency across the 0–18 research archive.",
               image: { src: "/src/assets/placeholders/avatars/vinay-donakanti.webp", alt: "D. Vinay Shyam Donakanti", variant: "avatar", privacyBlur: false },
               cta: { label: "View Profile", href: "/governance/team/vinay-shyam-donakanti" }
-            },
-            {
-              headline: "Dr. Raunak Sharma",
-              tag: "PhD in Biological Sciences | Plant–Microbiome Research Lead",
-              body: "Listening to the underground conversations — where roots, microbes, and children all signal in languages adults rarely stop to hear.",
-              image: { src: "/src/assets/placeholders/avatars/raunak-sharma.webp", alt: "Dr. Raunak Sharma", variant: "avatar", privacyBlur: false },
-              cta: { label: "View Profile", href: "/governance/team/dr-raunak-sharma" }
             }
           ]
         },
