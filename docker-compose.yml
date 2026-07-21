@@ -8,6 +8,6 @@ services:
     container_name: brandastronauts-app
     restart: always
     ports:
-      - "127.0.0.1:3019:80"
+      - "127.0.0.1:3019:8080"
     environment:
       - NODE_ENV=production

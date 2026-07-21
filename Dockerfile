@@ -15,8 +15,8 @@ COPY . .
 # Build the production bundle
 RUN npm run build
 
-# Stage 2: Production web server stage
-FROM nginx:alpine
+# Stage 2: Production web server stage (unprivileged non-root user)
+FROM nginxinc/nginx-unprivileged:alpine
 
 # Copy custom Nginx web server configuration
 COPY nginx.conf /etc/nginx/conf.d/default.conf
@@ -24,8 +24,8 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 # Copy compiled static assets from build stage
 COPY --from=build /app/dist /usr/share/nginx/html
 
-# Expose HTTP port
-EXPOSE 80
+# Expose unprivileged HTTP port
+EXPOSE 8080
 
 # Start Nginx in foreground
 CMD ["nginx", "-g", "daemon off;"]
