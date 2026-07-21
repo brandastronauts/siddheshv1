@@ -8616,7 +8616,9 @@ const siteContent = {
           role: "Plant–Microbiome Research Lead; Science Research & Communications Associate",
           image: { src: "/src/assets/placeholders/avatars/raunak-sharma.webp", alt: "Dr. Raunak Sharma", variant: "avatar" },
           email: "research@blueblocks.in",
-          socials: [],
+          socials: [
+            { type: "linkedin", href: "https://www.linkedin.com/in/raunak-sharma-7b324298/", label: "LinkedIn" }
+          ],
           bio: "Listening to the underground conversations — where roots, microbes, and children all signal in languages adults rarely stop to hear."
         },
         {
