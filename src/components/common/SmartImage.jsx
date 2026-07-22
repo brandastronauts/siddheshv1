@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { resolveAssetUrl } from '@/lib/assetResolver';
 
 // Import fallback images
 import heroDefault from '@/assets/placeholders/hero-default.jpg';
@@ -180,7 +181,7 @@ const defaultDimensions = {
 const resolveImageSrc = (src) => {
   if (!src || src.trim() === '') return null;
   if (imageMap[src]) return imageMap[src];
-  return src;
+  return resolveAssetUrl(src);
 };
 
 const SmartImage = ({

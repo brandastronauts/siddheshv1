@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink } from 'lucide-react';
 import { boldifyText } from '../../lib/boldifyText';
+import { resolveAssetUrl } from '../../lib/assetResolver';
 
 // --- Sub-components ---
 
@@ -104,7 +105,8 @@ const HeroSection = ({
   const altCta = secondaryCta;
   const isCompact = variant === 'publication' || variant === 'archive';
 
-  const bgUrl = heroImage?.src || '/ui/site-banner.webp';
+  const rawBgUrl = heroImage?.src || '/ui/site-banner.webp';
+  const bgUrl = resolveAssetUrl(rawBgUrl);
 
   return (
     <section className={`relative overflow-hidden ${isCompact ? 'min-h-[200px] md:min-h-[260px]' : 'min-h-[420px] md:min-h-[520px]'} flex items-center`}>
