@@ -133,21 +133,6 @@ function prerenderSchemasPlugin() {
           );
         }
 
-        // Replace meta keywords
-        if (meta?.keywords) {
-          if (html.includes('name="keywords"')) {
-            html = html.replace(
-              /<meta name="keywords" content="[^"]*" \/>/,
-              `<meta name="keywords" content="${escHtml(meta.keywords)}" />`
-            );
-          } else {
-            html = html.replace(
-              '</head>',
-              `    <meta name="keywords" content="${escHtml(meta.keywords)}" />\n  </head>`
-            );
-          }
-        }
-
         // Replace canonical — ALWAYS self-referencing
         const canonical = meta?.canonical || `${SITE_URL}${route}`;
         html = html.replace(
@@ -190,7 +175,7 @@ function prerenderSchemasPlugin() {
           const twMap: Record<string, string | undefined> = {
             'twitter:title': twitter.title,
             'twitter:description': twitter.description,
-            'twitter:image': twitter.image,
+            'twitter:image': openGraph?.image || twitter.image,
           };
           for (const [prop, val] of Object.entries(twMap)) {
             if (val) {
@@ -298,22 +283,10 @@ function prerenderSchemasPlugin() {
               /(<meta property="og:image" content=")[^"]*(")/,
               `$1${escHtml(cleanImage)}$2`
             );
-          }
-
-          // Replace keywords
-          const keywords = pageData.seo?.keywords;
-          if (keywords) {
-            if (html.includes('name="keywords"')) {
-              html = html.replace(
-                /<meta name="keywords" content="[^"]*" \/>/,
-                `<meta name="keywords" content="${escHtml(keywords)}" />`
-              );
-            } else {
-              html = html.replace(
-                '</head>',
-                `    <meta name="keywords" content="${escHtml(keywords)}" />\n  </head>`
-              );
-            }
+            html = html.replace(
+              /(<meta name="twitter:image" content=")[^"]*(")/,
+              `$1${escHtml(cleanImage)}$2`
+            );
           }
 
           await writeRoute(route, html, pageData);
