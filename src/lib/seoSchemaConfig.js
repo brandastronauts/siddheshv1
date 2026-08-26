@@ -20,7 +20,7 @@ export const PERMANENT_IDS = Object.freeze({
 
 export const SITE_URL = 'https://research.blueblocks.in';
 export const PARENT_URL = 'https://www.blueblocks.in';
-export const OG_SITE_NAME = 'Blue Blocks Montessori School';
+export const OG_SITE_NAME = 'Blue Blocks Micro Research Institute';
 export const ORG_NAME = 'Blue Blocks Micro Research Institute';
 
 // ─── Dev warning guard ───────────────────────────────────────────────────────
@@ -62,7 +62,7 @@ const seoSchemaConfig = {
   // ═══ PAGE 1: HOME ═══════════════════════════════════════════════════════════
   '/': {
     meta: {
-      title: "Children are the Data",
+      title: "Children Are the Data | Blue Blocks Micro Research Institute",
       description: "17-year longitudinal panel of 1045 children tracking human innovation capacity from birth to age 18. Embedded observation within an AMI Montessori environment in Hyderabad, India.",
       keywords: 'micro research institute, child development research, longitudinal panel, Montessori research, innovation pedagogy, Blue Blocks Micro Research Institute, Blue Blocks, Hyderabad, CubeSat education, ISRO, student patents',
       robots: 'index, follow',
