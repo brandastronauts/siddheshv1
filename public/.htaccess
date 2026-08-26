@@ -65,8 +65,11 @@ DirectorySlash Off
   RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
   RewriteRule ^(.+)$ /$1/index.html [L]
 
-  # ── SPA fallback: serve root index.html for routes without pre-rendered HTML ──
-  RewriteRule . /index.html [L]
+  # ── Unknown route: return a true HTTP 404 (never a soft 200 SPA shell) ──
+  # Every valid route is pre-rendered to /<route>/index.html by the build, so
+  # anything reaching this point does not exist. ErrorDocument serves /404.html.
+  RewriteRule . - [R=404,L]
+
 </IfModule>
 
 # Cache static assets
