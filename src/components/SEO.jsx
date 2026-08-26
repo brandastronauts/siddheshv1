@@ -4,7 +4,7 @@ import { useLocation } from 'react-router-dom';
 const BASE_URL = 'https://research.blueblocks.in';
 const SITE_NAME = 'Blue Blocks Micro Research Institute';
 const OG_SITE_NAME = 'Blue Blocks Montessori School';
-const DEFAULT_OG_IMAGE = `${BASE_URL}/images/og-home.jpg`;
+const DEFAULT_OG_IMAGE = `${BASE_URL}/og/home.jpg`;
 const DEFAULT_DESCRIPTION =
   'A longitudinal research institute studying innovation, Montessori development, and human potential through continuous observation from birth to adulthood.';
 

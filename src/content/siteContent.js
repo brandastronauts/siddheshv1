@@ -55,7 +55,7 @@ const siteContent = {
           description:
             "17-year longitudinal panel of 1045 children tracking human innovation capacity from birth to age 18. Embedded observation within an AMI Montessori environment in Hyderabad, India.",
           image: {
-            url: "https://research.blueblocks.in/images/og-home.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Children are the Data"
@@ -66,7 +66,7 @@ const siteContent = {
           title: "Children are the Data",
           description:
             "17-year longitudinal panel of 1045 children tracking human innovation capacity from birth to age 18. Embedded observation within an AMI Montessori environment in Hyderabad, India.",
-          image: "https://research.blueblocks.in/images/og-home.jpg"
+          image: "https://research.blueblocks.in/og/home.jpg"
         }
       },
 
@@ -405,7 +405,7 @@ const siteContent = {
           description:
             "A new category of research institution built for questions requiring decades, not semesters — continuous observation from birth to age 18.",
           image: {
-            url: "https://research.blueblocks.in/og/the-institute.jpg",
+            url: "https://research.blueblocks.in/og/institute.jpg",
             width: 1200,
             height: 630,
             alt: "Research environment"
@@ -1080,7 +1080,7 @@ const siteContent = {
           description:
             "Research docket, intellectual property registry, and open access materials for the Blue Blocks longitudinal dataset.",
           image: {
-            url: "https://research.blueblocks.in/og/publications.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Open science research archive"
@@ -1090,7 +1090,7 @@ const siteContent = {
           card: "summary_large_image",
           title: "Publications & Open Science | Blue Blocks",
           description: "Research docket and open science archive.",
-          image: "https://research.blueblocks.in/og/publications.jpg"
+          image: "https://research.blueblocks.in/og/home.jpg"
         }
       },
       schemas: [
@@ -1433,7 +1433,7 @@ const siteContent = {
           type: "textBlock",
           header: "Open Access Repository",
           body:
-            "Our Open Access materials are available through the Zenodo Community Repository. When the official Blue Blocks Zenodo profile is published, a direct link will appear here. Until then, methodology papers and aggregate datasets can be requested via our Collaborate page."
+            "Our Open Access materials are available through the Zenodo Community Repository. Methodology papers and aggregate datasets can also be requested via our Collaborate page."
         },
 
         {
@@ -1750,7 +1750,7 @@ const siteContent = {
               headline: "D. Vinay Shyam Donakanti",
               tag: "Research Data Analyst Intern",
               body: "**Training:** B.Tech Computer Science & Data Science\n\nSupports digitization, coding, and structuring of Montessori observation records into standardized research datasets. Assists in data pipeline development, analytics documentation, and longitudinal data consistency across the 0–18 research archive.",
-              image: { src: "/src/assets/placeholders/avatars/vinay-donakanti.webp", alt: "D. Vinay Shyam Donakanti", variant: "avatar", privacyBlur: false },
+              image: { src: "/team/vinay-donakanti.webp", alt: "D. Vinay Shyam Donakanti", variant: "avatar", privacyBlur: false },
               cta: { label: "View Profile", href: "/governance/team/vinay-shyam-donakanti" }
             }
           ]
@@ -1869,7 +1869,7 @@ const siteContent = {
           description:
             "Pathways for researchers, industry partners, and policy makers seeking access to the longitudinal dataset.",
           image: {
-            url: "https://research.blueblocks.in/og/collaborate.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Collaboration pathways"
@@ -2048,7 +2048,7 @@ const siteContent = {
           description:
             "Institutional news, mission milestones, publications, and press materials.",
           image: {
-            url: "https://research.blueblocks.in/og/newsroom.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Institutional newsroom"
@@ -2337,7 +2337,7 @@ const siteContent = {
           title: "Contact",
           description: "Reach out to Blue Blocks Micro Research Institute for research, media, or partnership inquiries.",
           image: {
-            url: "https://research.blueblocks.in/og/contact.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Contact page visual"
@@ -2421,7 +2421,7 @@ const siteContent = {
           title: "Privacy Policy",
           description: "Privacy policy detailing data collection, usage, and protection at Blue Blocks Micro Research Institute.",
           image: {
-            url: "https://research.blueblocks.in/og/privacy.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Privacy policy visual"
@@ -2643,7 +2643,7 @@ const siteContent = {
           title: "Terms of Use",
           description: "Terms and conditions governing the use of Blue Blocks Micro Research Institute website and services.",
           image: {
-            url: "https://research.blueblocks.in/og/terms.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Terms of use visual"
@@ -2715,7 +2715,7 @@ const siteContent = {
           title: "Technical Brief: SBB-1",
           description: "Detailed technical brief on the SBB-1 mission payload and flight qualification.",
           image: {
-            url: "https://research.blueblocks.in/og/technical-briefs/sbb-1.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "SBB-1 technical brief"
@@ -2897,7 +2897,7 @@ const siteContent = {
           title: "Marrakesh Human Capital Presentation",
           description: "Innovation economies and longitudinal hypothesis development presented at IMF Annual Meetings.",
           image: {
-            url: "https://research.blueblocks.in/og/presentations/marrakesh-human-capital.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Marrakesh presentation"
@@ -2999,7 +2999,7 @@ const siteContent = {
           title: "Proceedings Archive: Oslo 2026 — Nobel Peace Center",
           description: "Official proceedings and archival materials from the Oslo Summit 2026.",
           image: {
-            url: "https://research.blueblocks.in/og/proceedings/oslo-2026.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Oslo proceedings"
@@ -3101,7 +3101,7 @@ const siteContent = {
           title: "Downloads & Document Repository",
           description: "Access media kits, research frameworks, and institutional documents.",
           image: {
-            url: "https://research.blueblocks.in/og/downloads.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Downloads page visual"
@@ -3285,7 +3285,7 @@ const siteContent = {
           title: "Staff Access",
           description: "Secure internal access portal for staff and researchers.",
           image: {
-            url: "https://research.blueblocks.in/og/staff-access.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Staff access portal"
@@ -3342,7 +3342,7 @@ const siteContent = {
           title: "Sitemap",
           description: "Comprehensive sitemap of Blue Blocks Micro Research Institute website.",
           image: {
-            url: "https://research.blueblocks.in/og/sitemap.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Sitemap visual"
@@ -3401,7 +3401,7 @@ const siteContent = {
           title: "Books",
           description: "Long-form publications authored or curated by Blue Blocks Micro Research Institute.",
           image: {
-            url: "https://research.blueblocks.in/og/books.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Books collection"
@@ -3493,7 +3493,7 @@ const siteContent = {
           title: "Patents",
           description: "Registry of patents and intellectual property filings by Blue Blocks Micro Research Institute.",
           image: {
-            url: "https://research.blueblocks.in/og/patents.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Patents registry"
@@ -3646,7 +3646,7 @@ const siteContent = {
           title: "Team",
           description: "Leadership, researchers, and staff of Blue Blocks Micro Research Institute.",
           image: {
-            url: "https://research.blueblocks.in/og/team.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Team members"
@@ -3811,7 +3811,7 @@ const siteContent = {
               headline: "D. Vinay Shyam Donakanti",
               tag: "Research Data Analyst Intern",
               body: "B.Tech Computer Science & Data Science. Supports digitization, coding, and structuring of Montessori observation records into standardized research datasets.",
-              image: { src: "/src/assets/placeholders/avatars/vinay-donakanti.webp", alt: "D. Vinay Shyam Donakanti", variant: "avatar", privacyBlur: false },
+              image: { src: "/team/vinay-donakanti.webp", alt: "D. Vinay Shyam Donakanti", variant: "avatar", privacyBlur: false },
               cta: { label: "View Profile", href: "/governance/team/vinay-shyam-donakanti" }
             }
           ]
@@ -3921,7 +3921,7 @@ const siteContent = {
           title: "Valorization In Orbit — An Adolescent CubeSat Mission",
           description: "Case study on adolescent CubeSat mission presented at Saparya 7th National Montessori Conference.",
           image: {
-            url: "https://research.blueblocks.in/og/publications/saparya-imf-case-study.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "SAPARYA Case Study"
@@ -3934,7 +3934,7 @@ const siteContent = {
           "@type": "ScholarlyArticle",
           headline: "Valorization In Orbit — An Adolescent CubeSat Mission",
           description: "Case study documenting how seventeen students designed and built the SBB-1 CubeSat hosted payload, presented at Saparya 7th National Montessori Conference.",
-          identifier: "10.5281/zenodo.18337934",
+          identifier: { "@type": "PropertyValue", propertyID: "DOI", value: "10.5281/zenodo.18337934" },
           sameAs: "https://doi.org/10.5281/zenodo.18337934",
           datePublished: "2026-01-23",
           author: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
@@ -4202,7 +4202,7 @@ const siteContent = {
           title: "IN-SPACe Authorization Certificate — SBB-1 Hosted Payload",
           description: "First IN-SPACe authorization granted to a Montessori educational institution for a student-engineered orbital payload.",
           image: {
-            url: "https://research.blueblocks.in/images/og-standards.jpg",
+            url: "https://research.blueblocks.in/og/standards.jpg",
             width: 1200,
             height: 630,
             alt: "SBB-1 IN-SPACe Authorization"
@@ -4215,7 +4215,7 @@ const siteContent = {
           "@type": "ScholarlyArticle",
           headline: "Authorization Certificate for Establishment and Operation of Student-Engineered Hosted Payload SBB-1",
           description: "Official IN-SPACe authorization certificate for the SBB-1 hosted payload — the first authorization granted to a Montessori educational institution for a student-engineered orbital payload under India's Lab-to-Launch framework.",
-          identifier: "10.5281/zenodo.18195108",
+          identifier: { "@type": "PropertyValue", propertyID: "DOI", value: "10.5281/zenodo.18195108" },
           sameAs: "https://doi.org/10.5281/zenodo.18195108",
           datePublished: "2026-01-12",
           author: { "@type": "Person", name: "Pavan Goyal", sameAs: "https://orcid.org/0009-0009-8840-8505" },
@@ -4444,7 +4444,7 @@ const siteContent = {
           url: "https://research.blueblocks.in/publications/biophilia-drawing-preregistration",
           title: "Biophilia Drawing Study Preregistration | Blue Blocks Micro Research Institute",
           description: "Pre-registered pilot study: 70-80 children given one prompt — 'Draw a place where life can exist' — with no priming. Four hypotheses locked before any data exists.",
-          image: { url: "https://research.blueblocks.in/images/og-research-standards.jpg", width: 1200, height: 630, alt: "Biophilia Drawing Study Preregistration" }
+          image: { url: "https://research.blueblocks.in/og/research-standards.jpg", width: 1200, height: 630, alt: "Biophilia Drawing Study Preregistration" }
         }
       },
       schemas: [
@@ -4458,7 +4458,7 @@ const siteContent = {
           url: "https://research.blueblocks.in/publications/biophilia-drawing-preregistration",
           datePublished: "2026-04-10",
           inLanguage: "en",
-          identifier: "10.17605/OSF.IO/F296R",
+          identifier: { "@type": "PropertyValue", propertyID: "DOI", value: "10.17605/OSF.IO/F296R" },
           sameAs: "https://doi.org/10.17605/OSF.IO/F296R",
           author: [
             { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" },
@@ -4657,7 +4657,7 @@ const siteContent = {
           title: "Meerkat Bio-Leadership Research Dataset | Blue Blocks Micro Research Institute",
           description: "Open dataset: 9 sessions of children learning leadership from meerkat colony behaviour. Observer notes, audio transcripts, video transcripts. Ages 6-10.",
           siteName: "Blue Blocks Micro Research Institute",
-          image: { url: "https://research.blueblocks.in/images/og-innovation.jpg", width: 1200, height: 630, alt: "Meerkat Bio-Leadership Dataset" }
+          image: { url: "https://research.blueblocks.in/og/innovation.jpg", width: 1200, height: 630, alt: "Meerkat Bio-Leadership Dataset" }
         },
         twitter: { card: "summary_large_image", title: "Meerkat Bio-Leadership Research Dataset | Blue Blocks Micro Research Institute", description: "Open dataset: 9 sessions of children learning leadership from meerkat colony behaviour. Observer notes, audio transcripts, video transcripts. Ages 6-10." },
         citation: { citation_title: "The Meerkat Model Of Bio-Leadership: Using Biomimicry To Embody Leadership Principles In Children - DataSet", citation_authors: ["Blue Blocks Micro Research Institute", "Rao, Sandhya", "Chakraborty, Sreemoyee", "Goyal, Pavan", "Matta, Sruthi"], citation_publication_date: "2026/04/09", citation_doi: "10.5281/zenodo.19467584", citation_publisher: "Blue Blocks Micro Research Institute", citation_language: "en", citation_keywords: "biomimicry; bio-leadership; meerkat behaviour; children's leadership; embodied learning; qualitative dataset; open science" }
@@ -4674,7 +4674,7 @@ const siteContent = {
           datePublished: "2026-04-09",
           temporalCoverage: "2025-12/2026-03",
           inLanguage: "en",
-          identifier: "10.5281/zenodo.19467584",
+          identifier: { "@type": "PropertyValue", propertyID: "DOI", value: "10.5281/zenodo.19467584" },
           sameAs: "https://doi.org/10.5281/zenodo.19467584",
           creator: [
             { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" },
@@ -4885,7 +4885,7 @@ const siteContent = {
           title: "Biophilia Drawing Study Dataset — Harvard Dataverse | Blue Blocks Micro Research Institute",
           description: "81 children's drawings coded across 30 biophilic element categories. Preregistered pilot study data on Harvard Dataverse. CC0, ready for reanalysis.",
           siteName: "Blue Blocks Micro Research Institute",
-          image: { url: "https://research.blueblocks.in/images/og-research-standards.jpg", width: 1200, height: 630, alt: "Biophilia Drawing Study Dataset" }
+          image: { url: "https://research.blueblocks.in/og/research-standards.jpg", width: 1200, height: 630, alt: "Biophilia Drawing Study Dataset" }
         },
         twitter: { card: "summary_large_image", title: "Biophilia Drawing Study Dataset — Harvard Dataverse | Blue Blocks Micro Research Institute", description: "81 children's drawings coded across 30 biophilic element categories. Preregistered pilot study data on Harvard Dataverse. CC0, ready for reanalysis." },
         citation: { citation_title: "Drawing Life: Spontaneous Biophilic Imagery in Children's Responses to an Open-Ended Prompt — A Pilot Study from Blue Blocks Montessori School, Hyderabad, India (DATASET)", citation_authors: ["Blue Blocks Micro Research Institute", "Rao, Sandhya", "Chakraborty, Sreemoyee"], citation_publication_date: "2026/04/23", citation_doi: "10.7910/DVN/AWUK3Z", citation_publisher: "Blue Blocks Micro Research Institute", citation_language: "en", citation_keywords: "biophilia; children's drawings; observational coding; biophilic orientation; open-ended prompt; nature orientation; pilot study; open data" }
@@ -4901,7 +4901,7 @@ const siteContent = {
           url: "https://research.blueblocks.in/publications/biophilia-drawing-dataset/",
           datePublished: "2026-04-23",
           inLanguage: "en",
-          identifier: "10.7910/DVN/AWUK3Z",
+          identifier: { "@type": "PropertyValue", propertyID: "DOI", value: "10.7910/DVN/AWUK3Z" },
           sameAs: "https://doi.org/10.7910/DVN/AWUK3Z",
           creator: [
             { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" },
@@ -5130,7 +5130,7 @@ const siteContent = {
         robots: "index, follow",
         keywords: "Montessori, AMI Congress, Design Thinking, CubeSat, SBB-1, SBB-2, PSLV-C62, IN-SPACe, student-built satellite, innovation education, Erdkinder",
         alternate: { type: "text/markdown", href: "/publications/ami-congress-2026/ami-congress-2026.md", title: "Machine-readable version" },
-        openGraph: { type: "article", url: "https://research.blueblocks.in/publications/ami-congress-2026/", title: "AMI Congress 2026 — Design Thinking & SBB CubeSat | Blue Blocks Micro Research Institute", description: "Blue Blocks at the 30th AMI Congress Mexico: a Design Thinking workshop and the formal announcement of SBB-2, the second student-built CubeSat after SBB-1's loss.", siteName: "Blue Blocks Micro Research Institute", image: { url: "https://research.blueblocks.in/images/og-research-standards.jpg", width: 1200, height: 630, alt: "AMI Congress 2026" } },
+        openGraph: { type: "article", url: "https://research.blueblocks.in/publications/ami-congress-2026/", title: "AMI Congress 2026 — Design Thinking & SBB CubeSat | Blue Blocks Micro Research Institute", description: "Blue Blocks at the 30th AMI Congress Mexico: a Design Thinking workshop and the formal announcement of SBB-2, the second student-built CubeSat after SBB-1's loss.", siteName: "Blue Blocks Micro Research Institute", image: { url: "https://research.blueblocks.in/og/research-standards.jpg", width: 1200, height: 630, alt: "AMI Congress 2026" } },
         twitter: { card: "summary_large_image", title: "AMI Congress 2026 — Design Thinking & SBB CubeSat | Blue Blocks Micro Research Institute", description: "Blue Blocks at the 30th AMI Congress Mexico: a Design Thinking workshop and the formal announcement of SBB-2, the second student-built CubeSat after SBB-1's loss." },
         citation: { citation_title: "Blue Blocks at the 30th International Montessori Congress (Mexico, 2026): Workshop on Design Thinking and Innovation, and Open Announcement of the SBB-1 to SBB-2 CubeSat Programme", citation_authors: ["Blue Blocks Micro Research Institute", "Goyal, Pavan", "Hussain Kagalwalla, Munira"], citation_publication_date: "2026/04/24", citation_doi: "10.17605/OSF.IO/ST9H2", citation_publisher: "Blue Blocks Micro Research Institute", citation_language: "en", citation_conference_title: "30th International Montessori Congress" }
       },
@@ -5153,7 +5153,7 @@ const siteContent = {
     "/publications/achievement-without-sight": {
       title: "When Children Meet Achievement Without Sight: A Case Study of Adolescent Inquiry in a Professional Encounter at the Blue Blocks Montessori School",
       metaDescription: "12 adolescents met a blind VP of JP Morgan. Only 1 of 19 questions was about blindness. The private reflection sheets told a completely different story.",
-      seo: { title: "Adolescent Inquiry With a Blind Professional | Blue Blocks Micro Research Institute", canonical: "https://research.blueblocks.in/publications/achievement-without-sight/", robots: "index, follow", keywords: "adolescent inquiry, professional encounter, disability and achievement, assumption revision, Montessori Erdkinder, micro research", alternate: { type: "text/markdown", href: "/publications/achievement-without-sight/achievement-without-sight.md", title: "Machine-readable version" }, openGraph: { type: "article", url: "https://research.blueblocks.in/publications/achievement-without-sight/", title: "Adolescent Inquiry With a Blind Professional | Blue Blocks Micro Research Institute", description: "12 adolescents met a blind VP of JP Morgan. Only 1 of 19 questions was about blindness. The private reflection sheets told a completely different story.", siteName: "Blue Blocks Micro Research Institute", image: { url: "https://research.blueblocks.in/images/og-research-standards.jpg", width: 1200, height: 630, alt: "Adolescent Inquiry With a Blind Professional" } }, twitter: { card: "summary_large_image", title: "Adolescent Inquiry With a Blind Professional | Blue Blocks Micro Research Institute", description: "12 adolescents met a blind VP of JP Morgan. Only 1 of 19 questions was about blindness. The private reflection sheets told a completely different story." }, citation: { citation_title: "When Children Meet Achievement Without Sight: A Case Study of Adolescent Inquiry in a Professional Encounter at the Blue Blocks Montessori School", citation_authors: ["Blue Blocks Micro Research Institute", "Hussain Kagalwalla, Munira", "Matta, Sruthi", "Boddu, Sreedhar Reddy"], citation_publication_date: "2026/04/24", citation_doi: "10.5281/zenodo.19752834", citation_pdf_url: "https://zenodo.org/records/19752834/files/BlueBlocks_Paper_AdolescentCaseStudy_BlueBlocks_CS-2026-004_2026_Manuscript_Public.pdf", citation_publisher: "Blue Blocks Micro Research Institute", citation_language: "en", citation_keywords: "adolescent inquiry; professional encounter; disability and achievement; assumption revision; Montessori Erdkinder; micro research", citation_institution: "Blue Blocks Micro Research Institute" } },
+      seo: { title: "Adolescent Inquiry With a Blind Professional | Blue Blocks Micro Research Institute", canonical: "https://research.blueblocks.in/publications/achievement-without-sight/", robots: "index, follow", keywords: "adolescent inquiry, professional encounter, disability and achievement, assumption revision, Montessori Erdkinder, micro research", alternate: { type: "text/markdown", href: "/publications/achievement-without-sight/achievement-without-sight.md", title: "Machine-readable version" }, openGraph: { type: "article", url: "https://research.blueblocks.in/publications/achievement-without-sight/", title: "Adolescent Inquiry With a Blind Professional | Blue Blocks Micro Research Institute", description: "12 adolescents met a blind VP of JP Morgan. Only 1 of 19 questions was about blindness. The private reflection sheets told a completely different story.", siteName: "Blue Blocks Micro Research Institute", image: { url: "https://research.blueblocks.in/og/research-standards.jpg", width: 1200, height: 630, alt: "Adolescent Inquiry With a Blind Professional" } }, twitter: { card: "summary_large_image", title: "Adolescent Inquiry With a Blind Professional | Blue Blocks Micro Research Institute", description: "12 adolescents met a blind VP of JP Morgan. Only 1 of 19 questions was about blindness. The private reflection sheets told a completely different story." }, citation: { citation_title: "When Children Meet Achievement Without Sight: A Case Study of Adolescent Inquiry in a Professional Encounter at the Blue Blocks Montessori School", citation_authors: ["Blue Blocks Micro Research Institute", "Hussain Kagalwalla, Munira", "Matta, Sruthi", "Boddu, Sreedhar Reddy"], citation_publication_date: "2026/04/24", citation_doi: "10.5281/zenodo.19752834", citation_pdf_url: "https://zenodo.org/records/19752834/files/BlueBlocks_Paper_AdolescentCaseStudy_BlueBlocks_CS-2026-004_2026_Manuscript_Public.pdf", citation_publisher: "Blue Blocks Micro Research Institute", citation_language: "en", citation_keywords: "adolescent inquiry; professional encounter; disability and achievement; assumption revision; Montessori Erdkinder; micro research", citation_institution: "Blue Blocks Micro Research Institute" } },
       schemas: [
         { "@context": "https://schema.org", "@type": "ScholarlyArticle", "@id": "https://research.blueblocks.in/publications/achievement-without-sight/#article", name: "When Children Meet Achievement Without Sight: A Case Study of Adolescent Inquiry in a Professional Encounter at the Blue Blocks Montessori School", headline: "When Children Meet Achievement Without Sight", description: "Case 4 of 5 in the Child-Driven Inquiry Series. Twelve adolescents met a blind Vice President of JP Morgan Chase. Only one of nineteen spontaneous questions addressed blindness directly. Private reflection sheets revealed systematically different content — richer emotional curiosity and significant assumption revision about disability and independence.", url: "https://research.blueblocks.in/publications/achievement-without-sight/", datePublished: "2026-04-24", inLanguage: "en", identifier: "10.5281/zenodo.19752834", sameAs: "https://doi.org/10.5281/zenodo.19752834", author: [ { "@type": "Organization", "@id": "https://research.blueblocks.in/#organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" }, { "@type": "Person", name: "Munira Hussain Kagalwalla", affiliation: { "@type": "ResearchOrganization", "@id": "https://research.blueblocks.in/#organization" } }, { "@type": "Person", name: "Sruthi Matta", affiliation: { "@type": "ResearchOrganization", "@id": "https://research.blueblocks.in/#organization" } }, { "@type": "Person", name: "Sreedhar Reddy Boddu", affiliation: { "@type": "ResearchOrganization", "@id": "https://research.blueblocks.in/#organization" } } ], publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" }, isAccessibleForFree: true, license: "https://creativecommons.org/licenses/by/4.0/", keywords: ["adolescent inquiry", "professional encounter", "disability and achievement", "assumption revision", "spontaneous questioning", "Montessori Erdkinder", "embedded observation", "micro research", "Blue Blocks Micro Research Institute"], citation: [ { "@type": "ScholarlyArticle", name: "Blue Blocks Micro Research Methodology", url: "https://doi.org/10.5281/zenodo.18584816" }, { "@type": "ScholarlyArticle", name: "Bridging the Lab and the Classroom", url: "https://doi.org/10.5281/zenodo.18584890" }, { "@type": "ScholarlyArticle", name: "Flipside Case Study (CS-2026-001)", url: "https://doi.org/10.5281/zenodo.19219065" }, { "@type": "ScholarlyArticle", name: "Resilience Workshop (CS-2026-002)", url: "https://doi.org/10.5281/zenodo.19344032" }, { "@type": "ScholarlyArticle", name: "Structured Debate (CS-2026-003)", url: "https://doi.org/10.5281/zenodo.19480752" } ], encoding: { "@type": "MediaObject", contentUrl: "https://research.blueblocks.in/publications/achievement-without-sight/achievement-without-sight.md", encodingFormat: "text/markdown" }, sourceOrganization: { "@type": "School", "@id": "https://blueblocks.in/#school", name: "Blue Blocks Montessori School" } },
         { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" }, { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications/" }, { "@type": "ListItem", position: 3, name: "Achievement Without Sight", item: "https://research.blueblocks.in/publications/achievement-without-sight/" } ] }
@@ -5179,7 +5179,7 @@ const siteContent = {
     "/publications/deep-time-palaeontology": {
       title: "When Children Enter Deep Time: A Case Study of Adolescent Engagement with a Palaeontological Research Problem at the Blue Blocks Erdkinder Environment",
       metaDescription: "12 adolescents were taught to identify 50-million-year-old fossils. By session four, only three remained. The attrition wasn't the failure — it was the finding.",
-      seo: { title: "Adolescents in Palaeontology Research | Blue Blocks Micro Research Institute", canonical: "https://research.blueblocks.in/publications/deep-time-palaeontology/", robots: "index, follow", keywords: "adolescent inquiry, palaeontology, foraminifera, voluntary attrition, intrinsic motivation, research identity, Montessori Erdkinder, citizen science", alternate: { type: "text/markdown", href: "/publications/deep-time-palaeontology/deep-time-palaeontology.md", title: "Machine-readable version" }, openGraph: { type: "article", url: "https://research.blueblocks.in/publications/deep-time-palaeontology/", title: "Adolescents in Palaeontology Research | Blue Blocks Micro Research Institute", description: "12 adolescents were taught to identify 50-million-year-old fossils. By session four, only three remained. The attrition wasn't the failure — it was the finding.", siteName: "Blue Blocks Micro Research Institute", image: { url: "https://research.blueblocks.in/images/og-research-standards.jpg", width: 1200, height: 630, alt: "Adolescents in Deep Time" } }, twitter: { card: "summary_large_image", title: "Adolescents in Palaeontology Research | Blue Blocks Micro Research Institute", description: "12 adolescents were taught to identify 50-million-year-old fossils. By session four, only three remained. The attrition wasn't the failure — it was the finding." }, citation: { citation_title: "When Children Enter Deep Time: A Case Study of Adolescent Engagement with a Palaeontological Research Problem at the Blue Blocks Erdkinder Environment", citation_authors: ["Blue Blocks Micro Research Institute", "Chakraborty, Sreemoyee"], citation_publication_date: "2026/04/30", citation_doi: "10.5281/zenodo.20019376", citation_pdf_url: "https://zenodo.org/records/20019376/files/BlueBlocks_Paper_AdolescentCaseStudy_BlueBlocks_CS-2026-005_2026_Manuscript_Public.pdf", citation_publisher: "Blue Blocks Micro Research Institute", citation_language: "en", citation_keywords: "adolescent inquiry; palaeontology; foraminifera; voluntary attrition; intrinsic motivation; research identity; Montessori Erdkinder; micro research" } },
+      seo: { title: "Adolescents in Palaeontology Research | Blue Blocks Micro Research Institute", canonical: "https://research.blueblocks.in/publications/deep-time-palaeontology/", robots: "index, follow", keywords: "adolescent inquiry, palaeontology, foraminifera, voluntary attrition, intrinsic motivation, research identity, Montessori Erdkinder, citizen science", alternate: { type: "text/markdown", href: "/publications/deep-time-palaeontology/deep-time-palaeontology.md", title: "Machine-readable version" }, openGraph: { type: "article", url: "https://research.blueblocks.in/publications/deep-time-palaeontology/", title: "Adolescents in Palaeontology Research | Blue Blocks Micro Research Institute", description: "12 adolescents were taught to identify 50-million-year-old fossils. By session four, only three remained. The attrition wasn't the failure — it was the finding.", siteName: "Blue Blocks Micro Research Institute", image: { url: "https://research.blueblocks.in/og/research-standards.jpg", width: 1200, height: 630, alt: "Adolescents in Deep Time" } }, twitter: { card: "summary_large_image", title: "Adolescents in Palaeontology Research | Blue Blocks Micro Research Institute", description: "12 adolescents were taught to identify 50-million-year-old fossils. By session four, only three remained. The attrition wasn't the failure — it was the finding." }, citation: { citation_title: "When Children Enter Deep Time: A Case Study of Adolescent Engagement with a Palaeontological Research Problem at the Blue Blocks Erdkinder Environment", citation_authors: ["Blue Blocks Micro Research Institute", "Chakraborty, Sreemoyee"], citation_publication_date: "2026/04/30", citation_doi: "10.5281/zenodo.20019376", citation_pdf_url: "https://zenodo.org/records/20019376/files/BlueBlocks_Paper_AdolescentCaseStudy_BlueBlocks_CS-2026-005_2026_Manuscript_Public.pdf", citation_publisher: "Blue Blocks Micro Research Institute", citation_language: "en", citation_keywords: "adolescent inquiry; palaeontology; foraminifera; voluntary attrition; intrinsic motivation; research identity; Montessori Erdkinder; micro research" } },
       schemas: [
         { "@context": "https://schema.org", "@type": "ScholarlyArticle", "@id": "https://research.blueblocks.in/publications/deep-time-palaeontology/#article", name: "When Children Enter Deep Time: A Case Study of Adolescent Engagement with a Palaeontological Research Problem at the Blue Blocks Erdkinder Environment", headline: "Twelve Started. Three Chose to Become Scientists.", description: "The fifth and final case in the Child-Driven Inquiry Series. Twelve Erdkinder adolescents were introduced to active palaeontological research on Middle Eocene foraminifera. Across four sessions, attendance declined from twelve to three. The attrition is the primary finding: it documents voluntary self-selection into a research cohort driven by intrinsic motivation. The three who remained voluntarily took on additional work toward a publishable paper.", url: "https://research.blueblocks.in/publications/deep-time-palaeontology/", datePublished: "2026-04-30", inLanguage: "en", identifier: "10.5281/zenodo.20019376", sameAs: "https://doi.org/10.5281/zenodo.20019376", author: [ { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" }, { "@type": "Person", name: "Sreemoyee Chakraborty", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } } ], publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }, isAccessibleForFree: true, license: "https://creativecommons.org/licenses/by/4.0/", keywords: ["adolescent inquiry", "palaeontology", "foraminifera", "voluntary attrition", "intrinsic motivation", "research identity", "Montessori Erdkinder", "citizen science", "micro research"], citation: [ { "@type": "ScholarlyArticle", name: "Blue Blocks Micro Research Methodology", url: "https://doi.org/10.5281/zenodo.18584816" }, { "@type": "ScholarlyArticle", name: "Bridging the Lab and the Classroom", url: "https://doi.org/10.5281/zenodo.18584890" }, { "@type": "ScholarlyArticle", name: "Flipside Case Study (CS-2026-001)", url: "https://doi.org/10.5281/zenodo.19219065" }, { "@type": "ScholarlyArticle", name: "Resilience Workshop (CS-2026-002)", url: "https://doi.org/10.5281/zenodo.19344032" }, { "@type": "ScholarlyArticle", name: "Structured Debate (CS-2026-003)", url: "https://doi.org/10.5281/zenodo.19480752" }, { "@type": "ScholarlyArticle", name: "Achievement Without Sight (CS-2026-004)", url: "https://doi.org/10.5281/zenodo.19752834" } ], encoding: { "@type": "MediaObject", contentUrl: "https://research.blueblocks.in/publications/deep-time-palaeontology/deep-time-palaeontology.md", encodingFormat: "text/markdown" } },
         { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" }, { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications/" }, { "@type": "ListItem", position: 3, name: "Adolescents in Deep Time", item: "https://research.blueblocks.in/publications/deep-time-palaeontology/" } ] }
@@ -5205,7 +5205,7 @@ const siteContent = {
     "/publications/meerkat-bio-leadership": {
       title: "The Meerkat Model Of Bio-Leadership: Using Biomimicry To Embody Leadership Principles In Children",
       metaDescription: "85 children enacted a meerkat colony. No leadership instructions were given. They rotated roles, invented signals, and designed colony defences. 9-session pilot.",
-      seo: { title: "Meerkat Bio-Leadership Study — Biomimicry in Children | Blue Blocks Micro Research Institute", canonical: "https://research.blueblocks.in/publications/meerkat-bio-leadership/", robots: "index, follow", keywords: "bio-leadership, biomimicry, meerkat, distributed leadership, embodied cognition, nature-based learning, early childhood, Montessori education", alternate: { type: "text/markdown", href: "/publications/meerkat-bio-leadership/meerkat-bio-leadership.md", title: "Machine-readable version" }, openGraph: { type: "article", url: "https://research.blueblocks.in/publications/meerkat-bio-leadership/", title: "Meerkat Bio-Leadership Study — Biomimicry in Children | Blue Blocks Micro Research Institute", description: "85 children enacted a meerkat colony. No leadership instructions were given. They rotated roles, invented signals, and designed colony defences. 9-session pilot.", siteName: "Blue Blocks Micro Research Institute", image: { url: "https://research.blueblocks.in/images/og-research-standards.jpg", width: 1200, height: 630, alt: "Meerkat Bio-Leadership Paper" } }, twitter: { card: "summary_large_image", title: "Meerkat Bio-Leadership Study — Biomimicry in Children | Blue Blocks Micro Research Institute", description: "85 children enacted a meerkat colony. No leadership instructions were given. They rotated roles, invented signals, and designed colony defences. 9-session pilot." }, citation: { citation_title: "The Meerkat Model Of Bio-Leadership: Using Biomimicry To Embody Leadership Principles In Children", citation_authors: ["Blue Blocks Micro Research Institute", "Rao, Sandhya", "Chakraborty, Sreemoyee", "Goyal, Pavan", "Matta, Sruthi"], citation_publication_date: "2026/04/29", citation_doi: "10.2139/ssrn.6656598", citation_publisher: "Blue Blocks Micro Research Institute", citation_language: "en", citation_keywords: "bio-leadership; biomimicry education; meerkat colony simulation; distributed leadership; embodied cognition; nature-based learning; early childhood" } },
+      seo: { title: "Meerkat Bio-Leadership Study — Biomimicry in Children | Blue Blocks Micro Research Institute", canonical: "https://research.blueblocks.in/publications/meerkat-bio-leadership/", robots: "index, follow", keywords: "bio-leadership, biomimicry, meerkat, distributed leadership, embodied cognition, nature-based learning, early childhood, Montessori education", alternate: { type: "text/markdown", href: "/publications/meerkat-bio-leadership/meerkat-bio-leadership.md", title: "Machine-readable version" }, openGraph: { type: "article", url: "https://research.blueblocks.in/publications/meerkat-bio-leadership/", title: "Meerkat Bio-Leadership Study — Biomimicry in Children | Blue Blocks Micro Research Institute", description: "85 children enacted a meerkat colony. No leadership instructions were given. They rotated roles, invented signals, and designed colony defences. 9-session pilot.", siteName: "Blue Blocks Micro Research Institute", image: { url: "https://research.blueblocks.in/og/research-standards.jpg", width: 1200, height: 630, alt: "Meerkat Bio-Leadership Paper" } }, twitter: { card: "summary_large_image", title: "Meerkat Bio-Leadership Study — Biomimicry in Children | Blue Blocks Micro Research Institute", description: "85 children enacted a meerkat colony. No leadership instructions were given. They rotated roles, invented signals, and designed colony defences. 9-session pilot." }, citation: { citation_title: "The Meerkat Model Of Bio-Leadership: Using Biomimicry To Embody Leadership Principles In Children", citation_authors: ["Blue Blocks Micro Research Institute", "Rao, Sandhya", "Chakraborty, Sreemoyee", "Goyal, Pavan", "Matta, Sruthi"], citation_publication_date: "2026/04/29", citation_doi: "10.2139/ssrn.6656598", citation_publisher: "Blue Blocks Micro Research Institute", citation_language: "en", citation_keywords: "bio-leadership; biomimicry education; meerkat colony simulation; distributed leadership; embodied cognition; nature-based learning; early childhood" } },
       schemas: [
         { "@context": "https://schema.org", "@type": "ScholarlyArticle", "@id": "https://research.blueblocks.in/publications/meerkat-bio-leadership/#article", name: "The Meerkat Model Of Bio-Leadership: Using Biomimicry To Embody Leadership Principles In Children", headline: "No One Taught Them Leadership — They Learned It From Meerkats", description: "Pilot study introducing Bio-Leadership: a biomimicry-inspired pedagogical approach in which children embody leadership principles by enacting a meerkat colony. Nine sessions with 85 children aged 6-12. Leadership rotated spontaneously, children invented signal systems, and 8-year-olds produced working system designs reflecting resilience engineering principles — all without adult instruction about leadership.", url: "https://research.blueblocks.in/publications/meerkat-bio-leadership/", datePublished: "2026-04-29", inLanguage: "en", identifier: "10.2139/ssrn.6656598", sameAs: "https://doi.org/10.2139/ssrn.6656598", author: [ { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" }, { "@type": "Person", name: "Sandhya Rao", sameAs: "https://orcid.org/0009-0003-7368-2604", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } }, { "@type": "Person", name: "Sreemoyee Chakraborty", sameAs: "https://orcid.org/0000-0001-5180-156X", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } }, { "@type": "Person", name: "Pavan Goyal", sameAs: "https://orcid.org/0009-0009-8840-8505", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } }, { "@type": "Person", name: "Sruthi Matta", sameAs: "https://orcid.org/0009-0008-2791-1273", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } } ], publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" }, isAccessibleForFree: true, license: "https://creativecommons.org/licenses/by/4.0/", keywords: ["bio-leadership", "biomimicry education", "meerkat colony simulation", "distributed leadership", "embodied cognition", "nature-based learning", "early childhood", "play-based learning", "challenge-based learning", "Montessori education", "Blue Blocks Micro Research Institute"], about: [ { "@type": "Thing", name: "bio-leadership" }, { "@type": "Thing", name: "distributed leadership" }, { "@type": "Thing", name: "biomimicry education" }, { "@type": "Thing", name: "embodied cognition" } ], citation: [ { "@type": "ScholarlyArticle", name: "Blue Blocks Micro Research Methodology", url: "https://doi.org/10.5281/zenodo.18584816" }, { "@type": "ScholarlyArticle", name: "BEOP v1.0", url: "https://doi.org/10.5281/zenodo.19087415" }, { "@type": "ScholarlyArticle", name: "CDCS v1.0", url: "https://doi.org/10.5281/zenodo.19202499" } ], isBasedOn: { "@type": "Dataset", name: "Meerkat Bio-Leadership Dataset", url: "https://doi.org/10.5281/zenodo.19467584" }, encoding: { "@type": "MediaObject", contentUrl: "https://research.blueblocks.in/publications/meerkat-bio-leadership/meerkat-bio-leadership.md", encodingFormat: "text/markdown" }, sourceOrganization: { "@type": "School", "@id": "https://blueblocks.in/#school", name: "Blue Blocks Montessori School" } },
         { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" }, { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications/" }, { "@type": "ListItem", position: 3, name: "Meerkat Bio-Leadership Paper", item: "https://research.blueblocks.in/publications/meerkat-bio-leadership/" } ] }
@@ -5231,7 +5231,7 @@ const siteContent = {
     "/publications/cross-study-dataset": {
       title: "Adolescent Inquiry Cross-Study Dataset (CS-2026-001 to CS-2026-005): Eight-Sheet Structured Tabulation of the Blue Blocks Five-Case Working Paper Series",
       metaDescription: "Eight-sheet dataset tabulating 5 case studies on adolescent inquiry: hypothesis verdicts, engagement metrics, instrument comparisons, 25 quotes, 23 limitations.",
-      seo: { title: "Adolescent Inquiry Cross-Study Dataset | Blue Blocks Micro Research Institute", canonical: "https://research.blueblocks.in/publications/cross-study-dataset", robots: "index, follow", keywords: "adolescent inquiry, cross-study dataset, qualitative methodology, case study series, emergent findings, Montessori Erdkinder, FAIR data, CDCS Tier 1", openGraph: { type: "article", url: "https://research.blueblocks.in/publications/cross-study-dataset", title: "Adolescent Inquiry Cross-Study Dataset | Blue Blocks Micro Research Institute", description: "Eight-sheet dataset tabulating 5 case studies on adolescent inquiry: hypothesis verdicts, engagement metrics, instrument comparisons, 25 quotes, 23 limitations.", image: { url: "https://research.blueblocks.in/images/og-research-standards.jpg", width: 1200, height: 630, alt: "Cross-Study Dataset" } }, twitter: { card: "summary_large_image", title: "Adolescent Inquiry Cross-Study Dataset | Blue Blocks Micro Research Institute", description: "Eight-sheet dataset tabulating 5 case studies on adolescent inquiry: hypothesis verdicts, engagement metrics, instrument comparisons, 25 quotes, 23 limitations." }, citation: { citation_title: "Adolescent Inquiry Cross-Study Dataset (CS-2026-001 to CS-2026-005): Eight-Sheet Structured Tabulation of the Blue Blocks Five-Case Working Paper Series", citation_authors: ["Blue Blocks Micro Research Institute", "Chakraborty, Sreemoyee", "Hussain Kagalwalla, Munira", "Matta, Sruthi", "Reddy Boddu, Sreedhar", "Bose, Pradipta", "Khare, Kanika"], citation_publication_date: "2026/04/24", citation_doi: "10.5281/zenodo.[PENDING]", citation_publisher: "Blue Blocks Micro Research Institute", citation_language: "en", citation_keywords: "cross-study dataset; adolescent inquiry; case study series; qualitative methodology; ownership condition; emergent findings; BBMRI" } },
+      seo: { title: "Adolescent Inquiry Cross-Study Dataset | Blue Blocks Micro Research Institute", canonical: "https://research.blueblocks.in/publications/cross-study-dataset", robots: "index, follow", keywords: "adolescent inquiry, cross-study dataset, qualitative methodology, case study series, emergent findings, Montessori Erdkinder, FAIR data, CDCS Tier 1", openGraph: { type: "article", url: "https://research.blueblocks.in/publications/cross-study-dataset", title: "Adolescent Inquiry Cross-Study Dataset | Blue Blocks Micro Research Institute", description: "Eight-sheet dataset tabulating 5 case studies on adolescent inquiry: hypothesis verdicts, engagement metrics, instrument comparisons, 25 quotes, 23 limitations.", image: { url: "https://research.blueblocks.in/og/research-standards.jpg", width: 1200, height: 630, alt: "Cross-Study Dataset" } }, twitter: { card: "summary_large_image", title: "Adolescent Inquiry Cross-Study Dataset | Blue Blocks Micro Research Institute", description: "Eight-sheet dataset tabulating 5 case studies on adolescent inquiry: hypothesis verdicts, engagement metrics, instrument comparisons, 25 quotes, 23 limitations." }, citation: { citation_title: "Adolescent Inquiry Cross-Study Dataset (CS-2026-001 to CS-2026-005): Eight-Sheet Structured Tabulation of the Blue Blocks Five-Case Working Paper Series", citation_authors: ["Blue Blocks Micro Research Institute", "Chakraborty, Sreemoyee", "Hussain Kagalwalla, Munira", "Matta, Sruthi", "Reddy Boddu, Sreedhar", "Bose, Pradipta", "Khare, Kanika"], citation_publication_date: "2026/04/24", citation_doi: "10.5281/zenodo.[PENDING]", citation_publisher: "Blue Blocks Micro Research Institute", citation_language: "en", citation_keywords: "cross-study dataset; adolescent inquiry; case study series; qualitative methodology; ownership condition; emergent findings; BBMRI" } },
       schemas: [
         { "@context": "https://schema.org", "@type": "Dataset", "@id": "https://research.blueblocks.in/publications/cross-study-dataset#dataset", name: "Adolescent Inquiry Cross-Study Dataset (CS-2026-001 to CS-2026-005): Eight-Sheet Structured Tabulation of the Blue Blocks Five-Case Working Paper Series", headline: "Five Case Studies. Eight Sheets. The Analytic Spine of a Research Series.", description: "Structured cross-study tabulation of the BBMRI five-case Working Paper Series on adolescent inquiry. Single Excel workbook with eight sheets: Case Overview, Hypothesis Outcomes, Student Engagement Metrics, Instrument Comparison, Emergent Findings, Key Questions & Quotes (25 verbatim entries), Limitations & Gaps (23 entries with severity ratings), and Codebook. Tier 1 (OPEN) under CDCS v1.0.", url: "https://research.blueblocks.in/publications/cross-study-dataset", datePublished: "2026-04-24", inLanguage: "en", creator: [ { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" }, { "@type": "Person", name: "Sreemoyee Chakraborty", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } }, { "@type": "Person", name: "Munira Hussain Kagalwalla", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } }, { "@type": "Person", name: "Sruthi Matta", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } }, { "@type": "Person", name: "Sreedhar Reddy Boddu", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } }, { "@type": "Person", name: "Pradipta Bose", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } }, { "@type": "Person", name: "Kanika Khare", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } } ], publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" }, license: "https://creativecommons.org/licenses/by/4.0/", isAccessibleForFree: true, keywords: ["adolescent inquiry", "cross-study dataset", "qualitative methodology", "case study series", "ownership condition", "emergent findings", "structured observation", "Montessori Erdkinder", "BBMRI", "FAIR data", "CDCS Tier 1", "Blue Blocks Micro Research Institute"], isBasedOn: [ { "@type": "ScholarlyArticle", name: "Flipside Case Study (CS-2026-001)", url: "https://doi.org/10.5281/zenodo.19219065" }, { "@type": "ScholarlyArticle", name: "Resilience Workshop (CS-2026-002)", url: "https://doi.org/10.5281/zenodo.19344032" }, { "@type": "ScholarlyArticle", name: "Structured Debate (CS-2026-003)", url: "https://doi.org/10.5281/zenodo.19480752" }, { "@type": "ScholarlyArticle", name: "Achievement Without Sight (CS-2026-004)", url: "https://doi.org/10.5281/zenodo.19752834" }, { "@type": "ScholarlyArticle", name: "Deep Time (CS-2026-005)", url: "https://doi.org/10.5281/zenodo.19813492" } ], distribution: [ { "@type": "DataDownload", encodingFormat: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", name: "Cross-Study Tabulation Workbook (8 sheets)" } ], spatialCoverage: { "@type": "Place", name: "Blue Blocks Montessori School, Hyderabad, India" }, encoding: { "@type": "MediaObject", contentUrl: "https://research.blueblocks.in/publications/cross-study-dataset/cross-study-dataset.md", encodingFormat: "text/markdown" } },
         { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" }, { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications/" }, { "@type": "ListItem", position: 3, name: "Cross-Study Dataset", item: "https://research.blueblocks.in/publications/cross-study-dataset/" } ] }
@@ -5258,7 +5258,7 @@ const siteContent = {
     "/publications/tedx-hyderabad-orienting-question": {
       title: "\"What Do You Want to Build?\" — Reframing the Central Question of Schooling for the Innovation Era",
       metaDescription: "Every school is built around one implicit question. This paper argues the dominant question privileges memory. A single shift — to \"What do you want to build?\" — changes everything.",
-      seo: { title: "What Do You Want to Build — TEDxHyderabad Orienting Question | Blue Blocks Micro Research Institute", canonical: "https://research.blueblocks.in/publications/tedx-hyderabad-orienting-question", robots: "index, follow", keywords: "Orienting Question, innovation education, child-led innovation, Montessori longitudinal outcomes, question-driven pedagogy, TEDxHyderabad", openGraph: { type: "article", url: "https://research.blueblocks.in/publications/tedx-hyderabad-orienting-question", title: "What Do You Want to Build — Orienting Question | Blue Blocks Micro Research Institute", description: "Every school is built around one implicit question. This paper argues the dominant question privileges memory. A single shift — to 'What do you want to build?' — changes everything.", image: { url: "https://research.blueblocks.in/images/og-research-standards.jpg", width: 1200, height: 630, alt: "What Do You Want to Build" } }, citation: { citation_title: "What Do You Want to Build? — Reframing the Central Question of Schooling for the Innovation Era", citation_authors: ["Blue Blocks Micro Research Institute", "Goyal, Pavan"], citation_publication_date: "2026/04/24", citation_doi: "10.5281/zenodo.19848394", citation_pdf_url: "https://zenodo.org/records/19848394/files/BlueBlocks_Paper_TEDxHyd_Zenodo_ConceptPaper_2026_Manuscript_Public.pdf", citation_publisher: "Blue Blocks Micro Research Institute", citation_language: "en", citation_keywords: "Orienting Question; innovation education; child-led innovation; Montessori longitudinal outcomes; question-driven pedagogy; education for 2050" } },
+      seo: { title: "What Do You Want to Build — TEDxHyderabad Orienting Question | Blue Blocks Micro Research Institute", canonical: "https://research.blueblocks.in/publications/tedx-hyderabad-orienting-question", robots: "index, follow", keywords: "Orienting Question, innovation education, child-led innovation, Montessori longitudinal outcomes, question-driven pedagogy, TEDxHyderabad", openGraph: { type: "article", url: "https://research.blueblocks.in/publications/tedx-hyderabad-orienting-question", title: "What Do You Want to Build — Orienting Question | Blue Blocks Micro Research Institute", description: "Every school is built around one implicit question. This paper argues the dominant question privileges memory. A single shift — to 'What do you want to build?' — changes everything.", image: { url: "https://research.blueblocks.in/og/research-standards.jpg", width: 1200, height: 630, alt: "What Do You Want to Build" } }, citation: { citation_title: "What Do You Want to Build? — Reframing the Central Question of Schooling for the Innovation Era", citation_authors: ["Blue Blocks Micro Research Institute", "Goyal, Pavan"], citation_publication_date: "2026/04/24", citation_doi: "10.5281/zenodo.19848394", citation_pdf_url: "https://zenodo.org/records/19848394/files/BlueBlocks_Paper_TEDxHyd_Zenodo_ConceptPaper_2026_Manuscript_Public.pdf", citation_publisher: "Blue Blocks Micro Research Institute", citation_language: "en", citation_keywords: "Orienting Question; innovation education; child-led innovation; Montessori longitudinal outcomes; question-driven pedagogy; education for 2050" } },
       schemas: [
         { "@context": "https://schema.org", "@type": "ScholarlyArticle", "@id": "https://research.blueblocks.in/publications/tedx-hyderabad-orienting-question#article", name: "\"What Do You Want to Build?\" — Reframing the Central Question of Schooling for the Innovation Era", headline: "What Do You Want to Build? — From Cardboard at Six to a Satellite at Thirteen", description: "This paper introduces the Orienting Question framework — the concept that every school is organised around a single implicit question, and that the dominant question ('What did you learn today?') privileges memory while rendering invisible the vast spectrum of cognitive capacity within every classroom. The paper proposes shifting to 'What do you want to build?' and presents 17 years of longitudinal evidence from Blue Blocks Montessori School across 1,047 children, tracing a developmental arc from a six-year-old cutting cardboard to five patent applications by children aged 8-12 to a CubeSat satellite payload authorised by IN-SPACe for ISRO's PSLV C-62.", url: "https://research.blueblocks.in/publications/tedx-hyderabad-orienting-question", datePublished: "2026-04-24", inLanguage: "en", identifier: "10.5281/zenodo.19848394", sameAs: "https://doi.org/10.5281/zenodo.19848394", author: [ { "@type": "Organization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" }, { "@type": "Person", name: "Pavan Goyal", sameAs: "https://orcid.org/0009-0009-8840-8505", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute" } } ], publisher: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }, isAccessibleForFree: true, license: "https://creativecommons.org/licenses/by/4.0/", keywords: ["Orienting Question", "innovation education", "child-led innovation", "Montessori longitudinal outcomes", "developmental arc of innovation", "neurotypical cognitive spectrum", "hand-based cognition", "patent education", "CubeSat", "SBB-1", "TEDxHyderabad", "Blue Blocks Micro Research Institute"], citation: [ { "@type": "ScholarlyArticle", name: "Blue Blocks Micro Research Methodology", url: "https://doi.org/10.5281/zenodo.18584816" }, { "@type": "ScholarlyArticle", name: "BEOP v1.0", url: "https://doi.org/10.5281/zenodo.19087415" }, { "@type": "ScholarlyArticle", name: "MREF v1.0", url: "https://doi.org/10.5281/zenodo.19047669" }, { "@type": "ScholarlyArticle", name: "CDCS v1.0", url: "https://doi.org/10.5281/zenodo.19202499" }, { "@type": "ScholarlyArticle", name: "IN-SPACe Authorization Certificate", url: "https://doi.org/10.5281/zenodo.18195108" }, { "@type": "ScholarlyArticle", name: "Valorization In Orbit", url: "https://doi.org/10.5281/zenodo.18337934" } ], encoding: { "@type": "MediaObject", contentUrl: "https://research.blueblocks.in/publications/orienting-question/orienting-question.md", encodingFormat: "text/markdown" } },
         { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" }, { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications" }, { "@type": "ListItem", position: 3, name: "TEDxHyderabad Orienting Question", item: "https://research.blueblocks.in/publications/tedx-hyderabad-orienting-question" } ] }
@@ -5279,7 +5279,7 @@ const siteContent = {
     "/publications/crocodilian-skull-kutch-taphonomy": {
       title: "Taphonomic significance of the selective Iron replacement in a crocodilian skull from the Nummulites obtusus bed, Harudi Formation, Kutch Basin, Western India",
       metaDescription: "First vertebrate fossil from the Nummulites obtusus bed. A crocodilian skull shows pervasive iron replacement absent from surrounding foraminifera — and we know why.",
-      seo: { title: "Crocodilian Skull Taphonomy — Kutch Basin Eocene | Blue Blocks Micro Research Institute", canonical: "https://research.blueblocks.in/publications/crocodilian-skull-kutch-taphonomy", robots: "index, follow", keywords: "Eocene, Harudi Formation, Kutch Basin, Crocodilia, ferruginous replacement, taphonomy, diagenesis, Nummulites obtusus, bone diagenesis, India, vertebrate palaeontology", openGraph: { type: "article", url: "https://research.blueblocks.in/publications/crocodilian-skull-kutch-taphonomy", title: "Crocodilian Skull Taphonomy — Kutch Basin Eocene | Blue Blocks Micro Research Institute", description: "First vertebrate fossil from the Nummulites obtusus bed. A crocodilian skull shows pervasive iron replacement absent from surrounding foraminifera — and we know why.", image: { url: "https://research.blueblocks.in/images/og-research-standards.jpg", width: 1200, height: 630, alt: "Crocodilian Skull Kutch Taphonomy" } }, citation: { citation_title: "Taphonomic significance of the selective Iron replacement in a crocodilian skull from the Nummulites obtusus bed, Harudi Formation, Kutch Basin, Western India", citation_authors: ["Chakraborty, Sreemoyee", "Sengupta, Dhurjati Prasad"], citation_author_institutions: ["Blue Blocks Micro Research Institute", "Indian Statistical Institute"], citation_publication_date: "2026/04/29", citation_doi: "10.21203/rs.3.rs-9531614/v1", citation_pdf_url: "https://www.researchsquare.com/article/rs-9531614/v1.pdf", citation_publisher: "Research Square", citation_language: "en", citation_keywords: "Eocene; Harudi Formation; Kutch Basin; Crocodilia; ferruginous replacement; taphonomy; diagenesis; Nummulites obtusus; bone diagenesis; India" } },
+      seo: { title: "Crocodilian Skull Taphonomy — Kutch Basin Eocene | Blue Blocks Micro Research Institute", canonical: "https://research.blueblocks.in/publications/crocodilian-skull-kutch-taphonomy", robots: "index, follow", keywords: "Eocene, Harudi Formation, Kutch Basin, Crocodilia, ferruginous replacement, taphonomy, diagenesis, Nummulites obtusus, bone diagenesis, India, vertebrate palaeontology", openGraph: { type: "article", url: "https://research.blueblocks.in/publications/crocodilian-skull-kutch-taphonomy", title: "Crocodilian Skull Taphonomy — Kutch Basin Eocene | Blue Blocks Micro Research Institute", description: "First vertebrate fossil from the Nummulites obtusus bed. A crocodilian skull shows pervasive iron replacement absent from surrounding foraminifera — and we know why.", image: { url: "https://research.blueblocks.in/og/research-standards.jpg", width: 1200, height: 630, alt: "Crocodilian Skull Kutch Taphonomy" } }, citation: { citation_title: "Taphonomic significance of the selective Iron replacement in a crocodilian skull from the Nummulites obtusus bed, Harudi Formation, Kutch Basin, Western India", citation_authors: ["Chakraborty, Sreemoyee", "Sengupta, Dhurjati Prasad"], citation_author_institutions: ["Blue Blocks Micro Research Institute", "Indian Statistical Institute"], citation_publication_date: "2026/04/29", citation_doi: "10.21203/rs.3.rs-9531614/v1", citation_pdf_url: "https://www.researchsquare.com/article/rs-9531614/v1.pdf", citation_publisher: "Research Square", citation_language: "en", citation_keywords: "Eocene; Harudi Formation; Kutch Basin; Crocodilia; ferruginous replacement; taphonomy; diagenesis; Nummulites obtusus; bone diagenesis; India" } },
       schemas: [
         { "@context": "https://schema.org", "@type": "ScholarlyArticle", "@id": "https://research.blueblocks.in/publications/crocodilian-skull-kutch-taphonomy#article", name: "Taphonomic significance of the selective Iron replacement in a crocodilian skull from the Nummulites obtusus bed, Harudi Formation, Kutch Basin, Western India", headline: "First Vertebrate Fossil From the Nummulites obtusus Bed — A Crocodilian Skull Replaced by Iron", description: "This short report documents the first vertebrate fossil recovered from the Nummulites obtusus bed of the Harudi Formation (middle Eocene, Bartonian), Kutch Basin, western India. A partial crocodilian skull shows pervasive and morphologically faithful ferruginous replacement — iron-bearing minerals have precisely replicated the original bone architecture — while co-occurring Nummulites tests show no such alteration. The selectivity is interpreted as a product of organic matter-driven early diagenesis.", url: "https://research.blueblocks.in/publications/crocodilian-skull-kutch-taphonomy", datePublished: "2026-04-29", inLanguage: "en", identifier: "10.21203/rs.3.rs-9531614/v1", sameAs: "https://doi.org/10.21203/rs.3.rs-9531614/v1", author: [ { "@type": "Person", name: "Sreemoyee Chakraborty", sameAs: "https://orcid.org/0000-0001-5180-156X", affiliation: { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" } }, { "@type": "Person", name: "Dhurjati Prasad Sengupta", sameAs: "https://orcid.org/0000-0003-2758-1565", affiliation: { "@type": "ResearchOrganization", name: "Indian Statistical Institute" } } ], publisher: { "@type": "Organization", name: "Research Square" }, isAccessibleForFree: true, license: "https://creativecommons.org/licenses/by/4.0/", keywords: ["Eocene", "Harudi Formation", "Kutch Basin", "Crocodilia", "ferruginous replacement", "taphonomy", "diagenesis", "Nummulites obtusus", "bone diagenesis", "India", "vertebrate palaeontology", "selective mineralisation"], sourceOrganization: [ { "@type": "ResearchOrganization", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" }, { "@type": "ResearchOrganization", name: "Indian Statistical Institute" } ] },
         { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [ { "@type": "ListItem", position: 1, name: "Home", item: "https://research.blueblocks.in/" }, { "@type": "ListItem", position: 2, name: "Publications", item: "https://research.blueblocks.in/publications" }, { "@type": "ListItem", position: 3, name: "Crocodilian Skull Kutch Taphonomy", item: "https://research.blueblocks.in/publications/crocodilian-skull-kutch-taphonomy" } ] }
@@ -5327,7 +5327,7 @@ const siteContent = {
           title: "Age-Differentiated Responses to Geopolitical Violence: Iran Crisis Case Study | Blue Blocks Micro Research Institute",
           description: "How do children process geopolitical violence without social media? Qualitative case study of 28 children (ages 6–16) responding to the Iran crisis, conducted within days of the event. Published with DOI.",
           image: {
-            url: "https://research.blueblocks.in/images/og-iran-case-study.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Iran Crisis Case Study"
@@ -5343,7 +5343,7 @@ const siteContent = {
           card: "summary_large_image",
           title: "Iran Crisis Case Study: Children's Responses to Geopolitical Violence | Blue Blocks Micro Research Institute",
           description: "28 children, 3 age cohorts, 5 days after the event. How children in a screen-limited Montessori environment process war. DOI: 10.5281/zenodo.18996507",
-          image: "https://research.blueblocks.in/images/og-iran-case-study.jpg"
+          image: "https://research.blueblocks.in/og/home.jpg"
         },
         citation: {
           citation_title: "Age-Differentiated Responses to Geopolitical Violence: A Qualitative Case Study on the Iran Crisis in 2026 Among School Children of Blue Blocks, Hyderabad, India",
@@ -5381,7 +5381,7 @@ const siteContent = {
           datePublished: "2026-03-10",
           dateCreated: "2026-03-10",
           url: "https://research.blueblocks.in/publications/iran-war-case-study",
-          identifier: "https://doi.org/10.5281/zenodo.18996507",
+          identifier: { "@type": "PropertyValue", propertyID: "DOI", value: "10.5281/zenodo.18996507" },
           sameAs: "https://doi.org/10.5281/zenodo.18996507",
           inLanguage: "en",
           about: [
@@ -5407,7 +5407,7 @@ const siteContent = {
             {
               "@type": "ScholarlyArticle",
               name: "Practitioner-Led Methodology Framework",
-              identifier: "https://doi.org/10.5281/zenodo.18584816",
+              identifier: { "@type": "PropertyValue", propertyID: "DOI", value: "10.5281/zenodo.18584816" },
               sameAs: "https://doi.org/10.5281/zenodo.18584816"
             }
           ],
@@ -5647,7 +5647,7 @@ const siteContent = {
           title: "Adolescent Resilience Workshop | Blue Blocks Micro Research Institute",
           description: "Case study: 12 adolescents who survived a real satellite failure face a designed engineering challenge. All four teams treated failure as a puzzle, not a problem.",
           image: {
-            url: "https://research.blueblocks.in/images/og-home.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Resilience Workshop Case Study"
@@ -5663,7 +5663,7 @@ const siteContent = {
           card: "summary_large_image",
           title: "Adolescent Resilience Workshop | Blue Blocks Micro Research Institute",
           description: "Case study: 12 adolescents who survived a real satellite failure face a designed engineering challenge. All four teams treated failure as a puzzle, not a problem.",
-          image: "https://research.blueblocks.in/images/og-home.jpg"
+          image: "https://research.blueblocks.in/og/home.jpg"
         },
         citation: {
           citation_title: "When Children Encounter Designed Adversity - The Resilience Workshop: A Case Study from the Blue Blocks Erdkinder Environment",
@@ -5693,7 +5693,7 @@ const siteContent = {
           mainEntityOfPage: "https://research.blueblocks.in/publications/resilience-workshop",
           datePublished: "2026-04-07",
           inLanguage: "en",
-          identifier: "https://doi.org/10.5281/zenodo.19344032",
+          identifier: { "@type": "PropertyValue", propertyID: "DOI", value: "10.5281/zenodo.19344032" },
           sameAs: "https://doi.org/10.5281/zenodo.19344032",
           author: [
             { "@type": "Organization", "@id": "https://research.blueblocks.in/#microresearch", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" },
@@ -6010,7 +6010,7 @@ const siteContent = {
           title: "Debate Side Switch: Adolescent Civic Reasoning | Blue Blocks Micro Research Institute",
           description: "Case study: 12 adolescents debated voting age, then switched sides mid-debate. Phase 2 arguments were qualitatively richer. Erdkinder environment, Hyderabad.",
           image: {
-            url: "https://research.blueblocks.in/images/og-home.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Structured Debate Side Switch Case Study"
@@ -6026,7 +6026,7 @@ const siteContent = {
           card: "summary_large_image",
           title: "Debate Side Switch: Adolescent Civic Reasoning | Blue Blocks Micro Research Institute",
           description: "Case study: 12 adolescents debated voting age, then switched sides mid-debate. Phase 2 arguments were qualitatively richer. Erdkinder environment, Hyderabad.",
-          image: "https://research.blueblocks.in/images/og-home.jpg"
+          image: "https://research.blueblocks.in/og/home.jpg"
         },
         citation: {
           citation_title: "The Structured Debate With Mid-Point Side Switch: A Case Study from the Blue Blocks Erdkinder Environment",
@@ -6056,7 +6056,7 @@ const siteContent = {
           mainEntityOfPage: "https://research.blueblocks.in/publications/structured-debate-side-switch",
           datePublished: "2026-04-09",
           inLanguage: "en",
-          identifier: "https://doi.org/10.5281/zenodo.19480752",
+          identifier: { "@type": "PropertyValue", propertyID: "DOI", value: "10.5281/zenodo.19480752" },
           sameAs: "https://doi.org/10.5281/zenodo.19480752",
           author: [
             { "@type": "Organization", "@id": "https://research.blueblocks.in/#microresearch", name: "Blue Blocks Micro Research Institute", url: "https://research.blueblocks.in" },
@@ -6368,7 +6368,7 @@ const siteContent = {
           title: "Adolescent Field Research at Neurodivergent Workspace | Blue Blocks Micro Research Institute",
           description: "Case study: 12 adolescents designed their own 25-question research instrument and interviewed neurodivergent adults at a Hyderabad cloud kitchen. First of a five-case series.",
           image: {
-            url: "https://research.blueblocks.in/images/og-home.jpg",
+            url: "https://research.blueblocks.in/og/home.jpg",
             width: 1200,
             height: 630,
             alt: "Flipside Case Study"
@@ -6384,7 +6384,7 @@ const siteContent = {
           card: "summary_large_image",
           title: "Adolescent Field Research at Neurodivergent Workspace | Blue Blocks Micro Research Institute",
           description: "Case study: 12 adolescents designed their own 25-question research instrument and interviewed neurodivergent adults at a Hyderabad cloud kitchen.",
-          image: "https://research.blueblocks.in/images/og-home.jpg"
+          image: "https://research.blueblocks.in/og/home.jpg"
         },
         citation: {
           citation_title: "When Children Own the Research Instrument: The Flipside Workspace Field Research Case Study from the Blue Blocks Erdkinder Environment",
@@ -6423,7 +6423,7 @@ const siteContent = {
           publisher: { "@type": "Organization", name: "Zenodo" },
           isAccessibleForFree: true,
           license: "https://creativecommons.org/licenses/by/4.0/",
-          identifier: "https://doi.org/10.5281/zenodo.19219065",
+          identifier: { "@type": "PropertyValue", propertyID: "DOI", value: "10.5281/zenodo.19219065" },
           sameAs: "https://doi.org/10.5281/zenodo.19219065",
           keywords: [
             "child-driven inquiry", "neurodivergent entrepreneurship", "research instrument design",
@@ -6851,7 +6851,7 @@ const siteContent = {
           "@type": "CreativeWork",
           name: "System for Automated Security (UAV)",
           description: "A responsive aerial surveillance system designed to mitigate latency in emergency security operations.",
-          identifier: "202041031343",
+          identifier: { "@type": "PropertyValue", propertyID: "Application Number", value: "202041031343" },
           creator: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" }
         }
       ],
@@ -7815,13 +7815,13 @@ const siteContent = {
           url: `${SITE_URL}/governance/team/vinay-shyam-donakanti`,
           title: "Vinay Shyam Donakanti - Research Data Analyst Intern",
           description: "Research Data Analyst Intern — Educational Data Analysis, Machine Learning, and Data Pipeline Development.",
-          image: `${SITE_URL}/src/assets/placeholders/avatars/vinay-donakanti.webp`
+          image: `${SITE_URL}/team/vinay-donakanti.webp`
         },
         twitter: {
           card: "summary_large_image",
           title: "Vinay Shyam Donakanti - Research Data Analyst Intern",
           description: "Research Data Analyst Intern — Educational Data Analysis, Machine Learning, and Data Pipeline Development.",
-          image: `${SITE_URL}/src/assets/placeholders/avatars/vinay-donakanti.webp`
+          image: `${SITE_URL}/team/vinay-donakanti.webp`
         }
       },
       schemas: [
@@ -7853,7 +7853,7 @@ const siteContent = {
           subheadline: "Research Data Analyst Intern. Educational Data Analysis, Machine Learning, and Data Pipeline Development.",
           primaryCta: { label: "Contact", href: "mailto:research@blueblocks.in" },
           secondaryCta: { label: "Back to Team", href: "/team" },
-          image: { src: "/src/assets/placeholders/avatars/vinay-donakanti.webp", alt: "Vinay Shyam Donakanti", variant: "hero" }
+          image: { src: "/team/vinay-donakanti.webp", alt: "Vinay Shyam Donakanti", variant: "hero" }
         },
         {
           id: "profile-meta",
@@ -7870,7 +7870,7 @@ const siteContent = {
           type: "profile",
           name: "Vinay Shyam Donakanti",
           role: "Research Data Analyst Intern",
-          image: { src: "/src/assets/placeholders/avatars/vinay-donakanti.webp", alt: "Vinay Shyam Donakanti", variant: "avatar" },
+          image: { src: "/team/vinay-donakanti.webp", alt: "Vinay Shyam Donakanti", variant: "avatar" },
           email: "research@blueblocks.in",
           socials: [
             { type: "linkedin", href: "https://www.linkedin.com/in/vinay-shyam-donakanti-1b7724379/", label: "LinkedIn" }
@@ -8934,7 +8934,7 @@ const siteContent = {
           type: "article",
           title: "Children With Restricted Screen Time Develop Sophisticated Geopolitical Reasoning",
           description: "28 school children aged 6–16 processed the Iran crisis through family conversation, peer discussion, and newspapers alone. Teenagers articulated nuclear deterrence logic from scratch.",
-          image: { url: "https://research.blueblocks.in/images/og-home.jpg", width: 1200, height: 630 },
+          image: { url: "https://research.blueblocks.in/og/home.jpg", width: 1200, height: 630 },
           article: {
             published_time: "2026-03-16T00:00:00+05:30",
             author: "Blue Blocks Micro Research Institute",
@@ -8945,7 +8945,7 @@ const siteContent = {
           card: "summary_large_image",
           title: "Children Develop Geopolitical Reasoning Without Screens",
           description: "Teenagers articulated nuclear deterrence logic from scratch; six-year-olds defaulted to legal process over violence — in a school where children learn about world events through conversation, not algorithms.",
-          image: "https://research.blueblocks.in/images/og-home.jpg"
+          image: "https://research.blueblocks.in/og/home.jpg"
         },
         citation: {
           citation_title: "Age-Differentiated Geopolitical Reasoning in Screen-Time-Restricted Children: A Qualitative Case Study of the 2026 Iran Crisis",
@@ -9096,7 +9096,7 @@ const siteContent = {
           type: "article",
           title: "India's Only School at the 30th AMI Montessori Congress",
           description: "Blue Blocks Montessori School, Hyderabad, presents an official Design Thinking breakout session alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond in Mérida, Mexico. Blue Blocks adolescents announce SBB-2 — a second student-built satellite.",
-          image: { url: "https://research.blueblocks.in/images/og-home.jpg", width: 1200, height: 630 },
+          image: { url: "https://research.blueblocks.in/og/home.jpg", width: 1200, height: 630 },
           article: {
             published_time: "2026-04-25T00:00:00+05:30",
             author: "Blue Blocks Micro Research Institute",
@@ -9107,7 +9107,7 @@ const siteContent = {
           card: "summary_large_image",
           title: "India's Only School at the 30th AMI Montessori Congress",
           description: "Blue Blocks Montessori School presents an official Design Thinking breakout session in Mérida, Mexico, alongside keynote speakers Dr. Gabor Maté and Dr. Adele Diamond. Adolescents announce SBB-2.",
-          image: "https://research.blueblocks.in/images/og-home.jpg"
+          image: "https://research.blueblocks.in/og/home.jpg"
         },
         citation: {
           citation_title: "Montessori and Innovation: A Design Thinking Workshop for a Changing World — Pre-registration of 30th AMI Congress Presentation",

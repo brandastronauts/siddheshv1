@@ -74,14 +74,14 @@ const seoSchemaConfig = {
       description: '17-year longitudinal panel of 1045 children tracking human innovation capacity from birth to age 18. Embedded observation within an AMI Montessori environment in Hyderabad, India.',
       url: `${SITE_URL}/`,
       site_name: OG_SITE_NAME,
-      image: `${SITE_URL}/images/og-home.jpg`,
+      image: `${SITE_URL}/og/home.jpg`,
       locale: 'en_IN',
     },
     twitter: {
       card: 'summary_large_image',
       title: "Children are the Data",
       description: '17-year longitudinal panel of 1045 children tracking human innovation capacity from birth to age 18. Embedded observation within an AMI Montessori environment in Hyderabad, India.',
-      image: `${SITE_URL}/images/og-home.jpg`,
+      image: `${SITE_URL}/og/home.jpg`,
     },
     jsonLd: {
       '@context': 'https://schema.org',
@@ -156,7 +156,7 @@ const seoSchemaConfig = {
       description: "17 years of continuous observation. 1045 children. 35,000+ hours of data per child. The world's longest record of human innovation capacity.",
       url: `${SITE_URL}/the-institute`,
       site_name: OG_SITE_NAME,
-      image: `${SITE_URL}/images/og-institute.jpg`,
+      image: `${SITE_URL}/og/institute.jpg`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -260,7 +260,7 @@ const seoSchemaConfig = {
       description: 'Research governance guided by Pedagogical Integrity, IRB-equivalent ethics oversight, student IP sovereignty, and K-anonymity data security protocols.',
       url: `${SITE_URL}/governance`,
       site_name: OG_SITE_NAME,
-      image: `${SITE_URL}/images/og-governance.jpg`,
+      image: `${SITE_URL}/og/governance.jpg`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -302,7 +302,7 @@ const seoSchemaConfig = {
       description: 'High-frequency embedded observation protocols. Four pillars: bounded questions, observable behavior, minimal footprint, publication-ready design.',
       url: `${SITE_URL}/methodology`,
       site_name: OG_SITE_NAME,
-      image: `${SITE_URL}/images/og-methodology.jpg`,
+      image: `${SITE_URL}/og/methodology.jpg`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -408,7 +408,7 @@ const seoSchemaConfig = {
       description: 'Integrated design-research on innovation development. Didactic Innovation Principles (DIP), purpose-designed labs, and a 17-year design-research loop.',
       url: `${SITE_URL}/methodology/innovation`,
       site_name: OG_SITE_NAME,
-      image: `${SITE_URL}/images/og-innovation.jpg`,
+      image: `${SITE_URL}/og/innovation.jpg`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -469,7 +469,7 @@ const seoSchemaConfig = {
       description: 'Three open standards with DOIs: BEOP (observation protocol), MREF (ethics framework), CDCS (data classification). Free to adopt under CC-BY-4.0.',
       url: `${SITE_URL}/governance/our-standards`,
       site_name: OG_SITE_NAME,
-      image: `${SITE_URL}/images/og-standards.jpg`,
+      image: `${SITE_URL}/og/standards.jpg`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -539,7 +539,7 @@ const seoSchemaConfig = {
       description: 'Study design constraints, observer qualifications (AMI diploma, 80% inter-rater reliability), data specifications, and publication protocols.',
       url: `${SITE_URL}/governance/standards`,
       site_name: OG_SITE_NAME,
-      image: `${SITE_URL}/images/og-research-standards.jpg`,
+      image: `${SITE_URL}/og/research-standards.jpg`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -582,7 +582,7 @@ const seoSchemaConfig = {
       description: "Consent architecture, child assent protocols, Ethics Advisory Committee oversight, and children's rights protections in longitudinal research.",
       url: `${SITE_URL}/governance/ethics`,
       site_name: OG_SITE_NAME,
-      image: `${SITE_URL}/images/og-ethics.jpg`,
+      image: `${SITE_URL}/og/ethics.jpg`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -625,7 +625,7 @@ const seoSchemaConfig = {
       description: 'Compliance with Declaration of Helsinki, Belmont Report, DPDP Act 2023, GDPR, POCSO Act, and ICMR Guidelines. IRB-equivalent Ethics Advisory Committee.',
       url: `${SITE_URL}/governance/compliance`,
       site_name: OG_SITE_NAME,
-      image: `${SITE_URL}/images/og-compliance.jpg`,
+      image: `${SITE_URL}/og/compliance.jpg`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -665,13 +665,13 @@ const seoSchemaConfig = {
       title: 'Age-Differentiated Responses to Geopolitical Violence: Iran Crisis Case Study | Blue Blocks Micro Research Institute',
       description: 'How do children process geopolitical violence without social media? Qualitative case study of 28 children (ages 6–16) responding to the Iran crisis, conducted within days of the event. Published with DOI.',
       url: `${SITE_URL}/publications/iran-war-case-study`,
-      image: `${SITE_URL}/images/og-iran-case-study.jpg`,
+      image: `${SITE_URL}/og/home.jpg`,
     },
     twitter: {
       card: 'summary_large_image',
       title: 'Iran Crisis Case Study: Children\'s Responses to Geopolitical Violence | Blue Blocks Micro Research Institute',
       description: '28 children, 3 age cohorts, 5 days after the event. How children in a screen-limited Montessori environment process war. DOI: 10.5281/zenodo.18996507',
-      image: `${SITE_URL}/images/og-iran-case-study.jpg`,
+      image: `${SITE_URL}/og/home.jpg`,
     },
     jsonLd: {
       '@context': 'https://schema.org',
