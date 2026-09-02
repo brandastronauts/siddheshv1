@@ -100,7 +100,7 @@ const AmmonoidPopup = () => {
         role="dialog"
         aria-modal="true"
         aria-labelledby="ammonoid-popup-title"
-        className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl bg-card shadow-[var(--shadow-xl)] animate-scale-in"
+        className="relative w-full max-w-lg max-h-[90vh] overflow-y-auto rounded-2xl bg-card shadow-[var(--shadow-xl)] animate-fade-in"
       >
         <button
           ref={closeRef}

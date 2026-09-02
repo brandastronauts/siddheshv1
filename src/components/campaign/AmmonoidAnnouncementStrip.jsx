@@ -5,6 +5,7 @@ const AmmonoidAnnouncementStrip = () => {
   const location = useLocation();
 
   if (!isApplicationOpen()) return null;
+  if (location.pathname.startsWith(PROGRAMME_PATH)) return null;
   if (location.pathname.startsWith('/__preview') || location.pathname.startsWith('/debug')) return null;
 
   const sequence = strip.items.join('   •   ');
