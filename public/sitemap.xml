@@ -76,4 +76,9 @@
   <url><loc>https://research.blueblocks.in/contact</loc><lastmod>2026-04-16</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
 
   <!-- HTML sitemap (priority 0.1) -->
+  <url>
+    <loc>https://research.blueblocks.in/research/ammonoid-paleobiology-programme</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

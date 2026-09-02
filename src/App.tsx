@@ -8,6 +8,8 @@ import { LazyMotion, domAnimation } from "framer-motion";
 
 import HomePage from "./pages/HomePage";
 import ScrollToTopOnRouteChange from "./components/ui/ScrollToTopOnRouteChange";
+import AmmonoidAnnouncementStrip from "./components/campaign/AmmonoidAnnouncementStrip";
+import AmmonoidPopup from "./components/campaign/AmmonoidPopup";
 
 
 
@@ -31,6 +33,7 @@ const CitationStandardsPage = lazy(() => import("./pages/CitationStandardsPage")
 const FAQPage = lazy(() => import("./pages/FAQPage"));
 const SchemaDebugPage = lazy(() => import("./pages/SchemaDebugPage"));
 const SchoolHomePreview = lazy(() => import("./pages/SchoolHomePreview"));
+const AmmonoidProgrammePage = lazy(() => import("./pages/AmmonoidProgrammePage"));
 
 const queryClient = new QueryClient();
 
@@ -48,6 +51,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTopOnRouteChange />
+          <AmmonoidAnnouncementStrip />
           
           <Suspense fallback={<LazyFallback />}>
             <Routes>
@@ -96,6 +100,7 @@ const App = () => (
               <Route path="/team" element={<GenericPage />} />
               <Route path="/team/:slug" element={<GenericPage />} />
               <Route path="/governance/team/:slug" element={<GenericPage />} />
+              <Route path="/research/ammonoid-paleobiology-programme" element={<AmmonoidProgrammePage />} />
               <Route path="/debug/schema" element={<SchemaDebugPage />} />
               <Route path="/__preview/school-home" element={<SchoolHomePreview />} />
               
@@ -106,6 +111,7 @@ const App = () => (
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </Suspense>
+          <AmmonoidPopup />
         </BrowserRouter>
       </LazyMotion>
     </TooltipProvider>

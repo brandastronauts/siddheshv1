@@ -382,3 +382,24 @@
     animation: none;
   }
 }
+
+/* Campaign announcement strip marquee */
+@keyframes bbMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.marquee-track {
+  display: inline-block;
+  min-width: 100%;
+  animation: bbMarquee 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  .marquee-track:nth-of-type(2) {
+    display: none;
+  }
+}
