@@ -4,7 +4,9 @@ import { AlertCircle, ArrowLeft, ArrowRight, CheckCircle2, Loader2, Upload } fro
 import { application, formSteps, programme } from '../../content/ammonoidProgramme';
 
 const MAX_FILE_BYTES = 10 * 1024 * 1024;
-const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+// Web3Forms public (client-side) access key — safe to ship in the bundle.
+const ACCESS_KEY =
+  import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'd0a4188d-1906-4948-a4fd-0ef1d307c5cb';
 
 const countWords = (value) => (value || '').trim().split(/\s+/).filter(Boolean).length;
 
@@ -158,9 +160,9 @@ const AmmonoidApplicationForm = () => {
       });
 
       const response = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: payload });
-      if (!response.ok) throw new Error('submission_failed');
-      const result = await response.json().catch(() => ({ success: response.ok }));
-      if (result && result.success === false) throw new Error('submission_rejected');
+      const result = await response.json().catch(() => null);
+      // Only treat as delivered when Web3Forms explicitly confirms success.
+      if (!response.ok || !result || result.success !== true) throw new Error('submission_failed');
 
       setStatus('success');
       setValues({});
