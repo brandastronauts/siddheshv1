@@ -160,9 +160,9 @@ const AmmonoidApplicationForm = () => {
       });
 
       const response = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: payload });
-      if (!response.ok) throw new Error('submission_failed');
-      const result = await response.json().catch(() => ({ success: response.ok }));
-      if (result && result.success === false) throw new Error('submission_rejected');
+      const result = await response.json().catch(() => null);
+      // Only treat as delivered when Web3Forms explicitly confirms success.
+      if (!response.ok || !result || result.success !== true) throw new Error('submission_failed');
 
       setStatus('success');
       setValues({});
