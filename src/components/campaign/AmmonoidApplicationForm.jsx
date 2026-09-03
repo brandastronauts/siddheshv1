@@ -82,6 +82,7 @@ const AmmonoidApplicationForm = () => {
   const [files, setFiles] = useState({});
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error
+  const [errorDetail, setErrorDetail] = useState('');
 
   const totalSteps = formSteps.length;
   const current = formSteps[step];
@@ -138,7 +139,8 @@ const AmmonoidApplicationForm = () => {
     }
 
     setStatus('submitting');
-    try {
+
+    const buildPayload = (includeFiles) => {
       const payload = new FormData();
       payload.append('access_key', ACCESS_KEY || '');
       payload.append('subject', 'Ammonoid Paleobiology Research Programme — New Application');
@@ -148,7 +150,9 @@ const AmmonoidApplicationForm = () => {
         s.fields.filter((f) => isVisible(f, values)).forEach((field) => {
           if (field.type === 'file') {
             const file = files[field.name];
-            if (file) payload.append(field.label, file);
+            if (!file) return;
+            if (includeFiles) payload.append(field.label, file);
+            else payload.append(field.label, `${file.name} (attachment could not be delivered — request directly from applicant)`);
             return;
           }
           if (field.type === 'checkbox') {
@@ -158,17 +162,31 @@ const AmmonoidApplicationForm = () => {
           payload.append(field.label, values[field.name] ?? '');
         });
       });
+      return payload;
+    };
 
-      const response = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: payload });
+    const send = async (includeFiles) => {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: buildPayload(includeFiles),
+      });
       const result = await response.json().catch(() => null);
-      // Only treat as delivered when Web3Forms explicitly confirms success.
-      if (!response.ok || !result || result.success !== true) throw new Error('submission_failed');
+      return { ok: response.ok && result?.success === true, message: result?.message };
+    };
+
+    try {
+      const hasFiles = Object.values(files).some(Boolean);
+      let outcome = await send(hasFiles);
+      // Some plans reject attachments; retry text-only so the application is not lost.
+      if (!outcome.ok && hasFiles) outcome = await send(false);
+      if (!outcome.ok) throw new Error(outcome.message || 'submission_failed');
 
       setStatus('success');
       setValues({});
       setFiles({});
       window.scrollTo({ top: document.getElementById('apply')?.offsetTop ?? 0, behavior: 'smooth' });
-    } catch {
+    } catch (error) {
+      setErrorDetail(error?.message && error.message !== 'submission_failed' ? error.message : '');
       setStatus('error');
     }
   };
@@ -383,10 +401,13 @@ const AmmonoidApplicationForm = () => {
       )}
 
       {status === 'error' && (
-        <p role="alert" className="mt-6 flex items-start gap-2 rounded-xl border border-destructive/30 bg-destructive/5 p-4 text-sm text-destructive">
+        <div role="alert" className="mt-6 flex items-start gap-2 rounded-xl border border-destructive/30 bg-destructive/5 p-4 text-sm text-destructive">
           <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" aria-hidden="true" />
-          {application.errorMessage}
-        </p>
+          <span>
+            {application.errorMessage}
+            {errorDetail && <span className="block mt-1 text-xs opacity-80">Details: {errorDetail}</span>}
+          </span>
+        </div>
       )}
 
       <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:justify-between">
