@@ -82,6 +82,7 @@ const AmmonoidApplicationForm = () => {
   const [files, setFiles] = useState({});
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error
+  const [errorDetail, setErrorDetail] = useState('');
 
   const totalSteps = formSteps.length;
   const current = formSteps[step];
