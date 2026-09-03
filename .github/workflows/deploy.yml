@@ -1,48 +1,44 @@
-name: Deploy research site to cPanel
+name: Deploy to Production VPS
 
 on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
-  build-and-deploy:
+  deploy:
+    name: Deploy Docker App to Hostinger VPS
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Setup Node 20 + npm cache
-        uses: actions/setup-node@v4
+      - name: Deploy to VPS via SSH
+        uses: appleboy/ssh-action@v1.0.3
         with:
-          node-version: "20"
-          cache: "npm"
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USERNAME }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          password: ${{ secrets.VPS_PASSWORD }}
+          port: ${{ secrets.VPS_PORT || 22 }}
+          script: |
+            set -e
+            echo "🚀 Connecting to production server..."
 
-      - name: Install dependencies
-        run: npm ci
+            # Navigate to project directory
+            PROJECT_DIR="${{ secrets.VPS_PROJECT_DIR || '/opt/siddheshv1' }}"
+            echo "📂 Deploying in: $PROJECT_DIR"
+            cd "$PROJECT_DIR"
 
-      - name: Build (Vite)
-        run: npm run build
+            echo "📥 Fetching latest changes from main branch..."
+            git fetch origin main
+            git reset --hard origin/main
 
-      - name: Verify dist exists
-        run: |
-          test -d dist || (echo "❌ dist/ not found. Check Vite build output." && exit 1)
-          echo "✅ dist/ found"
+            echo "🐳 Rebuilding and restarting Docker containers..."
+            docker compose down || true
+            docker compose build --no-cache
+            docker compose up -d
 
-      - name: Verify SPA .htaccess exists
-        run: |
-          test -f dist/.htaccess || (echo "❌ .htaccess not found in dist/" && exit 1)
-          echo "✅ .htaccess present in dist/ (from public/)"
+            echo "🧹 Cleaning up dangling Docker build cache..."
+            docker image prune -f
 
-      - name: Deploy to cPanel via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.CPANEL_FTP_SERVER }}
-          username: ${{ secrets.CPANEL_FTP_USERNAME }}
-          password: ${{ secrets.CPANEL_FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
-          timeout: 60000
-          local-dir: dist/
-          server-dir: ./
+            echo "✅ Deployment completed successfully!"
