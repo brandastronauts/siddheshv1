@@ -401,10 +401,13 @@ const AmmonoidApplicationForm = () => {
       )}
 
       {status === 'error' && (
-        <p role="alert" className="mt-6 flex items-start gap-2 rounded-xl border border-destructive/30 bg-destructive/5 p-4 text-sm text-destructive">
+        <div role="alert" className="mt-6 flex items-start gap-2 rounded-xl border border-destructive/30 bg-destructive/5 p-4 text-sm text-destructive">
           <AlertCircle className="w-4 h-4 shrink-0 mt-0.5" aria-hidden="true" />
-          {application.errorMessage}
-        </p>
+          <span>
+            {application.errorMessage}
+            {errorDetail && <span className="block mt-1 text-xs opacity-80">Details: {errorDetail}</span>}
+          </span>
+        </div>
       )}
 
       <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:justify-between">
