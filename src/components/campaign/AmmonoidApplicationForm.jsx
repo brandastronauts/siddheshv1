@@ -4,7 +4,9 @@ import { AlertCircle, ArrowLeft, ArrowRight, CheckCircle2, Loader2, Upload } fro
 import { application, formSteps, programme } from '../../content/ammonoidProgramme';
 
 const MAX_FILE_BYTES = 10 * 1024 * 1024;
-const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+// Web3Forms public (client-side) access key — safe to ship in the bundle.
+const ACCESS_KEY =
+  import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || 'd0a4188d-1906-4948-a4fd-0ef1d307c5cb';
 
 const countWords = (value) => (value || '').trim().split(/\s+/).filter(Boolean).length;
 
