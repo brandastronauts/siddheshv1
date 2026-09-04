@@ -7,7 +7,7 @@
  * No copy is hardcoded inside campaign components.
  */
 
-export const PROGRAMME_PATH = '/research/ammonoid-paleobiology-programme';
+export const PROGRAMME_PATH = '/collaborate/ammonoid-paleobiology-programme';
 
 // 30 September 2026, 11:59 PM India Standard Time (UTC+05:30)
 export const APPLICATION_DEADLINE_ISO = '2026-09-30T23:59:59+05:30';
