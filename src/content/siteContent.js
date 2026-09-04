@@ -1978,6 +1978,12 @@ const siteContent = {
           header: "How to Start",
           cards: [
             {
+              headline: "Ammonoid Paleobiology Research Programme",
+              icon: "graduation",
+              body: "Hands-on research programme for school students aged 12\u201318. 6 Weeks. 12 Live Online Sessions. Applications Close: 30 September 2026.",
+              button: { label: "Learn More & Apply", href: "/collaborate/ammonoid-paleobiology-programme" }
+            },
+            {
               headline: "Individual Researchers",
               icon: "user",
               body: "For PhD candidates, Post-Docs, and Faculty seeking data access or fellowships. Apply for visiting fellowships (2-8 weeks) or dataset access (requires IRB approval).",

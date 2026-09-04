@@ -1073,17 +1073,17 @@ const seoSchemaConfig = {
       ],
     },
   },
-  '/research/ammonoid-paleobiology-programme': {
+  '/collaborate/ammonoid-paleobiology-programme': {
     meta: {
       title: 'Ammonoid Paleobiology Research Programme | Blue Blocks Micro Research Institute',
       description: 'A six-week authentic paleobiology research programme for students aged 12-18: 12 live online weekend sessions, real ammonoid morphometric and fossil-occurrence datasets, and mentored original research. Applications close 30 September 2026.',
-      canonical: `${SITE_URL}/research/ammonoid-paleobiology-programme`,
+      canonical: `${SITE_URL}/collaborate/ammonoid-paleobiology-programme`,
     },
     openGraph: {
       type: 'website',
       title: 'Ammonoid Paleobiology Research Programme',
       description: 'Authentic research programme for school students aged 12-18. 12 live online sessions over 6 weeks with real paleobiology data. Applications close 30 September 2026.',
-      url: `${SITE_URL}/research/ammonoid-paleobiology-programme`,
+      url: `${SITE_URL}/collaborate/ammonoid-paleobiology-programme`,
       image: `${SITE_URL}/campaign/ammonoid-programme-flyer.webp`,
       site_name: OG_SITE_NAME,
     },
@@ -1097,8 +1097,8 @@ const seoSchemaConfig = {
       '@graph': [
         {
           '@type': 'WebPage',
-          '@id': `${SITE_URL}/research/ammonoid-paleobiology-programme/#webpage`,
-          url: `${SITE_URL}/research/ammonoid-paleobiology-programme`,
+          '@id': `${SITE_URL}/collaborate/ammonoid-paleobiology-programme/#webpage`,
+          url: `${SITE_URL}/collaborate/ammonoid-paleobiology-programme`,
           name: 'Ammonoid Paleobiology Research Programme | Blue Blocks Micro Research Institute',
           description: 'Six-week mentored ammonoid paleobiology research programme for students aged 12-18.',
           isPartOf: { '@id': PERMANENT_IDS.WEBSITE },
@@ -1106,10 +1106,10 @@ const seoSchemaConfig = {
         },
         {
           '@type': 'Course',
-          '@id': `${SITE_URL}/research/ammonoid-paleobiology-programme/#course`,
+          '@id': `${SITE_URL}/collaborate/ammonoid-paleobiology-programme/#course`,
           name: 'Ammonoid Paleobiology Research Programme',
           description: 'A hands-on research programme for school students investigating ammonoid fossils with real paleobiology data: morphometrics, fossil-occurrence records, and diversity and extinction patterns through geological time.',
-          url: `${SITE_URL}/research/ammonoid-paleobiology-programme`,
+          url: `${SITE_URL}/collaborate/ammonoid-paleobiology-programme`,
           provider: { '@id': PERMANENT_IDS.INSTITUTE },
           educationalLevel: 'Secondary education',
           teaches: 'Ammonoid paleobiology, morphometric analysis, fossil-occurrence data analysis, scientific research methods',
@@ -1132,10 +1132,10 @@ const seoSchemaConfig = {
             },
           },
         },
-        breadcrumb(`${SITE_URL}/research/ammonoid-paleobiology-programme/#breadcrumb`, [
+        breadcrumb(`${SITE_URL}/collaborate/ammonoid-paleobiology-programme/#breadcrumb`, [
           { name: 'Home', item: `${SITE_URL}/` },
-          { name: 'Research Programmes', item: `${SITE_URL}/research/ammonoid-paleobiology-programme` },
-          { name: 'Ammonoid Paleobiology Research Programme', item: `${SITE_URL}/research/ammonoid-paleobiology-programme` },
+          { name: 'Collaborate', item: `${SITE_URL}/collaborate` },
+          { name: 'Ammonoid Paleobiology Research Programme', item: `${SITE_URL}/collaborate/ammonoid-paleobiology-programme` },
         ]),
       ],
     },

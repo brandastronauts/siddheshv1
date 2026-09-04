@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { LazyMotion, domAnimation } from "framer-motion";
 
 import HomePage from "./pages/HomePage";
@@ -100,7 +100,12 @@ const App = () => (
               <Route path="/team" element={<GenericPage />} />
               <Route path="/team/:slug" element={<GenericPage />} />
               <Route path="/governance/team/:slug" element={<GenericPage />} />
-              <Route path="/research/ammonoid-paleobiology-programme" element={<AmmonoidProgrammePage />} />
+              <Route path="/collaborate/ammonoid-paleobiology-programme" element={<AmmonoidProgrammePage />} />
+              {/* Legacy route — permanent move to /collaborate (301 handled by .htaccess in production) */}
+              <Route
+                path="/research/ammonoid-paleobiology-programme"
+                element={<Navigate to="/collaborate/ammonoid-paleobiology-programme" replace />}
+              />
               <Route path="/debug/schema" element={<SchemaDebugPage />} />
               <Route path="/__preview/school-home" element={<SchoolHomePreview />} />
               

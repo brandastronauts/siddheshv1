@@ -6,7 +6,7 @@ export const sitemapData = {
     { name: "Publications", url: "/publications", status: "complete" },
     { name: "Governance & Oversight", url: "/governance", status: "complete" },
     { name: "Collaborate", url: "/collaborate", status: "complete" },
-    { name: "Ammonoid Paleobiology Research Programme", url: "/research/ammonoid-paleobiology-programme", status: "complete" },
+    { name: "Ammonoid Paleobiology Research Programme", url: "/collaborate/ammonoid-paleobiology-programme", status: "complete" },
     { name: "Newsroom", url: "/newsroom", status: "complete" },
     { name: "Contact", url: "/contact", status: "complete" },
   ],
