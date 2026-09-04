@@ -44,6 +44,9 @@ DirectorySlash Off
   # ── 301 redirect: /governance/team → /team (no dedicated governance team page) ──
   RewriteRule ^governance/team$ /team [R=301,L]
 
+  # ── 301 redirect: legacy Ammonoid programme route → /collaborate ──
+  RewriteRule ^research/ammonoid-paleobiology-programme/?$ /collaborate/ammonoid-paleobiology-programme [R=301,L]
+
   # ── Hard 410 Gone for routes intentionally removed / never built ──
   # (Previously returned 404 — 410 is a stronger, faster de-indexing signal for Google.)
   RewriteRule ^proceedings$ - [R=410,L]
