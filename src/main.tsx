@@ -22,7 +22,7 @@ if (import.meta.env.DEV) {
       '/publications/citation-standards', '/publications/glossary',
       '/publications/data', '/publications/:slug',
       '/patents', '/patents/:slug', '/books', '/books/:slug',
-      '/team', '/team/:slug', '/faq',
+      '/team', '/team/:slug', '/faq', '/collaborate/ammonoid-paleobiology-programme',
     ];
     validatorMod.validateContentLinks(contentMod.default, appRoutes);
   });
