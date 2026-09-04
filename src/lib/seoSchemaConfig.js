@@ -1134,7 +1134,7 @@ const seoSchemaConfig = {
         },
         breadcrumb(`${SITE_URL}/collaborate/ammonoid-paleobiology-programme/#breadcrumb`, [
           { name: 'Home', item: `${SITE_URL}/` },
-          { name: 'Research Programmes', item: `${SITE_URL}/collaborate/ammonoid-paleobiology-programme` },
+          { name: 'Collaborate', item: `${SITE_URL}/collaborate` },
           { name: 'Ammonoid Paleobiology Research Programme', item: `${SITE_URL}/collaborate/ammonoid-paleobiology-programme` },
         ]),
       ],
