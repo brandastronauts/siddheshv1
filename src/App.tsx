@@ -100,7 +100,12 @@ const App = () => (
               <Route path="/team" element={<GenericPage />} />
               <Route path="/team/:slug" element={<GenericPage />} />
               <Route path="/governance/team/:slug" element={<GenericPage />} />
-              <Route path="/research/ammonoid-paleobiology-programme" element={<AmmonoidProgrammePage />} />
+              <Route path="/collaborate/ammonoid-paleobiology-programme" element={<AmmonoidProgrammePage />} />
+              {/* Legacy route — permanent move to /collaborate (301 handled by .htaccess in production) */}
+              <Route
+                path="/research/ammonoid-paleobiology-programme"
+                element={<Navigate to="/collaborate/ammonoid-paleobiology-programme" replace />}
+              />
               <Route path="/debug/schema" element={<SchemaDebugPage />} />
               <Route path="/__preview/school-home" element={<SchoolHomePreview />} />
               
