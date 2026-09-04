@@ -93,6 +93,16 @@
       "permanent": true
     },
     {
+      "source": "/research/ammonoid-paleobiology-programme",
+      "destination": "/collaborate/ammonoid-paleobiology-programme",
+      "permanent": true
+    },
+    {
+      "source": "/research/ammonoid-paleobiology-programme/",
+      "destination": "/collaborate/ammonoid-paleobiology-programme",
+      "permanent": true
+    },
+    {
       "source": "/(.*)/",
       "destination": "/$1",
       "permanent": true
