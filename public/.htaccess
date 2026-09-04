@@ -39,7 +39,7 @@ DirectorySlash Off
 
   # ── Strip trailing slashes (except root "/") — 301 redirect /path/ → /path ──
   RewriteCond %{REQUEST_URI} ^(.+)/$
-  RewriteRule ^ %1 [R=301,L]
+  RewriteRule ^ https://%{HTTP_HOST}%1 [R=301,L]
 
   # ── 301 redirect: /governance/team → /team (no dedicated governance team page) ──
   RewriteRule ^governance/team$ /team [R=301,L]
