@@ -17,9 +17,11 @@ const AmmonoidAnnouncementStrip = () => {
       className="block w-full overflow-hidden border-b border-white/10 text-white"
       style={{ background: 'var(--gradient-accent)' }}
     >
-      <div className="relative flex whitespace-nowrap py-2 text-xs md:text-sm font-medium tracking-wide">
-        <span className="marquee-track px-4" aria-hidden="true">{sequence}</span>
-        <span className="marquee-track px-4" aria-hidden="true">{sequence}</span>
+      <div className="relative overflow-hidden py-2 text-xs md:text-sm font-medium tracking-wide">
+        <div className="marquee-track flex w-max whitespace-nowrap" aria-hidden="true">
+          <span className="shrink-0 px-6">{sequence}</span>
+          <span className="shrink-0 px-6">{sequence}</span>
+        </div>
         <span className="sr-only">{strip.ariaLabel}</span>
       </div>
     </Link>
