@@ -1,3 +1,5 @@
+import ammonoidFlyerAsset from '../assets/campaign/ammonoid-paleobiology-programme.jpg.asset.json';
+
 /**
  * ammonoidProgramme.js
  * Single source of truth for the Ammonoid Paleobiology Research Programme campaign:
@@ -16,10 +18,10 @@ export const isApplicationOpen = (now = new Date()) =>
   now.getTime() <= new Date(APPLICATION_DEADLINE_ISO).getTime();
 
 export const flyer = {
-  src: '/campaign/ammonoid-programme-flyer.webp',
-  srcSmall: '/campaign/ammonoid-programme-flyer-small.webp',
-  width: 2000,
-  height: 1414,
+  src: ammonoidFlyerAsset.url,
+  srcSmall: ammonoidFlyerAsset.url,
+  width: 1600,
+  height: 1131,
   alt: 'Ammonoid Paleobiology Research Programme for school students aged 12 to 18 organised by Blue Blocks Micro Research Institute',
 };
 
