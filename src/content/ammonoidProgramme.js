@@ -1,4 +1,5 @@
-import ammonoidFlyerAsset from '../assets/campaign/ammonoid-paleobiology-programme.jpg.asset.json';
+const FLYER_LARGE = '/campaign/ammonoid-programme-flyer-v2.jpg';
+const FLYER_SMALL = '/campaign/ammonoid-programme-flyer-v2-small.jpg';
 
 /**
  * ammonoidProgramme.js
