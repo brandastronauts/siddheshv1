@@ -19,8 +19,8 @@ export const isApplicationOpen = (now = new Date()) =>
   now.getTime() <= new Date(APPLICATION_DEADLINE_ISO).getTime();
 
 export const flyer = {
-  src: ammonoidFlyerAsset.url,
-  srcSmall: ammonoidFlyerAsset.url,
+  src: FLYER_LARGE,
+  srcSmall: FLYER_SMALL,
   width: 1600,
   height: 1131,
   alt: 'Ammonoid Paleobiology Research Programme for school students aged 12 to 18 organised by Blue Blocks Micro Research Institute',
