@@ -1980,7 +1980,7 @@ const siteContent = {
             {
               headline: "Ammonoid Paleobiology Research Programme",
               icon: "graduation",
-              body: "Hands-on research programme for school students aged 12\u201318. 6 Weeks. 12 Live Online Sessions. Applications Close: 30 September 2026.",
+              body: "Hands-on research programme for school students aged 12\u201318. 6 Weeks. 12 Live Online Sessions. Applications Close: 07 October 2026.",
               button: { label: "Learn More & Apply", href: "/collaborate/ammonoid-paleobiology-programme" }
             },
             {

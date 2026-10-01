@@ -71,7 +71,12 @@ const AmmonoidProgrammePage = () => {
               </a>
             </div>
 
-            <div className="mt-8 inline-flex flex-wrap items-center justify-center gap-x-6 gap-y-2 rounded-xl bg-white/10 px-5 py-3 text-sm text-white/90">
+            {open && programme.dates.extendedBadge && (
+              <p className="mt-8 mx-auto w-fit rounded-lg bg-destructive px-4 py-1.5 text-base md:text-lg font-extrabold tracking-wide text-destructive-foreground shadow-[var(--shadow-sm)]">
+                {programme.dates.extendedBadge}
+              </p>
+            )}
+            <div className="mt-3 inline-flex flex-wrap items-center justify-center gap-x-6 gap-y-2 rounded-xl bg-white/10 px-5 py-3 text-sm text-white/90">
               <span className="inline-flex items-center gap-2">
                 <CalendarClock className="w-4 h-4" aria-hidden="true" />
                 {programme.dates.deadlineLabel}: <strong className="font-semibold">{programme.dates.deadline}</strong>

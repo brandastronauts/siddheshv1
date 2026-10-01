@@ -1076,13 +1076,13 @@ const seoSchemaConfig = {
   '/collaborate/ammonoid-paleobiology-programme': {
     meta: {
       title: 'Ammonoid Paleobiology Research Programme | Blue Blocks Micro Research Institute',
-      description: 'A six-week authentic paleobiology research programme for students aged 12-18: 12 live online weekend sessions, real ammonoid morphometric and fossil-occurrence datasets, and mentored original research. Applications close 30 September 2026.',
+      description: 'A six-week authentic paleobiology research programme for students aged 12-18: 12 live online weekend sessions, real ammonoid morphometric and fossil-occurrence datasets, and mentored original research. Applications close 07 October 2026.',
       canonical: `${SITE_URL}/collaborate/ammonoid-paleobiology-programme`,
     },
     openGraph: {
       type: 'website',
       title: 'Ammonoid Paleobiology Research Programme',
-      description: 'Authentic research programme for school students aged 12-18. 12 live online sessions over 6 weeks with real paleobiology data. Applications close 30 September 2026.',
+      description: 'Authentic research programme for school students aged 12-18. 12 live online sessions over 6 weeks with real paleobiology data. Applications close 07 October 2026.',
       url: `${SITE_URL}/collaborate/ammonoid-paleobiology-programme`,
       image: `${SITE_URL}/campaign/ammonoid-programme-flyer.webp`,
       site_name: OG_SITE_NAME,
@@ -1090,7 +1090,7 @@ const seoSchemaConfig = {
     twitter: {
       card: 'summary_large_image',
       title: 'Ammonoid Paleobiology Research Programme',
-      description: 'Authentic paleobiology research programme for students aged 12-18. Applications close 30 September 2026.',
+      description: 'Authentic paleobiology research programme for students aged 12-18. Applications close 07 October 2026.',
     },
     jsonLd: {
       '@context': 'https://schema.org',

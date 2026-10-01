@@ -127,6 +127,11 @@ const AmmonoidPopup = () => {
           <h2 id="ammonoid-popup-title" className="text-lg md:text-xl font-bold text-primary-navy">
             {popup.heading}
           </h2>
+          {popup.extendedBadge && (
+            <p className="mt-2 inline-block rounded-md bg-destructive px-3 py-1 text-sm font-extrabold tracking-wide text-destructive-foreground">
+              {popup.extendedBadge}
+            </p>
+          )}
           {popup.copy.map((line) => (
             <p key={line} className="mt-1.5 text-sm text-muted-foreground leading-relaxed">{line}</p>
           ))}
