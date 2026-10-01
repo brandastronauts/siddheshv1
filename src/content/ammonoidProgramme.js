@@ -43,6 +43,7 @@ export const programme = {
     { label: 'Eligibility', value: 'Ages 12–18' },
   ],
   dates: {
+    extendedBadge: 'DEADLINE EXTENDED!!',
     deadlineLabel: 'Applications Close',
     deadline: '07 October 2026',
     interviewLabel: 'Interview Round',
@@ -265,20 +266,19 @@ export const formSteps = [
 export const strip = {
   items: [
     'Ammonoid Paleobiology Research Programme',
-    'Applications Open',
+    'DEADLINE EXTENDED!!',
     'Ages 12–18',
-    '12 Live Online Sessions',
-    'Applications Close 07 October 2026',
+    'Applications Now Close 07 October 2026',
     'Apply Now →',
   ],
-  ariaLabel: 'Ammonoid Paleobiology Research Programme — applications open, closing 07 October 2026. Apply now.',
+  ariaLabel: 'Ammonoid Paleobiology Research Programme — deadline extended, applications now close 07 October 2026. Apply now.',
 };
 
 export const popup = {
   heading: 'Ammonoid Paleobiology Research Programme',
+  extendedBadge: 'DEADLINE EXTENDED!!',
   copy: [
-    'Authentic research programme for school students aged 12–18.',
-    'Applications close 07 October 2026.',
+    'Applications now close on 07 October 2026.',
   ],
   cta: 'Explore Programme & Apply',
   closeLabel: 'Close programme announcement',
