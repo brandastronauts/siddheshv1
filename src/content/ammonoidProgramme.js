@@ -1,5 +1,5 @@
-const FLYER_LARGE = '/campaign/ammonoid-programme-flyer-v2.jpg';
-const FLYER_SMALL = '/campaign/ammonoid-programme-flyer-v2-small.jpg';
+const FLYER_LARGE = '/campaign/ammonoid-programme-flyer-v3.jpg';
+const FLYER_SMALL = '/campaign/ammonoid-programme-flyer-v3-small.jpg';
 
 /**
  * ammonoidProgramme.js
@@ -12,8 +12,8 @@ const FLYER_SMALL = '/campaign/ammonoid-programme-flyer-v2-small.jpg';
 
 export const PROGRAMME_PATH = '/collaborate/ammonoid-paleobiology-programme';
 
-// 30 September 2026, 11:59 PM India Standard Time (UTC+05:30)
-export const APPLICATION_DEADLINE_ISO = '2026-09-30T23:59:59+05:30';
+// 07 October 2026, 11:59 PM India Standard Time (UTC+05:30)
+export const APPLICATION_DEADLINE_ISO = '2026-10-07T23:59:59+05:30';
 
 export const isApplicationOpen = (now = new Date()) =>
   now.getTime() <= new Date(APPLICATION_DEADLINE_ISO).getTime();
@@ -44,7 +44,7 @@ export const programme = {
   ],
   dates: {
     deadlineLabel: 'Applications Close',
-    deadline: '30 September 2026',
+    deadline: '07 October 2026',
     interviewLabel: 'Interview Round',
     interview: '10 October 2026',
   },
@@ -111,7 +111,7 @@ export const programme = {
   selection: {
     heading: 'How Selection Works',
     steps: [
-      'Submit the completed application by 30 September 2026.',
+      'Submit the completed application by 07 October 2026.',
       'Applications are reviewed and a shortlist is prepared.',
       'Shortlisted candidates are invited to an interview.',
       'Interview round takes place on 10 October 2026.',
@@ -153,7 +153,7 @@ export const programme = {
   closed: {
     heading: 'Applications for This Intake Are Closed',
     copy:
-      'Applications for the current Ammonoid Paleobiology Research Programme intake closed on 30 September 2026.',
+      'Applications for the current Ammonoid Paleobiology Research Programme intake closed on 07 October 2026.',
     contactCopy: 'For future programme enquiries, contact research@blueblocks.in.',
   },
 };
@@ -268,17 +268,17 @@ export const strip = {
     'Applications Open',
     'Ages 12–18',
     '12 Live Online Sessions',
-    'Applications Close 30 September 2026',
+    'Applications Close 07 October 2026',
     'Apply Now →',
   ],
-  ariaLabel: 'Ammonoid Paleobiology Research Programme — applications open, closing 30 September 2026. Apply now.',
+  ariaLabel: 'Ammonoid Paleobiology Research Programme — applications open, closing 07 October 2026. Apply now.',
 };
 
 export const popup = {
   heading: 'Ammonoid Paleobiology Research Programme',
   copy: [
     'Authentic research programme for school students aged 12–18.',
-    'Applications close 30 September 2026.',
+    'Applications close 07 October 2026.',
   ],
   cta: 'Explore Programme & Apply',
   closeLabel: 'Close programme announcement',
