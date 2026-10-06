@@ -11268,7 +11268,7 @@ const FIELDS_MAP = {
 // and ensure all robots directives allow indexing
 const processed = JSON.parse(
   JSON.stringify(siteContent)
-    .replace(/https:\/\/siddheshv1\.lovable\.app/g, SITE_URL)
+    .replace(/https:\/\/siddheshv1\.lovable\.app(?!\/__l5e\/assets-v1\/)/g, SITE_URL)
     .replace(/https:\/\/bb-researchv2\.vercel\.app/g, SITE_URL)
     .replace(/"robots"\s*:\s*"noindex[^"]*"/g, '"robots":"index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1"')
 );
