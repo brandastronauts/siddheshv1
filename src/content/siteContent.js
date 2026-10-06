@@ -3,6 +3,8 @@ import sreemoyeePortrait from "../assets/placeholders/avatars/sreemoyee-chakrabo
 // Single source of truth for all site content
 // All page copy and structure comes from this file
 
+const sreemoyeePortraitUrl = new URL(sreemoyeePortrait.url, "https://siddheshv1.lovable.app").href;
+
 const SITE_URL = 'https://research.blueblocks.in';
 
 const siteContent = {
@@ -1706,7 +1708,7 @@ const siteContent = {
               headline: "Dr. Sreemoyee Chakraborty",
               tag: "Dean of Research",
               body: "**Training:** PhD, Palaeontology (ISI / University of Calcutta)\n\nLeads fossil-based STEM research modules and scientific inquiry frameworks within the institute. Contributes domain expertise in paleoclimate interpretation, geological data modeling, and child-led scientific investigation design.",
-              image: { src: sreemoyeePortrait.url, alt: "Sreemoyee Chakraborty", variant: "avatar", privacyBlur: false },
+              image: { src: sreemoyeePortraitUrl, alt: "Sreemoyee Chakraborty", variant: "avatar", privacyBlur: false },
               linkedin: "https://www.linkedin.com/in/sreemoyee-chakraborty-403192333/",
               cta: { label: "View Profile", href: "/governance/team/dr-sreemoyee-chakraborty" }
             },
@@ -3773,7 +3775,7 @@ const siteContent = {
               headline: "Dr. Sreemoyee Chakraborty",
               tag: "Dean of Research",
               body: "PhD, Palaeontology (ISI / University of Calcutta). Leads fossil-based STEM research modules and scientific inquiry frameworks.",
-              image: { src: sreemoyeePortrait.url, alt: "Sreemoyee Chakraborty", variant: "avatar", privacyBlur: false },
+              image: { src: sreemoyeePortraitUrl, alt: "Sreemoyee Chakraborty", variant: "avatar", privacyBlur: false },
               linkedin: "https://www.linkedin.com/in/sreemoyee-chakraborty-403192333/",
               cta: { label: "View Profile", href: "/governance/team/dr-sreemoyee-chakraborty" }
             },
@@ -8459,13 +8461,13 @@ const siteContent = {
           url: `${SITE_URL}/governance/team/dr-sreemoyee-chakraborty`,
           title: "Dr. Sreemoyee Chakraborty - STEM Research, Palaeontology, & Earth Science",
           description: "STEM Research, Palaeontology, & Earth Science. PhD: Palaeontology, Indian Statistical Institute / University of Calcutta (2025).",
-          image: new URL(sreemoyeePortrait.url, SITE_URL).href
+          image: sreemoyeePortraitUrl
         },
         twitter: {
           card: "summary_large_image",
           title: "Dr. Sreemoyee Chakraborty - STEM Research, Palaeontology, & Earth Science",
           description: "STEM Research, Palaeontology, & Earth Science. PhD: Palaeontology, Indian Statistical Institute / University of Calcutta (2025).",
-          image: new URL(sreemoyeePortrait.url, SITE_URL).href
+          image: sreemoyeePortraitUrl
         }
       },
       schemas: [
@@ -8475,7 +8477,7 @@ const siteContent = {
           name: "Dr. Sreemoyee Chakraborty",
           url: `${SITE_URL}/governance/team/dr-sreemoyee-chakraborty`,
           jobTitle: "STEM Research, Palaeontology, & Earth Science",
-          image: new URL(sreemoyeePortrait.url, SITE_URL).href,
+          image: sreemoyeePortraitUrl,
           worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
           description: "STEM Research, Palaeontology, & Earth Science. PhD: Palaeontology, Indian Statistical Institute / University of Calcutta (2025)."
         },
@@ -8499,7 +8501,7 @@ const siteContent = {
           subheadline: "STEM Research, Palaeontology, & Earth Science",
           primaryCta: { label: "Contact", href: "mailto:research@blueblocks.in" },
           secondaryCta: { label: "Back to Team", href: "/team" },
-          image: { src: sreemoyeePortrait.url, alt: "Sreemoyee Chakraborty", variant: "hero" }
+          image: { src: sreemoyeePortraitUrl, alt: "Sreemoyee Chakraborty", variant: "hero" }
         },
         {
           id: "profile-meta",
@@ -8514,7 +8516,7 @@ const siteContent = {
           type: "profile",
           name: "Dr. Sreemoyee Chakraborty",
           role: "STEM Research, Palaeontology, & Earth Science",
-          image: { src: sreemoyeePortrait.url, alt: "Sreemoyee Chakraborty", variant: "avatar" },
+          image: { src: sreemoyeePortraitUrl, alt: "Sreemoyee Chakraborty", variant: "avatar" },
           email: "research@blueblocks.in",
           socials: [
             { type: "linkedin", href: "https://www.linkedin.com/in/dr-sreemoyee-chakraborti-238490b6/", label: "LinkedIn" },
