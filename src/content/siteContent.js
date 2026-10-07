@@ -6,6 +6,7 @@ import rp5Image from "../assets/publications/RP5-Pic.webp.asset.json";
 import rp6Image from "../assets/publications/RP6-Pic.webp.asset.json";
 import rp7Image from "../assets/publications/RP7-Pic.webp.asset.json";
 import rp8Image from "../assets/publications/RP8-Pic.webp.asset.json";
+import { publishedPapers } from "./publishedPapers.js";
 import sreemoyeePortrait from "../assets/placeholders/avatars/sreemoyee-chakraborty-new.webp.asset.json";
 
 // Single source of truth for all site content
@@ -1175,6 +1176,7 @@ const siteContent = {
           cards: [
             {
               "id": "RP1",
+              "slug": "becoming-fireflies",
               "sourceDocument": "RP1-Becoming Fireflies-Research Paper.docx",
               "sourceImage": "RP1-Pic.jpg",
               "headline": "Becoming Fireflies: An Embodied Biomimicry Activity for Teaching Bioluminescent Communication to Children Aged 9–12",
@@ -1186,8 +1188,8 @@ const siteContent = {
               "meta": "DOI: https://doi.org/10.5281/zenodo.22094474",
               "cta": {
                 "label": "View Publication",
-                "href": "https://doi.org/10.5281/zenodo.22094474",
-                "external": true
+                "href": "/publications/becoming-fireflies",
+                "external": false
               },
               "image": {
                 "src": new URL(rp1Image.url, "https://siddheshv1.lovable.app").href,
@@ -1200,6 +1202,7 @@ const siteContent = {
             },
             {
               "id": "RP2",
+              "slug": "growth-needs-as-friendship",
               "sourceDocument": "RP2-Biology-Plant Companions-Research Paper.docx",
               "sourceImage": "RP2-Pic.jpg",
               "headline": "Growth Needs as Friendship: Naive Biology and Anthropomorphism in Children's Accounts of Plant Companions",
@@ -1211,8 +1214,8 @@ const siteContent = {
               "meta": "DOI: http://dx.doi.org/10.2139/ssrn.7348381",
               "cta": {
                 "label": "View Publication",
-                "href": "http://dx.doi.org/10.2139/ssrn.7348381",
-                "external": true
+                "href": "/publications/growth-needs-as-friendship",
+                "external": false
               },
               "image": {
                 "src": new URL(rp2Image.url, "https://siddheshv1.lovable.app").href,
@@ -1225,6 +1228,7 @@ const siteContent = {
             },
             {
               "id": "RP3",
+              "slug": "biophilia-in-the-classroom",
               "sourceDocument": "RP3-Biophilia in the Classroom-Research Paper.docx",
               "sourceImage": "RP3-Pic.jpg",
               "headline": "Biophilia in the Classroom: How Traditional and Montessori Schools Engage Children's Innate Connection to Nature",
@@ -1236,8 +1240,8 @@ const siteContent = {
               "meta": "DOI: https://doi.org/10.5281/zenodo.21126658",
               "cta": {
                 "label": "View Publication",
-                "href": "https://doi.org/10.5281/zenodo.21126658",
-                "external": true
+                "href": "/publications/biophilia-in-the-classroom",
+                "external": false
               },
               "image": {
                 "src": new URL(rp3Image.url, "https://siddheshv1.lovable.app").href,
@@ -1250,6 +1254,7 @@ const siteContent = {
             },
             {
               "id": "RP4",
+              "slug": "drawing-life",
               "sourceDocument": "RP4-Biophilia-Drawing Life Research Paper.docx",
               "sourceImage": "RP4-Pic.jpg",
               "headline": "Drawing Life: Spontaneous Biophilic Imagery in Children’s Responses to an Open-Ended Prompt — A Pilot Study from Blue Blocks Montessori School, Hyderabad, India",
@@ -1261,8 +1266,8 @@ const siteContent = {
               "meta": "DOI: http://dx.doi.org/10.2139/ssrn.6638898",
               "cta": {
                 "label": "View Publication",
-                "href": "http://dx.doi.org/10.2139/ssrn.6638898",
-                "external": true
+                "href": "/publications/drawing-life",
+                "external": false
               },
               "image": {
                 "src": new URL(rp4Image.url, "https://siddheshv1.lovable.app").href,
@@ -1275,6 +1280,7 @@ const siteContent = {
             },
             {
               "id": "RP5",
+              "slug": "the-dwelling-without-the-dweller",
               "sourceDocument": "RP5-Biophilia-Dwelling without the Dweller-Research Paper.docx",
               "sourceImage": "RP5-Pic.jpg",
               "headline": "The Dwelling Without the Dweller: The Missing Figure as a First-Person Signature in Children’s Drawings of “A Place Where Life Can Exist”",
@@ -1286,8 +1292,8 @@ const siteContent = {
               "meta": "DOI: https://doi.org/10.5281/zenodo.22007105",
               "cta": {
                 "label": "View Publication",
-                "href": "https://doi.org/10.5281/zenodo.22007105",
-                "external": true
+                "href": "/publications/the-dwelling-without-the-dweller",
+                "external": false
               },
               "image": {
                 "src": new URL(rp5Image.url, "https://siddheshv1.lovable.app").href,
@@ -1300,6 +1306,7 @@ const siteContent = {
             },
             {
               "id": "RP6",
+              "slug": "nature-affinity-and-biophilic-cognition-in-childhood",
               "sourceDocument": "RP6-Biophilic Affinity & Cognition-Research Paper.docx",
               "sourceImage": "RP6-Pic.jpg",
               "headline": "Nature Affinity and Biophilic Cognition in Childhood: Developmental Trajectories and Implications for Innovation Capacity",
@@ -1311,8 +1318,8 @@ const siteContent = {
               "meta": "DOI: https://doi.org/10.5281/zenodo.22871489",
               "cta": {
                 "label": "View Publication",
-                "href": "https://doi.org/10.5281/zenodo.22871489",
-                "external": true
+                "href": "/publications/nature-affinity-and-biophilic-cognition-in-childhood",
+                "external": false
               },
               "image": {
                 "src": new URL(rp6Image.url, "https://siddheshv1.lovable.app").href,
@@ -1325,6 +1332,7 @@ const siteContent = {
             },
             {
               "id": "RP7",
+              "slug": "red-for-danger-warmth-for-everything",
               "sourceDocument": "RP7-Firefly Signals-Colour Codes-Research Paper.docx",
               "sourceImage": "RP7-Pic.jpg",
               "headline": "Red for Danger, Warmth for Everything: How Children Assign Colours to Communicative Light Signals",
@@ -1336,8 +1344,8 @@ const siteContent = {
               "meta": "DOI: https://doi.org/10.5281/zenodo.22125690",
               "cta": {
                 "label": "View Publication",
-                "href": "https://doi.org/10.5281/zenodo.22125690",
-                "external": true
+                "href": "/publications/red-for-danger-warmth-for-everything",
+                "external": false
               },
               "image": {
                 "src": new URL(rp7Image.url, "https://siddheshv1.lovable.app").href,
@@ -1350,6 +1358,7 @@ const siteContent = {
             },
             {
               "id": "RP8",
+              "slug": "the-rainbow-has-no-rain",
               "sourceDocument": "RP8-Rainbow has No Rain-Research Paper.docx",
               "sourceImage": "RP8-Pic.jpg",
               "headline": "The Rainbow Has No Rain: A Boundary Phenomenon and the Frame That Places It in Children’s Prompted and Unprompted Art",
@@ -1361,8 +1370,8 @@ const siteContent = {
               "meta": "DOI: http://dx.doi.org/10.2139/ssrn.7311138",
               "cta": {
                 "label": "View Publication",
-                "href": "http://dx.doi.org/10.2139/ssrn.7311138",
-                "external": true
+                "href": "/publications/the-rainbow-has-no-rain",
+                "external": false
               },
               "image": {
                 "src": new URL(rp8Image.url, "https://siddheshv1.lovable.app").href,
@@ -11159,6 +11168,44 @@ const siteContent = {
   },
   },
 };
+
+// ── Published Records: full internal paper pages (RP1–RP8) ──
+// Header metadata comes from the verified listing cards; body is the verbatim DOCX conversion.
+(() => {
+  const section = siteContent.pages['/publications'].sections.find((s) => s.header === 'Published Records');
+  publishedPapers.forEach((paper) => {
+    const card = section.cards.find((c) => c.id === paper.id);
+    const route = `/publications/${paper.slug}`;
+    const excerpt = card.body.length > 300 ? `${card.body.slice(0, card.body.lastIndexOf(' ', 297))}…` : card.body;
+    siteContent.pages[route] = {
+      title: card.headline,
+      seo: {
+        title: `${card.headline} | Blue Blocks Micro Research Institute`,
+        description: excerpt,
+        canonical: `${SITE_URL}${route}`,
+        openGraph: { type: 'article', title: card.headline, description: excerpt, image: card.image.src },
+        citation: {
+          citation_title: card.headline,
+          citation_authors: card.authors.replace(/,? and /, ', ').split(/,\s*/).filter(Boolean),
+          citation_author_institutions: ['Blue Blocks Micro Research Institute'],
+          citation_publisher: 'Blue Blocks Micro Research Institute',
+          citation_doi: card.doi.replace(/^https?:\/\/(dx\.)?doi\.org\//, ''),
+        },
+      },
+      sections: [{
+        type: 'publishedPaper',
+        eyebrow: 'Published Record',
+        title: card.headline,
+        authors: card.authors,
+        doi: card.doi,
+        image: { src: card.image.src, alt: card.image.alt },
+        html: paper.html,
+        doiCta: { label: 'View DOI / External Record', href: card.doi },
+        backCta: { label: 'Back to Publications', href: '/publications' },
+      }],
+    };
+  });
+})();
 
 // ═══════════════════════════════════════════════════════════════
 // CMS ENRICHMENT LAYER

@@ -9,6 +9,7 @@ import LazySection from './LazySection';
 const TickerSection = lazy(() => import('./sections/TickerSection'));
 const Grid3Section = lazy(() => import('./sections/Grid3Section'));
 const CardsSection = lazy(() => import('./sections/CardsSection'));
+const PublishedPaperSection = lazy(() => import('./sections/PublishedPaperSection'));
 const ListSection = lazy(() => import('./sections/ListSection'));
 const LibraryCardsSection = lazy(() => import('./sections/LibraryCardsSection'));
 const AccordionSection = lazy(() => import('./sections/AccordionSection'));
@@ -111,6 +112,7 @@ const components = {
   dossierGallery: LazyDossier.DossierGallerySection,
   dossierArchiveNotice: LazyDossier.DossierArchiveNoticeSection,
   dossierRelated: LazyDossier.DossierRelatedSection,
+  publishedPaper: PublishedPaperSection,
 };
 
 // ── Section prop defaults (prevent blank renders from missing optional props) ──

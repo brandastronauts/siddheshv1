@@ -230,6 +230,15 @@ function renderSection(section) {
   const body = pick(section, ['body', 'content', 'text']);
 
   switch (type) {
+    case 'publishedPaper': {
+      let html = section.eyebrow ? `<p>${esc(section.eyebrow)}</p>` : '';
+      html += section.html || '';
+      if (section.image?.src) html += `<img src="${esc(section.image.src)}" alt="${esc(section.image.alt)}" />`;
+      if (section.doiCta?.href) html += `<p><a href="${esc(section.doiCta.href)}" rel="noopener noreferrer">${esc(section.doiCta.label)}</a></p>`;
+      if (section.backCta?.href) html += `<p><a href="${esc(section.backCta.href)}">${esc(section.backCta.label)}</a></p>`;
+      return `<section>${html}</section>`;
+    }
+
     case 'hero': {
       const title = pick(section, ['headline', 'heading', 'title']);
       const subtitle = pick(section, ['subheadline', 'subtitle', 'subheading', 'intro']);
@@ -544,7 +553,7 @@ export function renderPageToStaticHtml(page, route) {
   const crumbs = renderStaticBreadcrumbs(route, page);
   if (crumbs) parts.push(crumbs);
 
-  const hasHero = page.sections?.some((section) => section?.type === 'hero' || section?.type === 'dossierHeader');
+  const hasHero = page.sections?.some((section) => section?.type === 'hero' || section?.type === 'dossierHeader' || section?.type === 'publishedPaper');
 
   if (!hasHero) {
     const fallbackTitle = page.heroTitle || page.title;
