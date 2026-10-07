@@ -134,7 +134,7 @@ const CardsSection = ({ id, heading, header, intro, items, cards, variant, loadM
                         alt={item.image.alt}
                         loading="lazy"
                         decoding="async"
-                        className="w-full h-full object-contain bg-surface"
+                        className="w-full h-full object-cover bg-surface grayscale group-hover:grayscale-0 transition-all duration-500"
                       />
                     ) : <SmartImage
                       src={item.image.src}
@@ -145,7 +145,7 @@ const CardsSection = ({ id, heading, header, intro, items, cards, variant, loadM
                       className="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500"
                     />}
                     {/* Gradient overlay */}
-                    {!item.image.preserveContent && <div className="absolute inset-0 bg-gradient-to-t from-deep-ink/20 to-transparent" />}
+                    <div className="absolute inset-0 bg-gradient-to-t from-deep-ink/20 to-transparent pointer-events-none" />
                   </div>
                 )}
 
