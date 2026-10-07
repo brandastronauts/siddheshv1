@@ -2,6 +2,7 @@ import { fireEvent, render, screen, cleanup } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import CardsSection from '../components/sections/CardsSection';
 import siteContent from '../content/siteContent';
+import { MemoryRouter } from 'react-router-dom';
 
 vi.mock('../components/common/SmartImage', () => ({ default: () => null }));
 vi.mock('../components/common/ExpandableText', () => ({ default: () => null }));
@@ -19,12 +20,12 @@ describe('Published Records disclosure rules', () => {
   });
 
   it('initially exposes exactly six records', () => {
-    render(<CardsSection {...section} />);
+    render(<MemoryRouter><CardsSection {...section} /></MemoryRouter>);
     expect(screen.getAllByRole('heading', { level: 3 })).toHaveLength(6);
   });
 
   it('reveals six more per click and removes the control at twenty-four', () => {
-    render(<CardsSection {...section} />);
+    render(<MemoryRouter><CardsSection {...section} /></MemoryRouter>);
     for (const count of [12, 18, 24]) {
       fireEvent.click(screen.getByRole('button', { name: section.loadMore.label }));
       expect(screen.getAllByRole('heading', { level: 3 })).toHaveLength(count);
@@ -33,7 +34,7 @@ describe('Published Records disclosure rules', () => {
   });
 
   it('does not limit other card sections', () => {
-    render(<CardsSection cards={section.cards} />);
+    render(<MemoryRouter><CardsSection cards={section.cards} /></MemoryRouter>);
     expect(screen.getAllByRole('heading', { level: 3 })).toHaveLength(24);
     expect(screen.queryByRole('button', { name: section.loadMore.label })).toBeNull();
   });
