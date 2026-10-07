@@ -6,6 +6,7 @@ import rp5Image from "../assets/publications/RP5-Pic.webp.asset.json";
 import rp6Image from "../assets/publications/RP6-Pic.webp.asset.json";
 import rp7Image from "../assets/publications/RP7-Pic.webp.asset.json";
 import rp8Image from "../assets/publications/RP8-Pic.webp.asset.json";
+import rp9Image from "../assets/publications/RP9-Pic.webp.asset.json";
 import { publishedPapers } from "./publishedPapers.js";
 import sreemoyeePortrait from "../assets/placeholders/avatars/sreemoyee-chakraborty-new.webp.asset.json";
 
@@ -1380,6 +1381,32 @@ const siteContent = {
                 "preserveContent": true,
                 "width": 1200,
                 "height": 1200
+              }
+            },
+            {
+              "id": "RP9",
+              "slug": "child-parent-research-collaboration",
+              "sourceDocument": "RP9-ChildParentExplore-Research_Paper.docx",
+              "sourceImage": "RP9-Pic.jpg",
+              "headline": "Child-Parent Research Collaboration: A Model for Authentic Inquiry in Early Childhood, with a Case Study of Biomimicry Explore Montessori 2026",
+              "authors": "Raunak Sharma, Sreemoyee Chakraborty and Sandhya Rao",
+              "doi": "https://doi.org/10.5281/zenodo.23209003",
+              "body": "Children are usually the subjects of research and rarely its authors. This paper examines child–parent research collaboration: a model in which a child leads a genuine scientific study, a parent works alongside as co-researcher, guide and safety adult, and an institution supplies method, mentoring, review and a route to publication. Drawing on children's participation rights, sociocultural theories of guided learning and the literature on family science, we set out a working framework with three roles (the child as lead researcher, the parent as guide, the institution as research backbone) and five design principles: a protected division of labour, a narrow and question-led parent role, prepared materials that let non-specialist parents guide well, support timed to the family's needs, and formal recognition of the child as an author.\n\nWe then use Biomimicry Explore Montessori 2026 as an instrumental case study. In this programme, run by the BlueBlocks Micro Research Institute with Blue Blocks Montessori School, Hyderabad, from 8 August to 28 November 2026, 91 children aged 6–12 and their parents registered 81 nature-observation studies with ORCID iDs, collected 10–14 days of structured field data, wrote child-authored research papers and began 73 biomimicry prototypes. The case shows how each principle can be put into practice, and where tensions remain, especially in limiting parental influence and ensuring equal access. We conclude that child–parent collaboration is a practical and replicable route to authentic, publishable research in early childhood, and we outline what schools and research institutes need to provide for it to work.",
+              "tag": "Published Record",
+              "verbatim": true,
+              "meta": "DOI: https://doi.org/10.5281/zenodo.23209003",
+              "cta": {
+                "label": "View Publication",
+                "href": "/publications/child-parent-research-collaboration",
+                "external": false
+              },
+              "image": {
+                "src": new URL(rp9Image.url, "https://siddheshv1.lovable.app").href,
+                "alt": "Child-Parent Research Collaboration: A Model for Authentic Inquiry in Early Childhood, with a Case Study of Biomimicry Explore Montessori 2026",
+                "variant": "card",
+                "preserveContent": true,
+                "width": 1200,
+                "height": 860
               }
             },
             {
@@ -11169,7 +11196,7 @@ const siteContent = {
   },
 };
 
-// ── Published Records: full internal paper pages (RP1–RP8) ──
+// ── Published Records: full internal paper pages (RP1–RP9) ──
 // Header metadata comes from the verified listing cards; body is the verbatim DOCX conversion.
 (() => {
   const frontMatter = (html) => {
