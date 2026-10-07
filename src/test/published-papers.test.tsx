@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import siteContent from '../content/siteContent';
 
-const SLUGS = ['becoming-fireflies','growth-needs-as-friendship','biophilia-in-the-classroom','drawing-life','the-dwelling-without-the-dweller','nature-affinity-and-biophilic-cognition-in-childhood','red-for-danger-warmth-for-everything','the-rainbow-has-no-rain'];
+const SLUGS = ['becoming-fireflies','growth-needs-as-friendship','biophilia-in-the-classroom','drawing-life','the-dwelling-without-the-dweller','nature-affinity-and-biophilic-cognition-in-childhood','red-for-danger-warmth-for-everything','the-rainbow-has-no-rain','child-parent-research-collaboration'];
 
 describe('published paper pages', () => {
   const cards = siteContent.pages['/publications'].sections.find((s: any) => s.header === 'Published Records').cards;
