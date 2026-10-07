@@ -10,7 +10,7 @@ const Panel = ({ title, children }) => (
   </div>
 );
 
-const PublishedPaperSection = ({ image, html, authorsHtml, doi, doiCta, backCta }) => (
+const PublishedPaperSection = ({ image, html, authorsHtml, doi, doiCta, backCta, panelTitle = 'Publication & Access' }) => (
   <section className="py-8 md:py-12 bg-background">
     <div className="container-grid">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
@@ -26,7 +26,7 @@ const PublishedPaperSection = ({ image, html, authorsHtml, doi, doiCta, backCta 
         <aside className="lg:col-span-1 min-w-0">
           <div className="space-y-6 lg:sticky lg:top-24">
             {doiCta?.href && (
-              <Panel title="Publication & Access">
+              <Panel title={panelTitle}>
                 {doi && <p className="text-sm text-muted-foreground mb-3 break-all">DOI: {doi.replace(/^https?:\/\/(dx\.)?doi\.org\//, '')}</p>}
                 <a
                   href={doiCta.href}
