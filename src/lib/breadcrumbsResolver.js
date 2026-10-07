@@ -29,9 +29,13 @@ const PATH_LABELS = (() => {
     '/proceedings': 'Proceedings',
     '/presentations': 'Presentations',
     '/technical-briefs': 'Technical Briefs',
+    '/publications/datasets': 'Datasets',
   });
   return map;
 })();
+
+// Intermediate segments without their own page link to the section that lists them.
+const SEGMENT_LINKS = { '/publications/datasets': '/publications#datasets' };
 
 function titleCaseSlug(slug) {
   return String(slug)
@@ -66,7 +70,7 @@ export function buildBreadcrumbTrail(pathname, pageTitle) {
     const name = isLeaf
       ? labelForPath(path, pageTitle)
       : labelForPath(path);
-    trail.push({ name, path, current: isLeaf });
+    trail.push({ name, path: SEGMENT_LINKS[path] || path, current: isLeaf });
   }
   return trail;
 }

@@ -8,6 +8,7 @@ import rp7Image from "../assets/publications/RP7-Pic.webp.asset.json";
 import rp8Image from "../assets/publications/RP8-Pic.webp.asset.json";
 import rp9Image from "../assets/publications/RP9-Pic.webp.asset.json";
 import { publishedPapers } from "./publishedPapers.js";
+import { publishedDatasets } from "./publishedDatasets.js";
 import sreemoyeePortrait from "../assets/placeholders/avatars/sreemoyee-chakraborty-new.webp.asset.json";
 
 // Single source of truth for all site content
@@ -1540,6 +1541,24 @@ const siteContent = {
           ]
         },
 
+        {
+          id: "datasets",
+          type: "cards",
+          header: "Datasets",
+          intro: "Explore research datasets published by Blue Blocks Micro Research Institute.",
+          variant: "blogGrid",
+          cards: publishedDatasets.map((d) => ({
+            id: d.slug,
+            tag: "Dataset",
+            icon: "database",
+            headline: d.title,
+            ...(d.authors && { authors: d.authors }),
+            body: d.excerpt,
+            verbatim: true,
+            meta: `DOI: ${d.doi}`,
+            cta: { label: "VIEW DATASET", href: `/publications/datasets/${d.slug}`, external: false },
+          })),
+        },
         {
           id: "manuscript-docket",
           type: "cards",
@@ -11195,6 +11214,48 @@ const siteContent = {
   },
   },
 };
+
+// ── Datasets: full internal dataset landing pages (verbatim DOCX content) ──
+publishedDatasets.forEach((d) => {
+  const route = `/publications/datasets/${d.slug}`;
+  const doiId = d.doi.replace(/^https?:\/\/(dx\.)?doi\.org\//, '');
+  const description = d.excerpt.slice(0, d.excerpt.indexOf('. ') + 1) || d.excerpt;
+  siteContent.pages[route] = {
+    title: d.title,
+    seo: {
+      title: `${d.title} | Blue Blocks Micro Research Institute`,
+      description,
+      canonical: `${SITE_URL}${route}`,
+      openGraph: { type: 'article', title: d.title, description },
+      citation: {
+        citation_title: d.title,
+        ...(d.authors && { citation_authors: d.authors.split(/,\s*/) }),
+        citation_publisher: 'Blue Blocks Micro Research Institute',
+        citation_doi: doiId,
+      },
+    },
+    sections: [{
+      type: 'hero',
+      variant: 'publication',
+      headline: d.title,
+      subheadline: [d.overviewTitle, d.subtitle, d.source, d.authors && `Authors: ${d.authors}`].filter(Boolean).join('\n'),
+    }, {
+      type: 'metaStrip',
+      items: [
+        { label: 'DOI', value: doiId, href: d.doi, external: true },
+        { label: 'Type', value: 'Dataset' },
+      ],
+    }, {
+      type: 'publishedPaper',
+      panelTitle: 'Dataset & Access',
+      doi: d.doi,
+      ...(d.authors && { authorsHtml: `<p>${d.authors}</p>` }),
+      html: d.html,
+      doiCta: { label: 'ACCESS EXTERNAL DATASET', href: d.doi },
+      backCta: { label: 'Back to Publications', href: '/publications' },
+    }],
+  };
+});
 
 // ── Published Records: full internal paper pages (RP1–RP9) ──
 // Header metadata comes from the verified listing cards; body is the verbatim DOCX conversion.
