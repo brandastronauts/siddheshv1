@@ -231,9 +231,10 @@ function renderSection(section) {
 
   switch (type) {
     case 'publishedPaper': {
-      let html = section.eyebrow ? `<p>${esc(section.eyebrow)}</p>` : '';
-      html += section.html || '';
+      let html = '';
       if (section.image?.src) html += `<img src="${esc(section.image.src)}" alt="${esc(section.image.alt)}" />`;
+      html += section.html || '';
+      if (section.authorsHtml) html += `<aside><h2>Authors</h2>${section.authorsHtml}</aside>`;
       if (section.doiCta?.href) html += `<p><a href="${esc(section.doiCta.href)}" rel="noopener noreferrer">${esc(section.doiCta.label)}</a></p>`;
       if (section.backCta?.href) html += `<p><a href="${esc(section.backCta.href)}">${esc(section.backCta.label)}</a></p>`;
       return `<section>${html}</section>`;

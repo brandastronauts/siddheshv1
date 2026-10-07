@@ -11172,6 +11172,15 @@ const siteContent = {
 // ── Published Records: full internal paper pages (RP1–RP8) ──
 // Header metadata comes from the verified listing cards; body is the verbatim DOCX conversion.
 (() => {
+  const frontMatter = (html) => {
+    const idx = html.indexOf('<h2 id="abstract"');
+    const front = idx > 0 ? html.slice(0, idx) : '';
+    const authorsHtml = front
+      .replace(/<h1[\s\S]*?<\/h1>/, '')
+      .replace(/<p>(?:<strong>)?DOI:[\s\S]*?<\/p>/, '')
+      .trim();
+    return { authorsHtml, body: idx > 0 ? html.slice(idx) : html };
+  };
   const section = siteContent.pages['/publications'].sections.find((s) => s.header === 'Published Records');
   publishedPapers.forEach((paper) => {
     const card = section.cards.find((c) => c.id === paper.id);
@@ -11193,13 +11202,25 @@ const siteContent = {
         },
       },
       sections: [{
+        type: 'hero',
+        variant: 'publication',
+        headline: card.headline,
+        subheadline: card.authors,
+      }, {
+        type: 'metaStrip',
+        items: [
+          { label: 'DOI', value: card.doi.replace(/^https?:\/\/(dx\.)?doi\.org\//, ''), href: card.doi, external: true },
+          { label: 'Type', value: 'Published Record' },
+        ],
+      }, {
         type: 'publishedPaper',
-        eyebrow: 'Published Record',
         title: card.headline,
         authors: card.authors,
         doi: card.doi,
         image: { src: card.image.src, alt: card.image.alt },
-        html: paper.html,
+        // Title and DOI move to the hero/meta strip; author, affiliation and ORCID lines stay verbatim.
+        authorsHtml: frontMatter(paper.html).authorsHtml,
+        html: frontMatter(paper.html).body,
         doiCta: { label: 'View DOI / External Record', href: card.doi },
         backCta: { label: 'Back to Publications', href: '/publications' },
       }],
