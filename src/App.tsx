@@ -90,6 +90,7 @@ const App = () => (
               <Route path="/methodology/tools" element={<GenericPage />} />
               <Route path="/publications/data" element={<GenericPage />} />
               <Route path="/publications/:slug" element={<GenericPage />} />
+              <Route path="/publications/datasets/:slug" element={<GenericPage />} />
               
               <Route path="/patents" element={<GenericPage />} />
               <Route path="/patents/:slug" element={<GenericPage />} />
