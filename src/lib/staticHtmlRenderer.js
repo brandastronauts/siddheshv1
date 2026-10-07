@@ -134,8 +134,9 @@ function renderCardEntry(item) {
   let html = '';
   if (eyebrow) html += `<p>${esc(eyebrow)}</p>`;
   if (title) html += `<h3>${esc(title)}</h3>`;
+  if (item.authors) html += `<p>${esc(item.authors)}</p>`;
   if (subtitle) html += `<p>${formatRichText(subtitle)}</p>`;
-  if (body) html += renderParagraphs(body);
+  if (body) html += item.verbatim ? `<p>${esc(body)}</p>` : renderParagraphs(body);
   if (statusLine) html += `<p>${formatRichText(statusLine)}</p>`;
   if (item.details?.length) html += renderBullets(item.details);
   if (item.bullets?.length) html += renderBullets(item.bullets);
