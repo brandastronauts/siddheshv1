@@ -1,3 +1,11 @@
+import rp1Image from "../assets/publications/RP1-Pic.webp.asset.json";
+import rp2Image from "../assets/publications/RP2-Pic.webp.asset.json";
+import rp3Image from "../assets/publications/RP3-Pic.webp.asset.json";
+import rp4Image from "../assets/publications/RP4-Pic.webp.asset.json";
+import rp5Image from "../assets/publications/RP5-Pic.webp.asset.json";
+import rp6Image from "../assets/publications/RP6-Pic.webp.asset.json";
+import rp7Image from "../assets/publications/RP7-Pic.webp.asset.json";
+import rp8Image from "../assets/publications/RP8-Pic.webp.asset.json";
 import sreemoyeePortrait from "../assets/placeholders/avatars/sreemoyee-chakraborty-new.webp.asset.json";
 
 // Single source of truth for all site content
@@ -1163,7 +1171,208 @@ const siteContent = {
           header: "Published Records",
           intro: "Formal publications with DOI identifiers, archived for citation and institutional traceability.",
           variant: "blogGrid",
+          loadMore: { batchSize: 6, label: "LOAD MORE" },
           cards: [
+            {
+              "id": "RP1",
+              "sourceDocument": "RP1-Becoming Fireflies-Research Paper.docx",
+              "sourceImage": "RP1-Pic.jpg",
+              "headline": "Becoming Fireflies: An Embodied Biomimicry Activity for Teaching Bioluminescent Communication to Children Aged 9–12",
+              "authors": "Sandhya Rao and Raunak Sharma",
+              "doi": "https://doi.org/10.5281/zenodo.22094474",
+              "body": "Biomimicry-based environmental education asks learners to look to biological strategies as models for problem-solving, but few practitioner reports document how children handle the mechanics of a non-verbal biological signalling system when asked to enact it themselves. This paper reports a pilot classroom case study in which 21 children aged 9–12, divided into three groups of seven, took part in a “becoming fireflies” activity during a biomimicry-themed session. Participants collectively devised a six-signal torch-light code combining static glow counts (one, two, or three glows) with kinetic signals (a glow combined with a J-shaped, horizontal, or V-shaped flight path) to represent six short messages, then used the code to exchange messages across groups in a darkened room using a white wall as a light-reflecting backdrop. The activity was run twice (five message-exchange opportunities per group per run). Group 1 decoded messages correctly on 10 of 10 opportunities (100%); Groups 2 and 3 each decoded 9 of 10 correctly (90%), with the single error in each case being a confusion between the “I am fine” (glow + J-shape) and “Let’s run” (glow + V-shape) signals. A pre-activity elicitation exercise surfaced children’s naive conceptions of firefly bioluminescence (e.g., that the whole body, the eyes, or the mouth might glow) alongside spontaneous questions that closely tracked genuine, documented firefly biology — diurnal non-glowing species, species-specific flash codes, and predatory flash mimicry. We discuss the pedagogical implications of these findings for biomimicry and embodied-learning program design, note the study’s substantial methodological limitations as a single-session, non-controlled pilot, and propose directions for a more rigorous follow-up study.",
+              "tag": "Published Record",
+              "verbatim": true,
+              "meta": "DOI: https://doi.org/10.5281/zenodo.22094474",
+              "cta": {
+                "label": "View Publication",
+                "href": "https://doi.org/10.5281/zenodo.22094474",
+                "external": true
+              },
+              "image": {
+                "src": new URL(rp1Image.url, "https://siddheshv1.lovable.app").href,
+                "alt": "Becoming Fireflies: An Embodied Biomimicry Activity for Teaching Bioluminescent Communication to Children Aged 9–12",
+                "variant": "card",
+                "preserveContent": true,
+                "width": 1200,
+                "height": 1200
+              }
+            },
+            {
+              "id": "RP2",
+              "sourceDocument": "RP2-Biology-Plant Companions-Research Paper.docx",
+              "sourceImage": "RP2-Pic.jpg",
+              "headline": "Growth Needs as Friendship: Naive Biology and Anthropomorphism in Children's Accounts of Plant Companions",
+              "authors": "Sandhya Rao, Raunak Sharma, and Sreemoyee Chakraborty",
+              "doi": "http://dx.doi.org/10.2139/ssrn.7348381",
+              "body": "Children’s biological reasoning about plants is usually studied through questions about growth, nutrition, or classification; far less is known about how children conceive of plants as social beings embedded in relationships. We present an exploratory content analysis of the “Do Plants Have Friends?” dataset (Rao, Sharma, & Reddy Boddu, 2026), in which 90 children aged 6–11 answered the question “Do you think plants have friends? If yes, who?” and then drew “the friend of the plant,” with each drawing subsequently described in text by a researcher. We developed a coding scheme spanning categories of nominated friends other plants, insects and invertebrates, other animals, humans, abiotic/environmental growth factors, and fantastical beings and applied it to both the verbal responses and the drawing descriptions. Most children (81/90, 90.0%) gave a codeable verbal answer; “other plants” (58.0% of responders) and abiotic growth factors such as sun, water, and soil (53.1%) were named most often, followed by insects (33.3%) and humans (22.2%). Verbal mentions of humans and of insects corresponded significantly with their appearance in the paired drawing (both p < .001), and drawings by older children (8–11 years) contained significantly more distinct depicted elements than those of younger children (6–7 years), t(83) = –2.20, p = .031, although the breadth of verbal answers did not differ by age. Drawings also revealed frequent anthropomorphism: talking trees, speech bubbles, hearts including among children who gave no verbal answer at all. We situate these findings within the literature on childhood animism, naive biology, plant blindness, and biophilia, and discuss what a “friendship” framing appears to elicit from children that a direct question about plant needs may not.",
+              "tag": "Published Record",
+              "verbatim": true,
+              "meta": "DOI: http://dx.doi.org/10.2139/ssrn.7348381",
+              "cta": {
+                "label": "View Publication",
+                "href": "http://dx.doi.org/10.2139/ssrn.7348381",
+                "external": true
+              },
+              "image": {
+                "src": new URL(rp2Image.url, "https://siddheshv1.lovable.app").href,
+                "alt": "Growth Needs as Friendship: Naive Biology and Anthropomorphism in Children's Accounts of Plant Companions",
+                "variant": "card",
+                "preserveContent": true,
+                "width": 1200,
+                "height": 1200
+              }
+            },
+            {
+              "id": "RP3",
+              "sourceDocument": "RP3-Biophilia in the Classroom-Research Paper.docx",
+              "sourceImage": "RP3-Pic.jpg",
+              "headline": "Biophilia in the Classroom: How Traditional and Montessori Schools Engage Children's Innate Connection to Nature",
+              "authors": "Sreemoyee Chakraborty, Sandhya Rao, and Pavan Goyal",
+              "doi": "https://doi.org/10.5281/zenodo.21126658",
+              "body": "The biophilia hypothesis proposes that human beings carry an evolved, affective affiliation with other living systems, an affiliation that is not culturally acquired but phylogenetically embedded. This narrative review examines how this affiliation is addressed, sustained, or suppressed across two primary educational paradigms: traditional (conventional) schooling and Montessori education. Drawing on Wilson's (1984) original formulation, Kellert's elaborations (1993, 2002, 2005), and a growing body of empirical literature, the review synthesises research on nature contact in schools, children's drawings as evidence of ecological orientation, the role of pedagogical design in sustaining or attenuating biophilic expression, and the emergence of imaginative supra-natural categories in children's art. Central to the review are findings from three recent empirical studies conducted at Blue Blocks Montessori School, Hyderabad, India (Rao & Chakraborty, 2026; Rao, Chakraborty, & Donakanti, 2026; Donakanti, 2026a), which together constitute one of the few preregistered, data-archived programmes of empirical research on biophilia in a non-Western Montessori context. The review concludes that Montessori pedagogy is structurally better positioned to sustain children's biophilic orientation through the school years, but that neither paradigm fully resolves the tension between ecological memory and urban reality, and that prompt design in art activities is itself a powerful, underused pedagogical lever.",
+              "tag": "Published Record",
+              "verbatim": true,
+              "meta": "DOI: https://doi.org/10.5281/zenodo.21126658",
+              "cta": {
+                "label": "View Publication",
+                "href": "https://doi.org/10.5281/zenodo.21126658",
+                "external": true
+              },
+              "image": {
+                "src": new URL(rp3Image.url, "https://siddheshv1.lovable.app").href,
+                "alt": "Biophilia in the Classroom: How Traditional and Montessori Schools Engage Children's Innate Connection to Nature",
+                "variant": "card",
+                "preserveContent": true,
+                "width": 1200,
+                "height": 1200
+              }
+            },
+            {
+              "id": "RP4",
+              "sourceDocument": "RP4-Biophilia-Drawing Life Research Paper.docx",
+              "sourceImage": "RP4-Pic.jpg",
+              "headline": "Drawing Life: Spontaneous Biophilic Imagery in Children’s Responses to an Open-Ended Prompt — A Pilot Study from Blue Blocks Montessori School, Hyderabad, India",
+              "authors": "Sandhya Rao and Sreemoyee Chakraborty",
+              "doi": "http://dx.doi.org/10.2139/ssrn.6638898",
+              "body": "This paper explores the biophilic imagery response in children’s drawings when given an open-ended prompt: “Draw a place where life can exist.” This work is grounded in the biophilia hypothesis and the framework of the biophilic expression in children. The study tries to see if, in the absence of adult instruction or environmental priming, children would gravitate towards nature-oriented imagery. 81 children across three age groups participated in a single art session with a drawing task at the Blue Blocks Montessori School, Hyderabad. The three age groups were 6-8 years (n = 51), 9-12 years (n = 17), and 13-16 years (n = 8), and 5 more participants could not be assigned to an age group due to missing age records. Each drawing was coded using a prebuilt observer sheet across 5 element categories, i.e., vegetation, water, animals and living creatures, sky and light, human-made or built environments. 77.5% of the drawings, i.e., 62 out of 80 were classified as strongly biophilic which exceeds the 60% threshold mentioned in the\n\npre-registration. Vegetation and plants – 76.5% drawings, and sky/light elements – 67.9% drawings were the most widespread categories observed. The mean total biophilic element count shows a directional decrease with a score of 6.20 for the 6-8 years group, 4.76 for the 9-12 years group, and 3.62 for the 13-16 years group. This result is consistent with the hypothesis that with urbanization and social conditioning, spontaneous biophilic orientation gets suppressed. 87.7% of the drawings have some type of a built environment, but never as a primary source, more like a small embedded feature in predominantly nature-covered scenarios. Inter-rater reliability was established for 27.2% of the samples, i.e., 22 of the drawings which yielded a 95.7% agreement\n\non the overall results and classification of the biophilic element correlation (r = 0.989). The results suggest that in an early default cognitive-imaginative frame, biophilic orientation is predominant in children which slowly decreases with an increase in age.",
+              "tag": "Published Record",
+              "verbatim": true,
+              "meta": "DOI: http://dx.doi.org/10.2139/ssrn.6638898",
+              "cta": {
+                "label": "View Publication",
+                "href": "http://dx.doi.org/10.2139/ssrn.6638898",
+                "external": true
+              },
+              "image": {
+                "src": new URL(rp4Image.url, "https://siddheshv1.lovable.app").href,
+                "alt": "Drawing Life: Spontaneous Biophilic Imagery in Children’s Responses to an Open-Ended Prompt — A Pilot Study from Blue Blocks Montessori School, Hyderabad, India",
+                "variant": "card",
+                "preserveContent": true,
+                "width": 1200,
+                "height": 1200
+              }
+            },
+            {
+              "id": "RP5",
+              "sourceDocument": "RP5-Biophilia-Dwelling without the Dweller-Research Paper.docx",
+              "sourceImage": "RP5-Pic.jpg",
+              "headline": "The Dwelling Without the Dweller: The Missing Figure as a First-Person Signature in Children’s Drawings of “A Place Where Life Can Exist”",
+              "authors": "Sandhya Rao, Sreemoyee Chakraborty, and Raunak Sharma",
+              "doi": "https://doi.org/10.5281/zenodo.22007105",
+              "body": "Eighty-one children aged 6–16 at a Montessori school were asked to draw a place where life can exist (Rao & Chakraborty, 2026a). Re-examining the coded dataset (Rao & Chakraborty, 2026b), we report a single figure that reframes what the drawings show. The dataset contains 56 houses and 31 human figures. Because these are marginal totals over the same 81 drawings, at least 25 drawings, a floor of 44.6% of every house drawn contain, a dwelling with nobody in it, and 42.0% of the sample contains no living creature of any kind, human or animal. The children built an inhabited world and left almost nobody in it. This paper treats that gap as a psychological object rather than as a deficit, and makes two claims. First, the children answered the prompt indexically rather than iconically: they drew the signs by which the presence of life is inferred: shelter, planting, water, light, rather than instances of life itself, in the way an exobiologist searches for biosignatures rather than for organisms. Second, the figure is missing from the scene for the same reason the eye is missing from the visual field: the unrendered inhabitant is the child, and the drawing is a world composed from a position that cannot appear inside it. On this reading the empty house is not an emptiness but a vantage. Four falsifiable predictions follow, each answerable with one additional question put to the child. All figures are descriptive and drawn from a single small pilot; the interpretation is offered as a hypothesis, not a finding.",
+              "tag": "Published Record",
+              "verbatim": true,
+              "meta": "DOI: https://doi.org/10.5281/zenodo.22007105",
+              "cta": {
+                "label": "View Publication",
+                "href": "https://doi.org/10.5281/zenodo.22007105",
+                "external": true
+              },
+              "image": {
+                "src": new URL(rp5Image.url, "https://siddheshv1.lovable.app").href,
+                "alt": "The Dwelling Without the Dweller: The Missing Figure as a First-Person Signature in Children’s Drawings of “A Place Where Life Can Exist”",
+                "variant": "card",
+                "preserveContent": true,
+                "width": 1200,
+                "height": 1200
+              }
+            },
+            {
+              "id": "RP6",
+              "sourceDocument": "RP6-Biophilic Affinity & Cognition-Research Paper.docx",
+              "sourceImage": "RP6-Pic.jpg",
+              "headline": "Nature Affinity and Biophilic Cognition in Childhood: Developmental Trajectories and Implications for Innovation Capacity",
+              "authors": "Raunak Sharma and Sreemoyee Chakraborty",
+              "doi": "https://doi.org/10.5281/zenodo.22871489",
+              "body": "Human beings appear to enter childhood with a spontaneous, affiliative orientation toward living systems an orientation that a growing empirical record shows attenuates across middle childhood and adolescence on a trajectory that closely parallels the independently documented decline in divergent thinking known as the “fourth-grade slump.” This review examines nature affinity and biophilic cognition as a developmental phenomenon in its own right, asking three questions: (1) what is the shape of the developmental trajectory of biophilic cognition across childhood; (2) how context-dependent is its expression; and (3) what mechanisms might connect early biophilic engagement to innovation-relevant cognitive capacity later in development. Evidence is drawn from converging quantitative and qualitative sources, including pre-registered and pilot studies of children’s spontaneous and prompted drawings, embodied biomimicry-based simulations, and signal-design tasks (Rao & Chakraborty, 2026a; Rao, Chakraborty, & Donakanti, 2026; Rao, Chakraborty, Goyal, & Matta, 2026; Rao & Sharma, 2026), read alongside the biophilia hypothesis (Wilson, 1984; Kellert, 1993, 2002, 2005), attention restoration theory (Kaplan & Kaplan, 1989), the divergent-thinking/creativity-slump literature (Torrance, 1968; Kim, 2011; Saggar et al., 2019; Said-Metwaly et al., 2021), and the biomimicry-as-innovation-methodology literature (Benyus, 1997; Coban & Costu, 2023). Synthesis tables consolidate findings across studies rather than treating each source in isolation, showing (a) a consistent, though prompt-dependent, age-related decline in nature-oriented and divergent cognitive output; (b) a graded relationship between depth of nature engagement and creative benefit; and (c) a specific pedagogical mechanism — embodied, biologically scaffolded design activity — through which several small studies report children exhibiting innovation-relevant behaviors (distributed problem-solving, redundancy design, iterative signal repair) that are structurally continuous with professional biomimicry practice. We conclude that middle childhood is best understood as a developmental window in which biophilic cognition and innovation-relevant cognition may be jointly at risk and jointly recoverable, while noting that the evidence base remains preliminary, geographically narrow, and in need of controlled replication.",
+              "tag": "Published Record",
+              "verbatim": true,
+              "meta": "DOI: https://doi.org/10.5281/zenodo.22871489",
+              "cta": {
+                "label": "View Publication",
+                "href": "https://doi.org/10.5281/zenodo.22871489",
+                "external": true
+              },
+              "image": {
+                "src": new URL(rp6Image.url, "https://siddheshv1.lovable.app").href,
+                "alt": "Nature Affinity and Biophilic Cognition in Childhood: Developmental Trajectories and Implications for Innovation Capacity",
+                "variant": "card",
+                "preserveContent": true,
+                "width": 1200,
+                "height": 1200
+              }
+            },
+            {
+              "id": "RP7",
+              "sourceDocument": "RP7-Firefly Signals-Colour Codes-Research Paper.docx",
+              "sourceImage": "RP7-Pic.jpg",
+              "headline": "Red for Danger, Warmth for Everything: How Children Assign Colours to Communicative Light Signals",
+              "authors": "Sandhya Rao, Sreemoyee Chakraborty, and Raunak Sharma",
+              "doi": "https://doi.org/10.5281/zenodo.22125690",
+              "body": "This study examines how children map colour onto communicative function using the openly available Firefly Design Task dataset (Rao, Sharma, & Reddy Boddu, 2026). In the task, 89 children (aged 3–15 years; 50 boys, 39 girls) each assigned a colour to three imagined light signals on a firefly: a Glow light, a Hello light, and a Danger light, named an animal they wished to communicate with, and wrote a short message to that animal. Free-text colour entries were normalised to a dominant hue and classified by warmth; animals and messages were coded into categories. Since every child provided three color responses to signal meanings, signal-colour associations were evaluated using Cochran's Q and pair-wise McNemar tests. Warm colours were abundant overall and their presence did not differ across the three signals (Cochran's Q = 1.58, df=2, p=.45). Red, in particular, was assigned to the Danger signal disproportionately more than to the Glow or Hello signals (Cochran's Q = 24.27, df=2, p<.001); 38% of the children coded Red for Danger whereas only 14% and 8% coded Red for Glow and Hello respectively (both pair-wise contrast tests to Danger were significant after adjusting for multiple testing in line with the Bonferroni adjustment procedure). The percentage of engaged participants in the experiment was high (90% (95% confidence interval, 82% – 95%) and messages were more likely to be longer as age increased (Spearman's rho = .26, p=.021). There was a marked effect of gender on message content; affectionate messages were nearly exclusively written by females (90% of these messages; Fisher's exact p=.004).The results suggest that by early childhood children reserve red specifically for danger while treating warm colours as a general-purpose palette, and they illustrate the value of open datasets for studying children's symbolic use of colour.",
+              "tag": "Published Record",
+              "verbatim": true,
+              "meta": "DOI: https://doi.org/10.5281/zenodo.22125690",
+              "cta": {
+                "label": "View Publication",
+                "href": "https://doi.org/10.5281/zenodo.22125690",
+                "external": true
+              },
+              "image": {
+                "src": new URL(rp7Image.url, "https://siddheshv1.lovable.app").href,
+                "alt": "Red for Danger, Warmth for Everything: How Children Assign Colours to Communicative Light Signals",
+                "variant": "card",
+                "preserveContent": true,
+                "width": 1200,
+                "height": 1200
+              }
+            },
+            {
+              "id": "RP8",
+              "sourceDocument": "RP8-Rainbow has No Rain-Research Paper.docx",
+              "sourceImage": "RP8-Pic.jpg",
+              "headline": "The Rainbow Has No Rain: A Boundary Phenomenon and the Frame That Places It in Children’s Prompted and Unprompted Art",
+              "authors": "Sreemoyee Chakraborty, Sandhya Rao, and Raunak Sharma",
+              "doi": "http://dx.doi.org/10.2139/ssrn.7311138",
+              "body": "The rainbow is unusual among the things children draw: it is a real optical phenomenon that shares its cultural habitat with unicorns, pots of gold, and bridges to the gods. It therefore offers a natural probe of a question that is otherwise hard to put to children whether an object’s standing as real or imagined is a property the child holds, or a property the occasion confers. We examined every rainbow in three coded Blue Blocks datasets: 81 drawings made to the prompt “draw a place where life can exist” (Rao & Chakraborty, 2026b) and 198 paintings made under an open thematic condition (Donakanti, 2026b), with the two linked through a combined comparative deposit (Chakraborty, 2026). Three results follow. First, in the prompted condition the rainbow behaves as a natural element and specifically as a light element: it appears in 6 of 81 drawings (7.4%), always with the sun (6 of 6, against 54.7% elsewhere) and almost never with rain (1 of 6, against 14.7% elsewhere). Children draw the rainbow’s apparent cause and omit its actual one. Second, the rainbow is rare but marks abundance: rainbow drawings average 10.17 biophilic elements against 4.97 for the rest, and four of the six sit in the richest sixth of the sample, including the single richest drawing. Third, and centrally, the rainbow changes company with the frame. In the prompted condition it is house-poor, tree-rich, and never once appears in a drawing the observer classified as mixed or built. In the unprompted condition, four of the six rainbow paintings were independently classified as supra-nature against a base rate of 20.7%, sharing the page with flying saucers, planets, anthropomorphic animals, and invented cities. Eleven distinct children produced a rainbow across 279 artworks, and not one produced a rainbow in both conditions. We argue that the rainbow functions as a boundary object whose ontological side is assigned by the task, not carried by the child, and that its causal decoupling from rain marks it as an emblem of light rather than a depiction of optics. Detection was asymmetric across conditions, and all counts are small; the argument is offered as a hypothesis.",
+              "tag": "Published Record",
+              "verbatim": true,
+              "meta": "DOI: http://dx.doi.org/10.2139/ssrn.7311138",
+              "cta": {
+                "label": "View Publication",
+                "href": "http://dx.doi.org/10.2139/ssrn.7311138",
+                "external": true
+              },
+              "image": {
+                "src": new URL(rp8Image.url, "https://siddheshv1.lovable.app").href,
+                "alt": "The Rainbow Has No Rain: A Boundary Phenomenon and the Frame That Places It in Children’s Prompted and Unprompted Art",
+                "variant": "card",
+                "preserveContent": true,
+                "width": 1200,
+                "height": 1200
+              }
+            },
             {
               tag: "Published Record",
               headline: "In-SPACe Authorization Letter (SBB-1 / Blueblocks)",
