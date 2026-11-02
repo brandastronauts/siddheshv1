@@ -416,6 +416,8 @@
 .paper-body li { margin-bottom: .35rem; }
 .paper-body a { color: hsl(var(--primary)); text-decoration: underline; text-underline-offset: 2px; }
 .paper-body img { max-width: 100%; height: auto; margin: 1.5rem auto; display: block; border-radius: .75rem; border: 1px solid hsl(var(--border) / .5); }
+.paper-body figure { margin: 1.5rem 0 .5rem; }
+.paper-body p.caption { font-size: .9rem; text-align: left; margin-top: 1.25rem; }
 .paper-body blockquote { border-left: 3px solid hsl(var(--primary) / .5); background: hsl(var(--muted) / .5); padding: .75rem 1rem; border-radius: 0 .5rem .5rem 0; margin: 0 0 1rem; }
 .paper-table { overflow-x: auto; margin: 0 0 1.75rem; -webkit-overflow-scrolling: touch; border: 1px solid hsl(var(--border) / .6); border-radius: .75rem; }
 .paper-body table { border-collapse: collapse; min-width: 100%; font-size: .875rem; line-height: 1.5; }
