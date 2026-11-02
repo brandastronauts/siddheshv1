@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import { loadPrerenderContent } from "./scripts/loadPrerenderContent";
 
 /**
  * Escape a string for safe embedding in an HTML attribute.
@@ -22,7 +23,7 @@ function escHtml(s: string): string {
  * Reads the seoSchemaConfig and, for every route except "/", creates
  * a copy of dist/index.html with route-specific meta tags + JSON-LD injected.
  */
-function prerenderSchemasPlugin() {
+export function prerenderSchemasPlugin(outputDirectory = 'dist') {
   return {
     name: 'prerender-schemas',
     enforce: 'post' as const,
@@ -32,7 +33,7 @@ function prerenderSchemasPlugin() {
       const pathMod = await import('path');
       const { pathToFileURL } = await import('url');
 
-      const distDir = pathMod.resolve('dist');
+      const distDir = pathMod.resolve(outputDirectory);
       const SITE_URL = 'https://research.blueblocks.in';
 
       // Only proceed if dist/index.html exists (build output)
@@ -54,15 +55,9 @@ function prerenderSchemasPlugin() {
         console.warn('⚠ prerender-schemas: Could not import seoSchemaConfig, skipping schema routes.', err);
       }
 
-      // Dynamically import siteContent to get ALL routes
-      const contentPath = pathMod.resolve('src', 'content', 'siteContent.js');
-      let siteContent: any = null;
-      try {
-        const contentMod = await import(pathToFileURL(contentPath).href);
-        siteContent = contentMod.default;
-      } catch (err) {
-        console.warn('⚠ prerender-schemas: Could not import siteContent, skipping content routes.', err);
-      }
+      // Bundle JSON asset pointers for Node; fail the build instead of silently
+      // deploying directories without their route-specific index.html files.
+      const siteContent = await loadPrerenderContent();
 
       // Load static HTML renderer for content injection into View Source
       const rendererPath = pathMod.resolve('src', 'lib', 'staticHtmlRenderer.js');

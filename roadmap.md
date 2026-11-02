@@ -1,4 +1,5 @@
 # Publications update
+- [ ] Repair Node-compatible static content loading and verify generated Publications and publication-detail HTML without content/design changes.
 - [x] Ingest and verify RP1–RP8 source text and matching images.
 - [x] Prepend records without modifying existing records or other sections.
 - [x] Add opt-in six-at-a-time Load More.
