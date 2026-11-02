@@ -13,10 +13,10 @@ afterEach(cleanup);
 const section = siteContent.pages['/publications'].sections.find((item: any) => item.id === 'publications-list');
 
 describe('Published Records disclosure rules', () => {
-  it('prepends RP1 through RP9 before the sixteen existing records', () => {
-    expect(section.cards).toHaveLength(25);
-    expect(section.cards.slice(0, 9).map((card: any) => card.id)).toEqual(['RP1', 'RP2', 'RP3', 'RP4', 'RP5', 'RP6', 'RP7', 'RP8', 'RP9']);
-    expect(section.cards[9].cta.href).toBe('/publications/in-space-authorization-letter');
+  it('puts RP9 and RP10 first, then RP1 through RP8, before the sixteen existing records', () => {
+    expect(section.cards).toHaveLength(26);
+    expect(section.cards.slice(0, 10).map((card: any) => card.id)).toEqual(['RP9', 'RP10', 'RP1', 'RP2', 'RP3', 'RP4', 'RP5', 'RP6', 'RP7', 'RP8']);
+    expect(section.cards[10].cta.href).toBe('/publications/in-space-authorization-letter');
   });
 
   it('initially exposes exactly six records', () => {
@@ -24,9 +24,9 @@ describe('Published Records disclosure rules', () => {
     expect(screen.getAllByRole('heading', { level: 3 })).toHaveLength(6);
   });
 
-  it('reveals six more per click and removes the control at twenty-five', () => {
+  it('reveals six more per click and removes the control at twenty-six', () => {
     render(<MemoryRouter><CardsSection {...section} /></MemoryRouter>);
-    for (const count of [12, 18, 24, 25]) {
+    for (const count of [12, 18, 24, 26]) {
       fireEvent.click(screen.getByRole('button', { name: section.loadMore.label }));
       expect(screen.getAllByRole('heading', { level: 3 })).toHaveLength(count);
     }
@@ -35,7 +35,7 @@ describe('Published Records disclosure rules', () => {
 
   it('does not limit other card sections', () => {
     render(<MemoryRouter><CardsSection cards={section.cards} /></MemoryRouter>);
-    expect(screen.getAllByRole('heading', { level: 3 })).toHaveLength(25);
+    expect(screen.getAllByRole('heading', { level: 3 })).toHaveLength(26);
     expect(screen.queryByRole('button', { name: section.loadMore.label })).toBeNull();
   });
 });

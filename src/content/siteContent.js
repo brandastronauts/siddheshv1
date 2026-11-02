@@ -1177,6 +1177,50 @@ const siteContent = {
           loadMore: { batchSize: 6, label: "LOAD MORE" },
           cards: [
             {
+              "id": "RP9",
+              "slug": "child-parent-research-collaboration",
+              "sourceDocument": "BlueBlocks_ChildParent_Research_collaboration_Manuscript_2026_SSRN.pdf",
+              "sourceImage": "RP9-Pic.jpg",
+              "headline": "Child-Parent Research Collaboration: A Model for Authentic Inquiry in Early Childhood, with a Case Study of Biomimicry Explore Montessori 2026",
+              "authors": "Raunak Sharma, Sreemoyee Chakraborty and Sandhya Rao",
+              "doi": "https://doi.org/10.2139/ssrn.7575264",
+              "body": "Children are usually the subjects of research and rarely its authors. This paper examines child–parent research collaboration: a model in which a child leads a genuine scientific study, a parent works alongside as co-researcher, guide and safety adult, and an institution supplies method, mentoring, review and a route to publication. Drawing on children's participation rights, sociocultural theories of guided learning and the literature on family science, we set out a working framework with three roles (the child as lead researcher, the parent as guide, the institution as research backbone) and five design principles: a protected division of labour, a narrow and question-led parent role, prepared materials that let non-specialist parents guide well, support timed to the family's needs, and formal recognition of the child as an author.\n\nWe then use Biomimicry Explore Montessori 2026 as an instrumental case study. In this programme, run by the BlueBlocks Micro Research Institute with Blue Blocks Montessori School, Hyderabad, from 8 August to 28 November 2026, 91 children aged 6–12 and their parents registered 81 nature-observation studies with ORCID iDs, collected 10–14 days of structured field data, wrote child-authored research papers and began 73 biomimicry prototypes. The case shows how each principle can be put into practice, and where tensions remain, especially in limiting parental influence and ensuring equal access. We conclude that child–parent collaboration is a practical and replicable route to authentic, publishable research in early childhood, and we outline what schools and research institutes need to provide for it to work.",
+              "tag": "Published Record",
+              "verbatim": true,
+              "meta": "DOI: https://doi.org/10.2139/ssrn.7575264",
+              "cta": {
+                "label": "View Publication",
+                "href": "/publications/child-parent-research-collaboration",
+                "external": false
+              },
+              "image": {
+                "src": new URL(rp9Image.url, "https://siddheshv1.lovable.app").href,
+                "alt": "Child-Parent Research Collaboration: A Model for Authentic Inquiry in Early Childhood, with a Case Study of Biomimicry Explore Montessori 2026",
+                "variant": "card",
+                "preserveContent": true,
+                "width": 1200,
+                "height": 860
+              }
+            },
+            {
+              "id": "RP10",
+              "slug": "biomimicry-methodology-k10-blue-blocks-canon-project",
+              "sourceDocument": "BlueBlocks_Biomimicry-Methodology-K10_Zenodo_2026.pdf",
+              "headline": "Biomimicry Methodology for K-10: The Blue Blocks Canon Project",
+              "authors": "Sandhya Rao, Pavan Goyal, Munira Hussain Kagalwalla",
+              "doi": "https://doi.org/10.5281/zenodo.23795338",
+              "body": "This paper sets out the Blue Blocks methodology for teaching biomimicry from early childhood through adolescence (K-10, ages 1 to 16). It argues that the naturalist mindset and skillset needed to learn from nature should be nurtured from the earliest years, and that children should be designing and prototyping from as young as six, when they are high on imagination. The methodology rests on three foundations, Biology, Biomimicry and Biophilia, and is situated within Montessori education, with Cosmic Education as the thread that connects Montessori education and biomimicry. It describes a developmental progression in four stages: sensorial foundations (0 to 6), observing and mimicking nature (6 to 9), solving problems the way nature does (9 to 12), and the full design cycle (12 to 18). The paper then sets out the curriculum framework, the Biomimicry Journal and materials, and the whole-school structures that sustain the approach: the Biomimicry Hive, the Montessori Farm, a network of experts and a children’s Seed Bank. All of this is held by one Ethos of Respect, Responsibility and Regeneration.",
+              "tag": "Published Record",
+              "verbatim": true,
+              "icon": "file",
+              "meta": "DOI: https://doi.org/10.5281/zenodo.23795338",
+              "cta": {
+                "label": "View Publication",
+                "href": "/publications/biomimicry-methodology-k10-blue-blocks-canon-project",
+                "external": false
+              }
+            },
+            {
               "id": "RP1",
               "slug": "becoming-fireflies",
               "sourceDocument": "RP1-Becoming Fireflies-Research Paper.docx",
@@ -1382,32 +1426,6 @@ const siteContent = {
                 "preserveContent": true,
                 "width": 1200,
                 "height": 1200
-              }
-            },
-            {
-              "id": "RP9",
-              "slug": "child-parent-research-collaboration",
-              "sourceDocument": "RP9-ChildParentExplore-Research_Paper.docx",
-              "sourceImage": "RP9-Pic.jpg",
-              "headline": "Child-Parent Research Collaboration: A Model for Authentic Inquiry in Early Childhood, with a Case Study of Biomimicry Explore Montessori 2026",
-              "authors": "Raunak Sharma, Sreemoyee Chakraborty and Sandhya Rao",
-              "doi": "https://dx.doi.org/10.2139/ssrn.7575264",
-              "body": "Children are usually the subjects of research and rarely its authors. This paper examines child–parent research collaboration: a model in which a child leads a genuine scientific study, a parent works alongside as co-researcher, guide and safety adult, and an institution supplies method, mentoring, review and a route to publication. Drawing on children's participation rights, sociocultural theories of guided learning and the literature on family science, we set out a working framework with three roles (the child as lead researcher, the parent as guide, the institution as research backbone) and five design principles: a protected division of labour, a narrow and question-led parent role, prepared materials that let non-specialist parents guide well, support timed to the family's needs, and formal recognition of the child as an author.\n\nWe then use Biomimicry Explore Montessori 2026 as an instrumental case study. In this programme, run by the BlueBlocks Micro Research Institute with Blue Blocks Montessori School, Hyderabad, from 8 August to 28 November 2026, 91 children aged 6–12 and their parents registered 81 nature-observation studies with ORCID iDs, collected 10–14 days of structured field data, wrote child-authored research papers and began 73 biomimicry prototypes. The case shows how each principle can be put into practice, and where tensions remain, especially in limiting parental influence and ensuring equal access. We conclude that child–parent collaboration is a practical and replicable route to authentic, publishable research in early childhood, and we outline what schools and research institutes need to provide for it to work.",
-              "tag": "Published Record",
-              "verbatim": true,
-              "meta": "DOI: https://dx.doi.org/10.2139/ssrn.7575264",
-              "cta": {
-                "label": "View Publication",
-                "href": "/publications/child-parent-research-collaboration",
-                "external": false
-              },
-              "image": {
-                "src": new URL(rp9Image.url, "https://siddheshv1.lovable.app").href,
-                "alt": "Child-Parent Research Collaboration: A Model for Authentic Inquiry in Early Childhood, with a Case Study of Biomimicry Explore Montessori 2026",
-                "variant": "card",
-                "preserveContent": true,
-                "width": 1200,
-                "height": 860
               }
             },
             {
@@ -11257,7 +11275,7 @@ publishedDatasets.forEach((d) => {
   };
 });
 
-// ── Published Records: full internal paper pages (RP1–RP9) ──
+// ── Published Records: full internal paper pages (RP1–RP10) ──
 // Header metadata comes from the verified listing cards; body is the verbatim DOCX conversion.
 (() => {
   const frontMatter = (html) => {
@@ -11280,7 +11298,7 @@ publishedDatasets.forEach((d) => {
         title: `${card.headline} | Blue Blocks Micro Research Institute`,
         description: excerpt,
         canonical: `${SITE_URL}${route}`,
-        openGraph: { type: 'article', title: card.headline, description: excerpt, image: card.image.src },
+        openGraph: { type: 'article', title: card.headline, description: excerpt, ...(card.image && { image: card.image.src }) },
         citation: {
           citation_title: card.headline,
           citation_authors: card.authors.replace(/,? and /, ', ').split(/,\s*/).filter(Boolean),
@@ -11305,7 +11323,7 @@ publishedDatasets.forEach((d) => {
         title: card.headline,
         authors: card.authors,
         doi: card.doi,
-        image: { src: card.image.src, alt: card.image.alt },
+        ...(card.image && { image: { src: card.image.src, alt: card.image.alt } }),
         // Title and DOI move to the hero/meta strip; author, affiliation and ORCID lines stay verbatim.
         authorsHtml: frontMatter(paper.html).authorsHtml,
         html: frontMatter(paper.html).body,
