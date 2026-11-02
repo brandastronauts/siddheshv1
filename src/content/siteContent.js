@@ -1212,12 +1212,19 @@ const siteContent = {
               "body": "This paper sets out the Blue Blocks methodology for teaching biomimicry from early childhood through adolescence (K-10, ages 1 to 16). It argues that the naturalist mindset and skillset needed to learn from nature should be nurtured from the earliest years, and that children should be designing and prototyping from as young as six, when they are high on imagination. The methodology rests on three foundations, Biology, Biomimicry and Biophilia, and is situated within Montessori education, with Cosmic Education as the thread that connects Montessori education and biomimicry. It describes a developmental progression in four stages: sensorial foundations (0 to 6), observing and mimicking nature (6 to 9), solving problems the way nature does (9 to 12), and the full design cycle (12 to 18). The paper then sets out the curriculum framework, the Biomimicry Journal and materials, and the whole-school structures that sustain the approach: the Biomimicry Hive, the Montessori Farm, a network of experts and a children’s Seed Bank. All of this is held by one Ethos of Respect, Responsibility and Regeneration.",
               "tag": "Published Record",
               "verbatim": true,
-              "icon": "file",
               "meta": "DOI: https://doi.org/10.5281/zenodo.23795338",
               "cta": {
                 "label": "View Publication",
                 "href": "/publications/biomimicry-methodology-k10-blue-blocks-canon-project",
                 "external": false
+              },
+              "image": {
+                "src": "/papers/biomimicry-methodology-k10-blue-blocks-canon-project/figure-1.jpeg",
+                "alt": "Biomimicry Methodology for K-10: The Blue Blocks Canon Project",
+                "variant": "card",
+                "preserveContent": true,
+                "width": 1024,
+                "height": 768
               }
             },
             {
