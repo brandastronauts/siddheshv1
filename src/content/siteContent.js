@@ -1,20 +1,10 @@
-import rp1Image from "../assets/publications/RP1-Pic.webp.asset.json";
-import rp2Image from "../assets/publications/RP2-Pic.webp.asset.json";
-import rp3Image from "../assets/publications/RP3-Pic.webp.asset.json";
-import rp4Image from "../assets/publications/RP4-Pic.webp.asset.json";
-import rp5Image from "../assets/publications/RP5-Pic.webp.asset.json";
-import rp6Image from "../assets/publications/RP6-Pic.webp.asset.json";
-import rp7Image from "../assets/publications/RP7-Pic.webp.asset.json";
-import rp8Image from "../assets/publications/RP8-Pic.webp.asset.json";
-import rp9Image from "../assets/publications/RP9-Pic.webp.asset.json";
 import { publishedPapers } from "./publishedPapers.js";
 import { publishedDatasets } from "./publishedDatasets.js";
-import sreemoyeePortrait from "../assets/placeholders/avatars/sreemoyee-chakraborty-new.webp.asset.json";
 
 // Single source of truth for all site content
 // All page copy and structure comes from this file
 
-const sreemoyeePortraitUrl = new URL(sreemoyeePortrait.url, "https://siddheshv1.lovable.app").href;
+const sreemoyeePortraitUrl = "https://research.blueblocks.in/images/team/sreemoyee-chakraborty-new.webp";
 
 const SITE_URL = 'https://research.blueblocks.in';
 
@@ -94,7 +84,7 @@ const siteContent = {
           variant: "precision",
           headline: "Children Are the Data",
           subheadline:
-            "**17 years - 1045 children - Continuous Observation - Real Evidences**",
+            "**17 years - 1045 children - Continuous Observation - Real Evidence**",
           primaryCta: { label: "Read the Methodology Paper", href: "/methodology#meth-framework-papers" },
           secondaryCta: { label: "Zenodo Community", href: "https://zenodo.org/communities/blueblocksmicroresearchinstitute/records?q=&l=list&p=1&s=10&sort=newest", external: true },
           image: {
@@ -832,7 +822,7 @@ const siteContent = {
           "@type": "CreativeWork",
           name: "The Micro-Research Framework Paper",
           description: "Operational methodology for high-frequency embedded observation in living learning environments.",
-          url: "https://bb-researchv2.vercel.app/downloads/micro-research-framework",
+          url: "https://research.blueblocks.in/methodology#meth-framework-papers",
           creator: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
           encodingFormat: "application/pdf"
         }
@@ -1194,7 +1184,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": new URL(rp9Image.url, "https://siddheshv1.lovable.app").href,
+                "src": "https://research.blueblocks.in/images/publications/RP9-Pic.webp",
                 "alt": "Child-Parent Research Collaboration: A Model for Authentic Inquiry in Early Childhood, with a Case Study of Biomimicry Explore Montessori 2026",
                 "variant": "card",
                 "preserveContent": true,
@@ -1245,7 +1235,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": new URL(rp1Image.url, "https://siddheshv1.lovable.app").href,
+                "src": "https://research.blueblocks.in/images/publications/RP1-Pic.webp",
                 "alt": "Becoming Fireflies: An Embodied Biomimicry Activity for Teaching Bioluminescent Communication to Children Aged 9–12",
                 "variant": "card",
                 "preserveContent": true,
@@ -1271,7 +1261,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": new URL(rp2Image.url, "https://siddheshv1.lovable.app").href,
+                "src": "https://research.blueblocks.in/images/publications/RP2-Pic.webp",
                 "alt": "Growth Needs as Friendship: Naive Biology and Anthropomorphism in Children's Accounts of Plant Companions",
                 "variant": "card",
                 "preserveContent": true,
@@ -1297,7 +1287,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": new URL(rp3Image.url, "https://siddheshv1.lovable.app").href,
+                "src": "https://research.blueblocks.in/images/publications/RP3-Pic.webp",
                 "alt": "Biophilia in the Classroom: How Traditional and Montessori Schools Engage Children's Innate Connection to Nature",
                 "variant": "card",
                 "preserveContent": true,
@@ -1323,7 +1313,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": new URL(rp4Image.url, "https://siddheshv1.lovable.app").href,
+                "src": "https://research.blueblocks.in/images/publications/RP4-Pic.webp",
                 "alt": "Drawing Life: Spontaneous Biophilic Imagery in Children’s Responses to an Open-Ended Prompt — A Pilot Study from Blue Blocks Montessori School, Hyderabad, India",
                 "variant": "card",
                 "preserveContent": true,
@@ -1349,7 +1339,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": new URL(rp5Image.url, "https://siddheshv1.lovable.app").href,
+                "src": "https://research.blueblocks.in/images/publications/RP5-Pic.webp",
                 "alt": "The Dwelling Without the Dweller: The Missing Figure as a First-Person Signature in Children’s Drawings of “A Place Where Life Can Exist”",
                 "variant": "card",
                 "preserveContent": true,
@@ -1375,7 +1365,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": new URL(rp6Image.url, "https://siddheshv1.lovable.app").href,
+                "src": "https://research.blueblocks.in/images/publications/RP6-Pic.webp",
                 "alt": "Nature Affinity and Biophilic Cognition in Childhood: Developmental Trajectories and Implications for Innovation Capacity",
                 "variant": "card",
                 "preserveContent": true,
@@ -1401,7 +1391,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": new URL(rp7Image.url, "https://siddheshv1.lovable.app").href,
+                "src": "https://research.blueblocks.in/images/publications/RP7-Pic.webp",
                 "alt": "Red for Danger, Warmth for Everything: How Children Assign Colours to Communicative Light Signals",
                 "variant": "card",
                 "preserveContent": true,
@@ -1427,7 +1417,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": new URL(rp8Image.url, "https://siddheshv1.lovable.app").href,
+                "src": "https://research.blueblocks.in/images/publications/RP8-Pic.webp",
                 "alt": "The Rainbow Has No Rain: A Boundary Phenomenon and the Frame That Places It in Children’s Prompted and Unprompted Art",
                 "variant": "card",
                 "preserveContent": true,
@@ -2174,8 +2164,8 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "ContactPage",
           name: "Collaborate",
-          url: "https://bb-researchv2.vercel.app/collaborate",
-          isPartOf: { "@type": "WebSite", url: "https://bb-researchv2.vercel.app/" },
+          url: "https://research.blueblocks.in/collaborate",
+          isPartOf: { "@type": "WebSite", url: "https://research.blueblocks.in/" },
           about: { "@type": "Thing", name: "Research collaboration and data access" }
         }
       ],
@@ -7860,7 +7850,7 @@ const siteContent = {
           "@context": "https://schema.org",
           "@type": "Book",
           name: "Lining The Nest",
-          url: "https://bb-researchv2.vercel.app/books/lining-the-nest",
+          url: "https://research.blueblocks.in/books/lining-the-nest",
           author: { "@type": "Person", name: "Pavan Goyal", affiliation: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" } },
           numberOfPages: 280,
           inLanguage: "en",
