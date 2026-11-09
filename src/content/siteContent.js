@@ -8740,13 +8740,13 @@ const siteContent = {
           url: `${SITE_URL}/governance/team/dr-sreemoyee-chakraborty`,
           title: "Dr. Sreemoyee Chakraborty - STEM Research, Palaeontology, & Earth Science",
           description: "STEM Research, Palaeontology, & Earth Science. PhD: Palaeontology, Indian Statistical Institute / University of Calcutta (2025).",
-          image: sreemoyeePortraitUrl
+          image: `${SITE_URL}${sreemoyeePortraitUrl}`
         },
         twitter: {
           card: "summary_large_image",
           title: "Dr. Sreemoyee Chakraborty - STEM Research, Palaeontology, & Earth Science",
           description: "STEM Research, Palaeontology, & Earth Science. PhD: Palaeontology, Indian Statistical Institute / University of Calcutta (2025).",
-          image: sreemoyeePortraitUrl
+          image: `${SITE_URL}${sreemoyeePortraitUrl}`
         }
       },
       schemas: [
@@ -8756,7 +8756,7 @@ const siteContent = {
           name: "Dr. Sreemoyee Chakraborty",
           url: `${SITE_URL}/governance/team/dr-sreemoyee-chakraborty`,
           jobTitle: "STEM Research, Palaeontology, & Earth Science",
-          image: sreemoyeePortraitUrl,
+          image: `${SITE_URL}${sreemoyeePortraitUrl}`,
           worksFor: { "@type": "Organization", name: "Blue Blocks Micro Research Institute" },
           description: "STEM Research, Palaeontology, & Earth Science. PhD: Palaeontology, Indian Statistical Institute / University of Calcutta (2025)."
         },
