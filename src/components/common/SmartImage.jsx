@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react';
+import { resolveAssetUrl } from '@/lib/assetResolver';
 
 // Import fallback images
 import heroDefault from '@/assets/placeholders/hero-default.jpg';
@@ -167,7 +168,7 @@ const resolveImageSrc = (src) => {
   if (!trimmedSrc) return null;
 
   if (imageMap[trimmedSrc]) return toImageUrl(imageMap[trimmedSrc]);
-  return trimmedSrc;
+  return resolveAssetUrl(trimmedSrc);
 };
 
 const SmartImage = ({

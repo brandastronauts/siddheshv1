@@ -165,7 +165,7 @@ export function boldifyText(text) {
     const parts = text.split(/\*\*(.+?)\*\*/g);
     return parts.map((part, i) =>
       i % 2 === 1 ? (
-        <strong key={`md-${i}`} className="font-semibold text-inherit">
+        <strong key={`md-${i}`} className="font-bold text-inherit">
           {processSegment(part, `md-${i}-`)}
         </strong>
       ) : (

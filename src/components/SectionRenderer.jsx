@@ -3,14 +3,15 @@
 import { Suspense } from 'react'
 import dynamic from 'next/dynamic'
 import { motion } from 'framer-motion'
+import CardsSection from './sections/CardsSection'
 import HeroSection from './sections/HeroSection'
+import PublishedPaperSection from './sections/PublishedPaperSection'
 import LazySection from './LazySection'
 
 // All sections use ssr: false to prevent SSR issues with browser-only APIs
 // (embla-carousel, recharts, etc.). HeroSection is eagerly loaded for LCP.
 const TickerSection           = dynamic(() => import('./sections/TickerSection'),           { ssr: false })
 const Grid3Section            = dynamic(() => import('./sections/Grid3Section'),            { ssr: false })
-const CardsSection            = dynamic(() => import('./sections/CardsSection'),            { ssr: false })
 const ListSection             = dynamic(() => import('./sections/ListSection'),             { ssr: false })
 const LibraryCardsSection     = dynamic(() => import('./sections/LibraryCardsSection'),     { ssr: false })
 const AccordionSection        = dynamic(() => import('./sections/AccordionSection'),        { ssr: false })
@@ -101,6 +102,7 @@ const components = {
   timelineSteps: TimelineStepsSection,
   pillars: PillarsSection,
   frameworkPapers: FrameworkPapersSection,
+  publishedPaper: PublishedPaperSection,
   dossierHeader: DossierHeaderSection,
   dossierSection: DossierSectionBlock,
   dossierQuoteStrip: DossierQuoteStripSection,
@@ -164,7 +166,7 @@ const SectionRenderer = ({ sections }) => {
         const defaults = sectionDefaults[type] || {}
         const mergedProps = { ...defaults, ...props }
 
-        if (type === 'hero') {
+        if (type === 'hero' || type === 'cards' || type === 'publishedPaper') {
           return <Component key={index} {...mergedProps} />
         }
 

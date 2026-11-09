@@ -1,21 +1,25 @@
 'use client'
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { ArrowRight, Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { Button } from '../ui/button';
 import SmartImage from '../common/SmartImage';
 import ExpandableText from '../common/ExpandableText';
 import MobileExpandModal from '../common/MobileExpandModal';
 import { getIcon } from '../../lib/iconMap';
 import { boldifyText } from '../../lib/boldifyText';
 
-const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
+const CardsSection = ({ id, heading, header, intro, items, cards, variant, loadMore }) => {
   const title = header || heading;
   const cardData = cards || items || [];
   const isPressRoom = variant === 'pressRoom';
   const isProfiles = variant === 'profiles';
   const isNewsGrid = variant === 'newsGrid';
   const hasImages = cardData.some(card => card.image);
+  const batchSize = Number(loadMore?.batchSize) > 0 ? Number(loadMore.batchSize) : 0;
+  const [visibleCount, setVisibleCount] = useState(batchSize || cardData.length);
 
   const renderAction = (action) => {
     if (!action || !action.label) return null;
@@ -57,7 +61,7 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
   };
 
   return (
-    <section className="section-spacing bg-background relative">
+    <section id={id} className="section-spacing bg-background relative">
       <div className="container-grid">
         {title && (
           <h2 className="hero-fade-in text-3xl md:text-4xl font-bold text-center text-deep-ink mb-6">
@@ -101,12 +105,14 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
 
             return (
               <motion.div
-                key={index}
+                key={item.id || index}
+                hidden={Boolean(batchSize && index >= visibleCount)}
+                aria-hidden={Boolean(batchSize && index >= visibleCount)}
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className={`card-elegant overflow-hidden group flex flex-col ${isProfiles ? 'text-center' : ''}`}
+                className={`card-elegant min-w-0 overflow-hidden group flex flex-col ${isProfiles ? 'text-center' : ''}`}
               >
                 {/* Avatar for profiles variant */}
                 {isProfiles && item.image && (
@@ -126,16 +132,24 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
                 {/* Card image for non-profile variants */}
                 {!isProfiles && item.image && (
                   <div className="relative h-48 overflow-hidden">
-                    <SmartImage
+                    {item.image.preserveContent ? (
+                      <img
+                        src={item.image.src}
+                        alt={item.image.alt || ''}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-contain bg-surface"
+                      />
+                    ) : <SmartImage
                       src={item.image.src}
                       alt={item.image.alt}
                       variant={item.image.variant || 'card'}
                       privacyBlur={item.image.privacyBlur}
                       aspect="16:9"
                       className="w-full h-full grayscale group-hover:grayscale-0 transition-all duration-500"
-                    />
+                    />}
                     {/* Gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-deep-ink/20 to-transparent" />
+                    {!item.image.preserveContent && <div className="absolute inset-0 bg-gradient-to-t from-deep-ink/20 to-transparent pointer-events-none" />}
                   </div>
                 )}
 
@@ -157,14 +171,15 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
                     ) : null;
                   })()}
 
-                  <h3 className="text-xl font-semibold text-deep-ink mb-2 group-hover:text-primary-navy transition-colors">
+                  <h3 className="text-xl font-semibold text-deep-ink mb-2 break-words group-hover:text-primary-navy transition-colors">
                     {cardTitle}
                   </h3>
+                  {item.authors && <p className="text-sm text-muted-foreground mb-3">{item.authors}</p>}
                   
                   {/* Meta for newsGrid */}
                   {item.meta && (
-                    <p className="text-xs text-muted-foreground mb-3">
-                      {item.meta}
+                    <p className="text-xs text-muted-foreground mb-3 break-words">
+                      {item.doi ? <a href={item.doi} target="_blank" rel="noopener noreferrer" className="text-link-blue hover:underline">{item.meta}</a> : item.meta}
                     </p>
                   )}
                   
@@ -175,7 +190,9 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
                   )}
                   
                   {/* Body text — expandable if long */}
-                  <ExpandableText text={bodyText} collapsedLines={4} minChars={200} className="mb-5" />
+                  {item.verbatim ? (
+                    <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line line-clamp-4 mb-5">{bodyText}</p>
+                  ) : <ExpandableText text={bodyText} collapsedLines={4} minChars={200} className="mb-5" />}
 
                   {/* Action button */}
                   <div className={`mt-auto pt-2 flex flex-wrap items-center gap-3 ${isProfiles ? 'justify-center' : ''}`}>
@@ -204,6 +221,17 @@ const CardsSection = ({ heading, header, intro, items, cards, variant }) => {
             );
           })}
         </div>
+        {batchSize > 0 && visibleCount < cardData.length && (
+          <div className="mt-12 text-center">
+            <Button
+              size="lg"
+              className="btn-primary"
+              onClick={() => setVisibleCount((count) => Math.min(count + batchSize, cardData.length))}
+            >
+              {loadMore?.label || 'Load more'}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
