@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 // Full published paper (verbatim DOCX conversion) in the shared publication-detail layout:
@@ -45,7 +45,7 @@ const PublishedPaperSection = ({ image, html, authorsHtml, doi, doiCta, backCta,
               </Panel>
             )}
             {backCta?.href && (
-              <Link to={backCta.href} className="inline-flex items-center gap-2 text-sm font-semibold text-link-blue hover:text-secondary-blue transition-colors">
+              <Link href={backCta.href} className="inline-flex items-center gap-2 text-sm font-semibold text-link-blue hover:text-secondary-blue transition-colors">
                 <ArrowLeft className="h-4 w-4" strokeWidth={1.5} aria-hidden="true" />
                 {backCta.label}
               </Link>
