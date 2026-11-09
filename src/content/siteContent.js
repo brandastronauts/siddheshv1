@@ -4,7 +4,7 @@ import { publishedDatasets } from "./publishedDatasets.js";
 // Single source of truth for all site content
 // All page copy and structure comes from this file
 
-const sreemoyeePortraitUrl = "https://research.blueblocks.in/images/team/sreemoyee-chakraborty-new.webp";
+const sreemoyeePortraitUrl = "/images/team/sreemoyee-chakraborty-new.webp";
 
 const SITE_URL = 'https://research.blueblocks.in';
 
@@ -1184,7 +1184,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": "https://research.blueblocks.in/images/publications/RP9-Pic.webp",
+                "src": "/images/publications/RP9-Pic.webp",
                 "alt": "Child-Parent Research Collaboration: A Model for Authentic Inquiry in Early Childhood, with a Case Study of Biomimicry Explore Montessori 2026",
                 "variant": "card",
                 "preserveContent": true,
@@ -1235,7 +1235,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": "https://research.blueblocks.in/images/publications/RP1-Pic.webp",
+                "src": "/images/publications/RP1-Pic.webp",
                 "alt": "Becoming Fireflies: An Embodied Biomimicry Activity for Teaching Bioluminescent Communication to Children Aged 9–12",
                 "variant": "card",
                 "preserveContent": true,
@@ -1261,7 +1261,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": "https://research.blueblocks.in/images/publications/RP2-Pic.webp",
+                "src": "/images/publications/RP2-Pic.webp",
                 "alt": "Growth Needs as Friendship: Naive Biology and Anthropomorphism in Children's Accounts of Plant Companions",
                 "variant": "card",
                 "preserveContent": true,
@@ -1287,7 +1287,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": "https://research.blueblocks.in/images/publications/RP3-Pic.webp",
+                "src": "/images/publications/RP3-Pic.webp",
                 "alt": "Biophilia in the Classroom: How Traditional and Montessori Schools Engage Children's Innate Connection to Nature",
                 "variant": "card",
                 "preserveContent": true,
@@ -1313,7 +1313,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": "https://research.blueblocks.in/images/publications/RP4-Pic.webp",
+                "src": "/images/publications/RP4-Pic.webp",
                 "alt": "Drawing Life: Spontaneous Biophilic Imagery in Children’s Responses to an Open-Ended Prompt — A Pilot Study from Blue Blocks Montessori School, Hyderabad, India",
                 "variant": "card",
                 "preserveContent": true,
@@ -1339,7 +1339,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": "https://research.blueblocks.in/images/publications/RP5-Pic.webp",
+                "src": "/images/publications/RP5-Pic.webp",
                 "alt": "The Dwelling Without the Dweller: The Missing Figure as a First-Person Signature in Children’s Drawings of “A Place Where Life Can Exist”",
                 "variant": "card",
                 "preserveContent": true,
@@ -1365,7 +1365,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": "https://research.blueblocks.in/images/publications/RP6-Pic.webp",
+                "src": "/images/publications/RP6-Pic.webp",
                 "alt": "Nature Affinity and Biophilic Cognition in Childhood: Developmental Trajectories and Implications for Innovation Capacity",
                 "variant": "card",
                 "preserveContent": true,
@@ -1391,7 +1391,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": "https://research.blueblocks.in/images/publications/RP7-Pic.webp",
+                "src": "/images/publications/RP7-Pic.webp",
                 "alt": "Red for Danger, Warmth for Everything: How Children Assign Colours to Communicative Light Signals",
                 "variant": "card",
                 "preserveContent": true,
@@ -1417,7 +1417,7 @@ const siteContent = {
                 "external": false
               },
               "image": {
-                "src": "https://research.blueblocks.in/images/publications/RP8-Pic.webp",
+                "src": "/images/publications/RP8-Pic.webp",
                 "alt": "The Rainbow Has No Rain: A Boundary Phenomenon and the Frame That Places It in Children’s Prompted and Unprompted Art",
                 "variant": "card",
                 "preserveContent": true,
@@ -9514,7 +9514,7 @@ const siteContent = {
               },
               "image": {
                 "@type": "ImageObject",
-                "url": "https://research.blueblocks.in/images/newsroom/blueblocks-isro-mission-control.jpeg",
+                "url": "/images/newsroom/blueblocks-isro-mission-control.jpeg",
                 "caption": "Blue Blocks Montessori School students and founder Pavan Goyal at ISRO Mission Control during the PSLV-C62 launch of their student-built satellite, January 2026",
                 "width": 1200,
                 "height": 675
