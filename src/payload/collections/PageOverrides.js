@@ -800,6 +800,60 @@ const glossaryAccordionBlock = {
   ],
 }
 
+const faqGroupsBlock = {
+  slug: 'faqGroups',
+  labels: { singular: 'FAQ Page (Grouped)', plural: 'FAQ Pages (Grouped)' },
+  fields: [
+    idField,
+    { name: 'heroTitle', type: 'text', label: 'Page Title', defaultValue: 'FAQ' },
+    { name: 'heroSubtitle', type: 'textarea', label: 'Page Subtitle' },
+    {
+      name: 'groups',
+      type: 'array',
+      label: 'FAQ Groups',
+      minRows: 1,
+      admin: { description: 'Each group becomes a sidebar jump-link and a titled list of questions.' },
+      fields: [
+        { name: 'title', type: 'text', label: 'Group Title', required: true },
+        {
+          name: 'items',
+          type: 'array',
+          label: 'Questions',
+          minRows: 1,
+          fields: [
+            { name: 'q', type: 'text', label: 'Question', required: true },
+            { name: 'a', type: 'textarea', label: 'Answer', required: true },
+          ],
+        },
+      ],
+    },
+  ],
+}
+
+const publishedPaperBlock = {
+  slug: 'publishedPaper',
+  labels: { singular: 'Published Paper / Dataset Body', plural: 'Published Papers / Dataset Bodies' },
+  fields: [
+    idField,
+    {
+      name: 'html',
+      type: 'code',
+      label: 'Article HTML (verbatim from source)',
+      required: true,
+      admin: {
+        language: 'html',
+        description: 'Verbatim conversion of the source DOCX/PDF. Do not reword; text must stay identical to the source document.',
+      },
+    },
+    { name: 'authorsHtml', type: 'code', label: 'Authors Panel HTML (Optional)', admin: { language: 'html' } },
+    { name: 'doi', type: 'text', label: 'DOI URL' },
+    { name: 'panelTitle', type: 'text', label: 'Sidebar Panel Title', admin: { placeholder: 'Publication & Access' } },
+    { name: 'doiCta', type: 'group', label: 'DOI / Access Button', fields: linkGroupFields },
+    { name: 'backCta', type: 'group', label: 'Back Link', fields: linkGroupFields },
+    { name: 'image', type: 'group', label: 'Cover Image (Optional)', fields: imageGroupFields },
+  ],
+}
+
 const numberedCardsBlock = {
   slug: 'numberedCards',
   labels: { singular: 'Numbered Cards', plural: 'Numbered Cards' },
@@ -1149,6 +1203,8 @@ const blocks = [
   patentGridBlock,
   profileBlock,
   glossaryAccordionBlock,
+  faqGroupsBlock,
+  publishedPaperBlock,
   numberedCardsBlock,
   tierCardsBlock,
   toolCardsBlock,

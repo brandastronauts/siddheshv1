@@ -5,6 +5,34 @@ import siteContent from '@/content/siteContent'
 const isCMSEnabled = Boolean(process.env.PAYLOAD_SECRET && process.env.DATABASE_URL)
 
 export const getPageContent = cache(async (pathname: string) => {
+  return withDerivedSections(await resolvePageContent(pathname))
+})
+
+/**
+ * Pages whose static source stores content outside `sections` (the FAQ page keeps
+ * `faqSections`) get an equivalent section so the same renderer — and the same Payload
+ * block (`faqGroups`) — serves both the static fallback and CMS-authored content.
+ */
+function withDerivedSections(page: any) {
+  if (!page) return page
+  if (Array.isArray(page.sections) && page.sections.length > 0) return page
+  if (Array.isArray(page.faqSections) && page.faqSections.length > 0) {
+    return {
+      ...page,
+      sections: [
+        {
+          type: 'faqGroups',
+          heroTitle: page.heroTitle,
+          heroSubtitle: page.heroSubtitle,
+          groups: page.faqSections,
+        },
+      ],
+    }
+  }
+  return page
+}
+
+async function resolvePageContent(pathname: string) {
   const staticPage = (siteContent as any).pages?.[pathname] ?? null
   const isDraft = await getIsDraftMode()
 
@@ -38,7 +66,7 @@ export const getPageContent = cache(async (pathname: string) => {
     }
     return staticPage
   }
-})
+}
 
 async function getIsDraftMode() {
   try {
@@ -510,6 +538,31 @@ function mapSectionBlock(block: any) {
           label: social.label,
           href: social.href,
         })),
+      }
+
+    case 'faqGroups':
+      return {
+        type: 'faqGroups',
+        id: block.id,
+        heroTitle: block.heroTitle,
+        heroSubtitle: block.heroSubtitle,
+        groups: (block.groups || []).map((group: any) => ({
+          title: group.title,
+          items: (group.items || []).map((item: any) => ({ q: item.q, a: item.a })),
+        })),
+      }
+
+    case 'publishedPaper':
+      return {
+        type: 'publishedPaper',
+        id: block.id,
+        html: block.html,
+        authorsHtml: block.authorsHtml || undefined,
+        doi: block.doi || undefined,
+        panelTitle: block.panelTitle || undefined,
+        doiCta: mapCTA(block.doiCta),
+        backCta: mapCTA(block.backCta),
+        image: mapImageGroup(block.image, 'card'),
       }
 
     case 'glossaryAccordion':

@@ -1082,6 +1082,71 @@ export interface PageOverride {
           }
         | {
             id?: string | null;
+            heroTitle?: string | null;
+            heroSubtitle?: string | null;
+            /**
+             * Each group becomes a sidebar jump-link and a titled list of questions.
+             */
+            groups?:
+              | {
+                  title: string;
+                  items?:
+                    | {
+                        q: string;
+                        a: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'faqGroups';
+          }
+        | {
+            id?: string | null;
+            /**
+             * Verbatim conversion of the source DOCX/PDF. Do not reword; text must stay identical to the source document.
+             */
+            html: string;
+            authorsHtml?: string | null;
+            doi?: string | null;
+            panelTitle?: string | null;
+            doiCta?: {
+              label?: string | null;
+              /**
+               * Use /path for internal pages, or https:// for external links.
+               */
+              href?: string | null;
+              external?: boolean | null;
+              disabled?: boolean | null;
+              download?: boolean | null;
+            };
+            backCta?: {
+              label?: string | null;
+              /**
+               * Use /path for internal pages, or https:// for external links.
+               */
+              href?: string | null;
+              external?: boolean | null;
+              disabled?: boolean | null;
+              download?: boolean | null;
+            };
+            image?: {
+              asset?: (string | null) | Media;
+              /**
+               * Use this only when not uploading to Media Library.
+               */
+              src?: string | null;
+              alt?: string | null;
+              privacyBlur?: boolean | null;
+              caption?: string | null;
+            };
+            blockName?: string | null;
+            blockType: 'publishedPaper';
+          }
+        | {
+            id?: string | null;
             header: string;
             items?:
               | {
@@ -2804,6 +2869,64 @@ export interface PageOverridesSelect<T extends boolean = true> {
                     id?: T;
                   };
               id?: T;
+              blockName?: T;
+            };
+        faqGroups?:
+          | T
+          | {
+              id?: T;
+              heroTitle?: T;
+              heroSubtitle?: T;
+              groups?:
+                | T
+                | {
+                    title?: T;
+                    items?:
+                      | T
+                      | {
+                          q?: T;
+                          a?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        publishedPaper?:
+          | T
+          | {
+              id?: T;
+              html?: T;
+              authorsHtml?: T;
+              doi?: T;
+              panelTitle?: T;
+              doiCta?:
+                | T
+                | {
+                    label?: T;
+                    href?: T;
+                    external?: T;
+                    disabled?: T;
+                    download?: T;
+                  };
+              backCta?:
+                | T
+                | {
+                    label?: T;
+                    href?: T;
+                    external?: T;
+                    disabled?: T;
+                    download?: T;
+                  };
+              image?:
+                | T
+                | {
+                    asset?: T;
+                    src?: T;
+                    alt?: T;
+                    privacyBlur?: T;
+                    caption?: T;
+                  };
               blockName?: T;
             };
         numberedCards?:

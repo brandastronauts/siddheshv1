@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 import CardsSection from './sections/CardsSection'
 import HeroSection from './sections/HeroSection'
 import PublishedPaperSection from './sections/PublishedPaperSection'
+import FaqGroupsSection from './sections/FaqGroupsSection'
 import LazySection from './LazySection'
 
 // All sections use ssr: false to prevent SSR issues with browser-only APIs
@@ -103,6 +104,7 @@ const components = {
   pillars: PillarsSection,
   frameworkPapers: FrameworkPapersSection,
   publishedPaper: PublishedPaperSection,
+  faqGroups: FaqGroupsSection,
   dossierHeader: DossierHeaderSection,
   dossierSection: DossierSectionBlock,
   dossierQuoteStrip: DossierQuoteStripSection,
@@ -133,6 +135,7 @@ const sectionDefaults = {
   patentGrid:        { cards: [], patents: [] },
   accordion:         { items: [] },
   glossaryAccordion: { groups: [] },
+  faqGroups:         { groups: [] },
   statsBar:          { stats: [] },
   timeline:          { items: [] },
   downloadList:      { items: [] },
@@ -166,7 +169,7 @@ const SectionRenderer = ({ sections }) => {
         const defaults = sectionDefaults[type] || {}
         const mergedProps = { ...defaults, ...props }
 
-        if (type === 'hero' || type === 'cards' || type === 'publishedPaper') {
+        if (type === 'hero' || type === 'cards' || type === 'publishedPaper' || type === 'faqGroups') {
           return <Component key={index} {...mergedProps} />
         }
 

@@ -214,6 +214,18 @@ function toBlock(section: any): any {
       return { ...base, header: rest.header,
         items: (rest.items || []).map((i: any) => ({ term: i.term, definition: i.definition })) }
 
+    case 'faqGroups':
+      return { ...base, heroTitle: rest.heroTitle, heroSubtitle: rest.heroSubtitle,
+        groups: (rest.groups || []).map((g: any) => ({
+          title: g.title,
+          items: (g.items || []).map((f: any) => ({ q: f.q, a: f.a })),
+        })) }
+
+    case 'publishedPaper':
+      // Verbatim article body from the DOCX/PDF conversion — must be copied unchanged.
+      return { ...base, html: rest.html, authorsHtml: rest.authorsHtml, doi: rest.doi, panelTitle: rest.panelTitle,
+        doiCta: toCta(rest.doiCta), backCta: toCta(rest.backCta), image: toImage(rest.image) }
+
     case 'numberedCards':
       return { ...base, header: rest.header,
         items: (rest.items || []).map((i: any) => ({ number: String(i.number), title: i.title, body: i.body })) }
@@ -312,16 +324,7 @@ async function main() {
     // Special case: FAQ page stores content in faqSections instead of sections
     if (staticSections.length === 0 && Array.isArray((pageData as any).faqSections) && (pageData as any).faqSections.length > 0) {
       const p = pageData as any
-      const builtSections: any[] = []
-      if (p.heroTitle) builtSections.push({ type: 'hero', variant: 'stark', headline: p.heroTitle, subheadline: p.heroSubtitle })
-      for (const group of p.faqSections) {
-        builtSections.push({
-          type: 'accordion',
-          header: group.title,
-          items: (group.items || []).map((f: any) => ({ q: f.q, a: f.a })),
-        })
-      }
-      staticSections = builtSections
+      staticSections = [{ type: 'faqGroups', heroTitle: p.heroTitle, heroSubtitle: p.heroSubtitle, groups: p.faqSections }]
     }
 
     if (staticSections.length === 0) { noData++; continue }
@@ -348,6 +351,12 @@ async function main() {
     }
 
     const blocks = staticSections.map(toBlock).filter(Boolean)
+    if (blocks.length !== staticSections.length) {
+      const dropped = staticSections.filter((sec: any) => !toBlock(sec)).map((sec: any) => sec?.type)
+      console.log(`  !  skipped    ${pathname.padEnd(55)} (unmapped section types: ${dropped.join(', ')}) — CMS sections would replace static ones`)
+      skipped++
+      continue
+    }
     if (blocks.length === 0) { noData++; continue }
 
     await payload.update({

@@ -50,6 +50,9 @@ const staticGovernanceLinks = [
   { label: 'Our Standards', path: '/governance/our-standards' },
 ]
 
+/* Main-branch footer always lists Innovation Research at the end of the "More" column. */
+const staticInnovationLink = { label: 'Innovation Research', path: '/methodology/innovation' }
+
 const staticUtilityLinks = [
   { label: 'Open Science Statement', path: '/publications' },
   { label: 'Data Access', path: '/collaborate' },
@@ -139,7 +142,7 @@ const Footer = ({ nav: navProp, brand: brandProp, footerData, pageVisibility }) 
   const navLabelMap = buildNavLabelMap(nav)
   const socialLinks = pick(footerData?.socialLinks, staticSocialLinks)
   const navigationLinks = hideByPath(resolveColumn(footerData?.navigationLinks, navLabelMap, nav.slice(0, 4)), hiddenSet)
-  const moreLinks = hideByPath(resolveColumn(footerData?.moreLinks, navLabelMap, nav.slice(4)), hiddenSet)
+  const moreLinks = hideByPath(resolveColumn(footerData?.moreLinks, navLabelMap, [...nav.slice(4), staticInnovationLink]), hiddenSet)
   const governanceLinks = hideByPath(pick(footerData?.governanceLinks, staticGovernanceLinks), hiddenSet)
   const utilityLinks = hideByPath(pick(footerData?.utilityLinks, staticUtilityLinks), hiddenSet)
   const registriesLinks = hideByPath(pick(footerData?.registriesLinks, staticRegistriesLinks), hiddenSet)

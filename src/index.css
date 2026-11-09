@@ -35,6 +35,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* The HTML `hidden` attribute must always win over utility display classes (flex/grid),
+   otherwise incremental-disclosure cards (CardsSection loadMore) render visibly. */
+[hidden] {
+  display: none !important;
+}
+
 @layer base {
   /* visibility is now toggled by main.tsx after React mounts */
 
