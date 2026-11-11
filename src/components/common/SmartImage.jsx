@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { resolveAssetUrl } from '@/lib/assetResolver';
 
 // Import fallback images
@@ -183,11 +183,22 @@ const SmartImage = ({
 }) => {
   const [hasError, setHasError] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const imgRef = useRef(null);
 
   const resolvedSrc = resolveImageSrc(src);
   const fallbackSrc = resolveImageSrc(fallbackImages[variant] || fallbackImages.card);
   const effectiveSrc = resolvedSrc || fallbackSrc;
   const showPlaceholder = !effectiveSrc || hasError;
+
+  // The server-rendered <img> can finish loading before React hydrates, in which case its
+  // onLoad/onError never reach React and the image would stay at opacity-0 (a blank grey box).
+  // Reconcile with the browser's real state once mounted.
+  useEffect(() => {
+    const img = imgRef.current;
+    if (!img || !img.complete) return;
+    if (img.naturalWidth > 0) setIsLoaded(true);
+    else setHasError(true);
+  }, [effectiveSrc]);
   const aspectClass = aspectRatios[aspect] || aspectRatios['16:9'];
   const effectiveAspectClass = variant === 'avatar' ? aspectRatios['1:1'] : aspectClass;
   const dims = variant === 'avatar' ? defaultDimensions['1:1'] : (defaultDimensions[aspect] || defaultDimensions['16:9']);
@@ -200,6 +211,7 @@ const SmartImage = ({
       >
         {!showPlaceholder && (
           <img
+            ref={imgRef}
             src={effectiveSrc}
             alt={alt}
             loading="lazy"

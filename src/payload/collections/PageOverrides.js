@@ -49,6 +49,13 @@ const imageGroupFields = [
     admin: { placeholder: 'Describe the image for accessibility' },
   },
   { name: 'privacyBlur', type: 'checkbox', label: 'Blur image for privacy', defaultValue: false },
+  {
+    name: 'preserveContent',
+    type: 'checkbox',
+    label: 'Show original image (no crop, filter or overlay)',
+    defaultValue: false,
+    admin: { description: 'Use for source-authoritative figures that must be shown exactly as supplied.' },
+  },
   { name: 'caption', type: 'textarea', label: 'Caption (Optional)' },
 ]
 
@@ -234,6 +241,16 @@ const cardsBlock = {
       ],
     },
     {
+      name: 'loadMore',
+      type: 'group',
+      label: 'Incremental Disclosure (Optional)',
+      admin: { description: 'Show only the first N cards, with a button to reveal the rest. All cards stay in the page HTML for search engines.' },
+      fields: [
+        { name: 'batchSize', type: 'number', label: 'Cards shown per batch', min: 1, admin: { placeholder: '6' } },
+        { name: 'label', type: 'text', label: 'Button label', admin: { placeholder: 'LOAD MORE' } },
+      ],
+    },
+    {
       name: 'cards',
       type: 'array',
       label: 'Cards',
@@ -242,8 +259,17 @@ const cardsBlock = {
       fields: [
         { name: 'tag', type: 'text', label: 'Tag' },
         { name: 'headline', type: 'text', label: 'Headline', required: true },
+        { name: 'authors', type: 'text', label: 'Authors (Optional)' },
         { name: 'meta', type: 'text', label: 'Meta Line' },
+        { name: 'doi', type: 'text', label: 'DOI URL (Optional)', admin: { description: 'When set, the meta line links to this DOI.' } },
         { name: 'body', type: 'textarea', label: 'Body' },
+        {
+          name: 'verbatim',
+          type: 'checkbox',
+          label: 'Verbatim abstract (plain text, 4-line preview)',
+          defaultValue: false,
+          admin: { description: 'Tick for source-authoritative abstracts: shown as plain text, clamped to a short preview in the listing. The full text lives on the landing page.' },
+        },
         { name: 'icon', type: 'text', label: 'Icon Key (Optional)' },
         { name: 'image', type: 'group', label: 'Card Image (Optional)', fields: imageGroupFields },
         { name: 'action', type: 'group', label: 'Card Link', fields: linkGroupFields },

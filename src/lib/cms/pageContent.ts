@@ -13,7 +13,7 @@ export const getPageContent = cache(async (pathname: string) => {
  * `faqSections`) get an equivalent section so the same renderer — and the same Payload
  * block (`faqGroups`) — serves both the static fallback and CMS-authored content.
  */
-function withDerivedSections(page: any) {
+export function withDerivedSections(page: any) {
   if (!page) return page
   if (Array.isArray(page.sections) && page.sections.length > 0) return page
   if (Array.isArray(page.faqSections) && page.faqSections.length > 0) {
@@ -77,10 +77,45 @@ async function getIsDraftMode() {
   }
 }
 
-function mergePage(staticPage: any, cmsPage: any) {
+export function mergePage(staticPage: any, cmsPage: any) {
   const merged = deepMerge(staticPage, cmsPage)
   if (!cmsPage?.sections?.length && staticPage?.sections) merged.sections = staticPage.sections
+  else if (Array.isArray(merged.sections)) merged.sections = fillCardFieldsFromStatic(merged.sections, staticPage?.sections)
   return merged
+}
+
+/**
+ * Card grids saved in Payload before the schema carried `authors`, `doi`, `verbatim`,
+ * `image.preserveContent` and the section-level `loadMore` have those values missing.
+ * Fill ONLY fields that are undefined in the CMS record from the matching static card
+ * (same heading, same link/headline) so existing database records render correctly
+ * without being rewritten. A value saved in the CMS (including false/empty) always wins.
+ */
+export function fillCardFieldsFromStatic(cmsSections: any[], staticSections: any[] | undefined) {
+  if (!Array.isArray(staticSections)) return cmsSections
+  const cardKey = (c: any) => (c?.action || c?.cta)?.href || c?.headline
+  return cmsSections.map((section: any) => {
+    if (section?.type !== 'cards') return section
+    const staticSection = staticSections.find((s: any) => s?.type === 'cards' && s.header === section.header)
+    if (!staticSection) return section
+    const staticCards: any[] = staticSection.cards || staticSection.items || []
+    const byKey = new Map(staticCards.map((c: any) => [cardKey(c), c]))
+    const out = { ...section }
+    if (out.loadMore === undefined && staticSection.loadMore) out.loadMore = staticSection.loadMore
+    out.cards = (section.cards || []).map((card: any) => {
+      const source: any = byKey.get(cardKey(card))
+      if (!source) return card
+      const filled = { ...card }
+      for (const field of ['authors', 'doi', 'verbatim']) {
+        if (filled[field] === undefined && source[field] !== undefined) filled[field] = source[field]
+      }
+      if (filled.image && filled.image.preserveContent === undefined && source.image?.preserveContent !== undefined) {
+        filled.image = { ...filled.image, preserveContent: source.image.preserveContent }
+      }
+      return filled
+    })
+    return out
+  })
 }
 
 function deepMerge(base: any, override: any): any {
@@ -96,7 +131,7 @@ function deepMerge(base: any, override: any): any {
   return out
 }
 
-function mapPageDoc(doc: any, pathname: string) {
+export function mapPageDoc(doc: any, pathname: string) {
   const sections = Array.isArray(doc.sections) ? doc.sections.map(mapSectionBlock).filter(Boolean) : []
 
   return {
@@ -199,12 +234,18 @@ function mapSectionBlock(block: any) {
         header: block.header,
         intro: block.intro,
         variant: block.variant,
+        loadMore: block.loadMore?.batchSize > 0
+          ? { batchSize: Number(block.loadMore.batchSize), label: block.loadMore.label || 'Load more' }
+          : undefined,
         cards: (block.cards || []).map((card: any) => {
           const action = mapCTA(card.action || card.cta)
           return {
             tag: card.tag,
             headline: card.headline,
+            authors: card.authors || undefined,
             meta: card.meta,
+            doi: card.doi || undefined,
+            verbatim: card.verbatim === undefined || card.verbatim === null ? undefined : Boolean(card.verbatim),
             body: card.body,
             icon: card.icon,
             image: mapImageGroup(card.image, 'card'),
@@ -827,6 +868,7 @@ function mapImageGroup(image: any, defaultVariant = 'card') {
     alt: image.alt || '',
     variant: image.variant || defaultVariant,
     privacyBlur: Boolean(image.privacyBlur),
+    preserveContent: image.preserveContent === undefined || image.preserveContent === null ? undefined : Boolean(image.preserveContent),
     caption: image.caption,
   }
 }

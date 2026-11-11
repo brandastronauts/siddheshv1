@@ -8,6 +8,7 @@
  * Safe to re-run — existing CMS sections are replaced only if the page
  * currently has 0 sections (i.e. it was never manually edited in the admin).
  * Pass --force to overwrite all pages regardless.
+ * Pass --only=/publications,/faq to limit the run to those paths (and their children).
  */
 
 import * as fs from 'fs'
@@ -33,6 +34,13 @@ loadEnv('.env')
 
 const FORCE = process.argv.includes('--force')
 
+// Optional scope: --only=/publications,/faq  (exact path or any child path). Without it every page is processed.
+// Use with --force to re-sync just those pages from siteContent without touching other pages' CMS edits.
+const ONLY = (process.argv.find((a) => a.startsWith('--only='))?.slice('--only='.length) || '')
+  .split(',').map((v) => v.trim()).filter(Boolean)
+const inScope = (pathname: string) =>
+  ONLY.length === 0 || ONLY.some((p) => pathname === p || pathname.startsWith(p.endsWith('/') ? p : `${p}/`))
+
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
 /** Convert a plain string[] to Payload's [{text}] array format */
@@ -53,7 +61,7 @@ function toCta(cta: any) {
 function toImage(img: any) {
   if (!img) return undefined
   // Keep src as a string path; Payload's resolveMediaURL handles it
-  return { src: img.src || '', alt: img.alt || '', variant: img.variant, privacyBlur: Boolean(img.privacyBlur), caption: img.caption }
+  return { src: img.src || '', alt: img.alt || '', variant: img.variant, privacyBlur: Boolean(img.privacyBlur), preserveContent: Boolean(img.preserveContent), caption: img.caption }
 }
 
 // ─── Reverse-map a siteContent section → Payload block ────────────────────────
@@ -77,8 +85,10 @@ function toBlock(section: any): any {
 
     case 'cards':
       return { ...base, header: rest.header, intro: rest.intro, variant: rest.variant,
+        loadMore: rest.loadMore?.batchSize > 0 ? { batchSize: Number(rest.loadMore.batchSize), label: rest.loadMore.label } : undefined,
         cards: (rest.cards || []).map((c: any) => ({
-          tag: c.tag, headline: c.headline, meta: c.meta, body: c.body, icon: c.icon,
+          tag: c.tag, headline: c.headline, authors: c.authors, meta: c.meta, doi: c.doi, verbatim: Boolean(c.verbatim),
+          body: c.body, icon: c.icon,
           image: toImage(c.image), action: toCta(c.action || c.cta),
           secondaryAction: c.secondaryAction?.label ? { label: c.secondaryAction.label, disabled: Boolean(c.secondaryAction.disabled) } : undefined,
         })) }
@@ -319,6 +329,7 @@ async function main() {
   let noData = 0
 
   for (const [pathname, pageData] of Object.entries(pages)) {
+    if (!inScope(pathname)) continue
     let staticSections: any[] = Array.isArray(pageData?.sections) ? pageData.sections : []
 
     // Special case: FAQ page stores content in faqSections instead of sections

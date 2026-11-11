@@ -296,6 +296,10 @@ export interface PageOverride {
               src?: string | null;
               alt?: string | null;
               privacyBlur?: boolean | null;
+              /**
+               * Use for source-authoritative figures that must be shown exactly as supplied.
+               */
+              preserveContent?: boolean | null;
               caption?: string | null;
             };
             blockName?: string | null;
@@ -350,14 +354,30 @@ export interface PageOverride {
             intro?: string | null;
             variant?: ('blogGrid' | 'iconCards' | 'profiles' | 'newsGrid' | 'pressRoom') | null;
             /**
+             * Show only the first N cards, with a button to reveal the rest. All cards stay in the page HTML for search engines.
+             */
+            loadMore?: {
+              batchSize?: number | null;
+              label?: string | null;
+            };
+            /**
              * Add, remove, and reorder cards by drag-and-drop.
              */
             cards?:
               | {
                   tag?: string | null;
                   headline: string;
+                  authors?: string | null;
                   meta?: string | null;
+                  /**
+                   * When set, the meta line links to this DOI.
+                   */
+                  doi?: string | null;
                   body?: string | null;
+                  /**
+                   * Tick for source-authoritative abstracts: shown as plain text, clamped to a short preview in the listing. The full text lives on the landing page.
+                   */
+                  verbatim?: boolean | null;
                   icon?: string | null;
                   image?: {
                     asset?: (string | null) | Media;
@@ -367,6 +387,10 @@ export interface PageOverride {
                     src?: string | null;
                     alt?: string | null;
                     privacyBlur?: boolean | null;
+                    /**
+                     * Use for source-authoritative figures that must be shown exactly as supplied.
+                     */
+                    preserveContent?: boolean | null;
                     caption?: string | null;
                   };
                   action?: {
@@ -582,6 +606,10 @@ export interface PageOverride {
                     src?: string | null;
                     alt?: string | null;
                     privacyBlur?: boolean | null;
+                    /**
+                     * Use for source-authoritative figures that must be shown exactly as supplied.
+                     */
+                    preserveContent?: boolean | null;
                     caption?: string | null;
                   };
                   id?: string | null;
@@ -729,6 +757,10 @@ export interface PageOverride {
                 src?: string | null;
                 alt?: string | null;
                 privacyBlur?: boolean | null;
+                /**
+                 * Use for source-authoritative figures that must be shown exactly as supplied.
+                 */
+                preserveContent?: boolean | null;
                 caption?: string | null;
               };
               cta?: {
@@ -755,6 +787,10 @@ export interface PageOverride {
                     src?: string | null;
                     alt?: string | null;
                     privacyBlur?: boolean | null;
+                    /**
+                     * Use for source-authoritative figures that must be shown exactly as supplied.
+                     */
+                    preserveContent?: boolean | null;
                     caption?: string | null;
                   };
                   cta?: {
@@ -827,6 +863,10 @@ export interface PageOverride {
                     src?: string | null;
                     alt?: string | null;
                     privacyBlur?: boolean | null;
+                    /**
+                     * Use for source-authoritative figures that must be shown exactly as supplied.
+                     */
+                    preserveContent?: boolean | null;
                     caption?: string | null;
                   };
                   id?: string | null;
@@ -1053,6 +1093,10 @@ export interface PageOverride {
               src?: string | null;
               alt?: string | null;
               privacyBlur?: boolean | null;
+              /**
+               * Use for source-authoritative figures that must be shown exactly as supplied.
+               */
+              preserveContent?: boolean | null;
               caption?: string | null;
             };
             bio?: string | null;
@@ -1140,6 +1184,10 @@ export interface PageOverride {
               src?: string | null;
               alt?: string | null;
               privacyBlur?: boolean | null;
+              /**
+               * Use for source-authoritative figures that must be shown exactly as supplied.
+               */
+              preserveContent?: boolean | null;
               caption?: string | null;
             };
             blockName?: string | null;
@@ -2114,6 +2162,7 @@ export interface PageOverridesSelect<T extends boolean = true> {
                     src?: T;
                     alt?: T;
                     privacyBlur?: T;
+                    preserveContent?: T;
                     caption?: T;
                   };
               blockName?: T;
@@ -2163,13 +2212,22 @@ export interface PageOverridesSelect<T extends boolean = true> {
               header?: T;
               intro?: T;
               variant?: T;
+              loadMore?:
+                | T
+                | {
+                    batchSize?: T;
+                    label?: T;
+                  };
               cards?:
                 | T
                 | {
                     tag?: T;
                     headline?: T;
+                    authors?: T;
                     meta?: T;
+                    doi?: T;
                     body?: T;
+                    verbatim?: T;
                     icon?: T;
                     image?:
                       | T
@@ -2178,6 +2236,7 @@ export interface PageOverridesSelect<T extends boolean = true> {
                           src?: T;
                           alt?: T;
                           privacyBlur?: T;
+                          preserveContent?: T;
                           caption?: T;
                         };
                     action?:
@@ -2382,6 +2441,7 @@ export interface PageOverridesSelect<T extends boolean = true> {
                           src?: T;
                           alt?: T;
                           privacyBlur?: T;
+                          preserveContent?: T;
                           caption?: T;
                         };
                     id?: T;
@@ -2531,6 +2591,7 @@ export interface PageOverridesSelect<T extends boolean = true> {
                           src?: T;
                           alt?: T;
                           privacyBlur?: T;
+                          preserveContent?: T;
                           caption?: T;
                         };
                     cta?:
@@ -2556,6 +2617,7 @@ export interface PageOverridesSelect<T extends boolean = true> {
                           src?: T;
                           alt?: T;
                           privacyBlur?: T;
+                          preserveContent?: T;
                           caption?: T;
                         };
                     cta?:
@@ -2626,6 +2688,7 @@ export interface PageOverridesSelect<T extends boolean = true> {
                           src?: T;
                           alt?: T;
                           privacyBlur?: T;
+                          preserveContent?: T;
                           caption?: T;
                         };
                     id?: T;
@@ -2844,6 +2907,7 @@ export interface PageOverridesSelect<T extends boolean = true> {
                     src?: T;
                     alt?: T;
                     privacyBlur?: T;
+                    preserveContent?: T;
                     caption?: T;
                   };
               bio?: T;
@@ -2925,6 +2989,7 @@ export interface PageOverridesSelect<T extends boolean = true> {
                     src?: T;
                     alt?: T;
                     privacyBlur?: T;
+                    preserveContent?: T;
                     caption?: T;
                   };
               blockName?: T;
