@@ -118,7 +118,10 @@ export interface AnnouncementBarData {
 }
 
 /** Per-page link visibility: pathname → lists of header/footer paths to hide. */
-export type PageVisibilityMap = Record<string, { hideHeader: string[]; hideFooter: string[] }>
+export type PageVisibilityMap = Record<
+  string,
+  { hideHeader: string[]; hideFooter: string[]; hideHeaderAll?: boolean; hideFooterAll?: boolean; hideBreadcrumbs?: boolean }
+>
 
 // ---------------------------------------------------------------------------
 // Static fallbacks (mirrors what Footer.jsx has hardcoded today)
@@ -262,8 +265,11 @@ export const getPageVisibility = cache(async (): Promise<PageVisibilityMap> => {
       const hideFooter = Array.isArray((doc as any).hideFooterPaths)
         ? (doc as any).hideFooterPaths.filter((p: any): p is string => typeof p === 'string' && p.trim() !== '')
         : []
-      if ((doc as any).pathname && (hideHeader.length > 0 || hideFooter.length > 0)) {
-        map[(doc as any).pathname] = { hideHeader, hideFooter }
+      const hideHeaderAll = (doc as any).hideHeader === true
+      const hideFooterAll = (doc as any).hideFooter === true
+      const hideBreadcrumbs = (doc as any).hideBreadcrumbs === true
+      if ((doc as any).pathname && (hideHeader.length > 0 || hideFooter.length > 0 || hideHeaderAll || hideFooterAll || hideBreadcrumbs)) {
+        map[(doc as any).pathname] = { hideHeader, hideFooter, hideHeaderAll, hideFooterAll, hideBreadcrumbs }
       }
     }
     return map

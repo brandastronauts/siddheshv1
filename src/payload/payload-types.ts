@@ -252,6 +252,12 @@ export interface PageOverride {
    */
   pathname: string;
   /**
+   * Derived from the URL path.
+   */
+  section?: string | null;
+  createdBy?: (string | null) | User;
+  lastEditedBy?: (string | null) | User;
+  /**
    * Add, remove, and reorder sections. Section types map directly to existing frontend components.
    */
   sections?:
@@ -1537,6 +1543,9 @@ export interface PageOverride {
     twitterImage?: (string | null) | Media;
     twitterImageUrl?: string | null;
   };
+  hideHeader?: boolean | null;
+  hideFooter?: boolean | null;
+  hideBreadcrumbs?: boolean | null;
   /**
    * Enter the exact path of each Header link to hide on this page (e.g. /collaborate). Press Enter after each. Leave empty to show all header links.
    */
@@ -2120,6 +2129,9 @@ export interface MediaSelect<T extends boolean = true> {
 export interface PageOverridesSelect<T extends boolean = true> {
   internalName?: T;
   pathname?: T;
+  section?: T;
+  createdBy?: T;
+  lastEditedBy?: T;
   sections?:
     | T
     | {
@@ -3332,6 +3344,9 @@ export interface PageOverridesSelect<T extends boolean = true> {
         twitterImage?: T;
         twitterImageUrl?: T;
       };
+  hideHeader?: T;
+  hideFooter?: T;
+  hideBreadcrumbs?: T;
   hideHeaderPaths?: T;
   hideFooterPaths?: T;
   schemas?:

@@ -348,6 +348,9 @@ const Header = ({ nav: navProp, brand: brandProp, pageVisibility }) => {
 
   const closeMobileMenu = () => setMobileMenuOpen(false)
 
+  // Page-level option set in the CMS (Pages → Header & Footer).
+  if (pageVisibility?.[pathname]?.hideHeaderAll) return null
+
   return (
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-xl border-b border-border/50">
       <div className="container-grid">

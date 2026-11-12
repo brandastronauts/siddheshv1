@@ -70,7 +70,7 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
             <ScrollToTop />
             <AnnouncementBar data={announcement} />
             <Header nav={nav} brand={brand} pageVisibility={pageVisibility} />
-            <Breadcrumbs />
+            <Breadcrumbs pageVisibility={pageVisibility} />
             <main className="flex-1">{children}</main>
             <Footer nav={nav} brand={brand} footerData={footerData} pageVisibility={pageVisibility} />
           </div>

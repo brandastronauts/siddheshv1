@@ -1,4 +1,33 @@
-import { isAdmin, isEditor, publishedOrEditor } from '../access/isAdmin.js'
+import { isAdmin, isEditor, isReviewer, publishedOrEditor } from '../access/isAdmin.js'
+
+const HREF_PATTERN = /^(\/(?!\/)[^\s]*|#[^\s]*|https?:\/\/[^\s]+|mailto:[^\s]+|tel:[^\s]+)$/
+const PATHNAME_PATTERN = /^\/([A-Za-z0-9\-._~]+(\/[A-Za-z0-9\-._~]+)*)?$/
+
+/** Accepts /internal-path, #anchor, https://…, mailto: and tel: (blank allowed). Verified against all existing links. */
+const validateHref = (value) => {
+  if (value === undefined || value === null || String(value).trim() === '') return true
+  return HREF_PATTERN.test(String(value).trim()) || 'Use /path for an internal page, #anchor, https://… for an external link, mailto: or tel:.'
+}
+
+const SECTION_LABELS = {
+  '': 'Home', 'the-institute': 'Institute', methodology: 'Methodology', publications: 'Publications',
+  governance: 'Governance', collaborate: 'Collaborate', newsroom: 'Newsroom', team: 'Team', patents: 'Patents',
+  books: 'Books', downloads: 'Downloads', presentations: 'Presentations & Proceedings', proceedings: 'Presentations & Proceedings',
+  'technical-briefs': 'Technical Briefs', privacy: 'Legal', terms: 'Legal', faq: 'Help', contact: 'Contact',
+  sitemap: 'Utility', 'staff-access': 'Utility',
+}
+const sectionOf = (pathname) => {
+  const first = String(pathname || '/').split('/').filter(Boolean)[0] || ''
+  return SECTION_LABELS[first] || first.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
+}
+
+/** Session-authenticated draft preview (no shared secret in the admin UI). */
+const draftPreviewUrl = (pathname) => {
+  const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3001'
+  const path = String(pathname || '/').replace(/\/+$/, '') || '/'
+  return `${base}/api/draft?path=${encodeURIComponent(path)}`
+}
+
 
 const idField = {
   name: 'id',
@@ -21,6 +50,7 @@ const linkGroupFields = [
     name: 'href',
     type: 'text',
     label: 'Destination URL',
+    validate: validateHref,
     admin: {
       placeholder: '/publications',
       description: 'Use /path for internal pages, or https:// for external links.',
@@ -1267,16 +1297,18 @@ export const PageOverrides = {
   },
   admin: {
     useAsTitle: 'internalName',
-    defaultColumns: ['internalName', 'pathname', '_status', 'updatedAt'],
+    defaultColumns: ['internalName', 'pathname', 'section', '_status', 'lastEditedBy', 'updatedAt'],
+    // Search box matches page name, page title or URL path.
+    listSearchableFields: ['internalName', 'pageTitle', 'pathname'],
+    pagination: { defaultLimit: 100, limits: [25, 50, 100, 200] },
+    // "Preview" opens the saved draft (editor session required; no shared secret exposed to the browser).
+    preview: (doc) => draftPreviewUrl(doc?.pathname),
     description:
       'Edit any website page. Set the URL Path (e.g. /methodology/innovation), then add sections from the block library. If you leave the sections empty, the page falls back to its built-in design — perfect for incremental editing.',
     group: 'Website Content',
     livePreview: {
-      url: ({ data }) => {
-        const base = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3001'
-        const path = (data?.pathname || '/').replace(/\/+$/, '') || '/'
-        return `${base}${path}`
-      },
+      // Previously this loaded the public URL, so Live Preview showed the PUBLISHED page, not the draft.
+      url: ({ data }) => draftPreviewUrl(data?.pathname),
       breakpoints: [
         { label: 'Mobile', name: 'mobile', width: 375, height: 667 },
         { label: 'Tablet', name: 'tablet', width: 768, height: 1024 },
@@ -1286,6 +1318,17 @@ export const PageOverrides = {
   },
   versions: { drafts: true, maxPerDoc: 50 },
   hooks: {
+    beforeChange: [
+      // Attribution is server-controlled: whatever a client sends is overwritten.
+      ({ data, req, operation, originalDoc }) => {
+        const userId = req?.user?.id
+        if (operation === 'create') data.createdBy = userId || undefined
+        else data.createdBy = originalDoc?.createdBy ?? undefined
+        if (userId) data.lastEditedBy = userId
+        else if (originalDoc) data.lastEditedBy = originalDoc.lastEditedBy ?? undefined // scripts/system saves keep the last human editor
+        return data
+      },
+    ],
     // Publishing must refresh the live site immediately (otherwise pages only update on the 60s ISR window).
     // Failures are logged and never block the save.
     afterChange: [
@@ -1319,6 +1362,7 @@ export const PageOverrides = {
       name: 'internalName',
       type: 'text',
       required: true,
+      hooks: { beforeDuplicate: [({ value }) => `${value || 'Page'} (copy)`] },
       label: 'Page Name',
       admin: {
         placeholder: 'e.g. Publications page',
@@ -1331,11 +1375,40 @@ export const PageOverrides = {
       required: true,
       unique: true,
       index: true,
+      // A duplicate must never collide with (or replace) the live page's URL.
+      hooks: { beforeDuplicate: [({ value }) => `${value === '/' ? '' : value}/copy-${Date.now().toString(36)}`] },
+      validate: (value) =>
+        PATHNAME_PATTERN.test(String(value || '').trim().replace(/\/+$/, '') || '/') ||
+        'Use a path like /publications/my-paper (letters, numbers, - _ . ~ only; no spaces, no trailing slash).',
       label: 'Page URL Path',
       admin: {
         placeholder: '/publications',
         description: 'Must exactly match the route used on the website.',
       },
+    },
+    {
+      name: 'section',
+      type: 'text',
+      label: 'Website Section',
+      virtual: true, // derived from the URL; never stored, always correct
+      admin: { readOnly: true, position: 'sidebar', description: 'Derived from the URL path.' },
+      hooks: { afterRead: [({ siblingData }) => sectionOf(siblingData?.pathname)] },
+    },
+    {
+      name: 'createdBy',
+      type: 'relationship',
+      relationTo: 'users',
+      label: 'Created By',
+      access: { read: isReviewer },
+      admin: { readOnly: true, position: 'sidebar' },
+    },
+    {
+      name: 'lastEditedBy',
+      type: 'relationship',
+      relationTo: 'users',
+      label: 'Last Edited By',
+      access: { read: isReviewer },
+      admin: { readOnly: true, position: 'sidebar' },
     },
     {
       type: 'tabs',
@@ -1492,6 +1565,9 @@ export const PageOverrides = {
         {
           label: 'Header & Footer',
           fields: [
+            { name: 'hideHeader', type: 'checkbox', label: 'Hide the entire site header on this page' },
+            { name: 'hideFooter', type: 'checkbox', label: 'Hide the entire site footer on this page' },
+            { name: 'hideBreadcrumbs', type: 'checkbox', label: 'Hide breadcrumbs on this page' },
             {
               name: 'hideHeaderPaths',
               type: 'text',

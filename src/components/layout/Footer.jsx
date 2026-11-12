@@ -153,6 +153,9 @@ const Footer = ({ nav: navProp, brand: brandProp, footerData, pageVisibility }) 
   const schoolLinkLabel = footerData?.schoolLinkLabel || 'Blue Blocks Montessori School'
   const copyrightText = footerData?.copyrightText || `© ${new Date().getFullYear()} ${brand.siteName}. All rights reserved.`
 
+  // Page-level option set in the CMS (Pages → Header & Footer).
+  if (pageVisibility?.[pathname]?.hideFooterAll) return null
+
   return (
     <footer className="bg-deep-ink text-white relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary-navy/20 to-transparent" />

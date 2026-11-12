@@ -4,9 +4,11 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { buildBreadcrumbTrail } from '../../lib/breadcrumbsResolver';
 
-const Breadcrumbs = ({ pageTitle = '' }) => {
+const Breadcrumbs = ({ pageTitle = '', pageVisibility }) => {
   const rawPath = usePathname();
   const pathname = rawPath?.replace(/\/$/, '') || '/';
+
+  if (pageVisibility?.[pathname]?.hideBreadcrumbs) return null;
 
   if (!pathname || pathname === '/') return null;
 
