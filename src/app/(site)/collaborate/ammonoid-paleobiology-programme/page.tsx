@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import AmmonoidProgrammePage from '@/pages/AmmonoidProgrammePage'
+import AmmonoidProgrammePage from '@/components/campaign/AmmonoidProgrammePage'
 
 export const metadata: Metadata = {
   title: 'Ammonoid Paleobiology Research Programme',

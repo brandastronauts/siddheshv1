@@ -61,9 +61,8 @@ async function resolvePageContent(pathname: string) {
 
     return mergePage(staticPage, mapped)
   } catch (error) {
-    if (process.env.NODE_ENV === 'development') {
-      console.warn(`[cms] Falling back to static content for "${pathname}".`, error)
-    }
+    // Never silent: a database outage must be visible in logs (Vercel function logs) rather than masked by static content.
+    console.error(`[cms] CMS lookup FAILED for "${pathname}" — serving static fallback.`, (error as Error)?.message || error)
     return staticPage
   }
 }

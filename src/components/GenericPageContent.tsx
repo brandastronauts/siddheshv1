@@ -2,6 +2,7 @@ import SectionRenderer from '@/components/SectionRenderer'
 import StickyDetailBar from '@/components/common/StickyDetailBar'
 import StandardPageTemplate from '@/components/StandardPageTemplate'
 import ProfilePageClient from '@/components/ProfilePageClient'
+import { notFound } from 'next/navigation'
 import { getPageContent } from '@/lib/cms/pageContent'
 
 const DETAIL_PATTERNS = [
@@ -35,14 +36,8 @@ export default async function GenericPageContent({ pathname, template = false, b
   const isProfilePage = PROFILE_PATTERNS.some((p) => p.test(pathname))
   const stickyCta = page?.stickyCta
 
-  if (!page) {
-    return (
-      <div className="container-grid py-20 text-center">
-        <h1 className="text-3xl font-bold mb-4">Page Not Found</h1>
-        <p className="text-muted-foreground">The requested page does not exist.</p>
-      </div>
-    )
-  }
+  // A missing page must be a real HTTP 404 (not a 200 with a "not found" message) so crawlers drop the URL.
+  if (!page) notFound()
 
   if (template && badge) {
     return <StandardPageTemplate page={page} badge={badge} />

@@ -25,7 +25,8 @@ export const Media = {
         fit: 'cover',
       },
     ],
-    mimeTypes: ['image/*'],
+    // Images and PDFs only (research documents). Executables, scripts and archives are rejected.
+    mimeTypes: ['image/png', 'image/jpeg', 'image/webp', 'image/gif', 'image/svg+xml', 'application/pdf'],
   },
   access: {
     read: () => true,
@@ -36,7 +37,7 @@ export const Media = {
   admin: {
     useAsTitle: 'alt',
     defaultColumns: ['alt', 'filename', 'updatedAt'],
-    description: 'Upload and manage images used across the website.',
+    description: 'Upload and manage images and PDF documents used across the website.',
     group: 'Website Content',
   },
   fields: [

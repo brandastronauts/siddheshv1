@@ -4,6 +4,7 @@ import { fileURLToPath } from 'url'
 import { mongooseAdapter } from '@payloadcms/db-mongodb'
 import { buildConfig } from 'payload'
 import sharp from 'sharp'
+import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import { Media } from './src/payload/collections/Media.js'
 import { PageOverrides } from './src/payload/collections/PageOverrides.js'
 import { Users } from './src/payload/collections/Users.js'
@@ -74,6 +75,15 @@ export default buildConfig({
     disable: true,
   },
   sharp,
+  // Uploads are limited at the server (not just in the UI).
+  upload: { limits: { fileSize: 15 * 1024 * 1024 } },
+  plugins: [
+    // Durable object storage for the Media Library. Vercel's filesystem is read-only/ephemeral, so without this
+    // uploads cannot persist. Enabled only when a Blob store token is configured (BLOB_READ_WRITE_TOKEN).
+    ...(process.env.BLOB_READ_WRITE_TOKEN
+      ? [vercelBlobStorage({ enabled: true, collections: { media: true }, token: process.env.BLOB_READ_WRITE_TOKEN })]
+      : []),
+  ],
   typescript: {
     outputFile: path.resolve(dirname, 'src/payload/payload-types.ts'),
   },

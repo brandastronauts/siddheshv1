@@ -1,22 +1,17 @@
 import { draftMode } from 'next/headers'
 import { redirect } from 'next/navigation'
-
-function isAllowed(secret: string | null) {
-  const configured = process.env.PREVIEW_SECRET || process.env.PAYLOAD_SECRET
-  return Boolean(configured && secret && secret === configured)
-}
+import { safeEqual, safeInternalPath } from '@/lib/security'
 
 export async function GET(request: Request) {
   const url = new URL(request.url)
-  const secret = url.searchParams.get('secret')
-  const pathname = url.searchParams.get('path') || '/'
+  const configured = process.env.PREVIEW_SECRET || process.env.PAYLOAD_SECRET
 
-  if (!isAllowed(secret)) {
+  if (!safeEqual(url.searchParams.get('secret'), configured)) {
     return new Response('Invalid preview secret', { status: 401 })
   }
 
   const draft = await draftMode()
   draft.enable()
 
-  redirect(pathname.startsWith('/') ? pathname : `/${pathname}`)
+  redirect(safeInternalPath(url.searchParams.get('path')))
 }

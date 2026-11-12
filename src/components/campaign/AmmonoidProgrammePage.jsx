@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { ArrowRight, CalendarClock, CheckCircle2, Mail, X } from 'lucide-react';
-import { flyer, isApplicationOpen, programme } from '../content/ammonoidProgramme';
+import { flyer, isApplicationOpen, programme } from '@/content/ammonoidProgramme';
 
 const Section = ({ id, title, children, tone = 'default' }) => (
   <section id={id} className={`section-spacing ${tone === 'muted' ? 'bg-surface' : ''}`}>

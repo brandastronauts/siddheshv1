@@ -9,7 +9,8 @@ export const FormSubmissions = {
   },
   access: {
     read: isAdmin,
-    create: () => true,
+    // Submissions are created server-side by /api/form-submit (local API). Public REST creation is closed to prevent spam/abuse.
+    create: isAdmin,
     update: isAdmin,
     delete: isAdmin,
   },

@@ -164,7 +164,7 @@ export interface User {
   /**
    * Controls access to privileged CMS operations.
    */
-  role: 'admin' | 'editor' | 'reviewer';
+  role: 'super-admin' | 'admin' | 'editor' | 'reviewer';
   updatedAt: string;
   createdAt: string;
   email: string;
@@ -185,7 +185,7 @@ export interface User {
   collection: 'users';
 }
 /**
- * Upload and manage images used across the website.
+ * Upload and manage images and PDF documents used across the website.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "media".

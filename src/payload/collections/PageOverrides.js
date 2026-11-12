@@ -1,4 +1,4 @@
-import { isAdmin, isEditor } from '../access/isAdmin.js'
+import { isAdmin, isEditor, publishedOrEditor } from '../access/isAdmin.js'
 
 const idField = {
   name: 'id',
@@ -53,7 +53,9 @@ const imageGroupFields = [
     name: 'preserveContent',
     type: 'checkbox',
     label: 'Show original image (no crop, filter or overlay)',
-    defaultValue: false,
+    // No defaultValue on purpose: "never saved" (undefined) must stay distinguishable from "explicitly off" (false),
+    // otherwise records created before this field existed would silently lose their source-image behaviour.
+
     admin: { description: 'Use for source-authoritative figures that must be shown exactly as supplied.' },
   },
   { name: 'caption', type: 'textarea', label: 'Caption (Optional)' },
@@ -267,7 +269,8 @@ const cardsBlock = {
           name: 'verbatim',
           type: 'checkbox',
           label: 'Verbatim abstract (plain text, 4-line preview)',
-          defaultValue: false,
+          // No defaultValue on purpose (see image.preserveContent).
+
           admin: { description: 'Tick for source-authoritative abstracts: shown as plain text, clamped to a short preview in the listing. The full text lives on the landing page.' },
         },
         { name: 'icon', type: 'text', label: 'Icon Key (Optional)' },
@@ -1256,7 +1259,8 @@ export const PageOverrides = {
   slug: 'page-overrides',
   labels: { singular: 'Page', plural: 'Pages' },
   access: {
-    read: () => true,
+    // Visitors may only read PUBLISHED pages. Without this filter `?draft=true` exposes unpublished drafts.
+    read: publishedOrEditor,
     create: isEditor,
     update: isEditor,
     delete: isAdmin,
@@ -1282,6 +1286,23 @@ export const PageOverrides = {
   },
   versions: { drafts: true, maxPerDoc: 50 },
   hooks: {
+    // Publishing must refresh the live site immediately (otherwise pages only update on the 60s ISR window).
+    // Failures are logged and never block the save.
+    afterChange: [
+      async ({ doc }) => {
+        if (doc?._status !== 'published' || typeof doc?.pathname !== 'string') return doc
+        try {
+          const { revalidatePath } = await import('next/cache')
+          const targets = new Set([doc.pathname, '/sitemap.xml', '/sitemap-html'])
+          const parent = doc.pathname.split('/').slice(0, -1).join('/')
+          if (parent) targets.add(parent) // listing page, e.g. /publications for /publications/<slug>
+          targets.forEach((t) => revalidatePath(t))
+        } catch (error) {
+          console.error('[page-overrides] revalidation after publish failed (page will refresh on the 60s ISR window):', error?.message || error)
+        }
+        return doc
+      },
+    ],
     beforeValidate: [
       ({ data }) => {
         if (data?.pathname && typeof data.pathname === 'string') {
