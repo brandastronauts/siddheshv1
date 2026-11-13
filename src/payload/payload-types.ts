@@ -70,6 +70,7 @@ export interface Config {
     users: User;
     media: Media;
     'page-overrides': PageOverride;
+    'shared-sections': SharedSection;
     posts: Post;
     categories: Category;
     authors: Author;
@@ -92,6 +93,7 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     'page-overrides': PageOverridesSelect<false> | PageOverridesSelect<true>;
+    'shared-sections': SharedSectionsSelect<false> | SharedSectionsSelect<true>;
     posts: PostsSelect<false> | PostsSelect<true>;
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
     authors: AuthorsSelect<false> | AuthorsSelect<true>;
@@ -1510,6 +1512,15 @@ export interface PageOverride {
             blockName?: string | null;
             blockType: 'dossierRelated';
           }
+        | {
+            /**
+             * Pick a reusable section. Changes made to it appear on every page that uses it.
+             */
+            section: string | SharedSection;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'sharedSection';
+          }
       )[]
     | null;
   stickyCta?: {
@@ -1571,6 +1582,1280 @@ export interface PageOverride {
           | null;
         id?: string | null;
       }[]
+    | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * Reusable sections (e.g. a FAQ, citation note, CTA strip or "Related" links). Edit once, update everywhere.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "shared-sections".
+ */
+export interface SharedSection {
+  id: string;
+  /**
+   * Editor-facing name, e.g. "Patent FAQ" or "Publication citation note".
+   */
+  title: string;
+  category?: ('faq' | 'related-links' | 'call-to-action' | 'citation-notice' | 'contact' | 'other') | null;
+  description?: string | null;
+  /**
+   * Pages that reference this section.
+   */
+  usedOn?: string[] | null;
+  sections?:
+    | (
+        | {
+            id?: string | null;
+            variant?: ('stark' | 'precision' | 'publication' | 'archive') | null;
+            headline: string;
+            subheadline?: string | null;
+            breadcrumb?:
+              | {
+                  label: string;
+                  path?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            primaryCta?: {
+              label?: string | null;
+              /**
+               * Use /path for internal pages, or https:// for external links.
+               */
+              href?: string | null;
+              external?: boolean | null;
+              disabled?: boolean | null;
+              download?: boolean | null;
+            };
+            secondaryCta?: {
+              label?: string | null;
+              /**
+               * Use /path for internal pages, or https:// for external links.
+               */
+              href?: string | null;
+              external?: boolean | null;
+              disabled?: boolean | null;
+              download?: boolean | null;
+            };
+            image?: {
+              asset?: (string | null) | Media;
+              /**
+               * Use this only when not uploading to Media Library.
+               */
+              src?: string | null;
+              alt?: string | null;
+              privacyBlur?: boolean | null;
+              /**
+               * Use for source-authoritative figures that must be shown exactly as supplied.
+               */
+              preserveContent?: boolean | null;
+              caption?: string | null;
+            };
+            blockName?: string | null;
+            blockType: 'hero';
+          }
+        | {
+            id?: string | null;
+            text: string;
+            /**
+             * Add, remove, and reorder items.
+             */
+            items?:
+              | {
+                  text: string;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'ticker';
+          }
+        | {
+            id?: string | null;
+            header: string;
+            intro?: string | null;
+            /**
+             * Add, remove, and reorder cards.
+             */
+            items?:
+              | {
+                  title: string;
+                  icon?: string | null;
+                  body?: string | null;
+                  cta?: {
+                    label?: string | null;
+                    /**
+                     * Use /path for internal pages, or https:// for external links.
+                     */
+                    href?: string | null;
+                    external?: boolean | null;
+                    disabled?: boolean | null;
+                    download?: boolean | null;
+                  };
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'grid3';
+          }
+        | {
+            id?: string | null;
+            header: string;
+            intro?: string | null;
+            variant?: ('blogGrid' | 'iconCards' | 'profiles' | 'newsGrid' | 'pressRoom') | null;
+            /**
+             * Show only the first N cards, with a button to reveal the rest. All cards stay in the page HTML for search engines.
+             */
+            loadMore?: {
+              batchSize?: number | null;
+              label?: string | null;
+            };
+            /**
+             * Add, remove, and reorder cards by drag-and-drop.
+             */
+            cards?:
+              | {
+                  tag?: string | null;
+                  headline: string;
+                  authors?: string | null;
+                  meta?: string | null;
+                  /**
+                   * When set, the meta line links to this DOI.
+                   */
+                  doi?: string | null;
+                  body?: string | null;
+                  /**
+                   * Tick for source-authoritative abstracts: shown as plain text, clamped to a short preview in the listing. The full text lives on the landing page.
+                   */
+                  verbatim?: boolean | null;
+                  icon?: string | null;
+                  image?: {
+                    asset?: (string | null) | Media;
+                    /**
+                     * Use this only when not uploading to Media Library.
+                     */
+                    src?: string | null;
+                    alt?: string | null;
+                    privacyBlur?: boolean | null;
+                    /**
+                     * Use for source-authoritative figures that must be shown exactly as supplied.
+                     */
+                    preserveContent?: boolean | null;
+                    caption?: string | null;
+                  };
+                  action?: {
+                    label?: string | null;
+                    /**
+                     * Use /path for internal pages, or https:// for external links.
+                     */
+                    href?: string | null;
+                    external?: boolean | null;
+                    disabled?: boolean | null;
+                    download?: boolean | null;
+                  };
+                  secondaryAction?: {
+                    label?: string | null;
+                    disabled?: boolean | null;
+                  };
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'cards';
+          }
+        | {
+            id?: string | null;
+            sectionName?: string | null;
+            header: string;
+            intro?: string | null;
+            items?:
+              | {
+                  title: string;
+                  meta?: string | null;
+                  description?: string | null;
+                  statusLine?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            cta?: {
+              label?: string | null;
+              /**
+               * Use /path for internal pages, or https:// for external links.
+               */
+              href?: string | null;
+              external?: boolean | null;
+              disabled?: boolean | null;
+              download?: boolean | null;
+            };
+            blockName?: string | null;
+            blockType: 'list';
+          }
+        | {
+            id?: string | null;
+            sectionName?: string | null;
+            header: string;
+            intro?: string | null;
+            cards?:
+              | {
+                  status?: string | null;
+                  title: string;
+                  body?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            cta?: {
+              label?: string | null;
+              /**
+               * Use /path for internal pages, or https:// for external links.
+               */
+              href?: string | null;
+              external?: boolean | null;
+              disabled?: boolean | null;
+              download?: boolean | null;
+            };
+            blockName?: string | null;
+            blockType: 'libraryCards';
+          }
+        | {
+            id?: string | null;
+            header: string;
+            intro?: string | null;
+            /**
+             * Add, remove, and reorder FAQ rows.
+             */
+            items?:
+              | {
+                  q: string;
+                  a: string;
+                  id?: string | null;
+                }[]
+              | null;
+            footerCta?: {
+              label?: string | null;
+              /**
+               * Use /path for internal pages, or https:// for external links.
+               */
+              href?: string | null;
+              external?: boolean | null;
+              disabled?: boolean | null;
+              download?: boolean | null;
+            };
+            blockName?: string | null;
+            blockType: 'accordion';
+          }
+        | {
+            id?: string | null;
+            header?: string | null;
+            stats?:
+              | {
+                  value: string;
+                  label: string;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'statsBar';
+          }
+        | {
+            id?: string | null;
+            heading?: string | null;
+            title?: string | null;
+            body?: string | null;
+            /**
+             * Add, remove, and reorder items.
+             */
+            bullets?:
+              | {
+                  text: string;
+                  id?: string | null;
+                }[]
+              | null;
+            variant?: ('default' | 'compact' | 'accent' | 'dark' | 'callout') | null;
+            cta?: {
+              label?: string | null;
+              /**
+               * Use /path for internal pages, or https:// for external links.
+               */
+              href?: string | null;
+              external?: boolean | null;
+              disabled?: boolean | null;
+              download?: boolean | null;
+            };
+            blockName?: string | null;
+            blockType: 'highlightBox';
+          }
+        | {
+            id?: string | null;
+            header: string;
+            items?:
+              | {
+                  year?: string | null;
+                  title: string;
+                  body?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'timeline';
+          }
+        | {
+            id?: string | null;
+            heading?: string | null;
+            header?: string | null;
+            intro?: string | null;
+            /**
+             * Add, remove, and reorder items.
+             */
+            columns?:
+              | {
+                  text: string;
+                  id?: string | null;
+                }[]
+              | null;
+            /**
+             * Add, remove, and reorder items.
+             */
+            headers?:
+              | {
+                  text: string;
+                  id?: string | null;
+                }[]
+              | null;
+            rows?:
+              | {
+                  label?: string | null;
+                  /**
+                   * Add, remove, and reorder items.
+                   */
+                  values?:
+                    | {
+                        text: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'comparisonTable';
+          }
+        | {
+            id?: string | null;
+            header: string;
+            items?:
+              | {
+                  size?: ('sm' | 'md' | 'lg') | null;
+                  tag?: string | null;
+                  headline: string;
+                  body?: string | null;
+                  image?: {
+                    asset?: (string | null) | Media;
+                    /**
+                     * Use this only when not uploading to Media Library.
+                     */
+                    src?: string | null;
+                    alt?: string | null;
+                    privacyBlur?: boolean | null;
+                    /**
+                     * Use for source-authoritative figures that must be shown exactly as supplied.
+                     */
+                    preserveContent?: boolean | null;
+                    caption?: string | null;
+                  };
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'bento';
+          }
+        | {
+            id?: string | null;
+            header?: string | null;
+            intro?: string | null;
+            logos?:
+              | {
+                  name: string;
+                  asset?: (string | null) | Media;
+                  src?: string | null;
+                  alt?: string | null;
+                  role?: string | null;
+                  collaboration?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'logoStrip';
+          }
+        | {
+            id?: string | null;
+            header: string;
+            cards?:
+              | {
+                  title: string;
+                  icon?: string | null;
+                  description?: string | null;
+                  image?: string | null;
+                  button?: {
+                    label?: string | null;
+                    /**
+                     * Use /path for internal pages, or https:// for external links.
+                     */
+                    href?: string | null;
+                    external?: boolean | null;
+                    disabled?: boolean | null;
+                    download?: boolean | null;
+                  };
+                  id?: string | null;
+                }[]
+              | null;
+            footerNote?: string | null;
+            blockName?: string | null;
+            blockType: 'buttonCards';
+          }
+        | {
+            id?: string | null;
+            header: string;
+            intro?: string | null;
+            items?:
+              | {
+                  title: string;
+                  description?: string | null;
+                  format?: string | null;
+                  size?: string | null;
+                  href: string;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'downloadList';
+          }
+        | {
+            id?: string | null;
+            sectionName?: string | null;
+            header?: string | null;
+            body: string;
+            variant?: ('default' | 'muted' | 'compact') | null;
+            cta?: {
+              label?: string | null;
+              /**
+               * Use /path for internal pages, or https:// for external links.
+               */
+              href?: string | null;
+              external?: boolean | null;
+              disabled?: boolean | null;
+              download?: boolean | null;
+            };
+            blockName?: string | null;
+            blockType: 'textBlock';
+          }
+        | {
+            id?: string | null;
+            header: string;
+            intro?: string | null;
+            description?: string | null;
+            fields?:
+              | {
+                  name: string;
+                  label: string;
+                  type?: ('text' | 'email' | 'tel' | 'textarea' | 'select') | null;
+                  placeholder?: string | null;
+                  required?: boolean | null;
+                  /**
+                   * Add, remove, and reorder items.
+                   */
+                  options?:
+                    | {
+                        text: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            submitLabel?: string | null;
+            submit?: {
+              to?: string | null;
+              subject?: string | null;
+              successMessage?: string | null;
+            };
+            contactNote?: {
+              label?: string | null;
+              /**
+               * Use /path for internal pages, or https:// for external links.
+               */
+              href?: string | null;
+              external?: boolean | null;
+              disabled?: boolean | null;
+              download?: boolean | null;
+            };
+            blockName?: string | null;
+            blockType: 'form';
+          }
+        | {
+            id?: string | null;
+            header: string;
+            layout?: ('default' | 'mainLarge' | 'asymmetric') | null;
+            main: {
+              tag?: string | null;
+              headline: string;
+              excerpt?: string | null;
+              image?: {
+                asset?: (string | null) | Media;
+                /**
+                 * Use this only when not uploading to Media Library.
+                 */
+                src?: string | null;
+                alt?: string | null;
+                privacyBlur?: boolean | null;
+                /**
+                 * Use for source-authoritative figures that must be shown exactly as supplied.
+                 */
+                preserveContent?: boolean | null;
+                caption?: string | null;
+              };
+              cta?: {
+                label?: string | null;
+                /**
+                 * Use /path for internal pages, or https:// for external links.
+                 */
+                href?: string | null;
+                external?: boolean | null;
+                disabled?: boolean | null;
+                download?: boolean | null;
+              };
+            };
+            side?:
+              | {
+                  tag?: string | null;
+                  headline: string;
+                  excerpt?: string | null;
+                  image?: {
+                    asset?: (string | null) | Media;
+                    /**
+                     * Use this only when not uploading to Media Library.
+                     */
+                    src?: string | null;
+                    alt?: string | null;
+                    privacyBlur?: boolean | null;
+                    /**
+                     * Use for source-authoritative figures that must be shown exactly as supplied.
+                     */
+                    preserveContent?: boolean | null;
+                    caption?: string | null;
+                  };
+                  cta?: {
+                    label?: string | null;
+                    /**
+                     * Use /path for internal pages, or https:// for external links.
+                     */
+                    href?: string | null;
+                    external?: boolean | null;
+                    disabled?: boolean | null;
+                    download?: boolean | null;
+                  };
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'featuredStories';
+          }
+        | {
+            id?: string | null;
+            header: string;
+            columns?:
+              | {
+                  title: string;
+                  sub?: string | null;
+                  body?: string | null;
+                  badge?: string | null;
+                  cta?: {
+                    label?: string | null;
+                    /**
+                     * Use /path for internal pages, or https:// for external links.
+                     */
+                    href?: string | null;
+                    external?: boolean | null;
+                    disabled?: boolean | null;
+                    download?: boolean | null;
+                  };
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'pricing';
+          }
+        | {
+            id?: string | null;
+            sectionName?: string | null;
+            header: string;
+            intro?: string | null;
+            body?: string | null;
+            cta?: {
+              label?: string | null;
+              /**
+               * Use /path for internal pages, or https:// for external links.
+               */
+              href?: string | null;
+              external?: boolean | null;
+              disabled?: boolean | null;
+              download?: boolean | null;
+            };
+            items?:
+              | {
+                  tag?: string | null;
+                  title: string;
+                  caption?: string | null;
+                  image?: {
+                    asset?: (string | null) | Media;
+                    /**
+                     * Use this only when not uploading to Media Library.
+                     */
+                    src?: string | null;
+                    alt?: string | null;
+                    privacyBlur?: boolean | null;
+                    /**
+                     * Use for source-authoritative figures that must be shown exactly as supplied.
+                     */
+                    preserveContent?: boolean | null;
+                    caption?: string | null;
+                  };
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'galleryGrid';
+          }
+        | {
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'sitemap';
+          }
+        | {
+            id?: string | null;
+            /**
+             * Drag and drop to reorder.
+             */
+            items?:
+              | {
+                  label: string;
+                  value: string;
+                  href?: string | null;
+                  external?: boolean | null;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'metaStrip';
+          }
+        | {
+            id?: string | null;
+            header?: string | null;
+            intro?: string | null;
+            variant?: ('default' | 'comparison' | 'cards') | null;
+            compact?: boolean | null;
+            left?: {
+              heading?: string | null;
+              icon?: string | null;
+              lead?: string | null;
+              items?:
+                | {
+                    label?: string | null;
+                    text?: string | null;
+                    id?: string | null;
+                  }[]
+                | null;
+              /**
+               * Rich text sections (used by publication pages).
+               */
+              sections?:
+                | {
+                    title?: string | null;
+                    body?: string | null;
+                    bullets?:
+                      | {
+                          text?: string | null;
+                          id?: string | null;
+                        }[]
+                      | null;
+                    id?: string | null;
+                  }[]
+                | null;
+              /**
+               * Sidebar panels with links/citations (used by publication pages).
+               */
+              panels?:
+                | {
+                    title?: string | null;
+                    links?:
+                      | {
+                          label?: string | null;
+                          href?: string | null;
+                          external?: boolean | null;
+                          download?: boolean | null;
+                          id?: string | null;
+                        }[]
+                      | null;
+                    citation?: string | null;
+                    profiles?:
+                      | {
+                          name?: string | null;
+                          role?: string | null;
+                          image?: string | null;
+                          href?: string | null;
+                          id?: string | null;
+                        }[]
+                      | null;
+                    images?:
+                      | {
+                          src?: string | null;
+                          alt?: string | null;
+                          id?: string | null;
+                        }[]
+                      | null;
+                    id?: string | null;
+                  }[]
+                | null;
+            };
+            right?: {
+              heading?: string | null;
+              icon?: string | null;
+              lead?: string | null;
+              items?:
+                | {
+                    label?: string | null;
+                    text?: string | null;
+                    id?: string | null;
+                  }[]
+                | null;
+              /**
+               * Rich text sections (used by publication pages).
+               */
+              sections?:
+                | {
+                    title?: string | null;
+                    body?: string | null;
+                    bullets?:
+                      | {
+                          text?: string | null;
+                          id?: string | null;
+                        }[]
+                      | null;
+                    id?: string | null;
+                  }[]
+                | null;
+              /**
+               * Sidebar panels with links/citations (used by publication pages).
+               */
+              panels?:
+                | {
+                    title?: string | null;
+                    links?:
+                      | {
+                          label?: string | null;
+                          href?: string | null;
+                          external?: boolean | null;
+                          download?: boolean | null;
+                          id?: string | null;
+                        }[]
+                      | null;
+                    citation?: string | null;
+                    profiles?:
+                      | {
+                          name?: string | null;
+                          role?: string | null;
+                          image?: string | null;
+                          href?: string | null;
+                          id?: string | null;
+                        }[]
+                      | null;
+                    images?:
+                      | {
+                          src?: string | null;
+                          alt?: string | null;
+                          id?: string | null;
+                        }[]
+                      | null;
+                    id?: string | null;
+                  }[]
+                | null;
+            };
+            footer?: string | null;
+            cta?: {
+              label?: string | null;
+              /**
+               * Use /path for internal pages, or https:// for external links.
+               */
+              href?: string | null;
+              external?: boolean | null;
+              disabled?: boolean | null;
+              download?: boolean | null;
+            };
+            blockName?: string | null;
+            blockType: 'twoColumn';
+          }
+        | {
+            id?: string | null;
+            header?: string | null;
+            cards?:
+              | {
+                  title: string;
+                  description?: string | null;
+                  icon?: string | null;
+                  href: string;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'relatedCards';
+          }
+        | {
+            header: string;
+            intro?: string | null;
+            filterNote?: string | null;
+            patents?:
+              | {
+                  title: string;
+                  category?: string | null;
+                  status?: string | null;
+                  filingDate?: string | null;
+                  ageGroup?: string | null;
+                  applicationNo?: string | null;
+                  inventors?: string | null;
+                  description?: string | null;
+                  href?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'patentGrid';
+          }
+        | {
+            id?: string | null;
+            name: string;
+            role?: string | null;
+            email?: string | null;
+            image?: {
+              asset?: (string | null) | Media;
+              /**
+               * Use this only when not uploading to Media Library.
+               */
+              src?: string | null;
+              alt?: string | null;
+              privacyBlur?: boolean | null;
+              /**
+               * Use for source-authoritative figures that must be shown exactly as supplied.
+               */
+              preserveContent?: boolean | null;
+              caption?: string | null;
+            };
+            bio?: string | null;
+            socials?:
+              | {
+                  type?: string | null;
+                  label?: string | null;
+                  href: string;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'profile';
+          }
+        | {
+            header: string;
+            items?:
+              | {
+                  term: string;
+                  definition: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'glossaryAccordion';
+          }
+        | {
+            id?: string | null;
+            heroTitle?: string | null;
+            heroSubtitle?: string | null;
+            /**
+             * Each group becomes a sidebar jump-link and a titled list of questions.
+             */
+            groups?:
+              | {
+                  title: string;
+                  items?:
+                    | {
+                        q: string;
+                        a: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'faqGroups';
+          }
+        | {
+            id?: string | null;
+            /**
+             * Verbatim conversion of the source DOCX/PDF. Do not reword; text must stay identical to the source document.
+             */
+            html: string;
+            authorsHtml?: string | null;
+            doi?: string | null;
+            panelTitle?: string | null;
+            doiCta?: {
+              label?: string | null;
+              /**
+               * Use /path for internal pages, or https:// for external links.
+               */
+              href?: string | null;
+              external?: boolean | null;
+              disabled?: boolean | null;
+              download?: boolean | null;
+            };
+            backCta?: {
+              label?: string | null;
+              /**
+               * Use /path for internal pages, or https:// for external links.
+               */
+              href?: string | null;
+              external?: boolean | null;
+              disabled?: boolean | null;
+              download?: boolean | null;
+            };
+            image?: {
+              asset?: (string | null) | Media;
+              /**
+               * Use this only when not uploading to Media Library.
+               */
+              src?: string | null;
+              alt?: string | null;
+              privacyBlur?: boolean | null;
+              /**
+               * Use for source-authoritative figures that must be shown exactly as supplied.
+               */
+              preserveContent?: boolean | null;
+              caption?: string | null;
+            };
+            blockName?: string | null;
+            blockType: 'publishedPaper';
+          }
+        | {
+            id?: string | null;
+            header: string;
+            items?:
+              | {
+                  number: string;
+                  title: string;
+                  body?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'numberedCards';
+          }
+        | {
+            header: string;
+            tiers?:
+              | {
+                  label?: string | null;
+                  title: string;
+                  subtitle?: string | null;
+                  body?: string | null;
+                  /**
+                   * Add, remove, and reorder items.
+                   */
+                  bullets?:
+                    | {
+                        text: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  note?: string | null;
+                  cta?: {
+                    label?: string | null;
+                    /**
+                     * Use /path for internal pages, or https:// for external links.
+                     */
+                    href?: string | null;
+                    external?: boolean | null;
+                    disabled?: boolean | null;
+                    download?: boolean | null;
+                  };
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'tierCards';
+          }
+        | {
+            header: string;
+            tools?:
+              | {
+                  title: string;
+                  subtitle?: string | null;
+                  body?: string | null;
+                  /**
+                   * Add, remove, and reorder items.
+                   */
+                  details?:
+                    | {
+                        text: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  downloads?:
+                    | {
+                        label: string;
+                        href: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'toolCards';
+          }
+        | {
+            header: string;
+            intro?: string | null;
+            body?: string | null;
+            /**
+             * Add, remove, and reorder items.
+             */
+            items?:
+              | {
+                  text: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'checklist';
+          }
+        | {
+            id?: string | null;
+            header: string;
+            intro?: string | null;
+            /**
+             * Add, remove, and reorder items.
+             */
+            headers?:
+              | {
+                  text: string;
+                  id?: string | null;
+                }[]
+              | null;
+            rows?:
+              | {
+                  /**
+                   * Add, remove, and reorder items.
+                   */
+                  cells?:
+                    | {
+                        text: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'tableBlock';
+          }
+        | {
+            id?: string | null;
+            header?: string | null;
+            body?: string | null;
+            blockName?: string | null;
+            blockType: 'anchorBlock';
+          }
+        | {
+            header: string;
+            steps?:
+              | {
+                  title: string;
+                  body?: string | null;
+                  /**
+                   * Add, remove, and reorder items.
+                   */
+                  bullets?:
+                    | {
+                        text: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'timelineSteps';
+          }
+        | {
+            header: string;
+            items?:
+              | {
+                  title: string;
+                  icon?: string | null;
+                  body?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pillars';
+          }
+        | {
+            id?: string | null;
+            header: string;
+            papers?:
+              | {
+                  title: string;
+                  doi?: string | null;
+                  link?: string | null;
+                  body?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'frameworkPapers';
+          }
+        | {
+            id?: string | null;
+            title: string;
+            subtitle?: string | null;
+            classification?: string | null;
+            /**
+             * Drag and drop to reorder.
+             */
+            dataPanel?:
+              | {
+                  label: string;
+                  value: string;
+                  href?: string | null;
+                  external?: boolean | null;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'dossierHeader';
+          }
+        | {
+            id?: string | null;
+            number?: string | null;
+            label?: string | null;
+            header?: string | null;
+            body: string;
+            variant?: ('default' | 'abstract') | null;
+            blockName?: string | null;
+            blockType: 'dossierSection';
+          }
+        | {
+            id?: string | null;
+            quote: string;
+            blockName?: string | null;
+            blockType: 'dossierQuoteStrip';
+          }
+        | {
+            id?: string | null;
+            number?: string | null;
+            label?: string | null;
+            header?: string | null;
+            rows?:
+              | {
+                  label: string;
+                  value: string;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'dossierSpecTable';
+          }
+        | {
+            id?: string | null;
+            number?: string | null;
+            label?: string | null;
+            events?:
+              | {
+                  date: string;
+                  description: string;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'dossierTimeline';
+          }
+        | {
+            id?: string | null;
+            label?: string | null;
+            body: string;
+            blockName?: string | null;
+            blockType: 'dossierNotice';
+          }
+        | {
+            id?: string | null;
+            number?: string | null;
+            label?: string | null;
+            header?: string | null;
+            intro?: string | null;
+            principles?:
+              | {
+                  number?: string | null;
+                  title: string;
+                  body: string;
+                  id?: string | null;
+                }[]
+              | null;
+            conclusion?: string | null;
+            blockName?: string | null;
+            blockType: 'dossierPrinciples';
+          }
+        | {
+            id?: string | null;
+            number?: string | null;
+            label?: string | null;
+            images?:
+              | {
+                  asset?: (string | null) | Media;
+                  src?: string | null;
+                  alt?: string | null;
+                  caption?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'dossierGallery';
+          }
+        | {
+            id?: string | null;
+            body: string;
+            blockName?: string | null;
+            blockType: 'dossierArchiveNotice';
+          }
+        | {
+            id?: string | null;
+            header?: string | null;
+            cards?:
+              | {
+                  title: string;
+                  description?: string | null;
+                  icon?: string | null;
+                  href: string;
+                  id?: string | null;
+                }[]
+              | null;
+            blockName?: string | null;
+            blockType: 'dossierRelated';
+          }
+      )[]
     | null;
   updatedAt: string;
   createdAt: string;
@@ -1954,6 +3239,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'page-overrides';
         value: string | PageOverride;
+      } | null)
+    | ({
+        relationTo: 'shared-sections';
+        value: string | SharedSection;
       } | null)
     | ({
         relationTo: 'posts';
@@ -3314,6 +4603,13 @@ export interface PageOverridesSelect<T extends boolean = true> {
                   };
               blockName?: T;
             };
+        sharedSection?:
+          | T
+          | {
+              section?: T;
+              id?: T;
+              blockName?: T;
+            };
       };
   stickyCta?:
     | T
@@ -3355,6 +4651,1202 @@ export interface PageOverridesSelect<T extends boolean = true> {
         label?: T;
         schema?: T;
         id?: T;
+      };
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "shared-sections_select".
+ */
+export interface SharedSectionsSelect<T extends boolean = true> {
+  title?: T;
+  category?: T;
+  description?: T;
+  usedOn?: T;
+  sections?:
+    | T
+    | {
+        hero?:
+          | T
+          | {
+              id?: T;
+              variant?: T;
+              headline?: T;
+              subheadline?: T;
+              breadcrumb?:
+                | T
+                | {
+                    label?: T;
+                    path?: T;
+                    id?: T;
+                  };
+              primaryCta?:
+                | T
+                | {
+                    label?: T;
+                    href?: T;
+                    external?: T;
+                    disabled?: T;
+                    download?: T;
+                  };
+              secondaryCta?:
+                | T
+                | {
+                    label?: T;
+                    href?: T;
+                    external?: T;
+                    disabled?: T;
+                    download?: T;
+                  };
+              image?:
+                | T
+                | {
+                    asset?: T;
+                    src?: T;
+                    alt?: T;
+                    privacyBlur?: T;
+                    preserveContent?: T;
+                    caption?: T;
+                  };
+              blockName?: T;
+            };
+        ticker?:
+          | T
+          | {
+              id?: T;
+              text?: T;
+              items?:
+                | T
+                | {
+                    text?: T;
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        grid3?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              intro?: T;
+              items?:
+                | T
+                | {
+                    title?: T;
+                    icon?: T;
+                    body?: T;
+                    cta?:
+                      | T
+                      | {
+                          label?: T;
+                          href?: T;
+                          external?: T;
+                          disabled?: T;
+                          download?: T;
+                        };
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        cards?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              intro?: T;
+              variant?: T;
+              loadMore?:
+                | T
+                | {
+                    batchSize?: T;
+                    label?: T;
+                  };
+              cards?:
+                | T
+                | {
+                    tag?: T;
+                    headline?: T;
+                    authors?: T;
+                    meta?: T;
+                    doi?: T;
+                    body?: T;
+                    verbatim?: T;
+                    icon?: T;
+                    image?:
+                      | T
+                      | {
+                          asset?: T;
+                          src?: T;
+                          alt?: T;
+                          privacyBlur?: T;
+                          preserveContent?: T;
+                          caption?: T;
+                        };
+                    action?:
+                      | T
+                      | {
+                          label?: T;
+                          href?: T;
+                          external?: T;
+                          disabled?: T;
+                          download?: T;
+                        };
+                    secondaryAction?:
+                      | T
+                      | {
+                          label?: T;
+                          disabled?: T;
+                        };
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        list?:
+          | T
+          | {
+              id?: T;
+              sectionName?: T;
+              header?: T;
+              intro?: T;
+              items?:
+                | T
+                | {
+                    title?: T;
+                    meta?: T;
+                    description?: T;
+                    statusLine?: T;
+                    id?: T;
+                  };
+              cta?:
+                | T
+                | {
+                    label?: T;
+                    href?: T;
+                    external?: T;
+                    disabled?: T;
+                    download?: T;
+                  };
+              blockName?: T;
+            };
+        libraryCards?:
+          | T
+          | {
+              id?: T;
+              sectionName?: T;
+              header?: T;
+              intro?: T;
+              cards?:
+                | T
+                | {
+                    status?: T;
+                    title?: T;
+                    body?: T;
+                    id?: T;
+                  };
+              cta?:
+                | T
+                | {
+                    label?: T;
+                    href?: T;
+                    external?: T;
+                    disabled?: T;
+                    download?: T;
+                  };
+              blockName?: T;
+            };
+        accordion?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              intro?: T;
+              items?:
+                | T
+                | {
+                    q?: T;
+                    a?: T;
+                    id?: T;
+                  };
+              footerCta?:
+                | T
+                | {
+                    label?: T;
+                    href?: T;
+                    external?: T;
+                    disabled?: T;
+                    download?: T;
+                  };
+              blockName?: T;
+            };
+        statsBar?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              stats?:
+                | T
+                | {
+                    value?: T;
+                    label?: T;
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        highlightBox?:
+          | T
+          | {
+              id?: T;
+              heading?: T;
+              title?: T;
+              body?: T;
+              bullets?:
+                | T
+                | {
+                    text?: T;
+                    id?: T;
+                  };
+              variant?: T;
+              cta?:
+                | T
+                | {
+                    label?: T;
+                    href?: T;
+                    external?: T;
+                    disabled?: T;
+                    download?: T;
+                  };
+              blockName?: T;
+            };
+        timeline?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              items?:
+                | T
+                | {
+                    year?: T;
+                    title?: T;
+                    body?: T;
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        comparisonTable?:
+          | T
+          | {
+              id?: T;
+              heading?: T;
+              header?: T;
+              intro?: T;
+              columns?:
+                | T
+                | {
+                    text?: T;
+                    id?: T;
+                  };
+              headers?:
+                | T
+                | {
+                    text?: T;
+                    id?: T;
+                  };
+              rows?:
+                | T
+                | {
+                    label?: T;
+                    values?:
+                      | T
+                      | {
+                          text?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        bento?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              items?:
+                | T
+                | {
+                    size?: T;
+                    tag?: T;
+                    headline?: T;
+                    body?: T;
+                    image?:
+                      | T
+                      | {
+                          asset?: T;
+                          src?: T;
+                          alt?: T;
+                          privacyBlur?: T;
+                          preserveContent?: T;
+                          caption?: T;
+                        };
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        logoStrip?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              intro?: T;
+              logos?:
+                | T
+                | {
+                    name?: T;
+                    asset?: T;
+                    src?: T;
+                    alt?: T;
+                    role?: T;
+                    collaboration?: T;
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        buttonCards?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              cards?:
+                | T
+                | {
+                    title?: T;
+                    icon?: T;
+                    description?: T;
+                    image?: T;
+                    button?:
+                      | T
+                      | {
+                          label?: T;
+                          href?: T;
+                          external?: T;
+                          disabled?: T;
+                          download?: T;
+                        };
+                    id?: T;
+                  };
+              footerNote?: T;
+              blockName?: T;
+            };
+        downloadList?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              intro?: T;
+              items?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    format?: T;
+                    size?: T;
+                    href?: T;
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        textBlock?:
+          | T
+          | {
+              id?: T;
+              sectionName?: T;
+              header?: T;
+              body?: T;
+              variant?: T;
+              cta?:
+                | T
+                | {
+                    label?: T;
+                    href?: T;
+                    external?: T;
+                    disabled?: T;
+                    download?: T;
+                  };
+              blockName?: T;
+            };
+        form?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              intro?: T;
+              description?: T;
+              fields?:
+                | T
+                | {
+                    name?: T;
+                    label?: T;
+                    type?: T;
+                    placeholder?: T;
+                    required?: T;
+                    options?:
+                      | T
+                      | {
+                          text?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              submitLabel?: T;
+              submit?:
+                | T
+                | {
+                    to?: T;
+                    subject?: T;
+                    successMessage?: T;
+                  };
+              contactNote?:
+                | T
+                | {
+                    label?: T;
+                    href?: T;
+                    external?: T;
+                    disabled?: T;
+                    download?: T;
+                  };
+              blockName?: T;
+            };
+        featuredStories?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              layout?: T;
+              main?:
+                | T
+                | {
+                    tag?: T;
+                    headline?: T;
+                    excerpt?: T;
+                    image?:
+                      | T
+                      | {
+                          asset?: T;
+                          src?: T;
+                          alt?: T;
+                          privacyBlur?: T;
+                          preserveContent?: T;
+                          caption?: T;
+                        };
+                    cta?:
+                      | T
+                      | {
+                          label?: T;
+                          href?: T;
+                          external?: T;
+                          disabled?: T;
+                          download?: T;
+                        };
+                  };
+              side?:
+                | T
+                | {
+                    tag?: T;
+                    headline?: T;
+                    excerpt?: T;
+                    image?:
+                      | T
+                      | {
+                          asset?: T;
+                          src?: T;
+                          alt?: T;
+                          privacyBlur?: T;
+                          preserveContent?: T;
+                          caption?: T;
+                        };
+                    cta?:
+                      | T
+                      | {
+                          label?: T;
+                          href?: T;
+                          external?: T;
+                          disabled?: T;
+                          download?: T;
+                        };
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        pricing?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              columns?:
+                | T
+                | {
+                    title?: T;
+                    sub?: T;
+                    body?: T;
+                    badge?: T;
+                    cta?:
+                      | T
+                      | {
+                          label?: T;
+                          href?: T;
+                          external?: T;
+                          disabled?: T;
+                          download?: T;
+                        };
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        galleryGrid?:
+          | T
+          | {
+              id?: T;
+              sectionName?: T;
+              header?: T;
+              intro?: T;
+              body?: T;
+              cta?:
+                | T
+                | {
+                    label?: T;
+                    href?: T;
+                    external?: T;
+                    disabled?: T;
+                    download?: T;
+                  };
+              items?:
+                | T
+                | {
+                    tag?: T;
+                    title?: T;
+                    caption?: T;
+                    image?:
+                      | T
+                      | {
+                          asset?: T;
+                          src?: T;
+                          alt?: T;
+                          privacyBlur?: T;
+                          preserveContent?: T;
+                          caption?: T;
+                        };
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        sitemap?:
+          | T
+          | {
+              id?: T;
+              blockName?: T;
+            };
+        metaStrip?:
+          | T
+          | {
+              id?: T;
+              items?:
+                | T
+                | {
+                    label?: T;
+                    value?: T;
+                    href?: T;
+                    external?: T;
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        twoColumn?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              intro?: T;
+              variant?: T;
+              compact?: T;
+              left?:
+                | T
+                | {
+                    heading?: T;
+                    icon?: T;
+                    lead?: T;
+                    items?:
+                      | T
+                      | {
+                          label?: T;
+                          text?: T;
+                          id?: T;
+                        };
+                    sections?:
+                      | T
+                      | {
+                          title?: T;
+                          body?: T;
+                          bullets?:
+                            | T
+                            | {
+                                text?: T;
+                                id?: T;
+                              };
+                          id?: T;
+                        };
+                    panels?:
+                      | T
+                      | {
+                          title?: T;
+                          links?:
+                            | T
+                            | {
+                                label?: T;
+                                href?: T;
+                                external?: T;
+                                download?: T;
+                                id?: T;
+                              };
+                          citation?: T;
+                          profiles?:
+                            | T
+                            | {
+                                name?: T;
+                                role?: T;
+                                image?: T;
+                                href?: T;
+                                id?: T;
+                              };
+                          images?:
+                            | T
+                            | {
+                                src?: T;
+                                alt?: T;
+                                id?: T;
+                              };
+                          id?: T;
+                        };
+                  };
+              right?:
+                | T
+                | {
+                    heading?: T;
+                    icon?: T;
+                    lead?: T;
+                    items?:
+                      | T
+                      | {
+                          label?: T;
+                          text?: T;
+                          id?: T;
+                        };
+                    sections?:
+                      | T
+                      | {
+                          title?: T;
+                          body?: T;
+                          bullets?:
+                            | T
+                            | {
+                                text?: T;
+                                id?: T;
+                              };
+                          id?: T;
+                        };
+                    panels?:
+                      | T
+                      | {
+                          title?: T;
+                          links?:
+                            | T
+                            | {
+                                label?: T;
+                                href?: T;
+                                external?: T;
+                                download?: T;
+                                id?: T;
+                              };
+                          citation?: T;
+                          profiles?:
+                            | T
+                            | {
+                                name?: T;
+                                role?: T;
+                                image?: T;
+                                href?: T;
+                                id?: T;
+                              };
+                          images?:
+                            | T
+                            | {
+                                src?: T;
+                                alt?: T;
+                                id?: T;
+                              };
+                          id?: T;
+                        };
+                  };
+              footer?: T;
+              cta?:
+                | T
+                | {
+                    label?: T;
+                    href?: T;
+                    external?: T;
+                    disabled?: T;
+                    download?: T;
+                  };
+              blockName?: T;
+            };
+        relatedCards?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              cards?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    icon?: T;
+                    href?: T;
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        patentGrid?:
+          | T
+          | {
+              header?: T;
+              intro?: T;
+              filterNote?: T;
+              patents?:
+                | T
+                | {
+                    title?: T;
+                    category?: T;
+                    status?: T;
+                    filingDate?: T;
+                    ageGroup?: T;
+                    applicationNo?: T;
+                    inventors?: T;
+                    description?: T;
+                    href?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        profile?:
+          | T
+          | {
+              id?: T;
+              name?: T;
+              role?: T;
+              email?: T;
+              image?:
+                | T
+                | {
+                    asset?: T;
+                    src?: T;
+                    alt?: T;
+                    privacyBlur?: T;
+                    preserveContent?: T;
+                    caption?: T;
+                  };
+              bio?: T;
+              socials?:
+                | T
+                | {
+                    type?: T;
+                    label?: T;
+                    href?: T;
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        glossaryAccordion?:
+          | T
+          | {
+              header?: T;
+              items?:
+                | T
+                | {
+                    term?: T;
+                    definition?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        faqGroups?:
+          | T
+          | {
+              id?: T;
+              heroTitle?: T;
+              heroSubtitle?: T;
+              groups?:
+                | T
+                | {
+                    title?: T;
+                    items?:
+                      | T
+                      | {
+                          q?: T;
+                          a?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        publishedPaper?:
+          | T
+          | {
+              id?: T;
+              html?: T;
+              authorsHtml?: T;
+              doi?: T;
+              panelTitle?: T;
+              doiCta?:
+                | T
+                | {
+                    label?: T;
+                    href?: T;
+                    external?: T;
+                    disabled?: T;
+                    download?: T;
+                  };
+              backCta?:
+                | T
+                | {
+                    label?: T;
+                    href?: T;
+                    external?: T;
+                    disabled?: T;
+                    download?: T;
+                  };
+              image?:
+                | T
+                | {
+                    asset?: T;
+                    src?: T;
+                    alt?: T;
+                    privacyBlur?: T;
+                    preserveContent?: T;
+                    caption?: T;
+                  };
+              blockName?: T;
+            };
+        numberedCards?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              items?:
+                | T
+                | {
+                    number?: T;
+                    title?: T;
+                    body?: T;
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        tierCards?:
+          | T
+          | {
+              header?: T;
+              tiers?:
+                | T
+                | {
+                    label?: T;
+                    title?: T;
+                    subtitle?: T;
+                    body?: T;
+                    bullets?:
+                      | T
+                      | {
+                          text?: T;
+                          id?: T;
+                        };
+                    note?: T;
+                    cta?:
+                      | T
+                      | {
+                          label?: T;
+                          href?: T;
+                          external?: T;
+                          disabled?: T;
+                          download?: T;
+                        };
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        toolCards?:
+          | T
+          | {
+              header?: T;
+              tools?:
+                | T
+                | {
+                    title?: T;
+                    subtitle?: T;
+                    body?: T;
+                    details?:
+                      | T
+                      | {
+                          text?: T;
+                          id?: T;
+                        };
+                    downloads?:
+                      | T
+                      | {
+                          label?: T;
+                          href?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        checklist?:
+          | T
+          | {
+              header?: T;
+              intro?: T;
+              body?: T;
+              items?:
+                | T
+                | {
+                    text?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        tableBlock?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              intro?: T;
+              headers?:
+                | T
+                | {
+                    text?: T;
+                    id?: T;
+                  };
+              rows?:
+                | T
+                | {
+                    cells?:
+                      | T
+                      | {
+                          text?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        anchorBlock?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              body?: T;
+              blockName?: T;
+            };
+        timelineSteps?:
+          | T
+          | {
+              header?: T;
+              steps?:
+                | T
+                | {
+                    title?: T;
+                    body?: T;
+                    bullets?:
+                      | T
+                      | {
+                          text?: T;
+                          id?: T;
+                        };
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        pillars?:
+          | T
+          | {
+              header?: T;
+              items?:
+                | T
+                | {
+                    title?: T;
+                    icon?: T;
+                    body?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        frameworkPapers?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              papers?:
+                | T
+                | {
+                    title?: T;
+                    doi?: T;
+                    link?: T;
+                    body?: T;
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        dossierHeader?:
+          | T
+          | {
+              id?: T;
+              title?: T;
+              subtitle?: T;
+              classification?: T;
+              dataPanel?:
+                | T
+                | {
+                    label?: T;
+                    value?: T;
+                    href?: T;
+                    external?: T;
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        dossierSection?:
+          | T
+          | {
+              id?: T;
+              number?: T;
+              label?: T;
+              header?: T;
+              body?: T;
+              variant?: T;
+              blockName?: T;
+            };
+        dossierQuoteStrip?:
+          | T
+          | {
+              id?: T;
+              quote?: T;
+              blockName?: T;
+            };
+        dossierSpecTable?:
+          | T
+          | {
+              id?: T;
+              number?: T;
+              label?: T;
+              header?: T;
+              rows?:
+                | T
+                | {
+                    label?: T;
+                    value?: T;
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        dossierTimeline?:
+          | T
+          | {
+              id?: T;
+              number?: T;
+              label?: T;
+              events?:
+                | T
+                | {
+                    date?: T;
+                    description?: T;
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        dossierNotice?:
+          | T
+          | {
+              id?: T;
+              label?: T;
+              body?: T;
+              blockName?: T;
+            };
+        dossierPrinciples?:
+          | T
+          | {
+              id?: T;
+              number?: T;
+              label?: T;
+              header?: T;
+              intro?: T;
+              principles?:
+                | T
+                | {
+                    number?: T;
+                    title?: T;
+                    body?: T;
+                    id?: T;
+                  };
+              conclusion?: T;
+              blockName?: T;
+            };
+        dossierGallery?:
+          | T
+          | {
+              id?: T;
+              number?: T;
+              label?: T;
+              images?:
+                | T
+                | {
+                    asset?: T;
+                    src?: T;
+                    alt?: T;
+                    caption?: T;
+                    id?: T;
+                  };
+              blockName?: T;
+            };
+        dossierArchiveNotice?:
+          | T
+          | {
+              id?: T;
+              body?: T;
+              blockName?: T;
+            };
+        dossierRelated?:
+          | T
+          | {
+              id?: T;
+              header?: T;
+              cards?:
+                | T
+                | {
+                    title?: T;
+                    description?: T;
+                    icon?: T;
+                    href?: T;
+                    id?: T;
+                  };
+              blockName?: T;
+            };
       };
   updatedAt?: T;
   createdAt?: T;

@@ -1234,7 +1234,27 @@ const dossierRelatedBlock = {
   ],
 }
 
-const blocks = [
+/**
+ * Reference to a Shared Section (collection `shared-sections`). Edit the shared section once and every page
+ * that references it updates. Mirrors Payload's documented "reusable content" pattern.
+ */
+const sharedSectionBlock = {
+  slug: 'sharedSection',
+  labels: { singular: 'Shared Section (reusable)', plural: 'Shared Sections (reusable)' },
+  fields: [
+    {
+      name: 'section',
+      type: 'relationship',
+      relationTo: 'shared-sections',
+      required: true,
+      label: 'Shared Section',
+      admin: { description: 'Pick a reusable section. Changes made to it appear on every page that uses it.' },
+    },
+  ],
+}
+
+/** The content block library (shared by Pages and Shared Sections). */
+export const contentBlocks = [
   heroBlock,
   tickerBlock,
   grid3Block,
@@ -1284,6 +1304,9 @@ const blocks = [
   dossierArchiveNoticeBlock,
   dossierRelatedBlock,
 ]
+
+// Pages can use every content block plus references to shared sections.
+const blocks = [...contentBlocks, sharedSectionBlock]
 
 export const PageOverrides = {
   slug: 'page-overrides',

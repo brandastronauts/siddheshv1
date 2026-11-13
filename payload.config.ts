@@ -7,6 +7,7 @@ import sharp from 'sharp'
 import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import { Media } from './src/payload/collections/Media.js'
 import { PageOverrides } from './src/payload/collections/PageOverrides.js'
+import { SharedSections } from './src/payload/collections/SharedSections.js'
 import { Users } from './src/payload/collections/Users.js'
 import { Authors } from './src/payload/collections/Authors.js'
 import { Categories } from './src/payload/collections/Categories.js'
@@ -57,6 +58,7 @@ export default buildConfig({
     Users,
     Media,
     PageOverrides,
+    SharedSections,
     Posts,
     Categories,
     Authors,

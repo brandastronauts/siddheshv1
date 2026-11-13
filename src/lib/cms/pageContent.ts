@@ -56,7 +56,7 @@ async function resolvePageContent(pathname: string) {
     const doc = result?.docs?.[0]
     if (!doc) return staticPage
 
-    const mapped = mapPageDoc(doc, pathname)
+    const mapped = mapPageDoc(doc, pathname, isDraft)
     if (!staticPage) return mapped
 
     return mergePage(staticPage, mapped)
@@ -130,8 +130,23 @@ function deepMerge(base: any, override: any): any {
   return out
 }
 
-export function mapPageDoc(doc: any, pathname: string) {
-  const sections = Array.isArray(doc.sections) ? doc.sections.map(mapSectionBlock).filter(Boolean) : []
+/**
+ * A `sharedSection` block expands to the referenced Shared Section's blocks (inlined in place).
+ * Unresolved references (deleted, unpublished, or not populated) render nothing and are logged.
+ */
+function expandBlock(block: any, isDraft = false): any[] {
+  if (block?.blockType !== 'sharedSection') return [mapSectionBlock(block)]
+  const shared = block.section
+  if (shared && typeof shared === 'object' && shared._status === 'draft' && !isDraft) return [] // never-published shared content stays off the live site
+  if (!shared || typeof shared !== 'object' || !Array.isArray(shared.sections)) {
+    console.error('[cms] shared section could not be resolved:', typeof shared === 'object' ? shared?.id : shared)
+    return []
+  }
+  return shared.sections.filter((b: any) => b?.blockType !== 'sharedSection').map(mapSectionBlock)
+}
+
+export function mapPageDoc(doc: any, pathname: string, isDraft = false) {
+  const sections = Array.isArray(doc.sections) ? doc.sections.flatMap((b: any) => expandBlock(b, isDraft)).filter(Boolean) : []
 
   return {
     title: doc.pageTitle || undefined,
