@@ -27,6 +27,16 @@ import { SiteSettings } from './src/payload/globals/SiteSettings.js'
 import { ThemeSettings } from './src/payload/globals/ThemeSettings.js'
 import { AnnouncementBar } from './src/payload/globals/AnnouncementBar.js'
 
+function resolveDbName(url?: string): string | undefined {
+  if (process.env.MONGODB_DB) return process.env.MONGODB_DB
+  try {
+    const name = url ? new URL(url).pathname.replace(/^\//, '') : ''
+    return name || 'blueblocks_payload'
+  } catch {
+    return 'blueblocks_payload'
+  }
+}
+
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
@@ -34,6 +44,9 @@ export default buildConfig({
   secret: process.env.PAYLOAD_SECRET || 'dev-payload-secret-change-me',
   db: mongooseAdapter({
     url: process.env.DATABASE_URL || 'mongodb://127.0.0.1:27017/blueblocks_payload',
+    // The site's database is `blueblocks_payload`. A DATABASE_URL without a database name would otherwise fall back
+    // to Atlas's default `test` database (that happened in Nov 2026). An explicit name in the URL, or MONGODB_DB, wins.
+    connectOptions: { dbName: resolveDbName(process.env.DATABASE_URL) },
   }),
   admin: {
     user: Users.slug,

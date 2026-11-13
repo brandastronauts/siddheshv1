@@ -198,6 +198,14 @@ export interface Media {
    * Describe the image for accessibility and SEO.
    */
   alt: string;
+  /**
+   * SHA-256 of the original file; used to avoid duplicate uploads.
+   */
+  sourceHash?: string | null;
+  /**
+   * Original repository path (set by the media migration).
+   */
+  sourcePath?: string | null;
   caption?: string | null;
   updatedAt: string;
   createdAt: string;
@@ -3364,6 +3372,8 @@ export interface UsersSelect<T extends boolean = true> {
  */
 export interface MediaSelect<T extends boolean = true> {
   alt?: T;
+  sourceHash?: T;
+  sourcePath?: T;
   caption?: T;
   updatedAt?: T;
   createdAt?: T;

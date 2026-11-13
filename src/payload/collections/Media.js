@@ -52,6 +52,19 @@ export const Media = {
       },
     },
     {
+      name: 'sourceHash',
+      type: 'text',
+      index: true,
+      label: 'Content hash',
+      admin: { readOnly: true, position: 'sidebar', description: 'SHA-256 of the original file; used to avoid duplicate uploads.' },
+    },
+    {
+      name: 'sourcePath',
+      type: 'text',
+      label: 'Imported from',
+      admin: { readOnly: true, position: 'sidebar', description: 'Original repository path (set by the media migration).' },
+    },
+    {
       name: 'caption',
       type: 'textarea',
       label: 'Caption (Optional)',

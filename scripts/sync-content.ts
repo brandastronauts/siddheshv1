@@ -17,6 +17,7 @@
  *   field missing in CMS but in an allow-listed schema-added field set → BACKFILL (additive, safe)
  *   page record has 0 sections            → EMPTY          (renders static fallback; populating overwrites nothing)
  *   no page record                        → MISSING_DOC
+ *   --accept-source=/a,/b                 → ACCEPT_SOURCE  (reviewed decision: replace with source; old content kept in versions)
  *
  * DEFAULT = DRY RUN (read only). Reads the CMS through its public read API, so no credentials are needed.
  *
@@ -37,6 +38,26 @@ import { execFileSync } from 'child_process'
 import { createRequire } from 'module'
 import { toBlock } from './lib/content-to-blocks'
 
+// ─── Env (.env.local / .env) ─────────────────────────────────────────────────
+for (const file of ['.env.local', '.env']) {
+  const fp = path.resolve(process.cwd(), file)
+  if (!fs.existsSync(fp)) continue
+  for (const line of fs.readFileSync(fp, 'utf8').split(/\r?\n/)) {
+    const t = line.trim()
+    if (!t || t.startsWith('#') || !t.includes('=')) continue
+    const k = t.slice(0, t.indexOf('=')).trim()
+    const v = t.slice(t.indexOf('=') + 1).trim().replace(/^["']|["']$/g, '')
+    if (!process.env[k]) process.env[k] = v
+  }
+}
+
+/** Same cluster/credentials as DATABASE_URL, but an explicit database name. */
+function withDbName(url: string, db: string) {
+  const u = new URL(url)
+  u.pathname = `/${db}`
+  return u.toString()
+}
+
 // ─── CLI ─────────────────────────────────────────────────────────────────────
 const arg = (name: string) => process.argv.find((a) => a.startsWith(`--${name}=`))?.slice(name.length + 3)
 const flag = (name: string) => process.argv.includes(`--${name}`)
@@ -46,6 +67,10 @@ const FROM = (arg('from') || 'https://research-cms.vercel.app').replace(/\/$/, '
 const ONLY = (arg('only') || '').split(',').map((v) => v.trim()).filter(Boolean)
 const REPORT_DIR = arg('report') || 'audit/sync'
 const APPLY = flag('apply')
+const DB = arg('db') // read (and, with --apply, write) this database directly instead of the public API
+// Pages where the reviewed decision is to take the current source wholesale (old/test CMS content stays in version history).
+const ACCEPT_SOURCE = new Set((arg('accept-source') || '').split(',').map((v) => v.trim()).filter(Boolean))
+const BASELINES = (arg('baselines') || '').split(',').map((v) => v.trim()).filter(Boolean)
 const BACKUP_DIR = arg('backup-dir') || 'audit/rollback'
 
 /** Fields that were added to the Payload schema after the first migration; a missing value is a backfill, not an edit. */
@@ -63,7 +88,9 @@ async function loadSite(dir: string) {
 /** Extract src/content (+ asset descriptors it imports) at a git ref into a temp dir and load it. */
 async function loadBaseline(ref: string) {
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'bb-baseline-'))
-  const tar = execFileSync('git', ['archive', ref, '--', 'src/content', ':(glob)src/assets/**/*.asset.json'], { maxBuffer: 256 * 1024 * 1024 })
+  const files = execFileSync('git', ['ls-tree', '-r', '--name-only', ref, '--', 'src/content', 'src/assets'], { encoding: 'utf8' })
+    .split('\n').filter((f) => f.startsWith('src/content/') || f.endsWith('.asset.json'))
+  const tar = execFileSync('git', ['archive', ref, '--', ...files], { maxBuffer: 256 * 1024 * 1024 })
   execFileSync('tar', ['-x', '-C', tmp], { input: tar })
   return loadSite(tmp)
 }
@@ -132,6 +159,19 @@ function diff3(b: any, s: any, c: any, p: string, out: Change[]) {
 
 // ─── CMS access ──────────────────────────────────────────────────────────────
 async function fetchCmsDocs(): Promise<Map<string, any>> {
+  if (DB) {
+    if (!process.env.DATABASE_URL) throw new Error('--db needs DATABASE_URL (e.g. in .env.local)')
+    const { MongoClient } = await import('mongodb')
+    const client = new MongoClient(withDbName(process.env.DATABASE_URL, DB))
+    await client.connect()
+    try {
+      const docs = await client.db().collection('page-overrides').find({}).toArray()
+      // Mongo stores _id; Payload's API exposes id — normalise so reports/apply match.
+      return new Map(docs.map((d: any) => [d.pathname, { ...d, id: String(d._id) }]))
+    } finally {
+      await client.close()
+    }
+  }
   const res = await fetch(`${FROM}/api/page-overrides?limit=1000&depth=0`)
   if (!res.ok) throw new Error(`CMS read API returned ${res.status}`)
   const json: any = await res.json()
@@ -152,7 +192,7 @@ function setAtPath(root: any, p: string, value: any) {
 
 // ─── Main ────────────────────────────────────────────────────────────────────
 async function main() {
-  if (!BASELINE) {
+  if (!BASELINE && !BASELINES.length) {
     console.error('Missing --baseline=<git ref>. Use the commit of `main` the CMS content was seeded from (e.g. --baseline=4e90979).')
     process.exit(2)
   }
@@ -162,8 +202,27 @@ async function main() {
   }
 
   const source = await loadSite(process.cwd())
-  const baseline = await loadBaseline(BASELINE)
   const docs = await fetchCmsDocs()
+
+  if (BASELINES.length) {
+    // Score candidate baselines: the right one explains the most CMS content as "unchanged since seeding".
+    console.log(`Scoring ${BASELINES.length} baseline(s) against ${DB ? 'database ' + DB : FROM}:`)
+    for (const ref of BASELINES) {
+      const base = await loadBaseline(ref)
+      let exact = 0, edits = 0, populated = 0
+      for (const [pathname, doc] of docs) {
+        if (!(doc.sections || []).length || !base.pages?.[pathname]) continue
+        populated++
+        const b = norm(blocksFor(base.pages[pathname])), c = norm(doc.sections)
+        if (eq(b, c)) { exact++; continue }
+        const ch: Change[] = []; diff3(b, b, c, 'sections', ch); edits += ch.filter((x) => x.kind !== 'BACKFILL' && x.kind !== 'CMS_ONLY').length
+      }
+      console.log(`  ${ref.padEnd(10)} pages identical to baseline: ${String(exact).padStart(3)}/${populated}   differing leaves: ${edits}`)
+    }
+    return
+  }
+
+  const baseline = await loadBaseline(BASELINE)
 
   const rows: any[] = []
   const pending: { pathname: string; doc: any; changes: Change[]; blocks?: any[] }[] = []
@@ -190,10 +249,14 @@ async function main() {
         detail = ['SOURCE_UPDATE', 'BACKFILL', 'CMS_EDIT', 'CMS_ONLY', 'CONFLICT'].map((k) => `${k}:${changes.filter((c) => c.kind === k).length}`).join(' ')
       }
     }
+    if (ACCEPT_SOURCE.has(pathname) && doc && status !== 'IN_SYNC' && status !== 'IN_SYNC_CMS_ADDITIONS') {
+      detail = `accept-source (was ${status}) ${detail}`.trim()
+      status = 'ACCEPT_SOURCE'
+    }
     bump(status)
     if (changes.length) allChanges.push({ pathname, changes })
     rows.push({ pathname, docId: doc?.id || '', status, detail, conflicts: changes.filter((c) => c.kind === 'CONFLICT').map((c) => c.path).join(' | ') })
-    if (['MISSING_DOC', 'EMPTY', 'SOURCE_UPDATE', 'BACKFILL', 'CONFLICT'].includes(status)) pending.push({ pathname, doc, changes, blocks: blocksFor(source.pages[pathname]) })
+    if (['MISSING_DOC', 'EMPTY', 'SOURCE_UPDATE', 'BACKFILL', 'CONFLICT', 'ACCEPT_SOURCE'].includes(status)) pending.push({ pathname, doc, changes, blocks: blocksFor(source.pages[pathname]) })
   }
 
   // ── report
@@ -204,20 +267,22 @@ async function main() {
   const detailJson = allChanges.map((p) => ({ pathname: p.pathname, changes: p.changes.map((c) => ({ ...c, base: trunc(c.base), source: trunc(c.source), cms: trunc(c.cms) })) }))
   fs.writeFileSync(path.join(REPORT_DIR, 'sync-plan-detail.json'), JSON.stringify(detailJson, null, 1))
 
-  console.log(`\nMode: ${APPLY ? 'APPLY (writes!)' : 'DRY RUN (read-only)'} | baseline ${BASELINE} | CMS ${FROM} | pages ${rows.length}`)
+  console.log(`\nMode: ${APPLY ? 'APPLY (writes!)' : 'DRY RUN (read-only)'} | baseline ${BASELINE} | CMS ${DB ? 'db:' + DB : FROM} | pages ${rows.length}`)
   console.log('Summary:', JSON.stringify(counts))
   for (const r of rows.filter((r) => r.status !== 'IN_SYNC')) console.log(`  ${r.status.padEnd(26)} ${r.pathname.padEnd(70)} ${r.detail}`)
   console.log(`\nReport written to ${REPORT_DIR}/sync-plan.csv and sync-plan-detail.json`)
   if (!APPLY) return
 
   // ── apply (explicitly requested only)
+  if (DB && process.env.DATABASE_URL) process.env.DATABASE_URL = withDbName(process.env.DATABASE_URL, DB) // write to the chosen database
   const [{ getPayload }, { default: config }] = await Promise.all([import('payload'), import('../payload.config.js')])
   const payload = await getPayload({ config })
   fs.mkdirSync(BACKUP_DIR, { recursive: true })
   const stamp = new Date().toISOString().replace(/[:.]/g, '-')
   let applied = 0, skipped = 0
   for (const p of pending) {
-    if (p.changes.some((c) => c.kind === 'CONFLICT')) { console.log(`  skip (conflict)       ${p.pathname}`); skipped++; continue }
+    const acceptSource = ACCEPT_SOURCE.has(p.pathname)
+    if (!acceptSource && p.changes.some((c) => c.kind === 'CONFLICT')) { console.log(`  skip (conflict)       ${p.pathname}`); skipped++; continue }
     const existing = (await payload.find({ collection: 'page-overrides', where: { pathname: { equals: p.pathname } }, limit: 1, depth: 0 })).docs[0] as any
     if (existing) {
       const latest = (await payload.find({ collection: 'page-overrides', where: { pathname: { equals: p.pathname } }, limit: 1, depth: 0, draft: true })).docs[0] as any
@@ -225,7 +290,7 @@ async function main() {
       fs.writeFileSync(path.join(BACKUP_DIR, `${stamp}__${p.pathname.replace(/\//g, '_') || '_home'}.json`), JSON.stringify(existing, null, 1))
     }
     let sections: any[]
-    if (!existing || !(existing.sections || []).length) sections = p.blocks || []
+    if (!existing || !(existing.sections || []).length || acceptSource) sections = p.blocks || []
     else {
       sections = JSON.parse(JSON.stringify(existing.sections))
       const root = { sections }
