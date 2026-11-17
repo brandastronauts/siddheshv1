@@ -246,7 +246,7 @@ export interface Media {
   };
 }
 /**
- * Edit any website page. Set the URL Path (e.g. /methodology/innovation), then add sections from the block library. If you leave the sections empty, the page falls back to its built-in design — perfect for incremental editing.
+ * To edit page content, click Edit (top right), open Page Content, and expand a section. Edit individual words or paragraphs in its fields; leave a blank line between paragraphs. Editors and above can save; reviewers can preview only. Empty sections use the built-in page design until content is added.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "page-overrides".
@@ -262,13 +262,13 @@ export interface PageOverride {
    */
   pathname: string;
   /**
-   * Derived from the URL path.
+   * Derived from the URL path; used to sort and search pages.
    */
   section?: string | null;
   createdBy?: (string | null) | User;
   lastEditedBy?: (string | null) | User;
   /**
-   * Add, remove, and reorder sections. Section types map directly to existing frontend components.
+   * Expand a section to edit its headline, intro, or body text. Text fields support individual word edits; use a blank line to separate paragraphs. Add, remove, and reorder sections here. Reviewer accounts are read-only; Editors and above can save changes.
    */
   sections?:
     | (

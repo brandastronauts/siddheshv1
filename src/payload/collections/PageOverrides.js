@@ -1,4 +1,5 @@
 import { isAdmin, isEditor, isReviewer, publishedOrEditor } from '../access/isAdmin.js'
+import { sectionOf } from '../../lib/cms/pageSection.js'
 
 const HREF_PATTERN = /^(\/(?!\/)[^\s]*|#[^\s]*|https?:\/\/[^\s]+|mailto:[^\s]+|tel:[^\s]+)$/
 const PATHNAME_PATTERN = /^\/([A-Za-z0-9\-._~]+(\/[A-Za-z0-9\-._~]+)*)?$/
@@ -7,18 +8,6 @@ const PATHNAME_PATTERN = /^\/([A-Za-z0-9\-._~]+(\/[A-Za-z0-9\-._~]+)*)?$/
 const validateHref = (value) => {
   if (value === undefined || value === null || String(value).trim() === '') return true
   return HREF_PATTERN.test(String(value).trim()) || 'Use /path for an internal page, #anchor, https://… for an external link, mailto: or tel:.'
-}
-
-const SECTION_LABELS = {
-  '': 'Home', 'the-institute': 'Institute', methodology: 'Methodology', publications: 'Publications',
-  governance: 'Governance', collaborate: 'Collaborate', newsroom: 'Newsroom', team: 'Team', patents: 'Patents',
-  books: 'Books', downloads: 'Downloads', presentations: 'Presentations & Proceedings', proceedings: 'Presentations & Proceedings',
-  'technical-briefs': 'Technical Briefs', privacy: 'Legal', terms: 'Legal', faq: 'Help', contact: 'Contact',
-  sitemap: 'Utility', 'staff-access': 'Utility',
-}
-const sectionOf = (pathname) => {
-  const first = String(pathname || '/').split('/').filter(Boolean)[0] || ''
-  return SECTION_LABELS[first] || first.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())
 }
 
 /** Session-authenticated draft preview (no shared secret in the admin UI). */
@@ -1322,7 +1311,8 @@ export const PageOverrides = {
     useAsTitle: 'internalName',
     defaultColumns: ['internalName', 'pathname', 'section', '_status', 'lastEditedBy', 'updatedAt'],
     // Search box matches page name, page title or URL path.
-    listSearchableFields: ['internalName', 'pageTitle', 'pathname'],
+    listSearchableFields: ['internalName', 'pageTitle', 'pathname', 'section'],
+    defaultSort: ['section', 'internalName'],
     pagination: { defaultLimit: 100, limits: [25, 50, 100, 200] },
     // "Preview" opens the saved draft (editor session required; no shared secret exposed to the browser).
     preview: (doc) => draftPreviewUrl(doc?.pathname),
@@ -1370,12 +1360,14 @@ export const PageOverrides = {
       },
     ],
     beforeValidate: [
-      ({ data }) => {
+      ({ data, originalDoc }) => {
         if (data?.pathname && typeof data.pathname === 'string') {
           const normalized = data.pathname.trim().replace(/\/+$/, '')
           data.pathname = normalized.startsWith('/') ? normalized || '/' : `/${normalized}`
           if (data.pathname === '') data.pathname = '/'
         }
+        const pathname = data?.pathname ?? originalDoc?.pathname
+        if (typeof pathname === 'string') data.section = sectionOf(pathname)
         return data
       },
     ],
@@ -1413,9 +1405,9 @@ export const PageOverrides = {
       name: 'section',
       type: 'text',
       label: 'Website Section',
-      virtual: true, // derived from the URL; never stored, always correct
-      admin: { readOnly: true, position: 'sidebar', description: 'Derived from the URL path.' },
-      hooks: { afterRead: [({ siblingData }) => sectionOf(siblingData?.pathname)] },
+      index: true,
+      admin: { readOnly: true, position: 'sidebar', description: 'Derived from the URL path; used to sort and search pages.' },
+      hooks: { afterRead: [({ siblingData, value }) => value || sectionOf(siblingData?.pathname)] },
     },
     {
       name: 'createdBy',
