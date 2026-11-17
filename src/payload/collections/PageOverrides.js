@@ -1446,7 +1446,7 @@ export const PageOverrides = {
               blocks,
               admin: {
                 description:
-                  'Add, remove, and reorder sections. Section types map directly to existing frontend components.',
+                  'Expand a section to edit its headline, intro, or body text. Text fields support individual word edits; use a blank line to separate paragraphs. Add, remove, and reorder sections here. Reviewer accounts are read-only; Editors and above can save changes.',
               },
             },
             {
