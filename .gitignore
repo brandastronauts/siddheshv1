@@ -52,3 +52,5 @@ start-regression*.out
 # Local tooling/temp files
 .claude/
 tmp-*.png
+.vercel
+.env*
