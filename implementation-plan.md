@@ -11,21 +11,18 @@ This file is the running implementation log for work on `research-cms`.
 
 ## Current status — 2026-11-17
 
-- Branch: `research-cms`; latest pushed commit at the time of this update: `0228a9c`. Page-section sorting changes are prepared locally and awaiting commit/deploy.
+- Branch: `research-cms`; latest pushed commit: `983c52f` (`Persist and sort Payload pages by website section`).
 - Vercel Production and Preview now use the prepared Payload database `blueblocks_payload`.
-- The production deployment for `0228a9c` is Ready at `https://research-cms.vercel.app`.
-- The production Home record is now served with eight Payload sections, so editors can open those fields instead of seeing an empty Page Sections panel.
-- All 84 `page-overrides` records in `blueblocks_payload` now have a persisted Website Section value, backed up before the additive backfill. Code to sort and search by that value is prepared locally and passes the isolated build.
+- Production deployment for `983c52f` is Ready and aliased to `https://research-cms.vercel.app`.
+- All 84 `page-overrides` records in `blueblocks_payload` have a persisted Website Section value; the Pages collection sorts and searches by it.
+- All 82 source-backed pages have editable Payload sections. The CMS also has one populated editor-created publication page. `/sitemap-html` is a route alias that renders the editable `/sitemap` content; its extra CMS record is intentionally not treated as a separate page.
 - Vercel CLI is installed (`65.17.0`) and authenticated. The Vercel plugin is installed at user scope, and `https://mcp.vercel.com` is configured and OAuth-authenticated in Codex CLI. This agent session still needs a tool reload before Vercel MCP tools become available.
-- A React hydration error (#418) appeared on the first deployment in Playwright. The latest deployment for `0228a9c` has no Playwright page errors on `/` or `/publications`.
+- A React hydration error (#418) appeared on the first deployment in Playwright. The subsequent deployment reported no page errors on `/` or `/publications`.
 
 ## Active plan
 
-1. Confirm each deployment reaches Ready and the `research-cms.vercel.app` alias serves it.
-2. Verify Home in Payload Admin shows the eight sections and provide the editor workflow to the owner.
-3. Deploy and verify Pages sort by Website Section and are searchable by section; confirm duplication/edit flows remain intact.
-4. Continue the Vercel agent setup after the Codex tools are reloaded; run the official Vercel MCP documentation search and authenticated team-list checks.
-5. Record any remaining runtime issues (including the homepage hydration error) and address only within the agreed scope.
+1. Continue the Vercel agent setup after the Codex tools are reloaded; run the official Vercel MCP documentation search and authenticated team-list checks.
+2. If the owner reports an Admin editor or route issue, reproduce it against the live deployment and record the result here.
 
 ## Update log
 
@@ -96,3 +93,19 @@ This file is the running implementation log for work on `research-cms`.
 4. Save the draft, preview it, and publish when ready.
 
 The site does not support click-to-edit directly on the public homepage; text is edited in the Payload section fields.
+
+### 2026-11-17 — Verify editable content across every page
+
+**Request and audit**
+
+- The owner asked to apply the same Payload editing workflow to every page in the CMS.
+- Ran the read-only three-way content audit against all 82 source pages, using `b143485` as the seeding baseline. Results: 69 are exactly in sync; 12 retain CMS-only additions; Home retains 25 editor-changed leaves. There are no empty source pages, missing page records, source updates, or conflicts. No page content was overwritten.
+- The CMS contains 84 published page records: the 82 source-backed pages, one additional CMS-created publication page, and the `/sitemap-html` alias record. The alias route explicitly renders `/sitemap`; editors should edit the populated `/sitemap` page for sitemap content.
+
+**Implementation and verification**
+
+- The persisted Website Section and default section/name sorting changes are committed as `983c52f` and deployed to Production. The deployment reached Ready and owns the `https://research-cms.vercel.app` alias.
+- The live Payload API returns all 84 documents with Website Section values in section order; 83 records have content blocks.
+- Checked all 83 populated page URLs against Production; all returned HTTP 200.
+- The current agent session has no Playwright browser tool available, so this full-page check used the live API and HTTP responses. Earlier Playwright checks covered Home and Publications.
+- Vercel's build completed despite the npm configuration/deprecation notices and the Payload warning that the Media collection has no Vercel storage adapter. Media upload storage remains a separate follow-up if editors need to upload files in production.
